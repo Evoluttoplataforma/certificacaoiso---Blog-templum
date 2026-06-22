@@ -11,6 +11,11 @@ export default {
       return Response.redirect(url.toString(), 301);
     }
 
+    // /acesso → painel do CMS (Worker separado, domínio acesso.certificacaoiso.com.br)
+    if (url.pathname === "/acesso" || url.pathname === "/acesso/") {
+      return Response.redirect("https://acesso.certificacaoiso.com.br/", 302);
+    }
+
     // --- (futuro) imagens dos artigos via R2 ---
     // if (url.pathname.startsWith("/wp-content/") && env.IMAGES) {
     //   const obj = await env.IMAGES.get(url.pathname.replace(/^\//, ""));
