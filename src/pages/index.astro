@@ -1,0 +1,80 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import { categorias } from "../data/categorias.js";
+
+const posts = (await getCollection("blog"))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate));
+
+const destaque = posts[0];
+const recentes = posts.slice(1, 13);
+---
+
+<Base>
+  <!-- HERO -->
+  <section class="bloghero section--navy">
+    <div class="container lg">
+      <span class="tag-pill tag-pill--glow">Blog Certificação ISO</span>
+      <h1>Dicas para implementação e <em class="accent">certificação nas normas ISO</em></h1>
+      <p>Conteúdo prático sobre ISO 9001, 14001, 45001, 27001, PBQP-H, segurança de alimentos e mais — por especialistas da Templum.</p>
+      <form class="bloghero-search" action="/buscar/" method="get">
+        <iconify-icon icon="solar:magnifer-linear"></iconify-icon>
+        <input type="search" name="q" placeholder="Buscar artigo (norma, tema, dúvida…)" aria-label="Buscar artigos" />
+        <button type="submit" class="btn btn--primary btn--sm">Buscar</button>
+      </form>
+      <div class="bloghero-cats">{categorias.slice(0, 8).map((c) => <a href={`/categoria/${c.slug}/`} class="bh-cat"><iconify-icon icon={c.icon} style={`color:${c.cor}`}></iconify-icon> {c.nome}</a>)}</div>
+    </div>
+  </section>
+
+  <!-- DESTAQUE -->
+  {destaque && (
+    <section class="section">
+      <div class="container lg">
+        <a href={`/${destaque.slug}/`} class="bh-feat">
+          <div class="bh-feat-img">{destaque.data.heroImage ? <img src={destaque.data.heroImage} alt="" /> : <span><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>}</div>
+          <div class="bh-feat-body">
+            {destaque.data.categories?.[0] && <span class="ac-cat">{destaque.data.categories[0]}</span>}
+            <h2>{destaque.data.title}</h2>
+            <p>{destaque.data.description}</p>
+            <span class="bh-feat-meta">{destaque.data.author} · {new Date(destaque.data.pubDate).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" })}</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- RECENTES -->
+  <section class="section section--cream">
+    <div class="container lg">
+      <div class="section-header"><span class="tag-pill">Mais recentes</span><h2>Últimos <em class="accent">artigos</em></h2></div>
+      <div class="blog-grid">{recentes.map((p) => <ArticleCard post={p} />)}</div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .bloghero { padding: 64px 0 56px; }
+  .bloghero h1 { color: var(--cream); font-size: clamp(30px, 4.5vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -0.03em; margin: 18px 0 16px; max-width: 800px; }
+  .bloghero > .container > p { color: rgba(255,244,221,0.78); font-size: 17px; max-width: 620px; line-height: 1.6; }
+  .bloghero-search { display: flex; align-items: center; gap: 10px; background: var(--surface); border-radius: 999px; padding: 6px 6px 6px 20px; margin-top: 26px; max-width: 560px; box-shadow: var(--shadow-lift); }
+  .bloghero-search iconify-icon { font-size: 20px; color: var(--text-soft); }
+  .bloghero-search input { flex: 1; border: 0; outline: 0; background: none; font-family: inherit; font-size: 15.5px; color: var(--text); padding: 10px 0; }
+  .bloghero-cats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .bh-cat { display: inline-flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 600; color: var(--cream); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,244,221,0.16); padding: 8px 14px; border-radius: 999px; }
+  .bh-cat:hover { border-color: var(--orange); }
+  .bh-feat { display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-24); overflow: hidden; }
+  @media (max-width: 820px) { .bh-feat { grid-template-columns: 1fr; } }
+  .bh-feat-img { aspect-ratio: 16/10; background: linear-gradient(135deg, var(--navy-2), var(--surface-deep)); display: grid; place-items: center; }
+  .bh-feat-img img { width: 100%; height: 100%; object-fit: cover; }
+  .bh-feat-img span { font-size: 54px; color: rgba(255,89,37,0.5); }
+  .bh-feat-body { padding: 12px 40px 12px 0; }
+  @media (max-width: 820px) { .bh-feat-body { padding: 0 28px 32px; } }
+  .bh-feat-body h2 { font-size: clamp(22px, 2.6vw, 32px); font-weight: 800; line-height: 1.18; letter-spacing: -0.02em; margin: 10px 0 12px; color: var(--text); }
+  .bh-feat-body p { font-size: 15.5px; color: var(--text-mid); line-height: 1.6; margin-bottom: 14px; }
+  .bh-feat-meta { font-size: 13px; color: var(--text-soft); }
+  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+</style>

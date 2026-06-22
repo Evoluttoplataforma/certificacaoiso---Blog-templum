@@ -1,0 +1,18 @@
+---
+const { post } = Astro.props;
+const d = post.data;
+const url = `/${post.slug}/`;
+const dataFmt = new Date(d.pubDate).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
+const cat = (d.categories && d.categories[0]) || "";
+---
+<article class="ac">
+  <a href={url} class="ac-thumb" aria-label={d.title}>
+    {d.heroImage ? <img src={d.heroImage} alt="" loading="lazy" /> : <span class="ac-thumb-fb"><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>}
+  </a>
+  <div class="ac-body">
+    {cat && <span class="ac-cat">{cat}</span>}
+    <h2 class="ac-title"><a href={url}>{d.title}</a></h2>
+    <p class="ac-desc">{d.description}</p>
+    <div class="ac-meta"><span>{d.author}</span><span>·</span><time>{dataFmt}</time></div>
+  </div>
+</article>

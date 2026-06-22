@@ -1,0 +1,205 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import Sidebar from "../components/Sidebar.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import { catMeta } from "../data/categorias.js";
+import { iscaDe } from "../data/iscas-blog.js";
+import { smartTldr } from "../lib/summary.mjs";
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("blog")).filter((p) => !p.data.draft);
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post, posts } }));
+}
+
+const { post, posts } = Astro.props;
+const { Content } = await post.render();
+const d = post.data;
+const SITE = "https://certificacaoiso.com.br";
+const url = `${SITE}/${post.slug}/`;
+const cat = (d.categories && d.categories[0]) || "";
+const catSlug = cat ? catMeta(cat).slug : "";
+const dataFmt = new Date(d.pubDate).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
+
+// SEO/AIEO/GEO por artigo
+const seoTitle = d.seoTitle || `${d.title} | Certificação ISO`;
+// meta description limpa (sem corte no meio da palavra como vinha do excerpt)
+const seoDesc = d.seoDescription || smartTldr(post.body, d.description, 155);
+// "Resposta rápida" citável: usa o tldr do CMS; senão elabora a partir do corpo
+// (1ª frase completa) — em vez do excerpt cortado da migração.
+const tldr = (d.tldr || smartTldr(post.body, d.description)).trim();
+const keywords = (d.keywords && d.keywords.length ? d.keywords : d.categories) || [];
+// wordCount a partir do markdown cru (sinal de profundidade p/ SEO/GEO)
+const wordCount = post.body ? post.body.replace(/[#>*_`\[\]()!-]/g, " ").split(/\s+/).filter(Boolean).length : 0;
+const faq = d.faq || [];
+
+// relacionados (mesma categoria)
+const related = posts
+  .filter((p) => p.slug !== post.slug && p.data.categories?.some((c) => d.categories?.includes(c)))
+  .sort((a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate))
+  .slice(0, 3);
+const recent = posts
+  .filter((p) => p.slug !== post.slug)
+  .sort((a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate))
+  .slice(0, 4);
+// isca do segmento do artigo (cai no default se a categoria não tiver mapeamento)
+const isca = iscaDe(d.categories);
+
+// --- JSON-LD: BlogPosting + BreadcrumbList ---
+const schemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: d.title,
+    description: d.description,
+    image: d.heroImage ? [new URL(d.heroImage, SITE).href] : undefined,
+    datePublished: new Date(d.pubDate).toISOString(),
+    dateModified: new Date(d.updatedDate || d.pubDate).toISOString(),
+    author: { "@type": "Person", name: d.author },
+    publisher: { "@id": `${SITE}/#organization` },
+    mainEntityOfPage: url,
+    inLanguage: "pt-BR",
+    articleSection: cat || undefined,
+    abstract: tldr || undefined,
+    wordCount: wordCount || undefined,
+    keywords: keywords.length ? keywords : undefined,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Blog", item: `${SITE}/` },
+      cat ? { "@type": "ListItem", position: 2, name: cat, item: `${SITE}/categoria/${catSlug}/` } : null,
+      { "@type": "ListItem", position: cat ? 3 : 2, name: d.title, item: url },
+    ].filter(Boolean),
+  },
+];
+
+// FAQPage só quando o artigo tem perguntas (preenchido no CMS) → "sanfoninhas" no Google.
+if (faq.length) {
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.pergunta,
+      acceptedAnswer: { "@type": "Answer", text: f.resposta },
+    })),
+  });
+}
+---
+
+<Base
+  title={seoTitle}
+  description={seoDesc}
+  ogImage={d.ogImage || d.heroImage || "/assets/og/certificacaoiso-og.jpg"}
+  ogType="article"
+  schemas={schemas}
+>
+  <article class="post">
+    <div class="container md post-head">
+      <nav class="post-bc">
+        <a href="/">Blog</a>
+        {cat && <><span>/</span><a href={`/categoria/${catSlug}/`}>{cat}</a></>}
+      </nav>
+      <h1 class="post-title">{d.title}</h1>
+      <div class="post-meta">
+        <span class="post-author"><iconify-icon icon="solar:user-circle-bold"></iconify-icon> {d.author}</span>
+        <time datetime={new Date(d.pubDate).toISOString()}>{dataFmt}</time>
+      </div>
+    </div>
+
+    {d.heroImage && (
+      <div class="container lg"><div class="post-hero"><img src={d.heroImage} alt={d.title} /></div></div>
+    )}
+
+    <div class="container lg post-grid">
+      <div class="post-content">
+        {tldr && (
+          <div class="post-tldr">
+            <span class="post-tldr-label"><iconify-icon icon="solar:bolt-bold"></iconify-icon> Resposta rápida</span>
+            <p>{tldr}</p>
+          </div>
+        )}
+        <Content />
+
+        {faq.length > 0 && (
+          <section class="post-faq">
+            <h2>Perguntas frequentes</h2>
+            {faq.map((f) => (
+              <details class="post-faq-item">
+                <summary>{f.pergunta}</summary>
+                <p>{f.resposta}</p>
+              </details>
+            ))}
+          </section>
+        )}
+
+        <!-- CTA no fim do artigo -->
+        <div class="post-cta">
+          <div>
+            <h3>Pronto para certificar sua empresa?</h3>
+            <p>Fale com um especialista da Templum e receba um diagnóstico gratuito — com garantia de 200%.</p>
+          </div>
+          <a href={`https://templum.com.br/form?utm_source=blog&utm_medium=cta-artigo&utm_campaign=${post.slug}`} class="btn btn--primary btn--lg" data-trk-event="cta-artigo">Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+        </div>
+      </div>
+      <Sidebar ref={post.slug} author={d.author} recent={recent} isca={isca} />
+    </div>
+
+    {related.length > 0 && (
+      <section class="section section--cream">
+        <div class="container lg">
+          <div class="section-header"><span class="tag-pill">Continue lendo</span><h2>Artigos <em class="accent">relacionados</em></h2></div>
+          <div class="post-related">{related.map((p) => <ArticleCard post={p} />)}</div>
+        </div>
+      </section>
+    )}
+  </article>
+</Base>
+
+<style>
+  .post-head { padding-top: 40px; }
+  .post-bc { font-size: 13px; color: var(--text-soft); display: flex; gap: 8px; margin-bottom: 16px; }
+  .post-bc a { color: var(--orange-ink); font-weight: 600; }
+  .post-title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.12; letter-spacing: -0.025em; }
+  .post-meta { display: flex; align-items: center; gap: 16px; margin-top: 16px; font-size: 14px; color: var(--text-mid); }
+  .post-author { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--text-2); }
+  .post-author iconify-icon { color: var(--orange); font-size: 18px; }
+  .post-hero { margin: 28px 0 8px; border-radius: var(--r-24); overflow: hidden; aspect-ratio: 16/8; }
+  .post-hero img { width: 100%; height: 100%; object-fit: cover; }
+  /* items-start + <aside> sticky (padrão do blog Evolutto). O aside gruda dentro
+     do grid, que é tão alto quanto o artigo → "trilho" pro sticky. */
+  .post-grid { display: grid; grid-template-columns: minmax(0,1fr) 340px; gap: 48px; align-items: start; padding-top: 32px; padding-bottom: 64px; }
+  @media (max-width: 980px) { .post-grid { grid-template-columns: 1fr; } }
+  /* tipografia do conteúdo do artigo */
+  .post-content { font-size: 17px; line-height: 1.75; color: var(--text-2); min-width: 0; }
+  .post-content :global(h2) { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin: 38px 0 14px; line-height: 1.2; }
+  .post-content :global(h3) { font-size: 21px; font-weight: 800; margin: 30px 0 12px; }
+  .post-content :global(p) { margin: 0 0 18px; }
+  .post-content :global(a:not(.btn)) { color: var(--orange-ink); text-decoration: underline; text-underline-offset: 2px; }
+  .post-content :global(img) { max-width: 100%; height: auto; border-radius: var(--r-16); margin: 22px 0; }
+  .post-content :global(ul), .post-content :global(ol) { margin: 0 0 18px 22px; display: flex; flex-direction: column; gap: 8px; }
+  .post-content :global(blockquote) { border-left: 4px solid var(--orange); padding: 6px 0 6px 20px; margin: 24px 0; font-style: italic; color: var(--text-mid); }
+  .post-content :global(figure) { margin: 22px 0; }
+  .post-content :global(iframe) { max-width: 100%; border-radius: var(--r-16); aspect-ratio: 16/9; width: 100%; }
+  .post-content :global(table) { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 15px; }
+  .post-content :global(th), .post-content :global(td) { border: 1px solid var(--border); padding: 10px 12px; text-align: left; }
+  /* TL;DR / Resposta rápida — citável por IA, answer-first */
+  .post-tldr { background: color-mix(in srgb, var(--orange) 7%, var(--surface)); border: 1px solid color-mix(in srgb, var(--orange) 28%, transparent); border-left: 4px solid var(--orange); border-radius: var(--r-16); padding: 18px 22px; margin: 0 0 30px; }
+  .post-tldr-label { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--orange-ink); margin-bottom: 6px; }
+  .post-tldr p { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0; font-weight: 500; }
+  /* FAQ — vira FAQPage no JSON-LD (sanfoninhas no Google) */
+  .post-faq { margin-top: 44px; }
+  .post-faq > h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px; }
+  .post-faq-item { border: 1px solid var(--border); border-radius: var(--r-12); padding: 4px 18px; margin-bottom: 10px; background: var(--surface); }
+  .post-faq-item summary { font-size: 16px; font-weight: 700; color: var(--text); cursor: pointer; padding: 14px 0; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .post-faq-item summary::after { content: "+"; font-size: 22px; color: var(--orange-ink); font-weight: 700; }
+  .post-faq-item[open] summary::after { content: "−"; }
+  .post-faq-item p { margin: 0 0 14px; font-size: 15.5px; line-height: 1.65; color: var(--text-mid); }
+  .post-cta { margin-top: 44px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-24); padding: 30px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .post-cta h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .post-cta p { font-size: 14.5px; color: var(--text-mid); max-width: 460px; }
+  .post-related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 860px) { .post-related { grid-template-columns: 1fr; } }
+</style>

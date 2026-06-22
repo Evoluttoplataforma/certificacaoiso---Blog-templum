@@ -1,0 +1,18 @@
+# Cloudflare — headers de cache e segurança do blog.
+# (Sem CSP restritiva: tracking-kit + GA + Meta carregam scripts externos.)
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Assets com hash no nome → cache longo e imutável
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/wp-content/*
+  Cache-Control: public, max-age=31536000, immutable

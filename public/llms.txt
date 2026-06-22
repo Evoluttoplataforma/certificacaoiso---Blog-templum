@@ -1,0 +1,32 @@
+# Certificação ISO (blog da Templum Consultoria)
+
+> Blog com mais de 1.000 artigos práticos sobre implementação e certificação das normas ISO — escrito por especialistas da Templum Consultoria, consultoria com método próprio, +30 anos e garantia de 200%.
+
+## Sobre
+Conteúdo educacional sobre certificação ISO e gestão: ISO 9001 (qualidade), ISO 14001 (ambiental), ISO 45001 (saúde e segurança do trabalho), ISO 27001 (segurança da informação), PBQP-H (construção civil), FSSC 22000/HACCP (segurança de alimentos), ESG, SASSMAQ, IA aplicada à gestão e auditoria. Mantido pela Templum Consultoria (templum.com.br).
+
+## Seções principais
+- Início: https://certificacaoiso.com.br/
+- Buscar artigos: https://certificacaoiso.com.br/buscar/
+
+## Categorias
+- Qualidade e Inovação (ISO 9001): https://certificacaoiso.com.br/categoria/qualidade-e-inovacao/
+- Construção Civil (PBQP-H): https://certificacaoiso.com.br/categoria/construcao-civil/
+- Segurança dos Alimentos (FSSC 22000/HACCP): https://certificacaoiso.com.br/categoria/seguranca-dos-alimentos/
+- Meio Ambiente (ISO 14001): https://certificacaoiso.com.br/categoria/meio-ambiente/
+- Saúde e Segurança do Trabalho (ISO 45001): https://certificacaoiso.com.br/categoria/saude-e-seguranca-do-trabalho/
+- Auditoria: https://certificacaoiso.com.br/categoria/auditoria/
+- Segurança e Compliance (ISO 27001): https://certificacaoiso.com.br/categoria/seguranca-e-compliance/
+- Gestão e Marketing: https://certificacaoiso.com.br/categoria/gestao-e-marketing/
+- Transportes e Logística (SASSMAQ): https://certificacaoiso.com.br/categoria/transportes-e-logistica/
+- ESG: https://certificacaoiso.com.br/categoria/esg/
+- IA aplicada à gestão: https://certificacaoiso.com.br/categoria/ia/
+
+## Recursos
+- Feed RSS: https://certificacaoiso.com.br/rss.xml
+- Sitemap: https://certificacaoiso.com.br/sitemap.xml
+
+## Empresa e contato
+- Templum Consultoria: https://templum.com.br
+- Falar com especialista (diagnóstico gratuito): https://templum.com.br/form
+- Plataforma de gestão (processos, indicadores, qualidade): https://orbitgestao.com.br

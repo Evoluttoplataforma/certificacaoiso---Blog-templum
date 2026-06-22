@@ -1,0 +1,19 @@
+{
+  "name": "certificacaoiso-blog",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/sitemap.mjs",
+    "preview": "astro preview",
+    "migrate": "node scripts/migrate.mjs"
+  },
+  "dependencies": {
+    "astro": "^4.16.0",
+    "@astrojs/rss": "^4.0.7"
+  },
+  "devDependencies": {
+    "turndown": "^7.2.0",
+    "turndown-plugin-gfm": "^1.0.2"
+  }
+}

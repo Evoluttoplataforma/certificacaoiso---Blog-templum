@@ -1,0 +1,6092 @@
+[
+  {
+    "slug": "normas-abnt",
+    "title": "Normas ABNT",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1",
+    "title": "Vantagens da certificação ISO 9001 para pequenas empresas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mitos-e-verdades-sobre-a-iso-9001-parte-1",
+    "title": "Mitos e verdades sobre a ISO 9001 (parte 1)",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "beneficios-da-iso-9001",
+    "title": "Benefícios da ISO 9001 para sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "exemplo-pratico-da-iso-9001-e-a-melhoria-continua",
+    "title": "ISO 9001 e a melhoria contínua: exemplo prático",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "um-blog-voltado-a-qualidade-3",
+    "title": "Um blog voltado à qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "compensa-ter-iso-9001",
+    "title": "Compensa ter ISO 9001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "as-principais-fases-da-implementacao-iso-9001",
+    "title": "As principais fases da implementação ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "os-maiores-desafios-da-implementacao-da-iso-9001-parte-1",
+    "title": "ISO 9001: os maiores desafios da implementação",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "sucesso-na-iso-9001",
+    "title": "Segredos do Sucesso na Implantação da ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "dois-exemplos-da-presenca-da-iso-9001-em-orgaos-publicos",
+    "title": "Dois exemplos da presença da ISO 9001 em órgãos públicos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gremio-e-a-iso-9001-no-futebol",
+    "title": "Grêmio e a ISO 9001 no futebol",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "para-a-hobeika-a-iso-9001-foi-um-divisor-de-aguas",
+    "title": "Para a Hobeika, a ISO 9001 foi um divisor de águas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-recertificacao",
+    "title": "O que é recertificação?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-iso-9001-e-as-cadeirinhas-infantis",
+    "title": "A ISO 9001 e as cadeirinhas infantis",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "instituicoes-de-ensino-um-novo-nicho-para-a-iso-9001",
+    "title": "Instituições de Ensino: um novo nicho para a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "programas-5s-e-8s-diferencas-e-aplicacoes",
+    "title": "Programas 5S e 8S: diferenças e aplicações",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "dicas-para-fazer-um-bom-brainstorming",
+    "title": "Dicas para fazer um bom brainstorming",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "programa-de-qualidade-de-empresas-contabeis-pqec-e-baseado-na-iso-9001",
+    "title": "Programa de Qualidade de Empresas Contábeis (PQEC) é baseado na ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "um-pouco-mais-sobre-a-cultura-da-zappos",
+    "title": "Um pouco mais sobre a cultura da Zappos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "produtividade-em-home-offices",
+    "title": "Produtividade em home-offices",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "passo-a-passo-certificacao-iso-9001",
+    "title": "O passo a passo para certificação ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "conhece-a-pomodoro-techinique",
+    "title": "Conhece a Pomodoro Techinique?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "satisfacao-dos-colaboradores-um-item-essencial-nas-organizacoes",
+    "title": "Satisfação dos colaboradores: um item essencial nas organizações",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "boas-praticas-podem-aperfeicoar-o-poder-judiciario",
+    "title": "Boas práticas podem aperfeiçoar o Poder Judiciário",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-26000-e-a-norma-de-responsabilidade-social",
+    "title": "ISO 26000 é a norma de responsabilidade social",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "planeje-seu-sistema-crie-metas",
+    "title": "Planeje seu sistema. Crie metas.",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "importancia-da-analise-critica-em-nao-conformidades",
+    "title": "A Importância da Análise Critica em Não Conformidades",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-das-pessoas-processo-de-implementacao-da-iso-9001",
+    "title": "A Gestão das Pessoas no Processo de Implementação da ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "comemore-divulgue-iso-9001",
+    "title": "Comemore e divulgue a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "relacao-entre-5s-sistema-de-gestao-da-qualidade",
+    "title": "A Relação entre o 5S e o Sistema de Gestão da Qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pesquisa-de-satisfacao-cliente",
+    "title": "O que fazer com a Pesquisa de Satisfação do Cliente?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pre-requisitos-da-iso-9001",
+    "title": "Pré-requisitos da ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "perguntas-frequentes",
+    "title": "Perguntas frequentes - Tudo sobre normas ISO",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "implantacao-ou-implementacao-de-sgq-qual-forma-correta",
+    "title": "Implantação ou Implementação de SGQ...qual a forma correta?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "acontece-apos-certificacao-iso-9001",
+    "title": "O que a empresa deve fazer após a certificação ISO 9001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "reuniao-de-analise-critica-pela-direcao-na-iso-9001",
+    "title": "A reunião de análise crítica pela direção na ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "empresa-esta-em-fase-de-implementacao-iso-9001-precisa-comprar-norma",
+    "title": "ISO 9001: preciso comprar a norma?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "ideias-equivocadas-sobre-sustentabilidade-podem-atrapalhar-negocio-de-empresas",
+    "title": "8 ideias equivocadas sobre sustentabilidade que todo gestor deve eliminar",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "controle-documentos-sgq",
+    "title": "O controle dos documentos do SGQ em meios eletrônicos. Como proceder?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quais-sao-disposicoes-mais-comuns-para-um-produto-nao-conforme",
+    "title": "Quais são as disposições mais comuns para um produto não conforme",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "controle-de-registro",
+    "title": "Controle de Registro",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "dicas-para-organizacoes-iniciando-um-processo-de-implementacao-da-iso-9001",
+    "title": "Dicas para para quem está implementando a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "qualidade-e-sinonimo-de-perfeicao",
+    "title": "Qualidade é sinônimo de perfeição?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "diferencas-entre-medicao-monitoramento",
+    "title": "Diferenças entre monitoramento e medição",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "postura-auditor",
+    "title": "Postura do Auditor",
+    "cats": "Auditoria",
+    "hero": false
+  },
+  {
+    "slug": "steve-jobs-perdemos-mais-um-genio",
+    "title": "Steve Jobs: Perdemos mais um gênio.",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "comite-ambiental",
+    "title": "Comitê Ambiental",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "politica-da-qualidade-na-pratica",
+    "title": "A Politica da Qualidade na prática",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "passivo-ambiental-pode-interditar-sua-empresa",
+    "title": "O Passivo Ambiental pode interditar sua Empresa",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "conceito-desenvolvimento-sustentavel-nas-escolas-importancia-social-da-implantacao-de-um-sistema-de-gestao-ambiental-em-instituicoes-de-ensino",
+    "title": "O desenvolvimento sustentável nas escolas e a implantação da ISO 14001",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "onde-podemos-verificar-existe-necessidade-de-providenciar-treinamentos-para-os-colaboradores",
+    "title": "Como verificar a necessidade de treinamentos para os colaboradores?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "comunicacao-interna-aliada-ou-inimiga-da-sua-empresa",
+    "title": "Comunicação Interna: aliada ou inimiga da sua empresa?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "item-7-4-aquisicao",
+    "title": "Item 7.4 Aquisição",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-14001",
+    "title": "ISO 14001: tudo sobre a certificação",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "regulamento-de-gestao-da-qualidade-servico-de-comucacao-multimidia-anatel",
+    "title": "O Regulamento de Gestão da Qualidade - ANATEL",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "evolucao-das-metodologias-de-implementacao-de-sistemas-de-gestao",
+    "title": "A evolução das metodologias de implementação de sistemas de gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "procedimentos-obrigatorios-2",
+    "title": "ISO 9001: quais são os Procedimentos Obrigatórios exigidos?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "copa-mundo-brasil-empresas-qualidade",
+    "title": "A Copa do Mundo no Brasil, as empresas, a qualidade e o meio ambiente",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "por-quantos-auditores-deve-ser-formada-equipe-de-auditoria-interna-para-sistema-de-gestao-da-qualidade-iso-9001",
+    "title": "Por quantos auditores deve ser formada a equipe de auditoria?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "caso-de-sucesso-implementacao-iso-9001-na-empresa-dataflex",
+    "title": "Caso de Sucesso - Implementação ISO 9001 na empresa Dataflex",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "conheca-o-pbqp-h",
+    "title": "Conheça o PBQP-H!",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "novos-conceitos-para-nova-versao-da-iso-9001",
+    "title": "Novos conceitos para a nova versão da ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "diferencas-entre-programa-5s-housekeeping",
+    "title": "Programa 5S e Housekeeping: Qual é a diferença?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "estrategias-para-medir-satisfacao-cliente",
+    "title": "Estratégias para medir a satisfação do cliente",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "preparacao-resposta-emergencia",
+    "title": "Preparação e resposta a emergência",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "calibracao-dos-equipamentos-de-monitoramento-medicao",
+    "title": "Calibração dos Equipamentos de Monitoramento e Medição",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "normas-tecnicas-cumprir-ou-nao",
+    "title": "Normas técnicas, cumprir ou não?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "beneficios-de-uma-auditoria",
+    "title": "Benefícios na realização de uma auditoria interna",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "onde-reclamar-de-empresas-iso-9001",
+    "title": "Onde reclamar de empresas com ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "certificacao-iso",
+    "title": "Certificação ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "feedback-na-avaliacao-de-competencia",
+    "title": "O Feedback na avaliação de competência",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "controle-de-documentos",
+    "title": "Controle de documentos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "seguranca-trabalho-produtividade",
+    "title": "Segurança do trabalho e produtividade: qual é a relação entre ambos?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "uma-boa-politica-da-qualidade",
+    "title": "Uma boa Política da Qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "desempenho-performance-como-analisar",
+    "title": "Desempenho e Performance. Como analisar?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "e-seguranca-trabalho",
+    "title": "O que é Segurança do Trabalho?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-acidente-de-trabalho",
+    "title": "O que é Acidente de Trabalho?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "prevencao-de-acidentes-de-trabalho",
+    "title": "Prevenção de acidentes de trabalho",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "epi-nao-conformidade-parte-2",
+    "title": "EPI e Não Conformidade - Parte 2",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "diferenca-entre-documentos-registros",
+    "title": "Diferença entre documentos e registros",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "formando-um-time-de-elite-de-vendas",
+    "title": "Formando um time de ELITE de vendas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "coleta-seletiva-cores-de-identificacao",
+    "title": "Coleta Seletiva - Cores de Identificação",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "5w2h-tabela",
+    "title": "5W2H - TABELA",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "verificacao-projeto-validacao-projeto",
+    "title": "Verificação do projeto X Validação do projeto",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-26000-responsabilidade-social",
+    "title": "ISO 26000 - Responsabilidade Social",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pegada-ecologica",
+    "title": "Pegada Ecológica",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "importancia-do-sgi-nas-organizacoes",
+    "title": "A Importância do SGI nas organizações",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gerenciamento-dos-residuos-solidos",
+    "title": "Gerenciamento dos resíduos sólidos",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "classificacao-dos-residuos-solidos",
+    "title": "Classificação dos resíduos sólidos",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "gastar-ou-investir",
+    "title": "Gastar ou Investir",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "comportamento-organizacional",
+    "title": "Comportamento Organizacional",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "orcamento-empresarial",
+    "title": "Orçamento Empresarial",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "lidando-falhas-como-uma-estrategia-da-empresa",
+    "title": "Lidando com as falhas como uma estratégia da empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "e-sgq",
+    "title": "O que é SGQ?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mapeamento-dos-processos",
+    "title": "Mapeando processos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pdca-sabe-e",
+    "title": "PDCA - Melhore continuamente seguindo 4 passos.",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pequenas-medias-empresas",
+    "title": "As Pequenas e Médias Empresas que mais crescem no Brasil",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "manutencao-preventiva",
+    "title": "Manutenção Preventiva",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "ohsas-18001-e-iso-45001",
+    "title": "OHSAS 18001 e a Nova ISO 45001",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "tratar-uma-nc-nao-e-corrigir-um-problema",
+    "title": "Tratar uma NC não é corrigir um problema…",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "definicoes-de-qualidade-e-qualidade-de-produto",
+    "title": "Definições de qualidade e qualidade de produto",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pdca-para-votar-nas-eleicoes",
+    "title": "Você utiliza o PDCA para votar nas eleições municipais?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "dificuldades-na-implementacao-da-iso-14001",
+    "title": "ISO 14001: Principais dificuldades na implementação",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "como-medir-satisfacao-cliente",
+    "title": "Como medir a satisfação do cliente?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "analise-de-causa-raiz",
+    "title": "Análise de Causa Raiz",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "qualidade",
+    "title": "Qualidade em RH",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-90012008-para-todos",
+    "title": "ISO 9001:2008 para todos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "fase-01-fase-02-na-auditoria-de-certificacao-qual-e-diferenca",
+    "title": "Fase 01 e Fase 02 na auditoria de certificação. Qual é a diferença?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "diferencas-entre-nao-conformidade-maior-menor",
+    "title": "Diferenças entre não conformidade maior e menor",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "e-manutencao-preditiva-2",
+    "title": "O que é manutenção preditiva?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-22000-voce-sabe-o-que-e",
+    "title": "ISO 22000 - Você sabe o que é?",
+    "cats": "Segurança dos Alimentos",
+    "hero": false
+  },
+  {
+    "slug": "o-sonho-grande-de-lemann-telles-e-sicupira",
+    "title": "O sonho grande de Lemann, Telles e Sicupira",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "as-diferencas-entre-o-nivel-b-e-o-nivel-a-do-pbqp-h",
+    "title": "As diferenças entre níveis do PBQP-H: Nível A e B",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "os-objetivos-da-qualidade-no-pbqp-h",
+    "title": "Os objetivos da qualidade no PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "a-importancia-da-bpf-e-o-caso-o-dia",
+    "title": "A importância da BPF e o caso DIA",
+    "cats": "Segurança dos Alimentos",
+    "hero": false
+  },
+  {
+    "slug": "o-planejamento-estrategico-pode-salvar-a-sua-empresa",
+    "title": "O planejamento estratégico pode salvar a sua empresa?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-os-acidentes-nas-obras-dos-estadios-da-copa-poderiam-ser-evitados",
+    "title": "Como os acidentes nas obras dos estádios da Copa poderiam ser evitados",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "qualidade-de-atendimento-para-universidades",
+    "title": "Mais qualidade de atendimento para universidades",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mudancas-na-iso-90012015-sao-confirmadas-por-nigel-croft",
+    "title": "Mudanças na ISO 9001:2015 são confirmadas por Nigel Croft",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-da-qualidade-para-imobiliarias",
+    "title": "Gestão da qualidade para imobiliárias",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-funciona-certificacao-iso-9001",
+    "title": "Certificação ISO 9001: O que é e como funciona?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5s",
+    "title": "5S: o que é e como implementar na sua empresa?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pqo-o-plano-de-qualidade-da-obra-no-pbqp-h",
+    "title": "PQO - O plano de qualidade da obra no PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "7-praticas-para-diminuir-os-residuos-e-aumentar-o-lucro-na-construcao-civil",
+    "title": "7 práticas para diminuir os resíduos na construção civil",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "folha-de-sao-paulo-iso-9001-cresce-entre-pequenas-empresas",
+    "title": "Folha de São Paulo: ISO 9001 cresce entre pequenas empresas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "programa-de-qualidade-contabil-para-a-rede-nacional-de-contabilidade",
+    "title": "Programa de Qualidade Contábil para a Rede Nacional de Contabilidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-preco-vai-subir-como-comunicar-ao-cliente",
+    "title": "O preço vai subir! Como comunicar ao cliente?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-norma-de-desempenho-e-o-pbqp-h",
+    "title": "A Norma de Desempenho e o PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "a-qualificacao-de-fornecedores-segundo-a-iso-90012015",
+    "title": "A qualificação de fornecedores segundo a ISO 9001:2015",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "os-desafios-da-comunicacao-interna",
+    "title": "Comunicação Interna: conheça os desafios e como superá-los",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-usar-a-planilha-5w2h",
+    "title": "5W2H: Como fazer um plano de ação?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "serie-empreendedor-de-sucesso-caracteristica-numero-1-do-campeao",
+    "title": "Série empreendedor de sucesso: A característica número 1 do campeão!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "serie-planejamento-estrategico-matriz-de-ansoff",
+    "title": "Série Planejamento Estratégico: Matriz Ansoff",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "controle-de-documentos-na-iso-9001",
+    "title": "Controle de Documentos e Procedimentos Obrigatórios na nova versão da ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "inovacao-minha-empresa-inovadora",
+    "title": "Inovação: Como descobrir se minha empresa é inovadora?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "livro-de-inspecao-do-trabalho-pbqp-h",
+    "title": "PBQP-H: Obrigatoriedade do livro de inspeção do trabalho",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "sassmaq-o-que-diz-a-resolucao-contran-517",
+    "title": "SASSMAQ: O que diz a Resolução Contran 517?",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "novas-mudancas-no-programa-minha-casa-minha-vida-trazem-novas-oportunidades-para-o-setor-de-construcao-civil",
+    "title": "Novas mudanças no Programa Minha Casa Minha Vida",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "5-passos-para-realizar-um-treinamento-interno-com-seus-colaboradores",
+    "title": "5 passos para realizar um treinamento interno",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "nova-versao-fssc-22000-v4-alteracoes-relevantes-para-sua-empresa",
+    "title": "Nova versão do FSSC 22000 v4 – Alterações Relevantes para sua Empresa",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "seguranca-de-alimentos-auditorias-nao-anunciadas",
+    "title": "Segurança de alimentos: Quais são as novidades sobre as Auditorias?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "principais-mudancas-no-pbqp-h",
+    "title": "Principais mudanças no PBQP-H em 2021",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-fluxograma-de-processos",
+    "title": "Fluxograma de Processo: o que é e como fazer passo a passo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-engajar-os-colaboradores-na-implementacao-de-sistemas-de-gestao",
+    "title": "Como engajar os colaboradores na implementação de Sistemas de Gestão?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-tendencia-do-compartilhar-coworking",
+    "title": "A Tendência do Compartilhar",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "certificar-iso-9001-ou-outras-normas-iso-da-lucro-ou-prejuizo",
+    "title": "Certificar ISO 9001 ou outras normas ISO dão lucro ou prejuízo?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "indicadores-de-desempenho-uma-analise-pratica-dessa-ferramenta",
+    "title": "Indicadores de Desempenho: Uma análise prática dessa ferramenta",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "nbr-15575-resumo-e-aplicacao",
+    "title": "NBR 15575 - Resumo e aplicação das exigências de habitabilidade",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "spda-sistema-de-protecao-de-descargas-atmosfericas",
+    "title": "SPDA - Sistema de Proteção de descargas atmosféricas",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "templum-portas-abertas",
+    "title": "Templum Portas Abertas!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-iso-9001-e-a-resistencia-a-mudanca",
+    "title": "Resistência à Mudança e a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "atendimento-telefonico",
+    "title": "10 Dicas para potencializar o atendimento telefônico ao cliente",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-contexto-da-organizacao",
+    "title": "ISO 9001 requisitos: 4.1 - Entendendo o Contexto da Organização",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "falhas-sistema-gestao-seguranca-alimentos",
+    "title": "ISO 22000: Falhas mais frequentes na implementação do Sistema de Gestão da Segurança de Alimentos",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-escopo-4-3",
+    "title": "ISO 9001 requisitos: 4.3 – Determinando o escopo do sistema de gestão da qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-convencer-implementacao-iso-9001",
+    "title": "ISO 9001: Como convencer a alta direção sobre a implementação?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "oportunidades-de-mercado-de-construcao-civil-2018",
+    "title": "Novas oportunidades para o mercado de construção civil em 2021",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "boas-praticas-de-cobranca",
+    "title": "Boas práticas de Cobrança",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-5-1-lideranca-e-comprometimento",
+    "title": "ISO 9001 requisitos: 5.1 – Liderança e Comprometimento",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-5-2-politica",
+    "title": "ISO 9001 requisitos: Política da qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "qualidade-e-seguranca-de-mao-dadas",
+    "title": "Como a qualidade e segurança podem andar de mãos dadas?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "3-pontos-fundamentais-para-uma-venda",
+    "title": "3 pontos fundamentais para uma venda!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-22000-falhas-auditoria-parte-ii",
+    "title": "ISO 22000: Falhas mais frequentes na implementação do Sistema de Gestão da Segurança de Alimentos (Parte II)",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-5-3-papeis-responsabilidades-e-autoridades-organizacionais",
+    "title": "ISO 9001 requisitos: 5.3 - Papéis, responsabilidades e autoridades organizacionais",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-6-2-objetivos-da-qualidade-e-planejamento-para-alcanca-los",
+    "title": "ISO 9001 requisitos: 6.2 - Objetivos da qualidade e planejamento para alcançá-los",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "indicadores-ambientais-sustentabilidade",
+    "title": "Indicadores ambientais: Seu quebra cabeça para a sustentabilidade",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-7-1-recursos",
+    "title": "ISO 9001 requisitos: 7.1 - Recursos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-7-2-competencia",
+    "title": "ISO 9001 requisitos: 7.2 – Competência",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-7-5-informacao-documentada",
+    "title": "ISO 9001 requisitos: 7.5 - Informação Documentada",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-22000-como-evitar-falhas-no-sistema-de-seguranca-de-alimentos",
+    "title": "ISO 22000: Como evitar as falhas no Sistema de Segurança de Alimentos?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-8-2-requisitos-para-produtos-e-servicos",
+    "title": "ISO 9001 requisitos: 8.2 – Requisitos para produtos e serviços",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "transicao-iso-90012015-seu-tempo-esta-acabando",
+    "title": "Transição ISO 9001:2015, seu tempo está acabando!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-45001-prevencao-de-acidentes-e-o-modelo-do-queijo-suico",
+    "title": "ISO 45001: Prevenção de Acidentes e o Modelo do Queijo Suíço",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-nao-conformidade",
+    "title": "O que é não conformidade? Como tratar uma NC?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quanto-dinheiro-minha-transportadora-pode-perder-por-nao-ter-o-sassmaq",
+    "title": "Quanto dinheiro minha transportadora pode perder por não ter o SASSMAQ?",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-histograma",
+    "title": "Histograma: o que é e como fazer?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-22000-2018-o-que-ha-de-novo-parte-1",
+    "title": "ISO 22000:2018: o que há de novo (Parte 1)",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "e-possivel-obter-lucro-com-saude-e-seguranca-do-trabalho",
+    "title": "É possível obter lucro com saúde e segurança do trabalho?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "iso-22000-2018-parte-2",
+    "title": "ISO 22000:2018 - o que há de novo (Parte 2)",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-a-iso-37001",
+    "title": "O que é a ISO 37001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "seu-organograma-nao-serve-pra-mais-nada",
+    "title": "Seu organograma não serve pra mais nada!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-2",
+    "title": "PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "iso-220002018-o-que-ha-de-novo-parte-3",
+    "title": "ISO 22000:2018 – o que há de novo (Parte 3)",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "acidente-de-trabalho-veja-como-proceder",
+    "title": "Acidente de trabalho? Veja como proceder",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "planejamento-estrategico-no-seu-escritorio-contabil",
+    "title": "Você faz planejamento estratégico no seu escritório contábil?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-2018",
+    "title": "PBQP-H 2021: o muda com a atualização da norma",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "matriz-swot-contabilidade-como-e-por-que-fazer",
+    "title": "Contabilidade: como e por que fazer análise da matriz SWOT",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "contabilidade-a-quais-riscos-meu-escritorio-contabil-esta-sujeito-e-como-lidar-com-eles",
+    "title": "Riscos do escritório contábil e como lidar com eles",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-22000-2018-o-que-ha-de-novo-parte-4",
+    "title": "ISO 22000:2018 – o que há de novo (Parte 4)",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "iso-45001",
+    "title": "ISO 45001 e a Segurança do Trabalho",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "importancia-de-um-contrato-de-prestacao-de-servicos-contabeis",
+    "title": "Qual é a importância de um contrato de prestação de serviços contábeis bem elaborado?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-manter-meu-escritorio-contabil-competitivo",
+    "title": "Como manter meu escritório contábil competitivo?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "comunicacao-torna-escritorio-contabil-competitivo",
+    "title": "Como as ferramentas de comunicação e treinamento tornam o escritório contábil mais competitivo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "4-razoes-escritorios-contabeis-retrabalho",
+    "title": "4 razões pelas quais os escritórios contábeis se deparam com retrabalho",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-contabilidade-gerencial",
+    "title": "O que é contabilidade gerencial e como utilizá-la como ferramenta estratégica da empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "riscos-operacao-escritorio-contabil",
+    "title": "Quais são os riscos na operação que seu escritório contábil está sujeito e de quem é a responsabilidade?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-atrair-clientes-para-escritorio-contabil",
+    "title": "Como atrair clientes para o seu escritório contábil através do mundo digital",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5-dicas-conseguir-mais-clientes-escritorio-contabil",
+    "title": "Escritório contábil: 5 dicas para conquistar mais clientes",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "segmentar-carteira-clientes-escritorio-contabil",
+    "title": "Quais são as vantagens de segmentar a carteira de clientes do meu escritório contábil?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-ajudar-cliente-contratar-servicos-contabilidade",
+    "title": "Contratação serviços contabilidade: dicas para ajudar o cliente a contratar sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-convencer-cliente-ajustar-honorarios-contabeis",
+    "title": "Honorários contábeis: como convencer o cliente a ajustá-los conforme o aumento da responsabilidade do escritório?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "programa-de-qualidade-contabil-iso-9001",
+    "title": "ISO 9001 para escritórios de contabilidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-lidar-com-a-inadimplencia-dos-honorarios-contabeis",
+    "title": "Como você lida com a inadimplência dos honorários contábeis?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "planejamento-estrategico-empresas-contabeis",
+    "title": "Planejamento estratégico: por que empresas contábeis devem criar um?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "aspectos-ambientais-transportadoras",
+    "title": "Quais são os aspectos ambientais de uma transportadora?",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "calibracao-tudo-o-que-voce-precisa-saber",
+    "title": "Calibração - Tudo o que você precisa saber",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "voce-sabe-se-esta-perdendo-dinheiro-com-sua-producao-de-alimentos",
+    "title": "Você sabe avaliar se está perdendo dinheiro com sua produção de alimentos?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "5-dicas-indispensaveis-para-escritorio-contabeis",
+    "title": "5 dicas indispensáveis para escritório contábeis",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-mudou-na-iso-170252017",
+    "title": "O que mudou na ISO 17025:2017",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "sua-empresa-faz-gestao-de-residuos-do-jeito-certo",
+    "title": "Sua empresa faz gestão de resíduos do jeito certo?",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "5-dicas-para-diminuir-o-consumo-do-seu-caminhao",
+    "title": "5 dicas para diminuir o consumo do seu caminhão",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "7-beneficios-da-gestao-de-documentos-para-seu-escritorio",
+    "title": "7 Benefícios da gestão de documentos para seu escritório",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "certificacao-iso-para-franquias",
+    "title": "Os 5 passos do sucesso para iniciar a certificação ISO 9001 da sua franquia",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "missao-visao-valores",
+    "title": "Missão, Visão e Valores de uma Organização",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "principais-duvidas-sobre-o-geric",
+    "title": "Principais dúvidas sobre o GERIC",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "os-erros-que-90-das-empresas-cometem-na-contratacao-consultoria",
+    "title": "Os principais erros de 90% das empresas na contratação consultoria",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "7-sinais-que-sua-empresa-e-desorganizada",
+    "title": "7 sinais que uma empresa desorganizada apresenta",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pqta-saiba-o-passo-a-passo-para-a-conquista-lo",
+    "title": "PQTA: saiba o passo a passo para conquistá-lo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-fazer-com-a-analise-swot",
+    "title": "O que fazer com a análise SWOT?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-e-a-rotina-de-implementacao-com-a-templum",
+    "title": "Como funciona o método de consultoria da Templum",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5-dicas-para-organizar-seu-processo-de-contas-a-pagar",
+    "title": "5 dicas para organizar seu processo de contas a pagar",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-iso-e-por-que-certificar",
+    "title": "O que é ISO e por que certificar?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-a-iso-9001-pode-ajudar-na-gestao-de-estoque",
+    "title": "Como a ISO 9001 pode ajudar na gestão de estoque",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-funciona-o-processo-de-uma-auditoria-interna",
+    "title": "Como funciona o processo de uma auditoria interna?",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "contas-a-receber-5-dicas-para-organizar-seu-processo",
+    "title": "Contas a receber: 5 dicas para organizar seu processo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "lgpd",
+    "title": "Tudo sobre a LGPD",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "seguranca-da-informacao",
+    "title": "O que é Segurança da Informação?",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "nova-versao-da-fssc",
+    "title": "As mudanças na nova versão da FSSC que podem ser surpresa às organizações na próxima auditoria",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "iso-27001-e-iso-9001",
+    "title": "ISO 27001 e ISO 9001: prós e contras dessa integração",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "como-funciona-certificacao-iso-9001-2",
+    "title": "Como funciona a certificação ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "diagnostico-de-gestao-da-qualidade-simplificando-a-gestao",
+    "title": "Diagnóstico de Gestão da Qualidade - Simplificando a Gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-estrategica-3-dicas-para-simplificar-e-aplicar-na-sua-empresa-simplificando-a-gestao",
+    "title": "Gestão Estratégica: 3 dicas para simplificar e aplicar na sua empresa - Simplificando a Gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-pessoas-na-pratica-3-dicas-para-implementar-simplificando-a-gestao",
+    "title": "Gestão de Pessoas na Prática: 3 dicas para implementar - Simplificando a Gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "por-que-os-cartorios-deveriam-pensar-na-27001-e-nao-apenas-na-lgpd",
+    "title": "Por que os cartórios deveriam pensar na 27001 e não apenas na LGPD?",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-resultados-5-dicas-para-tomar-decisoes-com-base-em-dados",
+    "title": "Gestão de Resultados - 5 dicas para tomar decisões com base em dados.",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "impacto-das-mudancas-das-normas-regulamentadoras-nrs-em-seu-sistema-de-gestao",
+    "title": "Impacto das mudanças das Normas Regulamentadoras (NRs) em seu sistema de gestão.",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "requisitos-da-iso-27001",
+    "title": "Requisitos da ISO 27001",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "como-as-martechs-podem-ajudar-a-fidelizar-seus-clientes",
+    "title": "Como as martechs podem ajudar na fidelização dos seus clientes?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-ainda-nao-te-contaram-da-versao-5-da-fssc",
+    "title": "O que ainda não te contaram da versão 5 da FSSC",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-interna-4-0-por-que-investir",
+    "title": "Auditoria Interna 4.0: Por que investir?",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "solucoes-da-auditoria-4-0",
+    "title": "Soluções da Auditoria 4.0",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "empresas-que-precisam-da-iso-27001",
+    "title": "Empresas que precisam da ISO 27001",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "relacao-da-iso-27001-com-o-home-office",
+    "title": "Relação da ISO 27001 com o Home Office",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "como-fica-a-sua-certificacao-no-cenario-da-pandemia",
+    "title": "Como fica a sua certificação no cenário da Pandemia",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "transporte-de-quimicos-na-pandemia",
+    "title": "A importância do SASSMAQ para o transporte de químicos na pandemia",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "saude-dos-trabalhadores-voce-sabia-que-a-pandemia-do-coronavirus-esta-diretamente-ligada-a-sua-certificacao-iso-45001",
+    "title": "A relação da pandemia do coronavírus com a certificação ISO 45001",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "gestao-a-distancia-solucoes-para-a-construcao-civil",
+    "title": "Gestão à distância: Soluções para a Construção Civil",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "trabalho-remoto-boas-praticas-para-o-home-office",
+    "title": "Boas Práticas para o Trabalho Remoto",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "situacoes-inusitadas-vivenciadas-em-home-office",
+    "title": "Situações Inusitadas Vivenciadas em Home Office",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "construcao-civil-a-importancia-do-setor-no-pais-e-novas-tecnologias-para-o-seu-desenvolvimento",
+    "title": "Construção Civil: a importância do setor no país e novas tecnologias para o seu desenvolvimento",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "como-priorizar-seu-tempo-em-home-office",
+    "title": "Como Priorizar seu Tempo em Home Office",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-na-pratica",
+    "title": "ISO 9001 na prática: 6 coisas essenciais!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mapeamento-de-processos-e-a-iso-9001",
+    "title": "Mapeamento de Processos e a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "diferenca-entre-os-programas-do-gfsi",
+    "title": "Qual é a diferença entre os programas do GFSI (FSSC, IFS, BRC)?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-global-markets-programme",
+    "title": "O que é Global Markets Programme?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "vantagens-do-global-markets-para-pequenas-industrias",
+    "title": "Vantagens do Global Markets para pequenas indústrias",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "pqta-2020",
+    "title": "PQTA 2020: Por que os cartórios precisam dele?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "qualidade-higiene-e-seguranca-dos-alimentos",
+    "title": "Qualidade, Higiene e Segurança dos Alimentos",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "sistema-de-gestao-como-manter-e-evoluir-o-seu",
+    "title": "Sistema de Gestão: Como manter e evoluir o seu",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-conseguiur-a-certificacao-do-pbqp-h",
+    "title": "Como conseguir a certificação do PBQP-H?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "certificacao-pbqp-h-como-a-templum-pode-te-ajudar",
+    "title": "Certificação PBQP-H: como a Templum pode te ajudar nessa jornada?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "a-relacao-entre-o-pbqp-h-e-a-minha-empresa",
+    "title": "A relação entre o PBQP-H e a minha empresa",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-riscos-seguranca-dos-alimentos",
+    "title": "Gestão de riscos à segurança dos alimentos",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "casa-verde-e-amarela-saiba-tudo-o-que-e-preciso-saber-2",
+    "title": "Programa Casa Verde e Amarela: Saiba tudo o que é preciso saber!",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-siac-2021",
+    "title": "O que é o PBQP-H e sua relação com SiAC 2021",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "iso-56002-o-que-e-a-iso-de-inovacao",
+    "title": "ISO 56002: o que é a ISO de inovação?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "tudo-o-que-precisa-saber-sobre-a-iso-27001-e-seguranca-da-informacao",
+    "title": "Tudo o que precisa saber sobre a ISO 27001 e Segurança da Informação",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "aplicacao-nr-18-no-pbqp-h",
+    "title": "Como é a aplicação da NR 18 no PBQP-H?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-o-que-minha-empresa-perde-sem",
+    "title": "O que minha empresa perde sem a ISO 9001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quais-sao-os-beneficios-de-ter-um-processo-de-seguranca-da-informacao-padronizado",
+    "title": "Benefícios de ter um processo de segurança da informação padronizado",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "siac-2021-o-que-mudou",
+    "title": "SiAC 2021: o que mudou?",
+    "cats": "Webinars",
+    "hero": true
+  },
+  {
+    "slug": "relacao-do-lgpd-com-a-iso-27001",
+    "title": "Relação do LGPD com a ISO 27001",
+    "cats": "Webinars",
+    "hero": true
+  },
+  {
+    "slug": "planilha-analise-swot",
+    "title": "Planilha - Análise SWOT",
+    "cats": "Planilhas",
+    "hero": true
+  },
+  {
+    "slug": "planilha-mapeamento-de-processos-sgi",
+    "title": "Planilha - Mapeamento de Processos SGI",
+    "cats": "Planilhas",
+    "hero": true
+  },
+  {
+    "slug": "planilha-fluxo-de-caixa",
+    "title": "Assistente virtual da templum",
+    "cats": "Planilhas",
+    "hero": true
+  },
+  {
+    "slug": "7-beneficios-do-pbqp-h-para-sua-empresa",
+    "title": "7 benefícios do PBQP-H para sua empresa",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-sassmaq",
+    "title": "Tudo o que você precisa saber sobre o SASSMAQ",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "estudo-de-caso-fssc-iso-22000-zip-pak-embalagens",
+    "title": "Estudo de Caso FSSC ISO 22000 ZIP PAK Embalagens",
+    "cats": "E-books",
+    "hero": true
+  },
+  {
+    "slug": "e-book-regularizar-a-sua-empresa-ou-produto-do-ramo-alimenticio",
+    "title": "E-book: Regularizar a sua empresa ou produto do ramo alimentício",
+    "cats": "E-books",
+    "hero": true
+  },
+  {
+    "slug": "e-book-como-ganhar-lucro-com-a-iso",
+    "title": "E-book: Como ganhar lucro com a ISO",
+    "cats": "E-books",
+    "hero": true
+  },
+  {
+    "slug": "e-book-gestao-do-relacionamento-com-clientes",
+    "title": "E-book: Gestão do relacionamento com clientes",
+    "cats": "E-books",
+    "hero": true
+  },
+  {
+    "slug": "e-book-a-nova-iso-45001",
+    "title": "E-book: A nova ISO 45001",
+    "cats": "E-books",
+    "hero": true
+  },
+  {
+    "slug": "e-book-tudo-sobre-a-transicao-da-iso-90012015",
+    "title": "Diagnóstico: Faça um diagnóstico da sua empresa",
+    "cats": "E-books",
+    "hero": true
+  },
+  {
+    "slug": "iso-56002",
+    "title": "ISO 56002 - Tudo que você precisa saber sobre essa norma",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-14001-os-7-beneficios-da-norma-para-o-seu-negocio",
+    "title": "ISO 14001: os 7 benefícios da norma para o seu negócio",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "iso-14001-o-que-fazer-para-manter-o-sistema-de-gestao",
+    "title": "ISO 14001: o que fazer para manter o sistema de gestão?",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "iso-14001-os-maiores-beneficios-de-se-ter-um-processo-padronizado",
+    "title": "ISO 14001: os maiores benefícios de se ter um processo padronizado",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "seguranca-e-saude-ocupacional-e-meio-ambiente-o-papel-das-legislacoes-na-certificacao-sassmaq",
+    "title": "Segurança e Saúde Ocupacional e Meio Ambiente - O Papel das Legislações na Certificação SASSMAQ",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "iso-27001-o-que-fazer-para-manter-o-sistema-de-gestao",
+    "title": "ISO 27001: O que fazer para manter o sistema de gestão?",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "qual-a-relacao-entre-as-normas-iso-e-os-ods",
+    "title": "Qual a relação entre as normas ISO e os ODS?",
+    "cats": "ESG|Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quais-os-maiores-riscos-de-nao-ter-a-iso-45001-implementada",
+    "title": "Quais os maiores riscos de não ter a ISO 45001 implementada?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "como-implementar-a-iso-27001-para-garantir-principal-beneficio",
+    "title": "Como implementar a ISO 27001 para garantir principal benefício",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-a-certificacao-sassmaq",
+    "title": "O que é a Certificação SASSMAQ?",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "sassmaq-os-maiores-riscos-de-nao-ter-o-sistema-implementado",
+    "title": "SASSMAQ: os maiores riscos de não ter o sistema implementado",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "certificacao-sassmaq-o-que-fazer-para-manter-o-sistema-de-gestao",
+    "title": "Certificação SASSMAQ: o que fazer para manter o Sistema de Gestão",
+    "cats": "Gestão e Marketing",
+    "hero": false
+  },
+  {
+    "slug": "o-que-voce-precisa-saber-sobre-lgpd",
+    "title": "O que você precisa saber sobre a LGPD",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "impactos-do-pgr",
+    "title": "Impactos do PGR - Um marco para a área de Saúde e Segurança no Trabalho",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "o-que-devo-saber-antes-de-contratar-uma-franquia",
+    "title": "O que devo saber antes de contratar uma franquia",
+    "cats": "Franquia",
+    "hero": true
+  },
+  {
+    "slug": "social-da-sigla-esg",
+    "title": "Social da sigla ESG - Saiba o que significa",
+    "cats": "ESG",
+    "hero": true
+  },
+  {
+    "slug": "importancia-do-relatorio-de-sustentabilidade",
+    "title": "Relatório de sustentabilidade: entenda a sua importância",
+    "cats": "ESG",
+    "hero": true
+  },
+  {
+    "slug": "metricas-e-ods-no-pilar-enviromental",
+    "title": "ODS e métricas no pilar environmental (Ambiental) do ESG",
+    "cats": "ESG",
+    "hero": true
+  },
+  {
+    "slug": "como-a-t-engenharia-entrou-no-mercado-internacional",
+    "title": "Como a Templum auxiliou a T Engenharia e Sistemas a entrar no mercado internacional?",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "como-definir-o-escopo-do-sgi-da-minha-empresa",
+    "title": "Como definir o escopo do SGI da minha empresa?",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa",
+    "title": "Como fazer o Levantamento de Aspectos e Impactos Ambientais da minha empresa?",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-transformando-as-bases-da-construcao-civil",
+    "title": "PBQP-H: transformando as bases da construção civil",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "o-segredo-da-seguranca-das-informacoes",
+    "title": "Gestão Eficiente de Documentos Fiscais: o segredo da segurança das informações",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "qual-a-melhor-opcao-com-a-selic-alta",
+    "title": "Crédito para construtoras: qual a melhor opção com a SELIC alta?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "impactos-da-lgpd-na-contabilidade",
+    "title": "A LGPD no setor da contabilidade",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "os-maiores-erros-cometidos-na-lgpd-e-seus-impactos-financeiros",
+    "title": "Os maiores erros cometidos na LGPD e seus impactos financeiros",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "os-maiores-ataques-hackers-da-historia",
+    "title": "Os maiores ataques hackers da história",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "e-book-programa-casa-verde-amarela-oportunidade-em-meio-a-crise-para-construtoras",
+    "title": "E-book: Programa Casa Verde Amarela",
+    "cats": "Construção Civil|E-books",
+    "hero": true
+  },
+  {
+    "slug": "e-book-mitos-e-verdades-pbqp-h",
+    "title": "E-book: Mitos e Verdades do PBQP-H",
+    "cats": "Construção Civil|E-books",
+    "hero": true
+  },
+  {
+    "slug": "recall-de-alimentos-o-que-fazer",
+    "title": "Recall de Alimentos! O que fazer?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "selo-casa-azul-caixa-entenda-o-que-e-e-como-aderir",
+    "title": "Selo Casa Azul Caixa: Entenda o que é e como aderir",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-como-a-implementacao-melhora-a-rotina-e-a-reputacao-da-minha-empresa",
+    "title": "PBQP-H: Como a implementação melhora a rotina e a reputação da minha empresa?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "lean-construction-vantagens-para-a-construcao-civil",
+    "title": "Lean Construction: Vantagens para a Construção Civil",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "tijolo-ecologico-conheca-essa-solucao-sustentavel",
+    "title": "Tijolo Ecológico: Conheça essa solução sustentável",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "cidades-inteligentes-conheca-mais-uma-tendencia-da-construcao-civil",
+    "title": "Cidades inteligentes: conheça mais uma tendência da Construção Civil",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "marketing-e-vendas-tem-a-ver-com-a-iso-9001",
+    "title": "Marketing e vendas tem a ver com a ISO 9001?",
+    "cats": "Gestão e Marketing|Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-a-ferramenta-que-voce-precisa-para-conhecer-seu-negocio-profundamente",
+    "title": "Auditoria: a ferramenta que você PRECISA para conhecer seu negócio profundamente!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "fssc-22000-versao-6-guias-de-orientacao-sobre-food-defense-e-mitigacao-de-food-fraud",
+    "title": "FSSC 22000 Versão 6: Guias de orientação sobre Food Defense e Mitigação de Food Fraud",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "fssc-22000-versao-6-guia-de-mudancas-para-certificacao-e-auditorias",
+    "title": "FSSC 22000 Versão 6: Guia de Mudanças para Certificação e Auditorias",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "comunicado-importante-para-empresas-ja-certificadas",
+    "title": "Comunicado Importante para Empresas Já Certificadas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "algumas-palavras-sobre-iso-9001-e-padronizacao",
+    "title": "Algumas palavras sobre ISO 9001 e padronização",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pcmat-seguranca-do-trabalho-importancia-e-como-implementa-lo-na-construcao-civil",
+    "title": "PCMAT Segurança do Trabalho: Importância e Como Implementá-lo na Construção Civil",
+    "cats": "",
+    "hero": false
+  },
+  {
+    "slug": "atualizacao-pbqp-h-2018",
+    "title": "Atualização PBQP-H 2018",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "planejamento-estrategico-financeiro",
+    "title": "Estratégias Poderosas de Planejamento Financeiro",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "beneficios-do-planejamento-estrategico",
+    "title": "Conheça os Benefícios do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "planejamento-estrategico-empresarial",
+    "title": "Planejamento Estratégico Empresarial em Ação",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "etapas-do-planejamento-estrategico",
+    "title": "As Etapas Fundamentais do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "exemplos-de-planejamento-estrategico",
+    "title": "Exemplos de Planejamento Estratégico que Funcionam",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "mapeamento-de-processos-administrativos",
+    "title": "Mapeamento de Processos Administrativos Vencedores",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mapeamento-de-processos-bpmn",
+    "title": "Transforme Sua Empresa: Mapeamento de Processos BPMN Descomplicado",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "ferramentas-de-mapeamento-de-processos",
+    "title": "Supere os Obstáculos: Ferramentas de Mapeamento de Processos Essenciais",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mapeamento-de-processos-lean",
+    "title": "O Poder do Lean: Mapeamento de Processos que Impulsiona Resultados",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mapeamento-de-processos-de-ti",
+    "title": "Mapeamento de Processos de TI Descomplicado",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "caracteristicas-plano-estrategico",
+    "title": "O Guia Definitivo: Características Essenciais do Plano Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "fundamentos-planejamento-estrategico",
+    "title": "Os Fundamentos Necessários para o Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "como-fazer-planejamento-estrategico",
+    "title": "Aprenda Como Fazer Planejamento Estratégico de Sucesso",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "envolve-planejamento-estrategico",
+    "title": "Transformando Visão em Realidade: A Importância do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "planejamento-estrategico-no-trabalho",
+    "title": "O Impacto do Planejamento Estratégico no Trabalho",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "principios-planejamento-estrategico",
+    "title": "Princípios do Planejamento Estratégico Revelados",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "elementos-gestao-estrategica",
+    "title": "Descobrindo os Elementos de Gestão Estratégica",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "partes-planejamento-estrategico",
+    "title": "Conheça as Partes do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "principios-planejamento-estrategico-2",
+    "title": "Princípios Essenciais do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "niveis-estrategia",
+    "title": "Desvendando os níveis da estratégia para Empresários",
+    "cats": "Gestão e Marketing",
+    "hero": false
+  },
+  {
+    "slug": "elementos-planejamento-estrategico",
+    "title": "Elementos do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "niveis-planejamento-estrategico",
+    "title": "Dominando os Níveis do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "processo-pdca",
+    "title": "Alavanque seu Sucesso: Estratégias com o Processo PDCA",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "processo-planejamento-estrategico",
+    "title": "O Processo de Planejamento Estratégico Desvendado",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "tecnicas-planejamento-estrategico",
+    "title": "Técnicas Planejamento Estratégico para Empresários Ambiciosos",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "passos-planejamento-estrategico",
+    "title": "Construindo seu Futuro: 10 Passos do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "bases-planejamento-estrategico",
+    "title": "Bases Estratégicas para o Sucesso Empresarial",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "partes-planejamento-estrategico-2",
+    "title": "As Partes Essenciais do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "objetivo-planejamento-estrategico",
+    "title": "O Objetivo no Planejamento Estratégico, Alinhando Rumo e Propósito",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "etapas-planejamento",
+    "title": "Importância, elementos e fases Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "topicos-planejamento-estrategico",
+    "title": "Tópicos de Planejamento Estratégico Decifrado",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "etapas-plano-estrategico",
+    "title": "Descubra as Etapas do Plano Estratégico para construir uma base sólida",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "etapas-planejamento-estrategico",
+    "title": "Desvendando as Etapas do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "pilares-planejamento-estrategico",
+    "title": "Os Pilares do Planejamento Estratégico Desvendados",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "tipos-planejamento-estrategico",
+    "title": "Estratégias Poderosas: Conheça os tipos planejamento estratégico para o Sucesso Empresarial",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "como-fazer-planejamento-estrategico-2",
+    "title": "Como Fazer Planejamento Estratégico Vencedor",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "importancia-planejamento-estrategico-organizacoes",
+    "title": "A Importância do Planejamento Estratégico para as Organizações",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "desvendando-planejamento-estrategico",
+    "title": "Desvendando o Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "pilares-gestao-estrategica",
+    "title": "Os Fundamentos da Gestão Estratégica para Potencializar seu Negócio",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "metodologias-planejamento-estrategico",
+    "title": "Conheça as Melhores Metodologias para Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "principios-planejamento-estrategico-4",
+    "title": "Desvendando os Princípios Essenciais do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "etapas-planejamento-estrategico-2",
+    "title": "Alcance o Topo: Etapas do Planejamento Estratégico Reveladas",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "pilares-planejamento-estrategico-2",
+    "title": "Os Pilares Essenciais do Planejamento Estratégico que Alavancam seu Negócio",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "acoes-planejamento-estrategico",
+    "title": "Ações Estratégicas de Planejamento que Fazem a Diferença",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "compoem-planejamento-estrategico",
+    "title": "Conquistando Resultados Extraordinários: Os Elementos do Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "pontos-essenciais-planejamento-estrategico",
+    "title": "Pontos Essenciais do Planejamento Estratégico Revelados",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "tipos-planejamento-estrategico-2",
+    "title": "Descubra os Principais Tipos de Planejamento Estratégico",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "niveis-planejamento-estrategico-2",
+    "title": "Desvendando os Níveis do Planejamento Estratégico: Um Guia Completo",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "funcao-planejamento-estrategico",
+    "title": "A Função do Planejamento Estratégico Desvendada",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "primeiros-passos-para-auditoria-interna-iso",
+    "title": "Guia Inicial para Auditoria Interna ISO",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "como-escolher-auditor-interno-iso",
+    "title": "Como escolher o Auditor Interno Ideal",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "como-auditoria-interna-iso-impulsiona-negocios",
+    "title": "O Impacto da Auditoria Interna ISO no Crescimento dos Negócios",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "mitos-e-verdades-auditoria-interna-iso",
+    "title": "Mitos e verdades da Auditoria Interna ISO",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "maximizando-o-roi-auditoria-interna-iso",
+    "title": "Estratégias para Maximizar o ROI em Auditorias Internas ISO",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-interna-iso-perguntas-frequentes",
+    "title": "Respondendo às Principais Dúvidas sobre Auditoria Interna ISO",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "checklist-preparacao-auditoria-interna-iso",
+    "title": "Lista de Verificação para Preparação de Auditoria Interna ISO",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "integrando-ausitoria-interna-iso-com-estrategia-de-negocio",
+    "title": "Alinhando Auditoria Interna ISO à Estratégia Empresarial",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "auditorias-internas-iso",
+    "title": "Desvendando o Processo de Auditorias Internas ISO",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-interna-nas-diferentes-noramas-iso",
+    "title": "Auditoria Interna Aplicada às Diversas Normas ISO",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-interna-e-melhoria-continua",
+    "title": "Auditoria Interna como Ferramenta de Melhoria Contínua",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-interna-iso-melhores-praticas",
+    "title": "Implementando as Melhores Práticas em Auditoria Interna ISO",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "precisa-de-auditoria-interna-para-certificar",
+    "title": "A Importância da Auditoria Interna na Certificação ISO",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "desafios-comuns-auditorias-internas-iso",
+    "title": "Enfrentando os Desafios das Auditorias Internas ISO",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-interna-iso-erros-comuns",
+    "title": "Identificando e Evitando Erros Comuns em Auditorias Internas ISO",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "novos-ajustes-no-minha-casa-minha",
+    "title": "Novos Ajustes no Minha Casa Minha vida",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "recorde-minha-casa-minha-vida",
+    "title": "Como o Recorde de Vendas no Minha Casa Minha Vida Impulsiona Oportunidades para Construtoras Certificadas pelo PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "consultoria-iso-9001",
+    "title": "Consultoria ISO 9001 e suas vantagens para empresários",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "certificast",
+    "title": "Certificast",
+    "cats": "",
+    "hero": false
+  },
+  {
+    "slug": "transforme-sua-empresa-com-o-toque-de-midas-a-revolucao-da-certificacao-iso",
+    "title": "Transforme sua Empresa com o \"Toque de Midas\": A Revolução da Certificação ISO",
+    "cats": "Qualidade e Inovação|Saúde e Segurança do Trabalho|Segurança dos Alimentos|Segurança e Compliance|Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "como-a-certificacao-iso-pode-transformar-seu-negocio-em-2025",
+    "title": "Como a Certificação ISO Pode Transformar Seu Negócio em 2025",
+    "cats": "Qualidade e Inovação|Saúde e Segurança do Trabalho|Segurança dos Alimentos|Segurança e Compliance|Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "pbqph-em-2025",
+    "title": "Minha Casa, Minha Vida 2025: Como Construtoras Podem se Destacar com o PBQP-H",
+    "cats": "Auditoria|Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "qualificacao-de-fornecedores-no-pbqp-h-siac",
+    "title": "Qualificação de Fornecedores no PBQP-H SiAC: Importância e Erros Comuns",
+    "cats": "Auditoria|Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "auditorias-internas-e-externas-iso",
+    "title": "Auditorias Internas e Externas ISO: Entenda de Uma Vez Suas Diferenças e Como Cada Uma Ajuda Sua Empresa",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "voce-esta-preparado-para-a-proxima-auditoria",
+    "title": "Você Está Preparado para a Próxima Auditoria? Descubra com Nosso Checklist",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "como-auditorias-internas-recorrentes-podem-transformar-a-gestao-da-sua-empresa",
+    "title": "Como Auditorias Internas Recorrentes Podem Transformar a Gestão da Sua Empresa",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-iso9001-como-transformar-conformidade-em-vantagem",
+    "title": "Auditoria ISO 9001: Como Transformar Conformidade em Vantagem Competitiva",
+    "cats": "Auditoria|Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quais-sao-os-principios-da-iso-9001-em-2025",
+    "title": "Quais são os Princípios da ISO 9001 em 2025?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-garantir-a-satisfacao-do-seu-cliente",
+    "title": "Como Garantir a Satisfação do Seu Cliente?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-gestao-de-risco-e-como-implementar-na-sua-empresa",
+    "title": "O que é Gestão de Risco e Como Implementar na Sua Empresa?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "ciclo-pdca",
+    "title": "Ciclo PDCA",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "documentacao-iso-9001",
+    "title": "Documentação ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-iso-9001",
+    "title": "Auditoria e Certificação ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-investir-certo-nos-treinamentos-necessarios-a-adequacao-para-iso-9001",
+    "title": "Como investir certo nos treinamentos necessários à adequação para ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-como-aliada-na-implementacao-de-mudancas-sofrem-resistencia-de-muitos",
+    "title": "ISO 9001 como aliada na implementação de mudanças",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "alicerce-da-implementacao-iso-9001-controle-de-documentos",
+    "title": "O alicerce da implementação ISO 9001 - Controle de Documentos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-melhoria-evolucao-dos-processos-sera",
+    "title": "ISO 9001: Melhoria e evolução dos processos, será?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "monitorar-fornecedores-e-realmente-necessario",
+    "title": "Monitorar fornecedores é realmente necessário?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "cliente-fala-na-bandnews-sobre-certificacao-iso9001",
+    "title": "Cliente ISO Online fala na Bandnews sobre a Certificação ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "beneficios-iso9001-traz-uma-clinica-odontologica",
+    "title": "Que benefícios a ISO9001 traz a uma clinica odontológica?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-online-9001-na-folha-de-sao-paulo",
+    "title": "ISO Online na Folha de São Paulo: ISO 9001 cresce entre pequenas empresas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-iso-9001",
+    "title": "O que é ISO 9001 e por que certificar minha empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "qual-e-melhor-opcao-para-implementacao-iso-9001",
+    "title": "Qual é a melhor opção para implementação ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-esg",
+    "title": "O que é ESG?",
+    "cats": "ESG",
+    "hero": true
+  },
+  {
+    "slug": "criterios-de-sustentabilidade-e-esg-na-cadeia-de-fornecedores",
+    "title": "Como Incorporar Critérios de Sustentabilidade e ESG na Cadeia de Fornecedores",
+    "cats": "ESG|Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-auditoria-interna-esg-e-por-que-ela-pode-aumentar-os-lucros-da-sua-empresa",
+    "title": "O que é Auditoria Interna ESG e por que ela pode aumentar os lucros da sua empresa?",
+    "cats": "Auditoria|ESG",
+    "hero": true
+  },
+  {
+    "slug": "o-relatorio-global-de-riscos-2025-e-a-importancia-da-auditoria-esg-para-as-empresas",
+    "title": "O Relatório Global de Riscos 2025 e a Importância da Auditoria ESG para as Empresas",
+    "cats": "Auditoria|ESG|Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "mapeamento-de-processos-com-inteligencia-artificial",
+    "title": "Mapeamento de Processos da Templum Consultoria agora com Inteligência Artificial",
+    "cats": "Meio Ambiente|Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "vale-a-pena-investir-em-uma-certificacao-iso-descubra-o-custo-o-prazo-e-o-verdadeiro-retorno-para-sua-empresa",
+    "title": "Vale a pena investir em uma certificação ISO? Descubra o custo, o prazo e o verdadeiro retorno para sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1-2-2",
+    "title": "Vantagens da certificação ISO 9001 para pequenas empresas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "entenda-iso-online-atraves-de-um-rapido-tour",
+    "title": "Entenda a ISO Online através de um rápido tour",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "ferramentas-da-qualidade-crescimento-da-sua-empresa",
+    "title": "Ferramentas da qualidade e o crescimento da sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-14001-2",
+    "title": "ISO 14001 - Sistema de Gestão Ambiental",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "iso-50001-vamos-utilizar-energia-de-forma-inteligente",
+    "title": "ISO 50001: vamos utilizar a energia de forma inteligente?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "3-dicas-para-uma-implementacao-iso-9001-mais-eficaz",
+    "title": "3 dicas para implementar ISO 9001 de maneira eficaz",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "amazonas-energia-manaus-busca-ampliar-certificacao-iso-9001-em-suas-unidades",
+    "title": "Amazonas Energia busca ampliar a certificação ISO 9001 em suas unidades",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "recursos-humanos-item-6-2-habilidades",
+    "title": "Recursos Humanos - Ítem 6.2 - Habilidades",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "epi-equipamentos-de-protecao-individual",
+    "title": "EPI – Equipamentos de Proteção Individual",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "epi-nao-conformidade",
+    "title": "EPI e Não Conformidade na NR 6",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "programa-de-pontos-templum",
+    "title": "Programa de Pontos Templum",
+    "cats": "Qualidade e Inovação",
+    "hero": false
+  },
+  {
+    "slug": "pbqp-h",
+    "title": "PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "sassmaq",
+    "title": "SASSMAQ: mais Segurança no Transporte de Produtos Químicos",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "igor-furniel-comportamentos-geram-resultados",
+    "title": "Comportamentos que geram resultados",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "4-dicas-matadoras-para-envolver-colaboradores-na-implementacao-de-sistema-de-gestao",
+    "title": "4 dicas para envolver colaboradores na implementação de sistema de gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "melhore-a-eficiencia-do-seu-negocio-com-a-iso-9001",
+    "title": "Como melhorar a eficiência do seu negócio com a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "qual-a-melhor-forma-de-implementacao-iso-9001",
+    "title": "Qual a melhor forma de implementação ISO 9001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quanto-custa-iso-9001",
+    "title": "Quanto custa para obter a ISO 9001 em sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "manutencao-sistema-gestao-qualidade",
+    "title": "Como manter um sistema de gestão da qualidade ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "guia-de-implementacao-requisitos-iso-9001",
+    "title": "Guia de implementação da ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001",
+    "title": "ISO 9001: Tudo o que você precisa saber sobre a certificação",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-para-pequenas-empresas-parte-2",
+    "title": "Vantagens da certificação ISO 9001 para pequenas empresas: faturamento e lucro maiores",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "certificacao-iso-9001-garante-respeitabilidade-no-mercado",
+    "title": "Certificação ISO 9001 garante respeitabilidade no mercado",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mitos-verdades-sobre-iso-9001-parte-2",
+    "title": "ISO 9001: mitos e verdades sobre essa norma",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-garantia-de-boa-imagem-para-sua-empresa-os-clientes",
+    "title": "ISO 9001: garantia de boa imagem para sua empresa com os clientes",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-iso-9001-aliada-ao-marketing",
+    "title": "A ISO 9001 aliada ao marketing",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-iso-9001-em-orgaos-publicos",
+    "title": "A ISO 9001 em órgãos públicos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "novos-negocios-com-a-iso-9001",
+    "title": "Novos negócios com a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-comecar-agora-ou-deixar-para-2016",
+    "title": "ISO 9001: Começar agora ou deixar para 2016?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "templum-oferece-licenciamento-da-marca",
+    "title": "Templum oferece licenciamento da marca",
+    "cats": "Notícias",
+    "hero": false
+  },
+  {
+    "slug": "fluxo-de-caixa-em-tempos-de-crise",
+    "title": "Fluxo de caixa em tempos de crise",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5-dicas-de-financas-para-negocios-b2b",
+    "title": "5 dicas de finanças para negócios B2B",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "seguranca-e-saude-do-trabalho-prevenir-ou-remediar",
+    "title": "Segurança e saúde do trabalho, prevenir ou remediar?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "o-transporte-de-produtos-perigosos-no-canada",
+    "title": "O Transporte de produtos perigosos no Canadá",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "como-mapear-processos-e-atender-os-requisitos-da-iso-90012015-utilizando-tartaruga-turbinada-da-templum",
+    "title": "ISO 9001: Como mapear processos utilizando a Tartaruga Turbinada da Templum",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "nao-faca-sua-proxima-auditoria-antes-de-ler-este-artigo",
+    "title": "Não faça sua próxima auditoria antes de ler este artigo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-essencia-da-gestao-da-qualidade",
+    "title": "A Essência da Gestão da Qualidade: Transformação e Excelência",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-processos",
+    "title": "Organização e Gestão de Processos: do Contexto ao Resultado Que Importa",
+    "cats": "Processos",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-riscos-e-oportunidades-guia-avancado-e-pratico",
+    "title": "Gestão de Riscos e Oportunidades: Guia Avançado e Prático",
+    "cats": "",
+    "hero": true
+  },
+  {
+    "slug": "inteligencia-artificial",
+    "title": "Inteligência Artificial: Como Transformar Sua Empresa com IA na Prática",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "ozempic-mentira-gestao-de-processos",
+    "title": "Ozempic, Mounjaro e a Mentira de R$ 250 Bilhões. O que isso tem a ver com Gestão de Processos?",
+    "cats": "Gestão de Processos",
+    "hero": false
+  },
+  {
+    "slug": "iso-9001-investimento-para-a-maturidade-do-negocio",
+    "title": "ISO 9001: investimento para a maturidade do negócio",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-implementar-e-uma-coisa-certificar-e-outra",
+    "title": "ISO 9001: implementar é uma coisa, certificar é outra",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "video-escopo-do-sistema-de-gestao-da-qualidade",
+    "title": "Vídeo: Escopo do Sistema de Gestão da Qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "os-desafios-durante-a-implementacao-da-iso-9001-o-envolvimento-das-pessoas",
+    "title": "Os desafios da implementação da ISO 9001: o envolvimento das pessoas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "celebre-e-promova-a-certificacao-iso-9001",
+    "title": "Celebre e promova a certificação ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "empresas-e-funcionarios-sao-beneficiarios-diretos-da-iso-9001",
+    "title": "Empresas e funcionários são beneficiários diretos da ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-para-empreendedores",
+    "title": "ISO 9001 para empreendedores",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-90012008-substituira-a-versao-de-2000",
+    "title": "ISO 9001:2008 substituirá a versão de 2000",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "competencia-materia-prima-essencial-para-a-gestao",
+    "title": "Competência: matéria-prima essencial para a gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-sua-empresa-esta-preparada-para-a-iso-9001",
+    "title": "A sua empresa está preparada para a ISO 9001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "metodos-para-gerenciamento-de-mudancas-na-iso-9001",
+    "title": "Métodos para gerenciamento de mudanças na ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-saber-se-os-processos-estao-sendo-executados-como-deveriam",
+    "title": "Como saber se os processos estão sendo executados como deveriam?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "bom-atendimento-o-case-da-zappos-com",
+    "title": "Bom atendimento: o case da Zappos.com",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "world-quality-day-2010-abordara-a-crise-mundial",
+    "title": "World Quality Day 2010 abordará a crise mundial",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-medir-a-satisfacao-do-meu-cliente",
+    "title": "Como medir a satisfação do meu cliente?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-do-tempo-com-christian-barbosa",
+    "title": "Gestão do tempo com Christian Barbosa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-da-qualidade-em-servicos-publicos",
+    "title": "Gestão da qualidade em serviços públicos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "controle-financeiro-para-micro-e-pequenas-empresas",
+    "title": "Controle financeiro para micro e pequenas empresas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "raio-x-empresas-certificadas",
+    "title": "Um Raio X das empresas certificadas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-do-conhecimento-e-o-dia-a-dia-das-organizacoes",
+    "title": "Gestão do Conhecimento e o dia a dia das organizações",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "cinco-pecados-da-comunicacao-profissional",
+    "title": "Cinco pecados da comunicação profissional",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-interna-vamos-mandar-embora-a-bruxa-que-existe",
+    "title": "Auditoria interna, vamos mandar embora a bruxa que existe.",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "satisfacao-de-nossos-clientes",
+    "title": "Satisfação de nossos clientes",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "os-programas-de-ppra-pcmso-sao-obrigatorios",
+    "title": "Os programas de PPRA e PCMSO são obrigatórios?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-e-mesmo-burocratica",
+    "title": "A ISO 9001 é mesmo burocrática?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "os-08-principios-da-qualidade",
+    "title": "Os sete Princípios da Qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "relacao-entre-politica-da-qualidade-envolvimento-das-pessoas",
+    "title": "A relação entre a Política da Qualidade e o Envolvimento das Pessoas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "abordagem-por-processos",
+    "title": "Abordagem de Processos ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "melhoria-continua",
+    "title": "Melhoria Contínua",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "dimarzio-imoveis-e-primeira-imobiliaria-de-campinas-conquistar-iso-9001",
+    "title": "Dimarzio Imóveis: primeira imobiliária de Campinas a conquistar a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "relacao-entre-empresa-fornecedor-iso-9001",
+    "title": "A relação entre empresa, o fornecedor e a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "prazo-para-implementacao-da-iso-9001",
+    "title": "Qual é o prazo para implementação da ISO 9001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "sites-destacam-crescimento-iso9001-entre-micro-pequenas-empresa",
+    "title": "Sites destacam crescimento da ISO 9001 entre micro e pequenas empresas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-em-empresas-de-servicos",
+    "title": "A ISO 9001 em empresas de serviços",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-acoes-preventivas-dificuldades-na-utilizacao-dessa-tecnica",
+    "title": "ISO 9001 e ações preventivas: dificuldades na utilização",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "papel-representante-da-direcao-rd-na-implementacao-da-iso-9001-nas-organizacoes",
+    "title": "Representante da direção (RD): Qual o seu papel na implementação da ISO 9001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "dj-primeira-usar-iso-online-conquista-certificacao-iso-9001",
+    "title": "D&J, a primeira a usar a ISO Online, conquista a certificação ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "instrucao-de-trabalho-it",
+    "title": "Instrução de Trabalho (IT) na ISO 9001, como e quando utilizar?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "esclarecendo-alguns-mitos-sobre-iso-9001",
+    "title": "Esclarecendo alguns mitos sobre a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "reuniao-de-abertura-da-auditoria-interna-na-iso-9001",
+    "title": "A importância da Reunião de Abertura em Auditoria",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-online-chega-escritorio-de-deputada-em-brasilia",
+    "title": "ISO Online chega a escritório de deputada em Brasília",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pesquisa-aponta-consumidor-brasileiro-e-preocupado-meio-ambiente",
+    "title": "Pesquisa aponta que consumidor brasileiro é preocupado com meio ambiente",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-online-realiza-curso-para-formacao-de-auditor-interno",
+    "title": "ISO Online realiza curso para formação de auditor interno",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "satisfacao-cliente-iso-9001",
+    "title": "Satisfação do Cliente e a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "ponto-certo-pneus-inicia-processo-de-implementacao-da-iso-9001",
+    "title": "Ponto Certo Pneus inicia processo de implementação da ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-14001-consolidacao-sga",
+    "title": "ISO 14001 – A consolidação do SGA",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "iso-14001-legislacao-ambiental-brasileira",
+    "title": "ISO 14001 e a Legislação Ambiental Brasileira",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "iso-14001-pequenas-medias-empresas",
+    "title": "ISO 14001 e as pequenas e médias empresas",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "plano-de-cargos-salarios-e-uma-exigencia-da-iso-9001",
+    "title": "O plano de cargos e salários é uma exigência da ISO 9001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "uma-analise-sobre-nova-medida-conar-sobre-greenwashing",
+    "title": "Uma breve análise sobre a nova medida do CONAR sobre \"Greenwashing\"",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-identificar-aspecto-impacto-ambiental",
+    "title": "Como identificar aspectos e impactos ambientais",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "copa-2014-hora-de-investir",
+    "title": "Copa 2014: hora de investir",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "asv-conquista-certificacao-iso-9001-ajuda-da-iso-online",
+    "title": "ASV conquista certificação ISO 9001 com ajuda da ISO Online",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "passei-por-auditoria-agora",
+    "title": "Passei por auditoria, e agora?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "eficiencia",
+    "title": "As tendências do ambiente empresarial na era digital",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "nova-iso-14006",
+    "title": "A nova ISO 14006",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "sustentabilidade-2",
+    "title": "Sustentabilidade - O que é ser sustentável?",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-como-ferramenta-de-auto-conhecimento-da-empresa",
+    "title": "A ISO 9001 como ferramenta de auto conhecimento da empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "custos-de-acidentes-de-trabalho",
+    "title": "Quais são os custos dos acidentes de trabalho?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": false
+  },
+  {
+    "slug": "ppra",
+    "title": "PPRA - Programa de Prevenção de Riscos Ambientais",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "pcmso",
+    "title": "O que é PCMSO?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "lista-mestra-de-documentos-02",
+    "title": "Lista Mestra de Documentos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "duvidas-frequentes-para-implementacao-iso-90012008",
+    "title": "ISO 9001:2008, Preço e Prazo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "comparacao-entre-iso-9001-iso-14001",
+    "title": "ISO 9001 e ISO 14001, qual a diferença?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "organograma-funcional",
+    "title": "Organograma Funcional: O que é?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "acao-de-correcao-acao-corretiva",
+    "title": "Ação de Correção e Ação Corretiva! Qual a diferença?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "plano-anual-de-treinamento",
+    "title": "Plano Anual de Treinamento",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pcmat-os-trabalhadores-terceirizados",
+    "title": "O PCMAT e os trabalhadores terceirizados",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "resgistros-competencia-treinamento-conscientizacao",
+    "title": "Dicas práticas: Registros de Treinamento, Competência e Conscientização",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "copias-controladas-copias-nao-controladas-em-sistema-de-gestao-como-agir",
+    "title": "Cópias Controladas e Cópias Não Controladas em Sistema de Gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": false
+  },
+  {
+    "slug": "o-que-e-pbqp-h",
+    "title": "O que é o PBQP-H?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "os-beneficios-da-iso-9001",
+    "title": "Os Benefícios da ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "custos-indiretos-de-acidentes-e-doencas-no-trabalho",
+    "title": "Custos indiretos de acidentes e doenças do trabalho",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "introducao-as-boas-praticas-de-fabricacao-bpf",
+    "title": "Introdução às boas práticas de fabricação (BPF)",
+    "cats": "Segurança dos Alimentos",
+    "hero": false
+  },
+  {
+    "slug": "certificacao-global-ohsas-18001",
+    "title": "Certificação Global OHSAS 18001",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "o-papel-do-representante-da-direcao-nas-empresas",
+    "title": "O Papel do Representante da Direção nas empresas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "tendencias-para-o-sistema-de-gestao-da-qualidade-iso-9001",
+    "title": "Tendências para o sistema de gestão da qualidade-ISO 9001:2015",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "voce-se-atenta-a-qualidade-do-alimento-que-consome",
+    "title": "Você se atenta à qualidade do alimento que consome?",
+    "cats": "Segurança dos Alimentos",
+    "hero": false
+  },
+  {
+    "slug": "auditoria-interna-quando-realizar",
+    "title": "Auditoria Interna: Quando Realizar?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "sua-empresa-foi-certificada-vamos-manter-a-qualidade",
+    "title": "Fui certificado. E agora, o que fazer após 3, 6, 9 e 12 meses?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-importancia-do-comprometimento-organizacional",
+    "title": "A importância do comprometimento organizacional",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "microempresa-conquista-iso-9001-e-da-exemplo-de-gestao",
+    "title": "Microempresa conquista ISO 9001 e dá exemplo de gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-importancia-do-comprometimento-organizacional-para-o-sucesso-da-implementacao-de-sistemas-de-gestao",
+    "title": "Comprometimento organizacional para a implementação de sistemas de gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-funciona-a-adesao-ao-pbqp-h",
+    "title": "Como funciona a certificação PBQP-H?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "perguntas-frequentes-sobre-o-pbqp-h",
+    "title": "Perguntas frequentes sobre o PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-interna-duvidas-frequentes",
+    "title": "Auditoria Interna Dúvidas Frequentes",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-rastreabilidade-no-pbqp-h",
+    "title": "A rastreabilidade no PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "dia-mundial-da-qualidade-2013",
+    "title": "Dia Mundial da Qualidade 2013",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "semana-da-qualidade-colaboracao-faz-diferenca",
+    "title": "Semana da Qualidade: a colaboração faz a diferença",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "semana-da-qualidade-abordagem-factual-dos-processos",
+    "title": "Semana da Qualidade - Abordagem Factual dos Processos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "formando-equipes-de-alto-desempenho",
+    "title": "Formando equipes de alto desempenho",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "nossos-cursos-serao-gratuitos",
+    "title": "Cursos Templum Consultoria",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "voce-possui-um-escritorio-de-advocacia-ou-uma-empresa-especializada-em-servicos-advocaticios",
+    "title": "Escritório de advocacia ou empresa especializada em serviços advocatícios?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "voce-sabe-o-que-seu-funcionario-faz",
+    "title": "Você sabe o que seu funcionário faz?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-da-qualidade-indicadores-de-desepenho",
+    "title": "Indicadores de Desempenho x Gestão da Qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "nova-versao-iso-9001-como-obter-a-certificacao-ou-realizar-a-migracao-para-iso-9001-2015",
+    "title": "Nova versão ISO 9001 2015. Por onde começar?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quais-foram-as-mudancas-estruturais-da-iso-9001-2015",
+    "title": "ISO 9001 2015: Principais mudanças estruturais",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "foco-no-cliente-x-foco-do-cliente-um-novo-conceito-em-negocios",
+    "title": "Foco no cliente X foco do cliente: um novo conceito em negócios",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-risco-prevencao-ou-pessimismo",
+    "title": "Gestão de Risco. Prevenção ou pessimismo?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-importancia-da-gestao-do-conhecimento-organizacional-para-a-continuidade-do-negocio",
+    "title": "A importância da gestão do conhecimento organizacional para a continuidade do negócio",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "transforme-seu-planejamento-de-mudancas-em-realidade-atraves-da-gestao-de-risco-e-a-acao-preventiva",
+    "title": "Transforme seu planejamento de mudanças em realidade através da gestão de risco",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-sao-stakeholders-e-como-eles-impactam-o-planejamento-estrategico-do-negocio",
+    "title": "O que são stakeholders e como eles impactam o planejamento estratégico do negócio",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mapeamento-dos-processos-2",
+    "title": "Mapeamento de Processos: 5 passos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-elaborar-uma-matriz-swot",
+    "title": "Como elaborar uma matriz SWOT",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pqta-programa-de-qualidade-em-cartorios",
+    "title": "Programa de Qualidade em Cartórios - PQTA",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-elaborar-relatorios-gerenciais",
+    "title": "Relatórios gerenciais: Como fazer?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "aumente-a-sua-exportacao-com-um-sistema-de-gestao-da-qualidade-iso-9001",
+    "title": "Aumente a sua exportação com um sistema de gestão da qualidade (ISO 9001)",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-e-a-tomada-de-decisao-da-sua-empresa",
+    "title": "Como é a tomada de decisão da sua empresa?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "descubra-se-seus-funcionarios-estao-envolvidos-ou-engajados-no-negocio",
+    "title": "Descubra se seus funcionários estão envolvidos ou engajados no negócio",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-melhorar-o-desempenho-da-empresa-atuando-com-foco-em-melhoria",
+    "title": "Como atuar com foco em melhoria em sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-do-relacionamento-com-fornecedores-qual-e-a-sua-estrategia",
+    "title": "Gestão de Fornecedores. Qual é a sua estratégia?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-fazer-uma-analise-critica-da-sua-empresa",
+    "title": "Análise Crítica: como analisar criticamente a sua empresa?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-estabelecer-indicadores-de-desempenho",
+    "title": "Como estabelecer Indicadores de Desempenho realmente eficazes",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-90012015-principios-da-qualidade",
+    "title": "ISO 9001:2015 Requisito 0.2 - Princípios da Qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "requisito-0-3-abordagem-de-processos",
+    "title": "ISO 9001 Requisitos: 0.3 - Abordagem de Processos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-90012015-requisito-4-1-contexto-da-organizacao",
+    "title": "ISO 9001:2015 Requisito 4.1 - Entendendo a organização e seu contexto",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-90012015-requisito-4-2",
+    "title": "ISO 9001:2015 Requisito 4.2 - Necessidades e expectativas de partes interessadas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "requisito-4-3-determinando-o-escopo-do-sistema-de-gestao",
+    "title": "Requisito 4.3 - Determinando o escopo do sistema de gestão da qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-90012015-perguntas-e-respostas-sobre-transicao",
+    "title": "ISO 9001:2015: perguntas e respostas sobre a transição",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-em-orgaos-publicos",
+    "title": "ISO 9001 em órgãos públicos: Câmara Municipal Sete Lagoas é a primeira a alcançar a Norma",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-economizar-na-implementacao-nem-sempre-e-um-bom-negocio-e-pode-fazer-voce-perder-dinheiro",
+    "title": "PBQP-H: economizar nem sempre é um bom negócio",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "como-lucrar-com-a-iso-9001",
+    "title": "Como lucrar com a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "categoria-diamante-do-pqta-premia-55-cartorios-no-pais",
+    "title": "Categoria Diamante do PQTA premia 55 Cartórios no país",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "analise-de-eficacia-quando-fazer",
+    "title": "Análise de Eficácia - Quando fazer?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "dia-mundial-da-qualidade-2017",
+    "title": "Dia Mundial da Qualidade 2017",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "ferramentas-para-gestao-de-riscos-em-uma-empresa",
+    "title": "As 5 ferramentas da qualidade mais usadas para a Gestão de Riscos em uma empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-do-tempo",
+    "title": "Gestão do Tempo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-tudo-que-voce-precisa-saber",
+    "title": "ISO 9001 requisitos - Tudo que você precisa saber",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "atualizacao-pbqp-h-siac-2021",
+    "title": "Atualização PBQP-H: tudo sobre o novo SiAC 2021",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "principais-desafios-de-escritorios-contabeis",
+    "title": "Principais desafios de escritórios contábeis",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-27001",
+    "title": "ISO 27001 – O que é e como implementar a norma e certificar sua empresa",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "o-que-a-morte-de-kobe-bryant-pode-ensinar-para-o-nosso-sistema-de-gestao",
+    "title": "O que a morte de Kobe Bryant pode ensinar para o nosso sistema de gestão?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-preparar-o-seu-negocio-para-o-novo-coronavirus",
+    "title": "Como Preparar o Seu Negócio para o Novo Coronavirus",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "coronavirus-plano-de-acao-inicial-frente-ao-covid-19",
+    "title": "Plano de Ação Inicial Frente ao Covid-19",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "sistema-de-gestao-dicas-praticas-para-mante-lo-rodando",
+    "title": "Sistema de Gestão: dicas práticas para mantê-lo rodando",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-37001-conquiste-a-certificacao-com-a-maior-consultoria-digital-do-brasil",
+    "title": "ISO 37001: conquiste a certificação com a maior Consultoria Digital do Brasil",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "o-mercado-de-consultoria-e-a-transformacao-digital",
+    "title": "O mercado de consultoria e a transformação digital",
+    "cats": "Franquia",
+    "hero": true
+  },
+  {
+    "slug": "analise-swot-voce-ainda-faz-o-contexto-da-organizacao-com-ela",
+    "title": "Analise SWOT: Você ainda faz o contexto da organização com ela?",
+    "cats": "Franquia",
+    "hero": true
+  },
+  {
+    "slug": "os-4-metodos-de-consultoria",
+    "title": "Os 4 métodos de consultoria",
+    "cats": "Franquia",
+    "hero": true
+  },
+  {
+    "slug": "principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1-2",
+    "title": "Vantagens da certificação ISO 9001 para pequenas empresas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-passo-a-passo",
+    "title": "PBQP-H Passo a passo",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "o-que-mudou-na-versao-2021-pbqp-h",
+    "title": "O que mudou na versão do SiAC 2021 do PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-o-pbqp-h",
+    "title": "O que é PBQP-H",
+    "cats": "Construção Civil",
+    "hero": false
+  },
+  {
+    "slug": "siac-pbqp-h",
+    "title": "PBQP-H: Tudo sobre o regimento SiAC",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "5-dicas-de-ouro-para-ter-um-site-vendedor",
+    "title": "5 dicas de ouro para ter um site vendedor",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quais-as-diferencas-entre-o-sistema-iso-9001-e-o-pbqp-h",
+    "title": "Quais as diferenças entre a ISO 9001 e o PBQP-H?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "materiais-e-servicos-controlados-pbqp-h",
+    "title": "Controle de serviços e materiais no PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "o-que-a-obra-ganha-com-controle-de-servicos-e-materiais-pbqph",
+    "title": "O que minha obra ganha com o controle de serviços e materiais?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "requistos-legais-pbqp-h",
+    "title": "Requisitos legais no PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "sustentabilidade-na-construcao-civil-com-pbqp-h",
+    "title": "Sustentabilidade na construção civil com PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "indicadores-de-sustentabilidade-obrigatorios-pbqp-h",
+    "title": "Indicadores de sustentabilidade obrigatórios no PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "4-dicas-de-comunicacao-interna-para-voce-envolver-seus-funcionario",
+    "title": "4 dicas de comunicação interna para você envolver seus funcionários",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-promover-mudancas-organizacionais-sem-desmotivar-seus-funcionarios",
+    "title": "Como promover mudanças organizacionais sem desmotivar seus funcionários",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5-dicas-para-envolver-pessoas-e-conquistar-objetivos",
+    "title": "5 dicas para envolver pessoas e conquistar objetivos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "8-tecnicas-que-os-grandes-lideres-usam-para-motivar-pessoas",
+    "title": "8 Técnicas que os grandes líderes usam para motivar pessoas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "os-3-erros-mais-comuns-na-comunicacao-empresarial",
+    "title": "Os 3 erros mais comuns na comunicação empresarial",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-pmes-podem-se-beneficiar-melhorando-a-comunicacao-interna",
+    "title": "Como PMEs podem se beneficiar melhorando a comunicação interna",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "8-dicas-para-melhorias-na-produtividade-da-equipe",
+    "title": "8 dicas para melhorias na produtividade da equipe",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "utilizando-metodologias-para-gestao-do-tempo",
+    "title": "Utilizando metodologias para gestão do tempo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "fnq-inova-e-lanca-congresso-de-excelencia-em-gestao",
+    "title": "FNQ inova e lança Congresso de Excelência em Gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "3-acoes-que-ajudam-a-evitar-acidentes-no-seu-local-de-trabalho",
+    "title": "CIPA: 3 ações de prevenção de segurança do trabalho",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "a-importancia-dos-beneficios-na-atracao-e-retencao-de-talentos",
+    "title": "Retenção de talentos: Como fazer isto direito?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-as-pmes-podem-usar-a-comunicacao-para-diminuir-impactos-das-mudancas",
+    "title": "Como as PMEs podem usar a comunicação para diminuir impactos das mudanças",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "geric-processo-de-analise-de-risco-da-caixa",
+    "title": "GERIC: processo de análise de risco da Caixa",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "voce-ja-parou-para-pensar-quanto-custa-a-desorganizacao-da-sua-obra",
+    "title": "Você já parou para pensar quanto custa a desorganização da sua obra?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "o-que-o-construtor-precisa-saber-sobre-o-pbqp-h",
+    "title": "O que o construtor precisa saber sobre o PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "economizar-na-implementacao-pode-se-tornar-caro",
+    "title": "Economizar na implementação pode se tornar caro",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "porque-a-iso-9001-esta-mudando",
+    "title": "Porque a ISO 9001 está mudando",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-2015-a-importancia-da-lideranca-na-revisao-2015",
+    "title": "ISO 9001:2015 - A importância da liderança na revisão 2015",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-a-revisao-da-iso-90012015-afeta-a-minha-empresa",
+    "title": "ISO 9001:2015 - Como a revisão da Norma afeta a minha empresa?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quais-sao-as-mudancas-mais-significativas-na-revisao-2015-da-iso-9001",
+    "title": "ISO 9001: quais são as mudanças mais significativas na revisão 2015?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-investir-na-gestao-de-processos",
+    "title": "Investir na gestão de processos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "balanced-scorecard-transformando-estrategias-em-processos",
+    "title": "Balanced Scorecard: transformando estratégias em processos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "aumente-a-eficiencia-operacional-utilizando-o-mapeamento-de-processos",
+    "title": "Aumente a eficiência operacional utilizando o mapeamento de processos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-fazer-campanhas-de-comunicacao-para-o-engajamento-dos-colaboradores",
+    "title": "Como fazer campanhas de comunicação para gerar engajamento nos colaboradores",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-criar-processos-solidos-para-recrutar-capacitar-e-motivar-sua-equipe",
+    "title": "Como criar processos sólidos para recrutar, capacitar e motivar sua equipe",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-a-comunicacao-interna-pode-melhorar-a-produtividade-das-pmes",
+    "title": "Como a comunicação interna pode melhorar a produtividade das PMEs",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5-meios-de-comunicacao-interna-que-podem-ser-feitos-com-baixo-custo-pelas-pmes",
+    "title": "5 meios de comunicação interna com baixo custo para as PMEs",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-tornar-a-comunicacao-uma-rotina-na-empresa",
+    "title": "Como tornar a comunicação uma rotina na empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-10-razoes-para-certificar-sua-empresa-agora",
+    "title": "ISO 9001: 10 razões para certificar sua empresa agora",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5-maneiras-de-melhorar-a-comunicacao-entre-coordenadorias-e-gerencias",
+    "title": "5 maneiras de melhorar a comunicação entre coordenadorias e gerências",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-promover-eventos-internos-que-reforcem-os-propositos-da-empresa",
+    "title": "Como promover eventos internos que reforcem os propósitos da empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-uma-pequena-empresa-precisa-para-conseguir-a-certificacao-iso-9001",
+    "title": "O que uma pequena empresa precisa para a certificação ISO 9001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-importancia-de-construir-meios-de-comunicacao-na-empresa",
+    "title": "A importância de construir meios de comunicação na empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "saiba-como-a-iso-9001-pode-ajudar-sua-empresa-a-conquistar-clientes",
+    "title": "Saiba como a ISO 9001 pode ajudar sua empresa a conquistar clientes",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-a-correta-divulgacao-da-iso-9001-pode-melhorar-os-seus-resultados-na-empresa",
+    "title": "Como a correta divulgação da ISO 9001 pode melhorar os seus resultados na empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "case-miranda-feliciano-sociedade-de-advogados",
+    "title": "Escritórios de advocacia podem melhorar com ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-todo-pequeno-empresario-deve-saber-melhorar-seus-negocios",
+    "title": "O que todo pequeno empresário deve saber para melhorar seus negócios",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-empresas-de-seguranca-podem-reduzir-despesas-com-afastamento-por-problemas-de-saude-ocupacional",
+    "title": "Como reduzir despesas com afastamento por problemas de saúde",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "12-ideias-para-provocar-mudancas-de-comportamento-e-melhorar-seus-resultados",
+    "title": "12 Ideias para provocar mudanças de comportamento e melhorar seus resultados",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-fazer-uma-pesquisa-de-satisfacao-sem-gastar-nada",
+    "title": "Como fazer uma pesquisa de satisfação",
+    "cats": "Qualidade e Inovação",
+    "hero": false
+  },
+  {
+    "slug": "o-que-e-um-programa-setorial-da-qualidade",
+    "title": "O que é um Programa Setorial da Qualidade (PSQ)?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "6-dicas-para-formar-equipes-de-alto-desempenho",
+    "title": "6 dicas para formar equipes de alto desempenho",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "dez-dicas-para-tornar-o-seu-planejamento-eficiente",
+    "title": "Dez dicas para tornar o seu planejamento eficiente",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-as-pmes-podem-usar-a-comunicacao-interna-para-reter-talentos",
+    "title": "Comunicação interna: como as PMEs podem usá-la para reter talentos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-economizar-na-implementacao-pode-sair-caro",
+    "title": "PBQP-H: economizar na implementação pode sair caro",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "como-eliminar-a-desmotivacao-da-sua-equipe",
+    "title": "Como eliminar a desmotivação da sua equipe?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5-dicas-para-aumentar-as-receitas-da-sua-empresa",
+    "title": "5 dicas para aumentar as receitas da sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-garantir-o-sucesso-de-um-evento-corporativo",
+    "title": "Como garantir o sucesso de um evento corporativo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "atracao-e-retencao-de-clientes-em-tempos-de-crise-como-fazer",
+    "title": "Atração e retenção de clientes em tempos de crise: como fazer?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "grandes-empresas-exigem-certificacao-iso-9001-de-seus-fornecedores",
+    "title": "O que faz uma grande empresa exigir a certificação ISO 9001 de seus fornecedores?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-papel-do-empresario-na-iso-9001",
+    "title": "O papel do empresário na ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-nivel-a",
+    "title": "PBQP H Nível A",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "bicicletas-e-implementacao-da-iso",
+    "title": "Bicicletas e Implementação da ISO",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-meta-que-mata",
+    "title": "A meta que mata",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "e-necessario-investir-um-capital-muito-alto-em-treinamentos-aos-colaboradores-para-adequar-sistema-de-gestao-da-qualidade-para-certificacao-na-norma-iso-90012008",
+    "title": "Auditoria externa de certificação... Algumas dicas!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "beneficios-pbqp-h",
+    "title": "Benefícios PBQP H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "siderbras-obteve-a-certificacao-iso9001-em-prazo-recorde",
+    "title": "Siderbrás, de Divinópolis, obteve a certificação ISO 9001 em prazo recorde",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "politica-da-qualidade-seus-objetivos",
+    "title": "Política da qualidade e seus objetivos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-promover-a-qualidade",
+    "title": "Como promover a qualidade?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "tres-dicas-para-voce-negociar-melhor",
+    "title": "Três Dicas para você negociar melhor",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-qualidade-gestao-estrategica-fatores-criticos-de-sucesso",
+    "title": "Gestão de Qualidade e Gestão Estratégica – Fatores Críticos de Sucesso",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "cliente-patrimonio-da-organizacao",
+    "title": "O cliente: patrimônio da organização",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quais-sao-mudancas-mais-significativas-na-revisao-2015-da-iso-9001",
+    "title": "Quais são as mudanças significativas na revisão 2015 da ISO 9001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-por-indicadores-de-desempenho-entenda-a-sua-empresa-profundamente",
+    "title": "Gestão por indicadores de desempenho: entenda a sua empresa profundamente",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-aumentar-o-lucro-da-minha-empresa",
+    "title": "Como aumentar o lucro da minha empresa ?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-mudancas-na-empresa-como-fazer",
+    "title": "Gestão de mudanças na empresa: como fazer?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-se-diferenciar-da-concorrencia-com-a-iso-9001",
+    "title": "Como se diferenciar da concorrência com a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-funciona-o-cartao-bndes",
+    "title": "Como funciona o cartão BNDES?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "contabilidade-consultiva-o-metodo-dos-4-passos",
+    "title": "Contabilidade Consultiva: O método dos 4 passos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "requisitos-cliente",
+    "title": "Requisitos do cliente",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "metodologia-de-analise-solucao-de-problemas-masp",
+    "title": "Metodologia MASP - Metodologia de Análise e Solução de Problemas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-programa-5s-como-recurso-estrategico-nas-organizacoes",
+    "title": "O Programa 5S como Recurso Estratégico nas Organizações",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-ts-16949-voce-sabe-o-que-e",
+    "title": "ISO TS 16949 – Você sabe o que é?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "novos-mercados-surgem-com-a-pnrs",
+    "title": "Política Nacional de Resíduos Sólidos - PNRS: o que é?",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-interna-de-sistemas-de-gestao-cumprir-o-requisito-da-norma-ou-buscar-oportunidades-de-melhoria-na-empresa",
+    "title": "Auditoria Interna: cumprir requisito ou buscar oportunidades de melhoria?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "normas-e-organismos-de-normatizacao",
+    "title": "Normas e organismos de normatização",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "identidade-visual",
+    "title": "A importância da identidade visual para o seu negocio",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "ter-iso-ou-ser-iso",
+    "title": "Ter ISO ou Ser ISO?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "4-dicas-valiosas-de-como-lidar-com-clientes",
+    "title": "4 dicas valiosas de como lidar com seus clientes",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "os-ciclos-da-recertificacao",
+    "title": "Os ciclos da recertificação",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "qualidade-na-pratica-peps-e-pvps-e-a-qualidade-integrada-ao-estoque",
+    "title": "PEPS, PVPS e a qualidade integrada ao estoque",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "os-ciclos-da-recertificacao-de-um-sistema-de-gestao",
+    "title": "Os ciclos da recertificação de um sistema de gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "os-requisitos-legais-e-o-pbqp-h",
+    "title": "Os requisitos legais e o PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "motivacao-com-foco-em-resultados",
+    "title": "Motivação com foco em resultados",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-por-competencias",
+    "title": "Gestão por competências",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "falta-de-treinamento-em-empresas-esconde-talentos",
+    "title": "Falta de treinamento em empresas pode esconder talentos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "satisfacao-cliente",
+    "title": "Satisfação do cliente - parte I",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "satisfacao-cliente-parte-2",
+    "title": "Satisfação do cliente – Parte 2",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pmoc-plano-de-manutencao-operacao-e-controle-para-ar-condicionado",
+    "title": "PMOC – Plano de Manutenção, Operação e Controle - para Ar Condicionado",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "planejamento-e-pensar-e-refletir-antes-de-agir-e-decidir",
+    "title": "Planejamento é pensar e refletir antes de agir e decidir",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-estrategia-tambem-faz-parte-da-nossa-rotina-diaria",
+    "title": "A estratégia também faz parte da nossa rotina diária",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "filosofia-planejamento-estrategico",
+    "title": "A filosofia no planejamento estratégico",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "empreendedorismo-necessidade-oportunidade",
+    "title": "Empreendedorismo: por necessidade ou oportunidade?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "bild-acesso-a-financiamento-e-organizacao-com-o-pbqp-h-e-a-iso-9001",
+    "title": "Financiamento e organização com a certificação PBQP-H e a ISO 9001",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "use-o-google-para-fazer-sua-pesquisa-de-satisfacao",
+    "title": "Use o Google para fazer sua pesquisa de satisfação com clientes",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quer-administrar-com-sabedoria-planejamento-estrategico-e-a-solucao",
+    "title": "Quer administrar com sabedoria? Planejamento estratégico é a solução",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "setembro-15-empresas-certificadas",
+    "title": "Em setembro batemos um recorde:15 empresas certificadas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "celebre-dia-mundial-qualidade-templum",
+    "title": "Celebre o Dia Mundial da Qualidade com a Templum",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "beneficios-da-certificacao-iso-9001",
+    "title": "Benefícios da Certificação ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-fazer-uma-gestao-eficiente-da-minha-transportadora",
+    "title": "Transportadora: Como fazer uma Gestão Eficiente?",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "como-aplicar-a-motivacao-e-disciplina-do-esporte-no-seu-negocio",
+    "title": "Como aplicar a motivação e disciplina do esporte no seu negócio",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-identificar-falhas-no-processo-de-vendas-atraves-dos-indicadores-de-performance",
+    "title": "Como identificar falhas no processo de vendas através dos indicadores de performance",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-garantir-o-aumento-da-satisfacao-da-sua-equipe-de-trabalho",
+    "title": "Como garantir o aumento da satisfação da sua equipe de trabalho",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-implementar-um-sistema-de-gestao-de-forma-eficiente",
+    "title": "Como implementar um sistema de gestão de forma eficiente",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "quanto-realmente-custa-implementar-a-certificacao-pbqp-h-e-por-que-vale-a-pena",
+    "title": "Quanto realmente custa implementar a certificação PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "tudo-que-o-construtor-precisa-saber-sobre-a-certificacao-pbqp-h",
+    "title": "Tudo que o construtor precisa saber sobre a certificação PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "aproveitando-iso-9001-para-alcancar-o-real-valor-de-negocios",
+    "title": "Aproveitando ISO 9001 para alcançar o real valor de negócios",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "conheca-as-vantagens-do-cartao-bndes",
+    "title": "Conheça as vantagens do cartão BNDES",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "tecnologias-para-aumentar-a-produtividade",
+    "title": "Tecnologias para aumentar a produtividade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "os-indicadores-da-qualidade-do-pbqp-h",
+    "title": "Os indicadores da qualidade do PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "amostragem-de-obras-na-auditoria-do-pbqp-h",
+    "title": "Amostragem de obras na auditoria do PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "uma-spe-pode-certificar-o-pbqp-h",
+    "title": "Uma SPE pode certificar o PBQP-H?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "acreditacao-para-certificacao-de-sistemas-de-gestao",
+    "title": "Acreditação para certificação de sistemas de gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "chocolate-artesanal-qualidade-para-vender-mais",
+    "title": "Chocolate artesanal: Qualidade para vender mais",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "nao-conformidade-possibilidade-real-de-melhoria",
+    "title": "Não conformidade: Possibilidade real de melhoria",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-caminho-mais-rapido-para-sistema-de-gestao-integrado",
+    "title": "O caminho mais rápido para Sistema de Gestão Integrado",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "evitar-mas-reacoes-para-cumprir-planos-de-acao",
+    "title": "Evitar más reações para cumprir planos de ação",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-22000-para-buffets-e-possivel-sim",
+    "title": "ISO 22000 para buffets: é possível sim!",
+    "cats": "Segurança dos Alimentos",
+    "hero": false
+  },
+  {
+    "slug": "o-sistema-de-gestao-apos-certificacao",
+    "title": "O sistema de gestão após a certificação",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "importancia-da-rastreabilidade",
+    "title": "A importância da rastreabilidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "beneficios-da-implementacao-da-fssc-22000",
+    "title": "Implementação da FSSC 22000 - Conheça os Benefícios",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "perguntas-chaves-para-auxiliar-em-sua-rastreabilidade",
+    "title": "Perguntas chaves para auxiliar na rastreabilidade do seu sistema de gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "inseguranca-alimentar-o-caso-habib-s",
+    "title": "(In)Segurança Alimentar: O Caso Habib´s",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "quer-vender-mais-aprenda-a-utilizar-o-canvas",
+    "title": "Quer vender mais? Aprenda a utilizar o Canvas!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "saiba-como-tirar-o-seu-planejamento-estrategico-do-papel-e-torna-lo-realidade",
+    "title": "Saiba como tirar o planejamento estratégico do papel",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "estrategia-em-processos-entenda-como-traduzir",
+    "title": "Estratégia em processos: entenda como traduzir",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-vender-mais",
+    "title": "Como vender mais com a integração entre as áreas de Marketing e Vendas",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "lideranca-pelo-exemplo",
+    "title": "Liderança pelo Exemplo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-projeto-e-desenvolvimento",
+    "title": "7 Passos Para Gestão de Projeto e Desenvolvimento (P&D) na Gestão da Qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "beneficios-sassmaq-para-transporte-de-produtos-quimicos",
+    "title": "Benefícios do SASSMAQ para transporte de produtos químicos",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "empresas-de-softwares-lucram-com-iso-9001",
+    "title": "ISO 9001 para empresas de software: mais lucro para os negócios",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-14001-gestao-ambiental-que-abre-portas-para-novos-negocios",
+    "title": "ISO 14001: Gestão ambiental que abre portas para novos negócios",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "indicadores-de-desempenho-para-uma-administracao-eficiente",
+    "title": "Indicadores de desempenho para uma administração eficiente",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "sgi-na-industria-quimica-gestao-completa-e-menos-riscos",
+    "title": "SGI na indústria química: gestão completa e menos riscos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-em-escritorios-de-advocacia-causa-ganha",
+    "title": "ISO 9001 em escritórios de advocacia: causa ganha!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mortes-em-obra-acidente-ou-homicidio",
+    "title": "Mortes em obra: acidente ou homicídio?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "para-entregar-imoveis-prazo-planejamento-e-acoes",
+    "title": "Para entregar imóveis no prazo: planejamento e ações",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "como-estabelecer-metas-para-indicadores",
+    "title": "Como estabelecer metas para Indicadores",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-analisar-indicadores",
+    "title": "Como analisar Indicadores",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "1o-encontro-de-licenciados-templum",
+    "title": "Sucesso no 1º Encontro de Licenciados Templum",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "consultoria-online-templum-e-sucesso-comprovado",
+    "title": "Consultoria online Templum é sucesso comprovado",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-90012015-o-envolvimento-da-alta-direcao-no-sgq",
+    "title": "ISO 9001:2015 – O envolvimento da Alta Direção no SGQ!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-interna-4-0",
+    "title": "Auditoria Interna 4.0",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "consultoria-iso-27001",
+    "title": "Consultoria ISO 27001",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "vantagens-da-iso-27001",
+    "title": "5 Maiores Vantagens da ISO 27001",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "como-funciona-a-auditoria-4-0",
+    "title": "Como funciona a Auditoria 4.0?",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "ficha-de-verificacao-de-servico-solucoes-em-construcao-civil",
+    "title": "Ficha de verificação de serviço: Soluções em Construção Civil",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "dicas-essenciais-para-a-iso-9001",
+    "title": "Dicas Essenciais para a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-seguranca-dos-alimentos",
+    "title": "O que é segurança dos alimentos e por que ela é tão importante?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "iso-22000",
+    "title": "FSSC ISO 22000: Segurança dos Alimentos",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "como-utilizar-a-comunicacao-para-motivar-pessoas-em-tempos-dificeis",
+    "title": "Como utilizar a comunicação para motivar pessoas em tempos difíceis",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-e-o-casa-verde-e-amarela",
+    "title": "PBQP-H e o programa Casa Verde e Amarela",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "seguranca-dos-alimentos-nao-basta-ser-gostoso-deve-ter-qualidade",
+    "title": "Segurança dos alimentos: não basta ser gostoso, deve ter qualidade.",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "resistencia-mudanca-como-superar-as-dificuldades-nos-processos-de-implementacao-de-sistemas-de-qualidade",
+    "title": "Resistência à mudança: como superar as dificuldades?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "sassmaq-se-nao-e-obrigatorio-por-que-investir",
+    "title": "SASSMAQ: Se não é obrigatório por que investir?",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-para-planejar-as-acoes-de-sua-empresa",
+    "title": "Utilizando a ISO 9001 para planejar as ações estratégicas de sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "melhoria-continua-processo-gradual-ou-de-ruptura",
+    "title": "Melhoria contínua: processo gradual ou de ruptura?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "boas-praticas-de-fabricacao-e-legislacao-brasileira",
+    "title": "Boas Práticas de Fabricação e a Legislação Brasileira",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "entendendo-como-realizar-avaliacao-de-perigos-appcc-passo-passo",
+    "title": "Entendendo como realizar a Avaliação de Perigos do APPCC passo a passo",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "novo-esquema-de-certificacao-fssc22000-o-que-mudou",
+    "title": "Novo esquema de certificação FSSC 22000. O que mudou?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "haccp-o-que-e",
+    "title": "HACCP: o que é?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "6-formas-para-fazer-seu-certificado-iso-22000-gerar-lucro",
+    "title": "6 formas para fazer seu certificado ISO 22000 gerar lucro",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "covid-e-as-industrias-de-alimentos",
+    "title": "COVID e as indústrias de alimentos",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "quais-sao-as-diferencas-entre-os-niveis-do-global-markets",
+    "title": "Quais são as diferenças entre os níveis do Global Markets?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "quais-segmentos-da-cadeia-de-alimentos-podem-se-beneficiar-dos-programas-do-gfsi",
+    "title": "Quais segmentos da cadeia de alimentos podem se beneficiar dos programas do GFSI?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "seguranca-dos-alimentos-como-oportunidade",
+    "title": "A segurança dos alimentos: uma oportunidade para novos negócios",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "tirar-o-seu-planejamento-do-papel-e-torna-lo-realidade",
+    "title": "Saiba como tirar o seu planejamento do papel e torná-lo realidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "higiene-na-industria-dos-alimentos",
+    "title": "A higiene na indústria dos alimentos",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "requisitos-food-fraud-e-food-defense",
+    "title": "Como atender os requisitos de Food Fraud e Food Defense?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "dia-mundial-da-qualidade",
+    "title": "Dia mundial da qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-45001-sistema-de-gestao-auxilia-no-combate-as-doencas-ocupacionais",
+    "title": "ISO 45001: Combate as doenças ocupacionais?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "perigos-e-riscos-na-ohsas-18001",
+    "title": "Identificação de Perigos e Riscos na ISO 45001",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "programa-5s-e-a-iso-9001",
+    "title": "O programa 5S e a ISO 9001:2015",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "programa-5s-vantagens-e-desvantagens",
+    "title": "Programa 5S – Vantagens e Desvantagens",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-ts-16949",
+    "title": "A ISO/TS 16949:2009 evoluiu",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-nova-iso-37001",
+    "title": "Desenvolvimento econômico do Brasil e a nova ISO 37001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-analise-swot",
+    "title": "O que é Análise SWOT?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5-forcas-de-porter-serie-planejamento-estrategico",
+    "title": "Série Planejamento Estratégico: 5 Forças de Porter",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-o-que-sao-servicos-controlados",
+    "title": "PBQP-H: O que são serviços controlados?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "como-a-iso-9001-em-tempos-de-crise",
+    "title": "Como a ISO 9001 pode ajudar as empresas em tempos de crise?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-gestao-de-pessoas",
+    "title": "Como a ISO 9001 pode ajudar na gestão de pessoas?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-pessoas-dicas-para-aumentar-o-envolvimento-de-toda-sua-equipe-de-trabalho",
+    "title": "Gestão de Pessoas: Dicas para aumentar o envolvimento da sua equipe de trabalho.",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "ciclo-de-vida-do-produto-o-que-eu-preciso-saber",
+    "title": "Ciclo de Vida do Produto: O que eu preciso saber?",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "iso-45001-o-que-podemos-esperar",
+    "title": "ISO 45001: Principais mudanças",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "processos-como-classifica-los",
+    "title": "Processos, como classificá-los?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pequenas-empresas-e-iso-14001",
+    "title": "Mito: Pequenas Empresas e ISO 14001 não combinam",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-e-para-que-serve-um-checklist",
+    "title": "O que é e para que serve um Checklist?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "atendimento-ao-cliente-de-quem-e-responsabilidade",
+    "title": "Atendimento ao cliente: De quem é a responsabilidade?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "requisitos-4-2-partes-interessadas",
+    "title": "ISO 9001 requisitos: 4.2 – Entendendo as necessidades e expectativas de partes interessadas.",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mais-um-caso-de-sucesso-dj-iso-9001",
+    "title": "Como empresas de usinagem podem alavancar negócios com a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-4-4-processos",
+    "title": "ISO 9001 requisitos: 4.4 – Sistema de gestão da qualidade e seus processos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-lideranca",
+    "title": "ISO 9001 requisitos: 5 – Liderança",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "voce-conhece-seu-cliente",
+    "title": "Você sabe a importância de conhecer seu cliente a fundo?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-6-1-acoes-para-abordar-riscos-e-oportunidades",
+    "title": "ISO 9001 requisitos: 6.1 - Ações para abordar riscos e oportunidades",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-6-3-planejamento-de-mudancas",
+    "title": "ISO 9001 requisitos: 6.3 - Planejamento de Mudanças",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-requisitos-7-3-conscientizacao",
+    "title": "ISO 9001 requisitos: 7.3 – Conscientização",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "requisito-7-4-comunicacao",
+    "title": "Entenda mais sobre ISO 9001 requisitos: 7.4 - Comunicação",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-8-1-planejamento-e-controle-operacionais",
+    "title": "ISO 9001 requisitos: 8.1 – Planejamento e Controle operacionais",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-com-clareza",
+    "title": "Gestão com clareza!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "as-sete-ferramentas-da-qualidade",
+    "title": "As sete ferramentas da qualidade: entenda quais são e as suas principais funções",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "exigiram-o-sistema-de-gestao-integrada",
+    "title": "Me exigiram o SGI, problema ou oportunidade?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-saiba-como-o-diagnostico-empresarial-pode-ajudar-sua-empresa",
+    "title": "ISO 9001: saiba como o diagnóstico empresarial pode ajudar sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-45001-ohsas-18001",
+    "title": "ISO 45001 vs OHSAS 18001",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "a-sua-certificacao-depende-da-sua-decisao",
+    "title": "A sua certificação depende da sua decisão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pgrs-como-elaborar-o-plano-de-gerenciamento-de-residuos-solidos",
+    "title": "Como elaborar o Plano de Gerenciamento de Resíduos Sólidos (PGRS) da sua obra",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "principais-mudancas-na-nr-18-e-como-ela-pode-afetar-o-seu-sistema-de-gestao",
+    "title": "Principais mudanças na NR 18 e como ela pode afetar o seu sistema de gestão",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "quarentena-construtora",
+    "title": "Principais ações a serem tomadas durante a quarentena em uma construtora",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "siac-2021-principais-mudancas",
+    "title": "SiAC 2021: Quais as principais mudanças?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "pgr-e-gro-que-voce-precisa-saber-parte-01",
+    "title": "PGR e GRO: o que você precisa saber? - Parte 01",
+    "cats": "Webinars",
+    "hero": true
+  },
+  {
+    "slug": "pensar-e-definir-indicador-da-qualidade",
+    "title": "Pensar e definir indicador da qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "sustentabilidade",
+    "title": "Sustentabilidade",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "comunicacao-interna",
+    "title": "Comunicação Interna",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "eia-rima-tudo-o-que-voce-precisa-saber-01-de-08",
+    "title": "EIA-RIMA, Tudo o que você precisa saber (01 de 08)",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "eia-rima-tudo-o-que-voce-precisa-saber-02-de-08",
+    "title": "EIA-RIMA, Tudo o que você precisa saber (02 de 08)",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "eia-rima-tudo-o-que-voce-precisa-saber-03-de-08",
+    "title": "EIA-RIMA, Tudo o que você precisa saber (03 de 08)",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "eia-rima-tudo-o-que-voce-precisa-saber-04-de-08",
+    "title": "EIA-RIMA, Tudo o que você precisa saber (04 de 08)",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "eia-rima-tudo-o-que-voce-precisa-saber-05-de-08",
+    "title": "EIA-RIMA, Tudo o que você precisa saber (05 de 08)",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "planilha-mapeamento-de-processos",
+    "title": "Planilha - Mapeamento de Processos - Tartaruga Turbinada",
+    "cats": "Planilhas",
+    "hero": true
+  },
+  {
+    "slug": "planilha-perigos-e-riscos",
+    "title": "Planilha - Perigos e Riscos",
+    "cats": "Planilhas",
+    "hero": true
+  },
+  {
+    "slug": "planilha-planejamento-para-integracao-de-normas",
+    "title": "Planejamento para Integração de Normas",
+    "cats": "Planilhas",
+    "hero": true
+  },
+  {
+    "slug": "estudo-de-caso-annasil",
+    "title": "Estudo de Caso PBQP-H ANNASIL Empreendimentos",
+    "cats": "E-books",
+    "hero": true
+  },
+  {
+    "slug": "guia-pbqp-h",
+    "title": "Guia PBQP-H",
+    "cats": "E-books",
+    "hero": true
+  },
+  {
+    "slug": "e-book-iso-14001-2015",
+    "title": "E-book: ISO 14001 2015",
+    "cats": "E-books",
+    "hero": true
+  },
+  {
+    "slug": "e-book-pbqp-h-e-a-norma-de-desempenho",
+    "title": "E-book: PBQP-H e a Norma de Desempenho",
+    "cats": "E-books",
+    "hero": true
+  },
+  {
+    "slug": "e-book-a-seguranca-de-alimentos-em-organizacoes-da-cadeia-alimentar",
+    "title": "E-book: A segurança de alimentos em organizações da cadeia alimentar",
+    "cats": "E-books",
+    "hero": true
+  },
+  {
+    "slug": "4-problemas-de-engajamento-que-atrapalham-sua-empresa",
+    "title": "4 Problemas de engajamento que atrapalham sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-trazer-a-melhoria-continua-para-o-dia-a-dia-das-empresas",
+    "title": "Como trazer a melhoria contínua para o dia a dia das empresas?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5-dicas-praticas-para-melhorar-o-engajamento-de-pessoas-em-sua-empresa",
+    "title": "5 Dicas práticas para melhorar o engajamento de pessoas em sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "treinamentos-tecnicos-2024-templum",
+    "title": "Treinamentos Técnicos 2024: Potencialize Seu Sucesso Empresarial com a Templum!",
+    "cats": "Gestão e Marketing",
+    "hero": false
+  },
+  {
+    "slug": "gestao-de-mudancas-parte-1",
+    "title": "Gestão de Mudanças - Parte 01",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-mudancas-parte-2",
+    "title": "Gestão de Mudanças na ISO 9001 - Parte 2",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-mudancas-parte-3",
+    "title": "Gestão de Mudanças - Parte 3",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-mudancas-parte-4",
+    "title": "Gestão de Mudanças - Parte 4",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "orsitec-escritorio-de-contabilidade-aponta-20-de-melhoria-na-gestao-no-primeiro-ano-apos-certificacao-na-iso-90012008",
+    "title": "Orsitec: escritório de contabilidade aponta 20% de melhoria na gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "sassmaq-expresso-9002",
+    "title": "Expresso 9002: mudança de consultoria para re-certificação SASSMAQ traz benefícios na comunicação e melhoria dos procedimentos",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "eia-rima-tudo-o-que-voce-precisa-saber-06-e-08",
+    "title": "EIA-RIMA, Tudo o que você precisa saber (06 de 08)",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "eia-rima-tudo-o-que-voce-precisa-saber-07-de-08",
+    "title": "EIA-RIMA, Tudo o que você precisa saber (07 de 08)",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "eia-rima-e-gestao-ambiental-tudo-o-que-voce-precisa-saber-08-de-08",
+    "title": "EIA-RIMA e Gestão Ambiental, Tudo o que você precisa saber (08 de 08)",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "qual-a-importancia-da-nr-18-dentro-do-pbqp-h",
+    "title": "Qual a Importância da NR 18 dentro do PBQP-H?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "reforma-trabalhista-o-que-mudou",
+    "title": "Reforma Trabalhista: O que mudou?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "perspectiva-de-ciclo-de-vida-na-iso-140012015",
+    "title": "A Perspectiva do Ciclo de Vida na ISO 14001:2015",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "controle-vida-financeira-e-dos-seus-negocios",
+    "title": "Como conquistar o controle da sua vida financeira e dos seus negócios",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iniciativas-publicas-a-favor-da-sustentabilidade",
+    "title": "Iniciativas públicas a favor da sustentabilidade",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "como-fazer-uma-pesquisa-de-satisfacao",
+    "title": "Como fazer uma Pesquisa de satisfação sem gastar",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "ferramentas-gestao-de-processos-bpm",
+    "title": "O que é BPM? Ferramentas Gestão de Processos",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "principais-nao-conformidades-apontadas-em-auditorias-pbqp-h",
+    "title": "As principais Não Conformidades apontadas em auditorias do PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-residuos-nao-deixe-seus-lucros-irem-para-o-lixo",
+    "title": "Gestão de Resíduos: Não deixe seus lucros irem para o lixo",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "a-importancia-da-norma-iatf-16949",
+    "title": "A Importância da Norma IATF 16.949 para o mercado automotivo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "as-4-dicas-mais-importantes-para-o-fluxo-de-caixa-da-sua-empresa",
+    "title": "4 dicas essenciais para o fluxo de caixa da sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-criar-um-ambiente-seguro-e-obter-retornos-financeiros",
+    "title": "Saúde e Segurança Ocupacional: quais os benefícios?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "cipa-e-a-iso-45001-ajudar-gestao-de-sso",
+    "title": "CIPA e a ISO 45001 – Ela pode ajudar na sua Gestão de SSO",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "5-duvidas-sobre-a-implementacao-iso",
+    "title": "5 principais dúvidas sobre a implementação de normas ISO",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-nao-deixar-a-tecnologia-acabar-com-a-contabilidade",
+    "title": "Como não deixar a tecnologia acabar com seu escritório de contabilidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "operacao-contabil-5-ferramentas-para-otimizacao",
+    "title": "Operação contábil: 5 ferramentas indispensáveis para otimização",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5w2h-usando-para-transformar-os-riscos-em-oportunidades",
+    "title": "5W2H: usando para transformar os riscos em oportunidades",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-e-o-ciclo-pdca",
+    "title": "Ciclo PDCA: o que é e como utilizar?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "ferramentas-para-melhorar-gestao-estrategica",
+    "title": "Gestão estratégica: 3 ferramentas para melhorar a gestão da sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "fmea-e-gestao-de-risco-na-iso",
+    "title": "FMEA e gestão de risco na ISO",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "5-ferramentas-para-gestao-da-informacao-documentada",
+    "title": "Informação documentada: 5 ferramentas para gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-o-pbqp-h-pode-me-ajudar-no-canteiro-de-obras",
+    "title": "Como o PBQP-H pode me ajudar no canteiro de obras?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "iso-17025",
+    "title": "ISO 17025 - o que é, como e porque implementar",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "contratacao-de-funcionarios-qualificados-aprenda-com-5-dicas",
+    "title": "Contratação de funcionários qualificados: Aprenda com 5 dicas!",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "os-3-pilares-da-gestao-da-qualidade-simplificado-a-gestao",
+    "title": "Os 3 Pilares da Gestão da Qualidade - Simplificado a Gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "abordagem-de-processos",
+    "title": "Abordagem de Processos: 5 dicas para iniciar na sua empresa - Simplificando a Gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-27001-na-contabilidade-escritorio-de-contabilidade-deveriam-pensar-na-iso-27001-e-nao-apenas-na-lgpd",
+    "title": "ISO 27001 na Contabilidade",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "4-passos-para-otimizar-a-gestao-de-informacao-e-infraestrutura-da-sua-empresa",
+    "title": "4 Passos para otimizar a Gestão de Informação e Infraestrutura da sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-qual-o-custo-para-certificacao",
+    "title": "PBQP-H: qual o custo para certificação?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-qual-o-prazo-para-certificar-minha-empresa",
+    "title": "PBQP-H: Qual o prazo para certificar minha empresa?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "a-lgpd-e-a-seguranca-de-dados",
+    "title": "A LGPD e a Segurança de dados",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "problemas-de-comunicacao-como-eles-podem-afetar-seu-escritorio-contabil",
+    "title": "Problemas de Comunicação Interna: como eles afetam seu escritório contábil?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-o-pqec-tem-a-ver-com-a-iso-9001",
+    "title": "O que o PQEC tem a ver com a ISO 9001?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-da-mudanca",
+    "title": "Gestão da Mudança: Transpondo o paradigma \"sempre fiz assim, por que mudar?\"",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "como-alavancar-a-sua-pequena-empresa",
+    "title": "Como alavancar a sua pequena empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-estrategica-tomada-de-decisao-no-momento-certo",
+    "title": "Gestão Estratégica: Tomada de Decisão no Momento Certo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "gestao-operacional-5-passos-para-aplicar-no-seu-negocio-simplificando-a-gestao",
+    "title": "Gestão Operacional - 5 passos para aplicar no seu negócio - Simplificando a Gestão",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "forum-economico-mundial-como-afeta-seu-sistema-de-gestao",
+    "title": "Fórum Econômico Mundial: Como afeta seu Sistema de Gestão?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "controle-da-informacao-documentada",
+    "title": "Controle da Informação Documentada e a sua Importância",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "paralisacao-de-obras-devido-ao-covid-19",
+    "title": "Paralisação de obras devido ao COVID-19",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "como-ampliar-o-leque-de-servicos-de-um-escritorio-de-advocacia",
+    "title": "Como ampliar o leque de serviços de um escritório de Advocacia?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "situacoes-inusitadas-em-uma-auditoria-remota",
+    "title": "Situações Inusitadas em uma Auditoria Remota",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "a-logistica-e-o-sistema-de-gestao-podem-salvar-o-seu-negocio",
+    "title": "A logística e o Sistema de Gestão podem salvar o seu negócio",
+    "cats": "Transportes e Logística",
+    "hero": true
+  },
+  {
+    "slug": "flexibilizacao-nas-leis-de-saude-e-seguranca-do-trabalho-sst-devido-ao-covid-19",
+    "title": "Flexibilização nas leis de SST devido o Covid-19",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "iso-27001-e-o-escopo-do-sistema-de-gestao-da-seguranca-da-informacao",
+    "title": "ISO 27001 e o escopo do Sistema de Gestão da Segurança da Informação",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-4-0-serve-para-minha-empresa",
+    "title": "A Auditoria 4.0 serve para minha empresa?",
+    "cats": "Auditoria",
+    "hero": false
+  },
+  {
+    "slug": "o-passo-a-passo-da-lgpd",
+    "title": "O Passo a Passo da LGPD. O que você precisa saber?",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-e-suas-mudancas-ao-longo-do-tempo",
+    "title": "ISO 9001 e suas mudanças ao longo do tempo",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-14001-quais-mudancas-aconteceram-na-norma-ao-longo-do-tempo",
+    "title": "ISO 14001: quais mudanças aconteceram na norma ao longo do tempo?",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "quais-os-maiores-beneficios-de-se-ter-a-iso-45001",
+    "title": "Quais os maiores benefícios de se ter a ISO 45001?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-indicadores",
+    "title": "Gestão de Indicadores em Obras: Eficiência e Resultados Reais",
+    "cats": "",
+    "hero": true
+  },
+  {
+    "slug": "requisitos-legais-aplicaveis-ao-pbqp-h",
+    "title": "Requisitos Legais no PBQP-H: quais são os requisitos aplicáveis?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "qual-a-relacao-da-iso-27001-com-a-iso-27701",
+    "title": "Qual a relação da ISO 27001 com a ISO 27701?",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "relatorio-da-industria-como-o-mercado-esta-investindo-no-pbqp-h",
+    "title": "Relatório da indústria: como o mercado está investindo no PBQP-H",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "sistema-de-gestao-o-que-fazer-para-manter",
+    "title": "Sistema de Gestão: O que fazer para manter?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "seguranca-dos-alimentos",
+    "title": "Como a segurança dos alimentos está relacionada à qualidade de um alimento?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "siac-2021-anexo-vii-qualificacao-de-fornecedores-laboratoriais",
+    "title": "SiAC 2021 Anexo VII - Qualificação de fornecedores laboratoriais",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "cipa-ou-designado-cipa-na-construcao-civil",
+    "title": "CIPA ou Designado CIPA na Construção Civil",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "como-implementar-a-iso-14001-para-garantir-seu-principal-beneficio",
+    "title": "Como implementar a ISO 14001 para garantir seu principal benefício?",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "certificacao-iso-27001-qual-e-a-infraestrutura-necessaria",
+    "title": "Certificação ISO 27001: qual é a infraestrutura necessária?",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "7-beneficios-da-iso-27001-para-o-seu-negocio",
+    "title": "7 benefícios da ISO 27001 para o seu negócio",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "40-maneiras-para-aproveitar-o-seu-logotipo",
+    "title": "Mais de 40 Maneiras para Aproveitar o Seu Logotipo ao Máximo",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "saiba-o-que-significa-environmental-ou-ambiental-da-sigla-esg",
+    "title": "Ambiental (Environmental) da sigla ESG – Saiba o que significa",
+    "cats": "ESG",
+    "hero": true
+  },
+  {
+    "slug": "governanca-da-sigla-esg",
+    "title": "Governança da sigla ESG - Saiba o que significa",
+    "cats": "ESG",
+    "hero": true
+  },
+  {
+    "slug": "metricas-e-ods-no-pilar-de-governanca-do-esg",
+    "title": "ODS no pilar de governança e métricas do ESG",
+    "cats": "ESG",
+    "hero": true
+  },
+  {
+    "slug": "metricas-e-ods-no-pilar-social-do-esg",
+    "title": "ODS no pilar social do ESG e suas métricas",
+    "cats": "ESG",
+    "hero": true
+  },
+  {
+    "slug": "casa-verde-e-amarela-mostra-forca-com-empreendimentos-por-todo-o-pais",
+    "title": "Casa Verde e Amarela mostra força com empreendimentos por todo o país",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "desvendando-os-impactos-da-lgpd-em-cartorios",
+    "title": "Impactos da LGPD em cartórios",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "qualidade-na-construcao-civil-7-dicas-para-garanti-la",
+    "title": "Qualidade na construção civil: 7 dicas para garanti-la",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "esg-e-o-greenwashing",
+    "title": "A relação do ESG e o Greenwashing",
+    "cats": "Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "fssc-22000-v6",
+    "title": "Versão 6.0 da FSSC 22000: O que há de novo?",
+    "cats": "Segurança dos Alimentos",
+    "hero": false
+  },
+  {
+    "slug": "o-que-e-o-haccp-hazard-analysis-and-control-point-system",
+    "title": "O que é o HACCP (Hazard Analysis and Control Point System)?",
+    "cats": "Segurança dos Alimentos",
+    "hero": false
+  },
+  {
+    "slug": "gestao-de-melhoria-3-dicas-para-melhorar-sua-empresa-1-todo-dia",
+    "title": "Gestão de Melhoria: 3 Dicas para Melhorar sua empresa 1% todo dia.",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-27001-e-lgpd-como-lidar-com-vazamento-de-dados",
+    "title": "ISO 27001 e LGPD: como lidar com vazamento de dados",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "matriz-de-riscos-o-que-e-e-como-aplicar",
+    "title": "Matriz de Riscos: o que é e como aplicar na minha empresa?",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "analise-de-causa-raiz-o-que-e-e-como-fazer",
+    "title": "Análise de causa raíz: o que é e como fazer?",
+    "cats": "Gestão e Marketing",
+    "hero": false
+  },
+  {
+    "slug": "laboratorio-fleming-celebra-a-iso-9001-e-as-novas-oportunidades-no-espaco-de-exames",
+    "title": "Laboratório Fleming celebra a ISO 9001 e as novas oportunidades no espaço de exames",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "okr-o-que-e-ebook",
+    "title": "E-book: O que é OKR? Entenda de uma vez por todas!",
+    "cats": "E-books|Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "construcao-civil-o-que-esperar-em-2023-no-pbqp-h-e-geric",
+    "title": "Construção Civil - O que esperar em 2023 no PBQP-H e Geric?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "modelagem-bim-conheca-o-futuro-da-construcao-civil",
+    "title": "Modelagem BIM: Conheça o futuro da Construção Civil",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "tendencias-para-a-construcao-em-2023-conheca-as-10-maiores",
+    "title": "Tendências para a Construção em 2023: Conheça as 10 maiores",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "realidade-aumentada-vantagens-na-construcao-civil",
+    "title": "Realidade Aumentada: Vantagens na Construção Civil",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "descubra-a-revisao-da-iso-9001",
+    "title": "Revisão da ISO 9001 2025",
+    "cats": "Gestão e Marketing",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-e-geric-como-conseguir-em-2024",
+    "title": "PBQP-H e GERIC: Como conseguir em 2024?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "quais-sao-os-beneficios-da-certificacao-pbqp-h",
+    "title": "Quais são os benefícios da certificação PBQP-h?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "vale-a-pena-ter-o-pbqp-h-em-2024",
+    "title": "Vale a pena ter o PBQP-H em 2024?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "por-que-a-caixa-economica-federal-exige-a-certificacao-pbqp-h-das-construtoras",
+    "title": "Por que a Caixa Econômica Federal exige a certificação PBQP-H das construtoras?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "apoio-a-producao-como-conseguir-financiamento-para-sua-construtora",
+    "title": "Apoio à Produção: Como conseguir financiamento para sua construtora",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "a-importancia-da-iso-27001-na-nova-regulamentacao-de-apostas-no-brasil",
+    "title": "A Importância da ISO 27001 na Nova Regulamentação de Apostas no Brasil",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "pack-gestao",
+    "title": "Pack de Gestão",
+    "cats": "Planilhas",
+    "hero": true
+  },
+  {
+    "slug": "certificacao-iso-9001-com-inteligencia-artificial-o-que-voce-precisa-saber",
+    "title": "Certificação ISO 9001 com Inteligência Artificial: o que você precisa saber",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "descubra-qual-norma-iso-faz-mais-sentido-para-sua-empresa-de-engenharia-ou-arquitetura",
+    "title": "Descubra qual norma ISO faz mais sentido para sua empresa de Engenharia ou Arquitetura",
+    "cats": "Auditoria|Qualidade e Inovação|Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "normas-iso-e-licitaco",
+    "title": "Normas ISO e Licitações: O que você precisa saber pra não ficar de fora de grandes  projetos",
+    "cats": "Auditoria|Qualidade e Inovação|Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "certificacoes-iso-para-engenharia-e-arquitetura",
+    "title": "Certificações ISO para Engenharia e Arquitetura",
+    "cats": "Construção Civil|Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "o-que-sao-auditorias-e-por-que-sao-essenciais-para-a-gestao",
+    "title": "O que são Auditorias e Por que São Essenciais para a Gestão",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-de-sistemas-de-gestao-como-torna-la-mais-eficiente",
+    "title": "Auditoria de Sistemas de Gestão: Como Torná-la Mais Eficiente",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "o-caso-kpmg-e-a-importancia-de-auditorias-precisas",
+    "title": "O Caso KPMG e a Importância de Auditorias Precisas",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "consultoria-presencial-vs-metodologia-templum-por-que-o-modelo-tradicional-ficou-para-tras",
+    "title": "Consultoria Presencial vs. Metodologia Templum: Por que o modelo tradicional ficou para trás",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pacote-fechado-x-novo-modelo-templum-qual-a-opcao-mais-segura-para-conquistar-sua-iso-27001-sem-surpresas",
+    "title": "Pacote fechado x Novo modelo Templum: qual a opção mais segura para conquistar sua ISO 27001 sem surpresas?",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "medo-dos-funcionarios-como-vencer-a-procrastinacao-e-conduzir-a-evolucao-da-sua-empresa-com-confianca",
+    "title": "Medo dos Funcionários? Como Vencer a Procrastinação e Conduzir a Evolução da Sua Empresa com Confiança",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "minha-casa-minha-vida-ganha-faixa-4-o-que-muda-e-como-sua-construtora-pode-se-beneficiar",
+    "title": "Minha Casa, Minha Vida ganha Faixa 4: o que muda e como sua construtora pode se beneficiar",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "como-a-inteligencia-artificial-esta-reinventando-a-gestao-empresarial",
+    "title": "Como a Inteligência Artificial Está Reinventando a Gestão Empresarial",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "como-a-inteligencia-artificial-acelera-a-conversao-e-a-produtividade-da-sua-equipe",
+    "title": "Como a Inteligência Artificial Acelera a Conversão e a Produtividade da Sua Equipe",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "redefinindo-a-consultoria-de-gestao-e-o-futuro-com-ia",
+    "title": "Redefinindo a Consultoria de Gestão e o Futuro com IA",
+    "cats": "IA|Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "a-reinvencao-da-auditoria-de-gestao-e-o-poder-da-ia",
+    "title": "A Reinvenção da Auditoria de Gestão e o Poder da IA",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "a-jornada-de-transformacao-da-gestao-com-o-sistema-orbit-e-a-inteligencia-artificial",
+    "title": "A Jornada de Transformação da Gestão com o Sistema Orbit e a Inteligência Artificial",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "pgr-e-gro-que-voce-precisa-saber-parte-01-2",
+    "title": "Impactos do PGR - Um marco para a área de Saúde e Segurança",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "relacao-do-lgpd-com-a-iso-27001-2",
+    "title": "Relação do LGPD com a ISO 27001 em 2025",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "quais-sao-mudancas-mais-significativas-na-revisao-2015-da-iso-9001-2",
+    "title": "Mudanças mais significativas na ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "qual-e-melhor-opcao-para-implementacao-iso-9001-2",
+    "title": "Qual é melhor opção para implementar a ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "certificacao-iso-27001-qual-e-a-infraestrutura-necessaria-2",
+    "title": "Certificação ISO 27001: A melhor infraestrutura necessaria",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "beneficios-e-desafios-da-avaliacao-remota-de-conformidade",
+    "title": "Benefícios e desafios da avaliação remota de conformidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "dpo-o-que-faz-e-por-que-sua-empresa-precisa-de-um-agora",
+    "title": "DPO: o que faz e por que sua empresa precisa de um agora",
+    "cats": "Auditoria|Segurança e Compliance",
+    "hero": false
+  },
+  {
+    "slug": "gestao-e-processos-como-construir-uma-empresa-forte-com-base-solida",
+    "title": "Gestão e processos: como construir uma empresa forte com base sólida",
+    "cats": "Gestão e Marketing",
+    "hero": false
+  },
+  {
+    "slug": "conversao-de-vendas-como-unir-processos-e-ia-para-resultados-reais",
+    "title": "Conversão de vendas: como unir processos e IA para resultados reais",
+    "cats": "Gestão e Marketing",
+    "hero": false
+  },
+  {
+    "slug": "seguranca-de-alimentos",
+    "title": "A Cultura da Segurança de Alimentos: Por Que Ela É Essencial para o Seu Negócio?",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "iso-9001-transforma-o-rh",
+    "title": "Como a Certificação ISO 9001 Transforma o RH",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "controle-de-fornecedores-na-iso-9001",
+    "title": "Guia Completo: Domine o Controle de Fornecedores na ISO 9001",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "guia-definitivo-das-mudancas-iso-2026",
+    "title": "Guia Definitivo das Mudanças ISO 9001 e 14001 em 2026",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "governanca-corporativa-o-guia-para-o-sucesso-do-seu-negocio",
+    "title": "Governança Corporativa: O Guia para o Sucesso do seu Negócio",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-transformando-as-bases-da-construcao-civil-2",
+    "title": "PBQP-H: transformando as bases da construção civil",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "iso-90012015-o-envolvimento-da-alta-direcao-no-sgq-2",
+    "title": "ISO 9001 o envolvimento da alta direção no SGQ",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-2-2",
+    "title": "Tudo sobre o PBQP-H - Como garantir o GERIC da CAIXA",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "quais-os-maiores-riscos-de-nao-ter-a-iso-45001-implementada-2",
+    "title": "Quais os maiores riscos de não ter a ISO 45001 implementada?",
+    "cats": "Saúde e Segurança do Trabalho",
+    "hero": true
+  },
+  {
+    "slug": "como-fazer-uma-pesquisa-de-satisfacao-sem-gastar-nada-2",
+    "title": "Aprenda a fazer uma pesquisa de satisfação sem gastar nada",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "dicas-para-uma-implementacao-bem-sucedida",
+    "title": "Como funciona o método de consultoria da Templum",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "mapeamento-de-processos-kaizen",
+    "title": "Mapeamento de Processos que Impulsiona Resultados",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "certificacao-iso-as-principais-normas",
+    "title": "Benefícios da ISO 9001 para sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "algumas-palavras-sobre-iso-9001-e-padronizacao-2",
+    "title": "Algumas palavras sobre ISO 9001 e padronização para sua empresa",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "video-escopo-do-sistema-de-gestao-da-qualidade-2",
+    "title": "Escopo do sistema de gestão da qualidade",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "siac-2021-o-que-mudou-2",
+    "title": "SiAC 2021 O que mudou?",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "templum-rewards-sua-dedicacao-vale-premios-em-dinheiro",
+    "title": "Templum Rewards: Sua Dedicação Vale Prêmios em Dinheiro",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "pbqp-h-o-segredo",
+    "title": "Domine o PBQP-H: O Segredo Está na Compra de Materiais",
+    "cats": "Construção Civil",
+    "hero": true
+  },
+  {
+    "slug": "certificacao-iso-9001-guia-completo-indicadores-de-processo",
+    "title": "Certificação ISO 9001: Guia para dominar indicadores",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "iso-27001-o-guia",
+    "title": "ISO 27001: O Guia Completo para Mapeamento de Processos",
+    "cats": "Segurança de Informação",
+    "hero": true
+  },
+  {
+    "slug": "iso-45001-perigos",
+    "title": "ISO 45001 Perigos e Riscos: Gestão Proativa e Sustentável",
+    "cats": "45001",
+    "hero": true
+  },
+  {
+    "slug": "medir-processos-iso",
+    "title": "Como Medir Processos na ISO 9001: Guia Prático Completo",
+    "cats": "ISO 9001",
+    "hero": true
+  },
+  {
+    "slug": "integracao-nr-com-iso",
+    "title": "Integração NR com ISO 45001: Guia Completo para Saúde e Segurança",
+    "cats": "45001",
+    "hero": true
+  },
+  {
+    "slug": "analise-14001",
+    "title": "Análise Crítica Pela Direção ISO 14001: Guia Completo e Prático",
+    "cats": "14001|Meio Ambiente",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-pessoas-no-proximo-nivel",
+    "title": "Gestão de pessoas no próximo nível:",
+    "cats": "",
+    "hero": true
+  },
+  {
+    "slug": "planejamento-estrategico-2026-como-transformar-intencao-em-execucao-com-apoio-da-inteligencia-artificial",
+    "title": "Planejamento Estratégico 2026: como transformar intenção em execução com apoio da inteligência artificial",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "nao-conformidade-como-transformar-erros-em-melhoria-continua-com-apoio-da-inteligencia-artificial",
+    "title": "Não conformidade: como transformar erros em melhoria contínua com apoio da inteligência artificial",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "gestao-da-qualidade-com-inteligencia-artificial-como-pensar-diferente-e-transformar-sua-empresa",
+    "title": "Gestão da Qualidade com Inteligência Artificial: Como Pensar Diferente e Transformar sua Empresa",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "indicadores-de-desempenho-como-transformar-objetivos-em-resultados-reais",
+    "title": "Indicadores de desempenho: como transformar objetivos em resultados reais",
+    "cats": "Gestão de Processos",
+    "hero": true
+  },
+  {
+    "slug": "governanca-em-redes-como-etica-responsabilidade-e-participacao-fortalecem-organizacoes-publicas-e-privadas",
+    "title": "Governança em Redes: como ética, responsabilidade e participação fortalecem organizações públicas e privadas",
+    "cats": "Segurança e Compliance",
+    "hero": true
+  },
+  {
+    "slug": "a-revolucao-da-gestao-com-inteligencia-artificial-como-empresas-pequenas-podem-operar-com-performance-de-grandes-organizacoes",
+    "title": "A Revolução da Gestão com Inteligência Artificial: como empresas pequenas podem operar com performance de grandes organizações",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "conscientizacao-na-iso-9001-por-que-o-requisito-7-3-e-essencial-para-um-sistema-de-gestao-da-qualidade-eficaz",
+    "title": "Conscientização na ISO 9001: por que o requisito 7.3 é essencial para um Sistema de Gestão da Qualidade eficaz",
+    "cats": "Qualidade e Inovação",
+    "hero": true
+  },
+  {
+    "slug": "consultoria-iso-com-inteligencia-artificial-como-a-templum-esta-simplificando-a-certificacao-e-a-gestao-empresarial",
+    "title": "Consultoria ISO com inteligência artificial: como a Templum está simplificando a certificação e a gestão empresarial",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "auditoria-interna-como-transformar-a-certificacao-em-melhoria-continua",
+    "title": "Auditoria Interna: como transformar a certificação em melhoria contínua",
+    "cats": "Auditoria",
+    "hero": true
+  },
+  {
+    "slug": "dpo-na-pratica-por-que-a-protecao-de-dados-deixou-de-ser-apenas-uma-obrigacao-legal-e-virou-vantagem-competitiva",
+    "title": "DPO na prática: por que a proteção de dados deixou de ser apenas uma obrigação legal e virou vantagem competitiva",
+    "cats": "27001",
+    "hero": true
+  },
+  {
+    "slug": "gestao-de-processos-empresariais-como-organizar-sua-empresa-para-crescer-com-clareza-controle-e-previsibilidade",
+    "title": "Gestão de processos empresariais: como organizar sua empresa para crescer com clareza, controle e previsibilidade",
+    "cats": "Processos",
+    "hero": true
+  },
+  {
+    "slug": "gestao-e-processos-como-construir-uma-empresa-organizada-escalavel-e-preparada-para-crescer",
+    "title": "Gestão e processos: como construir uma empresa organizada, escalável e preparada para crescer",
+    "cats": "Gestão de Processos",
+    "hero": true
+  },
+  {
+    "slug": "conversao-de-vendas-com-inteligencia-artificial-como-unir-processo-estrategia-e-ia-para-vender-mais",
+    "title": "Conversão de vendas com inteligência artificial: como unir processo, estratégia e IA para vender mais",
+    "cats": "Webinars",
+    "hero": true
+  },
+  {
+    "slug": "inteligencia-artificial-na-gestao-como-empresas-podem-automatizar-processos-ganhar-produtividade-e-escalar-com-mais-inteligencia",
+    "title": "Inteligência Artificial na Gestão: Como Empresas Podem Automatizar Processos, Ganhar Produtividade e Escalar com Mais Inteligência",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "crm-inteligente-como-a-inteligencia-artificial-esta-transformando-a-gestao-de-clientes-processos-e-vendas",
+    "title": "CRM Inteligente: Como a Inteligência Artificial Está Transformando a Gestão de Clientes, Processos e Vendas",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "controle-de-fornecedores-como-atender-ao-requisito-8-4-da-iso-9001-com-seguranca-clareza-e-eficiencia",
+    "title": "Controle de fornecedores: como atender ao requisito 8.4 da ISO 9001 com segurança, clareza e eficiência",
+    "cats": "ISO 9001",
+    "hero": true
+  },
+  {
+    "slug": "gestao-com-inteligencia-artificial-como-repensar-sua-empresa-para-crescer-com-mais-eficiencia",
+    "title": "Gestão com Inteligência Artificial: como repensar sua empresa para crescer com mais eficiência",
+    "cats": "IA",
+    "hero": true
+  },
+  {
+    "slug": "como-reduzir-o-absenteismo-e-a-rotatividade-com-indicadores-reconhecimento-e-gestao-pela-iso-9001",
+    "title": "Como reduzir o absenteísmo e a rotatividade com indicadores, reconhecimento e gestão pela ISO 9001",
+    "cats": "ISO 9001",
+    "hero": true
+  },
+  {
+    "slug": "cultura-de-seguranca-de-alimentos-como-implementar-de-forma-pratica-continua-e-auditavel-nas-empresas",
+    "title": "Cultura de Segurança de Alimentos: como implementar de forma prática, contínua e auditável nas empresas",
+    "cats": "Segurança dos Alimentos",
+    "hero": true
+  },
+  {
+    "slug": "governanca-corporativa-o-pilar-estrategico-para-empresas-mais-solidas-transparentes-e-sustentaveis",
+    "title": "Governança Corporativa: o pilar estratégico para empresas mais sólidas, transparentes e sustentáveis",
+    "cats": "Notícias",
+    "hero": true
+  }
+]

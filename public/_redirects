@@ -1,0 +1,8 @@
+# Redirects do blog (Cloudflare). Páginas antigas do WordPress que não viraram
+# post → destino válido. Zero 404, mesmo p/ links externos antigos.
+/precos                          https://templum.com.br/form?utm_source=blog&utm_medium=organico  301
+/precos/                         https://templum.com.br/form?utm_source=blog&utm_medium=organico  301
+/certificacast                   https://templum.com.br  301
+/certificacast/                  https://templum.com.br  301
+/elemento-planejamento-estrategico/   /elementos-planejamento-estrategico/  301
+/planejamento-estrategico/            /como-fazer-planejamento-estrategico/  301

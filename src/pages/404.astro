@@ -1,0 +1,22 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Página não encontrada | Certificação ISO" description="A página que você procura não existe ou foi movida." robots="noindex,follow">
+  <section class="nf section--navy">
+    <div class="container md">
+      <span class="tag-pill tag-pill--glow">Erro 404</span>
+      <h1>Página não encontrada</h1>
+      <p>O conteúdo que você procura não existe mais ou mudou de endereço. Que tal continuar pelo blog?</p>
+      <div class="nf-actions">
+        <a href="/" class="btn btn--primary btn--lg">Voltar ao início <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+        <a href="/buscar/" class="btn btn--onDark btn--lg">Buscar artigo</a>
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  .nf { padding: 90px 0; }
+  .nf h1 { color: var(--cream); font-size: clamp(30px, 4.5vw, 52px); font-weight: 800; letter-spacing: -0.03em; margin: 18px 0 14px; }
+  .nf p { color: rgba(255,244,221,0.78); font-size: 17px; max-width: 560px; line-height: 1.6; margin-bottom: 28px; }
+  .nf-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+</style>

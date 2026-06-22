@@ -1,0 +1,20 @@
+# Cloudflare Workers — blog certificacaoiso.com.br (static assets + worker.js).
+# O build do Astro gera ./dist; o Worker serve esses arquivos.
+# `name` deve ser IGUAL ao nome do Worker no painel.
+name = "certificacaoiso-blog"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "404-page"
+
+# --- R2: imagens dos artigos servidas em /wp-content/* (ativar quando o bucket existir) ---
+# [[r2_buckets]]
+# binding = "IMAGES"
+# bucket_name = "certificacaoiso-img"
+
+# Secrets/vars no painel (Settings → Variables and Secrets):
+#   SUPABASE_URL, SUPABASE_ANON_KEY  (Plaintext, públicas — build lê o Supabase)
+#   MAILCHIMP_API_KEY, MAILCHIMP_LIST_ID, META_CAPI_TOKEN  (Secret/encrypted — quando ligar)

@@ -1,0 +1,69 @@
+---
+// Sidebar do artigo (sticky no desktop): autor + CTA + isca do segmento + recentes.
+const { ref = "", author = "Equipe Templum", recent = [], isca = null } = Astro.props;
+const TEMPLUM = "https://templum.com.br";
+const formUrl = `${TEMPLUM}/form?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}`;
+const iscaUrl = isca
+  ? `${TEMPLUM}/presentes/${isca.slug}?utm_source=blog&utm_medium=sidebar-isca&utm_campaign=${ref}`
+  : `${TEMPLUM}/presentes?utm_source=blog&utm_medium=sidebar-isca&utm_campaign=${ref}`;
+const iscaTitulo = isca ? isca.titulo : "Materiais gratuitos";
+const fmt = (d) => new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
+---
+<aside class="sb">
+  <!-- Autor -->
+  <div class="sb-author">
+    <span class="sb-author-av"><iconify-icon icon="solar:user-bold"></iconify-icon></span>
+    <div><span class="sb-author-by">Escrito por</span><strong>{author}</strong></div>
+  </div>
+
+  <!-- CTA principal (garantia 200%) -->
+  <div class="sb-cta">
+    <span class="sb-cta-badge"><iconify-icon icon="solar:shield-check-bold"></iconify-icon> Garantia de 200%</span>
+    <h3>Quer certificar sua empresa?</h3>
+    <p>Fale com um especialista da Templum e receba um diagnóstico gratuito — certifique ou devolvemos o dobro.</p>
+    <a href={formUrl} class="btn btn--primary btn--block" data-trk-event="cta-sidebar">Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+  </div>
+
+  <!-- Isca do segmento do artigo -->
+  <div class="sb-isca">
+    <span class="sb-isca-tag"><iconify-icon icon="solar:file-download-bold"></iconify-icon> Material gratuito</span>
+    <h4>{iscaTitulo}</h4>
+    <a href={iscaUrl} class="btn btn--outline btn--sm btn--block" data-trk-event="isca-sidebar">Baixar agora <iconify-icon icon="solar:download-minimalistic-bold"></iconify-icon></a>
+  </div>
+
+  <!-- Artigos recentes -->
+  {recent.length > 0 && (
+    <div class="sb-recent">
+      <h4>Artigos recentes</h4>
+      <ul>{recent.map((p) => (
+        <li><a href={`/${p.slug}/`}><span class="sb-recent-t">{p.data.title}</span><time>{fmt(p.data.pubDate)}</time></a></li>
+      ))}</ul>
+    </div>
+  )}
+</aside>
+<style>
+  .sb { position: sticky; top: 96px; align-self: start; display: flex; flex-direction: column; gap: 18px; }
+  @media (max-width: 980px) { .sb { position: static; } }
+
+  .sb-author { display: flex; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-16); padding: 14px 18px; }
+  .sb-author-av { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,89,37,0.12); color: var(--orange); font-size: 22px; flex-shrink: 0; }
+  .sb-author-by { display: block; font-size: 12px; color: var(--text-soft); }
+  .sb-author strong { font-size: 15px; font-weight: 800; color: var(--text); }
+
+  .sb-cta { background: var(--navy); color: var(--cream); border-radius: var(--r-20); padding: 26px 24px; }
+  .sb-cta-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--orange); background: rgba(0,0,0,0.22); padding: 6px 12px; border-radius: 999px; margin-bottom: 14px; }
+  .sb-cta h3 { color: var(--cream); font-size: 20px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
+  .sb-cta p { font-size: 14px; line-height: 1.55; color: rgba(255,244,221,0.78); margin-bottom: 18px; }
+
+  .sb-isca { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-20); padding: 22px 24px; }
+  .sb-isca-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--orange-ink); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
+  .sb-isca h4 { font-size: 16px; font-weight: 800; line-height: 1.3; margin-bottom: 16px; color: var(--text); }
+
+  .sb-recent { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-20); padding: 22px 24px; }
+  .sb-recent h4 { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 14px; }
+  .sb-recent ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .sb-recent a { display: block; }
+  .sb-recent-t { display: block; font-size: 14px; font-weight: 700; color: var(--text-2); line-height: 1.35; }
+  .sb-recent a:hover .sb-recent-t { color: var(--orange); }
+  .sb-recent time { font-size: 12px; color: var(--text-soft); }
+</style>

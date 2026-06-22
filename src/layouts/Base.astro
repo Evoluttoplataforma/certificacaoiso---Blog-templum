@@ -1,0 +1,137 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import TrackingKit from "../components/TrackingKit.astro";
+
+const {
+  title = "Certificação ISO — Dicas para implementação e certificação nas normas ISO",
+  description = "Conteúdo prático sobre certificação e implementação das normas ISO: ISO 9001, 14001, 45001, 27001, PBQP-H, FSSC 22000 e mais. Por especialistas da Templum.",
+  ogImage = "/assets/og/certificacaoiso-og.jpg",
+  ogType = "website",
+  schemas = [],
+  noChrome = false,
+  robots = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+} = Astro.props;
+
+const SITE = (Astro.site?.href || "https://certificacaoiso.com.br/").replace(/\/$/, "");
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImageUrl = ogImage.startsWith("http") ? ogImage : new URL(ogImage, Astro.site).href;
+
+// --- JSON-LD base: Organization (Templum, publisher) + WebSite (Certificação ISO) ---
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE}/#organization`,
+  name: "Templum Consultoria",
+  alternateName: "Certificação ISO",
+  url: `${SITE}/`,
+  logo: { "@type": "ImageObject", url: `${SITE}/assets/logo/templum.png` },
+  sameAs: [
+    "https://www.instagram.com/templumconsultoriailimitada/",
+    "https://www.linkedin.com/company/3033783/",
+    "https://templum.com.br",
+  ],
+};
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE}/#website`,
+  url: `${SITE}/`,
+  name: "Certificação ISO",
+  description: "Dicas para implementação e certificação nas normas ISO.",
+  inLanguage: "pt-BR",
+  publisher: { "@id": `${SITE}/#organization` },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: `${SITE}/buscar/?q={search_term_string}` },
+    "query-input": "required name=search_term_string",
+  },
+};
+const allSchemas = [orgSchema, websiteSchema, ...schemas];
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript" is:inline>
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "sr5nwfj8jc");
+    </script>
+
+    <!-- Google tag (gtag.js) — GA4 (2 propriedades) + Google Ads, estático no head. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BW8QTYLB5" is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-2BW8QTYLB5', { send_page_view: false });
+      gtag('config', 'G-FV41GWD427', { send_page_view: false });
+      gtag('config', 'AW-17896226473');
+    </script>
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <meta name="theme-color" content="#222831" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title="Certificação ISO" href={`${SITE}/rss.xml`} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Certificação ISO" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Schema.org JSON-LD -->
+    {allSchemas.map((s) => (
+      <script type="application/ld+json" set:html={JSON.stringify(s)} />
+    ))}
+
+    <!-- Montserrat self-hosted: preload dos pesos-chave (corpo 500, título 800). Sem CSS externo, sem CLS. -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-500.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-800.woff2" crossorigin />
+    <!-- Ícones (Iconify) — defer p/ não bloquear o render -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js" defer is:inline></script>
+    <TrackingKit />
+  </head>
+  <body>
+    {!noChrome && <Header />}
+    <main>
+      <slot />
+    </main>
+    {!noChrome && <Footer />}
+    {!noChrome && (
+      <a class="whatsapp-float" href="https://wa.me/5519993521270" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon>
+      </a>
+    )}
+    <script is:inline>
+      (function () {
+        const els = document.querySelectorAll(".reveal");
+        if (!("IntersectionObserver" in window) || !els.length) { els.forEach((el) => el.classList.add("is-in")); return; }
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        els.forEach((el) => io.observe(el));
+      })();
+    </script>
+  </body>
+</html>

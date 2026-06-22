@@ -1,0 +1,41 @@
+---
+import { categorias } from "../data/categorias.js";
+const TEMPLUM = "https://templum.com.br";
+const ano = 2026;
+---
+<footer class="ft">
+  <div class="container lg ft-grid">
+    <div>
+      <span class="templum-logo onDark"><img src="/assets/logo/templum.png" alt="Templum" /></span>
+      <p class="ft-sub">Dicas para implementação e certificação nas normas ISO. Um conteúdo da <a href={TEMPLUM}>Templum Consultoria</a>.</p>
+      <a href={`${TEMPLUM}/form`} class="btn btn--primary btn--sm">Falar com um especialista</a>
+    </div>
+    <div>
+      <h3>Categorias</h3>
+      <ul>{categorias.slice(0,8).map((c) => <li><a href={`/categoria/${c.slug}/`}>{c.nome}</a></li>)}</ul>
+    </div>
+    <div>
+      <h3>Templum</h3>
+      <ul>
+        <li><a href={`${TEMPLUM}/consultoria`}>Certificações</a></li>
+        <li><a href={`${TEMPLUM}/auditoria`}>Auditoria</a></li>
+        <li><a href={`${TEMPLUM}/solucoes-de-ia`}>Soluções de IA</a></li>
+        <li><a href={`${TEMPLUM}/quem-somos/sobre`}>Quem somos</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom"><div class="container lg">© {ano} Templum Consultoria · Certificação ISO</div></div>
+</footer>
+<style>
+  .ft { background: var(--navy); color: rgba(255,244,221,0.75); padding: 56px 0 0; }
+  .ft .templum-logo img { height: 40px; }
+  .ft-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 36px; }
+  @media (max-width: 760px) { .ft-grid { grid-template-columns: 1fr; gap: 28px; } }
+  .ft-sub { font-size: 14px; line-height: 1.6; margin: 16px 0 18px; max-width: 360px; color: rgba(255,244,221,0.7); }
+  .ft-sub a { color: var(--orange); text-decoration: underline; text-underline-offset: 2px; }
+  .ft h3 { color: var(--cream); font-size: 14px; font-weight: 800; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .ft ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+  .ft ul a { color: rgba(255,244,221,0.7); font-size: 14px; }
+  .ft ul a:hover { color: var(--orange); }
+  .ft-bottom { margin-top: 44px; border-top: 1px solid rgba(255,244,221,0.12); padding: 20px 0; font-size: 13px; }
+</style>
