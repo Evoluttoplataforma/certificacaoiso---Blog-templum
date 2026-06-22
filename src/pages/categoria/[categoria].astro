@@ -1,11 +1,11 @@
 ---
-import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
 import { catMeta } from "../../data/categorias.js";
+import { getAllPosts } from "../../lib/posts.js";
 
 export async function getStaticPaths() {
-  const posts = (await getCollection("blog")).filter((p) => !p.data.draft);
+  const posts = await getAllPosts();
   // todas as categorias que realmente existem nos posts (não só as curadas)
   const nomes = [...new Set(posts.flatMap((p) => p.data.categories || []).filter(Boolean))];
   const porSlug = {};

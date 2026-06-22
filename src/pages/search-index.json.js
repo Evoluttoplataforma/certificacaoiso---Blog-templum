@@ -1,6 +1,6 @@
-import { getCollection } from "astro:content";
+import { getAllPosts } from "../lib/posts.js";
 export async function GET() {
-  const posts = (await getCollection("blog")).filter((p) => !p.data.draft)
+  const posts = (await getAllPosts())
     .sort((a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate));
   const idx = posts.map((p) => ({
     t: p.data.title, s: p.slug, c: (p.data.categories || [])[0] || "",

@@ -1,19 +1,17 @@
 ---
-import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
 import Sidebar from "../components/Sidebar.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import { catMeta } from "../data/categorias.js";
 import { iscaDe } from "../data/iscas-blog.js";
-import { smartTldr } from "../lib/summary.mjs";
+import { getAllPosts, tldrOf } from "../lib/posts.js";
 
 export async function getStaticPaths() {
-  const posts = (await getCollection("blog")).filter((p) => !p.data.draft);
+  const posts = await getAllPosts();
   return posts.map((post) => ({ params: { slug: post.slug }, props: { post, posts } }));
 }
 
 const { post, posts } = Astro.props;
-const { Content } = await post.render();
 const d = post.data;
 const SITE = "https://certificacaoiso.com.br";
 const url = `${SITE}/${post.slug}/`;
@@ -23,14 +21,11 @@ const dataFmt = new Date(d.pubDate).toLocaleDateString("pt-BR", { day: "2-digit"
 
 // SEO/AIEO/GEO por artigo
 const seoTitle = d.seoTitle || `${d.title} | Certificação ISO`;
-// meta description limpa (sem corte no meio da palavra como vinha do excerpt)
-const seoDesc = d.seoDescription || smartTldr(post.body, d.description, 155);
-// "Resposta rápida" citável: usa o tldr do CMS; senão elabora a partir do corpo
-// (1ª frase completa) — em vez do excerpt cortado da migração.
-const tldr = (d.tldr || smartTldr(post.body, d.description)).trim();
+const tldr = (d.tldr || tldrOf(post)).trim();
+const seoDesc = (d.seoDescription || d.description || tldr).slice(0, 160);
 const keywords = (d.keywords && d.keywords.length ? d.keywords : d.categories) || [];
-// wordCount a partir do markdown cru (sinal de profundidade p/ SEO/GEO)
-const wordCount = post.body ? post.body.replace(/[#>*_`\[\]()!-]/g, " ").split(/\s+/).filter(Boolean).length : 0;
+// wordCount a partir do HTML (sinal de profundidade p/ SEO/GEO)
+const wordCount = post.content ? post.content.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length : 0;
 const faq = d.faq || [];
 
 // relacionados (mesma categoria)
@@ -121,7 +116,7 @@ if (faq.length) {
             <p>{tldr}</p>
           </div>
         )}
-        <Content />
+        <Fragment set:html={post.content} />
 
         {faq.length > 0 && (
           <section class="post-faq">

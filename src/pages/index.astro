@@ -1,11 +1,10 @@
 ---
-import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import { categorias } from "../data/categorias.js";
+import { getAllPosts } from "../lib/posts.js";
 
-const posts = (await getCollection("blog"))
-  .filter((p) => !p.data.draft)
+const posts = (await getAllPosts())
   .sort((a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate));
 
 const destaque = posts[0];

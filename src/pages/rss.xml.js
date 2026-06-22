@@ -1,7 +1,7 @@
 import rss from "@astrojs/rss";
-import { getCollection } from "astro:content";
+import { getAllPosts } from "../lib/posts.js";
 export async function GET(context) {
-  const posts = (await getCollection("blog")).filter((p) => !p.data.draft)
+  const posts = (await getAllPosts())
     .sort((a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate));
   return rss({
     title: "Certificação ISO",
