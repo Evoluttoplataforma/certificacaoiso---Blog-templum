@@ -34,6 +34,16 @@ function processContent(html) {
   // 0) remove <img> com extensão dupla quebrada (ex.: .webp.gif) → imagem interna 404
   out = out.replace(/<img\b[^>]*src="[^"]*\.(?:webp|jpe?g|png)\.gif"[^>]*>/gi, "");
 
+  // 0b) remove os BANNERS DE ISCA/e-book do meio do artigo (decisão: tirar dos artigos).
+  //     Detecta SÓ pelo filename da imagem (não pega o banner de consultoria → /form, que fica).
+  const isIscaBanner = (imgTag) => {
+    const file = ((imgTag.match(/src="([^"]*)"/i) || [])[1] || "").split("/").pop();
+    return /(?:e-?book|ebook|iscas?_banner|planilha[_-]|guia[_-]|-o-guia-completo-|pesq-google-08-analise)/i.test(file);
+  };
+  out = out.replace(/<a\b[^>]*>\s*(<img\b[^>]*>)\s*<\/a>/gi, (m, img) => (isIscaBanner(img) ? "" : m)); // banner linkado
+  out = out.replace(/<img\b[^>]*>/gi, (m) => (isIscaBanner(m) ? "" : m));                                // banner solto
+  out = out.replace(/<a\b[^>]*>\s*<\/a>/gi, "").replace(/<p>\s*<\/p>/gi, "");                            // limpa sobras vazias
+
   // 1) heading hierarchy
   const levels = [...out.matchAll(/<h([1-6])\b/gi)].map((m) => +m[1]);
   if (levels.length) {
