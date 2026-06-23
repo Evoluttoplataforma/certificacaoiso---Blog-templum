@@ -1,7 +1,7 @@
 // Edge Function: create-user
 // Valida que quem chamou está logado → cria o colaborador no Auth (Admin API,
-// service_role) e a linha em blog_templum_members. Envia convite por e-mail.
-// Deploy com "Verify JWT" DESLIGADO (validamos o usuário aqui dentro).
+// service_role) JÁ COM SENHA e e-mail confirmado (sem depender de SMTP/convite),
+// e grava em blog_templum_members. Deploy com "Verify JWT" DESLIGADO.
 const cors = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
@@ -18,31 +18,31 @@ Deno.serve(async (req) => {
     const SERVICE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const auth = req.headers.get("Authorization") || "";
 
-    // só usuário logado pode convidar
+    // só usuário logado pode criar
     const me = await fetch(`${SUPA}/auth/v1/user`, { headers: { Authorization: auth, apikey: ANON } });
     if (!me.ok) return json({ error: "unauthorized" }, 401);
 
-    const { email, full_name, role } = await req.json();
-    if (!email) return json({ error: "email obrigatório" }, 400);
+    const { email, password, full_name, role } = await req.json();
+    if (!email || !password) return json({ error: "email e senha são obrigatórios" }, 400);
+    if (String(password).length < 6) return json({ error: "senha mínima de 6 caracteres" }, 400);
 
-    // convida (cria o usuário no Auth + envia e-mail p/ definir senha)
-    const inv = await fetch(`${SUPA}/auth/v1/invite`, {
+    // cria o usuário direto (com senha, e-mail já confirmado)
+    const adm = await fetch(`${SUPA}/auth/v1/admin/users`, {
       method: "POST",
       headers: { apikey: SERVICE, Authorization: `Bearer ${SERVICE}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({ email, password, email_confirm: true, user_metadata: { full_name: full_name || null } }),
     });
-    const invData = await inv.json();
-    if (!inv.ok) return json({ error: invData.msg || invData.error_description || "erro ao criar usuário" }, 400);
-    const userId = invData.id || invData.user?.id;
+    const u = await adm.json();
+    if (!adm.ok) return json({ error: u.msg || u.message || u.error_description || "erro ao criar usuário" }, 400);
 
-    // cria o perfil/colaborador
+    // grava o perfil/colaborador
     await fetch(`${SUPA}/rest/v1/blog_templum_members`, {
       method: "POST",
       headers: {
         apikey: SERVICE, Authorization: `Bearer ${SERVICE}`,
         "Content-Type": "application/json", Prefer: "resolution=merge-duplicates,return=minimal",
       },
-      body: JSON.stringify({ user_id: userId, email, full_name: full_name || null, role: role || "editor" }),
+      body: JSON.stringify({ user_id: u.id, email, full_name: full_name || null, role: role || "editor" }),
     });
 
     return json({ ok: true });
