@@ -53,6 +53,23 @@ export async function getAllPosts() {
   return _cache;
 }
 
+// --- Iscas (lead magnets / landing pages) ---
+let _iscas = null;
+export async function getAllIscas() {
+  if (_iscas) return _iscas;
+  const r = await fetch(
+    `${SB_URL}/rest/v1/blog_templum_iscas?active=eq.true&select=*&order=segment,title`,
+    { headers: H }
+  );
+  if (!r.ok) throw new Error("Supabase iscas: " + r.status + " " + (await r.text()).slice(0, 200));
+  _iscas = await r.json();
+  return _iscas;
+}
+export async function getIsca(slug) {
+  const all = await getAllIscas();
+  return all.find((i) => i.slug === slug) || null;
+}
+
 // "Resposta rápida": usa o tldr; senão extrai a 1ª frase do HTML.
 export function tldrOf(post) {
   if (post.data.tldr) return post.data.tldr;
