@@ -1,0 +1,91 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getAllIscas } from "../../lib/posts.js";
+
+const iscas = await getAllIscas();
+
+const TYPE = {
+  planilha:  { label: "Planilha", icon: "solar:chart-square-bold" },
+  webinar:   { label: "Webinar",  icon: "solar:videocamera-record-bold" },
+  checklist: { label: "Checklist",icon: "solar:checklist-minimalistic-bold" },
+  ebook:     { label: "E-book",   icon: "solar:book-bookmark-bold" },
+};
+
+// agrupa por segmento, mantendo uma ordem estável
+const ordem = [...new Set(iscas.map((i) => i.segment || "Materiais"))];
+const grupos = ordem.map((seg) => ({ seg, itens: iscas.filter((i) => (i.segment || "Materiais") === seg) }));
+
+const schemas = [{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Materiais gratuitos — Certificação ISO",
+  description: "E-books, planilhas e checklists gratuitos sobre certificação e gestão ISO.",
+}];
+---
+
+<Base
+  title="Materiais gratuitos — E-books e planilhas | Certificação ISO"
+  description="Baixe grátis e-books, planilhas e checklists práticos sobre ISO 9001, 14001, 45001, 27001, PBQP-H e gestão. Material direto ao ponto, feito por especialistas da Templum."
+  schemas={schemas}
+>
+  <!-- HERO -->
+  <section class="section section--navy pr-hero">
+    <div class="container md" style="text-align:center">
+      <span class="tag-pill tag-pill--glow"><iconify-icon icon="solar:gift-bold"></iconify-icon> Presentes</span>
+      <h1>Materiais <em>gratuitos</em> pra destravar sua gestão.</h1>
+      <p class="pr-sub">E-books, planilhas e checklists prontos pra usar — direto ao ponto, sem enrolação. Escolha o seu e baixe na hora.</p>
+    </div>
+  </section>
+
+  <!-- GRID POR SEGMENTO -->
+  <section class="section">
+    <div class="container xl">
+      {grupos.map((g) => (
+        <div class="pr-seg">
+          <div class="section-header" style="text-align:left;align-items:flex-start">
+            <span class="tag-pill">{g.seg}</span>
+          </div>
+          <div class="pr-grid">
+            {g.itens.map((i) => {
+              const t = TYPE[i.type] || TYPE.ebook;
+              return (
+                <a class="pr-card" href={`/presentes/${i.slug}/`}>
+                  <span class="pr-type"><iconify-icon icon={t.icon}></iconify-icon> {t.label}</span>
+                  <h3>{i.title}</h3>
+                  {i.description && <p>{i.description}</p>}
+                  <span class="pr-link">Acessar material <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-band">
+    <div class="container md">
+      <h2>Quer ir <em>além do material</em>?</h2>
+      <p>Fale com um especialista e descubra como a Templum leva a sua empresa até a certificação — com garantia de 200%.</p>
+      <a href="https://templum.com.br/form" class="btn btn--dark btn--lg">Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .pr-hero h1 { font-size: clamp(30px,4.2vw,50px); font-weight: 800; line-height: 1.08; letter-spacing: -0.03em; color: var(--cream); margin: 18px auto 0; max-width: 720px; }
+  .pr-hero h1 em { font-style: normal; color: var(--orange); }
+  .pr-sub { font-size: 17px; line-height: 1.6; color: rgba(255,244,221,0.82); margin: 16px auto 0; max-width: 560px; }
+
+  .pr-seg { margin-bottom: clamp(32px,5vw,52px); }
+  .pr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .pr-card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-20); padding: 24px; transition: transform .2s var(--ease-soft), box-shadow .2s, border-color .2s; }
+  .pr-card:hover { transform: translateY(-3px); border-color: var(--orange); box-shadow: 0 12px 30px rgba(0,0,0,0.07); }
+  .pr-type { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; font-size: 12px; font-weight: 700; color: var(--orange-ink); background: rgba(178,60,12,0.10); padding: 5px 11px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .pr-card h3 { font-size: 18px; font-weight: 800; line-height: 1.3; color: var(--text); margin: 14px 0 8px; }
+  .pr-card p { font-size: 14.5px; line-height: 1.55; color: var(--text-mid); flex: 1; }
+  .pr-link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 800; color: var(--orange); margin-top: 16px; }
+  .pr-card:hover .pr-link iconify-icon { transform: translateX(3px); }
+  .pr-link iconify-icon { transition: transform .2s var(--ease-soft); }
+</style>

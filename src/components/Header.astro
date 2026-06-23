@@ -1,10 +1,6 @@
 ---
 // Header do blog Certificação ISO — usa o design system da Templum.
 import { categorias } from "../data/categorias.js";
-// Nav enxuto (5 categorias que cabem em 1 linha). Lista completa fica no menu
-// mobile, no footer e na sidebar.
-const navSlugs = ["qualidade-e-inovacao", "construcao-civil", "seguranca-dos-alimentos", "meio-ambiente", "auditoria"];
-const nav = navSlugs.map((s) => categorias.find((c) => c.slug === s)).filter(Boolean);
 const TEMPLUM = "https://templum.com.br";
 ---
 <a href={`${TEMPLUM}/form`} class="top-banner">
@@ -20,8 +16,23 @@ const TEMPLUM = "https://templum.com.br";
       <img src="/assets/logo/templum.png" alt="Templum" />
       <span class="hd-blogtag">Blog</span>
     </a>
-    <nav class="hd-nav" aria-label="Categorias">
-      {nav.map((c) => <a class="hd-link" href={`/categoria/${c.slug}/`}>{c.nome}</a>)}
+    <nav class="hd-nav" aria-label="Navegação do blog">
+      <a class="hd-link" href="/">Início</a>
+      <div class="hd-item">
+        <button class="hd-link hd-trigger" type="button" aria-haspopup="true">Categorias <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon></button>
+        <div class="mega">
+          <div class="mega-grid">
+            {categorias.map((c) => (
+              <a class="mega-link" href={`/categoria/${c.slug}/`}>
+                <span class="mega-ico" style={`color:${c.cor};background:color-mix(in srgb, ${c.cor} 14%, transparent)`}><iconify-icon icon={c.icon}></iconify-icon></span>
+                <span>{c.nome}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <a class="hd-link" href="/presentes/">Presentes 🎁</a>
+      <a class="hd-link" href={`${TEMPLUM}/historias`}>Histórias</a>
     </nav>
     <div class="hd-actions">
       <a href="/buscar/" class="hd-search" aria-label="Buscar artigos"><iconify-icon icon="solar:magnifer-linear"></iconify-icon></a>
@@ -33,7 +44,10 @@ const TEMPLUM = "https://templum.com.br";
   <div class="hd-mobile" id="hdMobile">
     <nav>
       <a href="/">Início</a>
-      {categorias.map((c) => <a href={`/categoria/${c.slug}/`}>{c.nome}</a>)}
+      <a href="/presentes/">Presentes 🎁</a>
+      <a href={`${TEMPLUM}/historias`}>Histórias</a>
+      <span class="hd-mobile-head">Categorias</span>
+      {categorias.map((c) => <a class="hd-mobile-sub" href={`/categoria/${c.slug}/`}>{c.nome}</a>)}
       <a href={TEMPLUM}>Site Templum</a>
     </nav>
     <a href={`${TEMPLUM}/form`} class="btn btn--primary btn--block">Falar com especialista</a>
@@ -53,9 +67,21 @@ const TEMPLUM = "https://templum.com.br";
   .templum-logo { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
   .templum-logo img { height: 38px; }
   .hd-blogtag { font-size: 12px; font-weight: 800; color: var(--orange-ink); background: rgba(178,60,12,0.10); padding: 2px 8px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
-  .hd-nav { display: flex; align-items: center; gap: 2px; margin-left: 14px; flex-wrap: nowrap; min-width: 0; overflow: hidden; }
-  .hd-link { font-size: 13px; font-weight: 600; color: var(--text); padding: 8px 9px; border-radius: 8px; white-space: nowrap; transition: color .2s; }
+  .hd-nav { display: flex; align-items: center; gap: 2px; margin-left: 14px; flex-wrap: nowrap; min-width: 0; }
+  .hd-link { display: inline-flex; align-items: center; gap: 5px; font-size: 14px; font-weight: 600; color: var(--text); padding: 8px 12px; border-radius: 8px; white-space: nowrap; transition: color .2s; background: none; border: 0; cursor: pointer; font-family: inherit; }
   .hd-link:hover { color: var(--orange); }
+  .hd-link iconify-icon { font-size: 15px; transition: transform .2s; }
+
+  /* mega-menu Categorias */
+  .hd-item { position: relative; }
+  .hd-item .mega { position: absolute; top: calc(100% + 10px); left: 0; min-width: 560px; background: #fff; border: 1px solid var(--border); border-radius: var(--r-16, 16px); box-shadow: 0 18px 50px rgba(0,0,0,0.13); padding: 14px; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all .2s var(--ease-soft); z-index: 70; }
+  .hd-item:hover .mega, .hd-item:focus-within .mega { opacity: 1; visibility: visible; transform: translateY(0); }
+  .hd-item:hover .hd-trigger iconify-icon, .hd-item:focus-within .hd-trigger iconify-icon { transform: rotate(180deg); }
+  .mega-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; }
+  .mega-link { display: flex; align-items: center; gap: 11px; padding: 10px 12px; border-radius: 12px; font-size: 14px; font-weight: 700; color: var(--text); transition: background .15s; }
+  .mega-link:hover { background: var(--surface); color: var(--orange); }
+  .mega-ico { width: 36px; height: 36px; flex: none; border-radius: 10px; display: grid; place-items: center; font-size: 19px; }
+  .hd-mobile-head { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-soft); padding: 14px 0 4px; }
   .hd-actions { margin-left: auto; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
   .hd-search { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: var(--text-2); border: 1px solid var(--border); transition: all .2s; }
   .hd-search:hover { color: var(--orange); border-color: var(--orange); }
@@ -65,6 +91,7 @@ const TEMPLUM = "https://templum.com.br";
   .hd-mobile.open { display: flex; }
   .hd-mobile nav { display: flex; flex-direction: column; }
   .hd-mobile nav a { padding: 11px 0; font-weight: 600; border-bottom: 1px solid var(--border); color: var(--text); }
+  .hd-mobile nav a.hd-mobile-sub { padding-left: 14px; font-size: 14.5px; font-weight: 500; color: var(--text-mid); }
   @media (max-width: 1100px) { .hd-nav, .hd-ghost { display: none; } .hd-burger { display: inline-flex; } }
   @media (max-width: 560px) {
     .hd-actions .btn { display: none; }
