@@ -8,6 +8,7 @@ const H = { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` };
 
 function normalize(p) {
   return {
+    id: p.id,
     slug: p.slug,
     content: p.content || "",
     data: {

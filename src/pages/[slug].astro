@@ -142,6 +142,50 @@ if (faq.length) {
       <Sidebar ref={post.slug} author={d.author} recent={recent} isca={isca} />
     </div>
 
+    <!-- Comentários (client-side: lê aprovados, envia como pendente) -->
+    <section class="container md post-comments">
+      <h2>Comentários</h2>
+      <div id="cmt-list" class="cmt-list"><p class="cmt-empty">Carregando…</p></div>
+      <form id="cmt-form" class="cmt-form">
+        <h3>Deixe seu comentário</h3>
+        <div class="cmt-row">
+          <input name="nome" placeholder="Seu nome" required />
+          <input name="email" type="email" placeholder="Seu e-mail (não publicado)" />
+        </div>
+        <textarea name="content" rows="4" placeholder="Escreva seu comentário…" required></textarea>
+        <div class="cmt-actions">
+          <button type="submit" class="btn btn--primary">Enviar comentário</button>
+          <span id="cmt-msg" class="cmt-msg"></span>
+        </div>
+        <p class="cmt-note">Seu comentário passa por moderação antes de aparecer.</p>
+      </form>
+    </section>
+    <script define:vars={{ postId: post.id, SB_URL: "https://yfpdrckyuxltvznqfqgh.supabase.co", SB_ANON: "sb_publishable_Yfg9Ts5WRqD4Gc3jeWAS2A_-YWZrtiQ" }}>
+      (function () {
+        var H = { apikey: SB_ANON, Authorization: "Bearer " + SB_ANON };
+        var list = document.getElementById("cmt-list");
+        var esc = function (s) { return (s || "").replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+        var fmt = function (d) { return new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" }); };
+        function load() {
+          fetch(SB_URL + "/rest/v1/blog_templum_comments?post_id=eq." + postId + "&status=eq.approved&select=author_name,content,created_at&order=created_at.desc", { headers: H })
+            .then(function (r) { return r.json(); })
+            .then(function (c) {
+              if (!c || !c.length) { list.innerHTML = '<p class="cmt-empty">Seja o primeiro a comentar.</p>'; return; }
+              list.innerHTML = c.map(function (x) { return '<div class="cmt"><div class="cmt-h"><strong>' + esc(x.author_name) + '</strong><time>' + fmt(x.created_at) + '</time></div><p>' + esc(x.content) + '</p></div>'; }).join("");
+            }).catch(function () { list.innerHTML = ""; });
+        }
+        load();
+        var f = document.getElementById("cmt-form"), msg = document.getElementById("cmt-msg");
+        f.addEventListener("submit", function (e) {
+          e.preventDefault(); msg.textContent = "Enviando…";
+          var body = { post_id: postId, author_name: f.nome.value, author_email: f.email.value || null, content: f.content.value, status: "pending" };
+          fetch(SB_URL + "/rest/v1/blog_templum_comments", { method: "POST", headers: Object.assign({}, H, { "Content-Type": "application/json", Prefer: "return=minimal" }), body: JSON.stringify(body) })
+            .then(function (r) { if (r.ok) { msg.textContent = "Enviado! Aparece após aprovação. ✓"; f.reset(); } else { r.text().then(function (t) { msg.textContent = "Erro: " + t.slice(0, 100); }); } })
+            .catch(function () { msg.textContent = "Erro ao enviar."; });
+        });
+      })();
+    </script>
+
     {related.length > 0 && (
       <section class="section section--cream">
         <div class="container lg">
@@ -154,6 +198,27 @@ if (faq.length) {
 </Base>
 
 <style>
+  /* Comentários */
+  .post-comments { padding-bottom: 64px; }
+  .post-comments > h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 20px; }
+  .cmt-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+  .cmt { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-16); padding: 16px 18px; }
+  .cmt-h { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+  .cmt-h strong { font-size: 14.5px; color: var(--text); }
+  .cmt-h time { font-size: 12px; color: var(--text-soft); }
+  .cmt p { font-size: 15px; color: var(--text-2); line-height: 1.6; }
+  .cmt-empty { color: var(--text-soft); font-size: 14px; }
+  .cmt-form { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-20); padding: 24px; }
+  .cmt-form h3 { font-size: 18px; font-weight: 800; margin-bottom: 14px; }
+  .cmt-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  @media (max-width: 600px) { .cmt-row { grid-template-columns: 1fr; } }
+  .cmt-form input, .cmt-form textarea { width: 100%; padding: 11px 14px; border: 1px solid var(--border-2); border-radius: var(--r-12); font-family: inherit; font-size: 15px; background: var(--surface); }
+  .cmt-form input:focus, .cmt-form textarea:focus { outline: none; border-color: var(--orange); }
+  .cmt-form textarea { margin-bottom: 14px; resize: vertical; }
+  .cmt-actions { display: flex; align-items: center; gap: 14px; }
+  .cmt-msg { font-size: 13px; color: var(--text-mid); }
+  .cmt-note { font-size: 12.5px; color: var(--text-soft); margin-top: 10px; }
+
   .post-head { padding-top: 40px; }
   .post-bc { font-size: 13px; color: var(--text-soft); display: flex; gap: 8px; margin-bottom: 16px; }
   .post-bc a { color: var(--orange-ink); font-weight: 600; }
