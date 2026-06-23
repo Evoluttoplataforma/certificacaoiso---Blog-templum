@@ -31,6 +31,10 @@ function processContent(html) {
   if (!html) return "";
   let out = html;
 
+  // band-aid: conteúdo colado com "<br>" escapado (&lt;br&gt;) renderiza como texto literal.
+  // Converte em quebra real (o fix definitivo é o botão "Estruturar" no CMS).
+  out = out.replace(/&lt;\s*br\s*\/?\s*&gt;/gi, "<br>");
+
   // 0) remove <img> com extensão dupla quebrada (ex.: .webp.gif) → imagem interna 404
   out = out.replace(/<img\b[^>]*src="[^"]*\.(?:webp|jpe?g|png)\.gif"[^>]*>/gi, "");
 
