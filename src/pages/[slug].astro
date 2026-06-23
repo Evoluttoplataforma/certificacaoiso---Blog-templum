@@ -173,7 +173,10 @@ if (faq.length) {
             .then(function (r) { return r.json(); })
             .then(function (c) {
               if (!c || !c.length) { list.innerHTML = '<p class="cmt-empty">Seja o primeiro a comentar.</p>'; return; }
-              list.innerHTML = c.map(function (x) { return '<div class="cmt"><div class="cmt-h"><strong>' + esc(x.author_name) + '</strong><time>' + fmt(x.created_at) + '</time></div><p>' + esc(x.content) + '</p></div>'; }).join("");
+              list.innerHTML = c.map(function (x) {
+                var ini = (x.author_name || "?").trim().charAt(0).toUpperCase();
+                return '<div class="cmt"><div class="cmt-av">' + ini + '</div><div class="cmt-body"><div class="cmt-h"><strong>' + esc(x.author_name) + '</strong><time>' + fmt(x.created_at) + '</time></div><p>' + esc(x.content) + '</p></div></div>';
+              }).join("");
             }).catch(function () { list.innerHTML = ""; });
         }
         load();
@@ -198,6 +201,19 @@ if (faq.length) {
     )}
   </article>
 </Base>
+
+<!-- Comentários são injetados via JS (innerHTML) → estilo precisa ser GLOBAL p/ aplicar. -->
+<style is:global>
+  .post-comments .cmt-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+  .post-comments .cmt { display: flex; gap: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 16px 18px; }
+  .post-comments .cmt-av { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,89,37,0.12); color: var(--orange-ink); font-weight: 800; font-size: 16px; }
+  .post-comments .cmt-body { min-width: 0; flex: 1; }
+  .post-comments .cmt-h { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+  .post-comments .cmt-h strong { font-size: 14.5px; font-weight: 800; color: var(--text); }
+  .post-comments .cmt-h time { font-size: 12px; color: var(--text-soft); }
+  .post-comments .cmt p { font-size: 14.5px; color: var(--text-2); line-height: 1.6; white-space: pre-line; overflow-wrap: anywhere; }
+  .post-comments .cmt-empty { color: var(--text-soft); font-size: 14px; }
+</style>
 
 <style>
   /* Comentários */
