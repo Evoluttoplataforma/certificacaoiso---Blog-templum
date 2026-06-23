@@ -18,7 +18,22 @@ export default {
       return Response.redirect(url.toString(), 301);
     }
 
-    // Nota: /acesso/* é servido pelo Worker do CMS (Cloudflare Route), não aqui.
+    // /acesso* → proxy p/ o Worker do CMS (path-based, sem precisar de rota/subdomínio).
+    // O CMS remove o prefixo /acesso e seus redirects voltam sem ele → re-adicionamos.
+    if (url.pathname === "/acesso" || url.pathname.startsWith("/acesso/")) {
+      const CMS = "https://cms-blog-templum-certificacaoiso.templum.workers.dev";
+      const target = CMS + url.pathname + url.search;
+      const resp = await fetch(new Request(target, request), { redirect: "manual" });
+      if (resp.status >= 300 && resp.status < 400) {
+        const loc = resp.headers.get("location");
+        if (loc && loc.startsWith("/") && !loc.startsWith("/acesso")) {
+          const h = new Headers(resp.headers);
+          h.set("location", "/acesso" + loc);
+          return new Response(resp.body, { status: resp.status, headers: h });
+        }
+      }
+      return resp;
+    }
 
     // --- (futuro) imagens dos artigos via R2 ---
     // if (url.pathname.startsWith("/wp-content/") && env.IMAGES) {
