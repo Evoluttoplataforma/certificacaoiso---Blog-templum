@@ -1,80 +1,179 @@
-# Arquitetura — Blog certificacaoiso.com.br
+# Templum — Arquitetura do Sistema (Site · Blog · CMS)
 
-Modelo replicado do Evolutto: **Supabase = fonte de verdade**, blog lê no build,
-CMS escreve client-side, publicação dispara rebuild.
+> Documentação para o time (Cursor / VS Code / Claude Code). Leia a seção
+> **“⚠️ GIT & DEPLOY”** antes de commitar — ela evita publicar no lugar errado.
 
-## Visão geral
+---
 
-```
-┌─────────────────────────┐         ┌─────────────────────────┐
-│ BLOG (público)          │         │ CMS (painel, login)     │
-│ certificacaoiso.com.br  │         │ (domínio próprio)       │
-│ Astro estático          │         │ Astro + supabase-js     │
-│ repo: ...---Blog-templum│         │ repo: separado          │
-└───────────┬─────────────┘         └───────────┬─────────────┘
-            │ LÊ no build                         │ ESCREVE no navegador
-            └──────────────────┬──────────────────┘
-                               ▼
-                   ┌───────────────────────┐
-                   │ SUPABASE (compartilhado)│
-                   │ projeto "Templum Consult"│
-                   │ tnpzoklepkvktbqouctf     │
-                   └───────────────────────┘
-```
+## 1. Visão geral
 
-## Mapeamento p/ a Templum
-
-- **org_id da Templum:** `d7a3cbaa-6f5c-4f21-9326-03d9c30a6c7b`
-- **Tabelas existentes (multi-tenant, já criadas):** `blog_posts`, `blog_categories`, `blog_settings`, `org_sites`, `seo_*`.
-- O blog filtra **sempre** por esse org_id.
-
-## Fluxo de publicação
+Três aplicações **Astro (estáticas)** + **Supabase** (fonte única de dados) + **Cloudflare Workers** (deploy).
 
 ```
-CMS "Publicar" → grava em blog_posts (status=published)
-   → Edge Function "rebuild" → Deploy Hook da Cloudflare
-   → blog reconstrói lendo do Supabase → no ar em ~2 min
+                         ┌─────────────────────────┐
+                         │  Supabase (MKT ORBIT)    │  ← fonte única (posts, iscas,
+                         │  projeto yfpdrckyuxlt... │     comentários, leads, histórias…)
+                         └─────────────┬───────────┘
+            lê no BUILD ┌──────────────┼───────────────┐ CRUD client-side (Auth)
+                        ▼              ▼                ▼
+   ┌────────────────┐  ┌────────────────────┐  ┌────────────────────────┐
+   │ SITE           │  │ BLOG               │  │ CMS                    │
+   │ templum.com.br │  │ certificacaoiso... │  │ .../acesso (proxy)     │
+   │ Astro estático │  │ Astro (lê Supabase │  │ Astro+Tailwind, painel │
+   │                │  │ no build)          │  │ admin (Supabase Auth)  │
+   └────────────────┘  └────────────────────┘  └────────────────────────┘
+        Worker              Worker                    Worker
+     site-templum        certificacaoiso-blog      certificacaoiso-cms
 ```
 
-## Mapa: markdown atual → blog_posts
+**Regra-chave:** o conteúdo (posts, iscas, comentários, histórias) vive no **Supabase**.
+O blog lê **no build** e gera HTML estático → SEO/AIEO intactos. O CMS edita o Supabase;
+publicar dispara um **rebuild** do blog (Edge Function → Deploy Hook da Cloudflare).
 
-| Frontmatter (.md)     | Coluna blog_posts          |
-|-----------------------|----------------------------|
-| title                 | title                      |
-| slug                  | slug                       |
-| body (markdown)       | content                    |
-| description           | excerpt                    |
-| heroImage             | featured_image             |
-| author                | author_name                |
-| categories[0]         | category_id (FK)           |
-| categories[1..]       | tags[]                     |
-| pubDate               | published_at               |
-| updatedDate           | updated_at                 |
-| draft:false           | status = 'published'       |
-| seoTitle              | seo_title                  |
-| seoDescription        | seo_description            |
-| keywords[]            | seo_keywords[]             |
-| ogImage               | og_image                   |
-| wordCount             | reading_time_min (derivado)|
-| **tldr**              | ⚠️ SEM coluna (decidir)     |
-| **faq**               | ⚠️ SEM coluna (decidir)     |
+---
 
-## Decisões abertas
+## 2. Os três projetos
 
-1. **Pivot:** converter o blog markdown (1.015 posts, já pronto/SEO/acessível) →
-   Supabase. As páginas/SEO/sidebar continuam idênticas — muda só a fonte de dados
-   (getCollection → fetch Supabase no build). Markdown vira seed de importação.
-2. **tldr/faq:** adicionar 2 colunas nullable em `blog_posts` (`tldr text`, `faq jsonb`)
-   — aditivo e seguro, mas é tabela COMPARTILHADA (afeta todas as orgs). Alternativa:
-   tldr→excerpt e faq depois.
-3. **CMS:** é o painel do Orbit/Evolutto já existente (multi-tenant) ou um repo
-   novo de CMS só do certificacaoiso?
-4. **Imagens:** as 1.258 webp (193 MB) vão pro R2 (servidas em /wp-content) — featured_image
-   e imagens do content apontam pra lá.
-5. **Rebuild:** Edge Function "rebuild" + Deploy Hook da Cloudflare (criar).
+| App | Domínio | Pasta local | Repo GitHub | Worker Cloudflare |
+|---|---|---|---|---|
+| **Site** | `templum.com.br` | `site/` | `Evoluttoplataforma/site-templum` | `site-templum` |
+| **Blog** | `certificacaoiso.com.br` | `certificacaoiso/` | `Evoluttoplataforma/certificacaoiso---Blog-templum` | `certificacaoiso-blog` |
+| **CMS** | `certificacaoiso.com.br/acesso` | `cms-blog-templum-certificacaoiso/` | `Evoluttoplataforma/cms-blog-templum-certificacaoiso` | `certificacaoiso-cms` |
 
-## Segurança (pendência do projeto)
+- **Site** — institucional (consultoria, normas, cases, histórias, presentes). Astro estático,
+  `trailingSlash: 'ignore'`, `format: 'directory'`.
+- **Blog** — 1.015 posts migrados do WordPress + iscas (`/presentes/<slug>`) + comentários.
+  Lê o Supabase no build. `trailingSlash: 'always'`.
+- **CMS** — painel admin (Notion-style). `base: '/acesso'`, Tailwind, `@supabase/supabase-js`,
+  Supabase Auth. CRUD direto no Supabase + botão “Republicar site”.
 
-5 tabelas com RLS DESLIGADO (expostas à anon key): `conversions`,
-`orbit_gestao_events`, `orbit_gestao_conversions`, `orbit_gestao_lead_journey`,
-`ligacao-orbit`. Corrigir com `ENABLE ROW LEVEL SECURITY` **+ políticas**.
+> O CMS é servido em `certificacaoiso.com.br/acesso` por **proxy do Worker do blog**
+> (o `worker.js` do blog encaminha `/acesso*` para o Worker do CMS). Não é rota nem subdomínio.
+
+---
+
+## 3. Supabase — fonte única
+
+- **Projeto:** `yfpdrckyuxltvznqfqgh` (nome de exibição: **MKT ORBIT**).
+- **URL:** `https://yfpdrckyuxltvznqfqgh.supabase.co`
+- **Tabelas:** sempre com prefixo **`blog_templum_`** (este projeto Supabase é compartilhado
+  com outro blog — por isso o prefixo e o prefixo nas Edge Functions).
+  - `blog_templum_posts` · `_categories` · `_iscas` · `_leads` · `_comments` · `_historias` · `_banners`
+- **Chaves:** a **anon (publishable)** é pública e fica no código (com fallback) — o **RLS** protege.
+  A **service_role NUNCA** vai pro código/git/chat — só em *Edge Function Secrets* ou
+  via env na hora de rodar um script (`SUPABASE_SERVICE_KEY=... node ...`).
+- **RLS (resumo):** público lê `published`/`approved`/`active`; `authenticated` gerencia tudo;
+  `anon` só **insere** lead/comentário/história como **`pending`**.
+- **Edge Functions** (Deno, “Verify JWT” OFF — validam o usuário internamente):
+  - `blog-templum-create-user` — cria colaborador (Admin API, senha direta).
+  - `blog-templum-rebuild` — dispara o **Deploy Hook** da Cloudflare (`CLOUDFLARE_DEPLOY_HOOK_URL`)
+    → blog reconstrói lendo o Supabase. (É o que o “Republicar site” chama.)
+
+---
+
+## 4. Rodar local (dev)
+
+```bash
+# Site
+cd site && npm install && npm run dev            # (use --port 4399 se 4321 estiver ocupada)
+
+# Blog
+cd certificacaoiso && npm install && npm run dev
+
+# CMS
+cd cms-blog-templum-certificacaoiso && npm install && npm run dev   # porta 4444
+```
+
+- **Build:** `npm run build` em cada projeto (gera `dist/`).
+- **Preview do build:** `npm run preview` (serve o `dist/`).
+- Não precisa de `.env`: as chaves públicas do Supabase têm fallback no código.
+
+---
+
+## 5. Deploy (Cloudflare Workers Builds)
+
+Cada repo está conectado ao seu Worker via **Workers Builds**:
+**push na branch `main` → build + deploy automático** (sem rodar wrangler na mão).
+
+- Site/Blog: deploy padrão (`wrangler deploy`).
+- **CMS: deploy via `wrangler versions upload`** → ⚠️ **NÃO** coloque `routes` no `wrangler.toml`
+  (versions upload ignora; quebra o deploy). Rotas/domínios do CMS vão **no painel** da Cloudflare.
+- **`/acesso` (CMS):** resolvido por **proxy** no `worker.js` do blog (path-based). Não mexa nisso
+  sem entender — alterar o domínio do blog ou o proxy pode derrubar o `/acesso`.
+
+**Mudança de dados/schema do Supabase NÃO vai por git.** Os arquivos em
+`certificacaoiso/supabase/*.sql` são **referência** — quem aplica é você, no **SQL Editor**
+do Supabase (ou via Edge Function / script com service_role por env).
+
+---
+
+## 6. ⚠️ GIT & DEPLOY — onde commitar/pushar (LEIA, Claude/Cursor)
+
+> **São TRÊS repositórios separados, cada um com o SEU remote.** Misturar = “zika”.
+
+1. **Antes de QUALQUER commit**, confirme onde você está:
+   ```bash
+   pwd                    # tem que estar DENTRO de site/ OU certificacaoiso/ OU cms-.../
+   git remote -v          # confirme que o remote bate com o que você quer publicar
+   ```
+2. **Mudou só o site** → `cd site` → commit/push. **Mudou o blog** → `cd certificacaoiso`.
+   **Mudou o CMS** → `cd cms-blog-templum-certificacaoiso`. **Nunca** commite arquivos de um
+   projeto dentro do repo de outro (eles são repos diferentes; a pasta-mãe `site templum/` NÃO é repo).
+3. **`git push origin main` = DEPLOY EM PRODUÇÃO** (Workers Builds publica). Só pushe quando
+   quiser publicar de fato. Em dúvida, faça `git status` / `git diff` antes.
+4. **Sempre rode `npm run build` antes de pushar** — se o build quebra local, o deploy quebra.
+5. **NUNCA commite:** `service_role`/secrets, `.env`, o export do WordPress
+   (`blog-certificacaoiso/*.WordPress*.xml`, ~58MB), dumps, `node_modules`, `dist`.
+6. **Mensagem de commit** (quando for IA): terminar com
+   `Co-Authored-By: Claude <noreply@anthropic.com>`.
+7. **Se a `main` rejeitar push** (“fetch first”): alguém pushou antes →
+   `git pull --rebase origin main` e push de novo.
+8. **Dados do Supabase** (posts/iscas/etc.): não é git — é SQL no Supabase. Os `.sql` no repo
+   são só histórico/referência.
+
+---
+
+## 7. Estrutura de pastas (cada projeto Astro)
+
+```
+src/
+  pages/        # rotas (.astro) → URLs
+  components/   # componentes reutilizáveis
+  layouts/      # Base.astro (head, SEO, tracking, fontes)
+  styles/       # tokens.css + global.css (design system) + fonts.css
+  lib/          # camada de dados (ex.: posts.js lê Supabase no build)
+  data/         # dados estáticos (normas, categorias, iscas do site…)
+public/         # assets servidos como estão (/assets, /wp-content, /fonts)
+supabase/       # (só no blog) schema.sql, seeds, Edge Functions, scripts de import
+worker.js       # Worker da Cloudflare (serve dist + regras)
+wrangler.toml   # config do Worker
+```
+
+- **Design system:** `src/styles/` + (no site) a página `/design-system` é a fonte da verdade visual.
+  Identidade: Montserrat; laranja `#FF5925`, navy `#222831`, creme `#FFFAEB`; cada norma tem cor própria.
+
+---
+
+## 8. Convenções & aprendizados (gotchas)
+
+- **webp:** o `sips` do macOS não gera webp — usar **`cwebp`** (`/opt/homebrew/bin`).
+- **`<style>` em `.astro`:** não colocar expressões `{...}` dentro (quebra o build).
+- **Conteúdo injetado por JS** (ex.: comentários client-side) **não** recebe estilo *scoped* do
+  Astro → usar `<style is:global>`.
+- **`overflow-x: clip`** (não `hidden`) no html/body — `hidden` quebra `position: sticky`.
+- **Tracking** (Clarity/GA4/Ads/tracking-kit): carregado **só na 1ª interação** (defer) →
+  performance. Não voltar a carregar eager no `<head>`.
+- **Imagens:** `width`/`height` + `loading`/`decoding`; imagem de LCP com `fetchpriority="high"` + preload.
+- **Fontes:** Montserrat self-hosted, `font-display: optional` + preload dos pesos usados above-the-fold.
+- **Iscas** (`/presentes/<slug>`): conteúdo rico em `blog_templum_iscas`; landing igual ao site.
+- **Comentários:** visitante envia → `pending` → aprova no CMS → aparece (client-side, sem rebuild).
+
+---
+
+## 9. Pendências conhecidas (estado atual)
+
+- **Go-live:** domínios já apontam para os Workers novos. Conferir redirects/404 e Search Console.
+- **Deploy Hook (“Republicar site”):** depende do secret `CLOUDFLARE_DEPLOY_HOOK_URL` na Edge
+  Function `blog-templum-rebuild` (criar o hook no Worker do blog e colar a URL).
+- **Tracking real:** preencher os IDs de pixel (Meta/GA4/Ads) e secrets do Mailchimp no painel.
+- **Conteúdo:** alguns posts antigos têm títulos longos / parágrafos longos (qualidade editorial).

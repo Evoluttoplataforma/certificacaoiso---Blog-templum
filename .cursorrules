@@ -1,0 +1,10 @@
+# Cursor rules — repo do BLOG (certificacaoiso.com.br) · Worker certificacaoiso-blog
+Leia ARQUITETURA.md e CLAUDE.md deste repo antes de tudo.
+
+REGRAS DE GIT (não dar zika):
+- São 3 repos separados (site / blog / cms). Este é o BLOG. Não commite mudança de outro projeto aqui.
+- `git push origin main` = DEPLOY EM PRODUÇÃO (Cloudflare Workers Builds). Só pushe pra publicar.
+- Antes de pushar: `npm run build` (o build lê o Supabase). Rode `git status` e confirme `git remote -v`.
+- Só commite/pushe quando o usuário pedir. Commit de IA termina com: Co-Authored-By: Claude <noreply@anthropic.com>
+- Nunca commitar: .env, secrets, service_role, node_modules, dist, e o export do WordPress (../blog-certificacaoiso/*.xml ~58MB).
+- O worker.js faz proxy de /acesso* -> Worker do CMS. Conteúdo (posts/iscas/comentários) vive no Supabase (não vai por git).
