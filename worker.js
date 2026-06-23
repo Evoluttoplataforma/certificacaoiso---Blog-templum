@@ -11,6 +11,13 @@ export default {
       return Response.redirect(url.toString(), 301);
     }
 
+    // normaliza paths com espaço/%20 (links quebrados de conteúdo migrado)
+    const decoded = decodeURIComponent(url.pathname);
+    if (/\s/.test(decoded)) {
+      url.pathname = decoded.replace(/\s+/g, "").replace(/\/{2,}/g, "/");
+      return Response.redirect(url.toString(), 301);
+    }
+
     // Nota: /acesso/* é servido pelo Worker do CMS (Cloudflare Route), não aqui.
 
     // --- (futuro) imagens dos artigos via R2 ---

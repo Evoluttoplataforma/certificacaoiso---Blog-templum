@@ -6,3 +6,7 @@
 /certificacast/                  https://templum.com.br  301
 /elemento-planejamento-estrategico/   /elementos-planejamento-estrategico/  301
 /planejamento-estrategico/            /como-fazer-planejamento-estrategico/  301
+
+# Categorias antigas do WordPress (/category/) → /categoria/ (ou home p/ as que não existem)
+/category/construcao-civil/*          /categoria/construcao-civil/  301
+/category/*                           /  301
