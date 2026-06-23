@@ -21,9 +21,18 @@ function snippetFrom(html) {
 // 1) hierarquia de heading: desloca p/ o nível mais raso virar h2 (o título da página é o h1)
 // 2) âncoras sem texto (vazias ou só com <img>) ganham aria-label
 // 3) âncoras genéricas ("clique aqui"…) p/ a Templum viram texto descritivo
+// Imagens que não existem mais (quebradas) — tratadas como sem-imagem no build.
+const BROKEN_IMAGES = new Set([
+  "/wp-content/uploads/2021/05/Design-sem-nome-41.webp",
+  "/wp-content/uploads/2021/05/Design-sem-nome-22.webp",
+]);
+
 function processContent(html) {
   if (!html) return "";
   let out = html;
+
+  // 0) remove <img> com extensão dupla quebrada (ex.: .webp.gif) → imagem interna 404
+  out = out.replace(/<img\b[^>]*src="[^"]*\.(?:webp|jpe?g|png)\.gif"[^>]*>/gi, "");
 
   // 1) heading hierarchy
   const levels = [...out.matchAll(/<h([1-6])\b/gi)].map((m) => +m[1]);
@@ -72,7 +81,7 @@ function normalize(p) {
     data: {
       title: p.title,
       description: (p.excerpt && p.excerpt.trim()) || snippetFrom(p.content),
-      heroImage: p.featured_image || undefined,
+      heroImage: (p.featured_image && !BROKEN_IMAGES.has(p.featured_image)) ? p.featured_image : undefined,
       author: p.author_name || "Equipe Templum",
       pubDate: p.published_at ? new Date(p.published_at) : new Date(),
       updatedDate: p.updated_at ? new Date(p.updated_at) : undefined,
