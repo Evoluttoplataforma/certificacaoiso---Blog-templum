@@ -19,7 +19,9 @@ const catSlug = cat ? catMeta(cat).slug : "";
 const dataFmt = new Date(d.pubDate).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
 
 // SEO/AIEO/GEO por artigo
-const seoTitle = d.seoTitle || `${d.title} | Certificação ISO`;
+// título: usa seo_title; senão anexa a marca só se couber em ~60 chars (evita "title too long")
+const _full = `${d.title} | Certificação ISO`;
+const seoTitle = d.seoTitle || (_full.length <= 60 ? _full : d.title);
 const tldr = (d.tldr || tldrOf(post)).trim();
 const seoDesc = (d.seoDescription || d.description || tldr).slice(0, 160);
 const keywords = (d.keywords && d.keywords.length ? d.keywords : d.categories) || [];

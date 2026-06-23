@@ -7,7 +7,7 @@ const cat = (d.categories && d.categories[0]) || "";
 ---
 <article class="ac">
   <a href={url} class="ac-thumb" aria-label={d.title}>
-    {d.heroImage ? <img src={d.heroImage} alt="" loading="lazy" /> : <span class="ac-thumb-fb"><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>}
+    {d.heroImage ? <img src={d.heroImage} alt="" width="640" height="400" loading="lazy" decoding="async" onerror="this.style.display='none'" /> : <span class="ac-thumb-fb"><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>}
   </a>
   <div class="ac-body">
     {cat && <span class="ac-cat">{cat}</span>}

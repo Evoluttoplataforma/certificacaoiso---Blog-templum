@@ -10,3 +10,11 @@
 # Categorias antigas do WordPress (/category/) → /categoria/ (ou home p/ as que não existem)
 /category/construcao-civil/*          /categoria/construcao-civil/  301
 /category/*                           /  301
+
+# Posts duplicados (despublicados) → canônico (301). Conteúdo idêntico, zero perda.
+/principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1-2/   /principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1/   301
+/certificacao-iso-27001-qual-e-a-infraestrutura-necessaria-2/                      /certificacao-iso-27001-qual-e-a-infraestrutura-necessaria/                      301
+/quais-os-maiores-riscos-de-nao-ter-a-iso-45001-implementada-2/                    /quais-os-maiores-riscos-de-nao-ter-a-iso-45001-implementada/                    301
+/algumas-palavras-sobre-iso-9001-e-padronizacao-2/                                 /algumas-palavras-sobre-iso-9001-e-padronizacao/                                 301
+/certificacao-iso-as-principais-normas/                                            /beneficios-da-iso-9001/                                                         301
+/dicas-para-uma-implementacao-bem-sucedida/                                        /como-e-a-rotina-de-implementacao-com-a-templum/                                 301

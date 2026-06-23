@@ -11,7 +11,7 @@ const destaque = posts[0];
 const recentes = posts.slice(1, 13);
 ---
 
-<Base>
+<Base preloadImage={destaque?.data.heroImage}>
   <!-- HERO -->
   <section class="bloghero section--navy">
     <div class="container lg">
@@ -32,7 +32,7 @@ const recentes = posts.slice(1, 13);
     <section class="section">
       <div class="container lg">
         <a href={`/${destaque.slug}/`} class="bh-feat">
-          <div class="bh-feat-img">{destaque.data.heroImage ? <img src={destaque.data.heroImage} alt="" /> : <span><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>}</div>
+          <div class="bh-feat-img">{destaque.data.heroImage ? <img src={destaque.data.heroImage} alt="" width="800" height="500" fetchpriority="high" decoding="async" onerror="this.style.display='none'" /> : <span><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>}</div>
           <div class="bh-feat-body">
             {destaque.data.categories?.[0] && <span class="ac-cat">{destaque.data.categories[0]}</span>}
             <h2>{destaque.data.title}</h2>

@@ -22,6 +22,7 @@ export async function getStaticPaths() {
 
 const { cat, posts } = Astro.props;
 const SITE = "https://certificacaoiso.com.br";
+const intro = cat.desc || `Reunimos aqui os melhores conteúdos sobre ${cat.nome} para empresas que querem implementar e manter a certificação ISO com método. Guias práticos, exemplos reais e o passo a passo de quem leva empresas até o certificado há mais de 30 anos — com a garantia de 200% da Templum.`;
 const schemas = [{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -47,6 +48,7 @@ const schemas = [{
   </section>
   <section class="section section--cream">
     <div class="container lg">
+      <p class="cat-intro">{intro}</p>
       {posts.length ? <div class="blog-grid">{posts.map((p) => <ArticleCard post={p} />)}</div> : <p>Em breve, novos artigos nesta categoria.</p>}
     </div>
   </section>
@@ -59,6 +61,7 @@ const schemas = [{
   .cat-ico { font-size: 40px; }
   .cat-head h1 { color: var(--cream); font-size: clamp(28px, 4vw, 44px); font-weight: 800; letter-spacing: -0.025em; margin: 10px 0 6px; }
   .cat-head p { color: rgba(255,244,221,0.6); font-size: 15px; }
+  .cat-intro { max-width: 760px; font-size: 16px; line-height: 1.7; color: var(--text-mid); margin: 0 0 36px; }
   .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
   @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }

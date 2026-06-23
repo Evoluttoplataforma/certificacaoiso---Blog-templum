@@ -17,7 +17,7 @@ a { text-decoration: none; color: inherit; }
 ul, ol { list-style: none; }
 img, video, svg { max-width: 100%; height: auto; display: block; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
-iconify-icon { display: inline-flex; }
+iconify-icon { display: inline-flex; width: 1em; height: 1em; flex-shrink: 0; }
 strong, b { font-weight: 700; }
 
 /* Container */

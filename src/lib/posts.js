@@ -6,6 +6,17 @@ const SB_URL = import.meta.env.SUPABASE_URL || "https://yfpdrckyuxltvznqfqgh.sup
 const SB_ANON = import.meta.env.SUPABASE_ANON_KEY || "sb_publishable_Yfg9Ts5WRqD4Gc3jeWAS2A_-YWZrtiQ";
 const H = { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` };
 
+// Trecho único a partir do conteúdo (fallback de descrição quando não há excerpt).
+function snippetFrom(html) {
+  const txt = (html || "")
+    .replace(/<(script|style)[\s\S]*?<\/\1>/gi, " ")
+    .replace(/<[^>]+>/g, " ").replace(/&[a-z]+;/gi, " ").replace(/\s+/g, " ").trim();
+  if (!txt) return "";
+  if (txt.length <= 155) return txt;
+  const cut = txt.slice(0, 155);
+  return cut.slice(0, cut.lastIndexOf(" ")) + "…";
+}
+
 function normalize(p) {
   return {
     id: p.id,
@@ -13,7 +24,7 @@ function normalize(p) {
     content: p.content || "",
     data: {
       title: p.title,
-      description: p.excerpt || "",
+      description: (p.excerpt && p.excerpt.trim()) || snippetFrom(p.content),
       heroImage: p.featured_image || undefined,
       author: p.author_name || "Equipe Templum",
       pubDate: p.published_at ? new Date(p.published_at) : new Date(),
