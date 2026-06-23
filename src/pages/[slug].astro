@@ -3,8 +3,7 @@ import Base from "../layouts/Base.astro";
 import Sidebar from "../components/Sidebar.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import { catMeta } from "../data/categorias.js";
-import { iscaDe } from "../data/iscas-blog.js";
-import { getAllPosts, tldrOf } from "../lib/posts.js";
+import { getAllPosts, tldrOf, getIscaForCategories } from "../lib/posts.js";
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
@@ -37,8 +36,8 @@ const recent = posts
   .filter((p) => p.slug !== post.slug)
   .sort((a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate))
   .slice(0, 4);
-// isca do segmento do artigo (cai no default se a categoria não tiver mapeamento)
-const isca = iscaDe(d.categories);
+// isca do segmento do artigo (definida no CMS por norma; cai no default)
+const isca = await getIscaForCategories(d.categories);
 
 // --- JSON-LD: BlogPosting + BreadcrumbList ---
 const schemas = [

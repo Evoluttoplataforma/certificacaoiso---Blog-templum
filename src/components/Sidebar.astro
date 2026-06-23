@@ -3,9 +3,10 @@
 const { ref = "", author = "Equipe Templum", recent = [], isca = null } = Astro.props;
 const TEMPLUM = "https://templum.com.br";
 const formUrl = `${TEMPLUM}/form?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}`;
+// As iscas agora vivem no próprio blog (/presentes/<slug>/), captando lead em blog_templum_leads.
 const iscaUrl = isca
-  ? `${TEMPLUM}/presentes/${isca.slug}?utm_source=blog&utm_medium=sidebar-isca&utm_campaign=${ref}`
-  : `${TEMPLUM}/presentes?utm_source=blog&utm_medium=sidebar-isca&utm_campaign=${ref}`;
+  ? `/presentes/${isca.slug}/?utm_source=blog&utm_medium=sidebar-isca&utm_campaign=${ref}`
+  : `/`;
 const iscaTitulo = isca ? isca.titulo : "Materiais gratuitos";
 const fmt = (d) => new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
 ---

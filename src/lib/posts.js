@@ -70,6 +70,33 @@ export async function getIsca(slug) {
   return all.find((i) => i.slug === slug) || null;
 }
 
+// Mapa categoria(norma) → isca destaque (definido no CMS: categories.isca_slug).
+const DEFAULT_ISCA_SLUG = "ebook-empresarios";
+let _iscaMap = null;
+async function buildIscaMap() {
+  if (_iscaMap) return _iscaMap;
+  const [iscas, catsRes] = await Promise.all([
+    getAllIscas(),
+    fetch(`${SB_URL}/rest/v1/blog_templum_categories?select=name,isca_slug`, { headers: H }),
+  ]);
+  const cats = catsRes.ok ? await catsRes.json() : [];
+  const bySlug = Object.fromEntries(iscas.map((i) => [i.slug, i]));
+  const map = {};
+  for (const c of cats) {
+    const i = c.isca_slug && bySlug[c.isca_slug];
+    if (i) map[c.name] = { slug: i.slug, titulo: i.title };
+  }
+  const d = bySlug[DEFAULT_ISCA_SLUG] || iscas[0];
+  _iscaMap = { map, default: d ? { slug: d.slug, titulo: d.title } : null };
+  return _iscaMap;
+}
+// Isca relevante p/ as categorias do artigo (cai no default se nenhuma mapeada).
+export async function getIscaForCategories(categories) {
+  const { map, default: def } = await buildIscaMap();
+  for (const c of categories || []) if (map[c]) return map[c];
+  return def;
+}
+
 // "Resposta rápida": usa o tldr; senão extrai a 1ª frase do HTML.
 export function tldrOf(post) {
   if (post.data.tldr) return post.data.tldr;
