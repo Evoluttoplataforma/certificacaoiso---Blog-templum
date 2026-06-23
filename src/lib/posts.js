@@ -17,11 +17,58 @@ function snippetFrom(html) {
   return cut.slice(0, cut.lastIndexOf(" ")) + "…";
 }
 
+// Otimização AIEO/GEO do conteúdo (no build, p/ todos os posts):
+// 1) hierarquia de heading: desloca p/ o nível mais raso virar h2 (o título da página é o h1)
+// 2) âncoras sem texto (vazias ou só com <img>) ganham aria-label
+// 3) âncoras genéricas ("clique aqui"…) p/ a Templum viram texto descritivo
+function processContent(html) {
+  if (!html) return "";
+  let out = html;
+
+  // 1) heading hierarchy
+  const levels = [...out.matchAll(/<h([1-6])\b/gi)].map((m) => +m[1]);
+  if (levels.length) {
+    const shift = Math.min(...levels) - 2; // queremos o mais raso = 2
+    if (shift !== 0) {
+      out = out.replace(/<(\/?)h([1-6])\b/gi, (m, slash, n) => {
+        const lvl = Math.max(2, Math.min(6, Number(n) - shift));
+        return `<${slash}h${lvl}`;
+      });
+    }
+  }
+
+  // 2) âncoras sem texto ÚTIL (vazias, só-imagem, ou texto = URL crua) → texto/aria-label descritivo
+  out = out.replace(/<a\b([^>]*?)>([\s\S]*?)<\/a>/gi, (m, attrs, inner) => {
+    const href = (attrs.match(/\bhref\s*=\s*"([^"]*)"/i) || [])[1] || "";
+    const text = inner.replace(/<[^>]+>/g, "").replace(/&[a-z]+;/gi, " ").trim();
+    const hasImg = /<img\b/i.test(inner);
+    const isUrlText = !text || /^(https?:\/\/|www\.)\S+$/i.test(text) || (href && text === href);
+    if (!isUrlText) return m; // já tem texto descritivo → não mexe
+    const dom = ((href.match(/^https?:\/\/(?:www\.)?([^/]+)/i) || [])[1] || "").replace(/"/g, "");
+    let label;
+    if (/youtube|youtu\.be/i.test(href)) label = "Assistir ao vídeo no YouTube";
+    else if (/templum\.com\.br/i.test(href)) label = "Conheça a consultoria da Templum";
+    else if (dom) label = "Acessar " + dom;
+    else return m;
+    if (hasImg) { // imagem (com/sem texto) → preserva, adiciona aria-label
+      if (/aria-label\s*=/i.test(attrs)) return m;
+      return `<a${attrs} aria-label="${label}">${inner}</a>`;
+    }
+    return `<a${attrs}>${label}</a>`; // texto = URL crua/vazio → vira texto descritivo
+  });
+
+  // 3) anchor text genérico → descritivo (apenas links Templum, p/ não desvirtuar)
+  out = out.replace(/(<a\b[^>]*href="[^"]*templum\.com\.br[^"]*"[^>]*>)(\s*)(clique aqui|saiba mais|leia mais|veja aqui|acesse aqui|confira aqui|veja mais|aqui)(\s*)(<\/a>)/gi,
+    (m, open, s1, _t, s2, close) => `${open}${s1}Conheça a consultoria da Templum${s2}${close}`);
+
+  return out;
+}
+
 function normalize(p) {
   return {
     id: p.id,
     slug: p.slug,
-    content: p.content || "",
+    content: processContent(p.content || ""),
     data: {
       title: p.title,
       description: (p.excerpt && p.excerpt.trim()) || snippetFrom(p.content),

@@ -29,11 +29,12 @@ const keywords = (d.keywords && d.keywords.length ? d.keywords : d.categories) |
 const wordCount = post.content ? post.content.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length : 0;
 const faq = d.faq || [];
 
-// relacionados (mesma categoria)
-const related = posts
-  .filter((p) => p.slug !== post.slug && p.data.categories?.some((c) => d.categories?.includes(c)))
-  .sort((a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate))
-  .slice(0, 3);
+// relacionados (mesma categoria) — seleção CÍCLICA p/ distribuir links internos:
+// cada post linka os 3 seguintes da sua categoria → todo post recebe links (não só o da categoria).
+const catList = posts.filter((p) => p.data.categories?.some((c) => d.categories?.includes(c)));
+const selfPos = catList.findIndex((p) => p.slug === post.slug);
+const related = [];
+for (let i = 1; i <= 3 && i < catList.length; i++) related.push(catList[(selfPos + i) % catList.length]);
 const recent = posts
   .filter((p) => p.slug !== post.slug)
   .sort((a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate))
