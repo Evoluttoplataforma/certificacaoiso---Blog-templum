@@ -1,7 +1,7 @@
 # Cloudflare Workers — blog certificacaoiso.com.br (static assets + worker.js).
 # O build do Astro gera ./dist; o Worker serve esses arquivos.
 # `name` deve ser IGUAL ao nome do Worker no painel.
-name = "certificacaoiso-blog"
+name = "blog-templum-certificacaoiso"
 main = "worker.js"
 compatibility_date = "2025-01-01"
 
