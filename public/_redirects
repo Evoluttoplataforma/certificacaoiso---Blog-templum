@@ -7,6 +7,67 @@
 /elemento-planejamento-estrategico/   /elementos-planejamento-estrategico/  301
 /planejamento-estrategico/            /como-fazer-planejamento-estrategico/  301
 
+# Páginas de "sucesso" do plugin de isca do WordPress (pós-download de e-book/planilha) → isca atual em /presentes/.
+# NÃO usar wildcard aqui: existe post real publicado em /sucesso-na-iso-9001/ (não é isca) que um /sucesso-* pegaria por engano.
+/sucesso-e-book-guia-pbqp-h/                                              /presentes/e-book-guia-pbqp-h/                                              301
+/sucesso-e-book-guia-pbqp-h                                               /presentes/e-book-guia-pbqp-h/                                              301
+/sucesso-analise-critica-pela-direcao-iso-14001-guia-completo-e-pratico/  /presentes/analise-critica-pela-direcao-iso-14001-guia-completo-e-pratico/  301
+/sucesso-analise-critica-pela-direcao-iso-14001-guia-completo-e-pratico   /presentes/analise-critica-pela-direcao-iso-14001-guia-completo-e-pratico/  301
+/sucesso-como-medir-processos-na-iso-9001/                                /presentes/como-medir-processos-na-iso-9001/                                301
+/sucesso-como-medir-processos-na-iso-9001                                 /presentes/como-medir-processos-na-iso-9001/                                301
+/sucesso-e-book-a-nova-iso-45001/                                         /presentes/e-book-a-nova-iso-45001/                                         301
+/sucesso-e-book-a-nova-iso-45001                                          /presentes/e-book-a-nova-iso-45001/                                         301
+/sucesso-e-book-estudo-de-caso-fssc-22000/                                /presentes/e-book-estudo-de-caso-fssc-22000/                                301
+/sucesso-e-book-estudo-de-caso-fssc-22000                                 /presentes/e-book-estudo-de-caso-fssc-22000/                                301
+/sucesso-e-book-gestao-de-relacionamentos/                                /presentes/e-book-gestao-de-relacionamentos/                                301
+/sucesso-e-book-gestao-de-relacionamentos                                 /presentes/e-book-gestao-de-relacionamentos/                                301
+/sucesso-e-book-lucre-com-a-iso/                                          /presentes/e-book-lucre-com-a-iso/                                          301
+/sucesso-e-book-lucre-com-a-iso                                           /presentes/e-book-lucre-com-a-iso/                                          301
+/sucesso-e-book-mitos-e-verdades-do-pbqp-h/                               /presentes/e-book-mitos-e-verdades-do-pbqp-h/                               301
+/sucesso-e-book-mitos-e-verdades-do-pbqp-h                                /presentes/e-book-mitos-e-verdades-do-pbqp-h/                               301
+/sucesso-e-book-okr/                                                      /presentes/e-book-okr/                                                      301
+/sucesso-e-book-okr                                                       /presentes/e-book-okr/                                                      301
+/sucesso-e-book-pbqp-h-e-a-norma-de-desempenho/                           /presentes/e-book-pbqp-h-e-a-norma-de-desempenho/                           301
+/sucesso-e-book-pbqp-h-e-a-norma-de-desempenho                            /presentes/e-book-pbqp-h-e-a-norma-de-desempenho/                           301
+/sucesso-e-book-regularizacao-para-ramo-alimenticio/                      /presentes/e-book-regularizacao-para-ramo-alimenticio/                      301
+/sucesso-e-book-regularizacao-para-ramo-alimenticio                       /presentes/e-book-regularizacao-para-ramo-alimenticio/                      301
+/sucesso-e-book-seguranca-de-alimentos/                                   /presentes/e-book-seguranca-de-alimentos/                                   301
+/sucesso-e-book-seguranca-de-alimentos                                    /presentes/e-book-seguranca-de-alimentos/                                   301
+/sucesso-ebook-empresarios/                                               /presentes/ebook-empresarios/                                               301
+/sucesso-ebook-empresarios                                                /presentes/ebook-empresarios/                                               301
+/sucesso-gestao-de-indicadores-em-obras-eficiencia-e-resultados-reais/    /presentes/gestao-de-indicadores-em-obras-eficiencia-e-resultados-reais/    301
+/sucesso-gestao-de-indicadores-em-obras-eficiencia-e-resultados-reais     /presentes/gestao-de-indicadores-em-obras-eficiencia-e-resultados-reais/    301
+/sucesso-gestao-de-processos-do-contexto-ao-resultado-que-importa/        /presentes/gestao-de-processos-do-contexto-ao-resultado-que-importa/       301
+/sucesso-gestao-de-processos-do-contexto-ao-resultado-que-importa         /presentes/gestao-de-processos-do-contexto-ao-resultado-que-importa/       301
+/sucesso-integracao-nr-com-iso-45001-guia-completo-para-saude-e-seguranca/  /presentes/integracao-nr-com-iso-45001-guia-completo-para-saude-e-seguranca/  301
+/sucesso-integracao-nr-com-iso-45001-guia-completo-para-saude-e-seguranca   /presentes/integracao-nr-com-iso-45001-guia-completo-para-saude-e-seguranca/  301
+/sucesso-inteligencia-artificial-como-transformar-sua-empresa-com-ia-na-pratica/  /presentes/inteligencia-artificial-como-transformar-sua-empresa-com-ia-na-pratica/  301
+/sucesso-inteligencia-artificial-como-transformar-sua-empresa-com-ia-na-pratica   /presentes/inteligencia-artificial-como-transformar-sua-empresa-com-ia-na-pratica/  301
+/sucesso-iso-27001-o-guia-completo-para-mapeamento-de-processos/          /presentes/iso-27001-o-guia-completo-para-mapeamento-de-processos/          301
+/sucesso-iso-27001-o-guia-completo-para-mapeamento-de-processos           /presentes/iso-27001-o-guia-completo-para-mapeamento-de-processos/          301
+/sucesso-iso-45001-perigos-e-riscos-gestao-proativa-e-sustentavel/        /presentes/iso-45001-perigos-e-riscos-gestao-proativa-e-sustentavel/       301
+/sucesso-iso-45001-perigos-e-riscos-gestao-proativa-e-sustentavel         /presentes/iso-45001-perigos-e-riscos-gestao-proativa-e-sustentavel/       301
+/sucesso-planilha-controle-de-estoque/                                    /presentes/planilha-controle-de-estoque/                                    301
+/sucesso-planilha-controle-de-estoque                                     /presentes/planilha-controle-de-estoque/                                    301
+/sucesso-planilha-controle-de-mudanca/                                    /presentes/planilha-controle-de-mudanca/                                    301
+/sucesso-planilha-controle-de-mudanca                                     /presentes/planilha-controle-de-mudanca/                                    301
+/sucesso-planilha-fluxo-de-caixa/                                         /presentes/planilha-fluxo-de-caixa/                                         301
+/sucesso-planilha-fluxo-de-caixa                                          /presentes/planilha-fluxo-de-caixa/                                         301
+/sucesso-planilha-mapeamento-sgi/                                         /presentes/planilha-mapeamento-sgi/                                         301
+/sucesso-planilha-mapeamento-sgi                                          /presentes/planilha-mapeamento-sgi/                                         301
+/sucesso-planilha-planilha-perigos-e-riscos/                              /presentes/planilha-planilha-perigos-e-riscos/                              301
+/sucesso-planilha-planilha-perigos-e-riscos                               /presentes/planilha-planilha-perigos-e-riscos/                              301
+/sucesso-planilha-plano-operacional/                                      /presentes/planilha-plano-operacional/                                      301
+/sucesso-planilha-plano-operacional                                       /presentes/planilha-plano-operacional/                                      301
+/sucesso-planilha-pqo-plano-de-qualidade-da-obra/                         /presentes/planilha-pqo-plano-de-qualidade-da-obra/                         301
+/sucesso-planilha-pqo-plano-de-qualidade-da-obra                          /presentes/planilha-pqo-plano-de-qualidade-da-obra/                         301
+/sucesso-planilha-relatorio-de-nao-conformidade/                          /presentes/planilha-relatorio-de-nao-conformidade/                         301
+/sucesso-planilha-relatorio-de-nao-conformidade                           /presentes/planilha-relatorio-de-nao-conformidade/                         301
+/sucesso-planilha-riscos-e-oportunidades/                                 /presentes/planilha-riscos-e-oportunidades/                                 301
+/sucesso-planilha-riscos-e-oportunidades                                  /presentes/planilha-riscos-e-oportunidades/                                 301
+/sucesso-planilha-tartaruga-turbinada/                                    /presentes/planilha-tartaruga-turbinada/                                    301
+/sucesso-planilha-tartaruga-turbinada                                     /presentes/planilha-tartaruga-turbinada/                                    301
+
 # Categorias antigas do WordPress (/category/) → /categoria/ (ou home p/ as que não existem)
 /category/construcao-civil/*          /categoria/construcao-civil/  301
 /category/*                           /  301
