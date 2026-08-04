@@ -87,7 +87,19 @@ function processContent(html) {
   return out;
 }
 
-function normalize(p) {
+// Imagem por categoria (usada nos cards de listagem — ver ArticleCard.astro).
+// Fallback pra posts com category_name legado/órfão (não bate com nenhuma das categorias atuais) ou sem categoria.
+const DEFAULT_CATEGORY_IMAGE = "/assets/categorias/default.jpg";
+let _catImgMap = null;
+async function getCategoryImageMap() {
+  if (_catImgMap) return _catImgMap;
+  const r = await fetch(`${SB_URL}/rest/v1/blog_templum_categories?select=name,image_url`, { headers: H });
+  const cats = r.ok ? await r.json() : [];
+  _catImgMap = Object.fromEntries(cats.filter((c) => c.image_url).map((c) => [c.name, c.image_url]));
+  return _catImgMap;
+}
+
+function normalize(p, catImgMap = {}) {
   return {
     id: p.id,
     slug: p.slug,
@@ -96,6 +108,7 @@ function normalize(p) {
       title: p.title,
       description: (p.excerpt && p.excerpt.trim()) || snippetFrom(p.content),
       heroImage: (p.featured_image && !BROKEN_IMAGES.has(p.featured_image)) ? p.featured_image : undefined,
+      categoryImage: catImgMap[p.category_name] || DEFAULT_CATEGORY_IMAGE,
       author: p.author_name || "Equipe Templum",
       pubDate: p.published_at ? new Date(p.published_at) : new Date(),
       updatedDate: p.updated_at ? new Date(p.updated_at) : undefined,
@@ -116,6 +129,7 @@ let _cache = null;
 // Todos os posts publicados (paginado, memoizado).
 export async function getAllPosts() {
   if (_cache) return _cache;
+  const catImgMap = await getCategoryImageMap();
   const all = [];
   let from = 0;
   const size = 1000;
@@ -130,7 +144,7 @@ export async function getAllPosts() {
     if (batch.length < size) break;
     from += size;
   }
-  _cache = all.map(normalize);
+  _cache = all.map((p) => normalize(p, catImgMap));
   return _cache;
 }
 
