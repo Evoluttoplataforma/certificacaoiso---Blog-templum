@@ -25,8 +25,8 @@
 /sucesso-e-book-lucre-com-a-iso                                           /presentes/e-book-lucre-com-a-iso/                                          301
 /sucesso-e-book-mitos-e-verdades-do-pbqp-h/                               /presentes/e-book-mitos-e-verdades-do-pbqp-h/                               301
 /sucesso-e-book-mitos-e-verdades-do-pbqp-h                                /presentes/e-book-mitos-e-verdades-do-pbqp-h/                               301
-/sucesso-e-book-okr/                                                      /presentes/e-book-okr/                                                      301
-/sucesso-e-book-okr                                                       /presentes/e-book-okr/                                                      301
+/sucesso-e-book-okr/                                                      /presentes/  301
+/sucesso-e-book-okr                                                       /presentes/  301
 /sucesso-e-book-pbqp-h-e-a-norma-de-desempenho/                           /presentes/e-book-pbqp-h-e-a-norma-de-desempenho/                           301
 /sucesso-e-book-pbqp-h-e-a-norma-de-desempenho                            /presentes/e-book-pbqp-h-e-a-norma-de-desempenho/                           301
 /sucesso-e-book-regularizacao-para-ramo-alimenticio/                      /presentes/e-book-regularizacao-para-ramo-alimenticio/                      301
@@ -47,16 +47,16 @@
 /sucesso-iso-27001-o-guia-completo-para-mapeamento-de-processos           /presentes/iso-27001-o-guia-completo-para-mapeamento-de-processos/          301
 /sucesso-iso-45001-perigos-e-riscos-gestao-proativa-e-sustentavel/        /presentes/iso-45001-perigos-e-riscos-gestao-proativa-e-sustentavel/       301
 /sucesso-iso-45001-perigos-e-riscos-gestao-proativa-e-sustentavel         /presentes/iso-45001-perigos-e-riscos-gestao-proativa-e-sustentavel/       301
-/sucesso-planilha-controle-de-estoque/                                    /presentes/planilha-controle-de-estoque/                                    301
-/sucesso-planilha-controle-de-estoque                                     /presentes/planilha-controle-de-estoque/                                    301
+/sucesso-planilha-controle-de-estoque/                                    /presentes/  301
+/sucesso-planilha-controle-de-estoque                                     /presentes/  301
 /sucesso-planilha-controle-de-mudanca/                                    /presentes/planilha-controle-de-mudanca/                                    301
 /sucesso-planilha-controle-de-mudanca                                     /presentes/planilha-controle-de-mudanca/                                    301
-/sucesso-planilha-fluxo-de-caixa/                                         /presentes/planilha-fluxo-de-caixa/                                         301
-/sucesso-planilha-fluxo-de-caixa                                          /presentes/planilha-fluxo-de-caixa/                                         301
-/sucesso-planilha-mapeamento-sgi/                                         /presentes/planilha-mapeamento-sgi/                                         301
-/sucesso-planilha-mapeamento-sgi                                          /presentes/planilha-mapeamento-sgi/                                         301
-/sucesso-planilha-planilha-perigos-e-riscos/                              /presentes/planilha-planilha-perigos-e-riscos/                              301
-/sucesso-planilha-planilha-perigos-e-riscos                               /presentes/planilha-planilha-perigos-e-riscos/                              301
+/sucesso-planilha-fluxo-de-caixa/                                         /presentes/  301
+/sucesso-planilha-fluxo-de-caixa                                          /presentes/  301
+/sucesso-planilha-mapeamento-sgi/                                         /presentes/  301
+/sucesso-planilha-mapeamento-sgi                                          /presentes/  301
+/sucesso-planilha-planilha-perigos-e-riscos/                              /presentes/  301
+/sucesso-planilha-planilha-perigos-e-riscos                               /presentes/  301
 /sucesso-planilha-plano-operacional/                                      /presentes/planilha-plano-operacional/                                      301
 /sucesso-planilha-plano-operacional                                       /presentes/planilha-plano-operacional/                                      301
 /sucesso-planilha-pqo-plano-de-qualidade-da-obra/                         /presentes/planilha-pqo-plano-de-qualidade-da-obra/                         301
@@ -65,12 +65,26 @@
 /sucesso-planilha-relatorio-de-nao-conformidade                           /presentes/planilha-relatorio-de-nao-conformidade/                         301
 /sucesso-planilha-riscos-e-oportunidades/                                 /presentes/planilha-riscos-e-oportunidades/                                 301
 /sucesso-planilha-riscos-e-oportunidades                                  /presentes/planilha-riscos-e-oportunidades/                                 301
-/sucesso-planilha-tartaruga-turbinada/                                    /presentes/planilha-tartaruga-turbinada/                                    301
-/sucesso-planilha-tartaruga-turbinada                                     /presentes/planilha-tartaruga-turbinada/                                    301
+/sucesso-planilha-tartaruga-turbinada/                                    /presentes/  301
+/sucesso-planilha-tartaruga-turbinada                                     /presentes/  301
 
 # Categorias antigas do WordPress (/category/) → /categoria/ (ou home p/ as que não existem)
 /category/construcao-civil/*          /categoria/construcao-civil/  301
 /category/*                           /  301
+
+# Iscas desativadas temporariamente (arquivo original perdido na migração do WP, aguardando reposição) → listagem geral.
+/presentes/e-book-okr/                                    /presentes/  301
+/presentes/e-book-okr                                     /presentes/  301
+/presentes/planilha-controle-de-estoque/                  /presentes/  301
+/presentes/planilha-controle-de-estoque                   /presentes/  301
+/presentes/planilha-fluxo-de-caixa/                        /presentes/  301
+/presentes/planilha-fluxo-de-caixa                         /presentes/  301
+/presentes/planilha-mapeamento-sgi/                        /presentes/  301
+/presentes/planilha-mapeamento-sgi                         /presentes/  301
+/presentes/planilha-planilha-perigos-e-riscos/             /presentes/  301
+/presentes/planilha-planilha-perigos-e-riscos              /presentes/  301
+/presentes/planilha-tartaruga-turbinada/                   /presentes/  301
+/presentes/planilha-tartaruga-turbinada                    /presentes/  301
 
 # Posts duplicados (despublicados) → canônico (301). Conteúdo idêntico, zero perda.
 /principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1-2/   /principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1/   301
