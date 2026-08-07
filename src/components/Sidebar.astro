@@ -1,7 +1,7 @@
 ---
 // Sidebar do artigo (sticky no desktop): autor + CTA diagnóstico + recentes.
 const { ref = "", author = "Equipe Templum", recent = [] } = Astro.props;
-const diagnosticoUrl = `https://v2diagnostico.templum.com.br/?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}`;
+const diagnosticoUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}`;
 const fmt = (d) => new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
 ---
 <aside class="sb">
