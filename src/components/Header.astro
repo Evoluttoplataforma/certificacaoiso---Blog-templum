@@ -2,8 +2,9 @@
 // Header do blog Certificação ISO — usa o design system da Templum.
 import { categorias } from "../data/categorias.js";
 const TEMPLUM = "https://templum.com.br";
+const DIAGNOSTICO = "https://v2diagnostico.templum.com.br/?utm_source=blog&utm_medium=header";
 ---
-<a href={`${TEMPLUM}/form`} class="top-banner">
+<a href={DIAGNOSTICO} class="top-banner">
   <iconify-icon icon="solar:fire-bold"></iconify-icon>
   <span class="tb-full"><strong>Garantia de 200%:</strong> certifique ou devolvemos o dobro do investimento.</span>
   <span class="tb-short"><strong>Garantia de 200%</strong> — o dobro de volta</span>
@@ -31,26 +32,24 @@ const TEMPLUM = "https://templum.com.br";
           </div>
         </div>
       </div>
-      <a class="hd-link" href="/presentes/">Presentes 🎁</a>
       <a class="hd-link" href={`${TEMPLUM}/historias`}>Histórias</a>
     </nav>
     <div class="hd-actions">
       <a href="/buscar/" class="hd-search" aria-label="Buscar artigos"><iconify-icon icon="solar:magnifer-linear"></iconify-icon></a>
       <a href={`${TEMPLUM}`} class="btn btn--outline btn--sm hd-ghost">Site Templum</a>
-      <a href={`${TEMPLUM}/form`} class="btn btn--dark btn--sm">Falar com especialista</a>
+      <a href={DIAGNOSTICO} class="btn btn--dark btn--sm">Falar com especialista</a>
     </div>
     <button class="hd-burger" aria-label="Abrir menu" id="hdBurger"><iconify-icon icon="solar:hamburger-menu-linear"></iconify-icon></button>
   </div>
   <div class="hd-mobile" id="hdMobile">
     <nav>
       <a href="/">Início</a>
-      <a href="/presentes/">Presentes 🎁</a>
       <a href={`${TEMPLUM}/historias`}>Histórias</a>
       <span class="hd-mobile-head">Categorias</span>
       {categorias.map((c) => <a class="hd-mobile-sub" href={`/categoria/${c.slug}/`}>{c.nome}</a>)}
       <a href={TEMPLUM}>Site Templum</a>
     </nav>
-    <a href={`${TEMPLUM}/form`} class="btn btn--primary btn--block">Falar com especialista</a>
+    <a href={DIAGNOSTICO} class="btn btn--primary btn--block">Falar com especialista</a>
   </div>
 </header>
 

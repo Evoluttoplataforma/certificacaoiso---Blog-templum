@@ -1,6 +1,7 @@
 ---
 import { categorias } from "../data/categorias.js";
 const TEMPLUM = "https://templum.com.br";
+const DIAGNOSTICO = "https://v2diagnostico.templum.com.br/?utm_source=blog&utm_medium=footer";
 const ano = 2026;
 ---
 <footer class="ft">
@@ -8,7 +9,7 @@ const ano = 2026;
     <div>
       <span class="templum-logo onDark"><img src="/assets/logo/templum.png" alt="Templum" /></span>
       <p class="ft-sub">Dicas para implementação e certificação nas normas ISO. Um conteúdo da <a href={TEMPLUM}>Templum Consultoria</a>.</p>
-      <a href={`${TEMPLUM}/form`} class="btn btn--primary btn--sm">Falar com um especialista</a>
+      <a href={DIAGNOSTICO} class="btn btn--primary btn--sm">Falar com um especialista</a>
     </div>
     <div>
       <h3>Categorias</h3>
