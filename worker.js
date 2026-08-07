@@ -47,7 +47,24 @@ export default {
     // --- (futuro) captura de lead → Supabase + Mailchimp ---
     // if (url.pathname === "/api/lead" && request.method === "POST") { ... }
 
+    let resp = await env.ASSETS.fetch(request);
+
+    // Fallback: imagens antigas do WordPress (/wp-content/uploads/*.jpg|.png|.jpeg|.gif)
+    // foram convertidas pra .webp na migração, mas os posts antigos e o índice do
+    // Google ainda apontam pra extensão velha, que não existe mais → 404.
+    // Diagnóstico da queda de tráfego (ago/2026): isso sozinho respondia por ~14%
+    // dos cliques perdidos. 301 pra versão .webp resolve o link quebrado e devolve
+    // o sinal de SEO pro Google reindexar a URL certa.
+    if (resp.status === 404 && /^\/wp-content\/uploads\/.+\.(jpe?g|png|gif)$/i.test(url.pathname)) {
+      const webpUrl = new URL(url.toString());
+      webpUrl.pathname = url.pathname.replace(/\.(jpe?g|png|gif)$/i, ".webp");
+      const webpResp = await env.ASSETS.fetch(new Request(webpUrl.toString(), request));
+      if (webpResp.status === 200) {
+        return Response.redirect(webpUrl.toString(), 301);
+      }
+    }
+
     // tudo o mais = estático
-    return env.ASSETS.fetch(request);
+    return resp;
   },
 };
