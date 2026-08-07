@@ -1,13 +1,7 @@
 ---
-// Sidebar do artigo (sticky no desktop): autor + CTA + isca do segmento + recentes.
-const { ref = "", author = "Equipe Templum", recent = [], isca = null } = Astro.props;
-const TEMPLUM = "https://templum.com.br";
-const formUrl = `${TEMPLUM}/form?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}`;
-// As iscas agora vivem no próprio blog (/presentes/<slug>/), captando lead em blog_templum_leads.
-const iscaUrl = isca
-  ? `/presentes/${isca.slug}/?utm_source=blog&utm_medium=sidebar-isca&utm_campaign=${ref}`
-  : `/`;
-const iscaTitulo = isca ? isca.titulo : "Materiais gratuitos";
+// Sidebar do artigo (sticky no desktop): autor + CTA diagnóstico + recentes.
+const { ref = "", author = "Equipe Templum", recent = [] } = Astro.props;
+const diagnosticoUrl = `https://v2diagnostico.templum.com.br/?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}`;
 const fmt = (d) => new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
 ---
 <aside class="sb">
@@ -17,19 +11,12 @@ const fmt = (d) => new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", mon
     <div><span class="sb-author-by">Escrito por</span><strong>{author}</strong></div>
   </div>
 
-  <!-- CTA principal (garantia 200%) -->
-  <div class="sb-cta">
-    <span class="sb-cta-badge"><iconify-icon icon="solar:shield-check-bold"></iconify-icon> Garantia de 200%</span>
-    <h3>Quer certificar sua empresa?</h3>
-    <p>Fale com um especialista da Templum e receba um diagnóstico gratuito — certifique ou devolvemos o dobro.</p>
-    <a href={formUrl} class="btn btn--primary btn--block" data-trk-event="cta-sidebar">Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
-  </div>
-
-  <!-- Isca do segmento do artigo -->
-  <div class="sb-isca">
-    <span class="sb-isca-tag"><iconify-icon icon="solar:file-download-bold"></iconify-icon> Material gratuito</span>
-    <h4>{iscaTitulo}</h4>
-    <a href={iscaUrl} class="btn btn--outline btn--sm btn--block" data-trk-event="isca-sidebar">Baixar agora <iconify-icon icon="solar:download-minimalistic-bold"></iconify-icon></a>
+  <!-- CTA único: diagnóstico com a Olívia -->
+  <div class="sb-diagnostico">
+    <img class="sb-diagnostico-photo" src="/assets/team/olivia-especialista.png" alt="Olívia, especialista Templum" />
+    <h3>Fale com a Olívia</h3>
+    <p>Receba um diagnóstico gratuito da sua empresa e descubra exatamente o que falta pra certificar.</p>
+    <a href={diagnosticoUrl} class="btn btn--primary btn--block" data-trk-event="cta-sidebar-diagnostico">Quero meu diagnóstico <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
   </div>
 
   <!-- Artigos recentes -->
@@ -51,14 +38,10 @@ const fmt = (d) => new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", mon
   .sb-author-by { display: block; font-size: 12px; color: var(--text-soft); }
   .sb-author strong { font-size: 15px; font-weight: 800; color: var(--text); }
 
-  .sb-cta { background: var(--navy); color: var(--cream); border-radius: var(--r-20); padding: 26px 24px; }
-  .sb-cta-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--orange); background: rgba(0,0,0,0.22); padding: 6px 12px; border-radius: 999px; margin-bottom: 14px; }
-  .sb-cta h3 { color: var(--cream); font-size: 20px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
-  .sb-cta p { font-size: 14px; line-height: 1.55; color: rgba(255,244,221,0.78); margin-bottom: 18px; }
-
-  .sb-isca { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-20); padding: 22px 24px; }
-  .sb-isca-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--orange-ink); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
-  .sb-isca h4 { font-size: 16px; font-weight: 800; line-height: 1.3; margin-bottom: 16px; color: var(--text); }
+  .sb-diagnostico { background: var(--navy); color: var(--cream); border-radius: var(--r-20); padding: 28px 24px; text-align: center; }
+  .sb-diagnostico-photo { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 16px; border: 3px solid var(--orange); }
+  .sb-diagnostico h3 { color: var(--cream); font-size: 20px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
+  .sb-diagnostico p { font-size: 14px; line-height: 1.55; color: rgba(255,244,221,0.78); margin-bottom: 18px; }
 
   .sb-recent { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-20); padding: 22px 24px; }
   .sb-recent h4 { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 14px; }
