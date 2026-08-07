@@ -91,5 +91,13 @@
 /certificacao-iso-27001-qual-e-a-infraestrutura-necessaria-2/                      /certificacao-iso-27001-qual-e-a-infraestrutura-necessaria/                      301
 /quais-os-maiores-riscos-de-nao-ter-a-iso-45001-implementada-2/                    /quais-os-maiores-riscos-de-nao-ter-a-iso-45001-implementada/                    301
 /algumas-palavras-sobre-iso-9001-e-padronizacao-2/                                 /algumas-palavras-sobre-iso-9001-e-padronizacao/                                 301
+
+# Canibalização de palavra-chave (despublicados) → consolida no conteúdo mais completo.
+# Diferente do bloco acima: aqui os dois posts têm conteúdo DIFERENTE (não é dupe idêntico) —
+# escolhido o mais aprofundado de cada par (diagnóstico da queda de tráfego, ago/2026).
+/iso-14001/    /iso-14001-2/   301
+/iso-14001     /iso-14001-2/   301
+/pbqp-h-2/     /pbqp-h/        301
+/pbqp-h-2      /pbqp-h/        301
 /certificacao-iso-as-principais-normas/                                            /beneficios-da-iso-9001/                                                         301
 /dicas-para-uma-implementacao-bem-sucedida/                                        /como-e-a-rotina-de-implementacao-com-a-templum/                                 301
