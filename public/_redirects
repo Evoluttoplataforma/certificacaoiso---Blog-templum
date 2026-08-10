@@ -109,3 +109,64 @@
 /principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1     /principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1-2-2/    301
 /certificacao-iso-as-principais-normas/                                            /beneficios-da-iso-9001/                                                         301
 /dicas-para-uma-implementacao-bem-sucedida/                                        /como-e-a-rotina-de-implementacao-com-a-templum/                                 301
+
+# ============================================================================
+# Varredura de 404 sobre as 1.141 URLs do export do Search Console (ago/2026).
+# 58 URLs em 404 retinham 395 cliques/mês (7,9% do total). Ver worker.js para as
+# regras que dependem de nº de página (comment-page, /blog/page/N).
+# ============================================================================
+
+# Documentos do WordPress que não foram migrados. Os arquivos não voltam (decisão
+# de ago/2026: centralizar tudo no diagnóstico), mas 404 puro joga fora o sinal de
+# SEO — 301 pro post/isca equivalente devolve a autoridade e atende a intenção.
+/wp-content/uploads/2012/04/Tabela-5W2H.xls                                                        /5w2h-tabela/                                     301
+/wp-content/uploads/2012/07/Plano-anual-de-Treinamento4.xls                                        /plano-anual-de-treinamento/                      301
+/wp-content/uploads/2021/07/ISO-45001.pdf                                                          /presentes/e-book-a-nova-iso-45001/               301
+/wp-content/uploads/2017/01/Termo-para-autorizacao-de-testes-de-identificacao-de-alcool-e-drogas.doc  /sassmaq-o-que-diz-a-resolucao-contran-517/     301
+/wp-content/uploads/2012/04/TABELA-DE-RECICLAGEM2.pdf                                              /coleta-seletiva-cores-de-identificacao/           301
+/wp-content/uploads/2012/04/TABELA-DE-RECICLAGEM.pdf                                               /coleta-seletiva-cores-de-identificacao/           301
+/wp-content/uploads/2021/04/Planejamento-de-Integracao-de-Normas.xlsx                              /planilha-planejamento-para-integracao-de-normas/  301
+/wp-content/uploads/2016/12/Procedimento-Execucao-de-Servico-Colocacao-de-janela.pdf                /pbqp-h-o-que-sao-servicos-controlados/           301
+/wp-content/uploads/2016/12/Inspecao-de-Servico-Janela-Sem-Contramarco.pdf                         /pbqp-h-o-que-sao-servicos-controlados/           301
+/wp-content/uploads/2016/11/Levantamento-de-perigos-e-riscos-a-seguranca-e-saude-ocupacional.pdf    /perigos-e-riscos-na-ohsas-18001/                 301
+/wp-content/uploads/2018/11/e-book-ISO-14001.pdf                                                   /iso-14001-2/                                     301
+/wp-content/uploads/2021/07/ISO-14001.pdf                                                          /iso-14001-2/                                     301
+/wp-content/uploads/2023/10/Ebook-Programa-Brasileiro-da-Qualidade-e-Produtividade-do-Habitat-PBQP-H.pdf  /presentes/e-book-guia-pbqp-h/             301
+/wp-content/uploads/2021/07/ISO-para-empresarios.pdf                                               /presentes/                                       301
+/wp-content/uploads/2021/04/Webinar-Beneficios-do-uso-do-Asana.pdf                                  /presentes/                                       301
+/wp-content/uploads/2021/04/Masterclass-Customer-Centric.pdf                                       /presentes/                                       301
+
+# Páginas institucionais/comerciais do site antigo que nunca viraram post.
+/sample-page/                                    /                                                                301
+/sample-page                                     /                                                                301
+/materiais-ricos/                                /presentes/                                                      301
+/materiais-ricos                                 /presentes/                                                      301
+/teste-gratuitamente/                            https://templum.com.br/form?utm_source=blog&utm_medium=organico   301
+/teste-gratuitamente                             https://templum.com.br/form?utm_source=blog&utm_medium=organico   301
+/solicite-proposta/                              https://templum.com.br/form?utm_source=blog&utm_medium=organico   301
+/solicite-proposta                               https://templum.com.br/form?utm_source=blog&utm_medium=organico   301
+
+# Cursos descontinuados → post que cobre o mesmo assunto.
+/curso-de-5s-na-pratica/                         /5s/                                       301
+/curso-de-5s-na-pratica                          /5s/                                       301
+/curso-de-formacao-de-auditor-interno-iso-9001/  /auditoria-iso-9001/                       301
+/curso-de-formacao-de-auditor-interno-iso-9001   /auditoria-iso-9001/                       301
+/curso-de-mapeamento-de-processos-na-pratica/    /mapeamento-de-processos-e-a-iso-9001/     301
+/curso-de-mapeamento-de-processos-na-pratica     /mapeamento-de-processos-e-a-iso-9001/     301
+/entendimento-pratico-sassmaq/                   /o-que-e-sassmaq/                          301
+/entendimento-pratico-sassmaq                    /o-que-e-sassmaq/                          301
+
+# Slugs de categoria do WordPress que não existem na taxonomia nova.
+/categoria/27001/                 /categoria/seguranca-e-compliance/   301
+/categoria/gestao-de-processos/   /categoria/qualidade-e-inovacao/     301
+
+# Mais páginas de "sucesso" do plugin de isca (as duas primeiras não têm isca
+# equivalente publicada em /presentes/ → índice).
+/sucesso-e-book-iso-14001-2015/                                  /presentes/                                  301
+/sucesso-e-book-iso-14001-2015                                   /presentes/                                  301
+/sucesso-paper-passo-a-passo-certificacao-iso9001/                /presentes/                                  301
+/sucesso-paper-passo-a-passo-certificacao-iso9001                 /presentes/                                  301
+/sucesso-planilha-mapeamento-de-processos-sgi/                    /planilha-mapeamento-de-processos-sgi/        301
+/sucesso-planilha-mapeamento-de-processos-sgi                     /planilha-mapeamento-de-processos-sgi/        301
+/sucesso-planilha-mapeamento-de-processos-tartaruga-turbinada/    /planilha-mapeamento-de-processos/            301
+/sucesso-planilha-mapeamento-de-processos-tartaruga-turbinada     /planilha-mapeamento-de-processos/            301

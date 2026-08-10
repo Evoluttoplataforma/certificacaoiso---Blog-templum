@@ -64,6 +64,36 @@ export default {
       }
     }
 
+    // Fallbacks de 404 que dependem de nº de página (não dá pra listar em
+    // _redirects, que é 1:1). Mesma varredura de ago/2026 sobre as URLs do
+    // Search Console: 19 URLs de comment-page e 6 de índice paginado, juntas
+    // ~4.000 impressões/mês jogadas fora em 404.
+    if (resp.status === 404) {
+      // Paginação de comentários do WordPress: /um-post/comment-page-3/ → /um-post/
+      // Só redireciona se o post pai existir, pra não trocar 404 por 404.
+      const cp = url.pathname.match(/^(\/.+?)\/comment-page-\d+\/?$/);
+      if (cp) {
+        const parent = new URL(url.toString());
+        parent.pathname = `${cp[1]}/`;
+        parent.search = "";
+        const parentResp = await env.ASSETS.fetch(new Request(parent.toString(), request));
+        if (parentResp.status === 200) {
+          return Response.redirect(parent.toString(), 301);
+        }
+      }
+
+      // Índice paginado do blog no WordPress: /blog/ e /blog/page/12/ → raiz,
+      // que hoje é o próprio índice do blog.
+      if (/^\/blog(\/page\/\d+)?\/?$/.test(url.pathname)) {
+        return Response.redirect(new URL("/", url).toString(), 301);
+      }
+
+      // Categoria antiga fora de /categoria/: /construcao-civil/ e /construcao-civil/page/4/
+      if (/^\/construcao-civil(\/page\/\d+)?\/?$/.test(url.pathname)) {
+        return Response.redirect(new URL("/categoria/construcao-civil/", url).toString(), 301);
+      }
+    }
+
     // tudo o mais = estático
     return resp;
   },
