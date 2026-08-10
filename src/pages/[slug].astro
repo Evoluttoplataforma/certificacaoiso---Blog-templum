@@ -49,7 +49,9 @@ const schemas = [
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: d.title,
-    description: d.description,
+    // usa o mesmo texto do <meta name="description"> (seo_description quando escrito).
+    // NÃO usar d.description: é o excerpt cru da migração (1º parágrafo do artigo).
+    description: seoDesc,
     image: d.heroImage ? [new URL(d.heroImage, SITE).href] : undefined,
     datePublished: new Date(d.pubDate).toISOString(),
     dateModified: new Date(d.updatedDate || d.pubDate).toISOString(),
