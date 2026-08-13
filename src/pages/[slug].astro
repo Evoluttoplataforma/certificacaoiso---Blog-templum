@@ -138,13 +138,17 @@ if (faq.length) {
         )}
         <Fragment set:html={post.content} />
 
+        {/* id="duvidas": o sumário dos posts aponta pra #duvidas. Sem o id, migrar o FAQ
+            inline pra cá quebraria essa âncora. */}
         {faq.length > 0 && (
-          <section class="post-faq">
+          <section class="post-faq" id="duvidas">
             <h2>Perguntas frequentes</h2>
             {faq.map((f) => (
               <details class="post-faq-item">
                 <summary>{f.pergunta}</summary>
-                <p>{f.resposta}</p>
+                {/* set:html porque as respostas do blog têm links internos e múltiplos
+                    parágrafos — com interpolação simples o HTML virava texto literal. */}
+                <div class="post-faq-a" set:html={f.resposta} />
               </details>
             ))}
           </section>
@@ -295,6 +299,11 @@ if (faq.length) {
   .post-faq-item summary::after { content: "+"; font-size: 22px; color: var(--orange-ink); font-weight: 700; }
   .post-faq-item[open] summary::after { content: "−"; }
   .post-faq-item p { margin: 0 0 14px; font-size: 15.5px; line-height: 1.65; color: var(--text-mid); }
+  .post-faq-a { padding-bottom: 2px; }
+  .post-faq-a > :last-child { margin-bottom: 14px; }
+  .post-faq-a a { color: var(--orange-ink); font-weight: 600; }
+  .post-faq-a ul, .post-faq-a ol { margin: 0 0 14px; padding-left: 22px; }
+  .post-faq-a li { font-size: 15.5px; line-height: 1.65; color: var(--text-mid); margin-bottom: 6px; }
   .post-cta { margin-top: 44px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-24); padding: 30px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
   .post-cta h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
   .post-cta p { font-size: 14.5px; color: var(--text-mid); max-width: 460px; }
