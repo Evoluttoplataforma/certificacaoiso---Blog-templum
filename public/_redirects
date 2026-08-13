@@ -170,3 +170,14 @@
 /sucesso-planilha-mapeamento-de-processos-sgi                     /planilha-mapeamento-de-processos-sgi/        301
 /sucesso-planilha-mapeamento-de-processos-tartaruga-turbinada/    /planilha-mapeamento-de-processos/            301
 /sucesso-planilha-mapeamento-de-processos-tartaruga-turbinada     /planilha-mapeamento-de-processos/            301
+
+# Vertical 27001: o conteudo bom do par LGPD x ISO 27001 estava no slug "-2";
+# foi movido para o slug canonico (que tinha um toco de 14 palavras).
+/relacao-do-lgpd-com-a-iso-27001-2/                               /relacao-do-lgpd-com-a-iso-27001/                               301
+/relacao-do-lgpd-com-a-iso-27001-2                                /relacao-do-lgpd-com-a-iso-27001/                               301
+# Consolidacao da canibalizacao: o mega-artigo "tudo o que precisa saber sobre a ISO 27001
+# e seguranca da informacao" (4.5k palavras) disputava com a pilar /iso-27001/ e com
+# /seguranca-da-informacao/. A metade de SI foi fundida no slug bom; a metade de 27001 que era
+# unica (dificuldades, duvidas, mitos) foi para a pilar.
+/tudo-o-que-precisa-saber-sobre-a-iso-27001-e-seguranca-da-informacao/    /seguranca-da-informacao/    301
+/tudo-o-que-precisa-saber-sobre-a-iso-27001-e-seguranca-da-informacao     /seguranca-da-informacao/    301
