@@ -16,7 +16,14 @@ const SITE = "https://certificacaoiso.com.br";
 const url = `${SITE}/${post.slug}/`;
 const cat = (d.categories && d.categories[0]) || "";
 const catSlug = cat ? catMeta(cat).slug : "";
-const dataFmt = new Date(d.pubDate).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
+const fmtData = (x) => new Date(x).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
+const dataFmt = fmtData(d.pubDate);
+// "Atualizado em ..." vem de `revisedDate` (col. revised_at), que é CURADA.
+// NÃO usar updatedDate aqui: o trigger do Supabase toca updated_at em qualquer UPDATE, e
+// operações em lote deixaram 799 posts com a mesma data — o selo apareceria em ~todo post
+// e não significaria nada. Guarda extra: só exibe se for depois da publicação.
+const atualizadoEm = d.revisedDate && +new Date(d.revisedDate) > +new Date(d.pubDate)
+  ? new Date(d.revisedDate) : null;
 
 // SEO/AIEO/GEO por artigo
 // título: usa seo_title; senão anexa a marca. NUNCA deixa igual ao <h1> (evita "h1 = title").
@@ -54,7 +61,9 @@ const schemas = [
     description: seoDesc,
     image: d.heroImage ? [new URL(d.heroImage, SITE).href] : undefined,
     datePublished: new Date(d.pubDate).toISOString(),
-    dateModified: new Date(d.updatedDate || d.pubDate).toISOString(),
+    // dateModified conservador: só avança com revisão curada. Se usasse updatedDate, 799 posts
+    // declarariam a mesma data de modificação — padrão que faz o Google desconfiar das datas.
+    dateModified: new Date(atualizadoEm || d.pubDate).toISOString(),
     author: { "@type": "Person", name: d.author },
     publisher: { "@id": `${SITE}/#organization` },
     mainEntityOfPage: url,
@@ -106,6 +115,12 @@ if (faq.length) {
       <div class="post-meta">
         <span class="post-author"><iconify-icon icon="solar:user-circle-bold"></iconify-icon> {d.author}</span>
         <time datetime={new Date(d.pubDate).toISOString()}>{dataFmt}</time>
+        {atualizadoEm && (
+          <span class="post-upd">
+            <iconify-icon icon="solar:refresh-bold"></iconify-icon>
+            Atualizado em <time datetime={atualizadoEm.toISOString()}>{fmtData(atualizadoEm)}</time>
+          </span>
+        )}
       </div>
     </div>
 
@@ -244,7 +259,9 @@ if (faq.length) {
   .post-bc { font-size: 13px; color: var(--text-soft); display: flex; gap: 8px; margin-bottom: 16px; }
   .post-bc a { color: var(--orange-ink); font-weight: 600; }
   .post-title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.12; letter-spacing: -0.025em; }
-  .post-meta { display: flex; align-items: center; gap: 16px; margin-top: 16px; font-size: 14px; color: var(--text-mid); }
+  .post-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; margin-top: 16px; font-size: 14px; color: var(--text-mid); }
+  .post-upd { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700; color: var(--orange-ink); background: color-mix(in srgb, var(--orange) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--orange) 26%, transparent); }
+  .post-upd time { font-weight: 700; }
   .post-author { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--text-2); }
   .post-author iconify-icon { color: var(--orange); font-size: 18px; }
   .post-hero { margin: 28px 0 8px; border-radius: var(--r-24); overflow: hidden; aspect-ratio: 16/8; }

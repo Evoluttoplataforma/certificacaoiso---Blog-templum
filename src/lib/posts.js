@@ -112,6 +112,10 @@ function normalize(p, catImgMap = {}) {
       author: p.author_name || "Equipe Templum",
       pubDate: p.published_at ? new Date(p.published_at) : new Date(),
       updatedDate: p.updated_at ? new Date(p.updated_at) : undefined,
+      // revisão editorial CURADA (col. revised_at) — não confundir com updatedDate, que o
+      // trigger toca em qualquer UPDATE (inclui lotes: 799 posts na mesma data). É esta que
+      // alimenta o selo "Atualizado em", o dateModified e o lastmod.
+      revisedDate: p.revised_at ? new Date(p.revised_at) : undefined,
       categories: [p.category_name, ...(p.tags || [])].filter(Boolean),
       tldr: p.tldr || undefined,
       faq: p.faq || [],

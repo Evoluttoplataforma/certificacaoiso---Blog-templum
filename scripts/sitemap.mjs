@@ -2,21 +2,37 @@ import fs from "node:fs";
 import path from "node:path";
 const SITE = "https://certificacaoiso.com.br";
 const DIST = "dist";
-const BLOG = "src/content/blog";
 
-// 1) Mapa slug → lastmod (updatedDate || pubDate) lendo o frontmatter dos posts.
+// 1) Mapa slug → lastmod, lido do SUPABASE (mesma fonte do build).
+// Antes isto lia o frontmatter de src/content/blog/*.md — 1.015 arquivos LEGADOS de antes da
+// migração pro Supabase. O lastmod ficava congelado (o /iso-9001/ apontava jan/2025) e não
+// refletia nada do conteúdo realmente servido.
+// Usa revised_at (revisão curada) || published_at — NÃO updated_at, que o trigger toca em
+// qualquer UPDATE e deixaria centenas de posts com o mesmo lastmod.
+const SB_URL = process.env.SUPABASE_URL || "https://yfpdrckyuxltvznqfqgh.supabase.co";
+const SB_ANON = process.env.SUPABASE_ANON_KEY || "sb_publishable_Yfg9Ts5WRqD4Gc3jeWAS2A_-YWZrtiQ";
+
 const lastmod = {};
-if (fs.existsSync(BLOG)) {
-  for (const f of fs.readdirSync(BLOG)) {
-    if (!f.endsWith(".md")) continue;
-    const slug = f.replace(/\.md$/, "");
-    const src = fs.readFileSync(path.join(BLOG, f), "utf-8");
-    const fm = src.slice(0, src.indexOf("\n---", 3));
-    const pub = (fm.match(/^pubDate:\s*(.+)$/m) || [])[1];
-    const upd = (fm.match(/^updatedDate:\s*(.+)$/m) || [])[1];
-    const d = (upd || pub || "").trim();
-    if (d) lastmod[`/${slug}/`] = new Date(d).toISOString().slice(0, 10);
+try {
+  // Paginado com Range (mesmo padrão de src/lib/posts.js): o PostgREST corta em 1000 linhas
+  // por default e já são 1.007 posts publicados — sem isto, os últimos ficam sem lastmod.
+  const size = 1000;
+  for (let from = 0; ; from += size) {
+    const r = await fetch(
+      `${SB_URL}/rest/v1/blog_templum_posts?status=eq.published&select=slug,published_at,revised_at`,
+      { headers: { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}`, Range: `${from}-${from + size - 1}` } },
+    );
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const batch = await r.json();
+    for (const p of batch) {
+      const d = p.revised_at || p.published_at;
+      if (d) lastmod[`/${p.slug}/`] = new Date(d).toISOString().slice(0, 10);
+    }
+    if (batch.length < size) break;
   }
+} catch (e) {
+  // Sem lastmod o sitemap continua válido — melhor isso que quebrar o build ou publicar data errada.
+  console.warn(`sitemap: falhou ao ler datas do Supabase (${e.message}) — segue sem lastmod`);
 }
 
 // 2) Varre o dist e monta o sitemap.
