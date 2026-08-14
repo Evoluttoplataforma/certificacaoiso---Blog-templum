@@ -80,24 +80,26 @@ for (const p of porRelevancia) {
   if (!usados.has(p.slug)) { related.push(p); usados.add(p.slug); }
 }
 
-// Sidebar: os 5 mais relevantes que sobraram — nunca repete o rodapé, porque link
+// Sidebar: os 3 mais relevantes que sobraram — nunca repete o rodapé, porque link
 // repetido na mesma página não soma link interno.
+// São 3 e não 5 porque a altura do sidebar decide se o sticky pode ligar (ver o
+// comentário no Sidebar.astro). Com o rodapé, a página distribui 6 links do cluster.
 // Fallback com recentes para o card não aparecer pela metade em categoria pequena.
 const relatedSide = [];
 for (const lista of [porRelevancia, recent]) {
   for (const p of lista) {
-    if (relatedSide.length >= 4) break;
+    if (relatedSide.length >= 2) break;
     if (!usados.has(p.slug)) { relatedSide.push(p); usados.add(p.slug); }
   }
 }
-// 5º e último slot do sidebar: o 2º vizinho do anel. É o slot menos nobre da página,
+// 3º e último slot do sidebar: o 2º vizinho do anel. É o slot menos nobre da página,
 // então doá-lo à cobertura custa pouca relevância e dobra a garantia de distribuição
 // (2 links de anel por post em vez de 1) — menos post órfão no fim da cauda longa.
 const vizinho2 = catList.length > 2 ? catList[(selfPos + 2) % catList.length] : null;
 if (vizinho2 && !usados.has(vizinho2.slug)) { relatedSide.push(vizinho2); usados.add(vizinho2.slug); }
 for (const lista of [porRelevancia, recent]) {
   for (const p of lista) {
-    if (relatedSide.length >= 5) break;
+    if (relatedSide.length >= 3) break;
     if (!usados.has(p.slug)) { relatedSide.push(p); usados.add(p.slug); }
   }
 }

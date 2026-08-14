@@ -20,12 +20,6 @@ const cta = ctaParaNorma(categories);
 const diagnosticoUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}&utm_term=${cta.slug}`;
 ---
 <aside class="sb">
-  <!-- Só o bloco que CABE na viewport é sticky (autor + CTA ≈ 450px). A aside
-       inteira era sticky e, por passar da altura da tela, o navegador gravava o
-       topo e o fim do card nunca subia: os relacionados só apareciam quando o
-       texto do artigo terminava. Com o sticky no bloco curto, o CTA acompanha o
-       artigo inteiro e nada fica preso esperando o fim do texto. -->
-  <div class="sb-fixo">
   <!-- Autor -->
   <div class="sb-author">
     <span class="sb-author-av"><iconify-icon icon="solar:user-bold"></iconify-icon></span>
@@ -45,7 +39,6 @@ const diagnosticoUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blo
     >Quero meu diagnóstico <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
     <span class="sb-diagnostico-selo">Gratuito · sem compromisso</span>
   </div>
-  </div><!-- /.sb-fixo -->
 
   <!-- Artigos relacionados (abaixo da Olívia: o topo do sidebar é o espaço de
        conversão; relacionado é a saída para quem ainda não está pronto) -->
@@ -67,14 +60,21 @@ const diagnosticoUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blo
   )}
 </aside>
 <style>
-  /* A aside estica na altura da linha do grid para dar pista de rolagem ao bloco
-     sticky de dentro. Ela mesma NÃO é sticky (era o que travava o card). */
-  .sb { align-self: stretch; display: flex; flex-direction: column; gap: 18px; }
-  .sb-fixo { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 18px; }
-  /* Janela muito baixa (notebook pequeno, navegador com muitas barras): nem o bloco
-     curto cabe — aí sticky volta a prender, então desliga e deixa rolar normal. */
-  @media (max-height: 620px) { .sb-fixo { position: static; } }
-  @media (max-width: 980px) { .sb-fixo { position: static; } }
+  /* Sticky aqui tem duas armadilhas, e as duas já morderam:
+     1. sticky na aside INTEIRA, se ela é mais alta que a viewport, crava o topo e
+        o rodapé nunca sobe — o card de relacionados só aparecia quando o texto
+        do artigo acabava;
+     2. sticky só no bloco de cima faz os irmãos de baixo rolarem POR BAIXO dele,
+        porque elemento posicionado pinta acima de estático — os relacionados
+        desapareciam atrás do card da Olívia.
+     Saída sem defeito: sticky na aside inteira (um bloco só, nada por baixo de
+     nada) e o conteúdo enxugado para caber. Como caber depende da altura da
+     janela, o sticky é progressivo: só liga onde há espaço. Sem espaço, a coluna
+     rola junto com o texto — comportamento previsível, nunca travado. */
+  .sb { align-self: start; display: flex; flex-direction: column; gap: 18px; }
+  @media (min-width: 981px) and (min-height: 880px) {
+    .sb { position: sticky; top: 96px; }
+  }
 
   .sb-author { display: flex; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-16); padding: 14px 18px; }
   .sb-author-av { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,89,37,0.12); color: var(--orange); font-size: 22px; flex-shrink: 0; }
@@ -82,7 +82,7 @@ const diagnosticoUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blo
   .sb-author strong { font-size: 15px; font-weight: 800; color: var(--text); }
 
   .sb-diagnostico { background: var(--navy); color: var(--cream); border-radius: var(--r-20); padding: 28px 24px; text-align: center; }
-  .sb-diagnostico-photo { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 16px; border: 3px solid var(--orange); }
+  .sb-diagnostico-photo { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 16px; border: 3px solid var(--orange); }
   .sb-diagnostico h3 { color: var(--cream); font-size: 20px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
   .sb-diagnostico p { font-size: 14px; line-height: 1.55; color: rgba(255,244,221,0.78); margin-bottom: 18px; }
   .sb-diagnostico-selo { display: block; margin-top: 10px; font-size: 11.5px; color: rgba(255,244,221,0.55); }
