@@ -37,16 +37,70 @@ const keywords = (d.keywords && d.keywords.length ? d.keywords : d.categories) |
 const wordCount = post.content ? post.content.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length : 0;
 const faq = d.faq || [];
 
-// relacionados (mesma categoria) — seleção CÍCLICA p/ distribuir links internos:
-// cada post linka os 3 seguintes da sua categoria → todo post recebe links (não só o da categoria).
+// ---------- RELACIONADOS: relevância por tag + garantia de distribuição ----------
+// Em lib/posts.js, `categories` é [category_name, ...tags] — categoria e tags no
+// MESMO array. O filtro abaixo já casava tag, mas SEM PESO: um post que compartilha
+// só a categoria larga ("Segurança e Compliance" tem 27001, LGPD, 37001 e ataque
+// hacker dentro) empatava com outro que compartilha 4 tags do mesmo requisito.
+// Agora tag em comum vale 3 e a categoria vale 1 — quem trata do mesmo assunto sobe.
 const catList = posts.filter((p) => p.data.categories?.some((c) => d.categories?.includes(c)));
 const selfPos = catList.findIndex((p) => p.slug === post.slug);
-const related = [];
-for (let i = 1; i <= 3 && i < catList.length; i++) related.push(catList[(selfPos + i) % catList.length]);
+const catDe = (p) => (p.data.categories || [])[0] || "";
+const tagsDe = (p) => (p.data.categories || []).slice(1);
+const minhasTags = new Set(tagsDe(post));
+const minhaCat = catDe(post);
+const relevancia = (p) => {
+  let s = 0;
+  for (const t of tagsDe(p)) if (minhasTags.has(t)) s += 3;
+  if (catDe(p) === minhaCat) s += 1;
+  return s;
+};
+const porRelevancia = catList
+  .filter((p) => p.slug !== post.slug)
+  .map((p) => ({ p, s: relevancia(p) }))
+  // empate resolve pelo mais recente
+  .sort((a, b) => b.s - a.s || +new Date(b.p.data.pubDate) - +new Date(a.p.data.pubDate))
+  .map((x) => x.p);
+
 const recent = posts
   .filter((p) => p.slug !== post.slug)
   .sort((a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate))
-  .slice(0, 4);
+  .slice(0, 5);
+
+// GARANTIA DE DISTRIBUIÇÃO: o 1º card do rodapé continua sendo o vizinho do anel
+// cíclico. Ordenar só por relevância concentraria os links nos posts com muitas tags
+// e deixaria os magros órfãos — e evitar órfão era justamente o objetivo do anel.
+// Assim: 1 link garante a cobertura, os outros 7 servem o leitor.
+const vizinho = catList.length > 1 ? catList[(selfPos + 1) % catList.length] : null;
+const usados = new Set([post.slug]);
+const related = [];
+if (vizinho && !usados.has(vizinho.slug)) { related.push(vizinho); usados.add(vizinho.slug); }
+for (const p of porRelevancia) {
+  if (related.length >= 3) break;
+  if (!usados.has(p.slug)) { related.push(p); usados.add(p.slug); }
+}
+
+// Sidebar: os 5 mais relevantes que sobraram — nunca repete o rodapé, porque link
+// repetido na mesma página não soma link interno.
+// Fallback com recentes para o card não aparecer pela metade em categoria pequena.
+const relatedSide = [];
+for (const lista of [porRelevancia, recent]) {
+  for (const p of lista) {
+    if (relatedSide.length >= 4) break;
+    if (!usados.has(p.slug)) { relatedSide.push(p); usados.add(p.slug); }
+  }
+}
+// 5º e último slot do sidebar: o 2º vizinho do anel. É o slot menos nobre da página,
+// então doá-lo à cobertura custa pouca relevância e dobra a garantia de distribuição
+// (2 links de anel por post em vez de 1) — menos post órfão no fim da cauda longa.
+const vizinho2 = catList.length > 2 ? catList[(selfPos + 2) % catList.length] : null;
+if (vizinho2 && !usados.has(vizinho2.slug)) { relatedSide.push(vizinho2); usados.add(vizinho2.slug); }
+for (const lista of [porRelevancia, recent]) {
+  for (const p of lista) {
+    if (relatedSide.length >= 5) break;
+    if (!usados.has(p.slug)) { relatedSide.push(p); usados.add(p.slug); }
+  }
+}
 // isca do segmento do artigo (definida no CMS por norma; cai no default)
 const isca = await getIscaForCategories(d.categories);
 
@@ -163,7 +217,7 @@ if (faq.length) {
           <a href={`https://templum.com.br/form?utm_source=blog&utm_medium=cta-artigo&utm_campaign=${post.slug}`} class="btn btn--primary btn--lg" data-trk-event="cta-artigo">Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
         </div>
       </div>
-      <Sidebar ref={post.slug} author={d.author} recent={recent} isca={isca} />
+      <Sidebar ref={post.slug} author={d.author} related={relatedSide} catName={cat} catSlug={catSlug} categories={d.categories} />
     </div>
 
     <!-- Comentários (client-side: lê aprovados, envia como pendente) -->

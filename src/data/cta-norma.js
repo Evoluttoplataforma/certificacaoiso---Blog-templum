@@ -1,0 +1,115 @@
+// CTA da Olívia contextualizado por norma.
+//
+// Por que: "Receba um diagnóstico gratuito da sua empresa" é a mesma frase para
+// quem lê sobre backup de ISO 27001 e para quem lê sobre PBQP-H em canteiro. O
+// leitor chega ao card com uma dor específica na cabeça; falar a língua dela
+// converte mais do que uma promessa genérica.
+//
+// Detecção: a tag vem antes da categoria. Em lib/posts.js, `categories` é
+// [category_name, ...tags] — a tag costuma nomear a norma ("ISO 27001"), enquanto
+// a categoria é larga ("Segurança e Compliance" abriga 27001, LGPD e 37001).
+//
+// `slug` alimenta utm_term, para dar pra medir conversão POR NORMA no diagnóstico
+// em vez de olhar um número só do blog inteiro.
+
+const CTAS = {
+  "iso-9001": {
+    titulo: "Sua ISO 9001 está de pé?",
+    texto: "Receba um diagnóstico gratuito do seu sistema de gestão da qualidade e veja o que o auditor encontraria hoje.",
+  },
+  "iso-27001": {
+    titulo: "Sua segurança da informação passa em auditoria?",
+    texto: "Diagnóstico gratuito do seu SGSI: onde estão as lacunas de controle, antes de o auditor apontar.",
+  },
+  "iso-14001": {
+    titulo: "Seu sistema ambiental está completo?",
+    texto: "Diagnóstico gratuito do seu SGA: aspecto significativo sem controle, requisito legal e o que falta para certificar.",
+  },
+  "iso-45001": {
+    titulo: "Sua gestão de SST protege de verdade?",
+    texto: "Diagnóstico gratuito: perigos sem controle, integração com as NRs e o que a auditoria vai cobrar.",
+  },
+  "iso-22000": {
+    titulo: "Sua operação está segura para a auditoria?",
+    texto: "Diagnóstico gratuito de segurança dos alimentos: pré-requisitos, HACCP e o que os clientes exigem.",
+  },
+  "pbqp-h": {
+    titulo: "Sua construtora está pronta para o PBQP-H?",
+    texto: "Diagnóstico gratuito: nível de qualificação, evidência de canteiro e o que falta para a auditoria do SiAC.",
+  },
+  sassmaq: {
+    titulo: "Sua operação atende ao SASSMAQ?",
+    texto: "Diagnóstico gratuito para transportadoras: requisitos de segurança e qualidade que os embarcadores cobram.",
+  },
+  compliance: {
+    titulo: "Seu programa de compliance se sustenta?",
+    texto: "Diagnóstico gratuito: governança, controles antissuborno e as evidências que a auditoria pede.",
+  },
+  esg: {
+    titulo: "Sua agenda ESG tem indicador?",
+    texto: "Diagnóstico gratuito: o que já dá para provar com dado e o que ainda é discurso.",
+  },
+  auditoria: {
+    titulo: "Vai passar por auditoria?",
+    texto: "Diagnóstico gratuito: veja as não conformidades que o auditor encontraria — antes de ele chegar.",
+  },
+  // sem norma detectada (Gestão e Marketing, IA e afins): mantém a copy original
+  default: {
+    titulo: "Fale com a Olívia",
+    texto: "Receba um diagnóstico gratuito da sua empresa e descubra como a Templum pode te ajudar.",
+  },
+};
+
+// Regras aplicadas às TAGS. Ordem importa: o mais específico primeiro.
+// "27701" e "LGPD" caem no guarda-chuva da 27001 porque o diagnóstico de segurança
+// da informação atende os três.
+// Cuidado que já custou caro: NÃO usar /complian/ aqui. A categoria chama-se
+// "Segurança e Compliance", então essa regra capturava todo post de ISO 27001 e
+// LGPD para o CTA de antissuborno. Compliance só entra por 37001/37301/suborno.
+const REGRAS = [
+  [/\b27701\b|\b27001\b|\blgpd\b|criptograf|mascaramento|prote[çc][ãa]o de dados|seguran[çc]a da informa[çc][ãa]o/i, "iso-27001"],
+  [/\b37001\b|\b37301\b|antissuborno|suborno|integridade corporativa/i, "compliance"],
+  [/\b45001\b|\bsst\b|\bsso\b|\bnr-?\d|seguran[çc]a do trabalho|ocupacional|\bepi\b/i, "iso-45001"],
+  [/\b14001\b|ambient|res[íi]duo|efluente/i, "iso-14001"],
+  [/\b22000\b|haccp|alimen|food/i, "iso-22000"],
+  [/pbqp|siac|constru[çc][ãa]o civil|canteiro|\bobra\b/i, "pbqp-h"],
+  [/sassmaq|transporte|log[íi]stic/i, "sassmaq"],
+  [/\besg\b|sustentabil/i, "esg"],
+  [/auditoria|n[ãa]o conformidade|causa raiz/i, "auditoria"],
+  [/\b9001\b|qualidade/i, "iso-9001"],
+];
+
+// Fallback por CATEGORIA — mapa explícito em vez de regex, porque o conjunto é
+// fechado (data/categorias.js) e assim o resultado é previsível. As categorias
+// ausentes (Gestão e Marketing, IA) caem no CTA genérico de propósito: não há
+// norma a oferecer e prometer diagnóstico de norma ali seria promessa torta.
+const POR_CATEGORIA = {
+  "Qualidade e Inovação": "iso-9001",
+  "Construção Civil": "pbqp-h",
+  "Segurança dos Alimentos": "iso-22000",
+  "Meio Ambiente": "iso-14001",
+  "Saúde e Segurança do Trabalho": "iso-45001",
+  Auditoria: "auditoria",
+  "Segurança e Compliance": "iso-27001",
+  "Transportes e Logística": "sassmaq",
+  ESG: "esg",
+};
+
+export function ctaParaNorma(categories = []) {
+  const cat = categories[0] || "";
+  const tags = categories.slice(1);
+  // 1) tags — sinal mais preciso, costumam nomear a norma
+  for (const tag of tags) {
+    for (const [re, chave] of REGRAS) {
+      if (re.test(tag)) return { slug: chave, ...CTAS[chave] };
+    }
+  }
+  // 2) categoria — mapa explícito
+  const porCat = POR_CATEGORIA[cat];
+  if (porCat) return { slug: porCat, ...CTAS[porCat] };
+  // 3) último recurso: tentar as regras no nome da categoria (categoria nova/não curada)
+  for (const [re, chave] of REGRAS) {
+    if (re.test(cat)) return { slug: chave, ...CTAS[chave] };
+  }
+  return { slug: "geral", ...CTAS.default };
+}

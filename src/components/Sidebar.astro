@@ -1,8 +1,23 @@
 ---
-// Sidebar do artigo (sticky no desktop): autor + CTA diagnóstico + recentes.
-const { ref = "", author = "Equipe Templum", recent = [] } = Astro.props;
-const diagnosticoUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}`;
-const fmt = (d) => new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
+// Sidebar do artigo (sticky no desktop): autor + CTA diagnóstico + relacionados.
+//
+// Por que relacionados e não recentes: quem lê um artigo está numa dúvida
+// específica. "Recentes" entrega o que saiu por último — pode ser PBQP-H para
+// quem pesquisa ISO 27001 — o que aumenta o abandono. Relacionado mantém o
+// leitor no mesmo tema, sobe páginas por sessão e ele chega mais aquecido no CTA.
+//
+// A lista vem do [slug].astro já sem os 3 posts do bloco do rodapé, para a
+// mesma página não repetir link (link repetido não soma link interno).
+// Sem data de propósito: em card de relacionados a relevância importa mais que a
+// recência, e data antiga em post ainda válido derruba o clique.
+import { ctaParaNorma } from "../data/cta-norma.js";
+
+const { ref = "", author = "Equipe Templum", related = [], catName = "", catSlug = "", categories = [] } = Astro.props;
+
+// CTA da Olívia contextualizado pela norma do artigo (ver data/cta-norma.js).
+// utm_term leva a norma para dar pra medir conversão por norma, não só do blog todo.
+const cta = ctaParaNorma(categories);
+const diagnosticoUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}&utm_term=${cta.slug}`;
 ---
 <aside class="sb">
   <!-- Autor -->
@@ -14,18 +29,33 @@ const fmt = (d) => new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", mon
   <!-- CTA único: diagnóstico com a Olívia -->
   <div class="sb-diagnostico">
     <img class="sb-diagnostico-photo" src="/assets/team/olivia-especialista.png" alt="Olívia, especialista Templum" />
-    <h3>Fale com a Olívia</h3>
-    <p>Receba um diagnóstico gratuito da sua empresa e descubra como a Templum pode te ajudar.</p>
-    <a href={diagnosticoUrl} class="btn btn--primary btn--block" data-trk-event="cta-sidebar-diagnostico">Quero meu diagnóstico <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+    <h3>{cta.titulo}</h3>
+    <p>{cta.texto}</p>
+    <a
+      href={diagnosticoUrl}
+      class="btn btn--primary btn--block"
+      data-trk-event="cta-sidebar-diagnostico"
+      data-trk-norma={cta.slug}
+    >Quero meu diagnóstico <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+    <span class="sb-diagnostico-selo">Gratuito · sem compromisso</span>
   </div>
 
-  <!-- Artigos recentes -->
-  {recent.length > 0 && (
+  <!-- Artigos relacionados (abaixo da Olívia: o topo do sidebar é o espaço de
+       conversão; relacionado é a saída para quem ainda não está pronto) -->
+  {related.length > 0 && (
     <div class="sb-recent">
-      <h4>Artigos recentes</h4>
-      <ul>{recent.map((p) => (
-        <li><a href={`/${p.slug}/`}><span class="sb-recent-t">{p.data.title}</span><time>{fmt(p.data.pubDate)}</time></a></li>
+      <h4>Artigos relacionados</h4>
+      <ul>{related.map((p) => (
+        <li>
+          <a href={`/${p.slug}/`} data-trk-event="link-sidebar-relacionado">
+            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+            <span class="sb-recent-t">{p.data.title}</span>
+          </a>
+        </li>
       ))}</ul>
+      {catSlug && (
+        <a class="sb-recent-all" href={`/categoria/${catSlug}/`}>Ver todos sobre {catName}</a>
+      )}
     </div>
   )}
 </aside>
@@ -42,12 +72,17 @@ const fmt = (d) => new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", mon
   .sb-diagnostico-photo { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 16px; border: 3px solid var(--orange); }
   .sb-diagnostico h3 { color: var(--cream); font-size: 20px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
   .sb-diagnostico p { font-size: 14px; line-height: 1.55; color: rgba(255,244,221,0.78); margin-bottom: 18px; }
+  .sb-diagnostico-selo { display: block; margin-top: 10px; font-size: 11.5px; color: rgba(255,244,221,0.55); }
 
   .sb-recent { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-20); padding: 22px 24px; }
   .sb-recent h4 { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 14px; }
-  .sb-recent ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
-  .sb-recent a { display: block; }
+  .sb-recent ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+  .sb-recent li + li { border-top: 1px solid var(--border); padding-top: 14px; }
+  .sb-recent ul a { display: flex; gap: 8px; align-items: baseline; }
+  .sb-recent ul a iconify-icon { color: var(--orange); font-size: 14px; flex-shrink: 0; transition: transform .2s; }
+  .sb-recent ul a:hover iconify-icon { transform: translateX(3px); }
   .sb-recent-t { display: block; font-size: 14px; font-weight: 700; color: var(--text-2); line-height: 1.35; }
   .sb-recent a:hover .sb-recent-t { color: var(--orange); }
-  .sb-recent time { font-size: 12px; color: var(--text-soft); }
+  .sb-recent-all { display: inline-block; margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--orange); }
+  .sb-recent-all:hover { text-decoration: underline; }
 </style>
