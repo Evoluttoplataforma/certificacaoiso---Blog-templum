@@ -340,7 +340,9 @@ if (faq.length) {
   .post-content :global(ul), .post-content :global(ol) { margin: 0 0 18px 22px; display: flex; flex-direction: column; gap: 8px; }
   .post-content :global(blockquote) { border-left: 4px solid var(--orange); padding: 6px 0 6px 20px; margin: 24px 0; font-style: italic; color: var(--text-mid); }
   .post-content :global(figure) { margin: 22px 0; }
-  .post-content :global(iframe) { max-width: 100%; border-radius: var(--r-16); aspect-ratio: 16/9; width: 100%; }
+  /* embeds (YouTube etc.): display:block porque iframe é inline por padrão — sem isso
+     o vídeo ganha um vão de descender embaixo e cola no parágrafo seguinte. */
+  .post-content :global(iframe) { max-width: 100%; border-radius: var(--r-16); aspect-ratio: 16/9; width: 100%; display: block; margin: 24px 0; border: 0; }
   .post-content :global(table) { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 15px; }
   .post-content :global(th), .post-content :global(td) { border: 1px solid var(--border); padding: 10px 12px; text-align: left; }
   /* TL;DR / Resposta rápida — citável por IA, answer-first */
