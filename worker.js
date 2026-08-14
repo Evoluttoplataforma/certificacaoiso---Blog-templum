@@ -26,9 +26,24 @@ export default {
       const resp = await fetch(new Request(target, request), { redirect: "manual" });
       if (resp.status >= 300 && resp.status < 400) {
         const loc = resp.headers.get("location");
-        if (loc && loc.startsWith("/") && !loc.startsWith("/acesso")) {
+        // O CMS responde com os dois formatos: relativo ("/login/") e ABSOLUTO pro
+        // próprio workers.dev (é o caso de /acesso → /acesso/). O absoluto passava
+        // batido e jogava quem entrava no CMS pra fora de certificacaoiso.com.br,
+        // com o host interno exposto na barra. Normaliza os dois em path relativo.
+        let path = null;
+        if (loc && loc.startsWith("/")) {
+          path = loc;
+        } else if (loc) {
+          try {
+            const l = new URL(loc);
+            // só reescreve o que aponta pro próprio CMS; redirect pra fora (ex.: auth
+            // de terceiro) tem que continuar saindo daqui intacto.
+            if (l.host === new URL(CMS).host) path = l.pathname + l.search + l.hash;
+          } catch { /* Location malformada → devolve como veio */ }
+        }
+        if (path !== null) {
           const h = new Headers(resp.headers);
-          h.set("location", "/acesso" + loc);
+          h.set("location", path.startsWith("/acesso") ? path : "/acesso" + path);
           return new Response(resp.body, { status: resp.status, headers: h });
         }
       }
