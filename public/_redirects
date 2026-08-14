@@ -212,3 +212,15 @@
 /tipos-planejamento-estrategico-2                           /tipos-planejamento-estrategico/                            301
 /partes-planejamento-estrategico-2/                         /partes-planejamento-estrategico/                           301
 /partes-planejamento-estrategico-2                          /partes-planejamento-estrategico/                           301
+
+# Consolidação SASSMAQ (14/08/2026): três páginas disputavam as mesmas buscas
+# ("sassmaq", "sassmaq o que é", "certificação sassmaq"), todas na posição 10-16.
+# /o-que-e-a-certificacao-sassmaq/ era duplicata literal de /o-que-e-sassmaq/ —
+# mesmo texto, publicado 5 meses depois. Sinal consolidado na página com mais
+# autoridade (13.697 impressões, posição 8.9), que absorveu o conteúdo das duas.
+/o-que-e-a-certificacao-sassmaq       /o-que-e-sassmaq/   301
+/o-que-e-a-certificacao-sassmaq/      /o-que-e-sassmaq/   301
+/sassmaq                              /o-que-e-sassmaq/   301
+/sassmaq/                             /o-que-e-sassmaq/   301
+/transporte-de-quimicos-na-pandemia    /o-que-e-sassmaq/   301
+/transporte-de-quimicos-na-pandemia/   /o-que-e-sassmaq/   301
