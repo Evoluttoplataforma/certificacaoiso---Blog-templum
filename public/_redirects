@@ -146,6 +146,15 @@
 /solicite-proposta/                              https://templum.com.br/form?utm_source=blog&utm_medium=organico   301
 /solicite-proposta                               https://templum.com.br/form?utm_source=blog&utm_medium=organico   301
 
+# Consolidação do cluster 5S (ago/2026). Duas páginas finas canibalizavam as fortes:
+# `relacao-entre-5s-...` (2.9k chars, pos. 16, zero inlink) disputava a mesma intenção de
+# `programa-5s-e-a-iso-9001` (pos. 4,2) e `o-programa-5s-como-recurso-estrategico` (2.9k, 3
+# cliques em 6 meses) repetia o pilar. Conteúdo útil foi absorvido nos destinos abaixo.
+/relacao-entre-5s-sistema-de-gestao-da-qualidade/          /programa-5s-e-a-iso-9001/   301
+/relacao-entre-5s-sistema-de-gestao-da-qualidade           /programa-5s-e-a-iso-9001/   301
+/o-programa-5s-como-recurso-estrategico-nas-organizacoes/  /5s/                         301
+/o-programa-5s-como-recurso-estrategico-nas-organizacoes   /5s/                         301
+
 # Cursos descontinuados → post que cobre o mesmo assunto.
 /curso-de-5s-na-pratica/                         /5s/                                       301
 /curso-de-5s-na-pratica                          /5s/                                       301
