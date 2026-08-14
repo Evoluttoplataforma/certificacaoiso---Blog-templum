@@ -4,7 +4,7 @@
 
 ## Este repositório
 - **App:** Blog Certificação ISO — **`certificacaoiso.com.br`** (1.015 posts + iscas `/presentes/<slug>`)
-- **Stack:** Astro estático que **lê o Supabase no BUILD** · Worker Cloudflare **`certificacaoiso-blog`**
+- **Stack:** Astro estático que **lê o Supabase no BUILD** · Worker Cloudflare **`blog-templum-certificacaoiso`**
 - **Remote:** `github.com/Evoluttoplataforma/certificacaoiso---Blog-templum`
 - **Dev:** `npm run dev` · **Build:** `npm run build` · **Preview:** `npm run preview`
 - **Importante:** o `worker.js` faz **proxy de `/acesso*` → Worker do CMS**. Não quebre isso.

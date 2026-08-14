@@ -68,10 +68,6 @@
 /sucesso-planilha-tartaruga-turbinada/                                    /presentes/  301
 /sucesso-planilha-tartaruga-turbinada                                     /presentes/  301
 
-# Categorias antigas do WordPress (/category/) → /categoria/ (ou home p/ as que não existem)
-/category/construcao-civil/*          /categoria/construcao-civil/  301
-/category/*                           /  301
-
 # Iscas desativadas temporariamente (arquivo original perdido na migração do WP, aguardando reposição) → listagem geral.
 /presentes/e-book-okr/                                    /presentes/  301
 /presentes/e-book-okr                                     /presentes/  301
@@ -224,3 +220,21 @@
 /sassmaq/                             /o-que-e-sassmaq/   301
 /transporte-de-quimicos-na-pandemia    /o-que-e-sassmaq/   301
 /transporte-de-quimicos-na-pandemia/   /o-que-e-sassmaq/   301
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ⚠️ NÃO USE CURINGA (* ou :placeholder) NESTE ARQUIVO. REGRA COM CURINGA VAI NO worker.js.
+#
+# A Cloudflare aceita 2.000 redirects "static" e só 100 "dynamic" — e o corte não
+# é "a regra tem curinga": é a PRIMEIRA regra com curinga e TUDO o que vem depois
+# dela no arquivo. As duas regras de /category/* estavam na linha 72, então cada
+# 301 novo adicionado abaixo delas virava dynamic. Em 14/08/2026 o limite estourou
+# e derrubou TODO deploy do Worker por horas — o build do Astro passava limpo, o
+# erro só aparecia na API ("Maximum number of dynamic _redirects rules limit of
+# 100 exceeded") e o site seguia servindo a versão velha, sem sinal de falha.
+#
+# As de /category/ foram pro worker.js (onde, de quebra, a precedência funciona:
+# aqui a regra ampla vencia a específica nas duas ordens possíveis).
+#
+# Hoje: 166 regras, todas static, zero dynamic. Enquanto ficar assim o teto é
+# 2.000 e o problema não volta.
+# ─────────────────────────────────────────────────────────────────────────────

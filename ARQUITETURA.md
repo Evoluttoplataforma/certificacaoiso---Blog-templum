@@ -26,7 +26,7 @@ Três aplicações **Astro (estáticas)** + **Supabase** (fonte única de dados)
    │                │  │ no build)          │  │ admin (Supabase Auth)  │
    └────────────────┘  └────────────────────┘  └────────────────────────┘
         Worker              Worker                    Worker
-     site-templum        certificacaoiso-blog      certificacaoiso-cms
+     site-templum        blog-templum-certificacaoiso   cms-blog-templum-certificacaoiso
 ```
 
 **Regra-chave:** o conteúdo (posts, iscas, comentários, histórias) vive no **Supabase**.
@@ -40,8 +40,8 @@ publicar dispara um **rebuild** do blog (Edge Function → Deploy Hook da Cloudf
 | App | Domínio | Pasta local | Repo GitHub | Worker Cloudflare |
 |---|---|---|---|---|
 | **Site** | `templum.com.br` | `site/` | `Evoluttoplataforma/site-templum` | `site-templum` |
-| **Blog** | `certificacaoiso.com.br` | `certificacaoiso/` | `Evoluttoplataforma/certificacaoiso---Blog-templum` | `certificacaoiso-blog` |
-| **CMS** | `certificacaoiso.com.br/acesso` | `cms-blog-templum-certificacaoiso/` | `Evoluttoplataforma/cms-blog-templum-certificacaoiso` | `certificacaoiso-cms` |
+| **Blog** | `certificacaoiso.com.br` | `certificacaoiso/` | `Evoluttoplataforma/certificacaoiso---Blog-templum` | `blog-templum-certificacaoiso` |
+| **CMS** | `certificacaoiso.com.br/acesso` | `cms-blog-templum-certificacaoiso/` | `Evoluttoplataforma/cms-blog-templum-certificacaoiso` | `cms-blog-templum-certificacaoiso` |
 
 - **Site** — institucional (consultoria, normas, cases, histórias, presentes). Astro estático,
   `trailingSlash: 'ignore'`, `format: 'directory'`.

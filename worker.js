@@ -35,6 +35,28 @@ export default {
       return resp;
     }
 
+    // Categorias antigas do WordPress: /category/<slug>/ → /categoria/<slug>/ quando a
+    // categoria ainda existe; senão, home.
+    //
+    // Isto morava no _redirects como duas regras com curinga, e não funcionava: a regra
+    // ampla (/category/*) vencia a específica (/category/construcao-civil/*) nas DUAS
+    // ordens possíveis — testado em produção —, então toda categoria antiga caía na home.
+    // Aqui a precedência é nossa, e vale pras 112 categorias, não só uma. De quebra tira
+    // do _redirects as últimas regras com curinga, que são as que contam contra o limite
+    // de 100 "dynamic" da Cloudflare (ver o cabeçalho do fim daquele arquivo).
+    const cat = url.pathname.match(/^\/category\/([^/]+)(?:\/|$)/);
+    if (cat) {
+      const target = new URL(url.toString());
+      target.pathname = `/categoria/${cat[1]}/`;
+      target.search = "";
+      const catResp = await env.ASSETS.fetch(new Request(target.toString(), request));
+      if (catResp.status === 200) return Response.redirect(target.toString(), 301);
+      return Response.redirect(new URL("/", url).toString(), 301);
+    }
+    if (/^\/category\/?$/.test(url.pathname)) {
+      return Response.redirect(new URL("/", url).toString(), 301);
+    }
+
     // --- (futuro) imagens dos artigos via R2 ---
     // if (url.pathname.startsWith("/wp-content/") && env.IMAGES) {
     //   const obj = await env.IMAGES.get(url.pathname.replace(/^\//, ""));
