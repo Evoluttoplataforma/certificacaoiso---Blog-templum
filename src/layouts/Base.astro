@@ -17,6 +17,11 @@ const {
 
 const SITE = (Astro.site?.href || "https://certificacaoiso.com.br/").replace(/\/$/, "");
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+
+// Botão flutuante: no MOBILE é a Olívia (diagnóstico), no desktop segue o WhatsApp.
+// utm_campaign leva a página de origem, para saber de onde vem o clique do float.
+const floatRef = (Astro.url.pathname || "/").replace(/^\/|\/$/g, "") || "home";
+const oliviaFloatUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blog&utm_medium=float-mobile&utm_campaign=${floatRef}`;
 const ogImageUrl = ogImage.startsWith("http") ? ogImage : new URL(ogImage, Astro.site).href;
 
 // --- JSON-LD base: Organization (Templum, publisher) + WebSite (Certificação ISO) ---
@@ -133,9 +138,25 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
     </main>
     {!noChrome && <Footer />}
     {!noChrome && (
-      <a class="whatsapp-float" href="https://wa.me/5519993521270" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-        <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon>
-      </a>
+      <>
+        {/* Desktop: WhatsApp. Mobile: Olívia — no celular o leitor está a um toque
+            do diagnóstico, e o rosto de uma pessoa converte melhor que um ícone
+            genérico. Dois links com troca por CSS porque media query não muda href. */}
+        <a class="whatsapp-float float-desktop" href="https://wa.me/5519993521270" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+          <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon>
+        </a>
+        <a
+          class="olivia-float float-mobile"
+          href={oliviaFloatUrl}
+          target="_blank"
+          rel="noopener"
+          aria-label="Falar com a Olívia e receber um diagnóstico gratuito"
+          data-trk-event="cta-float-olivia"
+        >
+          <img src="/assets/team/olivia-float.webp" alt="" width="128" height="128" loading="lazy" decoding="async" />
+          <span class="olivia-float-tag">Falar com a Olívia</span>
+        </a>
+      </>
     )}
     <script is:inline>
       (function () {
