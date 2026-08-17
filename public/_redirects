@@ -221,6 +221,14 @@
 /transporte-de-quimicos-na-pandemia    /o-que-e-sassmaq/   301
 /transporte-de-quimicos-na-pandemia/   /o-que-e-sassmaq/   301
 
+# Cluster ISO 37001 (17/08/2026): /a-nova-iso-37001/ era texto de opinião de 2016
+# sobre corrupção na política (4,6k chars, zero h2, zero impressão em 16 meses) e
+# ainda descrevia a norma como "lançamento recente". Nada a absorver: o pilar
+# /o-que-e-a-iso-37001/ (8.150 impressões, posição 9,4) foi reescrito na versão
+# ISO 37001:2025 e recebe o sinal. Post saiu do ar (status=draft no Supabase).
+/a-nova-iso-37001     /o-que-e-a-iso-37001/   301
+/a-nova-iso-37001/    /o-que-e-a-iso-37001/   301
+
 # ─────────────────────────────────────────────────────────────────────────────
 # ⚠️ NÃO USE CURINGA (* ou :placeholder) NESTE ARQUIVO. REGRA COM CURINGA VAI NO worker.js.
 #
