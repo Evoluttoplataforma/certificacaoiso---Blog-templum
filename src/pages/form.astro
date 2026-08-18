@@ -52,11 +52,16 @@ const robots = "noindex,follow";
 </Base>
 
 <style>
-  .fm-hero { padding: 54px 0 44px; }
-  .fm-hero h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; letter-spacing: -0.03em; margin: 14px 0 12px; }
+  /* Mesmo padrão do hero da home (.bloghero): em fundo navy o h1 PRECISA declarar a cor,
+     porque o global define h1 { color: var(--text) } — sem isso o título fica escuro sobre
+     escuro e só o <em> laranja aparece. line-height e max-width evitam a palavra órfã na
+     segunda linha quando a norma entra no título pela querystring. */
+  .fm-hero { padding: 60px 0 48px; }
+  .fm-hero h1 { color: var(--cream); font-size: clamp(28px, 4.2vw, 46px); font-weight: 800;
+    line-height: 1.08; letter-spacing: -0.03em; margin: 18px 0 14px; max-width: 820px; text-wrap: balance; }
   .fm-hero h1 :global(em) { font-style: italic; }
-  .fm-hero > div > p { font-size: 16.5px; line-height: 1.6; color: rgba(255,244,221,.75); max-width: 620px; margin: 0; }
-  .fm-benefits { display: inline-flex; flex-direction: column; gap: 10px; text-align: left; margin: 24px 0 0; }
+  .fm-hero > div > p { font-size: 17px; line-height: 1.6; color: rgba(255,244,221,0.78); max-width: 620px; margin: 0; }
+  .fm-benefits { display: inline-flex; flex-direction: column; gap: 10px; text-align: left; margin: 26px 0 0; }
   .fm-form-wrap { padding-top: 8px; }
   /* O LeadForm já traz a própria margem superior; aqui ela duplicaria o respiro. */
   .fm-form-wrap :global(.lead-form) { margin-top: 0; }
