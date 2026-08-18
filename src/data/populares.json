@@ -1,0 +1,2756 @@
+{
+  "_comentario": "Gerado por scripts/populares.mjs a partir do export do Search Console. Não editar à mão.",
+  "geradoEm": "2026-08-18",
+  "periodo": "Últimos 6 meses",
+  "metrica": "cliques organicos (Search Console)",
+  "ranking": [
+    {
+      "slug": "iso-9001",
+      "cliques": 2264
+    },
+    {
+      "slug": "o-que-e-fluxograma-de-processos",
+      "cliques": 1986
+    },
+    {
+      "slug": "iso-14001-2",
+      "cliques": 1478
+    },
+    {
+      "slug": "iso-45001",
+      "cliques": 1240
+    },
+    {
+      "slug": "como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa",
+      "cliques": 495
+    },
+    {
+      "slug": "diferencas-entre-programa-5s-housekeeping",
+      "cliques": 478
+    },
+    {
+      "slug": "instrucao-de-trabalho-it",
+      "cliques": 421
+    },
+    {
+      "slug": "iso-17025",
+      "cliques": 405
+    },
+    {
+      "slug": "iso-9001-requisitos-tudo-que-voce-precisa-saber",
+      "cliques": 387
+    },
+    {
+      "slug": "passo-a-passo-certificacao-iso-9001",
+      "cliques": 375
+    },
+    {
+      "slug": "raio-x-empresas-certificadas",
+      "cliques": 373
+    },
+    {
+      "slug": "missao-visao-valores",
+      "cliques": 349
+    },
+    {
+      "slug": "quanto-custa-iso-9001",
+      "cliques": 268
+    },
+    {
+      "slug": "pbqp-h-2",
+      "cliques": 237
+    },
+    {
+      "slug": "o-que-e-nao-conformidade",
+      "cliques": 226
+    },
+    {
+      "slug": "as-sete-ferramentas-da-qualidade",
+      "cliques": 223
+    },
+    {
+      "slug": "como-identificar-aspecto-impacto-ambiental",
+      "cliques": 212
+    },
+    {
+      "slug": "principais-duvidas-sobre-o-geric",
+      "cliques": 196
+    },
+    {
+      "slug": "procedimentos-obrigatorios-2",
+      "cliques": 166
+    },
+    {
+      "slug": "checklist-preparacao-auditoria-interna-iso",
+      "cliques": 154
+    },
+    {
+      "slug": "guia-definitivo-das-mudancas-iso-2026",
+      "cliques": 148
+    },
+    {
+      "slug": "organograma-funcional",
+      "cliques": 142
+    },
+    {
+      "slug": "8-tecnicas-que-os-grandes-lideres-usam-para-motivar-pessoas",
+      "cliques": 130
+    },
+    {
+      "slug": "qualidade-na-pratica-peps-e-pvps-e-a-qualidade-integrada-ao-estoque",
+      "cliques": 124
+    },
+    {
+      "slug": "iso-9001-requisitos-7-5-informacao-documentada",
+      "cliques": 124
+    },
+    {
+      "slug": "a-qualificacao-de-fornecedores-segundo-a-iso-90012015",
+      "cliques": 121
+    },
+    {
+      "slug": "5s",
+      "cliques": 120
+    },
+    {
+      "slug": "ohsas-18001-e-iso-45001",
+      "cliques": 118
+    },
+    {
+      "slug": "iso-9001-e-suas-mudancas-ao-longo-do-tempo",
+      "cliques": 116
+    },
+    {
+      "slug": "iso-9001-contexto-da-organizacao",
+      "cliques": 109
+    },
+    {
+      "slug": "selo-casa-azul-caixa-entenda-o-que-e-e-como-aderir",
+      "cliques": 107
+    },
+    {
+      "slug": "os-3-pilares-da-gestao-da-qualidade-simplificado-a-gestao",
+      "cliques": 104
+    },
+    {
+      "slug": "elementos-planejamento-estrategico",
+      "cliques": 96
+    },
+    {
+      "slug": "custos-de-acidentes-de-trabalho",
+      "cliques": 96
+    },
+    {
+      "slug": "siac-2021-anexo-vii-qualificacao-de-fornecedores-laboratoriais",
+      "cliques": 93
+    },
+    {
+      "slug": "acao-de-correcao-acao-corretiva",
+      "cliques": 91
+    },
+    {
+      "slug": "iso-27001",
+      "cliques": 90
+    },
+    {
+      "slug": "controle-de-documentos",
+      "cliques": 88
+    },
+    {
+      "slug": "empreendedorismo-necessidade-oportunidade",
+      "cliques": 87
+    },
+    {
+      "slug": "pqo-o-plano-de-qualidade-da-obra-no-pbqp-h",
+      "cliques": 86
+    },
+    {
+      "slug": "iso-14001",
+      "cliques": 84
+    },
+    {
+      "slug": "as-diferencas-entre-o-nivel-b-e-o-nivel-a-do-pbqp-h",
+      "cliques": 83
+    },
+    {
+      "slug": "programas-5s-e-8s-diferencas-e-aplicacoes",
+      "cliques": 83
+    },
+    {
+      "slug": "planilha-mapeamento-de-processos-sgi",
+      "cliques": 80
+    },
+    {
+      "slug": "copias-controladas-copias-nao-controladas-em-sistema-de-gestao-como-agir",
+      "cliques": 71
+    },
+    {
+      "slug": "programa-5s-vantagens-e-desvantagens",
+      "cliques": 70
+    },
+    {
+      "slug": "iso-9001-escopo-4-3",
+      "cliques": 69
+    },
+    {
+      "slug": "documentacao-iso-9001",
+      "cliques": 67
+    },
+    {
+      "slug": "requisitos-4-2-partes-interessadas",
+      "cliques": 65
+    },
+    {
+      "slug": "seguranca-trabalho-produtividade",
+      "cliques": 63
+    },
+    {
+      "slug": "matriz-de-riscos-o-que-e-e-como-aplicar",
+      "cliques": 61
+    },
+    {
+      "slug": "a-iso-9001-em-orgaos-publicos",
+      "cliques": 60
+    },
+    {
+      "slug": "7-praticas-para-diminuir-os-residuos-e-aumentar-o-lucro-na-construcao-civil",
+      "cliques": 59
+    },
+    {
+      "slug": "quais-as-diferencas-entre-o-sistema-iso-9001-e-o-pbqp-h",
+      "cliques": 57
+    },
+    {
+      "slug": "programa-de-qualidade-contabil-iso-9001",
+      "cliques": 56
+    },
+    {
+      "slug": "metodologias-planejamento-estrategico",
+      "cliques": 55
+    },
+    {
+      "slug": "perguntas-frequentes",
+      "cliques": 51
+    },
+    {
+      "slug": "pbqp-h",
+      "cliques": 51
+    },
+    {
+      "slug": "pbqp-h-passo-a-passo",
+      "cliques": 51
+    },
+    {
+      "slug": "como-usar-a-planilha-5w2h",
+      "cliques": 50
+    },
+    {
+      "slug": "perspectiva-de-ciclo-de-vida-na-iso-140012015",
+      "cliques": 50
+    },
+    {
+      "slug": "iso-9001-requisitos-7-1-recursos",
+      "cliques": 49
+    },
+    {
+      "slug": "iso-27001-o-guia",
+      "cliques": 49
+    },
+    {
+      "slug": "e-sgq",
+      "cliques": 47
+    },
+    {
+      "slug": "importancia-planejamento-estrategico-organizacoes",
+      "cliques": 46
+    },
+    {
+      "slug": "geric-processo-de-analise-de-risco-da-caixa",
+      "cliques": 46
+    },
+    {
+      "slug": "diferenca-entre-documentos-registros",
+      "cliques": 45
+    },
+    {
+      "slug": "qualidade-e-seguranca-de-mao-dadas",
+      "cliques": 45
+    },
+    {
+      "slug": "fssc-22000-versao-6-guias-de-orientacao-sobre-food-defense-e-mitigacao-de-food-fraud",
+      "cliques": 44
+    },
+    {
+      "slug": "resgistros-competencia-treinamento-conscientizacao",
+      "cliques": 43
+    },
+    {
+      "slug": "12-ideias-para-provocar-mudancas-de-comportamento-e-melhorar-seus-resultados",
+      "cliques": 43
+    },
+    {
+      "slug": "analise-14001",
+      "cliques": 43
+    },
+    {
+      "slug": "ozempic-mentira-gestao-de-processos",
+      "cliques": 43
+    },
+    {
+      "slug": "desempenho-performance-como-analisar",
+      "cliques": 42
+    },
+    {
+      "slug": "integracao-nr-com-iso",
+      "cliques": 42
+    },
+    {
+      "slug": "calibracao-tudo-o-que-voce-precisa-saber",
+      "cliques": 41
+    },
+    {
+      "slug": "pgrs-como-elaborar-o-plano-de-gerenciamento-de-residuos-solidos",
+      "cliques": 41
+    },
+    {
+      "slug": "cipa-ou-designado-cipa-na-construcao-civil",
+      "cliques": 41
+    },
+    {
+      "slug": "diferencas-entre-nao-conformidade-maior-menor",
+      "cliques": 41
+    },
+    {
+      "slug": "como-conseguiur-a-certificacao-do-pbqp-h",
+      "cliques": 41
+    },
+    {
+      "slug": "apoio-a-producao-como-conseguir-financiamento-para-sua-construtora",
+      "cliques": 40
+    },
+    {
+      "slug": "iso-9001-requisitos-6-1-acoes-para-abordar-riscos-e-oportunidades",
+      "cliques": 40
+    },
+    {
+      "slug": "plano-de-cargos-salarios-e-uma-exigencia-da-iso-9001",
+      "cliques": 40
+    },
+    {
+      "slug": "o-que-e-histograma",
+      "cliques": 39
+    },
+    {
+      "slug": "metodologia-de-analise-solucao-de-problemas-masp",
+      "cliques": 39
+    },
+    {
+      "slug": "processo-pdca",
+      "cliques": 39
+    },
+    {
+      "slug": "3-acoes-que-ajudam-a-evitar-acidentes-no-seu-local-de-trabalho",
+      "cliques": 39
+    },
+    {
+      "slug": "os-08-principios-da-qualidade",
+      "cliques": 38
+    },
+    {
+      "slug": "o-que-e-sassmaq",
+      "cliques": 38
+    },
+    {
+      "slug": "auditorias-internas-e-externas-iso",
+      "cliques": 38
+    },
+    {
+      "slug": "iso-9001-requisitos-5-1-lideranca-e-comprometimento",
+      "cliques": 37
+    },
+    {
+      "slug": "como-a-iso-9001-pode-ajudar-na-gestao-de-estoque",
+      "cliques": 37
+    },
+    {
+      "slug": "iso-45001-prevencao-de-acidentes-e-o-modelo-do-queijo-suico",
+      "cliques": 36
+    },
+    {
+      "slug": "guia-de-implementacao-requisitos-iso-9001",
+      "cliques": 36
+    },
+    {
+      "slug": "etapas-do-planejamento-estrategico",
+      "cliques": 35
+    },
+    {
+      "slug": "os-ciclos-da-recertificacao",
+      "cliques": 34
+    },
+    {
+      "slug": "atendimento-telefonico",
+      "cliques": 34
+    },
+    {
+      "slug": "quanto-realmente-custa-implementar-a-certificacao-pbqp-h-e-por-que-vale-a-pena",
+      "cliques": 34
+    },
+    {
+      "slug": "onde-reclamar-de-empresas-iso-9001",
+      "cliques": 33
+    },
+    {
+      "slug": "diferenca-entre-os-programas-do-gfsi",
+      "cliques": 32
+    },
+    {
+      "slug": "iso-9001-requisitos-5-3-papeis-responsabilidades-e-autoridades-organizacionais",
+      "cliques": 32
+    },
+    {
+      "slug": "por-quantos-auditores-deve-ser-formada-equipe-de-auditoria-interna-para-sistema-de-gestao-da-qualidade-iso-9001",
+      "cliques": 32
+    },
+    {
+      "slug": "ppra",
+      "cliques": 31
+    },
+    {
+      "slug": "quais-sao-disposicoes-mais-comuns-para-um-produto-nao-conforme",
+      "cliques": 31
+    },
+    {
+      "slug": "mapeamento-de-processos-bpmn",
+      "cliques": 31
+    },
+    {
+      "slug": "iso-9001-requisitos-6-3-planejamento-de-mudancas",
+      "cliques": 31
+    },
+    {
+      "slug": "requisitos-legais-aplicaveis-ao-pbqp-h",
+      "cliques": 31
+    },
+    {
+      "slug": "o-que-e-e-para-que-serve-um-checklist",
+      "cliques": 30
+    },
+    {
+      "slug": "iso-27001-e-o-escopo-do-sistema-de-gestao-da-seguranca-da-informacao",
+      "cliques": 30
+    },
+    {
+      "slug": "materiais-e-servicos-controlados-pbqp-h",
+      "cliques": 30
+    },
+    {
+      "slug": "planilha-analise-swot",
+      "cliques": 30
+    },
+    {
+      "slug": "acidente-de-trabalho-veja-como-proceder",
+      "cliques": 29
+    },
+    {
+      "slug": "auditoria-interna-e-melhoria-continua",
+      "cliques": 29
+    },
+    {
+      "slug": "certificacao-iso-9001-guia-completo-indicadores-de-processo",
+      "cliques": 29
+    },
+    {
+      "slug": "iso-14001-os-7-beneficios-da-norma-para-o-seu-negocio",
+      "cliques": 29
+    },
+    {
+      "slug": "nbr-15575-resumo-e-aplicacao",
+      "cliques": 28
+    },
+    {
+      "slug": "iso-9001-requisitos-7-2-competencia",
+      "cliques": 28
+    },
+    {
+      "slug": "3-pontos-fundamentais-para-uma-venda",
+      "cliques": 28
+    },
+    {
+      "slug": "principios-planejamento-estrategico-4",
+      "cliques": 28
+    },
+    {
+      "slug": "como-lidar-com-a-inadimplencia-dos-honorarios-contabeis",
+      "cliques": 27
+    },
+    {
+      "slug": "lista-mestra-de-documentos-02",
+      "cliques": 27
+    },
+    {
+      "slug": "mapeamento-de-processos-e-a-iso-9001",
+      "cliques": 27
+    },
+    {
+      "slug": "iso-56002-o-que-e-a-iso-de-inovacao",
+      "cliques": 27
+    },
+    {
+      "slug": "planilha-planejamento-para-integracao-de-normas",
+      "cliques": 27
+    },
+    {
+      "slug": "como-fazer-uma-pesquisa-de-satisfacao",
+      "cliques": 26
+    },
+    {
+      "slug": "pbqp-h-o-segredo",
+      "cliques": 26
+    },
+    {
+      "slug": "40-maneiras-para-aproveitar-o-seu-logotipo",
+      "cliques": 26
+    },
+    {
+      "slug": "por-que-a-caixa-economica-federal-exige-a-certificacao-pbqp-h-das-construtoras",
+      "cliques": 26
+    },
+    {
+      "slug": "iso-14001-quais-mudancas-aconteceram-na-norma-ao-longo-do-tempo",
+      "cliques": 26
+    },
+    {
+      "slug": "niveis-estrategia",
+      "cliques": 25
+    },
+    {
+      "slug": "caracteristicas-plano-estrategico",
+      "cliques": 24
+    },
+    {
+      "slug": "iso-9001-requisitos-8-2-requisitos-para-produtos-e-servicos",
+      "cliques": 24
+    },
+    {
+      "slug": "iso-45001-perigos",
+      "cliques": 24
+    },
+    {
+      "slug": "7-sinais-que-sua-empresa-e-desorganizada",
+      "cliques": 24
+    },
+    {
+      "slug": "controle-de-registro",
+      "cliques": 24
+    },
+    {
+      "slug": "papel-representante-da-direcao-rd-na-implementacao-da-iso-9001-nas-organizacoes",
+      "cliques": 23
+    },
+    {
+      "slug": "como-funciona-certificacao-iso-9001",
+      "cliques": 23
+    },
+    {
+      "slug": "haccp-o-que-e",
+      "cliques": 23
+    },
+    {
+      "slug": "fssc-22000-versao-6-guia-de-mudancas-para-certificacao-e-auditorias",
+      "cliques": 23
+    },
+    {
+      "slug": "fase-01-fase-02-na-auditoria-de-certificacao-qual-e-diferenca",
+      "cliques": 23
+    },
+    {
+      "slug": "reuniao-de-abertura-da-auditoria-interna-na-iso-9001",
+      "cliques": 23
+    },
+    {
+      "slug": "pbqp-h-e-geric-como-conseguir-em-2024",
+      "cliques": 23
+    },
+    {
+      "slug": "requisitos-da-iso-27001",
+      "cliques": 22
+    },
+    {
+      "slug": "iso-9001-requisitos-6-2-objetivos-da-qualidade-e-planejamento-para-alcanca-los",
+      "cliques": 22
+    },
+    {
+      "slug": "boas-praticas-de-fabricacao-e-legislacao-brasileira",
+      "cliques": 22
+    },
+    {
+      "slug": "o-que-fazer-com-a-analise-swot",
+      "cliques": 22
+    },
+    {
+      "slug": "perigos-e-riscos-na-ohsas-18001",
+      "cliques": 22
+    },
+    {
+      "slug": "marketing-e-vendas-tem-a-ver-com-a-iso-9001",
+      "cliques": 22
+    },
+    {
+      "slug": "implantacao-ou-implementacao-de-sgq-qual-forma-correta",
+      "cliques": 21
+    },
+    {
+      "slug": "o-sonho-grande-de-lemann-telles-e-sicupira",
+      "cliques": 21
+    },
+    {
+      "slug": "o-que-e-um-programa-setorial-da-qualidade",
+      "cliques": 21
+    },
+    {
+      "slug": "verificacao-projeto-validacao-projeto",
+      "cliques": 21
+    },
+    {
+      "slug": "os-4-metodos-de-consultoria",
+      "cliques": 21
+    },
+    {
+      "slug": "comparacao-entre-iso-9001-iso-14001",
+      "cliques": 20
+    },
+    {
+      "slug": "epi-equipamentos-de-protecao-individual",
+      "cliques": 20
+    },
+    {
+      "slug": "diferencas-entre-medicao-monitoramento",
+      "cliques": 20
+    },
+    {
+      "slug": "funcao-planejamento-estrategico",
+      "cliques": 19
+    },
+    {
+      "slug": "iso-56002",
+      "cliques": 19
+    },
+    {
+      "slug": "atendimento-ao-cliente-de-quem-e-responsabilidade",
+      "cliques": 19
+    },
+    {
+      "slug": "controle-de-documentos-na-iso-9001",
+      "cliques": 19
+    },
+    {
+      "slug": "abordagem-por-processos",
+      "cliques": 19
+    },
+    {
+      "slug": "fundamentos-planejamento-estrategico",
+      "cliques": 19
+    },
+    {
+      "slug": "certificacao-iso-9001-com-inteligencia-artificial-o-que-voce-precisa-saber",
+      "cliques": 19
+    },
+    {
+      "slug": "matriz-swot-contabilidade-como-e-por-que-fazer",
+      "cliques": 19
+    },
+    {
+      "slug": "os-maiores-desafios-da-implementacao-da-iso-9001-parte-1",
+      "cliques": 19
+    },
+    {
+      "slug": "niveis-planejamento-estrategico-2",
+      "cliques": 18
+    },
+    {
+      "slug": "etapas-planejamento-estrategico",
+      "cliques": 18
+    },
+    {
+      "slug": "compoem-planejamento-estrategico",
+      "cliques": 18
+    },
+    {
+      "slug": "definicoes-de-qualidade-e-qualidade-de-produto",
+      "cliques": 18
+    },
+    {
+      "slug": "importancia-da-rastreabilidade",
+      "cliques": 18
+    },
+    {
+      "slug": "seguranca-dos-alimentos",
+      "cliques": 18
+    },
+    {
+      "slug": "pre-requisitos-da-iso-9001",
+      "cliques": 18
+    },
+    {
+      "slug": "custos-indiretos-de-acidentes-e-doencas-no-trabalho",
+      "cliques": 18
+    },
+    {
+      "slug": "requisito-7-4-comunicacao",
+      "cliques": 18
+    },
+    {
+      "slug": "programa-5s-e-a-iso-9001",
+      "cliques": 18
+    },
+    {
+      "slug": "vantagens-da-iso-27001",
+      "cliques": 17
+    },
+    {
+      "slug": "auditorias-internas-iso",
+      "cliques": 17
+    },
+    {
+      "slug": "como-analisar-indicadores",
+      "cliques": 17
+    },
+    {
+      "slug": "5-dicas-para-organizar-seu-processo-de-contas-a-pagar",
+      "cliques": 17
+    },
+    {
+      "slug": "como-fazer-uma-analise-critica-da-sua-empresa",
+      "cliques": 17
+    },
+    {
+      "slug": "mapeamento-de-processos-de-ti",
+      "cliques": 17
+    },
+    {
+      "slug": "aspectos-ambientais-transportadoras",
+      "cliques": 17
+    },
+    {
+      "slug": "quais-sao-os-principios-da-iso-9001-em-2025",
+      "cliques": 17
+    },
+    {
+      "slug": "iso-27001-e-iso-9001",
+      "cliques": 17
+    },
+    {
+      "slug": "diagnostico-de-gestao-da-qualidade-simplificando-a-gestao",
+      "cliques": 17
+    },
+    {
+      "slug": "gestao-da-qualidade-para-imobiliarias",
+      "cliques": 17
+    },
+    {
+      "slug": "importancia-de-um-contrato-de-prestacao-de-servicos-contabeis",
+      "cliques": 16
+    },
+    {
+      "slug": "o-que-e-recertificacao",
+      "cliques": 16
+    },
+    {
+      "slug": "foco-no-cliente-x-foco-do-cliente-um-novo-conceito-em-negocios",
+      "cliques": 16
+    },
+    {
+      "slug": "beneficios-da-iso-9001",
+      "cliques": 16
+    },
+    {
+      "slug": "gestao-de-projeto-e-desenvolvimento",
+      "cliques": 16
+    },
+    {
+      "slug": "consultoria-iso-27001",
+      "cliques": 16
+    },
+    {
+      "slug": "a-jornada-de-transformacao-da-gestao-com-o-sistema-orbit-e-a-inteligencia-artificial",
+      "cliques": 16
+    },
+    {
+      "slug": "gestao-de-riscos-e-oportunidades-guia-avancado-e-pratico",
+      "cliques": 16
+    },
+    {
+      "slug": "certificacao-global-ohsas-18001",
+      "cliques": 16
+    },
+    {
+      "slug": "iso-220002018-o-que-ha-de-novo-parte-3",
+      "cliques": 16
+    },
+    {
+      "slug": "planilha-perigos-e-riscos",
+      "cliques": 16
+    },
+    {
+      "slug": "caso-de-sucesso-implementacao-iso-9001-na-empresa-dataflex",
+      "cliques": 16
+    },
+    {
+      "slug": "programa-de-qualidade-de-empresas-contabeis-pqec-e-baseado-na-iso-9001",
+      "cliques": 16
+    },
+    {
+      "slug": "coleta-seletiva-cores-de-identificacao",
+      "cliques": 15
+    },
+    {
+      "slug": "pbqp-h-2018",
+      "cliques": 15
+    },
+    {
+      "slug": "5w2h-tabela",
+      "cliques": 15
+    },
+    {
+      "slug": "abordagem-de-processos",
+      "cliques": 15
+    },
+    {
+      "slug": "5-passos-para-realizar-um-treinamento-interno-com-seus-colaboradores",
+      "cliques": 15
+    },
+    {
+      "slug": "mitos-verdades-sobre-iso-9001-parte-2",
+      "cliques": 15
+    },
+    {
+      "slug": "auditoria-interna-duvidas-frequentes",
+      "cliques": 15
+    },
+    {
+      "slug": "pbqp-h-qual-o-prazo-para-certificar-minha-empresa",
+      "cliques": 15
+    },
+    {
+      "slug": "preparacao-resposta-emergencia",
+      "cliques": 15
+    },
+    {
+      "slug": "como-a-correta-divulgacao-da-iso-9001-pode-melhorar-os-seus-resultados-na-empresa",
+      "cliques": 15
+    },
+    {
+      "slug": "tipos-planejamento-estrategico",
+      "cliques": 14
+    },
+    {
+      "slug": "pbqp-h-siac-2021",
+      "cliques": 14
+    },
+    {
+      "slug": "consultoria-iso-9001",
+      "cliques": 14
+    },
+    {
+      "slug": "normas-abnt",
+      "cliques": 14
+    },
+    {
+      "slug": "o-que-e-o-ciclo-pdca",
+      "cliques": 14
+    },
+    {
+      "slug": "gestao-de-residuos-nao-deixe-seus-lucros-irem-para-o-lixo",
+      "cliques": 14
+    },
+    {
+      "slug": "principais-nao-conformidades-apontadas-em-auditorias-pbqp-h",
+      "cliques": 14
+    },
+    {
+      "slug": "iso-ts-16949-voce-sabe-o-que-e",
+      "cliques": 14
+    },
+    {
+      "slug": "requisitos-food-fraud-e-food-defense",
+      "cliques": 14
+    },
+    {
+      "slug": "analise-de-eficacia-quando-fazer",
+      "cliques": 14
+    },
+    {
+      "slug": "5-dicas-para-envolver-pessoas-e-conquistar-objetivos",
+      "cliques": 14
+    },
+    {
+      "slug": "iso-9001-na-pratica",
+      "cliques": 14
+    },
+    {
+      "slug": "como-mapear-processos-e-atender-os-requisitos-da-iso-90012015-utilizando-tartaruga-turbinada-da-templum",
+      "cliques": 14
+    },
+    {
+      "slug": "certificacoes-iso-para-engenharia-e-arquitetura",
+      "cliques": 14
+    },
+    {
+      "slug": "postura-auditor",
+      "cliques": 14
+    },
+    {
+      "slug": "etapas-planejamento",
+      "cliques": 13
+    },
+    {
+      "slug": "como-fazer-campanhas-de-comunicacao-para-o-engajamento-dos-colaboradores",
+      "cliques": 13
+    },
+    {
+      "slug": "siac-pbqp-h",
+      "cliques": 13
+    },
+    {
+      "slug": "ciclo-de-vida-do-produto-o-que-eu-preciso-saber",
+      "cliques": 13
+    },
+    {
+      "slug": "requisitos-cliente",
+      "cliques": 13
+    },
+    {
+      "slug": "qual-a-relacao-da-iso-27001-com-a-iso-27701",
+      "cliques": 13
+    },
+    {
+      "slug": "auditoria-interna-quando-realizar",
+      "cliques": 13
+    },
+    {
+      "slug": "iso-9001-requisitos-4-4-processos",
+      "cliques": 13
+    },
+    {
+      "slug": "recorde-minha-casa-minha-vida",
+      "cliques": 13
+    },
+    {
+      "slug": "ferramentas-para-gestao-de-riscos-em-uma-empresa",
+      "cliques": 13
+    },
+    {
+      "slug": "auditoria-iso-9001",
+      "cliques": 13
+    },
+    {
+      "slug": "cipa-e-a-iso-45001-ajudar-gestao-de-sso",
+      "cliques": 13
+    },
+    {
+      "slug": "perguntas-frequentes-sobre-o-pbqp-h",
+      "cliques": 13
+    },
+    {
+      "slug": "contabilidade-a-quais-riscos-meu-escritorio-contabil-esta-sujeito-e-como-lidar-com-eles",
+      "cliques": 13
+    },
+    {
+      "slug": "iso-9001-transforma-o-rh",
+      "cliques": 13
+    },
+    {
+      "slug": "iso-22000-2018-parte-2",
+      "cliques": 13
+    },
+    {
+      "slug": "iso-9001-em-empresas-de-servicos",
+      "cliques": 13
+    },
+    {
+      "slug": "pbqp-h-nivel-a",
+      "cliques": 12
+    },
+    {
+      "slug": "normas-e-organismos-de-normatizacao",
+      "cliques": 12
+    },
+    {
+      "slug": "resistencia-mudanca-como-superar-as-dificuldades-nos-processos-de-implementacao-de-sistemas-de-qualidade",
+      "cliques": 12
+    },
+    {
+      "slug": "pmoc-plano-de-manutencao-operacao-e-controle-para-ar-condicionado",
+      "cliques": 12
+    },
+    {
+      "slug": "planejamento-estrategico-no-trabalho",
+      "cliques": 12
+    },
+    {
+      "slug": "calibracao-dos-equipamentos-de-monitoramento-medicao",
+      "cliques": 12
+    },
+    {
+      "slug": "dificuldades-na-implementacao-da-iso-14001",
+      "cliques": 12
+    },
+    {
+      "slug": "requisito-0-3-abordagem-de-processos",
+      "cliques": 12
+    },
+    {
+      "slug": "algumas-palavras-sobre-iso-9001-e-padronizacao",
+      "cliques": 11
+    },
+    {
+      "slug": "primeiros-passos-para-auditoria-interna-iso",
+      "cliques": 11
+    },
+    {
+      "slug": "iso-22000",
+      "cliques": 11
+    },
+    {
+      "slug": "iso-90012015-o-envolvimento-da-alta-direcao-no-sgq",
+      "cliques": 11
+    },
+    {
+      "slug": "impactos-da-lgpd-na-contabilidade",
+      "cliques": 11
+    },
+    {
+      "slug": "mapeamento-de-processos-lean",
+      "cliques": 11
+    },
+    {
+      "slug": "iso-9001-8-1-planejamento-e-controle-operacionais",
+      "cliques": 11
+    },
+    {
+      "slug": "a-rastreabilidade-no-pbqp-h",
+      "cliques": 11
+    },
+    {
+      "slug": "quais-foram-as-mudancas-estruturais-da-iso-9001-2015",
+      "cliques": 11
+    },
+    {
+      "slug": "como-definir-o-escopo-do-sgi-da-minha-empresa",
+      "cliques": 11
+    },
+    {
+      "slug": "descubra-qual-norma-iso-faz-mais-sentido-para-sua-empresa-de-engenharia-ou-arquitetura",
+      "cliques": 11
+    },
+    {
+      "slug": "indicadores-de-sustentabilidade-obrigatorios-pbqp-h",
+      "cliques": 11
+    },
+    {
+      "slug": "tipos-planejamento-estrategico-2",
+      "cliques": 10
+    },
+    {
+      "slug": "analise-de-causa-raiz-o-que-e-e-como-fazer",
+      "cliques": 10
+    },
+    {
+      "slug": "elementos-gestao-estrategica",
+      "cliques": 10
+    },
+    {
+      "slug": "pilares-planejamento-estrategico",
+      "cliques": 10
+    },
+    {
+      "slug": "auditoria-interna-iso-melhores-praticas",
+      "cliques": 10
+    },
+    {
+      "slug": "os-programas-de-ppra-pcmso-sao-obrigatorios",
+      "cliques": 10
+    },
+    {
+      "slug": "controle-documentos-sgq",
+      "cliques": 10
+    },
+    {
+      "slug": "iso-9001-requisitos-5-2-politica",
+      "cliques": 10
+    },
+    {
+      "slug": "gestao-de-pessoas-na-pratica-3-dicas-para-implementar-simplificando-a-gestao",
+      "cliques": 10
+    },
+    {
+      "slug": "celebre-e-promova-a-certificacao-iso-9001",
+      "cliques": 10
+    },
+    {
+      "slug": "auditoria-interna-de-sistemas-de-gestao-cumprir-o-requisito-da-norma-ou-buscar-oportunidades-de-melhoria-na-empresa",
+      "cliques": 10
+    },
+    {
+      "slug": "pbqp-h-o-que-sao-servicos-controlados",
+      "cliques": 10
+    },
+    {
+      "slug": "melhoria-continua-processo-gradual-ou-de-ruptura",
+      "cliques": 9
+    },
+    {
+      "slug": "o-que-sao-stakeholders-e-como-eles-impactam-o-planejamento-estrategico-do-negocio",
+      "cliques": 9
+    },
+    {
+      "slug": "qual-a-importancia-da-nr-18-dentro-do-pbqp-h",
+      "cliques": 9
+    },
+    {
+      "slug": "principios-planejamento-estrategico",
+      "cliques": 9
+    },
+    {
+      "slug": "gestao-de-qualidade-gestao-estrategica-fatores-criticos-de-sucesso",
+      "cliques": 9
+    },
+    {
+      "slug": "normas-tecnicas-cumprir-ou-nao",
+      "cliques": 9
+    },
+    {
+      "slug": "gestao-operacional-5-passos-para-aplicar-no-seu-negocio-simplificando-a-gestao",
+      "cliques": 9
+    },
+    {
+      "slug": "pilares-planejamento-estrategico-2",
+      "cliques": 9
+    },
+    {
+      "slug": "reuniao-de-analise-critica-pela-direcao-na-iso-9001",
+      "cliques": 9
+    },
+    {
+      "slug": "controle-de-fornecedores-na-iso-9001",
+      "cliques": 9
+    },
+    {
+      "slug": "exemplos-de-planejamento-estrategico",
+      "cliques": 9
+    },
+    {
+      "slug": "auditoria-interna-iso-erros-comuns",
+      "cliques": 9
+    },
+    {
+      "slug": "seguranca-de-alimentos",
+      "cliques": 9
+    },
+    {
+      "slug": "mapeamento-de-processos-com-inteligencia-artificial",
+      "cliques": 9
+    },
+    {
+      "slug": "relacao-entre-5s-sistema-de-gestao-da-qualidade",
+      "cliques": 9
+    },
+    {
+      "slug": "mortes-em-obra-acidente-ou-homicidio",
+      "cliques": 9
+    },
+    {
+      "slug": "sustentabilidade-2",
+      "cliques": 9
+    },
+    {
+      "slug": "dois-exemplos-da-presenca-da-iso-9001-em-orgaos-publicos",
+      "cliques": 9
+    },
+    {
+      "slug": "tudo-o-que-precisa-saber-sobre-a-iso-27001-e-seguranca-da-informacao",
+      "cliques": 8
+    },
+    {
+      "slug": "setembro-15-empresas-certificadas",
+      "cliques": 8
+    },
+    {
+      "slug": "iso-22000-2018-o-que-ha-de-novo-parte-1",
+      "cliques": 8
+    },
+    {
+      "slug": "classificacao-dos-residuos-solidos",
+      "cliques": 8
+    },
+    {
+      "slug": "higiene-na-industria-dos-alimentos",
+      "cliques": 8
+    },
+    {
+      "slug": "novo-esquema-de-certificacao-fssc22000-o-que-mudou",
+      "cliques": 8
+    },
+    {
+      "slug": "o-que-e-a-certificacao-sassmaq",
+      "cliques": 8
+    },
+    {
+      "slug": "quais-sao-os-beneficios-da-certificacao-pbqp-h",
+      "cliques": 8
+    },
+    {
+      "slug": "gestao-de-mudancas-na-empresa-como-fazer",
+      "cliques": 8
+    },
+    {
+      "slug": "4-problemas-de-engajamento-que-atrapalham-sua-empresa",
+      "cliques": 8
+    },
+    {
+      "slug": "eia-rima-tudo-o-que-voce-precisa-saber-02-de-08",
+      "cliques": 8
+    },
+    {
+      "slug": "mitos-e-verdades-auditoria-interna-iso",
+      "cliques": 8
+    },
+    {
+      "slug": "pbqp-h-qual-o-custo-para-certificacao",
+      "cliques": 8
+    },
+    {
+      "slug": "a-norma-de-desempenho-e-o-pbqp-h",
+      "cliques": 8
+    },
+    {
+      "slug": "case-miranda-feliciano-sociedade-de-advogados",
+      "cliques": 8
+    },
+    {
+      "slug": "relacao-da-iso-27001-com-o-home-office",
+      "cliques": 8
+    },
+    {
+      "slug": "conceito-desenvolvimento-sustentavel-nas-escolas-importancia-social-da-implantacao-de-um-sistema-de-gestao-ambiental-em-instituicoes-de-ensino",
+      "cliques": 8
+    },
+    {
+      "slug": "pontos-essenciais-planejamento-estrategico",
+      "cliques": 7
+    },
+    {
+      "slug": "aplicacao-nr-18-no-pbqp-h",
+      "cliques": 7
+    },
+    {
+      "slug": "analise-de-causa-raiz",
+      "cliques": 7
+    },
+    {
+      "slug": "ferramentas-de-mapeamento-de-processos",
+      "cliques": 7
+    },
+    {
+      "slug": "sassmaq",
+      "cliques": 7
+    },
+    {
+      "slug": "epi-nao-conformidade",
+      "cliques": 7
+    },
+    {
+      "slug": "mapeamento-de-processos-administrativos",
+      "cliques": 7
+    },
+    {
+      "slug": "o-passo-a-passo-da-lgpd",
+      "cliques": 7
+    },
+    {
+      "slug": "como-convencer-cliente-ajustar-honorarios-contabeis",
+      "cliques": 7
+    },
+    {
+      "slug": "construcao-civil-a-importancia-do-setor-no-pais-e-novas-tecnologias-para-o-seu-desenvolvimento",
+      "cliques": 7
+    },
+    {
+      "slug": "o-que-e-a-iso-37001",
+      "cliques": 7
+    },
+    {
+      "slug": "qualidade-higiene-e-seguranca-dos-alimentos",
+      "cliques": 7
+    },
+    {
+      "slug": "como-identificar-falhas-no-processo-de-vendas-atraves-dos-indicadores-de-performance",
+      "cliques": 7
+    },
+    {
+      "slug": "o-que-e-global-markets-programme",
+      "cliques": 7
+    },
+    {
+      "slug": "iso-9001-implementar-e-uma-coisa-certificar-e-outra",
+      "cliques": 7
+    },
+    {
+      "slug": "5-maneiras-de-melhorar-a-comunicacao-entre-coordenadorias-e-gerencias",
+      "cliques": 7
+    },
+    {
+      "slug": "como-funciona-a-adesao-ao-pbqp-h",
+      "cliques": 7
+    },
+    {
+      "slug": "relacao-entre-politica-da-qualidade-envolvimento-das-pessoas",
+      "cliques": 7
+    },
+    {
+      "slug": "o-que-todo-pequeno-empresario-deve-saber-melhorar-seus-negocios",
+      "cliques": 7
+    },
+    {
+      "slug": "construcao-civil",
+      "cliques": 7
+    },
+    {
+      "slug": "exemplo-pratico-da-iso-9001-e-a-melhoria-continua",
+      "cliques": 7
+    },
+    {
+      "slug": "inseguranca-alimentar-o-caso-habib-s",
+      "cliques": 7
+    },
+    {
+      "slug": "5-dicas-conseguir-mais-clientes-escritorio-contabil",
+      "cliques": 7
+    },
+    {
+      "slug": "nova-iso-14006",
+      "cliques": 7
+    },
+    {
+      "slug": "mapeamento-dos-processos-2",
+      "cliques": 7
+    },
+    {
+      "slug": "beneficios-iso9001-traz-uma-clinica-odontologica",
+      "cliques": 7
+    },
+    {
+      "slug": "plano-anual-de-treinamento",
+      "cliques": 7
+    },
+    {
+      "slug": "acoes-planejamento-estrategico",
+      "cliques": 6
+    },
+    {
+      "slug": "tecnicas-planejamento-estrategico",
+      "cliques": 6
+    },
+    {
+      "slug": "gestao-de-melhoria-3-dicas-para-melhorar-sua-empresa-1-todo-dia",
+      "cliques": 6
+    },
+    {
+      "slug": "pilares-gestao-estrategica",
+      "cliques": 6
+    },
+    {
+      "slug": "planejamento-e-pensar-e-refletir-antes-de-agir-e-decidir",
+      "cliques": 6
+    },
+    {
+      "slug": "como-melhorar-o-desempenho-da-empresa-atuando-com-foco-em-melhoria",
+      "cliques": 6
+    },
+    {
+      "slug": "como-escolher-auditor-interno-iso",
+      "cliques": 6
+    },
+    {
+      "slug": "siac-2021-principais-mudancas",
+      "cliques": 6
+    },
+    {
+      "slug": "fmea-e-gestao-de-risco-na-iso",
+      "cliques": 6
+    },
+    {
+      "slug": "o-que-e-seguranca-dos-alimentos",
+      "cliques": 6
+    },
+    {
+      "slug": "iso-9001-requisitos-7-3-conscientizacao",
+      "cliques": 6
+    },
+    {
+      "slug": "precisa-de-auditoria-interna-para-certificar",
+      "cliques": 6
+    },
+    {
+      "slug": "a-importancia-do-comprometimento-organizacional",
+      "cliques": 6
+    },
+    {
+      "slug": "serie-planejamento-estrategico-matriz-de-ansoff",
+      "cliques": 6
+    },
+    {
+      "slug": "os-maiores-ataques-hackers-da-historia",
+      "cliques": 6
+    },
+    {
+      "slug": "como-estabelecer-metas-para-indicadores",
+      "cliques": 6
+    },
+    {
+      "slug": "introducao-as-boas-praticas-de-fabricacao-bpf",
+      "cliques": 6
+    },
+    {
+      "slug": "igor-furniel-comportamentos-geram-resultados",
+      "cliques": 6
+    },
+    {
+      "slug": "requistos-legais-pbqp-h",
+      "cliques": 6
+    },
+    {
+      "slug": "controle-de-fornecedores-como-atender-ao-requisito-8-4-da-iso-9001-com-seguranca-clareza-e-eficiencia",
+      "cliques": 6
+    },
+    {
+      "slug": "ficha-de-verificacao-de-servico-solucoes-em-construcao-civil",
+      "cliques": 6
+    },
+    {
+      "slug": "o-que-mudou-na-iso-170252017",
+      "cliques": 6
+    },
+    {
+      "slug": "iso-9001-lideranca",
+      "cliques": 6
+    },
+    {
+      "slug": "como-fazer-uma-gestao-eficiente-da-minha-transportadora",
+      "cliques": 6
+    },
+    {
+      "slug": "como-e-a-tomada-de-decisao-da-sua-empresa",
+      "cliques": 6
+    },
+    {
+      "slug": "bild-acesso-a-financiamento-e-organizacao-com-o-pbqp-h-e-a-iso-9001",
+      "cliques": 6
+    },
+    {
+      "slug": "redefinindo-a-consultoria-de-gestao-e-o-futuro-com-ia",
+      "cliques": 6
+    },
+    {
+      "slug": "metricas-e-ods-no-pilar-de-governanca-do-esg",
+      "cliques": 6
+    },
+    {
+      "slug": "quais-sao-as-diferencas-entre-os-niveis-do-global-markets",
+      "cliques": 6
+    },
+    {
+      "slug": "iso-22000-falhas-auditoria-parte-ii",
+      "cliques": 6
+    },
+    {
+      "slug": "esg-e-o-greenwashing",
+      "cliques": 6
+    },
+    {
+      "slug": "curso-de-5s-na-pratica",
+      "cliques": 6
+    },
+    {
+      "slug": "qual-a-melhor-opcao-com-a-selic-alta",
+      "cliques": 5
+    },
+    {
+      "slug": "5-forcas-de-porter-serie-planejamento-estrategico",
+      "cliques": 5
+    },
+    {
+      "slug": "conheca-o-pbqp-h",
+      "cliques": 5
+    },
+    {
+      "slug": "pensar-e-definir-indicador-da-qualidade",
+      "cliques": 5
+    },
+    {
+      "slug": "envolve-planejamento-estrategico",
+      "cliques": 5
+    },
+    {
+      "slug": "inovacao-minha-empresa-inovadora",
+      "cliques": 5
+    },
+    {
+      "slug": "eia-rima-tudo-o-que-voce-precisa-saber-06-e-08",
+      "cliques": 5
+    },
+    {
+      "slug": "tratar-uma-nc-nao-e-corrigir-um-problema",
+      "cliques": 5
+    },
+    {
+      "slug": "motivacao-com-foco-em-resultados",
+      "cliques": 5
+    },
+    {
+      "slug": "auditoria-interna-nas-diferentes-noramas-iso",
+      "cliques": 5
+    },
+    {
+      "slug": "tijolo-ecologico-conheca-essa-solucao-sustentavel",
+      "cliques": 5
+    },
+    {
+      "slug": "processos-como-classifica-los",
+      "cliques": 5
+    },
+    {
+      "slug": "spda-sistema-de-protecao-de-descargas-atmosfericas",
+      "cliques": 5
+    },
+    {
+      "slug": "empresas-de-softwares-lucram-com-iso-9001",
+      "cliques": 5
+    },
+    {
+      "slug": "orcamento-empresarial",
+      "cliques": 5
+    },
+    {
+      "slug": "feedback-na-avaliacao-de-competencia",
+      "cliques": 5
+    },
+    {
+      "slug": "entendendo-como-realizar-avaliacao-de-perigos-appcc-passo-passo",
+      "cliques": 5
+    },
+    {
+      "slug": "iso-9001-gestao-de-pessoas",
+      "cliques": 5
+    },
+    {
+      "slug": "como-engajar-os-colaboradores-na-implementacao-de-sistemas-de-gestao",
+      "cliques": 5
+    },
+    {
+      "slug": "e-possivel-obter-lucro-com-saude-e-seguranca-do-trabalho",
+      "cliques": 5
+    },
+    {
+      "slug": "5w2h-usando-para-transformar-os-riscos-em-oportunidades",
+      "cliques": 5
+    },
+    {
+      "slug": "chocolate-artesanal-qualidade-para-vender-mais",
+      "cliques": 5
+    },
+    {
+      "slug": "principais-mudancas-no-pbqp-h",
+      "cliques": 5
+    },
+    {
+      "slug": "planilha-mapeamento-de-processos",
+      "cliques": 5
+    },
+    {
+      "slug": "item-7-4-aquisicao",
+      "cliques": 5
+    },
+    {
+      "slug": "qual-a-relacao-entre-as-normas-iso-e-os-ods",
+      "cliques": 5
+    },
+    {
+      "slug": "iso-22000-2018-o-que-ha-de-novo-parte-4",
+      "cliques": 5
+    },
+    {
+      "slug": "sassmaq-expresso-9002",
+      "cliques": 5
+    },
+    {
+      "slug": "sucesso-planilha-mapeamento-de-processos-tartaruga-turbinada",
+      "cliques": 5
+    },
+    {
+      "slug": "iso-9001-2026-as-6-principais-mudancas-da-fdis",
+      "cliques": 5
+    },
+    {
+      "slug": "o-papel-do-representante-da-direcao-nas-empresas",
+      "cliques": 4
+    },
+    {
+      "slug": "o-que-e-iso-e-por-que-certificar",
+      "cliques": 4
+    },
+    {
+      "slug": "objetivo-planejamento-estrategico",
+      "cliques": 4
+    },
+    {
+      "slug": "governanca-corporativa-o-pilar-estrategico-para-empresas-mais-solidas-transparentes-e-sustentaveis",
+      "cliques": 4
+    },
+    {
+      "slug": "ferramentas-gestao-de-processos-bpm",
+      "cliques": 4
+    },
+    {
+      "slug": "e-manutencao-preditiva-2",
+      "cliques": 4
+    },
+    {
+      "slug": "comunicacao-interna",
+      "cliques": 4
+    },
+    {
+      "slug": "passos-planejamento-estrategico",
+      "cliques": 4
+    },
+    {
+      "slug": "etapas-planejamento-estrategico-2",
+      "cliques": 4
+    },
+    {
+      "slug": "os-ciclos-da-recertificacao-de-um-sistema-de-gestao",
+      "cliques": 4
+    },
+    {
+      "slug": "onde-podemos-verificar-existe-necessidade-de-providenciar-treinamentos-para-os-colaboradores",
+      "cliques": 4
+    },
+    {
+      "slug": "importancia-do-sgi-nas-organizacoes",
+      "cliques": 4
+    },
+    {
+      "slug": "o-que-mudou-na-versao-2021-pbqp-h",
+      "cliques": 4
+    },
+    {
+      "slug": "como-fazer-uma-pesquisa-de-satisfacao-sem-gastar-nada-2",
+      "cliques": 4
+    },
+    {
+      "slug": "auditoria-interna-iso-perguntas-frequentes",
+      "cliques": 4
+    },
+    {
+      "slug": "crm-inteligente-como-a-inteligencia-artificial-esta-transformando-a-gestao-de-clientes-processos-e-vendas",
+      "cliques": 4
+    },
+    {
+      "slug": "a-importancia-da-norma-iatf-16949",
+      "cliques": 4
+    },
+    {
+      "slug": "contas-a-receber-5-dicas-para-organizar-seu-processo",
+      "cliques": 4
+    },
+    {
+      "slug": "o-que-uma-pequena-empresa-precisa-para-conseguir-a-certificacao-iso-9001",
+      "cliques": 4
+    },
+    {
+      "slug": "beneficios-da-certificacao-iso-9001",
+      "cliques": 4
+    },
+    {
+      "slug": "bases-planejamento-estrategico",
+      "cliques": 4
+    },
+    {
+      "slug": "como-auditoria-interna-iso-impulsiona-negocios",
+      "cliques": 4
+    },
+    {
+      "slug": "seguranca-de-alimentos-auditorias-nao-anunciadas",
+      "cliques": 4
+    },
+    {
+      "slug": "o-que-e-acidente-de-trabalho",
+      "cliques": 4
+    },
+    {
+      "slug": "prazo-para-implementacao-da-iso-9001",
+      "cliques": 4
+    },
+    {
+      "slug": "importancia-do-relatorio-de-sustentabilidade",
+      "cliques": 4
+    },
+    {
+      "slug": "iso-26000-responsabilidade-social",
+      "cliques": 4
+    },
+    {
+      "slug": "como-o-pbqp-h-pode-me-ajudar-no-canteiro-de-obras",
+      "cliques": 4
+    },
+    {
+      "slug": "iso-90012015-principios-da-qualidade",
+      "cliques": 4
+    },
+    {
+      "slug": "importancia-da-analise-critica-em-nao-conformidades",
+      "cliques": 4
+    },
+    {
+      "slug": "estrategia-em-processos-entenda-como-traduzir",
+      "cliques": 4
+    },
+    {
+      "slug": "como-promover-mudancas-organizacionais-sem-desmotivar-seus-funcionarios",
+      "cliques": 4
+    },
+    {
+      "slug": "os-erros-que-90-das-empresas-cometem-na-contratacao-consultoria",
+      "cliques": 4
+    },
+    {
+      "slug": "acreditacao-para-certificacao-de-sistemas-de-gestao",
+      "cliques": 4
+    },
+    {
+      "slug": "iso-90012015-requisito-4-2",
+      "cliques": 4
+    },
+    {
+      "slug": "inteligencia-artificial",
+      "cliques": 4
+    },
+    {
+      "slug": "beneficios-da-implementacao-da-fssc-22000",
+      "cliques": 4
+    },
+    {
+      "slug": "acontece-apos-certificacao-iso-9001",
+      "cliques": 4
+    },
+    {
+      "slug": "o-relatorio-global-de-riscos-2025-e-a-importancia-da-auditoria-esg-para-as-empresas",
+      "cliques": 4
+    },
+    {
+      "slug": "metricas-e-ods-no-pilar-enviromental",
+      "cliques": 4
+    },
+    {
+      "slug": "comite-ambiental",
+      "cliques": 4
+    },
+    {
+      "slug": "os-objetivos-da-qualidade-no-pbqp-h",
+      "cliques": 4
+    },
+    {
+      "slug": "manutencao-preventiva",
+      "cliques": 4
+    },
+    {
+      "slug": "cultura-de-seguranca-de-alimentos-como-implementar-de-forma-pratica-continua-e-auditavel-nas-empresas",
+      "cliques": 4
+    },
+    {
+      "slug": "requisito-4-3-determinando-o-escopo-do-sistema-de-gestao",
+      "cliques": 4
+    },
+    {
+      "slug": "sistema-de-gestao-o-que-fazer-para-manter",
+      "cliques": 4
+    },
+    {
+      "slug": "dimarzio-imoveis-e-primeira-imobiliaria-de-campinas-conquistar-iso-9001",
+      "cliques": 4
+    },
+    {
+      "slug": "dicas-essenciais-para-a-iso-9001",
+      "cliques": 4
+    },
+    {
+      "slug": "qualificacao-de-fornecedores-no-pbqp-h-siac",
+      "cliques": 4
+    },
+    {
+      "slug": "exigiram-o-sistema-de-gestao-integrada",
+      "cliques": 4
+    },
+    {
+      "slug": "uma-spe-pode-certificar-o-pbqp-h",
+      "cliques": 4
+    },
+    {
+      "slug": "a-importancia-da-bpf-e-o-caso-o-dia",
+      "cliques": 4
+    },
+    {
+      "slug": "riscos-operacao-escritorio-contabil",
+      "cliques": 4
+    },
+    {
+      "slug": "filosofia-planejamento-estrategico",
+      "cliques": 4
+    },
+    {
+      "slug": "falhas-sistema-gestao-seguranca-alimentos",
+      "cliques": 4
+    },
+    {
+      "slug": "os-3-erros-mais-comuns-na-comunicacao-empresarial",
+      "cliques": 4
+    },
+    {
+      "slug": "auditoria-interna-4-0",
+      "cliques": 4
+    },
+    {
+      "slug": "niveis-planejamento-estrategico",
+      "cliques": 3
+    },
+    {
+      "slug": "qualidade-e-sinonimo-de-perfeicao",
+      "cliques": 3
+    },
+    {
+      "slug": "iso-45001-ohsas-18001",
+      "cliques": 3
+    },
+    {
+      "slug": "topicos-planejamento-estrategico",
+      "cliques": 3
+    },
+    {
+      "slug": "principais-mudancas-na-nr-18-e-como-ela-pode-afetar-o-seu-sistema-de-gestao",
+      "cliques": 3
+    },
+    {
+      "slug": "como-a-t-engenharia-entrou-no-mercado-internacional",
+      "cliques": 3
+    },
+    {
+      "slug": "o-que-voce-precisa-saber-sobre-lgpd",
+      "cliques": 3
+    },
+    {
+      "slug": "o-programa-5s-como-recurso-estrategico-nas-organizacoes",
+      "cliques": 3
+    },
+    {
+      "slug": "8-dicas-para-melhorias-na-produtividade-da-equipe",
+      "cliques": 3
+    },
+    {
+      "slug": "as-principais-fases-da-implementacao-iso-9001",
+      "cliques": 3
+    },
+    {
+      "slug": "recursos-humanos-item-6-2-habilidades",
+      "cliques": 3
+    },
+    {
+      "slug": "iso-26000-e-a-norma-de-responsabilidade-social",
+      "cliques": 3
+    },
+    {
+      "slug": "iso-22000-voce-sabe-o-que-e",
+      "cliques": 3
+    },
+    {
+      "slug": "metricas-e-ods-no-pilar-social-do-esg",
+      "cliques": 3
+    },
+    {
+      "slug": "pequenas-empresas-e-iso-14001",
+      "cliques": 3
+    },
+    {
+      "slug": "sgi-na-industria-quimica-gestao-completa-e-menos-riscos",
+      "cliques": 3
+    },
+    {
+      "slug": "gestao-de-resultados-5-dicas-para-tomar-decisoes-com-base-em-dados",
+      "cliques": 3
+    },
+    {
+      "slug": "gerenciamento-dos-residuos-solidos",
+      "cliques": 3
+    },
+    {
+      "slug": "bom-atendimento-o-case-da-zappos-com",
+      "cliques": 3
+    },
+    {
+      "slug": "novos-ajustes-no-minha-casa-minha",
+      "cliques": 3
+    },
+    {
+      "slug": "segmentar-carteira-clientes-escritorio-contabil",
+      "cliques": 3
+    },
+    {
+      "slug": "sassmaq-os-maiores-riscos-de-nao-ter-o-sistema-implementado",
+      "cliques": 3
+    },
+    {
+      "slug": "integrando-ausitoria-interna-iso-com-estrategia-de-negocio",
+      "cliques": 3
+    },
+    {
+      "slug": "iso-45001-o-que-podemos-esperar",
+      "cliques": 3
+    },
+    {
+      "slug": "pesquisa-de-satisfacao-cliente",
+      "cliques": 3
+    },
+    {
+      "slug": "eia-rima-tudo-o-que-voce-precisa-saber-04-de-08",
+      "cliques": 3
+    },
+    {
+      "slug": "como-aplicar-a-motivacao-e-disciplina-do-esporte-no-seu-negocio",
+      "cliques": 3
+    },
+    {
+      "slug": "4-dicas-matadoras-para-envolver-colaboradores-na-implementacao-de-sistema-de-gestao",
+      "cliques": 3
+    },
+    {
+      "slug": "compensa-ter-iso-9001",
+      "cliques": 3
+    },
+    {
+      "slug": "quais-os-maiores-beneficios-de-se-ter-a-iso-45001",
+      "cliques": 3
+    },
+    {
+      "slug": "como-os-acidentes-nas-obras-dos-estadios-da-copa-poderiam-ser-evitados",
+      "cliques": 3
+    },
+    {
+      "slug": "instituicoes-de-ensino-um-novo-nicho-para-a-iso-9001",
+      "cliques": 3
+    },
+    {
+      "slug": "gestao-e-processos-como-construir-uma-empresa-organizada-escalavel-e-preparada-para-crescer",
+      "cliques": 3
+    },
+    {
+      "slug": "os-desafios-durante-a-implementacao-da-iso-9001-o-envolvimento-das-pessoas",
+      "cliques": 3
+    },
+    {
+      "slug": "formando-um-time-de-elite-de-vendas",
+      "cliques": 3
+    },
+    {
+      "slug": "cultura-da-qualidade-na-iso-9001-2026-a-mudanca-mais-importante-da-nova-revisao",
+      "cliques": 3
+    },
+    {
+      "slug": "medir-processos-iso",
+      "cliques": 3
+    },
+    {
+      "slug": "iso-14001-pequenas-medias-empresas",
+      "cliques": 3
+    },
+    {
+      "slug": "partes-planejamento-estrategico-2",
+      "cliques": 3
+    },
+    {
+      "slug": "desvendando-planejamento-estrategico",
+      "cliques": 2
+    },
+    {
+      "slug": "e-seguranca-trabalho",
+      "cliques": 2
+    },
+    {
+      "slug": "partes-planejamento-estrategico",
+      "cliques": 2
+    },
+    {
+      "slug": "conheca-as-vantagens-do-cartao-bndes",
+      "cliques": 2
+    },
+    {
+      "slug": "saiba-o-que-significa-environmental-ou-ambiental-da-sigla-esg",
+      "cliques": 2
+    },
+    {
+      "slug": "pcmat-os-trabalhadores-terceirizados",
+      "cliques": 2
+    },
+    {
+      "slug": "indicadores-ambientais-sustentabilidade",
+      "cliques": 2
+    },
+    {
+      "slug": "processo-planejamento-estrategico",
+      "cliques": 2
+    },
+    {
+      "slug": "o-mercado-de-consultoria-e-a-transformacao-digital",
+      "cliques": 2
+    },
+    {
+      "slug": "iso-90012015-requisito-4-1-contexto-da-organizacao",
+      "cliques": 2
+    },
+    {
+      "slug": "o-que-e-contabilidade-gerencial",
+      "cliques": 2
+    },
+    {
+      "slug": "criterios-de-sustentabilidade-e-esg-na-cadeia-de-fornecedores",
+      "cliques": 2
+    },
+    {
+      "slug": "dez-dicas-para-tornar-o-seu-planejamento-eficiente",
+      "cliques": 2
+    },
+    {
+      "slug": "etapas-plano-estrategico",
+      "cliques": 2
+    },
+    {
+      "slug": "controle-da-informacao-documentada",
+      "cliques": 2
+    },
+    {
+      "slug": "como-garantir-a-satisfacao-do-seu-cliente",
+      "cliques": 2
+    },
+    {
+      "slug": "como-medir-satisfacao-cliente",
+      "cliques": 2
+    },
+    {
+      "slug": "indicadores-de-desempenho-uma-analise-pratica-dessa-ferramenta",
+      "cliques": 2
+    },
+    {
+      "slug": "seu-organograma-nao-serve-pra-mais-nada",
+      "cliques": 2
+    },
+    {
+      "slug": "impactos-do-pgr",
+      "cliques": 2
+    },
+    {
+      "slug": "minha-casa-minha-vida-ganha-faixa-4-o-que-muda-e-como-sua-construtora-pode-se-beneficiar",
+      "cliques": 2
+    },
+    {
+      "slug": "o-que-a-morte-de-kobe-bryant-pode-ensinar-para-o-nosso-sistema-de-gestao",
+      "cliques": 2
+    },
+    {
+      "slug": "5-ferramentas-para-gestao-da-informacao-documentada",
+      "cliques": 2
+    },
+    {
+      "slug": "gestao-de-riscos-seguranca-dos-alimentos",
+      "cliques": 2
+    },
+    {
+      "slug": "5-dicas-para-diminuir-o-consumo-do-seu-caminhao",
+      "cliques": 2
+    },
+    {
+      "slug": "empresas-que-precisam-da-iso-27001",
+      "cliques": 2
+    },
+    {
+      "slug": "iso-14001-consolidacao-sga",
+      "cliques": 2
+    },
+    {
+      "slug": "como-auditorias-internas-recorrentes-podem-transformar-a-gestao-da-sua-empresa",
+      "cliques": 2
+    },
+    {
+      "slug": "iso-14001-legislacao-ambiental-brasileira",
+      "cliques": 2
+    },
+    {
+      "slug": "indicadores-de-desempenho-para-uma-administracao-eficiente",
+      "cliques": 2
+    },
+    {
+      "slug": "politica-da-qualidade-na-pratica",
+      "cliques": 2
+    },
+    {
+      "slug": "principios-planejamento-estrategico-2",
+      "cliques": 2
+    },
+    {
+      "slug": "recall-de-alimentos-o-que-fazer",
+      "cliques": 2
+    },
+    {
+      "slug": "pequenas-medias-empresas",
+      "cliques": 2
+    },
+    {
+      "slug": "como-medir-a-satisfacao-do-meu-cliente",
+      "cliques": 2
+    },
+    {
+      "slug": "o-que-devo-saber-antes-de-contratar-uma-franquia",
+      "cliques": 2
+    },
+    {
+      "slug": "4-dicas-de-comunicacao-interna-para-voce-envolver-seus-funcionario",
+      "cliques": 2
+    },
+    {
+      "slug": "aumente-a-sua-exportacao-com-um-sistema-de-gestao-da-qualidade-iso-9001",
+      "cliques": 2
+    },
+    {
+      "slug": "auditoria-de-sistemas-de-gestao-como-torna-la-mais-eficiente",
+      "cliques": 2
+    },
+    {
+      "slug": "5-dicas-indispensaveis-para-escritorio-contabeis",
+      "cliques": 2
+    },
+    {
+      "slug": "pqta-programa-de-qualidade-em-cartorios",
+      "cliques": 2
+    },
+    {
+      "slug": "gestao-da-qualidade-indicadores-de-desepenho",
+      "cliques": 2
+    },
+    {
+      "slug": "pqta-saiba-o-passo-a-passo-para-a-conquista-lo",
+      "cliques": 2
+    },
+    {
+      "slug": "beneficios-sassmaq-para-transporte-de-produtos-quimicos",
+      "cliques": 2
+    },
+    {
+      "slug": "5-duvidas-sobre-a-implementacao-iso",
+      "cliques": 2
+    },
+    {
+      "slug": "e-necessario-investir-um-capital-muito-alto-em-treinamentos-aos-colaboradores-para-adequar-sistema-de-gestao-da-qualidade-para-certificacao-na-norma-iso-90012008",
+      "cliques": 2
+    },
+    {
+      "slug": "evolucao-das-metodologias-de-implementacao-de-sistemas-de-gestao",
+      "cliques": 2
+    },
+    {
+      "slug": "sassmaq-o-que-diz-a-resolucao-contran-517",
+      "cliques": 2
+    },
+    {
+      "slug": "gremio-e-a-iso-9001-no-futebol",
+      "cliques": 2
+    },
+    {
+      "slug": "ponto-certo-pneus-inicia-processo-de-implementacao-da-iso-9001",
+      "cliques": 2
+    },
+    {
+      "slug": "7-beneficios-da-iso-27001-para-o-seu-negocio",
+      "cliques": 2
+    },
+    {
+      "slug": "5-meios-de-comunicacao-interna-que-podem-ser-feitos-com-baixo-custo-pelas-pmes",
+      "cliques": 2
+    },
+    {
+      "slug": "empresa-esta-em-fase-de-implementacao-iso-9001-precisa-comprar-norma",
+      "cliques": 2
+    },
+    {
+      "slug": "iso-9001-melhoria-evolucao-dos-processos-sera",
+      "cliques": 2
+    },
+    {
+      "slug": "solucoes-da-auditoria-4-0",
+      "cliques": 2
+    },
+    {
+      "slug": "gestao-da-mudanca",
+      "cliques": 2
+    },
+    {
+      "slug": "os-requisitos-legais-e-o-pbqp-h",
+      "cliques": 2
+    },
+    {
+      "slug": "a-importancia-da-iso-27001-na-nova-regulamentacao-de-apostas-no-brasil",
+      "cliques": 2
+    },
+    {
+      "slug": "e-book-mitos-e-verdades-pbqp-h",
+      "cliques": 2
+    },
+    {
+      "slug": "cliente-patrimonio-da-organizacao",
+      "cliques": 2
+    },
+    {
+      "slug": "certificacao-pbqp-h-como-a-templum-pode-te-ajudar",
+      "cliques": 2
+    },
+    {
+      "slug": "como-se-diferenciar-da-concorrencia-com-a-iso-9001",
+      "cliques": 2
+    },
+    {
+      "slug": "siderbras-obteve-a-certificacao-iso9001-em-prazo-recorde",
+      "cliques": 2
+    },
+    {
+      "slug": "principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1-2-2",
+      "cliques": 2
+    },
+    {
+      "slug": "analise-swot-voce-ainda-faz-o-contexto-da-organizacao-com-ela",
+      "cliques": 2
+    },
+    {
+      "slug": "mudancas-na-iso-90012015-sao-confirmadas-por-nigel-croft",
+      "cliques": 2
+    },
+    {
+      "slug": "quanto-dinheiro-minha-transportadora-pode-perder-por-nao-ter-o-sassmaq",
+      "cliques": 2
+    },
+    {
+      "slug": "pack-gestao",
+      "cliques": 2
+    },
+    {
+      "slug": "auditoria-interna-4-0-por-que-investir",
+      "cliques": 2
+    },
+    {
+      "slug": "iso-9001-para-pequenas-empresas-parte-2",
+      "cliques": 2
+    },
+    {
+      "slug": "iso-22000-para-buffets-e-possivel-sim",
+      "cliques": 2
+    },
+    {
+      "slug": "um-pouco-mais-sobre-a-cultura-da-zappos",
+      "cliques": 2
+    },
+    {
+      "slug": "seguranca-e-saude-do-trabalho-prevenir-ou-remediar",
+      "cliques": 2
+    },
+    {
+      "slug": "como-lucrar-com-a-iso-9001",
+      "cliques": 2
+    },
+    {
+      "slug": "o-que-e-gestao-de-risco-e-como-implementar-na-sua-empresa",
+      "cliques": 1
+    },
+    {
+      "slug": "pcmat-seguranca-do-trabalho-importancia-e-como-implementa-lo-na-construcao-civil",
+      "cliques": 1
+    },
+    {
+      "slug": "como-funciona-o-cartao-bndes",
+      "cliques": 1
+    },
+    {
+      "slug": "auditoria-iso9001-como-transformar-conformidade-em-vantagem",
+      "cliques": 1
+    },
+    {
+      "slug": "e-book-programa-casa-verde-amarela-oportunidade-em-meio-a-crise-para-construtoras",
+      "cliques": 1
+    },
+    {
+      "slug": "voce-conhece-seu-cliente",
+      "cliques": 1
+    },
+    {
+      "slug": "politica-da-qualidade-seus-objetivos",
+      "cliques": 1
+    },
+    {
+      "slug": "como-fazer-planejamento-estrategico",
+      "cliques": 1
+    },
+    {
+      "slug": "use-o-google-para-fazer-sua-pesquisa-de-satisfacao",
+      "cliques": 1
+    },
+    {
+      "slug": "indicadores-de-desempenho-como-transformar-objetivos-em-resultados-reais",
+      "cliques": 1
+    },
+    {
+      "slug": "planejamento-estrategico-financeiro",
+      "cliques": 1
+    },
+    {
+      "slug": "como-elaborar-relatorios-gerenciais",
+      "cliques": 1
+    },
+    {
+      "slug": "como-elaborar-uma-matriz-swot",
+      "cliques": 1
+    },
+    {
+      "slug": "livro-de-inspecao-do-trabalho-pbqp-h",
+      "cliques": 1
+    },
+    {
+      "slug": "desafios-comuns-auditorias-internas-iso",
+      "cliques": 1
+    },
+    {
+      "slug": "atualizacao-pbqp-h-siac-2021",
+      "cliques": 1
+    },
+    {
+      "slug": "contabilidade-consultiva-o-metodo-dos-4-passos",
+      "cliques": 1
+    },
+    {
+      "slug": "como-saber-se-os-processos-estao-sendo-executados-como-deveriam",
+      "cliques": 1
+    },
+    {
+      "slug": "como-promover-eventos-internos-que-reforcem-os-propositos-da-empresa",
+      "cliques": 1
+    },
+    {
+      "slug": "ideias-equivocadas-sobre-sustentabilidade-podem-atrapalhar-negocio-de-empresas",
+      "cliques": 1
+    },
+    {
+      "slug": "voce-esta-preparado-para-a-proxima-auditoria",
+      "cliques": 1
+    },
+    {
+      "slug": "como-estabelecer-indicadores-de-desempenho",
+      "cliques": 1
+    },
+    {
+      "slug": "comportamento-organizacional",
+      "cliques": 1
+    },
+    {
+      "slug": "como-reduzir-o-absenteismo-e-a-rotatividade-com-indicadores-reconhecimento-e-gestao-pela-iso-9001",
+      "cliques": 1
+    },
+    {
+      "slug": "siac-2021-o-que-mudou-2",
+      "cliques": 1
+    },
+    {
+      "slug": "gestao-do-relacionamento-com-fornecedores-qual-e-a-sua-estrategia",
+      "cliques": 1
+    },
+    {
+      "slug": "gestao-a-distancia-solucoes-para-a-construcao-civil",
+      "cliques": 1
+    },
+    {
+      "slug": "a-importancia-de-construir-meios-de-comunicacao-na-empresa",
+      "cliques": 1
+    },
+    {
+      "slug": "os-indicadores-da-qualidade-do-pbqp-h",
+      "cliques": 1
+    },
+    {
+      "slug": "como-e-a-rotina-de-implementacao-com-a-templum",
+      "cliques": 1
+    },
+    {
+      "slug": "a-estrategia-tambem-faz-parte-da-nossa-rotina-diaria",
+      "cliques": 1
+    },
+    {
+      "slug": "lgpd",
+      "cliques": 1
+    },
+    {
+      "slug": "planejamento-estrategico-empresarial",
+      "cliques": 1
+    },
+    {
+      "slug": "iso-9001-o-que-minha-empresa-perde-sem",
+      "cliques": 1
+    },
+    {
+      "slug": "contratacao-de-funcionarios-qualificados-aprenda-com-5-dicas",
+      "cliques": 1
+    },
+    {
+      "slug": "duvidas-frequentes-para-implementacao-iso-90012008",
+      "cliques": 1
+    },
+    {
+      "slug": "como-implementar-a-iso-27001-para-garantir-principal-beneficio",
+      "cliques": 1
+    },
+    {
+      "slug": "gestao-estrategica-3-dicas-para-simplificar-e-aplicar-na-sua-empresa-simplificando-a-gestao",
+      "cliques": 1
+    },
+    {
+      "slug": "maximizando-o-roi-auditoria-interna-iso",
+      "cliques": 1
+    },
+    {
+      "slug": "o-que-o-pqec-tem-a-ver-com-a-iso-9001",
+      "cliques": 1
+    },
+    {
+      "slug": "eia-rima-tudo-o-que-voce-precisa-saber-07-de-08",
+      "cliques": 1
+    },
+    {
+      "slug": "gestao-de-processos-empresariais-como-organizar-sua-empresa-para-crescer-com-clareza-controle-e-previsibilidade",
+      "cliques": 1
+    },
+    {
+      "slug": "como-trazer-a-melhoria-continua-para-o-dia-a-dia-das-empresas",
+      "cliques": 1
+    },
+    {
+      "slug": "manutencao-sistema-gestao-qualidade",
+      "cliques": 1
+    },
+    {
+      "slug": "laboratorio-fleming-celebra-a-iso-9001-e-as-novas-oportunidades-no-espaco-de-exames",
+      "cliques": 1
+    },
+    {
+      "slug": "comunicacao-interna-aliada-ou-inimiga-da-sua-empresa",
+      "cliques": 1
+    },
+    {
+      "slug": "templum-rewards-sua-dedicacao-vale-premios-em-dinheiro",
+      "cliques": 1
+    },
+    {
+      "slug": "os-beneficios-da-iso-9001",
+      "cliques": 1
+    },
+    {
+      "slug": "como-funciona-a-auditoria-4-0",
+      "cliques": 1
+    },
+    {
+      "slug": "iso-90012008-substituira-a-versao-de-2000",
+      "cliques": 1
+    },
+    {
+      "slug": "a-essencia-da-gestao-da-qualidade",
+      "cliques": 1
+    },
+    {
+      "slug": "gestao-de-mudancas-parte-2",
+      "cliques": 1
+    },
+    {
+      "slug": "3-dicas-para-uma-implementacao-iso-9001-mais-eficaz",
+      "cliques": 1
+    },
+    {
+      "slug": "aumente-a-eficiencia-operacional-utilizando-o-mapeamento-de-processos",
+      "cliques": 1
+    },
+    {
+      "slug": "como-promover-a-qualidade",
+      "cliques": 1
+    },
+    {
+      "slug": "semana-da-qualidade-abordagem-factual-dos-processos",
+      "cliques": 1
+    },
+    {
+      "slug": "ter-iso-ou-ser-iso",
+      "cliques": 1
+    },
+    {
+      "slug": "tirar-o-seu-planejamento-do-papel-e-torna-lo-realidade",
+      "cliques": 1
+    },
+    {
+      "slug": "nao-conformidade-como-transformar-erros-em-melhoria-continua-com-apoio-da-inteligencia-artificial",
+      "cliques": 1
+    },
+    {
+      "slug": "5-dicas-praticas-para-melhorar-o-engajamento-de-pessoas-em-sua-empresa",
+      "cliques": 1
+    },
+    {
+      "slug": "tres-dicas-para-voce-negociar-melhor",
+      "cliques": 1
+    },
+    {
+      "slug": "uma-analise-sobre-nova-medida-conar-sobre-greenwashing",
+      "cliques": 1
+    },
+    {
+      "slug": "nova-versao-fssc-22000-v4-alteracoes-relevantes-para-sua-empresa",
+      "cliques": 1
+    },
+    {
+      "slug": "iso-9001-acoes-preventivas-dificuldades-na-utilizacao-dessa-tecnica",
+      "cliques": 1
+    },
+    {
+      "slug": "fluxo-de-caixa-em-tempos-de-crise",
+      "cliques": 1
+    },
+    {
+      "slug": "eia-rima-e-gestao-ambiental-tudo-o-que-voce-precisa-saber-08-de-08",
+      "cliques": 1
+    },
+    {
+      "slug": "pbqp-h-2-2",
+      "cliques": 1
+    },
+    {
+      "slug": "normas-iso-e-licitaco",
+      "cliques": 1
+    },
+    {
+      "slug": "descubra-se-seus-funcionarios-estao-envolvidos-ou-engajados-no-negocio",
+      "cliques": 1
+    },
+    {
+      "slug": "programa-de-qualidade-contabil-para-a-rede-nacional-de-contabilidade",
+      "cliques": 1
+    },
+    {
+      "slug": "como-ajudar-cliente-contratar-servicos-contabilidade",
+      "cliques": 1
+    },
+    {
+      "slug": "amostragem-de-obras-na-auditoria-do-pbqp-h",
+      "cliques": 1
+    },
+    {
+      "slug": "como-garantir-o-aumento-da-satisfacao-da-sua-equipe-de-trabalho",
+      "cliques": 1
+    },
+    {
+      "slug": "certificacao-iso-27001-qual-e-a-infraestrutura-necessaria",
+      "cliques": 1
+    },
+    {
+      "slug": "metodos-para-gerenciamento-de-mudancas-na-iso-9001",
+      "cliques": 1
+    },
+    {
+      "slug": "inteligencia-artificial-na-gestao-como-empresas-podem-automatizar-processos-ganhar-produtividade-e-escalar-com-mais-inteligencia",
+      "cliques": 1
+    },
+    {
+      "slug": "comunicacao-torna-escritorio-contabil-competitivo",
+      "cliques": 1
+    },
+    {
+      "slug": "gestao-de-risco-prevencao-ou-pessimismo",
+      "cliques": 1
+    },
+    {
+      "slug": "perguntas-chaves-para-auxiliar-em-sua-rastreabilidade",
+      "cliques": 1
+    },
+    {
+      "slug": "steve-jobs-perdemos-mais-um-genio",
+      "cliques": 1
+    },
+    {
+      "slug": "como-atrair-clientes-para-escritorio-contabil",
+      "cliques": 1
+    },
+    {
+      "slug": "por-que-os-cartorios-deveriam-pensar-na-27001-e-nao-apenas-na-lgpd",
+      "cliques": 1
+    },
+    {
+      "slug": "iso-9001-saiba-como-o-diagnostico-empresarial-pode-ajudar-sua-empresa",
+      "cliques": 1
+    },
+    {
+      "slug": "planejamento-estrategico-no-seu-escritorio-contabil",
+      "cliques": 1
+    },
+    {
+      "slug": "planejamento-estrategico-2026-como-transformar-intencao-em-execucao-com-apoio-da-inteligencia-artificial",
+      "cliques": 1
+    },
+    {
+      "slug": "como-as-pmes-podem-usar-a-comunicacao-para-diminuir-impactos-das-mudancas",
+      "cliques": 1
+    },
+    {
+      "slug": "como-utilizar-a-comunicacao-para-motivar-pessoas-em-tempos-dificeis",
+      "cliques": 1
+    },
+    {
+      "slug": "a-meta-que-mata",
+      "cliques": 1
+    },
+    {
+      "slug": "paralisacao-de-obras-devido-ao-covid-19",
+      "cliques": 1
+    },
+    {
+      "slug": "iso-22000-como-evitar-falhas-no-sistema-de-seguranca-de-alimentos",
+      "cliques": 1
+    },
+    {
+      "slug": "quais-os-maiores-riscos-de-nao-ter-a-iso-45001-implementada",
+      "cliques": 1
+    },
+    {
+      "slug": "vale-a-pena-investir-em-uma-certificacao-iso-descubra-o-custo-o-prazo-e-o-verdadeiro-retorno-para-sua-empresa",
+      "cliques": 1
+    },
+    {
+      "slug": "iso-14001-o-que-fazer-para-manter-o-sistema-de-gestao",
+      "cliques": 1
+    },
+    {
+      "slug": "blog",
+      "cliques": 1
+    },
+    {
+      "slug": "utilizando-metodologias-para-gestao-do-tempo",
+      "cliques": 1
+    },
+    {
+      "slug": "iso-9001-em-orgaos-publicos",
+      "cliques": 1
+    },
+    {
+      "slug": "conscientizacao-na-iso-9001-por-que-o-requisito-7-3-e-essencial-para-um-sistema-de-gestao-da-qualidade-eficaz",
+      "cliques": 1
+    },
+    {
+      "slug": "iso-9001-em-escritorios-de-advocacia-causa-ganha",
+      "cliques": 1
+    },
+    {
+      "slug": "falta-de-treinamento-em-empresas-esconde-talentos",
+      "cliques": 1
+    },
+    {
+      "slug": "curso-de-formacao-de-auditor-interno-iso-9001",
+      "cliques": 1
+    },
+    {
+      "slug": "o-caso-kpmg-e-a-importancia-de-auditorias-precisas",
+      "cliques": 1
+    },
+    {
+      "slug": "como-ampliar-o-leque-de-servicos-de-um-escritorio-de-advocacia",
+      "cliques": 1
+    },
+    {
+      "slug": "cinco-pecados-da-comunicacao-profissional",
+      "cliques": 1
+    },
+    {
+      "slug": "iso-9001-para-empreendedores",
+      "cliques": 1
+    },
+    {
+      "slug": "bicicletas-e-implementacao-da-iso",
+      "cliques": 1
+    },
+    {
+      "slug": "controle-financeiro-para-micro-e-pequenas-empresas",
+      "cliques": 1
+    },
+    {
+      "slug": "auditoria-a-ferramenta-que-voce-precisa-para-conhecer-seu-negocio-profundamente",
+      "cliques": 1
+    },
+    {
+      "slug": "esclarecendo-alguns-mitos-sobre-iso-9001",
+      "cliques": 1
+    },
+    {
+      "slug": "microempresa-conquista-iso-9001-e-da-exemplo-de-gestao",
+      "cliques": 1
+    },
+    {
+      "slug": "4-razoes-escritorios-contabeis-retrabalho",
+      "cliques": 1
+    },
+    {
+      "slug": "como-a-comunicacao-interna-pode-melhorar-a-produtividade-das-pmes",
+      "cliques": 1
+    },
+    {
+      "slug": "situacoes-inusitadas-em-uma-auditoria-remota",
+      "cliques": 1
+    },
+    {
+      "slug": "empresas-e-funcionarios-sao-beneficiarios-diretos-da-iso-9001",
+      "cliques": 1
+    },
+    {
+      "slug": "mitos-e-verdades-sobre-a-iso-9001-parte-1",
+      "cliques": 1
+    },
+    {
+      "slug": "entendimento-pratico-sassmaq",
+      "cliques": 1
+    },
+    {
+      "slug": "sucesso-planilha-mapeamento-de-processos-sgi",
+      "cliques": 1
+    },
+    {
+      "slug": "asv-conquista-certificacao-iso-9001-ajuda-da-iso-online",
+      "cliques": 1
+    },
+    {
+      "slug": "um-blog-voltado-a-qualidade-3",
+      "cliques": 1
+    },
+    {
+      "slug": "satisfacao-dos-colaboradores-um-item-essencial-nas-organizacoes",
+      "cliques": 1
+    },
+    {
+      "slug": "sucesso-planilha-gestao-de-nao-conformidades",
+      "cliques": 1
+    }
+  ]
+}

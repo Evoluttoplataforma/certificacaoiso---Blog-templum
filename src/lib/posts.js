@@ -2,6 +2,8 @@
 // Devolve no MESMO formato da antiga content collection ({ slug, data, content })
 // pra os componentes (ArticleCard, Sidebar) não precisarem mudar.
 // Keys públicas (anon, RLS protege). Fallback embutido p/ não depender de env.
+import populares from "../data/populares.json";
+
 const SB_URL = import.meta.env.SUPABASE_URL || "https://yfpdrckyuxltvznqfqgh.supabase.co";
 const SB_ANON = import.meta.env.SUPABASE_ANON_KEY || "sb_publishable_Yfg9Ts5WRqD4Gc3jeWAS2A_-YWZrtiQ";
 const H = { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` };
@@ -150,6 +152,25 @@ export async function getAllPosts() {
   }
   _cache = all.map((p) => normalize(p, catImgMap));
   return _cache;
+}
+
+// --- "Mais acessados" ---
+// Ranking por CLIQUES orgânicos do Search Console, congelado em src/data/populares.json
+// (gerado por `node scripts/populares.mjs <pasta do export>`). É proxy de acesso, não
+// pageview: não conta tráfego direto/social. Se um dia houver contador de views no
+// Supabase, é só trocar a fonte do mapa abaixo — a assinatura da função fica igual.
+// Post fora do ranking (recém-publicado, sem histórico) vai pro fim, ordenado por data:
+// a home nunca fica curta e conteúdo novo não fica invisível pra sempre.
+export async function getPopularPosts(limite) {
+  const posts = await getAllPosts();
+  const cliques = new Map(populares.ranking.map((r) => [r.slug, r.cliques]));
+  const ordenado = [...posts].sort((a, b) => {
+    const ca = cliques.get(a.slug) ?? -1;
+    const cb = cliques.get(b.slug) ?? -1;
+    if (ca !== cb) return cb - ca;
+    return +new Date(b.data.pubDate) - +new Date(a.data.pubDate);
+  });
+  return limite ? ordenado.slice(0, limite) : ordenado;
 }
 
 // --- Iscas (lead magnets / landing pages) ---

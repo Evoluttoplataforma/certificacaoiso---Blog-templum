@@ -13,3 +13,7 @@ npm-debug.log*
 # Cloudflare
 .wrangler/
 .dev.vars
+
+# Exports brutos do Search Console (entram só como insumo do scripts/populares.mjs;
+# o que vai pro repo é o JSON derivado em src/data/populares.json)
+*-Performance-on-Search-*/
