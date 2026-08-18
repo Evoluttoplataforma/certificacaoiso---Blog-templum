@@ -6,8 +6,15 @@ import { getAllPosts } from "../../lib/posts.js";
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
-  // todas as categorias que realmente existem nos posts (não só as curadas)
-  const nomes = [...new Set(posts.flatMap((p) => p.data.categories || []).filter(Boolean))];
+  // Só as CATEGORIAS, e categoria é o primeiro item de `categories` — em lib/posts.js
+  // esse array é [category_name, ...tags]. O flatMap que existia aqui varria tags também,
+  // e como catMeta() faz fallback slugificando o nome, cada tag virava uma página:
+  // /categoria/rto/, /categoria/aes/, /categoria/vpn/, /categoria/nigel-croft/. Eram 172
+  // listagens rasas, com o mesmo texto de abertura trocando só o nome, todas no sitemap
+  // e sem um único link interno apontando pra elas — exatamente o tipo de página que
+  // dilui rastreamento sem servir a ninguém. Tag continua fazendo o trabalho dela
+  // (relacionados por peso e CTA por norma), sem gerar URL.
+  const nomes = [...new Set(posts.map((p) => (p.data.categories || [])[0]).filter(Boolean))];
   const porSlug = {};
   for (const nome of nomes) {
     const c = catMeta(nome);

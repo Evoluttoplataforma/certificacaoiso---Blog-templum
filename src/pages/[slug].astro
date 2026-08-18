@@ -2,8 +2,15 @@
 import Base from "../layouts/Base.astro";
 import Sidebar from "../components/Sidebar.astro";
 import ArticleCard from "../components/ArticleCard.astro";
+import LeadForm from "../components/LeadForm.astro";
 import { catMeta } from "../data/categorias.js";
+import { normaDoForm } from "../data/lead-form-pages.js";
 import { getAllPosts, tldrOf, getIscaForCategories } from "../lib/posts.js";
+
+// Keys públicas (anon) para o POST do formulário de consultoria — mesmas de lib/posts.js.
+// A anon key é pública por definição; o que protege a tabela é a RLS (só INSERT p/ anon).
+const SB_URL = import.meta.env.SUPABASE_URL || "https://yfpdrckyuxltvznqfqgh.supabase.co";
+const SB_ANON = import.meta.env.SUPABASE_ANON_KEY || "sb_publishable_Yfg9Ts5WRqD4Gc3jeWAS2A_-YWZrtiQ";
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
@@ -36,6 +43,10 @@ const keywords = (d.keywords && d.keywords.length ? d.keywords : d.categories) |
 // wordCount a partir do HTML (sinal de profundidade p/ SEO/GEO)
 const wordCount = post.content ? post.content.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length : 0;
 const faq = d.faq || [];
+// Formulário de consultoria: só nas páginas curadas (ver data/lead-form-pages.js).
+// Onde ele entra, substitui o CTA genérico do fim do artigo — dois CTAs empilhados
+// pedindo a mesma coisa disputam o mesmo clique e derrubam os dois.
+const normaForm = normaDoForm(post.slug);
 
 // ---------- RELACIONADOS: relevância por tag + garantia de distribuição ----------
 // Em lib/posts.js, `categories` é [category_name, ...tags] — categoria e tags no
@@ -210,14 +221,18 @@ if (faq.length) {
           </section>
         )}
 
-        <!-- CTA no fim do artigo -->
-        <div class="post-cta">
-          <div>
-            <h3>Pronto para certificar sua empresa?</h3>
-            <p>Fale com um especialista da Templum e receba um diagnóstico gratuito — com garantia de 200%.</p>
+        <!-- Fim do artigo: form de consultoria nas páginas curadas, CTA genérico nas demais -->
+        {normaForm ? (
+          <LeadForm norma={normaForm} slug={post.slug} sbUrl={SB_URL} sbAnon={SB_ANON} />
+        ) : (
+          <div class="post-cta">
+            <div>
+              <h3>Pronto para certificar sua empresa?</h3>
+              <p>Fale com um especialista da Templum e receba um diagnóstico gratuito — com garantia de 200%.</p>
+            </div>
+            <a href={`https://templum.com.br/form?utm_source=blog&utm_medium=cta-artigo&utm_campaign=${post.slug}`} class="btn btn--primary btn--lg" data-trk-event="cta-artigo">Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
           </div>
-          <a href={`https://templum.com.br/form?utm_source=blog&utm_medium=cta-artigo&utm_campaign=${post.slug}`} class="btn btn--primary btn--lg" data-trk-event="cta-artigo">Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
-        </div>
+        )}
       </div>
       <Sidebar ref={post.slug} author={d.author} related={relatedSide} catName={cat} catSlug={catSlug} categories={d.categories} />
     </div>

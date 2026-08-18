@@ -1,0 +1,225 @@
+---
+// Formulário de consultoria no fim do artigo — captura lead qualificado por norma.
+//
+// Onde fica e por quê: DEPOIS do conteúdo e do FAQ, substituindo o CTA genérico
+// (.post-cta) nas páginas da lista em data/lead-form-pages.js. O funil da página fica
+// com dois degraus que não competem: no alto da sidebar o diagnóstico da Olívia (zero
+// campo, atrito mínimo) e no fim do artigo este form (6 campos, lead qualificado) —
+// para quem leu tudo, inclusive as objeções respondidas no FAQ, e ainda quer falar.
+//
+// Grava direto no Supabase pelo MESMO caminho das iscas (/presentes/*): POST no REST
+// com a key anon, coberto pela policy `leads_anon_insert` da blog_templum_leads. Sem
+// endpoint no worker.js — o que não existe não quebra deploy.
+//
+// Campos obrigatórios: nome, e-mail, WhatsApp, empresa, funcionários e urgência.
+// Faturamento fica OPCIONAL de propósito: é o campo mais sensível do formulário e o
+// que mais faz desistir no meio. Porte + urgência já qualificam o suficiente para o
+// time priorizar a fila; faturamento é bônus quando o lead está confortável.
+const { norma, slug = "", sbUrl, sbAnon } = Astro.props;
+---
+
+<section class="lead-form lead-card" id="consultoria">
+  <div class="lf-head">
+    <span class="lf-tag"><iconify-icon icon="solar:medal-ribbon-star-bold"></iconify-icon> Consultoria Templum</span>
+    <h2>Precisa de consultoria para {norma}?</h2>
+    <p>Fale com nosso especialista. Conte o cenário da sua empresa e a gente responde com o caminho até a certificação — sem custo e sem compromisso.</p>
+  </div>
+
+  <form class="form lf-form" id="leadForm" novalidate>
+    <div class="form-row">
+      <div class="field">
+        <label for="lf-nome">Nome</label>
+        <input class="input" id="lf-nome" name="nome" autocomplete="name" placeholder="Seu nome" required />
+      </div>
+      <div class="field">
+        <label for="lf-email">E-mail</label>
+        <input class="input" id="lf-email" name="email" type="email" autocomplete="email" placeholder="voce@empresa.com" required />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="lf-wpp">WhatsApp</label>
+        <input class="input" id="lf-wpp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" required />
+      </div>
+      <div class="field">
+        <label for="lf-empresa">Empresa</label>
+        <input class="input" id="lf-empresa" name="empresa" autocomplete="organization" placeholder="Nome da empresa" required />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="lf-func">Nº de funcionários</label>
+        <select class="select" id="lf-func" name="funcionarios" required>
+          <option value="" selected disabled>Selecione</option>
+          <option>Até 9</option>
+          <option>10 a 49</option>
+          <option>50 a 99</option>
+          <option>100 a 499</option>
+          <option>500 ou mais</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="lf-urg">Urgência</label>
+        <select class="select" id="lf-urg" name="urgencia" required>
+          <option value="" selected disabled>Selecione</option>
+          <option>Imediata — tenho prazo ou exigência de cliente</option>
+          <option>Nos próximos 3 meses</option>
+          <option>Ainda este ano</option>
+          <option>Só pesquisando por enquanto</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="lf-fat">Faturamento anual <span class="hint">— opcional, ajuda a dimensionar a proposta</span></label>
+      <select class="select" id="lf-fat" name="faturamento">
+        <option value="" selected>Prefiro não informar</option>
+        <option>Até R$ 360 mil</option>
+        <option>R$ 360 mil a R$ 4,8 milhões</option>
+        <option>R$ 4,8 milhões a R$ 30 milhões</option>
+        <option>R$ 30 milhões a R$ 300 milhões</option>
+        <option>Acima de R$ 300 milhões</option>
+      </select>
+    </div>
+
+    {/* isca de bot: campo fora do fluxo visual e do tab. Preenchido = descarta em silêncio. */}
+    <div class="lf-hp" aria-hidden="true">
+      <label for="lf-site">Site</label>
+      <input id="lf-site" name="site" type="text" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <button type="submit" class="btn btn--primary btn--block btn--lg" data-trk-event="lead-form-artigo" data-trk-norma={norma}>
+      Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+    </button>
+    <p class="lf-legal">Ao enviar, você concorda em receber contato da Templum sobre a certificação {norma}. Seus dados são protegidos conforme a LGPD e não são compartilhados com terceiros.</p>
+  </form>
+
+  <div class="form-success lf-success" id="leadSuccess" hidden>
+    <iconify-icon icon="solar:check-circle-bold"></iconify-icon>
+    <div>
+      <h3>Recebemos seus dados!</h3>
+      <p>Um especialista em {norma} vai entrar em contato pelo WhatsApp que você informou. Se preferir adiantar, responda a esta mesma mensagem quando ele chamar com a sua dúvida principal — a conversa rende mais.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .lead-form { margin: 44px 0 8px; scroll-margin-top: 96px; }
+  .lf-head { margin-bottom: 22px; }
+  .lf-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.05em; color: var(--orange-ink);
+    background: rgba(255,89,37,0.10); border-radius: 999px; padding: 6px 12px; margin-bottom: 14px; }
+  .lf-head h2 { font-size: clamp(22px, 2.6vw, 30px); font-weight: 800; letter-spacing: -0.025em; margin: 0 0 10px; }
+  .lf-head p { font-size: 15.5px; line-height: 1.6; color: var(--text-mid); margin: 0; max-width: 620px; }
+  .lf-form { display: flex; flex-direction: column; gap: 16px; }
+  /* select nativo: a seta padrão do sistema quebra o alinhamento com .input em Safari */
+  .lf-form .select { appearance: none; -webkit-appearance: none; background-image:
+      linear-gradient(45deg, transparent 50%, var(--text-soft) 50%),
+      linear-gradient(135deg, var(--text-soft) 50%, transparent 50%);
+    background-position: right 18px center, right 13px center; background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat; padding-right: 38px; }
+  .lf-legal { font-size: 11.5px; color: var(--text-soft); line-height: 1.5; margin: 2px 0 0; }
+  /* honeypot: invisível sem display:none (bot lê estilo e ignora campo escondido assim) */
+  .lf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .lf-success { display: flex; gap: 14px; align-items: flex-start; }
+  .lf-success h3 { font-size: 19px; font-weight: 800; margin: 0 0 6px; }
+  .lf-success p { font-size: 15px; line-height: 1.6; color: var(--text-mid); margin: 0; }
+  .lf-success :global(iconify-icon) { font-size: 30px; color: var(--success, #16a34a); flex-shrink: 0; }
+  .form[hidden], .form-success[hidden] { display: none; }
+  @media (max-width: 620px) { .lead-form .form-row { grid-template-columns: 1fr; } }
+</style>
+
+<script is:inline define:vars={{ SB_URL: sbUrl, SB_ANON: sbAnon, slug, norma }}>
+  (function () {
+    var form = document.getElementById("leadForm");
+    if (!form) return;
+    var success = document.getElementById("leadSuccess");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      var d = {};
+      new FormData(form).forEach(function (v, k) { d[k] = typeof v === "string" ? v.trim() : v; });
+
+      // bot preencheu o honeypot: mostra sucesso e não grava nada.
+      if (d.site) { form.hidden = true; if (success) success.hidden = false; return; }
+
+      if (window.trk && typeof window.trk.lead === "function") {
+        try { window.trk.lead({ email: d.email, phone: d.whatsapp, name: d.nome }); } catch (_) {}
+      }
+
+      var pagina = "/" + slug + "/";
+
+      // 1) registro próprio do blog — fonte de verdade e histórico
+      try {
+        fetch(SB_URL + "/rest/v1/blog_templum_leads", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            apikey: SB_ANON,
+            Authorization: "Bearer " + SB_ANON,
+            Prefer: "return=minimal",
+          },
+          keepalive: true, // o usuário pode navegar antes da resposta voltar
+          body: JSON.stringify({
+            name: d.nome || "",
+            email: d.email || "",
+            phone: d.whatsapp || "",
+            company: d.empresa || "",
+            headcount: d.funcionarios || "",
+            revenue: d.faturamento || "",
+            urgency: d.urgencia || "",
+            norma: norma || "",
+            source: "consultoria-artigo",
+            page: pagina,
+          }),
+        });
+      } catch (_) {}
+
+      // 2) CRM Orbit — sem isso o lead morre numa tabela que ninguém abre.
+      // A função create-orbit-crm-lead joga no funil Leads B2B (source que não começa
+      // com "treinamento") e repassa custom_fields, então a qualificação chega junto e
+      // o closer não precisa perguntar porte e urgência de novo.
+      try {
+        fetch(SB_URL + "/functions/v1/create-orbit-crm-lead", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            apikey: SB_ANON,
+            Authorization: "Bearer " + SB_ANON,
+          },
+          keepalive: true,
+          body: JSON.stringify({
+            nome: d.nome || "",
+            email: d.email || "",
+            whatsapp: d.whatsapp || "",
+            empresa: d.empresa || "",
+            source: "blog-consultoria-" + (norma || "").toLowerCase().replace(/\s+/g, "-"),
+            tags: ["blog", "consultoria", norma].filter(Boolean),
+            notes: [
+              "Origem real: formulário de consultoria do blog, no fim do artigo " + pagina,
+              "Norma de interesse: " + norma,
+              "Funcionários: " + (d.funcionarios || "não informado"),
+              "Faturamento: " + (d.faturamento || "não informado"),
+              "Urgência: " + (d.urgencia || "não informado"),
+            ].join("\n"),
+            custom_fields: {
+              norma: norma || "",
+              headcount: d.funcionarios || "",
+              revenue: d.faturamento || "",
+              urgency: d.urgencia || "",
+              blog_page: pagina,
+            },
+          }),
+        });
+      } catch (_) {}
+
+      form.hidden = true;
+      if (success) success.hidden = false;
+      if (success && success.scrollIntoView) success.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  })();
+</script>
