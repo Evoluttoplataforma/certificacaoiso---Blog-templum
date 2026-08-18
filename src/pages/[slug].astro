@@ -51,7 +51,10 @@ const normaForm = normaDoForm(post.slug);
 
 // Norma da página para a tag do Clarity (ver data/normas.js). Sem ela a gravação chega no
 // painel sem assunto e não há como comparar conversão entre clusters de norma.
-const normaClarity = normaDaPagina({ categories: d.categories, title: d.title, slug: post.slug }) || normaForm || "";
+// `.display` — normaForm é o objeto { display, crm } de lead-form-pages.js, não uma
+// string. Sem isso a tag ia como "[object Object]" nas páginas curadas cuja norma não
+// aparece no título (SASSMAQ, GERIC, fluxograma), e o &norma= do CTA saía igual.
+const normaClarity = normaDaPagina({ categories: d.categories, title: d.title, slug: post.slug }) || normaForm?.display || "";
 
 // ---------- RELACIONADOS: relevância por tag + garantia de distribuição ----------
 // Em lib/posts.js, `categories` é [category_name, ...tags] — categoria e tags no

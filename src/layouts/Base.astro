@@ -142,8 +142,9 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
 
         // Clique em CTA de intenção alta. Marca e grava a sessão.
         // /form agora é DO BLOG (navegação interna) — antes era saída para o site, e o
-        // lead nascia sem origem. cta_form_site continua aqui porque ainda há links
-        // antigos apontando para templum.com.br/form dentro do conteúdo dos posts.
+        // lead nascia sem origem. cta_form_site fica como rede de segurança: se algum
+        // link para templum.com.br/form voltar (post novo publicado pelo CMS, por
+        // exemplo), o clique aparece no Clarity em vez de sumir.
         document.addEventListener("click", function (e) {
           var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
           if (!a) return;
