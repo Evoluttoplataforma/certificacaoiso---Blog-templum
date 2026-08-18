@@ -229,6 +229,22 @@
 /a-nova-iso-37001     /o-que-e-a-iso-37001/   301
 /a-nova-iso-37001/    /o-que-e-a-iso-37001/   301
 
+# FSSC 22000 — quatro posts de versão obsoleta → pilar da V7 (ago/2026).
+# A V7 do esquema saiu em maio/2026 e estes quatro descreviam v4/v5 como vigentes.
+# /novo-esquema-de-certificacao-fssc22000-o-que-mudou/ era o MAIS clicado do cluster
+# (73 cliques/16m) e abria afirmando que a versão vigente da ISO 22000 era a de 2005 —
+# errado desde 2018, na porta de entrada de uma vertical que a Templum vende. Os quatro
+# disputavam a mesma intenção ("fssc 22000 mudanças", "nova versão fssc") entre si e
+# contra os dois posts de V6. Conteúdo preservado como draft no Supabase.
+/novo-esquema-de-certificacao-fssc22000-o-que-mudou         /fssc-22000-versao-7/   301
+/novo-esquema-de-certificacao-fssc22000-o-que-mudou/        /fssc-22000-versao-7/   301
+/nova-versao-fssc-22000-v4-alteracoes-relevantes-para-sua-empresa    /fssc-22000-versao-7/   301
+/nova-versao-fssc-22000-v4-alteracoes-relevantes-para-sua-empresa/   /fssc-22000-versao-7/   301
+/nova-versao-da-fssc                                       /fssc-22000-versao-7/   301
+/nova-versao-da-fssc/                                      /fssc-22000-versao-7/   301
+/o-que-ainda-nao-te-contaram-da-versao-5-da-fssc           /fssc-22000-versao-7/   301
+/o-que-ainda-nao-te-contaram-da-versao-5-da-fssc/          /fssc-22000-versao-7/   301
+
 # ─────────────────────────────────────────────────────────────────────────────
 # ⚠️ NÃO USE CURINGA (* ou :placeholder) NESTE ARQUIVO. REGRA COM CURINGA VAI NO worker.js.
 #
@@ -243,6 +259,6 @@
 # As de /category/ foram pro worker.js (onde, de quebra, a precedência funciona:
 # aqui a regra ampla vencia a específica nas duas ordens possíveis).
 #
-# Hoje: 166 regras, todas static, zero dynamic. Enquanto ficar assim o teto é
+# Hoje: 176 regras, todas static, zero dynamic. Enquanto ficar assim o teto é
 # 2.000 e o problema não volta.
 # ─────────────────────────────────────────────────────────────────────────────

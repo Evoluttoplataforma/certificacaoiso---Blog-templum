@@ -138,7 +138,13 @@ export async function getAllPosts() {
   const catImgMap = await getCategoryImageMap();
   const all = [];
   let from = 0;
-  const size = 1000;
+  // Lote de 250, não 1.000. Com 1.009 posts publicados, pedir 1.000 de uma vez com
+  // `select=*` (content inteiro) dá 8,4 MB e ~5 s por requisição — encostado no
+  // statement_timeout do role anon. Em 18/08/2026 o build começou a falhar de forma
+  // intermitente com 57014 (canceling statement due to statement timeout): passava
+  // 1 vez em 3. Como o build lê o Supabase, build intermitente = deploy intermitente.
+  // Em lotes de 250 cada requisição fica em ~2 MB / ~1 s, com folga pra tabela crescer.
+  const size = 250;
   for (;;) {
     const r = await fetch(
       `${SB_URL}/rest/v1/blog_templum_posts?status=eq.published&select=*&order=published_at.desc`,
