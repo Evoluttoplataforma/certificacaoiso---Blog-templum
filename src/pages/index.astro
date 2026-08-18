@@ -19,7 +19,7 @@ const heroRevisado = dHero?.revisedDate && +new Date(dHero.revisedDate) > +new D
 const fmtHero = (dt) => dt.toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
 ---
 
-<Base preloadImage={destaque?.data.categoryImage}>
+<Base preloadImage={destaque?.data.categoryImage} clarityTags={{ page_type: "home", tem_form: "nao" }}>
   <!-- HERO -->
   <section class="bloghero section--navy">
     <div class="container lg">

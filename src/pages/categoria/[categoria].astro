@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
 import { catMeta } from "../../data/categorias.js";
 import { getAllPosts } from "../../lib/posts.js";
+import { normaDaPagina } from "../../data/normas.js";
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
@@ -44,6 +45,7 @@ const schemas = [{
   title={`${cat.nome} — Certificação ISO`}
   description={`Artigos sobre ${cat.nome}: dicas, guias e boas práticas de certificação ISO pela Templum.`}
   schemas={schemas}
+  clarityTags={{ page_type: "categoria", categoria: cat.nome, norma: normaDaPagina({ title: cat.nome }), tem_form: "nao" }}
 >
   <section class="cat-head section--navy">
     <div class="container lg">

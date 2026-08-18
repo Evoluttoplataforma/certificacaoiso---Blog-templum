@@ -161,6 +161,32 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
     if (!form) return;
     var success = document.getElementById("leadSuccess");
 
+    // --- Clarity: os três degraus do formulário ---------------------------
+    // O Clarity enxerga scroll e clique, mas não sabe o que é "o form apareceu",
+    // "o cara começou a preencher" e "enviou". Sem esses três nomes na timeline não
+    // há como isolar a sessão de quem tentou e desistiu — que é justamente a que
+    // explica lead perdido. O upgrade() no start garante que ela seja gravada.
+    function cStage(etapa, motivo) {
+      if (window.clarityTag) window.clarityTag("funil", etapa);
+      if (window.clarityEvent) window.clarityEvent("form_" + etapa);
+      if (motivo && window.clarityUpgrade) window.clarityUpgrade("form_" + etapa);
+    }
+
+    if (window.IntersectionObserver) {
+      var io = new IntersectionObserver(function (entries) {
+        if (entries.some(function (en) { return en.isIntersecting; })) {
+          io.disconnect();
+          cStage("visto");
+        }
+      }, { threshold: 0.4 });
+      io.observe(form);
+    }
+
+    form.addEventListener("focusin", function onFirst() {
+      form.removeEventListener("focusin", onFirst);
+      cStage("start", true);
+    });
+
     // Máscara de telefone — o site tem esse handler no Base.astro; aqui é local.
     var tel = document.getElementById("lf-tel");
     if (tel) {
@@ -188,9 +214,21 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
       new FormData(form).forEach(function (v, k) { d[k] = typeof v === "string" ? v.trim() : v; });
 
       // bot preencheu o honeypot: mostra sucesso e não grava nada.
-      if (d.site) { form.hidden = true; if (success) success.hidden = false; return; }
+      if (d.site) {
+        if (window.clarityTag) window.clarityTag("bot", "sim");
+        form.hidden = true; if (success) success.hidden = false; return;
+      }
 
       var pagina = "/" + slug + "/";
+
+      // Clarity: converteu. `lead=sim` vira segmento — dá pra comparar a gravação de
+      // quem fechou com a de quem parou no mesmo campo, na mesma página.
+      if (window.clarityTag) {
+        window.clarityTag("lead", "sim");
+        window.clarityTag("lead_norma", norma || "");
+        window.clarityTag("lead_urgencia", d.urgencia || "");
+      }
+      cStage("lead", true);
 
       if (window.trk && typeof window.trk.lead === "function") {
         try { window.trk.lead({ email: d.email, phone: d.telefone, name: d.nome }); } catch (_) {}
@@ -218,6 +256,9 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
             norma: norma || "",
             source: "consultoria-artigo",
             page: pagina,
+            // Liga este lead à gravação da sessão no Clarity (ver Base.astro).
+            // localStorage bloqueado (aba privada) → vazio, e o lead entra igual.
+            visitor_id: window.__ciUid || "",
           }),
         });
       } catch (_) {}

@@ -8,6 +8,58 @@ const SB_URL = import.meta.env.SUPABASE_URL || "https://yfpdrckyuxltvznqfqgh.sup
 const SB_ANON = import.meta.env.SUPABASE_ANON_KEY || "sb_publishable_Yfg9Ts5WRqD4Gc3jeWAS2A_-YWZrtiQ";
 const H = { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` };
 
+// --- Leitura do Supabase no build, com retry -------------------------------------
+// O build INTEIRO depende destas requisições: se uma falha, o deploy falha (ou pior,
+// publica degradado). E elas falham — em 18/08/2026 o build quebrou duas vezes seguidas
+// com 521/522 (Cloudflare: origem do Supabase fora) no 3º lote de posts, e um curl direto
+// no mesmo minuto deu 503 num range e 200 nos outros. É instabilidade transitória de
+// segundos: exatamente o caso que retry resolve e que sem retry vira "deploy intermitente".
+//
+// Duas defesas além do retry:
+//   - TIMEOUT por tentativa. O build que falhou ficou 4 minutos pendurado antes de
+//     desistir; um fetch travado é pior que um erro rápido, porque não retenta.
+//   - 200 com corpo não-JSON também retenta. A página de erro do Cloudflare chega como
+//     HTML, e JSON.parse nela estouraria longe daqui, com stack sem sentido.
+const SB_TRIES = 5;
+const SB_TIMEOUT_MS = 25_000;
+// 4xx é erro nosso (chave errada, filtro inválido): insistir só atrasa o build.
+// 408/425/429 e 5xx/52x são transitórios.
+const SB_RETRY_STATUS = new Set([408, 425, 429, 500, 502, 503, 504, 520, 521, 522, 523, 524, 525, 527]);
+const sbSleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function sbJson(path, { headers = H, label = "" } = {}) {
+  const rotulo = label || path.split("?")[0];
+  let ultimo = "";
+  let feitas = 0;
+  for (let tentativa = 1; tentativa <= SB_TRIES; tentativa++) {
+    feitas = tentativa;
+    try {
+      const r = await fetch(`${SB_URL}${path}`, { headers, signal: AbortSignal.timeout(SB_TIMEOUT_MS) });
+      const corpo = await r.text();
+      if (r.ok) {
+        try {
+          return JSON.parse(corpo);
+        } catch {
+          ultimo = `200 com corpo não-JSON: ${corpo.slice(0, 120).replace(/\s+/g, " ")}`;
+        }
+      } else {
+        ultimo = `HTTP ${r.status}: ${corpo.slice(0, 120).replace(/\s+/g, " ")}`;
+        if (!SB_RETRY_STATUS.has(r.status)) break;
+      }
+    } catch (e) {
+      ultimo = `${e.name === "TimeoutError" ? "timeout" : "rede"}: ${e.message}`;
+    }
+    if (tentativa < SB_TRIES) {
+      const espera = 1000 * 2 ** (tentativa - 1) + Math.floor(Math.random() * 300);
+      console.warn(`[supabase] ${rotulo} — ${ultimo}. Tentativa ${tentativa}/${SB_TRIES}, nova em ${espera}ms`);
+      await sbSleep(espera);
+    }
+  }
+  // `feitas`, não SB_TRIES: em 4xx a função para na 1ª: dizer "falhou em 5 tentativas"
+  // mandaria quem for debugar caçar um problema de rede que não existe.
+  throw new Error(`Supabase ${rotulo}: falhou em ${feitas} tentativa(s) — ${ultimo}`);
+}
+
 // Trecho único a partir do conteúdo (fallback de descrição quando não há excerpt).
 function snippetFrom(html) {
   const txt = (html || "")
@@ -95,8 +147,9 @@ const DEFAULT_CATEGORY_IMAGE = "/assets/categorias/default.jpg";
 let _catImgMap = null;
 async function getCategoryImageMap() {
   if (_catImgMap) return _catImgMap;
-  const r = await fetch(`${SB_URL}/rest/v1/blog_templum_categories?select=name,image_url`, { headers: H });
-  const cats = r.ok ? await r.json() : [];
+  // Falha aqui QUEBRA o build de propósito. O fallback silencioso que existia antes era
+  // pior que o erro: 1.002 cards publicados com a imagem default e ninguém percebendo.
+  const cats = await sbJson(`/rest/v1/blog_templum_categories?select=name,image_url`, { label: "categorias/imagem" });
   _catImgMap = Object.fromEntries(cats.filter((c) => c.image_url).map((c) => [c.name, c.image_url]));
   return _catImgMap;
 }
@@ -146,12 +199,10 @@ export async function getAllPosts() {
   // Em lotes de 250 cada requisição fica em ~2 MB / ~1 s, com folga pra tabela crescer.
   const size = 250;
   for (;;) {
-    const r = await fetch(
-      `${SB_URL}/rest/v1/blog_templum_posts?status=eq.published&select=*&order=published_at.desc`,
-      { headers: { ...H, Range: `${from}-${from + size - 1}` } }
+    const batch = await sbJson(
+      `/rest/v1/blog_templum_posts?status=eq.published&select=*&order=published_at.desc`,
+      { headers: { ...H, Range: `${from}-${from + size - 1}` }, label: `posts ${from}-${from + size - 1}` }
     );
-    if (!r.ok) throw new Error("Supabase posts: " + r.status + " " + (await r.text()).slice(0, 200));
-    const batch = await r.json();
     all.push(...batch);
     if (batch.length < size) break;
     from += size;
@@ -183,12 +234,10 @@ export async function getPopularPosts(limite) {
 let _iscas = null;
 export async function getAllIscas() {
   if (_iscas) return _iscas;
-  const r = await fetch(
-    `${SB_URL}/rest/v1/blog_templum_iscas?active=eq.true&select=*&order=segment,title`,
-    { headers: H }
+  _iscas = await sbJson(
+    `/rest/v1/blog_templum_iscas?active=eq.true&select=*&order=segment,title`,
+    { label: "iscas" }
   );
-  if (!r.ok) throw new Error("Supabase iscas: " + r.status + " " + (await r.text()).slice(0, 200));
-  _iscas = await r.json();
   return _iscas;
 }
 export async function getIsca(slug) {
@@ -201,11 +250,12 @@ const DEFAULT_ISCA_SLUG = "ebook-empresarios";
 let _iscaMap = null;
 async function buildIscaMap() {
   if (_iscaMap) return _iscaMap;
-  const [iscas, catsRes] = await Promise.all([
+  // Mesmo raciocínio do mapa de imagens: sem isca_slug, TODA categoria cairia na isca
+  // default e o CTA por norma viraria genérico no blog inteiro. Melhor quebrar o build.
+  const [iscas, cats] = await Promise.all([
     getAllIscas(),
-    fetch(`${SB_URL}/rest/v1/blog_templum_categories?select=name,isca_slug`, { headers: H }),
+    sbJson(`/rest/v1/blog_templum_categories?select=name,isca_slug`, { label: "categorias/isca" }),
   ]);
-  const cats = catsRes.ok ? await catsRes.json() : [];
   const bySlug = Object.fromEntries(iscas.map((i) => [i.slug, i]));
   const map = {};
   for (const c of cats) {

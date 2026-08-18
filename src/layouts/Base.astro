@@ -13,6 +13,10 @@ const {
   noChrome = false,
   robots = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
   preloadImage = "",
+  // Tags de contexto para o Microsoft Clarity (page_type, norma, categoria...). O Clarity
+  // já sabe device/browser/país/origem por conta própria — aqui vai só o que ele NÃO tem:
+  // de que assunto é a página e se ela tem formulário. É o que faz a gravação ser filtrável.
+  clarityTags = {},
 } = Astro.props;
 
 const SITE = (Astro.site?.href || "https://certificacaoiso.com.br/").replace(/\/$/, "");
@@ -92,6 +96,63 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
           var idle = window.requestIdleCallback || function(cb){ return setTimeout(cb, 6000); };
           idle(function(){ setTimeout(boot, 6000); });
         });
+      })();
+    </script>
+
+    <!-- Clarity: fila pré-boot + tags de contexto + eventos de funil.
+         O snippet acima só carrega na 1ª interação, então tudo que é chamado antes
+         disso precisa de fila própria — daí o stub abaixo. -->
+    <script is:inline define:vars={{ clarityTags }}>
+      // Stub com a MESMA forma do snippet oficial (fila em .q, que o clarity.js drena ao
+      // carregar). Como o snippet faz `c[a]=c[a]||...`, ele PRESERVA este stub: nenhum
+      // set/event/upgrade disparado antes do boot se perde.
+      window.clarity = window.clarity || function () {
+        (window.clarity.q = window.clarity.q || []).push(arguments);
+      };
+
+      (function () {
+        function C() { try { window.clarity.apply(null, arguments); } catch (e) {} }
+        // Helpers globais — usados também pelos forms (LeadForm.astro, /presentes/*).
+        window.clarityTag     = function (k, v) { if (v !== undefined && v !== null && v !== "") C("set", k, String(v)); };
+        window.clarityEvent   = function (n) { C("event", n); };
+        // upgrade() = "esta sessão importa, grave ela". É o que garante que a sessão de
+        // quem mexeu no formulário ou saiu pro funil não seja descartada por amostragem.
+        window.clarityUpgrade = function (r) { C("upgrade", r); };
+
+        var t = clarityTags || {};
+        Object.keys(t).forEach(function (k) { window.clarityTag(k, t[k]); });
+
+        // Visitante estável entre sessões: UUID first-party, SEM PII. Permite ver a
+        // jornada multi-visita ("leu 4 posts e só então preencheu").
+        //
+        // O MESMO valor vai para a coluna visitor_id de blog_templum_leads quando o
+        // visitante preenche um formulário — é o que liga o lead à gravação da sessão
+        // dele no Clarity. Por isso fica exposto em window.__ciUid.
+        try {
+          var uid = localStorage.getItem("__ci_uid");
+          if (!uid) {
+            uid = (window.crypto && crypto.randomUUID)
+              ? crypto.randomUUID()
+              : String(Date.now()) + Math.random().toString(16).slice(2);
+            localStorage.setItem("__ci_uid", uid);
+          }
+          window.__ciUid = uid;
+          C("identify", uid);
+        } catch (e) {}
+
+        // Saída para diagnóstico/WhatsApp/form do site = intenção alta. Marca e grava.
+        document.addEventListener("click", function (e) {
+          var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+          if (!a) return;
+          var h = a.href || "", ev = "";
+          if (/v2diagnostico\.templum\.com\.br/.test(h)) ev = "cta_diagnostico";
+          else if (/wa\.me|api\.whatsapp\.com/.test(h)) ev = "cta_whatsapp";
+          else if (/templum\.com\.br\/form/.test(h)) ev = "cta_form_site";
+          if (!ev) return;
+          window.clarityEvent(ev);
+          window.clarityTag("saiu_para", ev.replace("cta_", ""));
+          window.clarityUpgrade(ev);
+        }, true);
       })();
     </script>
 

@@ -5,6 +5,7 @@ import ArticleCard from "../components/ArticleCard.astro";
 import LeadForm from "../components/LeadForm.astro";
 import { catMeta } from "../data/categorias.js";
 import { normaDoForm } from "../data/lead-form-pages.js";
+import { normaDaPagina } from "../data/normas.js";
 import { getAllPosts, tldrOf, getIscaForCategories } from "../lib/posts.js";
 
 // Keys públicas (anon) para o POST do formulário de consultoria — mesmas de lib/posts.js.
@@ -47,6 +48,10 @@ const faq = d.faq || [];
 // Onde ele entra, substitui o CTA genérico do fim do artigo — dois CTAs empilhados
 // pedindo a mesma coisa disputam o mesmo clique e derrubam os dois.
 const normaForm = normaDoForm(post.slug);
+
+// Norma da página para a tag do Clarity (ver data/normas.js). Sem ela a gravação chega no
+// painel sem assunto e não há como comparar conversão entre clusters de norma.
+const normaClarity = normaDaPagina({ categories: d.categories, title: d.title, slug: post.slug }) || normaForm || "";
 
 // ---------- RELACIONADOS: relevância por tag + garantia de distribuição ----------
 // Em lib/posts.js, `categories` é [category_name, ...tags] — categoria e tags no
@@ -171,6 +176,12 @@ if (faq.length) {
   ogImage={d.ogImage || d.heroImage || "/assets/og/certificacaoiso-og.jpg"}
   ogType="article"
   schemas={schemas}
+  clarityTags={{
+    page_type: "artigo",
+    categoria: cat,
+    norma: normaClarity,
+    tem_form: normaForm ? "sim" : "nao",
+  }}
 >
   <article class="post">
     <div class="container md post-head">
