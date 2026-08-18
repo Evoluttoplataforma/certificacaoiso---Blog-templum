@@ -1,7 +1,7 @@
 # Redirects do blog (Cloudflare). Páginas antigas do WordPress que não viraram
 # post → destino válido. Zero 404, mesmo p/ links externos antigos.
-/precos                          https://templum.com.br/form?utm_source=blog&utm_medium=organico  301
-/precos/                         https://templum.com.br/form?utm_source=blog&utm_medium=organico  301
+/precos                          /form/?utm_source=blog&utm_medium=redirect-precos  301
+/precos/                         /form/?utm_source=blog&utm_medium=redirect-precos  301
 /certificacast                   https://templum.com.br  301
 /certificacast/                  https://templum.com.br  301
 /elemento-planejamento-estrategico/   /elementos-planejamento-estrategico/  301
@@ -137,10 +137,10 @@
 /sample-page                                     /                                                                301
 /materiais-ricos/                                /presentes/                                                      301
 /materiais-ricos                                 /presentes/                                                      301
-/teste-gratuitamente/                            https://templum.com.br/form?utm_source=blog&utm_medium=organico   301
-/teste-gratuitamente                             https://templum.com.br/form?utm_source=blog&utm_medium=organico   301
-/solicite-proposta/                              https://templum.com.br/form?utm_source=blog&utm_medium=organico   301
-/solicite-proposta                               https://templum.com.br/form?utm_source=blog&utm_medium=organico   301
+/teste-gratuitamente/                            /form/?utm_source=blog&utm_medium=redirect-teste  301
+/teste-gratuitamente                             /form/?utm_source=blog&utm_medium=redirect-teste  301
+/solicite-proposta/                              /form/?utm_source=blog&utm_medium=redirect-proposta  301
+/solicite-proposta                               /form/?utm_source=blog&utm_medium=redirect-proposta  301
 
 # Consolidação do cluster 5S (ago/2026). Duas páginas finas canibalizavam as fortes:
 # `relacao-entre-5s-...` (2.9k chars, pos. 16, zero inlink) disputava a mesma intenção de

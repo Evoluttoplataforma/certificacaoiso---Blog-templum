@@ -10,7 +10,7 @@ const HOST_G = /https?:\/\/certificacaoiso\.com\.br/i;
 
 // Órfãos (chave = path sem barra final) → destino correto.
 const REDIRECTS = {
-  "/precos": "https://templum.com.br/form?utm_source=blog&utm_medium=organico",
+  "/precos": "/form/?utm_source=blog&utm_medium=link-precos",
   "/certificacast": "https://templum.com.br",
   "/elemento-planejamento-estrategico": "/elementos-planejamento-estrategico/",
   "/planejamento-estrategico": "/como-fazer-planejamento-estrategico/",

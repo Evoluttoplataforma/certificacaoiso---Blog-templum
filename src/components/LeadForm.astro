@@ -46,7 +46,9 @@
 // A lista de urgência é a do site — e ela vale mais aqui do que lá, porque blog atrai
 // estudante e curioso em volume. "Sou apenas estudante" e "Preciso para minha
 // carreira" tiram esses leads da fila comercial sem precisar de um campo a mais.
-const { norma, crmNorma = "", slug = "", sbUrl, sbAnon } = Astro.props;
+// `source` distingue de onde veio o lead em blog_templum_leads: "consultoria-artigo" no
+// fim do artigo, "form-blog" na página /form. É o que permite medir cada caminho.
+const { norma, crmNorma = "", slug = "", sbUrl, sbAnon, source = "consultoria-artigo" } = Astro.props;
 
 const funcionarios = ["1 a 10", "11 a 50", "51 a 100", "101 a 250", "251 a 500", "Mais de 500"];
 const faturamentos = ["Até R$ 50 mil", "R$ 50 mil a R$ 100 mil", "R$ 100 mil a R$ 300 mil", "R$ 300 mil a R$ 500 mil", "R$ 500 mil a R$ 1 milhão", "Acima de R$ 1 milhão"];
@@ -56,7 +58,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
 <section class="lead-form lead-card" id="consultoria">
   <div class="lf-head">
     <span class="lf-tag"><iconify-icon icon="solar:medal-ribbon-star-bold"></iconify-icon> Consultoria Templum</span>
-    <h2>Precisa de consultoria para {norma}?</h2>
+    <h2>Precisa de consultoria para <span data-lf-norma>{norma}</span>?</h2>
     <p>Fale com nosso especialista. Conte o cenário da sua empresa e a gente responde com o caminho até a certificação — sem custo e sem compromisso.</p>
   </div>
 
@@ -117,14 +119,14 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
     <button type="submit" class="btn btn--primary btn--block btn--lg" data-trk-event="lead-form-artigo" data-trk-norma={norma}>
       Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
     </button>
-    <p class="lf-legal">Ao enviar, você concorda em receber contato da Templum sobre a certificação {norma}. Seus dados são protegidos conforme a LGPD e não são compartilhados com terceiros.</p>
+    <p class="lf-legal">Ao enviar, você concorda em receber contato da Templum sobre a certificação <span data-lf-norma>{norma}</span>. Seus dados são protegidos conforme a LGPD e não são compartilhados com terceiros.</p>
   </form>
 
   <div class="form-success lf-success" id="leadSuccess" hidden>
     <iconify-icon icon="solar:check-circle-bold"></iconify-icon>
     <div>
       <h3>Recebemos seus dados!</h3>
-      <p>Um especialista em {norma} vai entrar em contato pelo WhatsApp que você informou. Se preferir adiantar, responda a esta mesma mensagem quando ele chamar com a sua dúvida principal — a conversa rende mais.</p>
+      <p>Um especialista em <span data-lf-norma>{norma}</span> vai entrar em contato pelo WhatsApp que você informou. Se preferir adiantar, responda a esta mesma mensagem quando ele chamar com a sua dúvida principal — a conversa rende mais.</p>
     </div>
   </div>
 </section>
@@ -155,11 +157,16 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
   @media (max-width: 620px) { .lead-form .form-row { grid-template-columns: 1fr; } }
 </style>
 
-<script is:inline define:vars={{ SB_URL: sbUrl, SB_ANON: sbAnon, slug, norma, crmNorma }}>
+<script is:inline define:vars={{ SB_URL: sbUrl, SB_ANON: sbAnon, slug, norma, crmNorma, source }}>
   (function () {
     var form = document.getElementById("leadForm");
     if (!form) return;
     var success = document.getElementById("leadSuccess");
+
+    // Porta de extensão única (usada por /form, que descobre norma e página de origem
+    // na querystring). Uma porta só, lida na hora do envio, em vez de duplicar o
+    // formulário e criar duas verdades sobre o vocabulário do CRM.
+    function ov() { return window.__lfOverride || {}; }
 
     // --- Clarity: os três degraus do formulário ---------------------------
     // O Clarity enxerga scroll e clique, mas não sabe o que é "o form apareceu",
@@ -219,13 +226,17 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
         form.hidden = true; if (success) success.hidden = false; return;
       }
 
-      var pagina = "/" + slug + "/";
+      var O = ov();
+      var pagina = O.page || "/" + slug + "/";
+      var normaFinal = O.norma || norma;
+      var crmFinal = O.crmNorma !== undefined ? O.crmNorma : crmNorma;
+      var sourceFinal = O.source || source;
 
       // Clarity: converteu. `lead=sim` vira segmento — dá pra comparar a gravação de
       // quem fechou com a de quem parou no mesmo campo, na mesma página.
       if (window.clarityTag) {
         window.clarityTag("lead", "sim");
-        window.clarityTag("lead_norma", norma || "");
+        window.clarityTag("lead_norma", normaFinal || "");
         window.clarityTag("lead_urgencia", d.urgencia || "");
       }
       cStage("lead", true);
@@ -253,8 +264,8 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
             headcount: d.funcionarios || "",
             revenue: d.faturamento || "",
             urgency: d.urgencia || "",
-            norma: norma || "",
-            source: "consultoria-artigo",
+            norma: normaFinal || "",
+            source: sourceFinal,
             page: pagina,
             // Liga este lead à gravação da sessão no Clarity (ver Base.astro).
             // localStorage bloqueado (aba privada) → vazio, e o lead entra igual.
@@ -273,13 +284,13 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
         ].forEach(function (k) { if (p.get(k)) utm[k] = p.get(k); });
         if (!utm.utm_source) utm.utm_source = "blog";
         if (!utm.utm_medium) utm.utm_medium = "organico";
-        if (!utm.utm_campaign) utm.utm_campaign = "form-consultoria-artigo";
+        if (!utm.utm_campaign) utm.utm_campaign = sourceFinal === "form-blog" ? "form-blog" : "form-consultoria-artigo";
         if (!utm.utm_term) utm.utm_term = slug;
 
         // `norma` vai com o valor do CRM (cf_produto é select). Quando a página não
         // tem produto equivalente lá, vai vazio e o interesse real fica na mensagem.
-        var msg = "Lead do blog: formulário de consultoria no fim do artigo " + pagina +
-                  "\nInteresse declarado: " + norma +
+        var msg = "Lead do blog (" + sourceFinal + "): " + pagina +
+                  "\nInteresse declarado: " + normaFinal +
                   "\nUrgência: " + (d.urgencia || "não informado");
 
         fetch("https://templum.com.br/api/lead", {
@@ -292,7 +303,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
             email: d.email || "",
             telefone: d.telefone || "",
             empresa: d.empresa || "",
-            norma: crmNorma || "",
+            norma: crmFinal || "",
             funcionarios: d.funcionarios || "",
             faturamento: d.faturamento || "",
             urgencia: d.urgencia || "",

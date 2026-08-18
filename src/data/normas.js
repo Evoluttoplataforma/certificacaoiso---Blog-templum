@@ -38,3 +38,47 @@ export function normaDaPagina({ categories = [], title = "", slug = "" } = {}) {
   const m = hay.match(ISO_RE);
   return m ? "ISO " + m[1] : "";
 }
+
+
+// --- Norma → valor aceito pelo cf_produto do Orbit ------------------------------
+// cf_produto é um SELECT. Valor fora da lista faz o saveToOrbit do site reenviar o lead
+// SEM NENHUM custom field (é o fallback dele): o lead entra, mas cego — sem porte, sem
+// faturamento, sem página, sem UTM. Ver o comentário longo em data/lead-form-pages.js.
+// Lista válida: ISO 9001 · ISO 14001 · ISO 27001 · ISO 45001 · ISO 37001 · PBQP-H ·
+//               FSSC 22000 · HACCP · ESG · SGI · SASSMAQ · GERIC · LGPD
+// Norma sem produto equivalente (ISO 17025, 50001, IATF...) mapeia para "" de propósito:
+// melhor perder o produto e manter os outros campos do que cegar o lead inteiro.
+const CRM_PRODUTO = {
+  "ISO 9001": "ISO 9001",
+  "ISO 14001": "ISO 14001",
+  "ISO 27001": "ISO 27001",
+  "ISO 45001": "ISO 45001",
+  "ISO 37001": "ISO 37001",
+  "PBQP-H": "PBQP-H",
+  "FSSC 22000": "FSSC 22000",
+  // O produto vendido para quem busca ISO 22000 é o FSSC 22000 — mesmo mapeamento que
+  // data/lead-form-pages.js já usa na página "iso-22000".
+  "ISO 22000": "FSSC 22000",
+  "HACCP": "HACCP",
+  "LGPD": "LGPD",
+  "SASSMAQ": "SASSMAQ",
+  "GERIC": "GERIC",
+  "ESG": "ESG",
+  "SGI": "SGI",
+};
+
+// Exposto para a página /form, que resolve norma → produto no navegador (a norma só é
+// conhecida ali pela querystring). Mesma fonte da função abaixo: um mapa, não dois.
+export const CRM_PRODUTO_MAP = CRM_PRODUTO;
+
+export function crmDaNorma(norma) {
+  return CRM_PRODUTO[(norma || "").trim()] || "";
+}
+
+// Rótulos que a página /form aceita em ?norma= — evita headline com texto arbitrário
+// vindo da URL (o valor é escrito na página, então precisa ser de lista fechada).
+export const NORMAS_VALIDAS = Object.keys(CRM_PRODUTO).concat([
+  "ISO 17025", "ISO 50001", "ISO 27701", "ISO 26000", "ISO 56002", "ISO 31000",
+  "ISO 55001", "ISO 13485", "ISO 22301", "ISO 20000", "ISO 37301", "ISO 19011",
+  "IATF 16949", "BRCGS", "SA 8000", "AS 9100",
+]);

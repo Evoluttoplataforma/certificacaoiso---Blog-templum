@@ -37,13 +37,36 @@ try {
 
 // 2) Varre o dist e monta o sitemap.
 const urls = [];
+// Página com meta robots noindex NÃO entra: sitemap é o que pedimos para indexar, e a
+// contradição aparece no Search Console como "Enviada e marcada como noindex". Antes a
+// regra era uma lista de exceções por caminho (404, admin) e ela já tinha furado —
+// /buscar/ (noindex desde sempre) estava no sitemap, e /form/ entrou junto em 18/08/2026.
+// Ler o próprio HTML mantém sitemap e robots coerentes sem lista para manter.
+const excluidas = [];
+function ehNoindex(arquivo) {
+  // Só o <head> interessa; ler o post inteiro (até ~200 KB) seria desperdício.
+  const fd = fs.openSync(arquivo, "r");
+  try {
+    const buf = Buffer.alloc(8192);
+    const lidos = fs.readSync(fd, buf, 0, 8192, 0);
+    const head = buf.toString("utf8", 0, lidos);
+    const m = head.match(/<meta[^>]+name=["']robots["'][^>]*>/i);
+    return !!m && /noindex/i.test(m[0]);
+  } finally {
+    fs.closeSync(fd);
+  }
+}
+
 function walk(dir, base = "") {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     if (e.isDirectory()) walk(path.join(dir, e.name), base + "/" + e.name);
     else if (e.name === "index.html") {
       let u = (base || "/") + "/";
       u = u.replace(/\/+/g, "/");
-      if (!/\/(404|admin)\//.test(u)) urls.push(u === "//" ? "/" : u);
+      u = u === "//" ? "/" : u;
+      if (/\/(404|admin)\//.test(u)) continue;
+      if (ehNoindex(path.join(dir, e.name))) { excluidas.push(u); continue; }
+      urls.push(u);
     }
   }
 }
@@ -58,3 +81,4 @@ const xml =
   `\n</urlset>\n`;
 fs.writeFileSync(path.join(DIST, "sitemap.xml"), xml);
 console.log("sitemap.xml:", new Set(urls).size, "URLs ·", Object.keys(lastmod).length, "com lastmod");
+if (excluidas.length) console.log("sitemap: fora por noindex →", excluidas.sort().join(" "));

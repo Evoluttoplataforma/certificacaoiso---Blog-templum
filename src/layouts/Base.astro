@@ -140,7 +140,10 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
           C("identify", uid);
         } catch (e) {}
 
-        // Saída para diagnóstico/WhatsApp/form do site = intenção alta. Marca e grava.
+        // Clique em CTA de intenção alta. Marca e grava a sessão.
+        // /form agora é DO BLOG (navegação interna) — antes era saída para o site, e o
+        // lead nascia sem origem. cta_form_site continua aqui porque ainda há links
+        // antigos apontando para templum.com.br/form dentro do conteúdo dos posts.
         document.addEventListener("click", function (e) {
           var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
           if (!a) return;
@@ -148,6 +151,7 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
           if (/v2diagnostico\.templum\.com\.br/.test(h)) ev = "cta_diagnostico";
           else if (/wa\.me|api\.whatsapp\.com/.test(h)) ev = "cta_whatsapp";
           else if (/templum\.com\.br\/form/.test(h)) ev = "cta_form_site";
+          else if (a.host === location.host && /^\/form\/?(\?|$)/.test(a.pathname + a.search)) ev = "cta_form_blog";
           if (!ev) return;
           window.clarityEvent(ev);
           window.clarityTag("saiu_para", ev.replace("cta_", ""));

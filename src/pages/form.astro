@@ -1,0 +1,107 @@
+---
+// /form — a página de conversão DO BLOG.
+//
+// Por que ela existe: até 18/08/2026 todo CTA de "falar com especialista" saía para
+// templum.com.br/form. O lead nascia como lead DO SITE — o blog não aparecia como
+// origem, e o visitor_id do Clarity não atravessa domínio (localStorage é por origem),
+// então a jornada "leu 3 posts → pediu contato" se partia no meio. Com o formulário
+// aqui, o lead entra em blog_templum_leads com a página de origem, e a sessão do
+// Clarity continua inteira até a conversão.
+//
+// O lead segue indo para o pipeline oficial (templum.com.br/api/lead) — quem manda é o
+// LeadForm, reusado tal e qual. Nada de segundo formulário: duplicar os campos criaria
+// duas verdades sobre o vocabulário do CRM, que é o erro documentado em
+// data/lead-form-pages.js.
+import Base from "../layouts/Base.astro";
+import LeadForm from "../components/LeadForm.astro";
+import { NORMAS_VALIDAS, CRM_PRODUTO_MAP } from "../data/normas.js";
+
+const SB_URL = import.meta.env.SUPABASE_URL || "https://yfpdrckyuxltvznqfqgh.supabase.co";
+const SB_ANON = import.meta.env.SUPABASE_ANON_KEY || "sb_publishable_Yfg9Ts5WRqD4Gc3jeWAS2A_-YWZrtiQ";
+
+// noindex: é página de conversão, não de conteúdo. Deixar indexar poria o blog
+// competindo com templum.com.br/form pela mesma intenção — duas páginas fracas em vez
+// de uma forte. `follow` mantém o fluxo de link interno.
+const robots = "noindex,follow";
+---
+
+<Base
+  title="Falar com um especialista em certificação ISO | Certificação ISO"
+  description="Conte o cenário da sua empresa e receba o caminho até a certificação, sem custo e sem compromisso. Especialistas Templum, com garantia de 200%."
+  robots={robots}
+  clarityTags={{ page_type: "form", tem_form: "sim" }}
+>
+  <section class="fm-hero section--navy">
+    <div class="container md">
+      <span class="tag-pill tag-pill--glow"><iconify-icon icon="solar:medal-ribbon-star-bold"></iconify-icon> Consultoria Templum</span>
+      <h1>Fale com um especialista em <em class="accent" data-fm-norma>certificação ISO</em></h1>
+      <p>Mais de 30 anos levando empresas até o certificado, com garantia de 200%. Conte seu cenário e a gente responde com o caminho — sem custo e sem compromisso.</p>
+      <ul class="check-list fm-benefits">
+        <li class="check-item"><span class="check-circle"><iconify-icon icon="solar:check-read-linear"></iconify-icon></span><span>Diagnóstico gratuito do seu cenário</span></li>
+        <li class="check-item"><span class="check-circle"><iconify-icon icon="solar:check-read-linear"></iconify-icon></span><span>Prazo e investimento claros, sem surpresa</span></li>
+        <li class="check-item"><span class="check-circle"><iconify-icon icon="solar:check-read-linear"></iconify-icon></span><span>Garantia de 200%: se não certificar, devolvemos em dobro</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--cream fm-form-wrap">
+    <div class="container md">
+      <LeadForm norma="certificação ISO" crmNorma="" slug="form" source="form-blog" sbUrl={SB_URL} sbAnon={SB_ANON} />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .fm-hero { padding: 54px 0 44px; }
+  .fm-hero h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; letter-spacing: -0.03em; margin: 14px 0 12px; }
+  .fm-hero h1 :global(em) { font-style: italic; }
+  .fm-hero > div > p { font-size: 16.5px; line-height: 1.6; color: rgba(255,244,221,.75); max-width: 620px; margin: 0; }
+  .fm-benefits { display: inline-flex; flex-direction: column; gap: 10px; text-align: left; margin: 24px 0 0; }
+  .fm-form-wrap { padding-top: 8px; }
+  /* O LeadForm já traz a própria margem superior; aqui ela duplicaria o respiro. */
+  .fm-form-wrap :global(.lead-form) { margin-top: 0; }
+</style>
+
+<script is:inline define:vars={{ NORMAS_VALIDAS, CRM_PRODUTO_MAP }}>
+  // Contexto vem da URL: os banners dentro dos artigos levam utm_campaign=<slug do post>
+  // e norma=<rótulo>. Quem clica num banner de ISO 9001 e cai numa página genérica sente
+  // a queda de contexto — então a headline e o registro do lead usam a origem real.
+  (function () {
+    var q = new URLSearchParams(location.search);
+
+    // Lista fechada: o valor é escrito na página, então não pode vir livre da URL.
+    var norma = (q.get("norma") || "").trim();
+    if (norma && NORMAS_VALIDAS.indexOf(norma) === -1) norma = "";
+
+    // Página de origem: utm_campaign (posto pelos CTAs) ou o referrer do próprio blog.
+    var origem = (q.get("utm_campaign") || "").trim();
+    if (!origem && document.referrer.indexOf(location.origin) === 0) {
+      origem = document.referrer.slice(location.origin.length).split("?")[0].replace(/^\/|\/$/g, "");
+    }
+    var page = origem && origem !== "form" ? "/" + origem + "/" : "/form/";
+
+    // cf_produto é SELECT no Orbit: rótulo fora da lista faz o CRM descartar TODOS os
+    // custom fields do lead. Por isso a tradução usa o mapa do build (data/normas.js) e
+    // cai em "" quando a norma não tem produto equivalente — perde-se o produto, não o
+    // porte/faturamento/página/UTM.
+    var crm = (norma && CRM_PRODUTO_MAP[norma]) || "";
+
+    window.__lfOverride = {
+      source: "form-blog",
+      page: page,
+      norma: norma || "certificação ISO",
+      crmNorma: crm,
+    };
+
+    if (norma) {
+      Array.prototype.forEach.call(document.querySelectorAll("[data-fm-norma],[data-lf-norma]"), function (el) {
+        el.textContent = norma;
+      });
+      document.title = "Falar com um especialista em " + norma + " | Certificação ISO";
+    }
+    if (window.clarityTag) {
+      window.clarityTag("norma", norma || "(nao informada)");
+      window.clarityTag("form_origem", page);
+    }
+  })();
+</script>

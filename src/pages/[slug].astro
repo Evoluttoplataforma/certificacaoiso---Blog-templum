@@ -241,7 +241,7 @@ if (faq.length) {
               <h3>Pronto para certificar sua empresa?</h3>
               <p>Fale com um especialista da Templum e receba um diagnóstico gratuito — com garantia de 200%.</p>
             </div>
-            <a href={`https://templum.com.br/form?utm_source=blog&utm_medium=cta-artigo&utm_campaign=${post.slug}`} class="btn btn--primary btn--lg" data-trk-event="cta-artigo">Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+            <a href={`/form/?utm_source=blog&utm_medium=cta-artigo&utm_campaign=${post.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`} class="btn btn--primary btn--lg" data-trk-event="cta-artigo">Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
           </div>
         )}
       </div>
