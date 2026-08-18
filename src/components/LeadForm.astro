@@ -4,18 +4,53 @@
 // Onde fica e por quê: DEPOIS do conteúdo e do FAQ, substituindo o CTA genérico
 // (.post-cta) nas páginas da lista em data/lead-form-pages.js. O funil da página fica
 // com dois degraus que não competem: no alto da sidebar o diagnóstico da Olívia (zero
-// campo, atrito mínimo) e no fim do artigo este form (6 campos, lead qualificado) —
+// campo, atrito mínimo) e no fim do artigo este form (7 campos, lead qualificado) —
 // para quem leu tudo, inclusive as objeções respondidas no FAQ, e ainda quer falar.
 //
-// Grava direto no Supabase pelo MESMO caminho das iscas (/presentes/*): POST no REST
-// com a key anon, coberto pela policy `leads_anon_insert` da blog_templum_leads. Sem
-// endpoint no worker.js — o que não existe não quebra deploy.
+// ---------------------------------------------------------------------------
+// PARA ONDE O LEAD VAI (dois destinos, de propósito)
+//
+// 1. blog_templum_leads (Supabase, POST anon no REST — mesmo caminho das iscas de
+//    /presentes/*, coberto pela policy leads_anon_insert). É o registro do BLOG:
+//    permite analisar conversão por página, que é o que o CRM não responde.
+//
+// 2. https://templum.com.br/api/lead — o MESMO endpoint que o formulário do /form
+//    do site usa. Ele encadeia site_leads + Mailchimp + Meta CAPI + ManyChat +
+//    Pipedrive + Orbit numa transação só. Reusar isso em vez de falar direto com o
+//    CRM evita três armadilhas que já custaram caro nesta integração:
+//
+//      a) FUNIL. A edge function create-orbit-crm-lead joga no pipeline
+//         7b522de3…; o site joga no 346d6495…. São funis diferentes — lead do blog
+//         indo pro primeiro não aparece na fila que o time comercial abre.
+//      b) VOCABULÁRIO. cf_produto, cf_faixa_de_funcion_rios e cf_faixa_de_faturamento
+//         são SELECT no Orbit. Valor fora da lista faz o saveToOrbit reenviar sem
+//         NENHUM custom field (é o fallback dele) — o lead entra, mas cego: sem
+//         porte, sem faturamento, sem página, sem UTM. Por isso as options abaixo
+//         são cópia literal das de site/src/components/LeadForm.astro, e o
+//         faturamento é MENSAL (o do site é), não anual.
+//      c) DUPLICIDADE. /api/lead já chama o Orbit. Chamar a edge function também
+//         criaria dois leads para a mesma pessoa, em dois funis.
+//
+// O POST cross-origin usa content-type text/plain + mode no-cors: assim ele é uma
+// "simple request" e não dispara preflight OPTIONS — que o worker do site responderia
+// com 405, porque a rota só aceita POST. O corpo continua JSON e o handler faz
+// request.json() normalmente. Em troca a resposta é opaca: quem confirma que o lead
+// existe é o registro em blog_templum_leads, não este fetch.
+// ---------------------------------------------------------------------------
 //
 // Campos obrigatórios: nome, e-mail, WhatsApp, empresa, funcionários e urgência.
 // Faturamento fica OPCIONAL de propósito: é o campo mais sensível do formulário e o
 // que mais faz desistir no meio. Porte + urgência já qualificam o suficiente para o
 // time priorizar a fila; faturamento é bônus quando o lead está confortável.
-const { norma, slug = "", sbUrl, sbAnon } = Astro.props;
+//
+// A lista de urgência é a do site — e ela vale mais aqui do que lá, porque blog atrai
+// estudante e curioso em volume. "Sou apenas estudante" e "Preciso para minha
+// carreira" tiram esses leads da fila comercial sem precisar de um campo a mais.
+const { norma, crmNorma = "", slug = "", sbUrl, sbAnon } = Astro.props;
+
+const funcionarios = ["1 a 10", "11 a 50", "51 a 100", "101 a 250", "251 a 500", "Mais de 500"];
+const faturamentos = ["Até R$ 50 mil", "R$ 50 mil a R$ 100 mil", "R$ 100 mil a R$ 300 mil", "R$ 300 mil a R$ 500 mil", "R$ 500 mil a R$ 1 milhão", "Acima de R$ 1 milhão"];
+const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certificar", "Preciso para minha carreira", "Sou apenas estudante"];
 ---
 
 <section class="lead-form lead-card" id="consultoria">
@@ -39,8 +74,8 @@ const { norma, slug = "", sbUrl, sbAnon } = Astro.props;
 
     <div class="form-row">
       <div class="field">
-        <label for="lf-wpp">WhatsApp</label>
-        <input class="input" id="lf-wpp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" required />
+        <label for="lf-tel">WhatsApp</label>
+        <input class="input" id="lf-tel" name="telefone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(00) 00000-0000" required />
       </div>
       <div class="field">
         <label for="lf-empresa">Empresa</label>
@@ -53,34 +88,23 @@ const { norma, slug = "", sbUrl, sbAnon } = Astro.props;
         <label for="lf-func">Nº de funcionários</label>
         <select class="select" id="lf-func" name="funcionarios" required>
           <option value="" selected disabled>Selecione</option>
-          <option>Até 9</option>
-          <option>10 a 49</option>
-          <option>50 a 99</option>
-          <option>100 a 499</option>
-          <option>500 ou mais</option>
+          {funcionarios.map((f) => <option value={f}>{f}</option>)}
         </select>
       </div>
       <div class="field">
-        <label for="lf-urg">Urgência</label>
+        <label for="lf-urg">Qual sua urgência?</label>
         <select class="select" id="lf-urg" name="urgencia" required>
           <option value="" selected disabled>Selecione</option>
-          <option>Imediata — tenho prazo ou exigência de cliente</option>
-          <option>Nos próximos 3 meses</option>
-          <option>Ainda este ano</option>
-          <option>Só pesquisando por enquanto</option>
+          {urgencias.map((u) => <option value={u}>{u}</option>)}
         </select>
       </div>
     </div>
 
     <div class="field">
-      <label for="lf-fat">Faturamento anual <span class="hint">— opcional, ajuda a dimensionar a proposta</span></label>
+      <label for="lf-fat">Faturamento mensal <span class="hint">— opcional, ajuda a dimensionar a proposta</span></label>
       <select class="select" id="lf-fat" name="faturamento">
         <option value="" selected>Prefiro não informar</option>
-        <option>Até R$ 360 mil</option>
-        <option>R$ 360 mil a R$ 4,8 milhões</option>
-        <option>R$ 4,8 milhões a R$ 30 milhões</option>
-        <option>R$ 30 milhões a R$ 300 milhões</option>
-        <option>Acima de R$ 300 milhões</option>
+        {faturamentos.map((f) => <option value={f}>{f}</option>)}
       </select>
     </div>
 
@@ -131,15 +155,34 @@ const { norma, slug = "", sbUrl, sbAnon } = Astro.props;
   @media (max-width: 620px) { .lead-form .form-row { grid-template-columns: 1fr; } }
 </style>
 
-<script is:inline define:vars={{ SB_URL: sbUrl, SB_ANON: sbAnon, slug, norma }}>
+<script is:inline define:vars={{ SB_URL: sbUrl, SB_ANON: sbAnon, slug, norma, crmNorma }}>
   (function () {
     var form = document.getElementById("leadForm");
     if (!form) return;
     var success = document.getElementById("leadSuccess");
 
+    // Máscara de telefone — o site tem esse handler no Base.astro; aqui é local.
+    var tel = document.getElementById("lf-tel");
+    if (tel) {
+      tel.addEventListener("input", function () {
+        var d = tel.value.replace(/\D/g, "").substring(0, 11);
+        if (!d.length) { tel.value = ""; return; }
+        if (d.length <= 2) tel.value = "(" + d;
+        else if (d.length <= 6) tel.value = "(" + d.slice(0, 2) + ") " + d.slice(2);
+        else if (d.length <= 10) tel.value = "(" + d.slice(0, 2) + ") " + d.slice(2, 6) + "-" + d.slice(6);
+        else tel.value = "(" + d.slice(0, 2) + ") " + d.slice(2, 7) + "-" + d.slice(7);
+      });
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      // Trava de disparo único: duplo clique não pode gerar dois leads no CRM.
+      if (form.dataset.leadSubmitted === "1") return;
+      form.dataset.leadSubmitted = "1";
+      var btn = form.querySelector('[type="submit"]');
+      if (btn) btn.disabled = true;
 
       var d = {};
       new FormData(form).forEach(function (v, k) { d[k] = typeof v === "string" ? v.trim() : v; });
@@ -147,13 +190,13 @@ const { norma, slug = "", sbUrl, sbAnon } = Astro.props;
       // bot preencheu o honeypot: mostra sucesso e não grava nada.
       if (d.site) { form.hidden = true; if (success) success.hidden = false; return; }
 
-      if (window.trk && typeof window.trk.lead === "function") {
-        try { window.trk.lead({ email: d.email, phone: d.whatsapp, name: d.nome }); } catch (_) {}
-      }
-
       var pagina = "/" + slug + "/";
 
-      // 1) registro próprio do blog — fonte de verdade e histórico
+      if (window.trk && typeof window.trk.lead === "function") {
+        try { window.trk.lead({ email: d.email, phone: d.telefone, name: d.nome }); } catch (_) {}
+      }
+
+      // 1) registro do blog — fonte de verdade para conversão POR PÁGINA
       try {
         fetch(SB_URL + "/rest/v1/blog_templum_leads", {
           method: "POST",
@@ -163,11 +206,11 @@ const { norma, slug = "", sbUrl, sbAnon } = Astro.props;
             Authorization: "Bearer " + SB_ANON,
             Prefer: "return=minimal",
           },
-          keepalive: true, // o usuário pode navegar antes da resposta voltar
+          keepalive: true,
           body: JSON.stringify({
             name: d.nome || "",
             email: d.email || "",
-            phone: d.whatsapp || "",
+            phone: d.telefone || "",
             company: d.empresa || "",
             headcount: d.funcionarios || "",
             revenue: d.faturamento || "",
@@ -179,41 +222,43 @@ const { norma, slug = "", sbUrl, sbAnon } = Astro.props;
         });
       } catch (_) {}
 
-      // 2) CRM Orbit — sem isso o lead morre numa tabela que ninguém abre.
-      // A função create-orbit-crm-lead joga no funil Leads B2B (source que não começa
-      // com "treinamento") e repassa custom_fields, então a qualificação chega junto e
-      // o closer não precisa perguntar porte e urgência de novo.
+      // 2) pipeline oficial de lead da Templum (site_leads + Mailchimp + CAPI +
+      //    ManyChat + Pipedrive + Orbit). Mesmo endpoint do /form do site.
       try {
-        fetch(SB_URL + "/functions/v1/create-orbit-crm-lead", {
+        var p = new URLSearchParams(location.search);
+        var utm = {};
+        ["utm_source","utm_medium","utm_campaign","utm_term","utm_content",
+         "gclid","fbclid","gad_source","gad_campaignid","msclkid","ttclid","gbraid","wbraid"
+        ].forEach(function (k) { if (p.get(k)) utm[k] = p.get(k); });
+        if (!utm.utm_source) utm.utm_source = "blog";
+        if (!utm.utm_medium) utm.utm_medium = "organico";
+        if (!utm.utm_campaign) utm.utm_campaign = "form-consultoria-artigo";
+        if (!utm.utm_term) utm.utm_term = slug;
+
+        // `norma` vai com o valor do CRM (cf_produto é select). Quando a página não
+        // tem produto equivalente lá, vai vazio e o interesse real fica na mensagem.
+        var msg = "Lead do blog: formulário de consultoria no fim do artigo " + pagina +
+                  "\nInteresse declarado: " + norma +
+                  "\nUrgência: " + (d.urgencia || "não informado");
+
+        fetch("https://templum.com.br/api/lead", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            apikey: SB_ANON,
-            Authorization: "Bearer " + SB_ANON,
-          },
+          mode: "no-cors", // simple request: sem preflight (a rota do site só aceita POST)
+          headers: { "Content-Type": "text/plain;charset=UTF-8" },
           keepalive: true,
-          body: JSON.stringify({
+          body: JSON.stringify(Object.assign({
             nome: d.nome || "",
             email: d.email || "",
-            whatsapp: d.whatsapp || "",
+            telefone: d.telefone || "",
             empresa: d.empresa || "",
-            source: "blog-consultoria-" + (norma || "").toLowerCase().replace(/\s+/g, "-"),
-            tags: ["blog", "consultoria", norma].filter(Boolean),
-            notes: [
-              "Origem real: formulário de consultoria do blog, no fim do artigo " + pagina,
-              "Norma de interesse: " + norma,
-              "Funcionários: " + (d.funcionarios || "não informado"),
-              "Faturamento: " + (d.faturamento || "não informado"),
-              "Urgência: " + (d.urgencia || "não informado"),
-            ].join("\n"),
-            custom_fields: {
-              norma: norma || "",
-              headcount: d.funcionarios || "",
-              revenue: d.faturamento || "",
-              urgency: d.urgencia || "",
-              blog_page: pagina,
-            },
-          }),
+            norma: crmNorma || "",
+            funcionarios: d.funcionarios || "",
+            faturamento: d.faturamento || "",
+            urgencia: d.urgencia || "",
+            mensagem: msg,
+            evento: "blog-consultoria",
+            pagina: "https://certificacaoiso.com.br" + pagina,
+          }, utm)),
         });
       } catch (_) {}
 

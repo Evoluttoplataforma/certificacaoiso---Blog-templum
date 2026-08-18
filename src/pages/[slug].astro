@@ -223,7 +223,7 @@ if (faq.length) {
 
         <!-- Fim do artigo: form de consultoria nas páginas curadas, CTA genérico nas demais -->
         {normaForm ? (
-          <LeadForm norma={normaForm} slug={post.slug} sbUrl={SB_URL} sbAnon={SB_ANON} />
+          <LeadForm norma={normaForm.display} crmNorma={normaForm.crm} slug={post.slug} sbUrl={SB_URL} sbAnon={SB_ANON} />
         ) : (
           <div class="post-cta">
             <div>
