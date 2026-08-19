@@ -1,6 +1,7 @@
 ---
 // Header do blog Certificação ISO — usa o design system da Templum.
 import { categorias } from "../data/categorias.js";
+import { produtos } from "../data/produtos.js";
 const TEMPLUM = "https://templum.com.br";
 ---
 <a href="/form/?utm_source=blog&utm_medium=top-banner" class="top-banner">
@@ -18,20 +19,26 @@ const TEMPLUM = "https://templum.com.br";
     </a>
     <nav class="hd-nav" aria-label="Navegação do blog">
       <a class="hd-link" href="/">Início</a>
+      {/* Menu por NORMA, não por categoria editorial: é assim que o leitor busca.
+          "Outros temas" mantém as categorias acessíveis — sem elas, 1.015 posts que não
+          são de nenhuma das 7 normas ficariam sem porta de entrada no menu. */}
       <div class="hd-item">
-        <button class="hd-link hd-trigger" type="button" aria-haspopup="true">Categorias <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon></button>
+        <button class="hd-link hd-trigger" type="button" aria-haspopup="true">Normas <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon></button>
         <div class="mega">
           <div class="mega-grid">
-            {categorias.map((c) => (
-              <a class="mega-link" href={`/categoria/${c.slug}/`}>
-                <span class="mega-ico" style={`color:${c.cor};background:color-mix(in srgb, ${c.cor} 14%, transparent)`}><iconify-icon icon={c.icon}></iconify-icon></span>
-                <span>{c.nome}</span>
+            {produtos.map((p) => (
+              <a class="mega-link" href={p.url}>
+                <span class="mega-ico" style={`color:${p.cor};background:color-mix(in srgb, ${p.cor} 14%, transparent)`}><iconify-icon icon={p.icon}></iconify-icon></span>
+                <span>{p.nome}</span>
               </a>
             ))}
           </div>
+          <span class="mega-head">Outros temas</span>
+          <div class="mega-outros">
+            {categorias.map((c) => <a class="mega-tag" href={`/categoria/${c.slug}/`}>{c.nome}</a>)}
+          </div>
         </div>
       </div>
-      <a class="hd-link" href={`${TEMPLUM}/historias`}>Histórias</a>
     </nav>
     <div class="hd-actions">
       <a href="/buscar/" class="hd-search" aria-label="Buscar artigos"><iconify-icon icon="solar:magnifer-linear"></iconify-icon></a>
@@ -47,8 +54,9 @@ const TEMPLUM = "https://templum.com.br";
   <div class="hd-mobile" id="hdMobile">
     <nav>
       <a href="/">Início</a>
-      <a href={`${TEMPLUM}/historias`}>Histórias</a>
-      <span class="hd-mobile-head">Categorias</span>
+      <span class="hd-mobile-head">Normas</span>
+      {produtos.map((p) => <a class="hd-mobile-sub" href={p.url}>{p.nome}</a>)}
+      <span class="hd-mobile-head">Outros temas</span>
       {categorias.map((c) => <a class="hd-mobile-sub" href={`/categoria/${c.slug}/`}>{c.nome}</a>)}
       <a href="/buscar/">Buscar artigos</a>
       <a href={TEMPLUM}>Site Templum</a>
@@ -84,6 +92,16 @@ const TEMPLUM = "https://templum.com.br";
   .mega-link { display: flex; align-items: center; gap: 11px; padding: 10px 12px; border-radius: 12px; font-size: 14px; font-weight: 700; color: var(--text); transition: background .15s; }
   .mega-link:hover { background: var(--surface); color: var(--orange); }
   .mega-ico { width: 36px; height: 36px; flex: none; border-radius: 10px; display: grid; place-items: center; font-size: 19px; }
+  /* "Outros temas": as categorias descem pra chips, visualmente subordinadas às normas —
+     o menu diz o que é principal sem precisar de um segundo nível de hover. */
+  .mega-head { display: block; font-size: 11px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--text-soft); margin: 14px 4px 8px;
+    padding-top: 12px; border-top: 1px solid var(--border); }
+  .mega-outros { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 4px 2px; }
+  .mega-tag { font-size: 12.5px; font-weight: 600; color: var(--text-mid);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 100px;
+    padding: 6px 11px; transition: color .15s, border-color .15s; }
+  .mega-tag:hover { color: var(--orange); border-color: var(--orange); }
   .hd-mobile-head { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-soft); padding: 14px 0 4px; }
   .hd-actions { margin-left: auto; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
   .hd-search { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: var(--text-2); border: 1px solid var(--border); transition: all .2s; }

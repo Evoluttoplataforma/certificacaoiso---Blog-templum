@@ -192,6 +192,12 @@ em.accent { font-style: italic; color: var(--orange); font-weight: 800; }
 /* ---------- WhatsApp float ---------- */
 .whatsapp-float { position: fixed; bottom: 26px; right: 26px; z-index: 900; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 6px 22px rgba(37,211,102,0.45); color: #fff; font-size: 28px; transition: transform .3s var(--ease-soft); }
 .whatsapp-float:hover { transform: scale(1.08); }
+/* Só desktop. Esta regra existia dentro do bloco do float da Olívia e foi removida
+   junto com ele em 19/08/2026 — resultado: o WhatsApp, que nunca aparecia no celular,
+   passou a flutuar sobre o dock do webinar. No mobile o contato é o botão do header. */
+@media (max-width: 768px) {
+  .whatsapp-float, .float-desktop { display: none; }
+}
 
 /* O float da Olívia (mobile) saiu em 19/08/2026 — no celular o topo tem o botão
    Contato e o rodapé tem o dock do webinar; um terceiro elemento fixo cobria o
