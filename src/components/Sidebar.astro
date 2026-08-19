@@ -11,6 +11,7 @@
 // Sem data de propósito: em card de relacionados a relevância importa mais que a
 // recência, e data antiga em post ainda válido derruba o clique.
 import { ctaParaNorma } from "../data/cta-norma.js";
+import WebinarCard from "./WebinarCard.astro";
 
 const { ref = "", author = "Equipe Templum", related = [], catName = "", catSlug = "", categories = [] } = Astro.props;
 
@@ -25,6 +26,11 @@ const diagnosticoUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blo
     <span class="sb-author-av"><iconify-icon icon="solar:user-bold"></iconify-icon></span>
     <div><span class="sb-author-by">Escrito por</span><strong>{author}</strong></div>
   </div>
+
+  <!-- Webinar da semana ACIMA do card da Olívia: é oferta com data, perde valor a cada
+       dia; o diagnóstico não expira. Só aparece no desktop (ver WebinarCard.astro) —
+       no mobile a sidebar desce pro fim da página e quem serve é o card do conteúdo. -->
+  <WebinarCard variante="sidebar" />
 
   <!-- CTA único: diagnóstico com a Olívia -->
   <div class="sb-diagnostico">

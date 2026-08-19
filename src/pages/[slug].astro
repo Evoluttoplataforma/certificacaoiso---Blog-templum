@@ -3,6 +3,7 @@ import Base from "../layouts/Base.astro";
 import Sidebar from "../components/Sidebar.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import LeadForm from "../components/LeadForm.astro";
+import WebinarCard from "../components/WebinarCard.astro";
 import { catMeta } from "../data/categorias.js";
 import { normaDoForm } from "../data/lead-form-pages.js";
 import { normaDaPagina } from "../data/normas.js";
@@ -233,6 +234,10 @@ if (faq.length) {
           </section>
         )}
 
+        <!-- Webinar da semana, versão mobile: entra depois do texto e do FAQ, antes do
+             CTA de consultoria. No desktop este some e quem aparece é o da sidebar. -->
+        <WebinarCard variante="conteudo" />
+
         <!-- Fim do artigo: form de consultoria nas páginas curadas, CTA genérico nas demais -->
         {normaForm ? (
           <LeadForm norma={normaForm.display} crmNorma={normaForm.crm} slug={post.slug} sbUrl={SB_URL} sbAnon={SB_ANON} />
@@ -392,6 +397,15 @@ if (faq.length) {
   .post-cta { margin-top: 44px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-24); padding: 30px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
   .post-cta h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
   .post-cta p { font-size: 14.5px; color: var(--text-mid); max-width: 460px; }
+
+  /* O card de webinar mora DENTRO de .post-content, e ali as regras do corpo do artigo
+     vencem as do componente por especificidade: `:global(img)` (0,2,0) daria 22px de
+     margem e borda arredondada na imagem dentro do card, e `:global(a:not(.btn))` a
+     pintaria de laranja com sublinhado. Estes seletores têm (0,2,1) e desfazem isso.
+     Mora aqui, e não no WebinarCard, porque o problema é do contexto — o mesmo card na
+     sidebar não sofre nada disso. */
+  .post-content :global(.wb-card img) { margin: 0; border-radius: 0; }
+  .post-content :global(a.wb-card) { color: inherit; text-decoration: none; }
 
   /* CTA da Olívia DENTRO do corpo do artigo. Entrou no lugar das capas de e-book/planilha
      quando as iscas foram descontinuadas (19/08/2026): a promessa deixou de ser "baixe o

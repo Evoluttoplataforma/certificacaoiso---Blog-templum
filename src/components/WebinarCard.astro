@@ -1,0 +1,112 @@
+---
+// Card do webinar da semana. Aparece nos 1.015 posts, em DOIS lugares:
+//   · variante "sidebar"  → acima do card da Olívia, visível só no desktop (>980px)
+//   · variante "conteudo" → no fim do artigo, visível só no mobile (<=980px)
+// O ponto de corte é 980px porque é onde .post-grid vira coluna única e a sidebar
+// desce pra baixo do texto — abaixo disso, o card do conteúdo é o que o leitor vê.
+//
+// TROCA AUTOMÁTICA sem deploy: o blog é estático, então o HTML sai do build com o
+// webinar correto DAQUELE momento. Se a semana virar antes do próximo deploy (e vira:
+// deploy não é semanal), o script inline recalcula no navegador do leitor e reescreve
+// imagem, título, data e link. Quem tem JS desligado vê o do build — nunca um card
+// vazio. Passada a última data da lista, o card é removido dos dois lugares.
+import { WEBINARS_CLIENTE, webinarAtual } from "../data/webinars.js";
+
+const { variante } = Astro.props;
+const w = webinarAtual();
+---
+
+{w && (
+  <a
+    class={`wb-card wb-card--${variante}`}
+    href={w.url}
+    data-wb-card
+    data-trk-event="cta-webinar"
+    data-trk-norma="ISO 9001"
+  >
+    <img
+      data-wb-img
+      src={`/assets/webinars/${w.slug}.webp`}
+      alt={`Webinar gratuito: ${w.titulo} — quarta, ${w.data}, às 16h`}
+      width="640"
+      height="640"
+      loading="lazy"
+      decoding="async"
+    />
+    <span class="wb-body">
+      <span class="wb-tag"><iconify-icon icon="solar:videocamera-record-bold"></iconify-icon> Webinar gratuito · ao vivo</span>
+      <strong data-wb-titulo>{w.titulo}</strong>
+      <span class="wb-quando">Quarta, <b data-wb-data>{w.data}</b>, às 16h (Brasília)</span>
+      <span class="btn btn--primary btn--block">Quero minha vaga <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></span>
+    </span>
+  </a>
+)}
+
+<script is:inline define:vars={{ WEBINARS_CLIENTE }}>
+  // Guarda: o componente é renderizado duas vezes por página (sidebar + conteúdo) e este
+  // script vem junto nas duas. Rodar duas vezes não estragaria nada, mas é trabalho dobrado.
+  if (!window.__wbInit) {
+    window.__wbInit = true;
+    // Espera o DOM fechar. Sem isto o card da sidebar NUNCA seria corrigido: este script
+    // é inline e roda durante o parsing, no lugar onde o componente foi renderizado — o
+    // do conteúdo executa antes do HTML da sidebar existir, acha um card só, e a guarda
+    // acima impede o segundo script de terminar o serviço.
+    var iniciar = function () {
+      var cards = document.querySelectorAll("[data-wb-card]");
+      if (!cards.length) return;
+      var agora = Date.now();
+      var w = null;
+      for (var i = 0; i < WEBINARS_CLIENTE.length; i++) {
+        if (+new Date(WEBINARS_CLIENTE[i].fim) > agora) { w = WEBINARS_CLIENTE[i]; break; }
+      }
+      for (var j = 0; j < cards.length; j++) {
+        var c = cards[j];
+        // Série encerrada: o card sai. Anunciar webinar que já aconteceu é pior que
+        // não anunciar nada — e o clique cairia numa LP de evento passado.
+        if (!w) { c.remove(); continue; }
+        if (c.getAttribute("href") === w.url) continue; // build já estava certo
+        c.setAttribute("href", w.url);
+        var img = c.querySelector("[data-wb-img]");
+        if (img) {
+          img.setAttribute("src", "/assets/webinars/" + w.slug + ".webp");
+          img.setAttribute("alt", "Webinar gratuito: " + w.titulo + " — quarta, " + w.data + ", às 16h");
+        }
+        var t = c.querySelector("[data-wb-titulo]");
+        if (t) t.textContent = w.titulo;
+        var d = c.querySelector("[data-wb-data]");
+        if (d) d.textContent = w.data;
+      }
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", iniciar, { once: true });
+    } else {
+      iniciar();
+    }
+  }
+</script>
+
+<style>
+  .wb-card { display: block; background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--r-24); overflow: hidden; box-shadow: var(--shadow-card);
+    transition: transform 0.18s ease, box-shadow 0.18s ease; }
+  .wb-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+  .wb-card img { display: block; width: 100%; height: auto; }
+  .wb-body { display: flex; flex-direction: column; gap: 8px; padding: 16px 18px 18px; }
+  .wb-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.05em; color: var(--orange-ink); }
+  .wb-card strong { font-size: 16.5px; font-weight: 800; line-height: 1.25; color: var(--text);
+    letter-spacing: -0.01em; }
+  .wb-quando { font-size: 13.5px; color: var(--text-mid); }
+  .wb-quando b { color: var(--text); font-weight: 800; }
+  .wb-card .btn { margin-top: 6px; text-decoration: none; }
+
+  /* Uma instância por dispositivo. A sidebar existe no DOM em qualquer largura (em
+     <=980px o .post-grid vira coluna única e ela desce pro fim da página), então sem
+     esconder por largura o leitor de celular veria o mesmo card duas vezes. */
+  .wb-card--sidebar { margin-bottom: 18px; }
+  .wb-card--conteudo { display: none; margin: 30px 0 0; }
+  @media (max-width: 980px) {
+    .wb-card--sidebar { display: none; }
+    .wb-card--conteudo { display: block; }
+  }
+</style>
