@@ -1,0 +1,87 @@
+-- Vertical de NR-1 / riscos psicossociais — 19/08/2026
+--
+-- O QUE FOI FEITO (via MCP do Supabase, não por este arquivo):
+--   1. 17 posts inseridos em blog_templum_posts, status='published', autora
+--      'Daniela Albuquerque', categoria 'Saúde e Segurança do Trabalho'.
+--   2. 5 posts JÁ EXISTENTES ganharam um parágrafo final com link para o pilar
+--      (retrofit de link interno). O conteúdo anterior deles está em
+--      blog_templum_posts_bkp_20260819_nr1.
+--
+-- Este arquivo é REFERÊNCIA e ROLLBACK. O conteúdo dos posts vive no banco — não
+-- foi duplicado aqui porque duas cópias de 17 artigos divergem na primeira edição
+-- feita pelo CMS, e a do banco é a que o build lê.
+--
+-- Por que a vertical existe: o Search Console de 6 meses (até 07/08/2026) não tinha
+-- NENHUMA consulta de NR-1, psicossocial, saúde mental, burnout, PGR ou FAP. Não era
+-- captura de demanda existente — era construção de posição num tema cuja fiscalização
+-- punitiva começou em 26/05/2026 e sobre o qual o blog tinha 1 post.
+
+-- ---------------------------------------------------------------------------
+-- Arquitetura: 1 pilar + 16 clusters em 4 grupos (hub-and-spoke)
+-- ---------------------------------------------------------------------------
+--   PILAR   nr-1-riscos-psicossociais            (recebe 21 links internos;
+--                                                 tem form completo — ver
+--                                                 src/data/lead-form-pages.js)
+--   A ENTENDER      o-que-sao-riscos-psicossociais-no-trabalho
+--                   nr-1-se-aplica-a-minha-empresa
+--                   nr-1-prazos-fiscalizacao
+--                   nr-1-mitos
+--   B IMPLEMENTAR   riscos-psicossociais-no-pgr
+--                   como-medir-riscos-psicossociais
+--                   pesquisa-de-clima-nao-e-avaliacao-de-risco-psicossocial
+--                   plano-de-acao-riscos-psicossociais
+--                   treinamento-lideranca-nr-1
+--                   nr-1-documentacao-evidencias
+--   C PROVAR ROI    fap-riscos-psicossociais
+--                   absenteismo-presenteismo-indicadores
+--                   custo-de-nao-cumprir-nr-1
+--                   roi-saude-no-trabalho
+--   D CONVERTER     nr-1-e-iso-45001
+--                   nr-1-e-programa-de-compliance
+
+-- ---------------------------------------------------------------------------
+-- CONFERÊNCIA
+-- ---------------------------------------------------------------------------
+-- Os 17 posts e o tamanho de cada um:
+--   select slug, array_length(regexp_split_to_array(
+--            trim(regexp_replace(content,'<[^>]+>',' ','g')),'\s+'),1) as palavras
+--   from blog_templum_posts where 'NR-1' = any(tags) and status='published'
+--   order by palavras desc;
+--
+-- Os 5 posts que receberam o link de retrofit:
+--   select slug from blog_templum_posts
+--   where id in (select id from blog_templum_posts_bkp_20260819_nr1);
+
+-- ---------------------------------------------------------------------------
+-- ROLLBACK 1 — desfazer só o retrofit de link nos posts antigos
+-- ---------------------------------------------------------------------------
+-- update blog_templum_posts p
+--    set content = b.content
+--   from blog_templum_posts_bkp_20260819_nr1 b
+--  where p.id = b.id;
+
+-- ---------------------------------------------------------------------------
+-- ROLLBACK 2 — tirar a vertical do ar SEM apagar (preferível a delete: preserva
+-- o texto para revisão, e o build só lê status='published')
+-- ---------------------------------------------------------------------------
+-- update blog_templum_posts set status='draft'
+--  where slug in ('nr-1-riscos-psicossociais','o-que-sao-riscos-psicossociais-no-trabalho',
+--    'nr-1-se-aplica-a-minha-empresa','nr-1-prazos-fiscalizacao','nr-1-mitos',
+--    'riscos-psicossociais-no-pgr','como-medir-riscos-psicossociais',
+--    'pesquisa-de-clima-nao-e-avaliacao-de-risco-psicossocial',
+--    'plano-de-acao-riscos-psicossociais','treinamento-lideranca-nr-1',
+--    'nr-1-documentacao-evidencias','fap-riscos-psicossociais',
+--    'absenteismo-presenteismo-indicadores','custo-de-nao-cumprir-nr-1',
+--    'roi-saude-no-trabalho','nr-1-e-iso-45001','nr-1-e-programa-de-compliance');
+
+-- ---------------------------------------------------------------------------
+-- PENDÊNCIA EDITORIAL (importante)
+-- ---------------------------------------------------------------------------
+-- Os textos afirmam que o STF, na ADPF 1.316, suspendeu por 90 dias a eficácia
+-- SANCIONATÓRIA de cinco dispositivos do item 1.5, com referendo do Plenário em
+-- agosto de 2026 — e pedem ao leitor que confirme o status atual. O desfecho do
+-- referendo NÃO foi confirmado antes da publicação. Se ele mudou o cenário, os
+-- posts que citam a ADPF precisam de revisão:
+--   select slug from blog_templum_posts where content ilike '%ADPF 1.316%';
+-- A tese central da vertical foi escrita para sobreviver a qualquer desfecho:
+-- nexo causal, FAP e passivo trabalhista não dependem da sanção administrativa.

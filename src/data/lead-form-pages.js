@@ -49,6 +49,13 @@ export const LEAD_FORM_PAGES = {
   // Público é de qualidade/processos, mas não está pesquisando norma. Se o form não
   // converter aqui em ~60 dias, tire desta lista antes de tirar das outras.
   "o-que-e-fluxograma-de-processos": { display: "ISO 9001", crm: "ISO 9001" },
+
+  // --- pilar da vertical de NR-1 (riscos psicossociais) ---
+  // Ganha o formulário completo por dois motivos: a fiscalização punitiva já começou
+  // (26/05/2026), então a intenção aqui é resolver um problema com prazo vencido, não
+  // pesquisar conceito; e o `crm` é ISO 45001 porque a NR-1 não é certificável — o que a
+  // Templum implanta é o sistema de gestão de SST (mesmo mapeamento de data/normas.js).
+  "nr-1-riscos-psicossociais": { display: "NR-1", crm: "ISO 45001" },
 };
 
 export function normaDoForm(slug) {

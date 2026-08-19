@@ -17,3 +17,7 @@ npm-debug.log*
 # Exports brutos do Search Console (entram só como insumo do scripts/populares.mjs;
 # o que vai pro repo é o JSON derivado em src/data/populares.json)
 *-Performance-on-Search-*/
+
+# Insumos de conteúdo (transcrições, briefings). Entram como matéria-prima dos
+# posts; o que vai pro ar é o conteúdo no Supabase, não o arquivo bruto.
+conteudo/

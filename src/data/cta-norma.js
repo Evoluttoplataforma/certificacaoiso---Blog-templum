@@ -29,6 +29,13 @@ const CTAS = {
     titulo: "Sua gestão de SST protege de verdade?",
     texto: "Diagnóstico gratuito: perigos sem controle, integração com as NRs e o que a auditoria vai cobrar.",
   },
+  // NR-1 tem CTA próprio, e não o de SST genérico, porque quem chega aqui não está
+  // pesquisando sistema de gestão: está com um prazo vencido na cabeça (a fiscalização
+  // punitiva começou em 26/05/2026) e uma pergunta só — "meu PGR está irregular?".
+  "nr-1": {
+    titulo: "Seu PGR já contempla os riscos psicossociais?",
+    texto: "Diagnóstico gratuito: o que o auditor-fiscal vai pedir, o que falta no seu inventário de riscos e como sair da irregularidade.",
+  },
   "iso-22000": {
     titulo: "Sua operação está segura para a auditoria?",
     texto: "Diagnóstico gratuito de segurança dos alimentos: pré-requisitos, HACCP e o que os clientes exigem.",
@@ -67,6 +74,9 @@ const CTAS = {
 // "Segurança e Compliance", então essa regra capturava todo post de ISO 27001 e
 // LGPD para o CTA de antissuborno. Compliance só entra por 37001/37301/suborno.
 const REGRAS = [
+  // NR-1 e psicossocial ANTES da regra de 45001: aquela captura /nr-?\d/, então sem esta
+  // linha toda a vertical de NR-1 receberia o CTA genérico de SST.
+  [/\bnr\s*-?\s*0?1\b|psicossoc|sa[úu]de mental|burnout|ass[ée]dio/i, "nr-1"],
   [/\b27701\b|\b27001\b|\blgpd\b|criptograf|mascaramento|prote[çc][ãa]o de dados|seguran[çc]a da informa[çc][ãa]o/i, "iso-27001"],
   [/\b37001\b|\b37301\b|antissuborno|suborno|integridade corporativa/i, "compliance"],
   [/\b45001\b|\bsst\b|\bsso\b|\bnr-?\d|seguran[çc]a do trabalho|ocupacional|\bepi\b/i, "iso-45001"],

@@ -20,6 +20,10 @@ const ISO_NUMS = [
 // é uma página de FSSC.
 const OUTRAS = [
   [/fssc\s*-?\s*22000/i, "FSSC 22000"],
+  // NR-1 antes do padrão ISO de propósito: "NR-1 e ISO 45001" é página de NR-1 — é o que
+  // o leitor pesquisou e é a vertical cuja conversão precisa ser medida separada.
+  // `0?1\b` e não `1` solto: sem a borda, "NR-10", "NR-12" e "NR-18" cairiam todas aqui.
+  [/\bnr\s*-?\s*0?1\b/i, "NR-1"],
   [/pbqp\s*-?\s*h/i, "PBQP-H"],
   [/iatf\s*-?\s*16949/i, "IATF 16949"],
   [/\bhaccp\b|\bappcc\b/i, "HACCP"],
@@ -32,11 +36,23 @@ const OUTRAS = [
 const ISO_RE = new RegExp("iso[\\s._:-]?(" + ISO_NUMS.join("|") + ")", "i");
 
 // Ordem do haystack = ordem de prioridade: categoria/tags curadas antes do texto livre.
+//
+// Quem casar PRIMEIRO no haystack vence — e não quem estiver primeiro na lista de regras.
+// Antes era por ordem de regra, e isso quebrou quando a NR-1 entrou em OUTRAS: o post
+// "Cultura da Qualidade e NR1 ... ISO 9001:2026" tem a tag "ISO 9001:2026" na frente e a
+// tag "NR1" lá no fim, mas passou a ser lido como página de NR-1 — o que trocaria o
+// cf_produto do lead de ISO 9001 para ISO 45001. Posição no haystack respeita a curadoria
+// das tags, que é justamente o sinal mais confiável que esta função tem.
 export function normaDaPagina({ categories = [], title = "", slug = "" } = {}) {
   const hay = [...(categories || []), title, slug].filter(Boolean).join(" | ");
-  for (const [re, label] of OUTRAS) if (re.test(hay)) return label;
-  const m = hay.match(ISO_RE);
-  return m ? "ISO " + m[1] : "";
+  let melhor = null;
+  for (const [re, label] of OUTRAS) {
+    const m = hay.match(re);
+    if (m && (!melhor || m.index < melhor.pos)) melhor = { pos: m.index, label };
+  }
+  const iso = hay.match(ISO_RE);
+  if (iso && (!melhor || iso.index < melhor.pos)) melhor = { pos: iso.index, label: "ISO " + iso[1] };
+  return melhor ? melhor.label : "";
 }
 
 
@@ -65,6 +81,12 @@ const CRM_PRODUTO = {
   "GERIC": "GERIC",
   "ESG": "ESG",
   "SGI": "SGI",
+  // A NR-1 não é certificável e não tem produto próprio no cf_produto — o que a Templum
+  // implanta para quem precisa atender ao capítulo de riscos psicossociais é o sistema de
+  // gestão de SST. Mesmo padrão de "ISO 22000": o leitor pesquisa uma coisa, o produto
+  // vendido é outro. Sem esta linha o rótulo "NR-1" seria recusado pelo /form (ele valida
+  // contra NORMAS_VALIDAS), a headline cairia no genérico e o lead entraria sem produto.
+  "NR-1": "ISO 45001",
 };
 
 // Exposto para a página /form, que resolve norma → produto no navegador (a norma só é
