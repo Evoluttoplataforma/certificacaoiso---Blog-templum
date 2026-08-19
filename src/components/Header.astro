@@ -35,6 +35,10 @@ const TEMPLUM = "https://templum.com.br";
     </nav>
     <div class="hd-actions">
       <a href="/buscar/" class="hd-search" aria-label="Buscar artigos"><iconify-icon icon="solar:magnifer-linear"></iconify-icon></a>
+      {/* No mobile a lupa dá lugar a este: num header de 66px, a busca é um "quero
+          procurar" e o Contato é um "quero falar" — e é o segundo que gera lead. A busca
+          continua a um toque no menu (item "Buscar artigos") e no campo da home. */}
+      <a href="/form/?utm_source=blog&utm_medium=header-contato" class="btn btn--primary btn--sm hd-contato" data-trk-event="cta-header-contato">Contato</a>
       <a href={`${TEMPLUM}`} class="btn btn--outline btn--sm hd-ghost">Site Templum</a>
       <a href="/form/?utm_source=blog&utm_medium=header" class="btn btn--dark btn--sm">Falar com especialista</a>
     </div>
@@ -46,6 +50,7 @@ const TEMPLUM = "https://templum.com.br";
       <a href={`${TEMPLUM}/historias`}>Histórias</a>
       <span class="hd-mobile-head">Categorias</span>
       {categorias.map((c) => <a class="hd-mobile-sub" href={`/categoria/${c.slug}/`}>{c.nome}</a>)}
+      <a href="/buscar/">Buscar artigos</a>
       <a href={TEMPLUM}>Site Templum</a>
     </nav>
     <a href="/form/?utm_source=blog&utm_medium=header-mobile" class="btn btn--primary btn--block">Falar com especialista</a>
@@ -91,8 +96,14 @@ const TEMPLUM = "https://templum.com.br";
   .hd-mobile nav a { padding: 11px 0; font-weight: 600; border-bottom: 1px solid var(--border); color: var(--text); }
   .hd-mobile nav a.hd-mobile-sub { padding-left: 14px; font-size: 14.5px; font-weight: 500; color: var(--text-mid); }
   @media (max-width: 1100px) { .hd-nav, .hd-ghost { display: none; } .hd-burger { display: inline-flex; } }
+  /* O Contato é mobile-only: no desktop o header já tem "Falar com especialista". */
+  .hd-contato { display: none; }
   @media (max-width: 560px) {
     .hd-actions .btn { display: none; }
+    /* ...menos este. A regra acima esconde os botões do header no celular; o Contato é
+       exatamente o que deve sobrar, e por isso vem depois dela. */
+    .hd-actions .btn.hd-contato { display: inline-flex; padding: 9px 16px; }
+    .hd-search { display: none; }
     .top-banner { font-size: 12px; padding: 7px 14px; gap: 7px; flex-wrap: nowrap; white-space: nowrap; }
     .top-banner .tb-full, .top-banner .tb-link { display: none; }
     .top-banner .tb-short { display: inline; }

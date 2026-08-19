@@ -1,14 +1,14 @@
 ---
-// Dock do webinar — só no mobile (<=768px, o mesmo ponto de corte do float da Olívia).
+// Dock do webinar — só no mobile (<=768px).
 //
 // Comportamento: some no topo da página, desliza de baixo quando o leitor passa de 35%
 // do scroll, tem ✕ que fecha, e depois de fechado deixa uma pílula pequena no canto
-// ESQUERDO para reabrir (o direito é do float da Olívia).
+// inferior direito para reabrir.
 //
 // Quatro decisões que não são óbvias:
-//   1. Enquanto o dock está visível, o float da Olívia sai (ver .wb-dock-on no final).
-//      Dois pedidos ao mesmo tempo brigam pelo mesmo toque — é a regra que o próprio
-//      [slug].astro já aplica no fim do artigo.
+//   1. É o único elemento fixo do mobile. O float da Olívia, que dividia essa faixa,
+//      saiu em 19/08/2026 — dois pedidos ao mesmo tempo brigam pelo mesmo toque, que é
+//      a regra que o próprio [slug].astro já aplica no fim do artigo.
 //   2. O dock se esconde enquanto o card de webinar do conteúdo está na tela: anunciar
 //      duas vezes o mesmo webinar, um sobre o outro, é ruído.
 //   3. O "fechado" é guardado por SLUG do webinar. Fechar o de 19/08 não esconde o de
@@ -93,14 +93,11 @@ const urgencia = w ? urgenciaDoWebinar(w) : "";
     var CHAVE = "wbDock:" + w.slug;
     var fechado = false;
     try { fechado = localStorage.getItem(CHAVE) === "1"; } catch (e) {}
-    var raiz = document.documentElement;
     var visivel = false, cardNaTela = false, avisado = false;
 
     function aplicar() {
       var mostrar = !fechado && visivel && !cardNaTela;
       dock.hidden = !mostrar;
-      // classe na raiz → o float da Olívia sai de cena (CSS no fim deste arquivo)
-      raiz.classList.toggle("wb-dock-on", mostrar);
       // 2 frames pra o browser pintar o estado inicial antes de animar (senão entra sem
       // transição, aparecendo de estalo)
       if (mostrar) requestAnimationFrame(function () { requestAnimationFrame(function () { dock.classList.add("on"); }); });
@@ -190,9 +187,10 @@ const urgencia = w ? urgenciaDoWebinar(w) : "";
       min-width: 44px; }
     .wb-dock-x:active { color: var(--cream); }
 
-    /* Pílula de reabrir: canto ESQUERDO porque o direito é do float da Olívia. */
+    /* Pílula de reabrir no canto direito — o polegar chega mais fácil. Ficava à esquerda
+       para não colidir com o float da Olívia, que saiu do mobile em 19/08/2026. */
     .wb-reabrir {
-      position: fixed; left: 12px; bottom: 20px; z-index: 900;
+      position: fixed; right: 16px; bottom: 20px; z-index: 900;
       display: inline-flex; align-items: center; gap: 6px;
       background: var(--navy); color: var(--cream); border: 1px solid rgba(255,89,37,0.5);
       border-radius: 100px; padding: 8px 14px; font-family: inherit; font-size: 12.5px;
@@ -204,14 +202,5 @@ const urgencia = w ? urgenciaDoWebinar(w) : "";
 
   @media (prefers-reduced-motion: reduce) {
     .wb-dock { transition: none; }
-  }
-</style>
-
-<style is:global>
-  /* Um pedido por vez: com o dock na tela, o float da Olívia sai. Volta sozinho quando o
-     leitor fecha o dock (a classe cai da raiz). Fica em is:global porque o float é
-     renderizado pelo Base.astro, fora do escopo deste componente. */
-  @media (max-width: 768px) {
-    html.wb-dock-on .olivia-float.float-mobile { display: none; }
   }
 </style>

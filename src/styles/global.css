@@ -193,35 +193,9 @@ em.accent { font-style: italic; color: var(--orange); font-weight: 800; }
 .whatsapp-float { position: fixed; bottom: 26px; right: 26px; z-index: 900; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 6px 22px rgba(37,211,102,0.45); color: #fff; font-size: 28px; transition: transform .3s var(--ease-soft); }
 .whatsapp-float:hover { transform: scale(1.08); }
 
-/* ---------- Float da Olívia (mobile) ----------
-   No mobile o WhatsApp dá lugar à Olívia: leva ao diagnóstico, que é a conversão
-   do blog, e mostra rosto de pessoa em vez de ícone genérico. São dois links no
-   HTML porque media query não troca href — cada um aparece no seu breakpoint. */
-.olivia-float { display: none; }
-.float-mobile { display: none; }
-@media (max-width: 768px) {
-  .float-desktop { display: none; }
-  .olivia-float.float-mobile {
-    position: fixed; bottom: 20px; right: 16px; z-index: 900;
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 6px 16px 6px 6px;
-    background: var(--navy); color: var(--cream);
-    border-radius: 100px; border: 1px solid rgba(255,89,37,0.5);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.28);
-    text-decoration: none;
-  }
-  .olivia-float img {
-    width: 44px; height: 44px; border-radius: 50%;
-    object-fit: cover; border: 2px solid var(--orange); flex-shrink: 0;
-  }
-  .olivia-float-tag { font-size: 13.5px; font-weight: 800; line-height: 1.1; white-space: nowrap; }
-  .olivia-float:active { transform: scale(0.97); }
-}
-/* Tela bem estreita: só o rosto, para não cobrir o conteúdo */
-@media (max-width: 400px) {
-  .olivia-float.float-mobile { padding: 5px; gap: 0; }
-  .olivia-float-tag { display: none; }
-}
+/* O float da Olívia (mobile) saiu em 19/08/2026 — no celular o topo tem o botão
+   Contato e o rodapé tem o dock do webinar; um terceiro elemento fixo cobria o
+   artigo. O float de WhatsApp do desktop está mais abaixo, em .whatsapp-float. */
 
 /* ---------- Footer ---------- */
 .footer { background: var(--navy); color: rgba(255,244,221,0.75); padding: 64px 0 0; }
