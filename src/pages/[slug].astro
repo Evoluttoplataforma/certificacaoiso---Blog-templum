@@ -93,20 +93,6 @@ const urlTopo = normaForm
 // dentro de uma dobra bem mais alta, não há o que economizar.
 const tldrLongo = tldr.length > 185;
 
-// ---------- TESTE: botão de "ouvir o resumo" (19/08/2026) ----------
-// Usa a voz do NAVEGADOR (speechSynthesis): custo zero e nenhuma infraestrutura. O preço
-// disso é que a qualidade varia por sistema operacional — no Safari do iPhone a voz pt-BR
-// é boa, no Chrome do Windows costuma ser sofrível — e NÃO HÁ COMO TESTAR o que o leitor
-// ouve. Por isso é teste em UMA página, não recurso do blog: primeiro se mede quanta
-// gente aperta play, depois se decide se vale gerar MP3 com voz controlada (o bucket
-// `media` do Supabase já existe, e o TL;DR do blog inteiro sairia por ~US$ 5).
-// Para estender o teste, some slugs aqui.
-const AUDIO_RESUMO_TESTE = ["iso-9001"];
-const temAudioResumo = AUDIO_RESUMO_TESTE.includes(post.slug) && !!tldr;
-// ~15 caracteres por segundo é a taxa de fala pt-BR em ritmo natural. Serve para o
-// leitor decidir se tem tempo — promessa de duração errada é o que faz abandonar no meio.
-const audioSegundos = Math.round(tldr.length / 15);
-
 // ---------- CORPO DO ARTIGO: ÂNCORAS, SUMÁRIO E CTA DO MEIO ----------
 // (ver src/lib/artigo.js — as transformações são feitas no build, não no banco)
 const { html: htmlAncorado, secoes } = ancorarSecoes(post.content || "");
@@ -339,18 +325,6 @@ if (faq.length) {
           </details>
         )}
 
-        <!-- Nasce `hidden`: quem não tem speechSynthesis (ou tem sem nenhuma voz pt-BR)
-             nunca vê o botão. Botão morto é pior que botão ausente. -->
-        {temAudioResumo && (
-          <div class="post-audio" hidden data-audio-resumo>
-            <button type="button" class="post-audio-btn" data-audio-play aria-live="polite">
-              <iconify-icon icon="solar:play-bold" data-audio-icon></iconify-icon>
-              <span data-audio-label>Ouvir o resumo</span>
-            </button>
-            <span class="post-audio-hint">voz do seu navegador · ~{audioSegundos}s</span>
-          </div>
-        )}
-
         <Fragment set:html={conteudo} />
 
         {/* id="duvidas": o sumário dos posts aponta pra #duvidas. Sem o id, migrar o FAQ
@@ -412,124 +386,6 @@ if (faq.length) {
         <p class="cmt-note">Seu comentário passa por moderação antes de aparecer.</p>
       </form>
     </section>
-    {temAudioResumo && (
-      <script is:inline define:vars={{ textoResumo: tldr }}>
-        (function () {
-          var box = document.querySelector("[data-audio-resumo]");
-          var S = window.speechSynthesis;
-          if (!box || !S || typeof SpeechSynthesisUtterance === "undefined") return;
-
-          var btn = box.querySelector("[data-audio-play]");
-          var rotulo = box.querySelector("[data-audio-label]");
-          var icone = box.querySelector("[data-audio-icon]");
-          var keepAlive = null, tocou = false;
-
-          // O TL;DR foi escrito para ser LIDO. Em voz alta, três coisas soam mal e são as
-          // que mais denunciam texto automatizado.
-          function paraFala(t) {
-            return t
-              // travessão não tem som: sem virar vírgula, as duas orações colam
-              .replace(/\s*—\s*/g, ", ")
-              // "(SGQ)", "(PGR)": a sigla entre parênteses SEMPRE vem depois do nome por
-              // extenso, então lê-la é repetir o que acabou de ser dito
-              .replace(/\s*\(([A-ZÁ-Ú]{2,6})\)/g, "")
-              // "ISO 9001:2026" viraria "ISO nove mil e um dois mil e vinte e seis"
-              .replace(/\b(ISO|NBR|IEC)\s*(\d{4,5}):(\d{4})\b/g, "$1 $2 de $3")
-              .replace(/\bNR\s*-\s*0?(\d+)\b/gi, "NR $1")
-              // siglas que nenhuma voz pt-BR acerta; lista curta e explícita de propósito,
-              // porque uma regra genérica de MAIÚSCULAS soletraria o "COMO" que o texto
-              // usa como ênfase
-              .replace(/\bFDIS\b/g, "F D I S")
-              .replace(/\bPGR\b/g, "P G R")
-              .replace(/\bSGQ\b/g, "S G Q")
-              .replace(/\s{2,}/g, " ")
-              .trim();
-          }
-
-          function voz() {
-            var vs = S.getVoices() || [];
-            var exata = null, qualquerPt = null;
-            for (var i = 0; i < vs.length; i++) {
-              if (vs[i].lang === "pt-BR" || vs[i].lang === "pt_BR") { exata = exata || vs[i]; }
-              else if (/^pt/i.test(vs[i].lang)) { qualquerPt = qualquerPt || vs[i]; }
-            }
-            return exata || qualquerPt;
-          }
-
-          function estado(nome) {
-            if (nome === "tocando") { rotulo.textContent = "Pausar"; icone.setAttribute("icon", "solar:pause-bold"); }
-            else if (nome === "pausado") { rotulo.textContent = "Continuar"; icone.setAttribute("icon", "solar:play-bold"); }
-            else { rotulo.textContent = "Ouvir o resumo"; icone.setAttribute("icon", "solar:play-bold"); }
-          }
-
-          function parar() {
-            if (keepAlive) { clearInterval(keepAlive); keepAlive = null; }
-            S.cancel();
-            estado("parado");
-          }
-
-          function falar() {
-            var v = voz();
-            // Sem voz em português, a frase sairia lida por uma voz inglesa — pior que
-            // não ter o botão. Nesse caso ele desaparece em vez de decepcionar.
-            if (!v) { box.hidden = true; return; }
-
-            // Fatiar por frase resolve o bug clássico do Chrome no desktop, que corta
-            // utterances longas por volta dos 15 segundos. A fila do speechSynthesis
-            // encadeia os pedaços sozinha.
-            var texto = paraFala(textoResumo);
-            var partes = texto.match(/[^.!?]+[.!?]*/g) || [texto];
-            for (var i = 0; i < partes.length; i++) {
-              var u = new SpeechSynthesisUtterance(partes[i].trim());
-              u.voice = v; u.lang = v.lang; u.rate = 1.05; u.pitch = 1;
-              if (i === partes.length - 1) {
-                u.onend = function () {
-                  parar();
-                  // Ouvir até o fim é o sinal que interessa no teste: mede intenção,
-                  // não curiosidade de clicar no play.
-                  if (window.clarityEvent) window.clarityEvent("audio_resumo_fim");
-                };
-              }
-              u.onerror = parar;
-              S.speak(u);
-            }
-
-            // Chrome desktop suspende a síntese depois de alguns segundos em segundo
-            // plano; o resume() periódico é o contorno conhecido.
-            keepAlive = setInterval(function () {
-              if (S.speaking && !S.paused) S.resume();
-              else if (!S.speaking) { clearInterval(keepAlive); keepAlive = null; }
-            }, 10000);
-
-            estado("tocando");
-          }
-
-          btn.addEventListener("click", function () {
-            if (S.speaking && !S.paused) { S.pause(); estado("pausado"); return; }
-            if (S.paused) { S.resume(); estado("tocando"); return; }
-            falar();
-            if (!tocou) {
-              tocou = true;
-              // upgrade() garante que a gravação desta sessão não seja descartada por
-              // amostragem — sem isso não dá para ver no Clarity o que quem ouviu fez depois.
-              if (window.clarityEvent) window.clarityEvent("audio_resumo_play");
-              if (window.clarityUpgrade) window.clarityUpgrade("audio_resumo");
-              if (window.clarityTag) window.clarityTag("ouviu_resumo", "sim");
-            }
-          });
-
-          // Sem isto a voz continua falando depois que a pessoa navega para outro post.
-          window.addEventListener("pagehide", parar);
-
-          // getVoices() volta vazio no primeiro acesso do Chrome; o botão só aparece
-          // quando existe voz de fato.
-          function revelar() { if (voz()) box.hidden = false; }
-          revelar();
-          if (typeof S.onvoiceschanged !== "undefined") S.addEventListener("voiceschanged", revelar);
-        })();
-      </script>
-    )}
-
     <!-- "ver tudo" do TL;DR: tira o recorte e some. Sem framework e sem listener global —
          é um botão só, e a página já carrega JS suficiente. Se o JS não rodar, o pior
          caso é um parágrafo recortado em 5 linhas: o texto continua no HTML para busca e
@@ -696,18 +552,6 @@ if (faq.length) {
      desalinha do texto quando o item quebra em duas linhas. */
   .post-toc li a::before { content: counter(toc) "."; color: var(--orange-ink); font-weight: 800; flex: none; }
   .post-toc li a:hover { color: var(--orange-ink); }
-
-  /* Botão de ouvir o resumo. Sem caixa e sem borda de propósito: ele fica logo abaixo do
-     sumário, que já é um bloco delimitado, e um segundo bloco ali empurraria a tarja de
-     CTA para fora da dobra — que foi o problema que acabamos de consertar. Uma linha. */
-  .post-audio { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: -16px 0 30px; }
-  .post-audio-btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px;
-    border: 1px solid var(--border-2); border-radius: 999px; background: var(--surface);
-    font-family: inherit; font-size: 14px; font-weight: 700; color: var(--text-2); cursor: pointer;
-    transition: border-color .2s, color .2s; }
-  .post-audio-btn:hover { border-color: var(--orange); color: var(--orange-ink); }
-  .post-audio-btn iconify-icon { font-size: 16px; color: var(--orange); }
-  .post-audio-hint { font-size: 12.5px; color: var(--text-soft); }
 
   /* Tarja de CTA da primeira dobra. Navy, e não a linguagem laranja do TL;DR logo acima:
      dois blocos laranja empilhados viram um borrão só e o leitor não vê que o segundo
