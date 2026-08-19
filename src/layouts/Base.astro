@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import TrackingKit from "../components/TrackingKit.astro";
+import WebinarDock from "../components/WebinarDock.astro";
 
 const {
   title = "Certificação ISO — Dicas para implementação e certificação nas normas ISO",
@@ -17,6 +18,9 @@ const {
   // já sabe device/browser/país/origem por conta própria — aqui vai só o que ele NÃO tem:
   // de que assunto é a página e se ela tem formulário. É o que faz a gravação ser filtrável.
   clarityTags = {},
+  // Dock do webinar no mobile. Ligado em tudo, MENOS onde já existe um pedido na tela:
+  // no /form/ uma barra fixa cobrindo o formulário disputaria o lead que já decidiu vir.
+  dock = true,
 } = Astro.props;
 
 const SITE = (Astro.site?.href || "https://certificacaoiso.com.br/").replace(/\/$/, "");
@@ -212,6 +216,9 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
         <a class="whatsapp-float float-desktop" href="https://wa.me/5519993521270" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
           <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon>
         </a>
+        {/* Antes do float: o dock esconde a Olívia enquanto está aberto (um pedido por
+            vez), e a ordem no DOM deixa isso legível para quem for mexer depois. */}
+        {dock && <WebinarDock />}
         <a
           class="olivia-float float-mobile"
           href={oliviaFloatUrl}

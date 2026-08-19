@@ -1,0 +1,217 @@
+---
+// Dock do webinar — só no mobile (<=768px, o mesmo ponto de corte do float da Olívia).
+//
+// Comportamento: some no topo da página, desliza de baixo quando o leitor passa de 35%
+// do scroll, tem ✕ que fecha, e depois de fechado deixa uma pílula pequena no canto
+// ESQUERDO para reabrir (o direito é do float da Olívia).
+//
+// Quatro decisões que não são óbvias:
+//   1. Enquanto o dock está visível, o float da Olívia sai (ver .wb-dock-on no final).
+//      Dois pedidos ao mesmo tempo brigam pelo mesmo toque — é a regra que o próprio
+//      [slug].astro já aplica no fim do artigo.
+//   2. O dock se esconde enquanto o card de webinar do conteúdo está na tela: anunciar
+//      duas vezes o mesmo webinar, um sobre o outro, é ruído.
+//   3. O "fechado" é guardado por SLUG do webinar. Fechar o de 19/08 não esconde o de
+//      26/08 — a semana seguinte é outra oferta, e a lembrança de ter fechado não deve
+//      valer para sempre.
+//   4. Reabrir pela pílula apaga o "fechado": o leitor mudou de ideia, e insistir em
+//      lembrar da recusa dele é o tipo de coisa que faz fechar de novo, com raiva.
+import { WEBINARS_CLIENTE, webinarAtual, urgenciaDoWebinar } from "../data/webinars.js";
+
+const w = webinarAtual();
+const urgencia = w ? urgenciaDoWebinar(w) : "";
+---
+
+{w && (
+  <>
+    <div class="wb-dock" data-wb-dock hidden>
+      <a
+        class="wb-dock-link"
+        href={w.url}
+        data-wb-dock-link
+        data-trk-event="cta-webinar-dock"
+        data-trk-norma="ISO 9001"
+      >
+        <img
+          src="/assets/webinars/dani.webp"
+          alt="Dani Albuquerque, especialista da Templum"
+          width="44"
+          height="44"
+          loading="lazy"
+          decoding="async"
+        />
+        <span class="wb-dock-txt">
+          <span class="wb-dock-urg" data-wb-dock-urg>{urgencia} · grátis</span>
+          <strong data-wb-dock-titulo>{w.titulo}</strong>
+        </span>
+        <span class="wb-dock-btn">Quero vaga</span>
+      </a>
+      <button class="wb-dock-x" type="button" aria-label="Fechar aviso do webinar" data-wb-dock-x>
+        <iconify-icon icon="solar:close-circle-linear"></iconify-icon>
+      </button>
+    </div>
+
+    <button class="wb-reabrir" type="button" data-wb-reabrir hidden>
+      <iconify-icon icon="solar:videocamera-record-bold"></iconify-icon> Webinar
+    </button>
+  </>
+)}
+
+<script is:inline define:vars={{ WEBINARS_CLIENTE }}>
+  (function () {
+    var dock = document.querySelector("[data-wb-dock]");
+    var pilula = document.querySelector("[data-wb-reabrir]");
+    if (!dock || !pilula) return;
+
+    // --- webinar da vez ---------------------------------------------------------------
+    // Mesma regra de src/data/webinars.js. Recalculado aqui porque o HTML é estático e
+    // pode ter sido construído semanas atrás — e porque o dock aparece em páginas que
+    // não têm o card (home, categorias), onde não há outro script pra fazer isso.
+    var agora = Date.now();
+    var w = null;
+    for (var i = 0; i < WEBINARS_CLIENTE.length; i++) {
+      if (+new Date(WEBINARS_CLIENTE[i].fim) > agora) { w = WEBINARS_CLIENTE[i]; break; }
+    }
+    if (!w) { dock.remove(); pilula.remove(); return; } // série encerrada
+
+    // ESPELHO de urgenciaDoWebinar() em src/data/webinars.js — mudou lá, muda aqui.
+    var emBrasilia = function (t) {
+      return new Date(t).toLocaleDateString("pt-BR", { timeZone: "America/Sao_Paulo" });
+    };
+    var hora = new Date(w.inicio).toLocaleTimeString("pt-BR", { timeZone: "America/Sao_Paulo", hour: "2-digit" });
+    var alvo = emBrasilia(w.inicio);
+    var urg = alvo === emBrasilia(agora) ? "Hoje às " + hora + "h"
+      : alvo === emBrasilia(agora + 86400000) ? "Amanhã às " + hora + "h"
+      : "Quarta, " + alvo.slice(0, 5) + " às " + hora + "h";
+
+    var link = dock.querySelector("[data-wb-dock-link]");
+    if (link.getAttribute("href") !== w.url) link.setAttribute("href", w.url);
+    dock.querySelector("[data-wb-dock-titulo]").textContent = w.titulo;
+    dock.querySelector("[data-wb-dock-urg]").textContent = urg + " · grátis";
+
+    // --- estado ------------------------------------------------------------------------
+    var CHAVE = "wbDock:" + w.slug;
+    var fechado = false;
+    try { fechado = localStorage.getItem(CHAVE) === "1"; } catch (e) {}
+    var raiz = document.documentElement;
+    var visivel = false, cardNaTela = false, avisado = false;
+
+    function aplicar() {
+      var mostrar = !fechado && visivel && !cardNaTela;
+      dock.hidden = !mostrar;
+      // classe na raiz → o float da Olívia sai de cena (CSS no fim deste arquivo)
+      raiz.classList.toggle("wb-dock-on", mostrar);
+      // 2 frames pra o browser pintar o estado inicial antes de animar (senão entra sem
+      // transição, aparecendo de estalo)
+      if (mostrar) requestAnimationFrame(function () { requestAnimationFrame(function () { dock.classList.add("on"); }); });
+      else dock.classList.remove("on");
+      pilula.hidden = !fechado;
+      if (mostrar && !avisado) {
+        avisado = true;
+        if (window.clarityEvent) window.clarityEvent("webinar_dock_visto");
+      }
+    }
+
+    // --- gatilho de scroll -------------------------------------------------------------
+    // 35% do documento: cedo demais interrompe quem ainda está decidindo se lê; tarde
+    // demais e o leitor já foi. O mínimo de 400px cobre post curto, onde 35% é pouca rolagem.
+    function checar() {
+      var h = document.documentElement;
+      var rolavel = h.scrollHeight - window.innerHeight;
+      var y = window.scrollY || h.scrollTop || 0;
+      visivel = rolavel > 0 && (y / rolavel > 0.35 || y > 400);
+      aplicar();
+    }
+    window.addEventListener("scroll", checar, { passive: true });
+    window.addEventListener("resize", checar, { passive: true });
+
+    // --- não duplicar com o card do conteúdo -------------------------------------------
+    var card = document.querySelector(".wb-card--conteudo");
+    if (card && window.IntersectionObserver) {
+      new IntersectionObserver(function (entradas) {
+        cardNaTela = entradas[0].isIntersecting;
+        aplicar();
+      }, { rootMargin: "-40px 0px -40px 0px" }).observe(card);
+    }
+
+    // --- fechar e reabrir ---------------------------------------------------------------
+    dock.querySelector("[data-wb-dock-x]").addEventListener("click", function () {
+      fechado = true;
+      try { localStorage.setItem(CHAVE, "1"); } catch (e) {}
+      if (window.clarityEvent) window.clarityEvent("webinar_dock_fechou");
+      aplicar();
+    });
+    pilula.addEventListener("click", function () {
+      fechado = false;
+      try { localStorage.removeItem(CHAVE); } catch (e) {}
+      if (window.clarityEvent) window.clarityEvent("webinar_dock_reabriu");
+      visivel = true;
+      aplicar();
+    });
+
+    checar();
+  })();
+</script>
+
+<style>
+  /* Só mobile. Acima de 768px quem anuncia é o card da sidebar. */
+  .wb-dock, .wb-reabrir { display: none; }
+
+  @media (max-width: 768px) {
+    .wb-dock {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 950;
+      display: flex; align-items: stretch; gap: 0;
+      background: var(--navy); border-top: 2px solid var(--orange);
+      box-shadow: 0 -8px 28px rgba(0,0,0,0.32);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      transform: translateY(110%);
+      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    /* [hidden] tem que vencer o display:flex acima — sem isto o dock nasce visível. */
+    .wb-dock[hidden] { display: none; }
+    .wb-dock.on { transform: translateY(0); }
+
+    .wb-dock-link { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px;
+      padding: 10px 4px 10px 12px; text-decoration: none; color: var(--cream); }
+    .wb-dock-link img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover;
+      border: 2px solid var(--orange); flex: none; }
+    .wb-dock-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .wb-dock-urg { font-size: 10.5px; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--orange); }
+    .wb-dock-txt strong { font-size: 13.5px; font-weight: 700; line-height: 1.2;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .wb-dock-btn { flex: none; align-self: center; background: var(--orange); color: #fff;
+      font-size: 12.5px; font-weight: 800; border-radius: 100px; padding: 9px 14px;
+      white-space: nowrap; }
+
+    .wb-dock-x { flex: none; background: none; border: 0; color: rgba(255,244,221,0.6);
+      font-size: 20px; padding: 0 12px; cursor: pointer; display: grid; place-items: center;
+      /* 44px de alvo: fechar precisa ser fácil de acertar, senão o leitor erra e clica no CTA */
+      min-width: 44px; }
+    .wb-dock-x:active { color: var(--cream); }
+
+    /* Pílula de reabrir: canto ESQUERDO porque o direito é do float da Olívia. */
+    .wb-reabrir {
+      position: fixed; left: 12px; bottom: 20px; z-index: 900;
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--navy); color: var(--cream); border: 1px solid rgba(255,89,37,0.5);
+      border-radius: 100px; padding: 8px 14px; font-family: inherit; font-size: 12.5px;
+      font-weight: 800; box-shadow: 0 8px 24px rgba(0,0,0,0.28); cursor: pointer;
+    }
+    .wb-reabrir[hidden] { display: none; }
+    .wb-reabrir iconify-icon { font-size: 15px; color: var(--orange); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wb-dock { transition: none; }
+  }
+</style>
+
+<style is:global>
+  /* Um pedido por vez: com o dock na tela, o float da Olívia sai. Volta sozinho quando o
+     leitor fecha o dock (a classe cai da raiz). Fica em is:global porque o float é
+     renderizado pelo Base.astro, fora do escopo deste componente. */
+  @media (max-width: 768px) {
+    html.wb-dock-on .olivia-float.float-mobile { display: none; }
+  }
+</style>

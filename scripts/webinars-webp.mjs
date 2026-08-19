@@ -23,4 +23,14 @@ for (const f of arquivos.sort()) {
   const info = await sharp(`${pasta}/${f}`).resize(640).webp({ quality: 78 }).toFile(`${DEST}/${slug}.webp`);
   console.log(`${slug.padEnd(22)} ${String(Math.round(info.size / 1024)).padStart(4)}KB  ${info.width}x${info.height}`);
 }
-console.log(`\n${arquivos.length} criativos convertidos em ${DEST}/`);
+// Avatar da palestrante para o dock do mobile (WebinarDock.astro). O criativo 1:1 inteiro
+// ficaria enorme numa barra de 64px, e o rosto é o que dá cara humana ao anúncio.
+// Recorte fixo porque os sete criativos têm o MESMO enquadramento (conferido um a um):
+// a Dani ocupa a metade direita, rosto centrado em ~(870, 320) do 1080x1080.
+const AVATAR = arquivos.sort()[0];
+const av = await sharp(`${pasta}/${AVATAR}`)
+  .extract({ left: 700, top: 150, width: 340, height: 340 })
+  .resize(128).webp({ quality: 82 }).toFile(`${DEST}/dani.webp`);
+console.log(`${"dani (avatar)".padEnd(22)} ${String(Math.round(av.size / 1024)).padStart(4)}KB  ${av.width}x${av.height}`);
+
+console.log(`\n${arquivos.length} criativos + avatar convertidos em ${DEST}/`);
