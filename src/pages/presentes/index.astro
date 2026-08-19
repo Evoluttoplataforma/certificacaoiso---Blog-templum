@@ -21,12 +21,20 @@ const schemas = [{
   name: "Materiais gratuitos — Certificação ISO",
   description: "E-books, planilhas e checklists gratuitos sobre certificação e gestão ISO.",
 }];
+
+// Sem isca ativa (situação desde 19/08/2026), esta página é uma vitrine vazia. O 301 do
+// _redirects manda o visitante pro /form/ antes de ela ser servida, mas o build ainda a
+// gera — e o sitemap lista tudo que não é noindex. Sem isto, o Search Console passaria a
+// reportar "enviada e marcada como redirecionamento". Volta a indexar sozinha se as iscas
+// voltarem (e aí é a linha do _redirects que tem de sair).
+const robots = iscas.length ? undefined : "noindex,follow";
 ---
 
 <Base
   title="Materiais gratuitos — E-books e planilhas | Certificação ISO"
   description="Baixe grátis e-books, planilhas e checklists práticos sobre ISO 9001, 14001, 45001, 27001, PBQP-H e gestão. Material direto ao ponto, feito por especialistas da Templum."
   schemas={schemas}
+  robots={robots}
   clarityTags={{ page_type: "iscas-lista", tem_form: "nao" }}
 >
   <!-- HERO -->

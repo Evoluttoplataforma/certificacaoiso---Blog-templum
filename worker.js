@@ -129,6 +129,17 @@ export default {
       if (/^\/construcao-civil(\/page\/\d+)?\/?$/.test(url.pathname)) {
         return Response.redirect(new URL("/categoria/construcao-civil/", url).toString(), 301);
       }
+
+      // Iscas descontinuadas (19/08/2026). As 23 que existiam têm regra 1:1 no
+      // _redirects, com a norma na querystring. Esta é a rede: isca criada no CMS
+      // depois disso e depois removida cairia em 404 sem ninguém notar, e é
+      // justamente uma URL que recebe tráfego de e-mail e link antigo.
+      const isca = url.pathname.match(/^\/presentes\/([^/]*)\/?$/);
+      if (isca) {
+        const alvo = new URL("/form/", url);
+        alvo.search = `utm_source=blog&utm_medium=isca-301&utm_campaign=${encodeURIComponent(isca[1] || "presentes")}`;
+        return Response.redirect(alvo.toString(), 301);
+      }
     }
 
     // tudo o mais = estático
