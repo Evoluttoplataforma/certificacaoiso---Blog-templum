@@ -1,5 +1,7 @@
 ---
-const { post } = Astro.props;
+// badge: selo opcional no card (a home marca os posts em alta no Search Console).
+// Opcional de propósito: quem lista por categoria ou relacionado não tem esse contexto.
+const { post, badge } = Astro.props;
 const d = post.data;
 const url = `/${post.slug}/`;
 const dataFmt = new Date(d.pubDate).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
@@ -10,7 +12,10 @@ const cat = (d.categories && d.categories[0]) || "";
     {d.categoryImage ? <img src={d.categoryImage} alt="" width="640" height="400" loading="lazy" decoding="async" onerror="this.style.display='none'" /> : <span class="ac-thumb-fb"><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>}
   </a>
   <div class="ac-body">
-    {cat && <span class="ac-cat">{cat}</span>}
+    <span class="ac-tags">
+      {cat && <span class="ac-cat">{cat}</span>}
+      {badge && <span class="ac-badge"><iconify-icon icon="solar:graph-up-bold"></iconify-icon> {badge}</span>}
+    </span>
     <h2 class="ac-title"><a href={url}>{d.title}</a></h2>
     <p class="ac-desc">{d.description}</p>
     <div class="ac-meta"><span>{d.author}</span><span>·</span><time>{dataFmt}</time></div>

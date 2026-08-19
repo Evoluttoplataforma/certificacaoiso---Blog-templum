@@ -3,6 +3,7 @@
 // pra os componentes (ArticleCard, Sidebar) não precisarem mudar.
 // Keys públicas (anon, RLS protege). Fallback embutido p/ não depender de env.
 import populares from "../data/populares.json";
+import emAltaData from "../data/em-alta.json";
 
 const SB_URL = import.meta.env.SUPABASE_URL || "https://yfpdrckyuxltvznqfqgh.supabase.co";
 const SB_ANON = import.meta.env.SUPABASE_ANON_KEY || "sb_publishable_Yfg9Ts5WRqD4Gc3jeWAS2A_-YWZrtiQ";
@@ -218,16 +219,38 @@ export async function getAllPosts() {
 // Supabase, é só trocar a fonte do mapa abaixo — a assinatura da função fica igual.
 // Post fora do ranking (recém-publicado, sem histórico) vai pro fim, ordenado por data:
 // a home nunca fica curta e conteúdo novo não fica invisível pra sempre.
-export async function getPopularPosts(limite) {
+// `emAltaPrimeiro` existe pra separar duas decisões que a home toma: QUEM é o destaque
+// (o mais forte em cliques — em 19/08 a ISO 9001, com 2.264, que também é a norma que
+// mais vende) e QUEM aparece primeiro no grid. Sem essa separação, o post de maior
+// crescimento roubava o hero e a ISO 9001 caía pro 4º card.
+export async function getPopularPosts(limite, { emAltaPrimeiro = false } = {}) {
   const posts = await getAllPosts();
   const cliques = new Map(populares.ranking.map((r) => [r.slug, r.cliques]));
+  // "Em alta" (src/data/em-alta.json) é CRESCIMENTO de cliques em 7 dias, não volume:
+  // o 5S cresceu 400% com +12 cliques, enquanto o fluxograma tem 1.986 em 6 meses e não
+  // aparece na lista. Por isso o em-alta só REORDENA — não substitui o ranking. Sem isso,
+  // dois posts que estão subindo agora (GERIC em 18º, 5S em 27º) nunca chegariam à home,
+  // que mostra 15 cards; e trocar a base pelo crescimento derrubaria os que já provaram.
+  const emAlta = new Map(emAltaData.slugs.map((s, i) => [s.slug, i]));
   const ordenado = [...posts].sort((a, b) => {
+    if (emAltaPrimeiro) {
+      const qa = emAlta.has(a.slug), qb = emAlta.has(b.slug);
+      // entre os em alta, mantém a ordem de crescimento do painel
+      if (qa && qb) return emAlta.get(a.slug) - emAlta.get(b.slug);
+      if (qa !== qb) return qa ? -1 : 1;
+    }
     const ca = cliques.get(a.slug) ?? -1;
     const cb = cliques.get(b.slug) ?? -1;
     if (ca !== cb) return cb - ca;
     return +new Date(b.data.pubDate) - +new Date(a.data.pubDate);
   });
   return limite ? ordenado.slice(0, limite) : ordenado;
+}
+
+// Slug → variação, pra home marcar o card com selo. Fora daqui, ninguém precisa saber
+// que o post está em alta: é sinal de curadoria da home, não atributo do artigo.
+export function emAltaMap() {
+  return new Map(emAltaData.slugs.map((s) => [s.slug, s.variacao]));
 }
 
 // --- Iscas (lead magnets / landing pages) ---

@@ -2,14 +2,23 @@
 import Base from "../layouts/Base.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import { categorias } from "../data/categorias.js";
-import { getPopularPosts } from "../lib/posts.js";
+import { getPopularPosts, emAltaMap } from "../lib/posts.js";
 
 // A home lista os MAIS ACESSADOS (cliques orgânicos), não os mais recentes.
 // Ranking: src/data/populares.json — ver scripts/populares.mjs pra atualizar.
-const posts = await getPopularPosts(13);
-
-const destaque = posts[0];
-const maisLidos = posts.slice(1, 13);
+//
+// Duas ordens de propósito:
+//   · DESTAQUE = ranking puro de cliques. É o slot mais nobre da página e vai pro post
+//     mais forte (ISO 9001, 2.264 cliques), não pro que cresceu mais nos últimos 7 dias.
+//   · GRID = os EM ALTA do Search Console primeiro (src/data/em-alta.json), com selo,
+//     e o resto por cliques. São 15 cards e não 12: assim GERIC (18º em cliques) e 5S
+//     (27º) sobem pro topo sem empurrar pra fora quem já provou volume.
+const emAlta = emAltaMap();
+const porCliques = await getPopularPosts(16);
+const destaque = porCliques[0];
+const maisLidos = (await getPopularPosts(16, { emAltaPrimeiro: true }))
+  .filter((p) => p.slug !== destaque?.slug)
+  .slice(0, 15);
 
 // No hero, data de revisão curada quando existir — o artigo mais lido costuma ser
 // antigo de publicação e recém-revisado; mostrar a data de 2019 envelhece a home.
@@ -56,7 +65,7 @@ const fmtHero = (dt) => dt.toLocaleDateString("pt-BR", { day: "2-digit", month: 
   <section class="section section--cream">
     <div class="container lg">
       <div class="section-header"><span class="tag-pill">Mais acessados</span><h2>Os artigos mais <em class="accent">lidos</em></h2></div>
-      <div class="blog-grid">{maisLidos.map((p) => <ArticleCard post={p} />)}</div>
+      <div class="blog-grid">{maisLidos.map((p) => <ArticleCard post={p} badge={emAlta.get(p.slug)} />)}</div>
     </div>
   </section>
 </Base>

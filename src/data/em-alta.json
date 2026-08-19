@@ -1,0 +1,13 @@
+{
+  "_comentario": "Páginas EM ALTA no Search Console Insights (crescimento de cliques), não volume absoluto. Elas sobem pra frente da home e ganham selo. Editar à mão a partir do painel: Insights → Seu conteúdo → aba 'Em alta'.",
+  "geradoEm": "2026-08-19",
+  "periodo": "Últimos 7 dias",
+  "fonte": "Search Console Insights — aba 'Em alta' (variação de cliques)",
+  "slugs": [
+    { "slug": "iso-45001", "cliques": 31, "variacao": "+62%" },
+    { "slug": "principais-duvidas-sobre-o-geric", "cliques": 26, "variacao": "+173%" },
+    { "slug": "5s", "cliques": 12, "variacao": "+400%" },
+    { "slug": "iso-9001-requisitos-tudo-que-voce-precisa-saber", "cliques": 12, "variacao": "+100%" },
+    { "slug": "iso-9001", "cliques": 10, "variacao": "+18%" }
+  ]
+}
