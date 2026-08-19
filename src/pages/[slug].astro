@@ -5,6 +5,8 @@ import ArticleCard from "../components/ArticleCard.astro";
 import LeadForm from "../components/LeadForm.astro";
 import WebinarCard from "../components/WebinarCard.astro";
 import { catMeta } from "../data/categorias.js";
+import { ctaParaNorma } from "../data/cta-norma.js";
+import { ancorarSecoes, injetarCtaMeio } from "../lib/artigo.js";
 import { normaDoForm } from "../data/lead-form-pages.js";
 import { normaDaPagina } from "../data/normas.js";
 import { getAllPosts, tldrOf } from "../lib/posts.js";
@@ -56,6 +58,74 @@ const normaForm = normaDoForm(post.slug);
 // string. Sem isso a tag ia como "[object Object]" nas páginas curadas cuja norma não
 // aparece no título (SASSMAQ, GERIC, fluxograma), e o &norma= do CTA saía igual.
 const normaClarity = normaDaPagina({ categories: d.categories, title: d.title, slug: post.slug }) || normaForm?.display || "";
+
+// ---------- CTA DA PRIMEIRA DOBRA ----------
+// Por que existe: no mobile (~metade do tráfego) o .post-grid colapsa em 1 coluna e a
+// sidebar — onde morava o ÚNICO CTA acima da dobra — desce para depois dos comentários.
+// O primeiro CTA alcançável passava a ser o do fim do artigo, e o mapa de rolagem do
+// Clarity diz que 13,1% dos leitores chegam a 10% do artigo e 0,6% passam de 40%: esse
+// CTA era servido a menos de 1 leitor em 100. Aqui ele entra colado na "Resposta
+// rápida", que é o último bloco que cabe na dobra do celular.
+//
+// A copy NÃO é nova: reusa data/cta-norma.js, que até agora só o Sidebar consumia (isto
+// é, só rendia no desktop). São 10 variantes por norma — 94% dos posts resolvem para uma
+// norma concreta, só 64 caem no genérico.
+const cta = ctaParaNorma(d.categories || []);
+// O rótulo do genérico ("Fale com a Olívia") é afirmação, e todos os outros são pergunta
+// — numa tarja em que o botão já diz "Falar com a Olívia" ele sairia duplicado. Pergunta
+// equivalente, sem prometer norma que o artigo não trata.
+const tituloTopo = cta.slug === "geral" ? "Precisa certificar sua empresa?" : cta.titulo;
+// Destino: /form/ (a página de conversão DO BLOG) e não o v2diagnostico do sidebar —
+// ver o comentário em pages/form.astro: cruzar de domínio parte a sessão do Clarity no
+// meio e o lead nasce sem a página de origem. Nas 14 páginas curadas o form já está na
+// própria página, então a tarja ancora nele (#consultoria) em vez de mandar o leitor
+// embora; ali a atribuição do lead segue com o evento lead-form-artigo.
+const urlTopo = normaForm
+  ? "#consultoria"
+  : `/form/?utm_source=blog&utm_medium=cta-topo&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`;
+
+// A "Resposta rápida" mediana tem 295 caracteres (68% dos posts passam de 260) — no
+// celular são ~9 linhas, ~264px, e era ela que empurrava a tarja de CTA para fora da
+// dobra em 37% dos posts. Acima de ~185 caracteres (≈5 linhas de 37) o texto entra
+// recortado, com "ver tudo". O parágrafo INTEIRO continua no HTML — o recorte é só
+// visual (line-clamp), então Google e IA seguem citando o texto completo, que é a razão
+// de o bloco existir. E só no celular: no desktop as mesmas 295 letras ocupam 6 linhas
+// dentro de uma dobra bem mais alta, não há o que economizar.
+const tldrLongo = tldr.length > 185;
+
+// ---------- CORPO DO ARTIGO: ÂNCORAS, SUMÁRIO E CTA DO MEIO ----------
+// (ver src/lib/artigo.js — as transformações são feitas no build, não no banco)
+const { html: htmlAncorado, secoes } = ancorarSecoes(post.content || "");
+
+// Sumário só onde ele informa: com 3+ seções. Abaixo disso a lista repetiria o que já
+// se vê rolando meio dedo, custando altura na dobra sem dar nada em troca.
+// Os 3 posts que já traziam um sumário escrito à mão no corpo ficam de fora — dois
+// sumários seguidos na mesma página é defeito, não redundância útil. Dos 1.002 posts,
+// 503 têm 3+ seções e 500 acabam com sumário.
+const temSumarioInline = /sum[áa]rio/i.test(post.content || "");
+// O FAQ entra como última linha porque ele JÁ é uma seção da página, com id="duvidas"
+// desde sempre; deixá-lo fora faria o sumário mentir sobre a profundidade do artigo.
+// Só não entra quando o próprio corpo já tem um h2 com esse nome (73 posts têm) — senão
+// o sumário sairia com "Perguntas frequentes" duas vezes, como saía em programa-5s-e-a-iso-9001.
+const faqNoSumario = faq.length > 0
+  && !secoes.some((s) => s.titulo.toLowerCase() === "perguntas frequentes");
+const sumario = !temSumarioInline && secoes.length >= 3
+  ? [...secoes, ...(faqNoSumario ? [{ id: "duvidas", titulo: "Perguntas frequentes" }] : [])]
+  : [];
+
+// CTA do meio: só nos artigos longos. No corpo mediano (871 palavras, 3 h2) não existe
+// "meio" — o bloco cairia a um dedo de rolagem da tarja do topo. O corte em 1.200
+// palavras pega 195 posts, e 167 deles (86%) acabam com o bloco; os 28 restantes ou já
+// traziam um cta-olivia à mão, ou têm menos de 3 seções, ou não têm nenhum h2 caindo na
+// janela 30–70% — ver injetarCtaMeio() em lib/artigo.js.
+// Copy diferente da tarja de propósito: repetir a MESMA pergunta duas vezes na mesma
+// página lê como script, não como oferta. A tarja pergunta pela norma; aqui o gancho é o
+// que o leitor acabou de ler, e o corpo é o `texto` de cta-norma.js (que a tarja não usa).
+const urlMeio = normaForm
+  ? "#consultoria"
+  : `/form/?utm_source=blog&utm_medium=cta-meio&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`;
+const blocoCtaMeio = `<div class="cta-olivia"><img src="/assets/team/olivia-especialista.png" alt="Olívia, especialista Templum" /><div><strong>Quer isso avaliado na sua empresa?</strong><p>${cta.texto}</p><a href="${urlMeio}" class="btn btn--primary" data-trk-event="cta-meio" data-trk-norma="${cta.slug}">Falar com a Olívia <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a></div></div>`;
+const conteudo = wordCount >= 1200 ? injetarCtaMeio(htmlAncorado, blocoCtaMeio) : htmlAncorado;
 
 // ---------- RELACIONADOS: relevância por tag + garantia de distribuição ----------
 // Em lib/posts.js, `categories` é [category_name, ...tags] — categoria e tags no
@@ -211,12 +281,51 @@ if (faq.length) {
     <div class="container lg post-grid">
       <div class="post-content">
         {tldr && (
-          <div class="post-tldr">
+          <div class:list={["post-tldr", tldrLongo && "is-clamp"]}>
             <span class="post-tldr-label"><iconify-icon icon="solar:bolt-bold"></iconify-icon> Resposta rápida</span>
             <p>{tldr}</p>
+            {tldrLongo && <button type="button" class="post-tldr-more">ver tudo</button>}
           </div>
         )}
-        <Fragment set:html={post.content} />
+
+        <!-- CTA da primeira dobra (ver frontmatter). Fora do {tldr && …} de propósito:
+             preso ao TL;DR, o único post sem resposta rápida (/certificast) perderia o
+             CTA do topo — e é justo o post em que o leitor rola menos. -->
+        <div class="post-cta-topo">
+          <img src="/assets/team/olivia-especialista.png" alt="Olívia, especialista Templum" />
+          <div class="post-cta-topo-txt">
+            <strong>{tituloTopo}</strong>
+            <span>Gratuito · sem compromisso</span>
+          </div>
+          <a
+            href={urlTopo}
+            class="btn btn--primary btn--sm"
+            data-trk-event="cta-topo"
+            data-trk-norma={cta.slug}
+          >Falar com a Olívia <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+        </div>
+
+        <!-- Sumário: details FECHADO por padrão, e não uma lista aberta. Aberta, ela
+             custaria ~200px de altura logo acima do texto — justo a altura que o CTA da
+             tarja acabou de ganhar na dobra. Fechado, o rótulo já entrega o sinal de
+             profundidade que o Clarity pedia ("8 seções") em uma linha só, e quem quer
+             navegar abre. -->
+        {sumario.length > 0 && (
+          <details class="post-toc">
+            <summary>
+              <iconify-icon icon="solar:list-check-minimalistic-bold"></iconify-icon>
+              <span class="post-toc-t">Neste artigo</span>
+              <span class="post-toc-n">{sumario.length} seções</span>
+            </summary>
+            <ol>
+              {sumario.map((s) => (
+                <li><a href={`#${s.id}`} data-trk-event="link-sumario">{s.titulo}</a></li>
+              ))}
+            </ol>
+          </details>
+        )}
+
+        <Fragment set:html={conteudo} />
 
         {/* id="duvidas": o sumário dos posts aponta pra #duvidas. Sem o id, migrar o FAQ
             inline pra cá quebraria essa âncora. */}
@@ -247,7 +356,12 @@ if (faq.length) {
               <h3>Pronto para certificar sua empresa?</h3>
               <p>Fale com um especialista da Templum e receba um diagnóstico gratuito — com garantia de 200%.</p>
             </div>
-            <a href={`/form/?utm_source=blog&utm_medium=cta-artigo&utm_campaign=${post.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`} class="btn btn--primary btn--lg" data-trk-event="cta-artigo">Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+            <!-- O evento continua "cta-artigo", e não "cta-fim", de propósito: ele existe
+                 desde 22/06/2026 e renomear zeraria a série no GA4/Meta justo agora, que
+                 é quando ela serve de linha de base para o "cta-topo". Aqui, cta-artigo =
+                 posição FIM. utm_term entrou para o clique do fim ser comparável com o do
+                 topo por norma, não só no total. -->
+            <a href={`/form/?utm_source=blog&utm_medium=cta-artigo&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`} class="btn btn--primary btn--lg" data-trk-event="cta-artigo" data-trk-norma={cta.slug}>Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
           </div>
         )}
       </div>
@@ -272,6 +386,21 @@ if (faq.length) {
         <p class="cmt-note">Seu comentário passa por moderação antes de aparecer.</p>
       </form>
     </section>
+    <!-- "ver tudo" do TL;DR: tira o recorte e some. Sem framework e sem listener global —
+         é um botão só, e a página já carrega JS suficiente. Se o JS não rodar, o pior
+         caso é um parágrafo recortado em 5 linhas: o texto continua no HTML para busca e
+         IA, e o CTA logo abaixo continua clicável. -->
+    <script is:inline>
+      (function () {
+        var b = document.querySelector(".post-tldr-more");
+        if (!b) return;
+        b.addEventListener("click", function () {
+          b.closest(".post-tldr").classList.remove("is-clamp");
+          b.remove();
+        });
+      })();
+    </script>
+
     <script define:vars={{ postId: post.id, SB_URL: "https://yfpdrckyuxltvznqfqgh.supabase.co", SB_ANON: "sb_publishable_Yfg9Ts5WRqD4Gc3jeWAS2A_-YWZrtiQ" }}>
       (function () {
         var H = { apikey: SB_ANON, Authorization: "Bearer " + SB_ANON };
@@ -364,7 +493,10 @@ if (faq.length) {
   @media (max-width: 980px) { .post-grid { grid-template-columns: 1fr; } }
   /* tipografia do conteúdo do artigo */
   .post-content { font-size: 17px; line-height: 1.75; color: var(--text-2); min-width: 0; }
-  .post-content :global(h2) { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin: 38px 0 14px; line-height: 1.2; }
+  /* scroll-margin-top = altura do header sticky (66px) + respiro. Sem isso, todo clique
+     no sumário para com o título escondido ATRÁS do header, e o leitor cai no meio de um
+     parágrafo sem saber em que seção entrou. */
+  .post-content :global(h2) { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin: 38px 0 14px; line-height: 1.2; scroll-margin-top: 86px; }
   .post-content :global(h3) { font-size: 21px; font-weight: 800; margin: 30px 0 12px; }
   .post-content :global(p) { margin: 0 0 18px; }
   .post-content :global(a:not(.btn)) { color: var(--orange-ink); text-decoration: underline; text-underline-offset: 2px; }
@@ -378,11 +510,74 @@ if (faq.length) {
   .post-content :global(table) { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 15px; }
   .post-content :global(th), .post-content :global(td) { border: 1px solid var(--border); padding: 10px 12px; text-align: left; }
   /* TL;DR / Resposta rápida — citável por IA, answer-first */
-  .post-tldr { background: color-mix(in srgb, var(--orange) 7%, var(--surface)); border: 1px solid color-mix(in srgb, var(--orange) 28%, transparent); border-left: 4px solid var(--orange); border-radius: var(--r-16); padding: 18px 22px; margin: 0 0 30px; }
+  /* margin-bottom curta (12px, não 30px): a tarja de CTA vem SEMPRE logo abaixo e as
+     duas precisam ler como um bloco só. Quem devolve o respiro até o texto do artigo é
+     a margem da própria tarja. */
+  .post-tldr { background: color-mix(in srgb, var(--orange) 7%, var(--surface)); border: 1px solid color-mix(in srgb, var(--orange) 28%, transparent); border-left: 4px solid var(--orange); border-radius: var(--r-16); padding: 18px 22px; margin: 0 0 12px; }
   .post-tldr-label { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--orange-ink); margin-bottom: 6px; }
   .post-tldr p { font-size: 16px; line-height: 1.6; color: var(--text); margin: 0; font-weight: 500; }
+  /* "ver tudo" é filho do TL;DR e só existe no celular — no desktop não há recorte a
+     desfazer, e botão que não faz nada é ruído. */
+  .post-tldr-more { display: none; }
+  @media (max-width: 560px) {
+    /* line-clamp precisa do trio -webkit-box + orient + overflow; é a única forma de
+       recortar por LINHA (e não por altura fixa em px, que corta letra no meio quando o
+       usuário mexe no tamanho da fonte do sistema). */
+    .post-tldr.is-clamp p { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+    .post-tldr.is-clamp .post-tldr-more { display: inline-block; margin-top: 8px; padding: 0;
+      background: none; border: 0; font-family: inherit; font-size: 13.5px; font-weight: 800;
+      color: var(--orange-ink); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+  }
+
+  /* Sumário. Fica entre a tarja de CTA e o texto; ver o comentário no markup para o
+     porquê de nascer fechado. */
+  .post-toc { border: 1px solid var(--border); border-radius: var(--r-12); background: var(--surface); margin: 0 0 30px; }
+  .post-toc summary { display: flex; align-items: center; gap: 8px; padding: 12px 16px;
+    cursor: pointer; list-style: none; font-size: 14px; }
+  .post-toc summary::-webkit-details-marker { display: none; }
+  .post-toc summary iconify-icon { color: var(--orange); font-size: 17px; flex: none; }
+  .post-toc-t { font-weight: 800; color: var(--text); }
+  .post-toc-n { font-size: 12.5px; color: var(--text-soft); }
+  /* A seta é o único aviso de que o bloco abre; sem ela o <details> parece um rótulo
+     morto e ninguém clica. `margin-left: auto` joga para a direita da linha. */
+  .post-toc summary::after { content: ""; margin-left: auto; width: 8px; height: 8px; flex: none;
+    border-right: 2px solid var(--text-soft); border-bottom: 2px solid var(--text-soft);
+    transform: rotate(45deg) translateY(-2px); transition: transform .2s var(--ease-soft); }
+  .post-toc[open] summary::after { transform: rotate(-135deg) translateY(-2px); }
+  .post-toc ol { list-style: none; margin: 0; padding: 4px 16px 14px; display: flex; flex-direction: column; gap: 2px; counter-reset: toc; }
+  .post-toc li { counter-increment: toc; }
+  .post-toc li a { display: flex; gap: 10px; padding: 7px 0; font-size: 14.5px; font-weight: 600;
+    color: var(--text-2); line-height: 1.4; border-top: 1px solid var(--border); }
+  /* numeração via counter, e não <ol> nativo: o marcador nativo fica fora do padding e
+     desalinha do texto quando o item quebra em duas linhas. */
+  .post-toc li a::before { content: counter(toc) "."; color: var(--orange-ink); font-weight: 800; flex: none; }
+  .post-toc li a:hover { color: var(--orange-ink); }
+
+  /* Tarja de CTA da primeira dobra. Navy, e não a linguagem laranja do TL;DR logo acima:
+     dois blocos laranja empilhados viram um borrão só e o leitor não vê que o segundo
+     pede uma ação. Tarja (uma linha no desktop, duas no celular) e não card: o custo
+     vertical dela sai do espaço que o artigo tem na dobra, então cada pixel aqui é pago
+     com texto que o leitor deixa de ver. */
+  .post-cta-topo { display: flex; align-items: center; gap: 16px; margin: 0 0 30px;
+    background: var(--navy); border-radius: var(--r-16); padding: 14px 18px; }
+  .post-cta-topo-txt { flex: 1; min-width: 0; }
+  .post-cta-topo strong { display: block; font-size: 16px; font-weight: 800; color: var(--cream); line-height: 1.25; }
+  .post-cta-topo-txt span { display: block; margin-top: 3px; font-size: 11.5px; color: rgba(255,244,221,0.55); }
+  .post-cta-topo .btn { flex: none; }
+  /* O avatar mora dentro de .post-content, onde `:global(img)` do corpo do artigo daria
+     22px de margem e cantos de 16px na foto — mesma armadilha já documentada para o
+     .wb-card e o .cta-olivia. Dois nomes de classe aqui vencem aquele seletor. */
+  .post-content .post-cta-topo img { width: 44px; height: 44px; border-radius: 50%;
+    object-fit: cover; margin: 0; flex: none; border: 2px solid var(--orange); }
+  @media (max-width: 560px) {
+    .post-cta-topo { flex-wrap: wrap; }
+    /* o botão passa a ocupar a linha inteira: no celular ele é o alvo de toque, e alvo
+       estreito ao lado de texto longo é o clique que não acontece. */
+    .post-cta-topo .btn { flex: 1 0 100%; }
+  }
   /* FAQ — vira FAQPage no JSON-LD (sanfoninhas no Google) */
-  .post-faq { margin-top: 44px; }
+  /* scroll-margin igual à dos h2: o FAQ é a última linha do sumário. */
+  .post-faq { margin-top: 44px; scroll-margin-top: 86px; }
   .post-faq > h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px; }
   .post-faq-item { border: 1px solid var(--border); border-radius: var(--r-12); padding: 4px 18px; margin-bottom: 10px; background: var(--surface); }
   .post-faq-item summary { font-size: 16px; font-weight: 700; color: var(--text); cursor: pointer; padding: 14px 0; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
