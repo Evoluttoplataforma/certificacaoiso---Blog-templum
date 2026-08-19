@@ -26,7 +26,7 @@ const robots = "noindex,follow";
 ---
 
 <Base
-  title="Falar com a Olívia sobre certificação ISO | Certificação ISO"
+  title="Falar com especialista sobre certificação ISO | Certificação ISO"
   description="Conte o cenário da sua empresa e receba o caminho até a certificação, sem custo e sem compromisso. Especialistas Templum, com garantia de 200%."
   robots={robots}
   clarityTags={{ page_type: "form", tem_form: "sim" }}
@@ -35,16 +35,7 @@ const robots = "noindex,follow";
   <section class="fm-hero section--navy">
     <div class="container md">
       <span class="tag-pill tag-pill--glow"><iconify-icon icon="solar:medal-ribbon-star-bold"></iconify-icon> Consultoria Templum</span>
-      <h1>Fale com a Olívia sobre <em class="accent" data-fm-norma>certificação ISO</em></h1>
-      <!-- Rosto e nome antes do formulário: a pessoa está entregando dados de contato pra
-           "um especialista" abstrato. A Olívia já é a cara do CTA no float e no sidebar —
-           usar a mesma pessoa aqui é o que fecha a promessa que trouxe o visitante.
-           olivia-float.webp (3KB, 128px) e não olivia-especialista.png (267KB): é avatar
-           acima da dobra, e o PNG grande custaria o LCP da única página de conversão. -->
-      <div class="fm-quem">
-        <img src="/assets/team/olivia-float.webp" alt="Olívia, especialista da Templum" width="56" height="56" fetchpriority="high" />
-        <p><strong>Quem responde é a Olívia</strong><span>Especialista Templum em certificação</span></p>
-      </div>
+      <h1>Fale com um especialista sobre <em class="accent" data-fm-norma>certificação ISO</em></h1>
       <p>Mais de 30 anos levando empresas até o certificado, com garantia de 200%. Conte seu cenário e a gente responde com o caminho — sem custo e sem compromisso.</p>
       <ul class="check-list fm-benefits">
         <li class="check-item"><span class="check-circle"><iconify-icon icon="solar:check-read-linear"></iconify-icon></span><span>Diagnóstico gratuito do seu cenário</span></li>
@@ -72,12 +63,6 @@ const robots = "noindex,follow";
   .fm-hero h1 :global(em) { font-style: italic; }
   .fm-hero > div > p { font-size: 17px; line-height: 1.6; color: rgba(255,244,221,0.78); max-width: 620px; margin: 0; }
   .fm-benefits { display: inline-flex; flex-direction: column; gap: 10px; text-align: left; margin: 26px 0 0; }
-  .fm-quem { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; }
-  .fm-quem img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover;
-    border: 2px solid rgba(255,244,221,0.35); flex: none; }
-  .fm-quem p { display: flex; flex-direction: column; margin: 0; line-height: 1.3; }
-  .fm-quem strong { color: var(--cream); font-size: 16px; font-weight: 800; }
-  .fm-quem span { color: rgba(255,244,221,0.72); font-size: 14px; }
   .fm-form-wrap { padding-top: 8px; }
   /* O LeadForm já traz a própria margem superior; aqui ela duplicaria o respiro. */
   .fm-form-wrap :global(.lead-form) { margin-top: 0; }
@@ -118,7 +103,7 @@ const robots = "noindex,follow";
       Array.prototype.forEach.call(document.querySelectorAll("[data-fm-norma],[data-lf-norma]"), function (el) {
         el.textContent = norma;
       });
-      document.title = "Falar com a Olívia sobre " + norma + " | Certificação ISO";
+      document.title = "Falar com especialista sobre " + norma + " | Certificação ISO";
     }
     if (window.clarityTag) {
       window.clarityTag("norma", norma || "(nao informada)");
