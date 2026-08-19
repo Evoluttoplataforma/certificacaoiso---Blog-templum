@@ -19,17 +19,18 @@ const TEMPLUM = "https://templum.com.br";
     </a>
     <nav class="hd-nav" aria-label="Navegação do blog">
       <a class="hd-link" href="/">Início</a>
-      {/* Menu por NORMA, não por categoria editorial: é assim que o leitor busca.
-          "Outros temas" mantém as categorias acessíveis — sem elas, 1.015 posts que não
-          são de nenhuma das 7 normas ficariam sem porta de entrada no menu. */}
+      {/* Menu por CERTIFICAÇÃO (data/produtos.js), não por categoria editorial: é assim
+          que o leitor busca. "Outros temas" mantém as categorias acessíveis — sem elas,
+          todo post que não é de nenhuma das 13 certificações (auditoria, gestão, IA)
+          ficaria sem porta de entrada pelo menu. */}
       <div class="hd-item">
-        <button class="hd-link hd-trigger" type="button" aria-haspopup="true">Normas <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon></button>
+        <button class="hd-link hd-trigger" type="button" aria-haspopup="true">Certificações <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon></button>
         <div class="mega">
           <div class="mega-grid">
             {produtos.map((p) => (
               <a class="mega-link" href={p.url}>
                 <span class="mega-ico" style={`color:${p.cor};background:color-mix(in srgb, ${p.cor} 14%, transparent)`}><iconify-icon icon={p.icon}></iconify-icon></span>
-                <span>{p.nome}</span>
+                <span class="mega-txt"><strong>{p.nome}</strong><small>{p.desc}</small></span>
               </a>
             ))}
           </div>
@@ -54,7 +55,7 @@ const TEMPLUM = "https://templum.com.br";
   <div class="hd-mobile" id="hdMobile">
     <nav>
       <a href="/">Início</a>
-      <span class="hd-mobile-head">Normas</span>
+      <span class="hd-mobile-head">Certificações</span>
       {produtos.map((p) => <a class="hd-mobile-sub" href={p.url}>{p.nome}</a>)}
       <span class="hd-mobile-head">Outros temas</span>
       {categorias.map((c) => <a class="hd-mobile-sub" href={`/categoria/${c.slug}/`}>{c.nome}</a>)}
@@ -85,11 +86,17 @@ const TEMPLUM = "https://templum.com.br";
 
   /* mega-menu Categorias */
   .hd-item { position: relative; }
-  .hd-item .mega { position: absolute; top: calc(100% + 10px); left: 0; min-width: 560px; background: #fff; border: 1px solid var(--border); border-radius: var(--r-16, 16px); box-shadow: 0 18px 50px rgba(0,0,0,0.13); padding: 14px; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all .2s var(--ease-soft); z-index: 70; }
+  .hd-item .mega { position: absolute; top: calc(100% + 10px); left: 0; min-width: 720px; background: #fff; border: 1px solid var(--border); border-radius: var(--r-16, 16px); box-shadow: 0 18px 50px rgba(0,0,0,0.13); padding: 14px; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all .2s var(--ease-soft); z-index: 70; }
   .hd-item:hover .mega, .hd-item:focus-within .mega { opacity: 1; visibility: visible; transform: translateY(0); }
   .hd-item:hover .hd-trigger iconify-icon, .hd-item:focus-within .hd-trigger iconify-icon { transform: rotate(180deg); }
-  .mega-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; }
-  .mega-link { display: flex; align-items: center; gap: 11px; padding: 10px 12px; border-radius: 12px; font-size: 14px; font-weight: 700; color: var(--text); transition: background .15s; }
+  /* 3 colunas: 13 certificações em 2 colunas viram uma lista de 7 linhas que estoura a
+     altura da viewport em notebook. */
+  .mega-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .mega-link { display: flex; align-items: center; gap: 11px; padding: 9px 11px; border-radius: 12px; color: var(--text); transition: background .15s; }
+  .mega-txt { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
+  .mega-txt strong { font-size: 13.5px; font-weight: 800; }
+  /* O subtítulo é o que diz "ISO 37001 = antissuborno" pra quem não decorou os números. */
+  .mega-txt small { font-size: 11.5px; font-weight: 500; color: var(--text-mid); }
   .mega-link:hover { background: var(--surface); color: var(--orange); }
   .mega-ico { width: 36px; height: 36px; flex: none; border-radius: 10px; display: grid; place-items: center; font-size: 19px; }
   /* "Outros temas": as categorias descem pra chips, visualmente subordinadas às normas —
