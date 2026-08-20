@@ -104,3 +104,27 @@ export const NORMAS_VALIDAS = Object.keys(CRM_PRODUTO).concat([
   "ISO 55001", "ISO 13485", "ISO 22301", "ISO 20000", "ISO 37301", "ISO 19011",
   "IATF 16949", "BRCGS", "SA 8000", "AS 9100",
 ]);
+
+// --- "Precisa da ISO 9001?" — chamada do card de consultoria da sidebar ----------
+// O rótulo vem de normaDaPagina(), então a frase tem que funcionar para os ~50 rótulos
+// possíveis, e não só para "ISO 9001". Duas coisas mudam com o rótulo:
+//   · o artigo — "da ISO 9001", mas "do PBQP-H" (programa), "do HACCP" (sistema),
+//     "do SASSMAQ" (avaliação). Norma técnica é feminina, os outros três não;
+//   · o verbo — NR-1 e LGPD não se certificam, então "precisa da NR-1?" soa torto e
+//     promete o que a Templum não vende. Quem chega nessas páginas quer ATENDER à
+//     exigência (o mesmo raciocínio do CTA próprio da NR-1 em data/cta-norma.js).
+// Sem rótulo (Gestão e Marketing, IA), a chamada não cita norma nenhuma — prometer
+// norma que o artigo não trata queima a confiança que fez o leitor clicar.
+const ARTIGO_DA_NORMA = { "PBQP-H": "do", HACCP: "do", SASSMAQ: "do", GERIC: "do" };
+const CHAMADA_PROPRIA = {
+  "NR-1": "Precisa atender à NR-1?",
+  LGPD: "Precisa se adequar à LGPD?",
+  // ESG não é norma nem se certifica; o rótulo vem do CTA de ESG (data/cta-norma.js).
+  ESG: "Precisa estruturar sua agenda ESG?",
+};
+
+export function chamadaDaNorma(norma) {
+  const n = (norma || "").trim();
+  if (!n) return "Precisa certificar sua empresa?";
+  return CHAMADA_PROPRIA[n] || `Precisa ${ARTIGO_DA_NORMA[n] || "da"} ${n}?`;
+}

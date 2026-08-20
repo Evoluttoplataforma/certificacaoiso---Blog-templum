@@ -105,6 +105,33 @@ const POR_CATEGORIA = {
   ESG: "esg",
 };
 
+// Slug do CTA → rótulo da norma, para a chamada do card da sidebar ("Precisa da X?").
+//
+// Existe porque os dois sinais têm alcances diferentes: normaDaPagina() (data/normas.js)
+// só acerta quando a norma está escrita no título, no slug ou nas tags, e 63% dos posts
+// não a escrevem; a CATEGORIA sabe (POR_CATEGORIA acima). É a mesma divisão de trabalho
+// que a tarja do topo já usa em [slug].astro: a headline pode falar pelo sinal largo da
+// categoria, enquanto o `norma=` da URL — que alimenta o cf_produto do CRM — continua
+// vindo só do sinal preciso. Errar a headline custa um clique; errar o cf_produto cega
+// o lead inteiro (ver o comentário em data/lead-form-pages.js).
+//
+// "auditoria" e "geral" ficam FORA de propósito: não há norma a nomear ali, e a chamada
+// cai no "Precisa certificar sua empresa?" — prometer norma que o artigo não trata é o
+// erro que a própria copy deste arquivo existe para evitar.
+export const ROTULO_DO_CTA = {
+  "iso-9001": "ISO 9001",
+  "iso-27001": "ISO 27001",
+  "iso-14001": "ISO 14001",
+  "iso-45001": "ISO 45001",
+  "iso-22000": "ISO 22000",
+  "nr-1": "NR-1",
+  "pbqp-h": "PBQP-H",
+  sassmaq: "SASSMAQ",
+  // O CTA de compliance é o de antissuborno (só 37001/37301 caem nele — ver REGRAS).
+  compliance: "ISO 37001",
+  esg: "ESG",
+};
+
 export function ctaParaNorma(categories = []) {
   const cat = categories[0] || "";
   const tags = categories.slice(1);

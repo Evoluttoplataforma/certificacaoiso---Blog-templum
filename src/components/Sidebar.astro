@@ -1,5 +1,6 @@
 ---
-// Sidebar do artigo (sticky no desktop): autor + CTA diagnóstico + relacionados.
+// Sidebar do artigo (rola com o texto, ver o comentário do .sb no <style>):
+// autor + webinar da semana + CTA de consultoria (→ /form) + relacionados.
 //
 // Por que relacionados e não recentes: quem lê um artigo está numa dúvida
 // específica. "Recentes" entrega o que saiu por último — pode ser PBQP-H para
@@ -10,15 +11,31 @@
 // mesma página não repetir link (link repetido não soma link interno).
 // Sem data de propósito: em card de relacionados a relevância importa mais que a
 // recência, e data antiga em post ainda válido derruba o clique.
-import { ctaParaNorma } from "../data/cta-norma.js";
+import { ctaParaNorma, ROTULO_DO_CTA } from "../data/cta-norma.js";
+import { chamadaDaNorma } from "../data/normas.js";
 import WebinarCard from "./WebinarCard.astro";
 
-const { ref = "", author = "Equipe Templum", related = [], catName = "", catSlug = "", categories = [] } = Astro.props;
+const {
+  ref = "", author = "Equipe Templum", related = [], catName = "", catSlug = "",
+  categories = [], norma = "", ctaUrl = "",
+} = Astro.props;
 
-// CTA da Olívia contextualizado pela norma do artigo (ver data/cta-norma.js).
 // utm_term leva a norma para dar pra medir conversão por norma, não só do blog todo.
+// A copy do card sai do RÓTULO da norma (normaDaPagina), não do slug de cta-norma.js:
+// "Precisa da ISO 9001?" precisa dizer a norma que o leitor pesquisou, e o slug agrupa
+// (LGPD e 27701 caem em "iso-27001"). O slug segue valendo para o utm_term e o
+// data-trk-norma, que é onde agrupar ajuda.
 const cta = ctaParaNorma(categories);
-const diagnosticoUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}&utm_term=${cta.slug}`;
+// `norma` (título/slug/tags) primeiro, porque é o rótulo exato do que o leitor pesquisou;
+// o do CTA entra quando ele falta, e é o que leva a chamada de 37% para 92% dos posts.
+const rotulo = norma || ROTULO_DO_CTA[cta.slug] || "";
+const chamada = chamadaDaNorma(rotulo);
+// Destino: /form (a página de conversão DO BLOG), não mais o v2diagnostico.templum.com.br.
+// Motivo em pages/form.astro: cruzar de domínio parte a sessão do Clarity no meio
+// (localStorage é por origem) e o lead nascia como lead do SITE, sem a página de origem.
+// A URL vem pronta de [slug].astro porque nas 14 páginas curadas o form já está na
+// própria página e o CTA ancora nele (#consultoria) em vez de mandar o leitor embora.
+const href = ctaUrl || `/form/?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}&utm_term=${cta.slug}`;
 ---
 <aside class="sb">
   <!-- Autor -->
@@ -32,17 +49,23 @@ const diagnosticoUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blo
        no mobile a sidebar desce pro fim da página e quem serve é o card do conteúdo. -->
   <WebinarCard variante="sidebar" />
 
-  <!-- CTA único: diagnóstico com a Olívia -->
+  <!-- CTA único: falar com especialista (o diagnóstico entra como o que ele entrega) -->
   <div class="sb-diagnostico">
     <img class="sb-diagnostico-photo" src="/assets/team/olivia-especialista.png" alt="Olívia, especialista Templum" />
-    <h3>{cta.titulo}</h3>
-    <p>{cta.texto}</p>
+    <h3>{chamada}</h3>
+    <p>
+      Fale com um especialista da Templum{rotulo && rotulo !== "ESG" ? ` sobre ${rotulo}` : ""}:
+      você recebe um diagnóstico gratuito do seu cenário, com prazo e investimento claros.
+    </p>
+    <!-- O evento continua "cta-sidebar-diagnostico" mesmo com destino e copy novos, pelo
+         mesmo motivo do "cta-artigo" em [slug].astro: renomear zera a série no GA4/Meta
+         justo quando ela serve de linha de base para comparar o /form com o diagnóstico. -->
     <a
-      href={diagnosticoUrl}
+      href={href}
       class="btn btn--primary btn--block"
       data-trk-event="cta-sidebar-diagnostico"
       data-trk-norma={cta.slug}
-    >Quero meu diagnóstico <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+    >Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
     <span class="sb-diagnostico-selo">Gratuito · sem compromisso</span>
   </div>
 
@@ -66,21 +89,16 @@ const diagnosticoUrl = `https://v2diagnostico.templum.com.br/blog?utm_source=blo
   )}
 </aside>
 <style>
-  /* Sticky aqui tem duas armadilhas, e as duas já morderam:
-     1. sticky na aside INTEIRA, se ela é mais alta que a viewport, crava o topo e
-        o rodapé nunca sobe — o card de relacionados só aparecia quando o texto
-        do artigo acabava;
-     2. sticky só no bloco de cima faz os irmãos de baixo rolarem POR BAIXO dele,
-        porque elemento posicionado pinta acima de estático — os relacionados
-        desapareciam atrás do card da Olívia.
-     Saída sem defeito: sticky na aside inteira (um bloco só, nada por baixo de
-     nada) e o conteúdo enxugado para caber. Como caber depende da altura da
-     janela, o sticky é progressivo: só liga onde há espaço. Sem espaço, a coluna
-     rola junto com o texto — comportamento previsível, nunca travado. */
+  /* SEM sticky, de propósito. A coluna rola junto com o texto, sempre.
+     Histórico, pra ninguém reintroduzir: já foi sticky na aside inteira (se mais alta
+     que a viewport, crava o topo e o card de relacionados só aparecia quando o texto
+     acabava) e sticky só no bloco de cima (os irmãos de baixo rolavam POR BAIXO dele,
+     porque elemento posicionado pinta acima de estático). A terceira tentativa foi
+     sticky progressivo — só ligava em janela ≥981px de largura e ≥880px de altura —
+     e o defeito dela é o motivo desta versão: o mesmo post fixava a coluna na tela
+     de um leitor e rolava na de outro, dependendo do tamanho da janela. Rolar sempre
+     é pior slot de conversão e comportamento único, que é o que se pede num artigo. */
   .sb { align-self: start; display: flex; flex-direction: column; gap: 18px; }
-  @media (min-width: 981px) and (min-height: 880px) {
-    .sb { position: sticky; top: 96px; }
-  }
 
   .sb-author { display: flex; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-16); padding: 14px 18px; }
   .sb-author-av { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,89,37,0.12); color: var(--orange); font-size: 22px; flex-shrink: 0; }

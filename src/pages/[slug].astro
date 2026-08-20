@@ -365,7 +365,21 @@ if (faq.length) {
           </div>
         )}
       </div>
-      <Sidebar ref={post.slug} author={d.author} related={relatedSide} catName={cat} catSlug={catSlug} categories={d.categories} />
+      <!-- `norma` alimenta a chamada do card ("Precisa da ISO 9001?") e `ctaUrl`, o destino:
+           /form com a norma na querystring, ou a âncora do form da própria página. Mesmo
+           par usado pela tarja do topo e pelo CTA do meio — ver urlTopo/urlMeio acima. -->
+      <Sidebar
+        ref={post.slug}
+        author={d.author}
+        related={relatedSide}
+        catName={cat}
+        catSlug={catSlug}
+        categories={d.categories}
+        norma={normaClarity}
+        ctaUrl={normaForm
+          ? "#consultoria"
+          : `/form/?utm_source=blog&utm_medium=sidebar&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`}
+      />
     </div>
 
     <!-- Comentários (client-side: lê aprovados, envia como pendente) -->
