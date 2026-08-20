@@ -139,12 +139,39 @@ function processContent(html) {
   out = out.replace(/(<a\b[^>]*href="[^"]*templum\.com\.br[^"]*"[^>]*>)(\s*)(clique aqui|saiba mais|leia mais|veja aqui|acesse aqui|confira aqui|veja mais|aqui)(\s*)(<\/a>)/gi,
     (m, open, s1, _t, s2, close) => `${open}${s1}Conheça a consultoria da Templum${s2}${close}`);
 
+  // 4) IMAGENS DO TEXTO: loading="lazy" + decoding="async" nas que não têm.
+  //
+  // Por que (relatório de LCP do Clarity, 20/08/2026 — 5s, 42% "precisa de melhorias"):
+  // são 3.290 imagens em 1.020 posts, ~3 por artigo, herdadas do WordPress e pesando
+  // 200–370KB cada. Dois terços chegavam SEM loading, ou seja, o navegador baixava as
+  // três de uma vez, ainda no primeiro fôlego da página, disputando banda com o
+  // elemento que ele vai medir como LCP — que aqui é texto (o h1 e o TL;DR; nenhum
+  // post tem hero). Imagem no fim do artigo atrasando o título é banda pura jogada fora.
+  //
+  // A PRIMEIRA imagem fica de fora: no desktop ela cai perto da dobra, e lazy no que já
+  // está na tela é o erro clássico que PIORA o LCP (o navegador só pede depois do layout).
+  // Ela ganha só decoding="async", que não muda quando a requisição sai.
+  // Quem já tem loading (1.060 imagens, vindas do editor) não é tocado — atributo
+  // duplicado no HTML é ambiguidade, e a intenção de quem escreveu vale mais.
+  let ordem = 0;
+  out = out.replace(/<img\b[^>]*>/gi, (tag) => {
+    const primeira = ordem++ === 0;
+    let novo = tag;
+    if (!/\bdecoding\s*=/i.test(novo)) novo = novo.replace(/<img\b/i, '<img decoding="async"');
+    if (!primeira && !/\bloading\s*=/i.test(novo)) novo = novo.replace(/<img\b/i, '<img loading="lazy"');
+    return novo;
+  });
+
   return out;
 }
 
 // Imagem por categoria (usada nos cards de listagem — ver ArticleCard.astro).
 // Fallback pra posts com category_name legado/órfão (não bate com nenhuma das categorias atuais) ou sem categoria.
-const DEFAULT_CATEGORY_IMAGE = "/assets/categorias/default.jpg";
+// .webp e não .jpg: as 12 imagens de categoria eram JPG de 80–185KB (960x640) exibidas
+// num slot de 640x400, e uma delas é a imagem que a home pré-carrega como LCP. Convertidas
+// por scripts/imagens-webp.mjs — 1.735KB → 372KB no conjunto. Os .jpg continuam no repo
+// (HTML em cache ainda os pede); o image_url das categorias no Supabase aponta para .webp.
+const DEFAULT_CATEGORY_IMAGE = "/assets/categorias/default.webp";
 let _catImgMap = null;
 async function getCategoryImageMap() {
   if (_catImgMap) return _catImgMap;

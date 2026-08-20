@@ -48,6 +48,11 @@ window.__loadTrackingKit = function () {
   function load(file, cb) {
     var s = document.createElement('script');
     s.async = false; s.src = BASE + file;
+    // crossOrigin: a jsdelivr manda Access-Control-Allow-Origin: *, e sem este atributo
+    // qualquer exceção destes 5 arquivos chega ao window.onerror como "Script error.",
+    // sem mensagem nem linha. Com ele, o beacon de erro do Base.astro consegue dizer o
+    // que quebrou aqui dentro em vez de só apontar o domínio.
+    s.crossOrigin = 'anonymous';
     if (cb) s.onload = cb;
     document.head.appendChild(s);
   }

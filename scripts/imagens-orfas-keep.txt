@@ -1,0 +1,31 @@
+# URLs de /wp-content que NENHUMA página gerada cita, mas que precisam ficar no repo.
+# Levantadas no Supabase em 20/08/2026 com regexp_matches sobre content/image_url/
+# description de posts (todos os status), das 3 tabelas de backup, iscas, banners,
+# histórias e comentários. Não aparecem no dist por dois motivos:
+#   · são banners de isca/e-book, que o processContent() de lib/posts.js remove do corpo
+#     do artigo no build (decisão de 19/08/2026) — mas seguem no banco e voltam a
+#     renderizar se a decisão mudar;
+#   · ou estão em posts com status != published (35 hoje), que o build não gera.
+# Reconferir com a consulta acima antes de tirar qualquer linha daqui.
+/wp-content/uploads/19.0528-FSSC-22000-Scheme-Version-5-PORT.pdf
+/wp-content/uploads/2013/08/Modelo-IT.pdf
+/wp-content/uploads/2017/01/eb-cert-iso-p-empres.webp
+/wp-content/uploads/2020/02/artigo-01_imagem_Prancheta-1.webp
+/wp-content/uploads/2021/04/E-BOOK_Estudo-de-Caso_FSSC-ISO-22000_ZIP-PAK-Embalagens.webp
+/wp-content/uploads/2021/04/E-BOOK_Gesta%E2%95%A0ao-do_relacionamento_com-clientes.webp
+/wp-content/uploads/2021/04/E-BOOK_Regularizar-a-sua_empresa-ou-produto_do-ramo-alimenti%E2%95%A0ucio.webp
+/wp-content/uploads/2021/04/PLANILHA_ANA%E2%95%A0uLISE-SWOT.webp
+/wp-content/uploads/2021/04/PLANILHA_MAPEAMENTO-DE_PROCESSOS-SGI.webp
+/wp-content/uploads/2021/04/PLANILHA_Perigos-e-Riscos.webp
+/wp-content/uploads/2021/04/planilha_Planejamento-para_Integrac%E2%95%A0oa%E2%95%A0ao-de-Normas.webp
+/wp-content/uploads/2021/04/tartaruga-turbinada-1.webp
+/wp-content/uploads/2021/04/tartaruga-turbinada.webp
+/wp-content/uploads/2021/05/Diagno%E2%95%A0ustico-Empresarial_.webp
+/wp-content/uploads/2021/05/E-BOOK_A-nova-ISO-45001.webp
+/wp-content/uploads/2021/05/E-BOOK_A-seguranc%E2%95%A0oa-de-alimentos_em-organizac%E2%95%A0oo%E2%95%A0aes_da-cadeia-alimentar.webp
+/wp-content/uploads/2021/05/E-BOOK_Como-ganhar_lucro-com-a-ISO.webp
+/wp-content/uploads/2021/05/E-BOOK_ISO-14001-2015.webp
+/wp-content/uploads/2021/05/E-BOOK_PBQP-H-e-a-Norma_de-Desempenho.webp
+/wp-content/uploads/2022/09/E-book-_Mitos-e-Verdades_do-PBQP-H.webp
+/wp-content/uploads/2022/09/E-book-_Programa-Casa_Verde-Amarela.webp
+/wp-content/uploads/2024/06/ebook-como-ganhar-lucro-com-a-iso.webp

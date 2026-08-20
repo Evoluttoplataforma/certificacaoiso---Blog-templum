@@ -1,0 +1,29 @@
+-- Imagens de categoria: .jpg → .webp — 20/08/2026
+--
+-- O QUE FOI FEITO (via MCP do Supabase, não por este arquivo):
+--   update blog_templum_categories set image_url = replace('.jpg' → '.webp')
+--   nas 11 categorias. Os arquivos .webp foram gerados por scripts/imagens-webp.mjs
+--   e vivem em public/assets/categorias/ (os .jpg continuam lá — HTML em cache no
+--   navegador do leitor ainda pede o nome antigo).
+--
+-- Por que: relatório de LCP do Clarity (20/08/2026) — LCP de 5s, 42,2% das
+-- visualizações em "precisa de melhorias". As imagens de categoria eram JPG de
+-- 80–185KB (960x640) servidos num slot de 640x400, e uma delas é justamente a
+-- imagem que a home pré-carrega como LCP (ver preloadImage em pages/index.astro).
+-- Convertidas: 1.735KB → 372KB no conjunto (-79%).
+--
+-- O build lê este image_url em lib/posts.js (getCategoryImageMap) e falha de
+-- propósito se a consulta quebrar — então mexer aqui mexe no deploy.
+
+-- ---------------------------------------------------------------------------
+-- CONFERÊNCIA
+-- ---------------------------------------------------------------------------
+-- select name, image_url from blog_templum_categories order by name;
+-- Esperado: 11 linhas, todas terminando em .webp.
+
+-- ---------------------------------------------------------------------------
+-- ROLLBACK — volta para os .jpg (que continuam no repo)
+-- ---------------------------------------------------------------------------
+-- update blog_templum_categories
+--    set image_url = regexp_replace(image_url, '\.webp$', '.jpg')
+--  where image_url like '/assets/categorias/%.webp';

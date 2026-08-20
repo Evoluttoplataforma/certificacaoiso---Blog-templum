@@ -122,6 +122,51 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
         var t = clarityTags || {};
         Object.keys(t).forEach(function (k) { window.clarityTag(k, t[k]); });
 
+        // ---- Quem está quebrando? (erro de JS e de recurso viram tag no Clarity) ----
+        // O relatório de 20/08/2026 apontou "1 em cada 5 sessões com erro de JavaScript",
+        // 95% deles variações de "a.includes is not a function" — e não havia como saber
+        // de quem era: o blog não tem UMA chamada a .includes() no navegador (conferido
+        // nos 1.036 HTML), e um Chrome limpo não reproduz o erro em nenhum tipo de página.
+        // Sobra o que só o campo responde: script de terceiro, extensão do leitor ou
+        // navegador embutido de app (Instagram/Facebook injetam JS na página).
+        //
+        // Daí este beacon. Ele não conserta nada — dá NOME ao culpado no próximo
+        // relatório, filtrável por `erro_js` no Clarity, com a sessão gravada.
+        //
+        // Duas limitações que valem saber antes de ler o dado:
+        //   · script de outra origem sem CORS chega como "Script error." e sem arquivo.
+        //     Isso, por si, JÁ é informação: significa que não é código nosso;
+        //   · content script de extensão roda em mundo isolado e normalmente não cai
+        //     aqui — ausência de registro com volume alto no painel aponta para extensão.
+        // Teto de 3 por sessão: erro em laço encheria a fila do Clarity e o dado viraria
+        // ruído (12.069 erros no relatório vêm de repetição, não de 12 mil leitores).
+        var nErros = 0;
+        function reportaErro(rotulo, detalhe) {
+          if (nErros >= 3) return;
+          nErros++;
+          window.clarityTag("erro_js", String(rotulo).slice(0, 120));
+          if (detalhe) window.clarityTag("erro_js_detalhe", String(detalhe).slice(0, 250));
+          window.clarityEvent("erro_js");
+          window.clarityUpgrade("erro_js");
+        }
+        // capture:true porque erro de RECURSO (img/script que não carrega) não borbulha.
+        window.addEventListener("error", function (e) {
+          var el = e && e.target;
+          if (el && el.tagName && (el.src || el.href)) {
+            var u = el.src || el.href;
+            var host = (u.indexOf("//") > -1 ? u.split("/")[2] : location.host) || "";
+            reportaErro("recurso:" + el.tagName.toLowerCase() + ":" + host, u);
+            return;
+          }
+          var arq = e && e.filename ? e.filename : "sem-origem(cross-origin)";
+          var origem = arq.indexOf("//") > -1 ? arq.split("/")[2] : arq;
+          reportaErro("js:" + origem, (e && e.message ? e.message : "") + " @ " + arq);
+        }, true);
+        window.addEventListener("unhandledrejection", function (e) {
+          var r = e && e.reason;
+          reportaErro("promise", (r && (r.message || r)) || "sem motivo");
+        });
+
         // Visitante estável entre sessões: UUID first-party, SEM PII. Permite ver a
         // jornada multi-visita ("leu 4 posts e só então preencheu").
         //
@@ -194,8 +239,16 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
     <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-600.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-800.woff2" crossorigin />
     {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
-    <!-- Ícones (Iconify) — defer p/ não bloquear o render -->
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js" defer is:inline></script>
+    <!-- Ícones (Iconify) — self-hosted, defer p/ não bloquear o render.
+         Os dois arquivos saem de scripts/icones-bundle.mjs e a ORDEM importa: o primeiro
+         define window.IconifyPreload com os 40 SVGs que o blog usa, e o componente só o
+         lê se ele já existir (defer clássico executa na ordem do documento).
+         Antes isto vinha do CDN da jsdelivr E buscava cada SVG em api.iconify.design em
+         runtime — dois terceiros no render de 1.020 páginas. Agora é same-origin, com o
+         cache imutável de /assets/* (public/_headers). Ícone novo no código → rodar o
+         script de novo; sem isso ele volta a ser buscado na API, sem quebrar nada. -->
+    <script src="/assets/icons/icones.js" defer is:inline></script>
+    <script src="/assets/icons/iconify-icon.min.js" defer is:inline></script>
     <TrackingKit />
   </head>
   <body>
