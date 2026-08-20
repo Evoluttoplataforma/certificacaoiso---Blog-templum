@@ -321,7 +321,14 @@ em.accent { font-style: italic; color: var(--orange); font-weight: 800; }
 
 /* === Card de artigo (.ac) — GLOBAL p/ funcionar tanto no <ArticleCard> quanto
    nos cards injetados via JS na busca (estilo scoped não alcança innerHTML). === */
-.ac { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-16); overflow: hidden; display: flex; flex-direction: column; transition: transform .3s var(--ease-soft), box-shadow .3s; }
+/* position:relative + link esticado no título = CARD INTEIRO clicável.
+   Motivo (relatório do Clarity, 20/08/2026): 634 cliques mortos no blog, e o card de
+   artigo tinha só a imagem e o título como link — clicar na descrição, no selo de
+   categoria, no autor ou no respiro do card não fazia nada. Um <a> só, esticado por
+   ::after, em vez de embrulhar tudo num segundo link: dois links para a mesma URL no
+   mesmo card é ruído para leitor de tela e para link interno. */
+.ac { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-16); overflow: hidden; display: flex; flex-direction: column; transition: transform .3s var(--ease-soft), box-shadow .3s; }
+.ac-title a::after { content: ""; position: absolute; inset: 0; z-index: 1; }
 .ac:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
 .ac-thumb { aspect-ratio: 16/9; overflow: hidden; background: linear-gradient(135deg, var(--navy-2), var(--surface-deep)); display: grid; place-items: center; }
 .ac-thumb img { width: 100%; height: 100%; object-fit: cover; }
@@ -339,3 +346,10 @@ em.accent { font-style: italic; color: var(--orange); font-weight: 800; }
 .ac-title a:hover { color: var(--orange); }
 .ac-desc { font-size: 13.5px; color: var(--text-mid); line-height: 1.55; flex: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .ac-meta { font-size: 12.5px; color: var(--text-soft); display: flex; gap: 6px; margin-top: 4px; }
+
+/* Honeypot de formulário — campo que só bot preenche.
+   Fora da tela em vez de display:none/hidden de propósito: bot que lê o estilo pula
+   campo escondido pelo caminho óbvio, e aí o honeypot não pega ninguém. Mesmo motivo
+   documentado no .lf-hp do LeadForm.astro, que veio antes desta classe.
+   aria-hidden e tabindex="-1" no markup: quem usa leitor de tela ou teclado não tropeça. */
+.hp-off { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }

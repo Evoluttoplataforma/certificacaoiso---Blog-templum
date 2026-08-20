@@ -207,6 +207,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
       });
     }
 
+    var formAberto = Date.now();
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
@@ -220,8 +221,10 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
       var d = {};
       new FormData(form).forEach(function (v, k) { d[k] = typeof v === "string" ? v.trim() : v; });
 
-      // bot preencheu o honeypot: mostra sucesso e não grava nada.
-      if (d.site) {
+      // bot preencheu o honeypot, ou despachou o form em menos de 2,5s — são 7 campos,
+      // dois deles select; nem quem cola tudo da área de transferência faz nisso. Mostra
+      // sucesso e não grava nada (nem aqui, nem no pipeline da Templum).
+      if (d.site || Date.now() - formAberto < 2500) {
         if (window.clarityTag) window.clarityTag("bot", "sim");
         form.hidden = true; if (success) success.hidden = false; return;
       }

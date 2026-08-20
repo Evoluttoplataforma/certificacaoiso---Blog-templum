@@ -78,6 +78,12 @@ const schemas = faq.length
             <div class="field"><label for="i-tel">WhatsApp</label><input class="input" type="tel" inputmode="numeric" id="i-tel" name="telefone" placeholder="(00) 00000-0000" /></div>
             <div class="field"><label for="i-emp">Empresa</label><input class="input" id="i-emp" name="empresa" placeholder="Sua empresa" /></div>
           </div>
+          <!-- Honeypot (ver .hp-off em styles/global.css). Este form grava direto em
+               blog_templum_leads com a anon key, então bot que o preencha entra na mesma
+               fila do lead de verdade — e lead sujo custa tempo do comercial. -->
+          <div class="hp-off" aria-hidden="true">
+            <label>Site<input name="site" tabindex="-1" autocomplete="off" /></label>
+          </div>
           <button type="submit" class="btn btn--primary btn--block btn--lg">{ctaBtn} <iconify-icon icon="solar:download-minimalistic-bold"></iconify-icon></button>
           <p class="isca-legal">Ao enviar, você concorda em receber contato da Templum. Seus dados são protegidos conforme a LGPD.</p>
         </form>
@@ -186,6 +192,7 @@ const schemas = faq.length
       if (window.clarityEvent) window.clarityEvent("isca_" + etapa);
       if (up && window.clarityUpgrade) window.clarityUpgrade("isca_" + etapa);
     }
+    var abriu = Date.now();
     form.addEventListener("focusin", function onFirst() {
       form.removeEventListener("focusin", onFirst);
       cStage("start", true);
@@ -195,6 +202,13 @@ const schemas = faq.length
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
       var d = {}; new FormData(form).forEach(function (v, k) { d[k] = v; });
+      // Bot: honeypot preenchido, ou envio em menos de 2s (o form está no hero, mas
+      // ninguém digita nome, e-mail e empresa nesse tempo). Mostra o sucesso e não grava
+      // — inclusive não abre o download, que é o que o bot vinha buscar.
+      if (d.site || Date.now() - abriu < 2000) {
+        if (window.clarityTag) window.clarityTag("bot", "isca");
+        form.hidden = true; if (success) success.hidden = false; return;
+      }
       if (window.clarityTag) window.clarityTag("lead", "sim");
       cStage("download", true);
       if (window.trk && typeof window.trk.lead === "function") {

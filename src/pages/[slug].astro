@@ -124,7 +124,7 @@ const sumario = !temSumarioInline && secoes.length >= 3
 const urlMeio = normaForm
   ? "#consultoria"
   : `/form/?utm_source=blog&utm_medium=cta-meio&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`;
-const blocoCtaMeio = `<div class="cta-olivia"><img src="/assets/team/olivia-especialista.png" alt="Olívia, especialista Templum" /><div><strong>Quer isso avaliado na sua empresa?</strong><p>${cta.texto}</p><a href="${urlMeio}" class="btn btn--primary" data-trk-event="cta-meio" data-trk-norma="${cta.slug}">Falar com a Olívia <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a></div></div>`;
+const blocoCtaMeio = `<div class="cta-olivia"><img src="/assets/team/olivia-especialista.webp" alt="Olívia, especialista Templum" width="44" height="44" decoding="async" /><div><strong>Quer isso avaliado na sua empresa?</strong><p>${cta.texto}</p><a href="${urlMeio}" class="btn btn--primary" data-trk-event="cta-meio" data-trk-norma="${cta.slug}">Falar com a Olívia <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a></div></div>`;
 const conteudo = wordCount >= 1200 ? injetarCtaMeio(htmlAncorado, blocoCtaMeio) : htmlAncorado;
 
 // ---------- RELACIONADOS: relevância por tag + garantia de distribuição ----------
@@ -292,7 +292,7 @@ if (faq.length) {
              preso ao TL;DR, o único post sem resposta rápida (/certificast) perderia o
              CTA do topo — e é justo o post em que o leitor rola menos. -->
         <div class="post-cta-topo">
-          <img src="/assets/team/olivia-especialista.png" alt="Olívia, especialista Templum" />
+          <img src="/assets/team/olivia-especialista.webp" alt="Olívia, especialista Templum" width="44" height="44" decoding="async" />
           <div class="post-cta-topo-txt">
             <strong>{tituloTopo}</strong>
             <span>Gratuito · sem compromisso</span>
@@ -393,6 +393,13 @@ if (faq.length) {
           <input name="email" type="email" placeholder="Seu e-mail (não publicado)" />
         </div>
         <textarea name="content" rows="4" placeholder="Escreva seu comentário…" required></textarea>
+        <!-- Honeypot. O form de comentário é o endpoint mais exposto do blog: POST anônimo
+             para o Supabase, presente nas 1.020 páginas, sem nada que distinga bot de
+             leitor. Um terço do tráfego bruto é bot (relatório de 20/08/2026) e a tabela
+             tem 2.526 linhas — encher a fila de moderação é trivial sem isto. -->
+        <div class="hp-off" aria-hidden="true">
+          <label>Site<input name="site" tabindex="-1" autocomplete="off" /></label>
+        </div>
         <div class="cmt-actions">
           <button type="submit" class="btn btn--primary">Enviar comentário</button>
           <span id="cmt-msg" class="cmt-msg"></span>
@@ -408,9 +415,54 @@ if (faq.length) {
       (function () {
         var b = document.querySelector(".post-tldr-more");
         if (!b) return;
-        b.addEventListener("click", function () {
-          b.closest(".post-tldr").classList.remove("is-clamp");
-          b.remove();
+        var box = b.closest(".post-tldr");
+        function abrir() { box.classList.remove("is-clamp"); box.style.cursor = ""; b.remove(); }
+        b.addEventListener("click", abrir);
+        // O texto recortado também abre: no Clarity, clique no parágrafo cortado é clique
+        // morto — o leitor tenta expandir onde a frase termina, não no rótulo "ver tudo".
+        box.style.cursor = "pointer";
+        box.addEventListener("click", function (e) { if (e.target !== b) abrir(); });
+      })();
+
+      // ---- Zoom nas imagens do artigo ----
+      // São 3.290 imagens em 1.020 posts, e clicar numa delas não fazia nada — parte dos
+      // 634 cliques mortos do relatório de 20/08/2026. Comportamento esperado de imagem
+      // em artigo é ampliar, então é o que passa a acontecer. Sem biblioteca: overlay
+      // criado no primeiro clique e reaproveitado.
+      // Fica de fora imagem dentro de link (banner de consultoria) — ali o clique já tem
+      // destino — e imagem pequena (ícone, selo), que não tem o que ampliar.
+      (function () {
+        var conteudo = document.querySelector(".post-content");
+        if (!conteudo) return;
+        var over, alvo;
+        function fechar() { if (over) { over.hidden = true; document.body.style.overflow = ""; } }
+        conteudo.addEventListener("click", function (e) {
+          var img = e.target.closest && e.target.closest("img");
+          if (!img || img.closest("a") || img.naturalWidth < 320) return;
+          if (!over) {
+            over = document.createElement("div");
+            over.className = "img-zoom";
+            over.hidden = true;
+            over.innerHTML = '<button type="button" aria-label="Fechar">&times;</button><img alt="" />';
+            over.addEventListener("click", fechar);
+            document.body.appendChild(over);
+            alvo = over.querySelector("img");
+            document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") fechar(); });
+          }
+          alvo.src = img.currentSrc || img.src;
+          alvo.alt = img.alt || "";
+          over.hidden = false;
+          document.body.style.overflow = "hidden";
+        });
+        // Cursor de zoom SÓ onde o clique amplia de verdade — mesmo filtro do handler,
+        // inclusive o tamanho. Sem a checagem de largura, a foto da Olívia (160px) na
+        // tarja do topo ganhava cursor de zoom e não ampliava: seria criar clique morto
+        // justo na tela que veio corrigir clique morto. naturalWidth só existe depois da
+        // carga, daí marcar no load de quem ainda não chegou.
+        function marcaZoom(i) { if (!i.closest("a") && i.naturalWidth >= 320) i.classList.add("is-zoomable"); }
+        conteudo.querySelectorAll("img").forEach(function (i) {
+          if (i.complete) marcaZoom(i);
+          else i.addEventListener("load", function () { marcaZoom(i); }, { once: true });
         });
       })();
     </script>
@@ -434,8 +486,18 @@ if (faq.length) {
         }
         load();
         var f = document.getElementById("cmt-form"), msg = document.getElementById("cmt-msg");
+        // Relógio para a segunda trava: ninguém escreve um comentário em 3 segundos.
+        // Honeypot pega bot que preenche tudo; tempo pega o que só preenche o que vê.
+        var abriu = Date.now();
         f.addEventListener("submit", function (e) {
-          e.preventDefault(); msg.textContent = "Enviando…";
+          e.preventDefault();
+          // Bot: mesma resposta do humano, e nada é gravado. Silêncio de propósito —
+          // mensagem de erro ensina o bot a tentar de novo diferente.
+          if (f.site.value || Date.now() - abriu < 3000) {
+            if (window.clarityTag) window.clarityTag("bot", "comentario");
+            msg.textContent = "Enviado! Aparece após aprovação. ✓"; f.reset(); return;
+          }
+          msg.textContent = "Enviando…";
           var body = { post_id: postId, author_name: f.nome.value, author_email: f.email.value || null, content: f.content.value, status: "pending" };
           fetch(SB_URL + "/rest/v1/blog_templum_comments", { method: "POST", headers: Object.assign({}, H, { "Content-Type": "application/json", Prefer: "return=minimal" }), body: JSON.stringify(body) })
             .then(function (r) { if (r.ok) { msg.textContent = "Enviado! Aparece após aprovação. ✓"; f.reset(); } else { r.text().then(function (t) { msg.textContent = "Erro: " + t.slice(0, 100); }); } })
@@ -572,12 +634,20 @@ if (faq.length) {
      pede uma ação. Tarja (uma linha no desktop, duas no celular) e não card: o custo
      vertical dela sai do espaço que o artigo tem na dobra, então cada pixel aqui é pago
      com texto que o leitor deixa de ver. */
-  .post-cta-topo { display: flex; align-items: center; gap: 16px; margin: 0 0 30px;
+  /* Os três blocos de CTA do artigo (tarja do topo, bloco do meio e o do fim) e o card
+     da sidebar viraram INTEIRO clicáveis por link esticado — `position: relative` no
+     bloco e um ::after do próprio botão cobrindo tudo. O relatório do Clarity de
+     20/08/2026 contou 634 cliques mortos no blog, e nestes blocos só o botão era link:
+     quem clicava na foto da Olívia ou na pergunta em negrito não ia a lugar nenhum.
+     Efeito colateral esperado, para quem for ler a série depois: o volume de cta-topo,
+     cta-meio e cta-artigo sobe, porque cliques que antes morriam agora contam. */
+  .post-cta-topo { position: relative; display: flex; align-items: center; gap: 16px; margin: 0 0 30px;
     background: var(--navy); border-radius: var(--r-16); padding: 14px 18px; }
   .post-cta-topo-txt { flex: 1; min-width: 0; }
   .post-cta-topo strong { display: block; font-size: 16px; font-weight: 800; color: var(--cream); line-height: 1.25; }
   .post-cta-topo-txt span { display: block; margin-top: 3px; font-size: 11.5px; color: rgba(255,244,221,0.55); }
   .post-cta-topo .btn { flex: none; }
+  .post-cta-topo .btn::after { content: ""; position: absolute; inset: 0; }
   /* O avatar mora dentro de .post-content, onde `:global(img)` do corpo do artigo daria
      22px de margem e cantos de 16px na foto — mesma armadilha já documentada para o
      .wb-card e o .cta-olivia. Dois nomes de classe aqui vencem aquele seletor. */
@@ -603,9 +673,20 @@ if (faq.length) {
   .post-faq-a a { color: var(--orange-ink); font-weight: 600; }
   .post-faq-a ul, .post-faq-a ol { margin: 0 0 14px; padding-left: 22px; }
   .post-faq-a li { font-size: 15.5px; line-height: 1.65; color: var(--text-mid); margin-bottom: 6px; }
-  .post-cta { margin-top: 44px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-24); padding: 30px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  /* Zoom de imagem do artigo (ver script no fim do arquivo). Overlay simples, escuro,
+     que fecha em qualquer clique ou no Esc. */
+  .post-content :global(img.is-zoomable) { cursor: zoom-in; }
+  .img-zoom { position: fixed; inset: 0; z-index: 1000; background: rgba(15,17,21,0.92);
+    display: flex; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out; }
+  .img-zoom[hidden] { display: none; }
+  .img-zoom img { max-width: 100%; max-height: 92vh; border-radius: var(--r-12); }
+  .img-zoom button { position: absolute; top: 14px; right: 18px; background: none; border: 0;
+    color: #fff; font-size: 34px; line-height: 1; cursor: pointer; padding: 4px 10px; }
+
+  .post-cta { position: relative; margin-top: 44px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-24); padding: 30px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
   .post-cta h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
   .post-cta p { font-size: 14.5px; color: var(--text-mid); max-width: 460px; }
+  .post-cta .btn::after { content: ""; position: absolute; inset: 0; }
 
   /* O card de webinar mora DENTRO de .post-content, e ali as regras do corpo do artigo
      vencem as do componente por especificidade: `:global(img)` (0,2,0) daria 22px de
@@ -620,10 +701,11 @@ if (faq.length) {
      quando as iscas foram descontinuadas (19/08/2026): a promessa deixou de ser "baixe o
      PDF" e passou a ser "fale com quem implanta". :global porque o bloco vem no HTML do
      Supabase, via set:html — sem isso o Astro descarta as regras como não usadas. */
-  .post-content :global(.cta-olivia) { display: flex; gap: 18px; align-items: center; margin: 30px 0;
+  .post-content :global(.cta-olivia) { position: relative; display: flex; gap: 18px; align-items: center; margin: 30px 0;
     background: var(--bg); border: 1px solid var(--border); border-left: 4px solid var(--orange);
     border-radius: var(--r-16); padding: 22px 24px; }
   .post-content :global(.cta-olivia > div) { min-width: 0; }
+  .post-content :global(.cta-olivia .btn::after) { content: ""; position: absolute; inset: 0; }
   .post-content :global(.cta-olivia img) { width: 72px; height: 72px; border-radius: 50%;
     object-fit: cover; margin: 0; flex: none; }
   .post-content :global(.cta-olivia strong) { display: block; font-size: 18px; font-weight: 800;

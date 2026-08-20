@@ -51,7 +51,7 @@ const href = ctaUrl || `/form/?utm_source=blog&utm_medium=sidebar&utm_campaign=$
 
   <!-- CTA único: falar com especialista (o diagnóstico entra como o que ele entrega) -->
   <div class="sb-diagnostico">
-    <img class="sb-diagnostico-photo" src="/assets/team/olivia-especialista.png" alt="Olívia, especialista Templum" />
+    <img class="sb-diagnostico-photo" src="/assets/team/olivia-especialista.webp" alt="Olívia, especialista Templum" width="72" height="72" decoding="async" />
     <h3>{chamada}</h3>
     <p>
       Fale com um especialista da Templum{rotulo && rotulo !== "ESG" ? ` sobre ${rotulo}` : ""}:
@@ -105,7 +105,10 @@ const href = ctaUrl || `/form/?utm_source=blog&utm_medium=sidebar&utm_campaign=$
   .sb-author-by { display: block; font-size: 12px; color: var(--text-soft); }
   .sb-author strong { font-size: 15px; font-weight: 800; color: var(--text); }
 
-  .sb-diagnostico { background: var(--navy); color: var(--cream); border-radius: var(--r-20); padding: 28px 24px; text-align: center; }
+  /* Card inteiro clicável (link esticado) — ver o comentário em [slug].astro: a foto e o
+     título não eram link e comiam clique. */
+  .sb-diagnostico { position: relative; background: var(--navy); color: var(--cream); border-radius: var(--r-20); padding: 28px 24px; text-align: center; }
+  .sb-diagnostico .btn::after { content: ""; position: absolute; inset: 0; }
   .sb-diagnostico-photo { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 16px; border: 3px solid var(--orange); }
   .sb-diagnostico h3 { color: var(--cream); font-size: 20px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
   .sb-diagnostico p { font-size: 14px; line-height: 1.55; color: rgba(255,244,221,0.78); margin-bottom: 18px; }
