@@ -1,0 +1,42 @@
+-- Post da live de 19/08/2026 — "Análise Crítica pela Direção" (requisito 9.3) — 20/08/2026
+--
+-- O QUE FOI FEITO (via MCP do Supabase, não por este arquivo):
+--   1 post inserido em blog_templum_posts, status='published', autora
+--   'Daniela Albuquerque', categoria 'Qualidade e Inovação', published_at
+--   2026-08-20 13:00Z.
+--
+--   slug: analise-critica-pela-direcao-requisito-9-3-iso-9001-2026
+--   id:   0281816b-cd92-4ee1-8da0-19fc770d2e16
+--
+-- Este arquivo é REFERÊNCIA e ROLLBACK. O conteúdo do post vive no banco e não foi
+-- duplicado aqui: duas cópias divergem na primeira edição feita pelo CMS, e a do banco
+-- é a que o build lê. Mesma decisão do supabase/seed-vertical-nr1.sql.
+--
+-- Por que existe: é o terceiro post da série que transforma a live semanal da Templum
+-- (quarta, 16h) em artigo — depois de cultura-da-qualidade-e-nr1 (05/08) e
+-- riscos-e-oportunidades-iso-9001-2026 (13/08). Mesmo formato: sumário com âncoras,
+-- h2 com id, FAQ (vira FAQPage no JSON-LD), sem menção a produto.
+--
+-- PENDÊNCIA EDITORIAL (confirmar com a Daniela):
+--   1. A citação do 9.3.1 usa os adjetivos como ela leu na live ("adequação, suficiência,
+--      eficácia"), que não são os da tradução ABNT 2015 ("pertinência, adequação,
+--      eficácia"). O texto ressalva que a redação varia entre as versões.
+--   2. As duas mudanças da revisão 2026 (alínea de mudanças em partes interessadas nas
+--      entradas; 9.3.3 "saídas" → "resultados") e a publicação esperada para setembro
+--      vêm do texto em revisão que ela não pôde projetar na live. Mesmo enquadramento
+--      já usado no post de riscos e oportunidades.
+
+-- ---------------------------------------------------------------------------
+-- CONFERÊNCIA
+-- ---------------------------------------------------------------------------
+-- select slug, status, reading_time_min, char_length(content) as chars,
+--        jsonb_array_length(faq) as faq
+--   from blog_templum_posts
+--  where slug = 'analise-critica-pela-direcao-requisito-9-3-iso-9001-2026';
+-- Esperado: published · 11 min · 18202 chars · 6 perguntas.
+
+-- ---------------------------------------------------------------------------
+-- ROLLBACK — tirar do ar SEM apagar (o build só lê status='published')
+-- ---------------------------------------------------------------------------
+-- update blog_templum_posts set status='draft'
+--  where slug = 'analise-critica-pela-direcao-requisito-9-3-iso-9001-2026';
