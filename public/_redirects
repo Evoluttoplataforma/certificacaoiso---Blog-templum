@@ -7,6 +7,17 @@
 /elemento-planejamento-estrategico/   /elementos-planejamento-estrategico/  301
 /planejamento-estrategico/            /como-fazer-planejamento-estrategico/  301
 
+# /o-que-e-iso-9001/ → /iso-9001/ (21/08/2026). Não foi reescrita: foi consolidação, e o
+# Search Console decidiu. O post tinha 318 palavras, posição média 60,6 e ZERO clique em
+# 529 impressões — ou seja, ninguém o via. E disputava a mesma consulta que o /iso-9001/
+# atende em 3º lugar, com 144.523 impressões em "iso 9001". Dois textos brigando pela
+# mesma busca é canibalização; reescrever o pequeno seria alimentar o problema.
+# Zero link editorial apontava para ele (conferido no conteúdo dos 1.020 posts), então o
+# 301 não quebra nada. O post ficou com status 'draft' no Supabase para sair do build e
+# do sitemap — sem isso o Google veria página redirecionada dentro do sitemap.
+/o-que-e-iso-9001/                    /iso-9001/  301
+/o-que-e-iso-9001                     /iso-9001/  301
+
 # Páginas de "sucesso" do plugin de isca do WordPress (pós-download de e-book/planilha).
 # Iam para a isca em /presentes/; desde 19/08/2026 vão direto pro /form/ (iscas descontinuadas).
 # NÃO usar wildcard aqui: existe post real publicado em /sucesso-na-iso-9001/ (não é isca) que um /sucesso-* pegaria por engano.

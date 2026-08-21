@@ -1,0 +1,24 @@
+{
+ "title": "Requisito 7.5 da ISO 9001: informação documentada, item por item",
+ "seo_title": "Requisito 7.5 da ISO 9001: informação documentada na prática",
+ "seo_description": "O requisito 7.5 da ISO 9001 explicado item por item — 7.5.1, 7.5.2 e 7.5.3 —, com o que o auditor pede em cada um e as não conformidades mais comuns.",
+ "tldr": "O requisito 7.5 da ISO 9001 tem três partes: 7.5.1 diz que o sistema inclui o que a norma exige mais o que a empresa determinar necessário; 7.5.2 trata de criar e atualizar (identificação, formato e aprovação); 7.5.3 trata do controle (disponibilidade, distribuição, versão, proteção e preservação). É o requisito que substituiu \"procedimento documentado\" e \"registro\" por um termo só — e a mudança tirou a lista fechada de documentos e colocou no lugar uma decisão que a empresa precisa saber justificar.",
+ "faq": [
+  {
+   "pergunta": "O que é informação documentada na ISO 9001?",
+   "resposta": "<p>É o termo que a versão 2015 criou para substituir \"documento\", \"procedimento documentado\", \"registro\" e \"manual\" — todos passaram a ser a mesma coisa aos olhos da norma.</p><p>A mudança não foi só de vocabulário: junto com ela caiu a lista fechada de documentos obrigatórios, e a decisão sobre o que documentar passou para a empresa, com a exigência de que a decisão seja justificável pelo risco, pela complexidade dos processos e pela competência das pessoas.</p>"
+  },
+  {
+   "pergunta": "O requisito 7.5 exige controle de versão?",
+   "resposta": "<p>Sim. O 7.5.3.2 pede explicitamente \"controle de alterações (por exemplo, controle de versão)\". O que ele não define é o formato: pode ser número de revisão, data, histórico no sistema ou controle do próprio repositório.</p><p>O que precisa ser possível é responder, olhando o documento em uso, se aquela é a versão vigente — e é isso que o auditor verifica no posto de trabalho, não na sala da qualidade.</p>"
+  },
+  {
+   "pergunta": "A norma ISO 9001 que eu comprei precisa estar no controle de documentos?",
+   "resposta": "<p>Sim. O 7.5.3.2 trata de informação documentada de <strong>origem externa</strong> determinada como necessária: ela deve ser identificada e controlada. A própria norma, a legislação aplicável, a especificação técnica do cliente e o manual do fabricante de um equipamento crítico entram nessa categoria.</p><p>É uma não conformidade frequente: empresa certificada operando com uma edição vencida da norma ou com uma lei já revogada em circulação.</p>"
+  },
+  {
+   "pergunta": "Preciso de um procedimento para atender o 7.5?",
+   "resposta": "<p>Não. O 7.5 não exige procedimento documentado — nem ele, nem nenhum outro requisito da versão 2015.</p><p>O que precisa existir é o controle funcionando: versão identificável, disponibilidade onde a informação é usada, proteção, recuperabilidade e critério de retenção. Se o seu sistema (ou até uma planilha bem feita) entrega isso, o requisito está atendido sem um único procedimento escrito.</p>"
+  }
+ ]
+}

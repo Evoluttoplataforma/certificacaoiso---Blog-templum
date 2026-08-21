@@ -1,0 +1,24 @@
+{
+ "title": "Procedimentos obrigatórios da ISO 9001: quais são (e por que a lista acabou)",
+ "seo_title": "Procedimentos obrigatórios da ISO 9001: a lista acabou",
+ "seo_description": "A ISO 9001:2015 não exige nenhum procedimento documentado. Veja o que a norma pede no lugar da antiga lista de seis, e como decidir o que escrever.",
+ "tldr": "A ISO 9001:2015 não exige nenhum procedimento documentado — a lista de seis procedimentos obrigatórios era da versão 2008 e foi eliminada. No lugar dela a norma pede quatro documentos que você mantém (escopo, política, objetivos e a informação para operar os processos) e uma lista maior de registros que você retém como evidência. Quem ainda monta o sistema pela lista de 2008 escreve procedimento que ninguém pede e ainda pode deixar de fora o registro que o auditor cobra.",
+ "faq": [
+  {
+   "pergunta": "Quantos procedimentos a ISO 9001:2015 exige?",
+   "resposta": "<p>Zero. A norma não exige nenhum procedimento documentado. Ela nomeia quatro documentos a manter — escopo do SGQ, política da qualidade, objetivos da qualidade e a informação necessária para apoiar a operação dos processos — e uma lista maior de registros a reter como evidência.</p><p>Procedimentos e instruções de trabalho entram por decisão sua, dentro daquele quarto item, quando você determina que são necessários.</p>"
+  },
+  {
+   "pergunta": "O manual da qualidade continua obrigatório?",
+   "resposta": "<p>Não, desde a versão 2015. Sua empresa pode ter um se isso ajudar (ou se um cliente pedir), mas não é requisito e não será cobrado na auditoria.</p><p>O que a norma pede no lugar é a determinação dos processos com entradas, saídas, sequência, interação, responsáveis, indicadores e riscos — o que costuma caber melhor num mapa de processos.</p>"
+  },
+  {
+   "pergunta": "Preciso de procedimento de ação preventiva?",
+   "resposta": "<p>Não. A ISO 9001:2015 eliminou o conceito de ação preventiva e o substituiu pela abordagem de riscos e oportunidades (requisito 6.1). Manter aquele procedimento é manter um documento que não corresponde à lógica atual da norma.</p><p>O que existe hoje é ação corretiva — que atua sobre a causa de uma não conformidade que já ocorreu — e o tratamento de riscos, que é planejamento.</p>"
+  },
+  {
+   "pergunta": "Meu sistema é da versão 2008. Preciso jogar os procedimentos fora?",
+   "resposta": "<p>Não precisa jogar fora, mas vale revisar com duas perguntas: esse documento descreve o que a empresa realmente faz? Alguém o usa?</p><p>Se a resposta for não para as duas, ele é passivo — custa revisão, treinamento e controle, e ainda cria risco de não conformidade por descrever um processo que mudou. O caminho comum é consolidar vários procedimentos antigos em poucos documentos úteis e reforçar os registros, que é onde a auditoria de hoje olha.</p>"
+  }
+ ]
+}

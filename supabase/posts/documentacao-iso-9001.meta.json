@@ -1,0 +1,24 @@
+{
+ "title": "Documentação da ISO 9001: a lista do que você vai ter de verdade",
+ "seo_title": "Documentação ISO 9001: a lista completa, requisito por requisito",
+ "seo_description": "A documentação de um SGQ, requisito por requisito: o que a ISO 9001 obriga a manter, o que obriga a reter como registro e o que fica por sua decisão.",
+ "tldr": "A documentação de um SGQ tem três camadas: quatro documentos que a ISO 9001 obriga a manter (escopo, política, objetivos e a informação para operar os processos), cerca de vinte registros que ela obriga a reter como evidência, e tudo o mais — procedimentos, instruções, fluxogramas — que entra por decisão sua. Uma empresa pequena costuma fechar o sistema com poucas dezenas de itens; o que engorda a pasta não é a norma, é a insegurança de quem implanta.",
+ "faq": [
+  {
+   "pergunta": "Quantos documentos a ISO 9001 exige?",
+   "resposta": "<p>Quatro que você mantém — escopo do SGQ (4.3), política da qualidade (5.2), objetivos da qualidade (6.2) e a informação necessária para apoiar a operação dos processos (4.4.2) — mais cerca de vinte registros que você retém como evidência, alguns só quando aplicáveis ao seu negócio.</p><p>Todo o resto (procedimento, instrução de trabalho, fluxograma, manual) entra por decisão sua.</p>"
+  },
+  {
+   "pergunta": "Registro e documento são a mesma coisa?",
+   "resposta": "<p>A norma trata os dois como \"informação documentada\", mas a diferença prática continua valendo: <strong>documento orienta</strong> o trabalho (e você o mantém atualizado), <strong>registro comprova</strong> que o trabalho aconteceu (e você o retém como estava).</p><p>Documento você revisa; registro você não altera — se alterar, deixou de ser evidência.</p>"
+  },
+  {
+   "pergunta": "Posso usar planilha e sistema no lugar de documento em Word?",
+   "resposta": "<p>Pode. A norma não define formato nem meio: planilha, tela de ERP, foto, vídeo, e-mail e apontamento em sistema são informação documentada válida.</p><p>O que ela exige é controle — identificação de versão, disponibilidade onde é necessário, proteção contra perda e alteração indevida, e recuperabilidade quando alguém pedir.</p>"
+  },
+  {
+   "pergunta": "Por quanto tempo preciso guardar os registros?",
+   "resposta": "<p>A norma não fixa prazo: quem define é a empresa, considerando exigência legal, contratual e o tempo em que a informação ainda serve para decidir.</p><p>Na prática, dois pisos costumam guiar: o ciclo de certificação (três anos, para que a auditoria alcance o histórico) e o prazo legal aplicável ao seu setor, que pode ser muito maior. O que precisa existir é o critério escrito — não um prazo específico.</p>"
+  }
+ ]
+}

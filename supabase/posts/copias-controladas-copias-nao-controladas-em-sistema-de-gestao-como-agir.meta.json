@@ -1,0 +1,24 @@
+{
+ "title": "Cópia controlada e cópia não controlada: o que muda na prática",
+ "seo_title": "Cópia controlada e não controlada: quando usar cada uma",
+ "seo_description": "O que é cópia controlada e cópia não controlada, por que a distinção existe no requisito 7.5.3 da ISO 9001, quando usar cada uma e como controlar sem virar burocracia.",
+ "tldr": "Cópia controlada é a impressão que a empresa se compromete a atualizar: se o documento mudar, alguém vai buscar aquela folha e trocar. Cópia não controlada é a impressão entregue \"como está\", sem essa promessa — é o que se envia a cliente, auditor ou fornecedor. A distinção não é enfeite: ela existe porque o requisito 7.5.3 pede que a informação documentada esteja disponível na versão certa onde é usada, e a folha desatualizada na bancada é uma das não conformidades mais comuns em auditoria.",
+ "faq": [
+  {
+   "pergunta": "Cópia controlada é exigência da ISO 9001?",
+   "resposta": "<p>O termo não aparece na norma. O que a ISO 9001 exige, no requisito 7.5.3, é que a informação documentada esteja disponível na versão adequada onde e quando for necessária, com controle de distribuição, acesso, recuperação e preservação.</p><p>Cópia controlada e não controlada é a prática que o mercado criou para atender isso quando há papel envolvido. Você pode chamar de outro jeito — o que o auditor verifica é se a versão em uso é a vigente.</p>"
+  },
+  {
+   "pergunta": "O que escrever no carimbo de cópia não controlada?",
+   "resposta": "<p>O mínimo que evita mal-entendido: a expressão \"cópia não controlada\", a data da impressão e a versão do documento. Uma redação comum é <em>\"Cópia não controlada — válida na data da impressão. Consulte a versão vigente no sistema.\"</em></p><p>Se o documento vai para fora da empresa, vale incluir também a quem foi entregue e quando — não como requisito, mas porque essa informação resolve discussão futura com cliente.</p>"
+  },
+  {
+   "pergunta": "Se eu não imprimo nada, preciso me preocupar com isso?",
+   "resposta": "<p>Menos, mas não zero. O risco migra para os arquivos que circulam fora do sistema: PDF enviado por e-mail, documento salvo na área de trabalho, arquivo no grupo de WhatsApp da equipe. Se a decisão do dia a dia é tomada olhando uma dessas cópias, o problema é o mesmo da folha desatualizada.</p><p>O caminho mais seguro é o acesso apontar sempre para a versão vigente — link, terminal ou QR code no posto — em vez de distribuir arquivo.</p>"
+  },
+  {
+   "pergunta": "Quantas cópias controladas devo ter?",
+   "resposta": "<p>O mínimo possível. Cada cópia controlada é um compromisso permanente: alguém precisa saber onde ela está e trocá-la em toda revisão.</p><p>Empresa que imprime \"para garantir\" termina com dezenas de folhas espalhadas e nenhuma rastreada — o que é pior do que não ter cópia nenhuma, porque cria aparência de controle onde não há.</p>"
+  }
+ ]
+}

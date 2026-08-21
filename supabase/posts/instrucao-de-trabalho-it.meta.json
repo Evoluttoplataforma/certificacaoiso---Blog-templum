@@ -1,0 +1,28 @@
+{
+ "title": "Instrução de trabalho na ISO 9001: modelo, campos e quando usar",
+ "seo_title": "Instrução de trabalho: modelo pronto e como escrever",
+ "seo_description": "O que é instrução de trabalho, a diferença entre IT e procedimento, um modelo comentado campo por campo e os erros que geram não conformidade na auditoria.",
+ "tldr": "Instrução de trabalho (IT) é o documento que descreve COMO executar uma tarefa específica, passo a passo — o procedimento diz o que o processo faz e quem responde; a IT diz o que a mão faz. A ISO 9001 não exige nenhuma IT: ela pede informação documentada onde é necessário, e quem decide isso é você. Um modelo funciona com sete campos, e o erro mais comum na auditoria não é falta de IT — é IT desatualizada em uso no posto de trabalho.",
+ "faq": [
+  {
+   "pergunta": "Existe um modelo oficial de instrução de trabalho?",
+   "resposta": "<p>Não. A ISO 9001 não define formato, layout nem campos obrigatórios para instrução de trabalho — nem para nenhum outro documento. O que existe é um conjunto de campos que responde ao que a auditoria pergunta: identificação com versão, objetivo e aplicação, função responsável, recursos, passos numerados, critério de aceitação e o que fazer quando dá errado.</p>\n<p>Modelo de terceiro serve de ponto de partida, mas IT copiada de outra empresa descreve a tarefa <em>daquela</em> empresa. O auditor compara o que está escrito com o que a pessoa faz — e é aí que o modelo emprestado aparece.</p>"
+  },
+  {
+   "pergunta": "Qual a diferença entre procedimento e instrução de trabalho?",
+   "resposta": "<p>O procedimento fala de <strong>processo</strong>: o que ele faz, quem responde, o que entra e o que sai. A instrução de trabalho fala de <strong>tarefa</strong>: como executar, passo a passo, no posto.</p>\n<p>Teste rápido: se o texto tem nome de setor e verbo de gestão (\"avalia\", \"aprova\", \"define\"), é procedimento. Se tem verbo de mão no imperativo (\"meça\", \"registre\", \"aperte\"), é instrução de trabalho.</p>"
+  },
+  {
+   "pergunta": "Quantas instruções de trabalho minha empresa precisa ter?",
+   "resposta": "<p>Não há número. A norma pede informação documentada onde ela é necessária, e a extensão depende do tamanho da empresa, da complexidade dos processos e da competência das pessoas.</p>\n<p>Na prática: comece pelas tarefas em que o erro é caro, que são raras, ou que passam por muita gente diferente. Uma operação simples pode ter três ITs; uma indústria com processo crítico tem dezenas. Ter muitas não é sinal de maturidade — é custo de manutenção que se paga em cada revisão.</p>"
+  },
+  {
+   "pergunta": "Instrução de trabalho precisa de assinatura de elaboração e aprovação?",
+   "resposta": "<p>Só se o seu controle de documentos for em papel. A norma exige que a informação documentada seja aprovada quanto à adequação (7.5.2) — não exige campo de assinatura.</p>\n<p>Se você usa sistema, o registro de quem criou, quem aprovou e quando já é a evidência, e o campo no rodapé passa a ser redundante. Se você usa papel, aí o campo é a forma mais simples de provar a aprovação.</p>"
+  },
+  {
+   "pergunta": "Pode ter instrução de trabalho em vídeo ou foto?",
+   "resposta": "<p>Pode. A norma fala de \"informação documentada\", não de texto: vídeo curto, sequência de fotos, tela do sistema e áudio são formas válidas, e em tarefa manual costumam funcionar melhor que a descrição escrita.</p>\n<p>O que continua valendo é o controle: precisa ser identificável (qual versão?), estar disponível onde a tarefa acontece e ser substituído quando o processo muda. Vídeo antigo circulando no WhatsApp da equipe é o mesmo problema da folha desatualizada na bancada.</p>"
+  }
+ ]
+}

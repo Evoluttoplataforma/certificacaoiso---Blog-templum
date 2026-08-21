@@ -1,0 +1,24 @@
+{
+ "title": "Controle de documentos na ISO 9001: como montar do zero",
+ "seo_title": "Controle de documentos ISO 9001: como montar do zero",
+ "seo_description": "Como montar o controle de documentos de um SGQ: lista mestra, nomenclatura, versão, onde guardar, retenção e o teste de 10 minutos que antecipa a auditoria.",
+ "tldr": "Controlar documento não é ter pasta organizada: é conseguir responder cinco perguntas — qual é a versão vigente, onde ela está disponível, quem aprovou, por quanto tempo se guarda e o que acontece quando muda. Uma lista mestra com seis colunas resolve o essencial, e o teste que antecipa a auditoria leva dez minutos: peça a alguém da operação um documento específico e um registro de dois anos atrás, e cronometre.",
+ "faq": [
+  {
+   "pergunta": "A lista mestra de documentos é obrigatória na ISO 9001?",
+   "resposta": "<p>Não com esse nome. A norma exige que a informação documentada seja controlada quanto a distribuição, acesso, versão, retenção e proteção (7.5.3) — não exige uma lista.</p><p>Na prática, a lista mestra é a forma mais simples de demonstrar tudo isso de uma vez, e é o primeiro documento que a maioria dos auditores pede. Se o seu sistema de gestão já entrega essa visão numa tela, a planilha é dispensável.</p>"
+  },
+  {
+   "pergunta": "Quem pode aprovar um documento do SGQ?",
+   "resposta": "<p>Quem tem competência para julgar se ele é adequado e suficiente — e isso varia com o documento. Uma instrução de trabalho de produção costuma ser aprovada por quem responde pelo processo; a política da qualidade, pela alta direção.</p><p>A norma não define cargos nem exige que a Qualidade aprove tudo. Aliás, centralizar toda aprovação na Qualidade é um dos motivos pelos quais documento fica desatualizado: cria fila onde deveria haver responsabilidade do dono do processo.</p>"
+  },
+  {
+   "pergunta": "Preciso guardar as versões antigas dos documentos?",
+   "resposta": "<p>Depende do que a versão antiga prova. Se um registro de dois anos atrás foi gerado seguindo a versão 2 de uma instrução, guardar aquela versão 2 é o que permite entender depois por que o trabalho foi feito daquele jeito.</p><p>Em setores regulados isso é rotina. Em operações simples, guardar a versão anterior por um ciclo de certificação (três anos) costuma ser suficiente. O que a norma exige é o critério definido — não um prazo específico.</p>"
+  },
+  {
+   "pergunta": "Posso controlar documentos apenas no Google Drive?",
+   "resposta": "<p>Pode, e muita empresa certificada faz exatamente isso. O que precisa estar resolvido: permissão de edição restrita (se todos editam, não há controle de alteração), uma única pasta para o vigente com histórico separado, identificação de versão dentro do arquivo — não só no nome — e backup.</p><p>O risco do drive não é técnico, é cultural: arquivo duplicado com \"_final_v2\" espalhado por pastas pessoais. Isso é o que derruba o controle, não a ferramenta.</p>"
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+<p>Controle de documentos é o requisito que mais se confunde com organização de pasta. Ter tudo numa estrutura bonita no drive não é controle — <strong>controle é conseguir responder cinco perguntas</strong> a qualquer momento, sobre qualquer documento do sistema:</p>
+<ol>
+<li>Qual é a <strong>versão vigente</strong>?</li>
+<li>Ela está <strong>disponível onde o trabalho acontece</strong>?</li>
+<li><strong>Quem aprovou</strong>, e quando?</li>
+<li>Por <strong>quanto tempo</strong> se guarda, e o que se faz depois?</li>
+<li>Quando o documento <strong>muda</strong>, quem recolhe a versão antiga?</li>
+</ol>
+<p>É o que o requisito <a href="/iso-9001-requisitos-7-5-informacao-documentada/">7.5.3 da ISO 9001</a> pede, em outras palavras. Este texto é o caminho prático para montar isso.</p>
+
+<h2 id="lista-mestra">Comece pela lista mestra</h2>
+<p>A lista mestra é o inventário do que existe. Não é requisito com esse nome — é a forma mais simples de demonstrar controle, e cabe numa planilha. Seis colunas resolvem:</p>
+<table>
+<thead><tr><th>Coluna</th><th>Exemplo</th><th>Por que existe</th></tr></thead>
+<tbody>
+<tr><td>Código</td><td>IT-REC-02</td><td>Identificar sem depender do nome do arquivo</td></tr>
+<tr><td>Título</td><td>Conferência de matéria-prima recebida</td><td>Achar pelo assunto</td></tr>
+<tr><td>Versão e data</td><td>3 — 12/08/2026</td><td>Responder "é a vigente?"</td></tr>
+<tr><td>Aprovado por (função)</td><td>Coordenador de Qualidade</td><td>Evidência de aprovação (7.5.2)</td></tr>
+<tr><td>Onde está disponível</td><td>Sistema + 1 cópia controlada no Recebimento</td><td>Saber o que recolher quando mudar</td></tr>
+<tr><td>Retenção</td><td>Versão anterior por 3 anos</td><td>Critério de guarda e descarte</td></tr>
+</tbody>
+</table>
+<p>Duas colunas que costumam entrar e não valem o esforço: "número de páginas" (muda a cada revisão e não serve para nada) e "nome da pessoa que aprovou" — use a <strong>função</strong>, porque pessoa sai da empresa e o documento continua.</p>
+
+<h2 id="nomenclatura">Nomenclatura e versão: o mínimo que funciona</h2>
+<p>Não existe padrão obrigatório. O que funciona na prática é um código curto com três informações: <strong>tipo + área + sequencial</strong>. Por exemplo, <code>PR-COM-01</code> para o procedimento de compras, <code>IT-REC-02</code> para a segunda instrução de trabalho do recebimento.</p>
+<p>Sobre versão, uma escolha que economiza discussão: use <strong>número inteiro sequencial</strong> (1, 2, 3), não decimal. "Versão 2.3" abre a pergunta de quando uma mudança é 2.3 e quando é 3.0 — e essa discussão nunca é produtiva. Se mudou o suficiente para reaprovar, subiu de número.</p>
+<p>E resista à matriz de revisões no rodapé de cada documento. O histórico de mudanças pode viver na lista mestra ou no sistema; replicado em toda folha, ele só cresce e ninguém lê.</p>
+
+<h2 id="onde-guardar">Onde guardar: os três cenários</h2>
+<p><strong>Pasta em nuvem (Drive, SharePoint, OneDrive).</strong> Funciona bem para empresa pequena, com dois cuidados: permissão de edição restrita a poucas pessoas — se todo mundo edita, não há controle de alteração — e uma pasta única para o vigente, com o histórico em subpasta separada. O erro clássico é ter "procedimento_compras_FINAL_v2_revisado.docx" em três lugares.</p>
+<p><strong>ERP ou sistema de gestão.</strong> Melhor cenário: versão, aprovação, acesso e histórico já vêm de fábrica, e o registro de quem aprovou substitui campo de assinatura.</p>
+<p><strong>Papel.</strong> Ainda é realidade em muita operação, e é onde o controle dá mais trabalho: exige <a href="/copias-controladas-copias-nao-controladas-em-sistema-de-gestao-como-agir/">cópia controlada</a>, saber onde está cada impressão e recolher quando muda. Se puder reduzir a papel a poucas folhas — ou trocar por um QR code no posto que abre a versão vigente — o controle fica mais simples e mais confiável.</p>
+
+<h2 id="retencao">Retenção e descarte</h2>
+<p>A norma não fixa prazo: quem define é você, considerando exigência legal, contratual e o tempo em que a informação ainda serve para decidir. O que precisa existir é o <strong>critério escrito</strong>.</p>
+<p>Dois pisos costumam guiar a decisão: o ciclo de certificação, de três anos, para que a auditoria alcance histórico; e o prazo legal do seu setor, que pode ser muito maior — obra, alimento e saúde têm exigências próprias, às vezes de décadas.</p>
+<p>E vale separar duas coisas que se confundem: <strong>documento</strong> obsoleto pode ser descartado ou marcado como obsoleto; <strong>registro</strong> não se descarta antes do prazo, porque é evidência. Se alguém apagar a ficha de inspeção do ano passado para "limpar a pasta", o problema não é organização.</p>
+
+<h2 id="revisao">Revisão programada: o documento que envelhece calado</h2>
+<p>Há um tipo de documento desatualizado que nenhum controle de versão pega: o que <strong>ninguém revisou porque ninguém percebeu que precisava</strong>. O processo mudou aos poucos, a folha continuou correta na aparência, e a divergência só aparece quando o auditor conversa com quem executa.</p>
+<p>A prática que resolve é dar a cada documento uma <strong>data de próxima análise</strong> — uma coluna a mais na lista mestra. Chegada a data, alguém olha e decide: mantém como está (e registra que analisou), revisa, ou cancela porque o documento deixou de fazer sentido. As três saídas são válidas; a que não vale é o silêncio.</p>
+<p>Periodicidade razoável, na prática: <strong>um ano</strong> para documento de processo estável, e junto de cada mudança real para o que muda com frequência. Não é requisito da norma — o 7.5 não fala de prazo de revisão —, mas é o que transforma o controle em algo vivo em vez de um inventário do que foi escrito uma vez.</p>
+<p>Um atalho que funciona bem: amarre a análise dos documentos de um processo à <strong>auditoria interna</strong> daquele processo. A pessoa já vai estar ali comparando o que está escrito com o que se faz — é o momento mais barato de descobrir que o texto envelheceu.</p>
+
+<h2 id="externos">Não esqueça os documentos externos</h2>
+<p>É a lacuna que mais aparece em auditoria. Entram no controle, tanto quanto os seus: a própria norma <strong>ABNT NBR ISO 9001</strong>, a legislação aplicável, a especificação técnica do cliente, o manual do fabricante de um equipamento crítico, a norma técnica citada nos seus critérios de aceitação.</p>
+<p>O controle aqui é mais simples do que parece — precisa apenas de dois campos na lista: <strong>qual edição você usa</strong> e <strong>quem verifica se ainda é a vigente</strong>, com alguma periodicidade. É o suficiente para não ser pego com uma lei revogada em circulação.</p>
+
+<h2 id="teste">O teste de dez minutos</h2>
+<p>Antes de chamar auditoria interna, faça o que o auditor externo vai fazer. Leva dez minutos e é implacável:</p>
+<ol>
+<li><strong>Vá até a operação</strong> — não fique na sala da qualidade — e peça a alguém que executa para mostrar a instrução de trabalho da tarefa dele. Compare a versão com a lista mestra;</li>
+<li><strong>Peça um registro de dois anos atrás</strong>: uma ficha de inspeção, um relatório de auditoria, uma ata de análise crítica. Cronometre. Se passar de cinco minutos, recuperabilidade é um problema;</li>
+<li><strong>Escolha um documento revisado recentemente</strong> e pergunte quem foi avisado da mudança. Se a resposta for "está no sistema", pergunte quem, de fato, leu;</li>
+<li><strong>Peça a norma ISO 9001</strong> que a empresa usa e confira a edição.</li>
+</ol>
+<p>Os quatro passos cobrem as não conformidades mais comuns do 7.5. Se o seu controle passa nesse teste, ele passa na auditoria — independentemente de como está organizada a pasta.</p>
+<p class="post-aprofunde"><strong>Aprofunde:</strong> <a href="/iso-9001-requisitos-7-5-informacao-documentada/">O requisito 7.5, item por item</a> · <a href="/documentacao-iso-9001/">A lista de documentos de um SGQ</a> · <a href="/instrucao-de-trabalho-it/">Instrução de trabalho: modelo e campos</a> · <a href="/iso-9001/">O guia completo da ISO 9001</a></p>
