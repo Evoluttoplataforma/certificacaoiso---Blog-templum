@@ -4,7 +4,16 @@
 const { post, badge } = Astro.props;
 const d = post.data;
 const url = `/${post.slug}/`;
-const dataFmt = new Date(d.pubDate).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
+// Data do card: a de REVISÃO quando existe, a de publicação quando não. Mesma regra do
+// post (ver o comentário da hierarquia da data em pages/[slug].astro), e por um motivo
+// concreto: em 21/08/2026 o post passou a esconder a data de publicação onde há revisão
+// curada, e o card continuava mostrando "28 de nov. de 2016" no bloco de relacionados da
+// própria página — o leitor via a data velha que a página acabou de tirar de vista.
+// A guarda `> pubDate` é a mesma do post: revised_at anterior à publicação é resíduo de
+// migração e não deve virar "atualizado".
+const dataDoCard = d.revisedDate && +new Date(d.revisedDate) > +new Date(d.pubDate)
+  ? new Date(d.revisedDate) : new Date(d.pubDate);
+const dataFmt = dataDoCard.toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
 const cat = (d.categories && d.categories[0]) || "";
 ---
 <article class="ac">
@@ -18,6 +27,6 @@ const cat = (d.categories && d.categories[0]) || "";
     </span>
     <h2 class="ac-title"><a href={url}>{d.title}</a></h2>
     <p class="ac-desc">{d.description}</p>
-    <div class="ac-meta"><span>{d.author}</span><span>·</span><time>{dataFmt}</time></div>
+    <div class="ac-meta"><span>{d.author}</span><span>·</span><time datetime={dataDoCard.toISOString()}>{dataFmt}</time></div>
   </div>
 </article>

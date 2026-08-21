@@ -290,7 +290,16 @@ if (faq.length) {
            datePublished do JSON-LD, e inflar isso é o padrão que faz o Google deixar de
            confiar nas datas do site — inclusive nas verdadeiras. Aqui só muda o que o
            leitor vê primeiro; os dois valores continuam no schema, honestos.
-           Sem revisão curada, nada muda: a data de publicação segue sozinha. -->
+           Sem revisão curada, nada muda: a data de publicação segue sozinha — e é assim
+           em 895 dos 1.019 posts.
+           Em 21/08/2026 a data de publicação passou a ser OCULTADA onde existe revisão
+           (124 posts): a linha mostra uma data só, a mais relevante. Os dois valores
+           continuam no JSON-LD, então nada foi apagado — só saiu de vista. O risco de
+           ocultar sem ter revisão seria pior que data velha: post de assunto normativo sem
+           data nenhuma, num momento em que a norma está em revisão, lê como texto de
+           origem duvidosa. Por isso a regra depende de haver revisão.
+           O ArticleCard segue a MESMA regra (ver o comentário lá): sem isso o card de
+           relacionados exibia a data de publicação que a página acabou de esconder. -->
       <div class="post-meta">
         <span class="post-author"><iconify-icon icon="solar:user-circle-bold"></iconify-icon> {d.author}</span>
         <span class="post-tempo"><iconify-icon icon="solar:clock-circle-bold"></iconify-icon> {tempoLeitura} min de leitura</span>
@@ -300,7 +309,6 @@ if (faq.length) {
               <iconify-icon icon="solar:refresh-bold"></iconify-icon>
               Atualizado em <time datetime={atualizadoEm.toISOString()}>{fmtData(atualizadoEm)}</time>
             </span>
-            <span class="post-pub">Publicado em <time datetime={new Date(d.pubDate).toISOString()}>{dataFmt}</time></span>
           </>
         ) : (
           <time datetime={new Date(d.pubDate).toISOString()}>{dataFmt}</time>
@@ -781,7 +789,6 @@ if (faq.length) {
   .post-upd time { font-weight: 700; }
   /* A publicação, quando há revisão, é contexto: menor, cinza, sem tarja. Fica na linha
      para quem quer saber a idade do texto — não para ser a primeira coisa lida. */
-  .post-pub { font-size: 12.5px; color: var(--text-soft); }
   .post-tempo { display: inline-flex; align-items: center; gap: 5px; }
   .post-tempo iconify-icon { color: var(--orange); font-size: 15px; }
 
