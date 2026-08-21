@@ -4,7 +4,7 @@ import { categorias } from "../data/categorias.js";
 import { produtos } from "../data/produtos.js";
 const TEMPLUM = "https://templum.com.br";
 ---
-<a href="/form/?utm_source=blog&utm_medium=top-banner" class="top-banner">
+<a href="/form/?utm_source=blog&utm_medium=top-banner&origem=top-banner" class="top-banner">
   <iconify-icon icon="solar:fire-bold"></iconify-icon>
   <span class="tb-full"><strong>Garantia de 200%:</strong> certifique ou devolvemos o dobro do investimento.</span>
   <span class="tb-short"><strong>Garantia de 200%</strong> — o dobro de volta</span>
@@ -46,9 +46,9 @@ const TEMPLUM = "https://templum.com.br";
       {/* No mobile a lupa dá lugar a este: num header de 66px, a busca é um "quero
           procurar" e o Contato é um "quero falar" — e é o segundo que gera lead. A busca
           continua a um toque no menu (item "Buscar artigos") e no campo da home. */}
-      <a href="/form/?utm_source=blog&utm_medium=header-contato" class="btn btn--primary btn--sm hd-contato" data-trk-event="cta-header-contato">Contato</a>
+      <a href="/form/?utm_source=blog&utm_medium=header-contato&origem=header-contato" class="btn btn--primary btn--sm hd-contato" data-trk-event="cta-header-contato">Contato</a>
       <a href={`${TEMPLUM}`} class="btn btn--outline btn--sm hd-ghost">Site Templum</a>
-      <a href="/form/?utm_source=blog&utm_medium=header" class="btn btn--dark btn--sm">Falar com especialista</a>
+      <a href="/form/?utm_source=blog&utm_medium=header&origem=header" class="btn btn--dark btn--sm">Falar com especialista</a>
     </div>
     <button class="hd-burger" aria-label="Abrir menu" id="hdBurger"><iconify-icon icon="solar:hamburger-menu-linear"></iconify-icon></button>
   </div>
@@ -62,7 +62,7 @@ const TEMPLUM = "https://templum.com.br";
       <a href="/buscar/">Buscar artigos</a>
       <a href={TEMPLUM}>Site Templum</a>
     </nav>
-    <a href="/form/?utm_source=blog&utm_medium=header-mobile" class="btn btn--primary btn--block">Falar com especialista</a>
+    <a href="/form/?utm_source=blog&utm_medium=header-mobile&origem=header-mobile" class="btn btn--primary btn--block">Falar com especialista</a>
   </div>
 </header>
 

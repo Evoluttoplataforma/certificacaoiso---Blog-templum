@@ -35,7 +35,7 @@ const chamada = chamadaDaNorma(rotulo);
 // (localStorage é por origem) e o lead nascia como lead do SITE, sem a página de origem.
 // A URL vem pronta de [slug].astro porque nas 14 páginas curadas o form já está na
 // própria página e o CTA ancora nele (#consultoria) em vez de mandar o leitor embora.
-const href = ctaUrl || `/form/?utm_source=blog&utm_medium=sidebar&utm_campaign=${ref}&utm_term=${cta.slug}`;
+const href = ctaUrl || `/form/?utm_source=blog&utm_medium=sidebar&origem=sidebar&utm_campaign=${ref}&utm_term=${cta.slug}`;
 ---
 <aside class="sb">
   <!-- Autor -->

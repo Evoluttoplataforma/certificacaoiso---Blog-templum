@@ -251,6 +251,15 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
 
       var O = ov();
       var pagina = O.page || "/" + slug + "/";
+      // `origem` = qual CTA do blog trouxe a pessoa. Não é UTM de propósito: o
+      // tracking-kit reescreve utm_source/utm_medium no CLIQUE de link interno
+      // (attachClickInterceptor usa searchParams.set sem checar se o parâmetro já
+      // existe) com a atribuição de sessão do visitante. Resultado medido em
+      // 21/08/2026: cliques em CTA nosso chegavam na /form como google/organic, e a
+      // atribuição interna morria no relatório e no CRM. `origem` sobrevive porque o
+      // kit não tem esse nome na lista dele.
+      var origem = "";
+      try { origem = new URLSearchParams(location.search).get("origem") || ""; } catch (_) {}
       var normaFinal = O.norma || norma;
       var crmFinal = O.crmNorma !== undefined ? O.crmNorma : crmNorma;
       var sourceFinal = O.source || source;
@@ -293,6 +302,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
             // Liga este lead à gravação da sessão no Clarity (ver Base.astro).
             // localStorage bloqueado (aba privada) → vazio, e o lead entra igual.
             visitor_id: window.__ciUid || "",
+            origem: origem,
           }),
         });
       } catch (_) {}
@@ -313,6 +323,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
         // `norma` vai com o valor do CRM (cf_produto é select). Quando a página não
         // tem produto equivalente lá, vai vazio e o interesse real fica na mensagem.
         var msg = "Lead do blog (" + sourceFinal + "): " + pagina +
+                  "\nCTA de origem: " + (origem || "não identificado") +
                   "\nInteresse declarado: " + normaFinal +
                   "\nUrgência: " + (d.urgencia || "não informado");
 

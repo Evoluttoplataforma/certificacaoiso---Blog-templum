@@ -82,7 +82,7 @@ const tituloTopo = cta.slug === "geral" ? "Precisa certificar sua empresa?" : ct
 // embora; ali a atribuição do lead segue com o evento lead-form-artigo.
 const urlTopo = normaForm
   ? "#consultoria"
-  : `/form/?utm_source=blog&utm_medium=cta-topo&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`;
+  : `/form/?utm_source=blog&utm_medium=cta-topo&origem=cta-topo&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`;
 
 // A "Resposta rápida" mediana tem 295 caracteres (68% dos posts passam de 260) — no
 // celular são ~9 linhas, ~264px, e era ela que empurrava a tarja de CTA para fora da
@@ -123,7 +123,7 @@ const sumario = !temSumarioInline && secoes.length >= 3
 // que o leitor acabou de ler, e o corpo é o `texto` de cta-norma.js (que a tarja não usa).
 const urlMeio = normaForm
   ? "#consultoria"
-  : `/form/?utm_source=blog&utm_medium=cta-meio&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`;
+  : `/form/?utm_source=blog&utm_medium=cta-meio&origem=cta-meio&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`;
 const blocoCtaMeio = `<div class="cta-olivia"><img src="/assets/team/olivia-especialista.webp" alt="Olívia, especialista Templum" width="44" height="44" decoding="async" /><div><strong>Quer isso avaliado na sua empresa?</strong><p>${cta.texto}</p><a href="${urlMeio}" class="btn btn--primary" data-trk-event="cta-meio" data-trk-norma="${cta.slug}">Falar com a Olívia <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a></div></div>`;
 const conteudo = wordCount >= 1200 ? injetarCtaMeio(htmlAncorado, blocoCtaMeio) : htmlAncorado;
 
@@ -361,7 +361,7 @@ if (faq.length) {
                  é quando ela serve de linha de base para o "cta-topo". Aqui, cta-artigo =
                  posição FIM. utm_term entrou para o clique do fim ser comparável com o do
                  topo por norma, não só no total. -->
-            <a href={`/form/?utm_source=blog&utm_medium=cta-artigo&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`} class="btn btn--primary btn--lg" data-trk-event="cta-artigo" data-trk-norma={cta.slug}>Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+            <a href={`/form/?utm_source=blog&utm_medium=cta-artigo&origem=cta-artigo&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`} class="btn btn--primary btn--lg" data-trk-event="cta-artigo" data-trk-norma={cta.slug}>Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
           </div>
         )}
       </div>
@@ -378,7 +378,7 @@ if (faq.length) {
         norma={normaClarity}
         ctaUrl={normaForm
           ? "#consultoria"
-          : `/form/?utm_source=blog&utm_medium=sidebar&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`}
+          : `/form/?utm_source=blog&utm_medium=sidebar&origem=sidebar&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`}
       />
     </div>
 
