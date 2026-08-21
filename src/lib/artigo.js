@@ -98,6 +98,81 @@ export function ancorarSecoes(html) {
   return { html: out, secoes };
 }
 
+// Sumário ESCRITO À MÃO no corpo do post: um rótulo ("Neste artigo:", "Sumário",
+// "Índice") seguido imediatamente de uma lista. Herança do WordPress — 281 dos 1.020
+// posts trazem um, sempre no mesmo formato:
+//
+//   <p><strong>Neste artigo:</strong></p>
+//   <ul><li><a href="#o-que-e-o-geric">O que é o GERIC…</a></li> … </ul>
+//
+// Desde que o template ganhou o <details> "Neste artigo", esses 281 mostravam DOIS
+// índices na mesma página: o do template, fechado, e este, aberto, comendo até 400px da
+// dobra num post de 15 seções.
+//
+// O rótulo precisa fechar imediatamente depois do texto (`</strong></p>`) — é isso que
+// separa o índice de uma FRASE que começa igual. "Neste artigo, vamos explicar o que são
+// o PBQP-H e o Geric…" abre parágrafo do mesmo jeito e não pode ser tocada.
+const BLOCO_SUMARIO =
+  /<(p|h[2-6])\b[^>]*>\s*(?:<(?:strong|b|em)\b[^>]*>\s*)?(?:(?:neste|nesse)\s+artigo|sum[áa]rio|[íi]ndice)\s*:?\s*(?:<\/(?:strong|b|em)>\s*)?<\/\1>\s*(<(ul|ol)\b[^>]*>[\s\S]*?<\/\3>)/gi;
+
+// Contador do build, só para a linha de relatório no fim (ver o process.on abaixo). Se um
+// dia esse número cair para perto de zero sem ninguém ter mexido no conteúdo, o formato
+// do sumário no CMS mudou e a limpeza parou de casar — melhor descobrir no build do que
+// pelo print de um leitor.
+let _removidos = 0;
+let _relatorioLigado = false;
+
+/**
+ * Remove o sumário escrito à mão do corpo, quando ele é só espelho das seções.
+ *
+ * A trava que importa: só remove se TODOS os links da lista forem âncora interna
+ * (`href="#…"`). Lista com link para outro post não é índice, é "leia também" — e
+ * apagá-la seria apagar conteúdo e link interno. Nos 281 posts de hoje são 100%
+ * âncoras (medido em 21/08/2026), mas quem escrever diferente amanhã fica protegido.
+ *
+ * Não escreve nada no Supabase de propósito: o texto original continua no CMS, isto é
+ * só o que o build renderiza. Reverter é apagar a chamada em [slug].astro.
+ *
+ * @returns {{ html: string, removidos: number }}
+ */
+export function removerSumarioEscrito(html) {
+  if (!html) return { html: "", removidos: 0 };
+  let removidos = 0;
+  const out = html.replace(BLOCO_SUMARIO, (inteiro, _tag, lista) => {
+    const hrefs = [...lista.matchAll(/href=["']([^"']*)["']/gi)].map((m) => m[1]);
+    if (!hrefs.length || !hrefs.every((h) => h.startsWith("#"))) return inteiro;
+    removidos++;
+    return "";
+  });
+  _removidos += removidos;
+  if (!_relatorioLigado && typeof process !== "undefined" && process.on) {
+    _relatorioLigado = true;
+    process.on("exit", () => {
+      if (_removidos) console.log("sumário escrito à mão:", _removidos, "removidos do corpo no build");
+    });
+  }
+  return { html: out, removidos };
+}
+
+/**
+ * O post tem sumário escrito à mão no corpo?
+ *
+ * Usado por [slug].astro para não empilhar o <details> do template em cima de um sumário
+ * que sobreviveu (acontece quando o post tem menos de 3 seções e a limpeza é barrada —
+ * ali aquele sumário é o ÚNICO índice da página).
+ *
+ * Substitui um teste que era `/sum[áa]rio/i` no conteúdo inteiro: a PALAVRA, em qualquer
+ * lugar. Três posts perdiam o índice do template por escreverem "Sumário dos achados",
+ * "Crie um sumário" e "Sumário Executivo" dentro de uma tabela. Aqui a exigência é a
+ * mesma estrutura que a remoção procura: rótulo fechado + lista logo depois.
+ */
+export function temSumarioEscrito(html) {
+  if (!html) return false;
+  // lastIndex fica sujo entre chamadas num regex /g compartilhado — daí o reset.
+  BLOCO_SUMARIO.lastIndex = 0;
+  return BLOCO_SUMARIO.test(html);
+}
+
 /**
  * Enfia um bloco de CTA no meio do corpo, na fronteira de um <h2>.
  *

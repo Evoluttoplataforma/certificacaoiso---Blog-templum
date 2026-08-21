@@ -5,7 +5,7 @@ import LeadForm from "../components/LeadForm.astro";
 import WebinarCard from "../components/WebinarCard.astro";
 import { catMeta } from "../data/categorias.js";
 import { ctaParaNorma } from "../data/cta-norma.js";
-import { ancorarSecoes, injetarCtaMeio } from "../lib/artigo.js";
+import { ancorarSecoes, injetarCtaMeio, removerSumarioEscrito, temSumarioEscrito } from "../lib/artigo.js";
 import { normaDoForm } from "../data/lead-form-pages.js";
 import { normaDaPagina } from "../data/normas.js";
 import { getAllPosts, tldrOf } from "../lib/posts.js";
@@ -88,11 +88,25 @@ const tldrLongo = tldr.length > 185;
 const { html: htmlAncorado, secoes } = ancorarSecoes(post.content || "");
 
 // Sumário só onde ele informa: com 3+ seções. Abaixo disso a lista repetiria o que já
-// se vê rolando meio dedo, custando altura na dobra sem dar nada em troca.
-// Os 3 posts que já traziam um sumário escrito à mão no corpo ficam de fora — dois
-// sumários seguidos na mesma página é defeito, não redundância útil. Dos 1.002 posts,
-// 503 têm 3+ seções e 500 acabam com sumário.
-const temSumarioInline = /sum[áa]rio/i.test(post.content || "");
+// se vê rolando meio dedo, custando altura na dobra sem dar nada em troca. Dos 1.020
+// posts, 519 têm 3+ seções — e agora os 519 mostram o índice do template (eram 516: os
+// outros 3 o perdiam por trazerem a palavra "sumário" numa frase, ver temSumarioEscrito
+// em lib/artigo.js).
+//
+// 281 posts trazem um sumário ESCRITO À MÃO no corpo, herdado do WordPress, e desde que
+// o <details> existe eles mostravam dois índices na mesma página (medido em 21/08/2026:
+// 279 dos 281). O escrito à mão sai — é o pior dos dois: sempre aberto, sem o "15
+// seções" e diferente de post para post.
+//
+// A ORDEM aqui é o que dá a garantia: só limpa onde o <details> vai de fato aparecer
+// (3+ seções). Nos poucos posts abaixo disso o sumário do corpo é o único índice da
+// página, então ele fica — e o temSumarioEscrito abaixo, lido do HTML JÁ LIMPO, é o que
+// impede o template de empilhar um segundo em cima dele.
+const podeLimpar = secoes.length >= 3;
+const { html: htmlLimpo } = podeLimpar
+  ? removerSumarioEscrito(htmlAncorado)
+  : { html: htmlAncorado };
+const temSumarioInline = temSumarioEscrito(htmlLimpo);
 // O FAQ entra como última linha porque ele JÁ é uma seção da página, com id="duvidas"
 // desde sempre; deixá-lo fora faria o sumário mentir sobre a profundidade do artigo.
 // Só não entra quando o próprio corpo já tem um h2 com esse nome (73 posts têm) — senão
@@ -115,7 +129,9 @@ const urlMeio = normaForm
   ? "#consultoria"
   : `/form/?utm_source=blog&utm_medium=cta-meio&origem=cta-meio&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`;
 const blocoCtaMeio = `<div class="cta-olivia"><img src="/assets/team/olivia-especialista.webp" alt="Olívia, especialista Templum" width="44" height="44" decoding="async" /><div><strong>Quer isso avaliado na sua empresa?</strong><p>${cta.texto}</p><a href="${urlMeio}" class="btn btn--primary" data-trk-event="cta-meio" data-trk-norma="${cta.slug}">Falar com a Olívia <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a></div></div>`;
-const conteudo = wordCount >= 1200 ? injetarCtaMeio(htmlAncorado, blocoCtaMeio) : htmlAncorado;
+// injeta no HTML JÁ LIMPO: o CTA vai para a fronteira de h2 mais perto da metade do
+// TEXTO, e as ~15 linhas do sumário do corpo deslocavam esse cálculo.
+const conteudo = wordCount >= 1200 ? injetarCtaMeio(htmlLimpo, blocoCtaMeio) : htmlLimpo;
 
 // ---------- RELACIONADOS: relevância por tag + garantia de distribuição ----------
 // Em lib/posts.js, `categories` é [category_name, ...tags] — categoria e tags no
