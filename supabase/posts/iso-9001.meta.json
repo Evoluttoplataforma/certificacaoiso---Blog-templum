@@ -23,6 +23,26 @@
    "resposta": "<p>Não é obrigatório: a norma não exige consultoria, e há empresas que implantam com equipe interna. O que decide é ter alguém com tempo dedicado e experiência em auditoria — porque o caro não é implantar, é implantar errado e descobrir na fase 2.</p>\n<p>O que <strong>não</strong> pode acontecer é a mesma empresa implantar e certificar: as regras de acreditação separam os dois papéis. Consultoria prepara; o organismo certificador audita e emite.</p>"
   },
   {
+   "pergunta": "A ISO 9001 é obrigatória por lei?",
+   "resposta": "<p>Não. Nenhuma lei brasileira obriga uma empresa a ter ISO 9001. A norma é de adesão voluntária.</p>\n<p>O que existe — e é o que leva a maioria das empresas a certificar — é <strong>exigência de mercado</strong>: cliente que só compra de fornecedor certificado, edital que pontua a certificação na proposta técnica, ou contrato que passa a pedir na renovação. Também não é preciso ter ISO 9001 para implantar outra norma: a ISO 14001, a 45001 e as demais são independentes, ainda que compartilhem a mesma estrutura e possam ser auditadas juntas.</p>"
+  },
+  {
+   "pergunta": "Preciso de um procedimento para cada setor? E o manual da qualidade?",
+   "resposta": "<p>Não, e não. Desde a versão 2015 a norma <strong>não exige manual da qualidade</strong> nem lista procedimentos obrigatórios — quem ainda pede isso está trabalhando com a lógica da ISO 9001:2008.</p>\n<p>O que a norma pede é <em>informação documentada</em> onde ela é necessária para o processo funcionar e para provar que funcionou. Quem decide o quanto é a empresa, com base no risco e na complexidade de cada processo. Uma operação simples pode ter meia dúzia de documentos; uma indústria regulada tem muitos mais. Procedimento escrito para cada gesto é insegurança de quem implanta, não requisito.</p>"
+  },
+  {
+   "pergunta": "Existe número mínimo de funcionários para certificar? Prestadores sem carteira contam?",
+   "resposta": "<p>Não existe mínimo. A norma não menciona número de funcionários em nenhum requisito — empresa de duas pessoas pode certificar.</p>\n<p>Sobre terceiros: o que importa para a auditoria não é o vínculo trabalhista, é <strong>quem executa processo dentro do seu escopo</strong>. Se um prestador faz parte da entrega, ele entra no sistema — com competência comprovada e critérios de controle, como qualquer outro provedor externo (cláusula 8.4). O número de pessoas afeta, sim, o <em>custo da auditoria</em>: o organismo dimensiona os dias de auditoria pelo tamanho da operação.</p>"
+  },
+  {
+   "pergunta": "E se a empresa não passar na auditoria de certificação?",
+   "resposta": "<p>\"Não passar\" quase nunca é reprovação seca. O que acontece é o auditor registrar <strong>não conformidades</strong>: as maiores exigem plano de ação e evidência de correção antes de o certificado sair; as menores costumam ser tratadas até a próxima auditoria.</p>\n<p>Se a correção exigir uma nova visita, ela é cobrada — e é aí que aparece o custo de uma implantação apressada. Por isso a auditoria interna e a análise crítica são exigidas <em>antes</em>: elas existem justamente para essas não conformidades aparecerem antes do auditor externo, quando corrigir ainda é barato.</p>"
+  },
+  {
+   "pergunta": "O auditor da ISO 9001 pode cobrar licença ambiental ou item de segurança do trabalho?",
+   "resposta": "<p>Ele não audita a ISO 14001 nem a 45001 numa auditoria de ISO 9001 — mas pode, sim, entrar no assunto por dois caminhos legítimos.</p>\n<p>O primeiro é o requisito de <strong>requisitos legais aplicáveis</strong>: se operar sem uma licença coloca em risco a capacidade de entregar o que foi combinado ao cliente, isso é risco do seu SGQ e cabe na cláusula 6.1. O segundo é o <strong>ambiente para a operação dos processos</strong> (7.1.4), que trata das condições em que o trabalho acontece. Fora disso, exigir conformidade ambiental ou de segurança como requisito da 9001 está fora do escopo da auditoria — e você pode registrar a discordância no relatório.</p>"
+  },
+  {
    "pergunta": "Eu tenho uma empresa de serviços, posso certificar na ISO 9001?",
    "resposta": "<p>Sim. A norma se aplica a organizações de qualquer ramo e porte — indústria, serviço, comércio, terceiro setor e órgão público. Entre os clientes da Templum há escritórios de advocacia, software houses, laboratórios, imobiliárias e prefeituras.</p>"
   },

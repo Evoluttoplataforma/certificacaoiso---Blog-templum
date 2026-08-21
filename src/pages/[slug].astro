@@ -258,14 +258,28 @@ if (faq.length) {
         {cat && <><span>/</span><a href={`/categoria/${catSlug}/`}>{cat}</a></>}
       </nav>
       <h1 class="post-title">{d.title}</h1>
+      <!-- HIERARQUIA DA DATA (21/08/2026). Onde há revisão curada, quem manda na linha é
+           a data de ATUALIZAÇÃO — tarja laranja — e a de publicação vira contexto miúdo.
+           Motivo: 384 posts foram publicados antes de 2020 e se apresentavam ao leitor
+           com "12 de maio de 2016" em destaque, num texto revisado este mês. Numa página
+           que vende consultoria, data velha na dobra lê como empresa que parou.
+           O que NÃO se faz é mexer no `published_at` para fingir frescor: ele alimenta o
+           datePublished do JSON-LD, e inflar isso é o padrão que faz o Google deixar de
+           confiar nas datas do site — inclusive nas verdadeiras. Aqui só muda o que o
+           leitor vê primeiro; os dois valores continuam no schema, honestos.
+           Sem revisão curada, nada muda: a data de publicação segue sozinha. -->
       <div class="post-meta">
         <span class="post-author"><iconify-icon icon="solar:user-circle-bold"></iconify-icon> {d.author}</span>
-        <time datetime={new Date(d.pubDate).toISOString()}>{dataFmt}</time>
-        {atualizadoEm && (
-          <span class="post-upd">
-            <iconify-icon icon="solar:refresh-bold"></iconify-icon>
-            Atualizado em <time datetime={atualizadoEm.toISOString()}>{fmtData(atualizadoEm)}</time>
-          </span>
+        {atualizadoEm ? (
+          <>
+            <span class="post-upd">
+              <iconify-icon icon="solar:refresh-bold"></iconify-icon>
+              Atualizado em <time datetime={atualizadoEm.toISOString()}>{fmtData(atualizadoEm)}</time>
+            </span>
+            <span class="post-pub">Publicado em <time datetime={new Date(d.pubDate).toISOString()}>{dataFmt}</time></span>
+          </>
+        ) : (
+          <time datetime={new Date(d.pubDate).toISOString()}>{dataFmt}</time>
         )}
       </div>
     </div>
@@ -371,215 +385,21 @@ if (faq.length) {
       )}
     </div>
 
-    <!-- Comentários (client-side: lê aprovados, envia como pendente) -->
-    <section class="container post-comments">
-      <h2>Comentários</h2>
-      <div id="cmt-list" class="cmt-list"><p class="cmt-empty">Carregando…</p></div>
-      <form id="cmt-form" class="cmt-form">
-        <h3>Deixe seu comentário</h3>
-        <div class="cmt-row">
-          <input name="nome" placeholder="Seu nome" required />
-          <input name="email" type="email" placeholder="Seu e-mail (não publicado)" />
-        </div>
-        <textarea name="content" rows="4" placeholder="Escreva seu comentário…" required></textarea>
-        <!-- Honeypot. O form de comentário é o endpoint mais exposto do blog: POST anônimo
-             para o Supabase, presente nas 1.020 páginas, sem nada que distinga bot de
-             leitor. Um terço do tráfego bruto é bot (relatório de 20/08/2026) e a tabela
-             tem 2.526 linhas — encher a fila de moderação é trivial sem isto. -->
-        <div class="hp-off" aria-hidden="true">
-          <label>Site<input name="site" tabindex="-1" autocomplete="off" /></label>
-        </div>
-        <div class="cmt-actions">
-          <button type="submit" class="btn btn--primary">Enviar comentário</button>
-          <span id="cmt-msg" class="cmt-msg"></span>
-        </div>
-        <p class="cmt-note">Seu comentário passa por moderação antes de aparecer.</p>
-      </form>
-    </section>
-    <!-- "ver tudo" do TL;DR: tira o recorte e some. Sem framework e sem listener global —
-         é um botão só, e a página já carrega JS suficiente. Se o JS não rodar, o pior
-         caso é um parágrafo recortado em 5 linhas: o texto continua no HTML para busca e
-         IA, e o CTA logo abaixo continua clicável. -->
-    <script is:inline>
-      (function () {
-        var b = document.querySelector(".post-tldr-more");
-        if (!b) return;
-        var box = b.closest(".post-tldr");
-        function abrir() { box.classList.remove("is-clamp"); box.style.cursor = ""; b.remove(); }
-        b.addEventListener("click", abrir);
-        // O texto recortado também abre: no Clarity, clique no parágrafo cortado é clique
-        // morto — o leitor tenta expandir onde a frase termina, não no rótulo "ver tudo".
-        box.style.cursor = "pointer";
-        box.addEventListener("click", function (e) { if (e.target !== b) abrir(); });
-      })();
-
-      // ---- Trilho de índice: qual seção está sendo lida ----
-      // A primeira linha desiste em 1.019 dos 1.020 posts (o trilho só existe no
-      // longform) e também no celular, onde o CSS o esconde: querySelector devolve o
-      // nó, mas offsetParent é null e a função sai sem ligar listener nenhum.
-      (function () {
-        var trilho = document.querySelector(".post-rail");
-        if (!trilho || !trilho.offsetParent) return;
-        var links = [].slice.call(trilho.querySelectorAll("a"));
-        var alvos = [], porId = {};
-        links.forEach(function (a) {
-          var id = decodeURIComponent((a.getAttribute("href") || "").slice(1));
-          var el = id && document.getElementById(id);
-          if (el) { alvos.push(el); porId[id] = a; }
-        });
-        if (!alvos.length) return;
-        var atual = null;
-        function marcar() {
-          // "Seção atual" = a ÚLTIMA cujo título já passou do topo, não a mais visível
-          // na tela. Numa seção de 600 palavras o título sai de vista e o leitor
-          // continua nela — pelo critério da visibilidade o trilho apagaria no meio da
-          // leitura, que é justo quando ele serve.
-          var novo = null;
-          for (var i = 0; i < alvos.length; i++) {
-            if (alvos[i].getBoundingClientRect().top <= 120) novo = alvos[i];
-          }
-          if (novo === atual) return;
-          atual = novo;
-          links.forEach(function (a) { a.classList.remove("is-atual"); });
-          if (atual && porId[atual.id]) porId[atual.id].classList.add("is-atual");
-        }
-        // rAF como trava: scroll dispara dezenas de vezes por segundo e cada passada
-        // são 8 getBoundingClientRect (leitura de layout). Uma por frame basta.
-        var preso = false;
-        function agendar() {
-          if (preso) return;
-          preso = true;
-          requestAnimationFrame(function () { preso = false; marcar(); });
-        }
-        marcar();
-        addEventListener("scroll", agendar, { passive: true });
-        addEventListener("resize", agendar);
-      })();
-
-      // ---- Zoom nas imagens do artigo ----
-      // São 3.290 imagens em 1.020 posts, e clicar numa delas não fazia nada — parte dos
-      // 634 cliques mortos do relatório de 20/08/2026. Comportamento esperado de imagem
-      // em artigo é ampliar, então é o que passa a acontecer. Sem biblioteca: overlay
-      // criado no primeiro clique e reaproveitado.
-      // Fica de fora imagem dentro de link (banner de consultoria) — ali o clique já tem
-      // destino — e imagem pequena (ícone, selo), que não tem o que ampliar.
-      (function () {
-        var conteudo = document.querySelector(".post-content");
-        if (!conteudo) return;
-        var over, alvo;
-        function fechar() { if (over) { over.hidden = true; document.body.style.overflow = ""; } }
-        conteudo.addEventListener("click", function (e) {
-          var img = e.target.closest && e.target.closest("img");
-          if (!img || img.closest("a") || img.naturalWidth < 320) return;
-          if (!over) {
-            over = document.createElement("div");
-            over.className = "img-zoom";
-            over.hidden = true;
-            over.innerHTML = '<button type="button" aria-label="Fechar">&times;</button><img alt="" />';
-            over.addEventListener("click", fechar);
-            document.body.appendChild(over);
-            alvo = over.querySelector("img");
-            document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") fechar(); });
-          }
-          alvo.src = img.currentSrc || img.src;
-          alvo.alt = img.alt || "";
-          over.hidden = false;
-          document.body.style.overflow = "hidden";
-        });
-        // Cursor de zoom SÓ onde o clique amplia de verdade — mesmo filtro do handler,
-        // inclusive o tamanho. Sem a checagem de largura, a foto da Olívia (160px) na
-        // tarja do topo ganhava cursor de zoom e não ampliava: seria criar clique morto
-        // justo na tela que veio corrigir clique morto. naturalWidth só existe depois da
-        // carga, daí marcar no load de quem ainda não chegou.
-        function marcaZoom(i) { if (!i.closest("a") && i.naturalWidth >= 320) i.classList.add("is-zoomable"); }
-        conteudo.querySelectorAll("img").forEach(function (i) {
-          if (i.complete) marcaZoom(i);
-          else i.addEventListener("load", function () { marcaZoom(i); }, { once: true });
-        });
-      })();
-    </script>
-
-    <script define:vars={{ postId: post.id, SB_URL: "https://yfpdrckyuxltvznqfqgh.supabase.co", SB_ANON: "sb_publishable_Yfg9Ts5WRqD4Gc3jeWAS2A_-YWZrtiQ" }}>
-      (function () {
-        var H = { apikey: SB_ANON, Authorization: "Bearer " + SB_ANON };
-        var list = document.getElementById("cmt-list");
-        var esc = function (s) { return (s || "").replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
-        var fmt = function (d) { return new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" }); };
-
-        // PAGINAÇÃO. Motivo, medido em 21/08/2026: /iso-9001/ tem 270 comentários
-        // aprovados e o loader antigo pedia e renderizava TODOS. A página ficava com
-        // 97.000px de altura — 12 telas de artigo e 75 telas de comentário — e o bloco de
-        // artigos relacionados, que é a distribuição de link interno da página, nascia
-        // atrás dessa parede. Tem post com 403.
-        // Oito por vez: cabe numa tela, e é mais do que a mediana do blog inteiro.
-        // O `count=exact` vem no cabeçalho Content-Range e é o que permite escrever
-        // quantos faltam no botão — número vago não faz ninguém clicar.
-        var PAG = 8, vistos = 0, total = null, btn = null;
-
-        function cartao(x) {
-          var ini = (x.author_name || "?").trim().charAt(0).toUpperCase();
-          return '<div class="cmt"><div class="cmt-av">' + ini + '</div><div class="cmt-body"><div class="cmt-h"><strong>' + esc(x.author_name) + '</strong><time>' + fmt(x.created_at) + '</time></div><p>' + esc(x.content) + '</p></div></div>';
-        }
-
-        function botao() {
-          if (total === null || vistos >= total) { if (btn) { btn.remove(); btn = null; } return; }
-          if (!btn) {
-            btn = document.createElement("button");
-            btn.type = "button";
-            btn.className = "cmt-mais";
-            btn.addEventListener("click", function () { btn.disabled = true; btn.textContent = "Carregando…"; load(); });
-            list.parentNode.insertBefore(btn, list.nextSibling);
-          }
-          btn.disabled = false;
-          btn.textContent = "Ver mais " + Math.min(PAG, total - vistos) + " de " + (total - vistos) + " comentários";
-        }
-
-        function load() {
-          var url = SB_URL + "/rest/v1/blog_templum_comments?post_id=eq." + postId
-            + "&status=eq.approved&select=author_name,content,created_at&order=created_at.desc"
-            + "&offset=" + vistos + "&limit=" + PAG;
-          fetch(url, { headers: Object.assign({}, H, { Prefer: "count=exact" }) })
-            .then(function (r) {
-              // Content-Range vem como "0-7/270"; sem o cabeçalho, o botão não aparece e
-              // o pior caso é o leitor ver 8 comentários — degrada sem quebrar.
-              var cr = r.headers.get("content-range") || "";
-              var n = parseInt((cr.split("/")[1] || ""), 10);
-              if (!isNaN(n)) total = n;
-              return r.json();
-            })
-            .then(function (c) {
-              if (!c || !c.length) {
-                if (!vistos) list.innerHTML = '<p class="cmt-empty">Seja o primeiro a comentar.</p>';
-                botao(); return;
-              }
-              if (!vistos) list.innerHTML = "";
-              list.insertAdjacentHTML("beforeend", c.map(cartao).join(""));
-              vistos += c.length;
-              botao();
-            })
-            .catch(function () { if (!vistos) list.innerHTML = ""; });
-        }
-        load();
-        var f = document.getElementById("cmt-form"), msg = document.getElementById("cmt-msg");
-        // Relógio para a segunda trava: ninguém escreve um comentário em 3 segundos.
-        // Honeypot pega bot que preenche tudo; tempo pega o que só preenche o que vê.
-        var abriu = Date.now();
-        f.addEventListener("submit", function (e) {
-          e.preventDefault();
-          // Bot: mesma resposta do humano, e nada é gravado. Silêncio de propósito —
-          // mensagem de erro ensina o bot a tentar de novo diferente.
-          if (f.site.value || Date.now() - abriu < 3000) {
-            if (window.clarityTag) window.clarityTag("bot", "comentario");
-            msg.textContent = "Enviado! Aparece após aprovação. ✓"; f.reset(); return;
-          }
-          msg.textContent = "Enviando…";
-          var body = { post_id: postId, author_name: f.nome.value, author_email: f.email.value || null, content: f.content.value, status: "pending" };
-          fetch(SB_URL + "/rest/v1/blog_templum_comments", { method: "POST", headers: Object.assign({}, H, { "Content-Type": "application/json", Prefer: "return=minimal" }), body: JSON.stringify(body) })
-            .then(function (r) { if (r.ok) { msg.textContent = "Enviado! Aparece após aprovação. ✓"; f.reset(); } else { r.text().then(function (t) { msg.textContent = "Erro: " + t.slice(0, 100); }); } })
-            .catch(function () { msg.textContent = "Erro ao enviar."; });
-        });
-      })();
-    </script>
+    <!-- COMENTÁRIOS REMOVIDOS em 21/08/2026 — markup, script e estilos saíram juntos
+         (estão no git, um `git show` recupera).
+         Os números que decidiram: são 2.524 comentários aprovados no blog e o ÚLTIMO é de
+         06/07/2018. Zero em 2019–2026. Tudo herança do WordPress. O /iso-9001/ tinha 270,
+         todos entre 2011 e 2018, e a página exibia "Atualizado em 2026" logo acima de uma
+         conversa que parou há oito anos — numa página que vende consultoria, isso lê como
+         empresa que parou de responder.
+         Não custou SEO: os comentários eram injetados por JS a partir do Supabase e não
+         estavam no HTML servido. Zero conteúdo indexado a perder.
+         E o formulário saiu com eles: aberto nas 1.020 páginas, sem um comentário legítimo
+         desde 2018, ele era só superfície de bot (o honeypot e a trava de 3s de 20/08
+         existiam por causa disso).
+         Os comentários seguem no banco — não são lixo, são oito anos de dúvida real de
+         quem chegou pelo Google. As 824 perguntas de leitor foram mineradas e viraram FAQ:
+         ver supabase/posts/_perguntas-dos-leitores.md. -->
 
     {related.length > 0 && (
       <section class="section section--cream">
@@ -591,27 +411,6 @@ if (faq.length) {
     )}
   </article>
 </Base>
-
-<!-- Comentários são injetados via JS (innerHTML) → estilo precisa ser GLOBAL p/ aplicar. -->
-<style is:global>
-  .post-comments .cmt-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
-  .post-comments .cmt { display: flex; gap: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 16px 18px; }
-  .post-comments .cmt-av { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,89,37,0.12); color: var(--orange-ink); font-weight: 800; font-size: 16px; }
-  .post-comments .cmt-body { min-width: 0; flex: 1; }
-  .post-comments .cmt-h { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
-  .post-comments .cmt-h strong { font-size: 14.5px; font-weight: 800; color: var(--text); }
-  .post-comments .cmt-h time { font-size: 12px; color: var(--text-soft); }
-  .post-comments .cmt p { font-size: 14.5px; color: var(--text-2); line-height: 1.6; white-space: pre-line; overflow-wrap: anywhere; }
-  .post-comments .cmt-empty { color: var(--text-soft); font-size: 14px; }
-  /* Botão de paginação dos comentários. É criado por JS depois do .cmt-list, então o
-     estilo precisa ser global igual aos cartões. */
-  .post-comments .cmt-mais { display: block; width: 100%; margin: -18px 0 32px; padding: 12px 16px;
-    background: var(--surface); border: 1px solid var(--border-2); border-radius: 999px;
-    font-family: inherit; font-size: 13.5px; font-weight: 800; color: var(--text-2); cursor: pointer;
-    transition: border-color .15s ease, color .15s ease; }
-  .post-comments .cmt-mais:hover { border-color: var(--orange); color: var(--orange-ink); }
-  .post-comments .cmt-mais:disabled { opacity: .6; cursor: default; }
-</style>
 
 <!-- ============ BLOCOS DE CONTEÚDO ESCRITOS NO CMS ============
      Estas três classes são usadas DENTRO do corpo dos posts, que chega por set:html —
@@ -772,27 +571,6 @@ if (faq.length) {
 </style>
 
 <style>
-  /* Comentários */
-  .post-comments { padding-bottom: 64px; }
-  .post-comments > h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 20px; }
-  .cmt-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
-  .cmt { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-16); padding: 16px 18px; }
-  .cmt-h { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
-  .cmt-h strong { font-size: 14.5px; color: var(--text); }
-  .cmt-h time { font-size: 12px; color: var(--text-soft); }
-  .cmt p { font-size: 15px; color: var(--text-2); line-height: 1.6; }
-  .cmt-empty { color: var(--text-soft); font-size: 14px; }
-  .cmt-form { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-20); padding: 24px; }
-  .cmt-form h3 { font-size: 18px; font-weight: 800; margin-bottom: 14px; }
-  .cmt-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-  @media (max-width: 600px) { .cmt-row { grid-template-columns: 1fr; } }
-  .cmt-form input, .cmt-form textarea { width: 100%; padding: 11px 14px; border: 1px solid var(--border-2); border-radius: var(--r-12); font-family: inherit; font-size: 15px; background: var(--surface); }
-  .cmt-form input:focus, .cmt-form textarea:focus { outline: none; border-color: var(--orange); }
-  .cmt-form textarea { margin-bottom: 14px; resize: vertical; }
-  .cmt-actions { display: flex; align-items: center; gap: 14px; }
-  .cmt-msg { font-size: 13px; color: var(--text-mid); }
-  .cmt-note { font-size: 12.5px; color: var(--text-soft); margin-top: 10px; }
-
   /* ---------- MEDIDA DE LEITURA ----------
      A decisão que manda no resto do arquivo. Tipografia editorial põe o conforto entre
      60 e 75 caracteres por linha: acima disso o olho perde a linha na volta e o leitor
@@ -803,11 +581,11 @@ if (faq.length) {
        · Georgia 20px     → 8,83px por caractere  → 600px = 68 c/linha
      O antihype.com.br/long, referência que a gente foi medir, roda em ~52 — mais
      apertado do que faz sentido aqui, onde o corpo tem tabela, print de norma e lista.
-     Cabeçalho, texto e comentários leem a MESMA variável, então as três bordas
-     esquerdas coincidem. O +48 são os 24px de padding do .container de cada lado. */
+     Cabeçalho e texto leem a MESMA variável, então as duas bordas esquerdas coincidem.
+     O +48 são os 24px de padding do .container de cada lado. */
   .post { --medida: 660px; }
   .post.is-longform { --medida: 600px; }
-  .post-head, .post-comments { max-width: calc(var(--medida) + 48px); margin-inline: auto; }
+  .post-head { max-width: calc(var(--medida) + 48px); margin-inline: auto; }
   .post-head { padding-top: 40px; }
   .post-bc { font-size: 13px; color: var(--text-soft); display: flex; gap: 8px; margin-bottom: 16px; }
   .post-bc a { color: var(--orange-ink); font-weight: 600; }
@@ -815,6 +593,9 @@ if (faq.length) {
   .post-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; margin-top: 16px; font-size: 14px; color: var(--text-mid); }
   .post-upd { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700; color: var(--orange-ink); background: color-mix(in srgb, var(--orange) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--orange) 26%, transparent); }
   .post-upd time { font-weight: 700; }
+  /* A publicação, quando há revisão, é contexto: menor, cinza, sem tarja. Fica na linha
+     para quem quer saber a idade do texto — não para ser a primeira coisa lida. */
+  .post-pub { font-size: 12.5px; color: var(--text-soft); }
   .post-author { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--text-2); }
   .post-author iconify-icon { color: var(--orange); font-size: 18px; }
   .post-hero { margin: 28px 0 8px; border-radius: var(--r-24); overflow: hidden; aspect-ratio: 16/8; }
