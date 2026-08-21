@@ -1,6 +1,5 @@
 ---
 import Base from "../layouts/Base.astro";
-import Sidebar from "../components/Sidebar.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import LeadForm from "../components/LeadForm.astro";
 import WebinarCard from "../components/WebinarCard.astro";
@@ -10,6 +9,7 @@ import { ancorarSecoes, injetarCtaMeio } from "../lib/artigo.js";
 import { normaDoForm } from "../data/lead-form-pages.js";
 import { normaDaPagina } from "../data/normas.js";
 import { getAllPosts, tldrOf } from "../lib/posts.js";
+import { ehLongform } from "../data/longform.js";
 
 // Keys públicas (anon) para o POST do formulário de consultoria — mesmas de lib/posts.js.
 // A anon key é pública por definição; o que protege a tabela é a RLS (só INSERT p/ anon).
@@ -59,30 +59,20 @@ const normaForm = normaDoForm(post.slug);
 // aparece no título (SASSMAQ, GERIC, fluxograma), e o &norma= do CTA saía igual.
 const normaClarity = normaDaPagina({ categories: d.categories, title: d.title, slug: post.slug }) || normaForm?.display || "";
 
-// ---------- CTA DA PRIMEIRA DOBRA ----------
-// Por que existe: no mobile (~metade do tráfego) o .post-grid colapsa em 1 coluna e a
-// sidebar — onde morava o ÚNICO CTA acima da dobra — desce para depois dos comentários.
-// O primeiro CTA alcançável passava a ser o do fim do artigo, e o mapa de rolagem do
-// Clarity diz que 13,1% dos leitores chegam a 10% do artigo e 0,6% passam de 40%: esse
-// CTA era servido a menos de 1 leitor em 100. Aqui ele entra colado na "Resposta
-// rápida", que é o último bloco que cabe na dobra do celular.
-//
-// A copy NÃO é nova: reusa data/cta-norma.js, que até agora só o Sidebar consumia (isto
-// é, só rendia no desktop). São 10 variantes por norma — 94% dos posts resolvem para uma
-// norma concreta, só 64 caem no genérico.
+// ---------- CTA: UM POR ARTIGO (MEIO E FIM) ----------
+// A tarja de CTA da primeira dobra saiu em 21/08/2026, junto com a sidebar. O artigo
+// tinha QUATRO blocos pedindo a mesma coisa — tarja do topo, card da sidebar, bloco do
+// meio e bloco do fim — e CTA repetido não soma clique, divide: o leitor aprende a
+// pular o formato antes de ler a oferta. Ficaram dois, em posições que não competem:
+// o do meio (só em artigo longo) e o do fim.
+// Para quem for ler a série depois: a queda em cta-topo e cta-sidebar-diagnostico a
+// partir de 21/08/2026 é ISTO, não sazonalidade. A linha de base para julgar se valeu
+// é lead por sessão, não clique por sessão. Se um CTA acima da dobra voltar, ele volta
+// medido contra esta versão — o histórico das três tentativas está no git log.
 const cta = ctaParaNorma(d.categories || []);
-// O rótulo do genérico ("Fale com a Olívia") é afirmação, e todos os outros são pergunta
-// — numa tarja em que o botão já diz "Falar com a Olívia" ele sairia duplicado. Pergunta
-// equivalente, sem prometer norma que o artigo não trata.
-const tituloTopo = cta.slug === "geral" ? "Precisa certificar sua empresa?" : cta.titulo;
-// Destino: /form/ (a página de conversão DO BLOG) e não o v2diagnostico do sidebar —
-// ver o comentário em pages/form.astro: cruzar de domínio parte a sessão do Clarity no
-// meio e o lead nasce sem a página de origem. Nas 14 páginas curadas o form já está na
-// própria página, então a tarja ancora nele (#consultoria) em vez de mandar o leitor
-// embora; ali a atribuição do lead segue com o evento lead-form-artigo.
-const urlTopo = normaForm
-  ? "#consultoria"
-  : `/form/?utm_source=blog&utm_medium=cta-topo&origem=cta-topo&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`;
+
+// ---------- LAYOUT LONGFORM (experimento — ver data/longform.js) ----------
+const longform = ehLongform(post.slug);
 
 // A "Resposta rápida" mediana tem 295 caracteres (68% dos posts passam de 260) — no
 // celular são ~9 linhas, ~264px, e era ela que empurrava a tarja de CTA para fora da
@@ -157,40 +147,27 @@ const recent = posts
   .sort((a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate))
   .slice(0, 5);
 
-// GARANTIA DE DISTRIBUIÇÃO: o 1º card do rodapé continua sendo o vizinho do anel
-// cíclico. Ordenar só por relevância concentraria os links nos posts com muitas tags
-// e deixaria os magros órfãos — e evitar órfão era justamente o objetivo do anel.
-// Assim: 1 link garante a cobertura, os outros 7 servem o leitor.
+// GARANTIA DE DISTRIBUIÇÃO: os 2 primeiros cards são os vizinhos do anel cíclico.
+// Ordenar só por relevância concentraria os links nos posts com muitas tags e deixaria
+// os magros órfãos — evitar órfão é o motivo de o anel existir.
+//
+// São SEIS cards (eram 3) porque a sidebar saiu em 21/08/2026 e com ela os 3 links
+// internos que ela distribuía. Sem repor aqui, cada post passaria a doar metade dos
+// links de cluster que doava, em 1.020 páginas — e link interno é o único orçamento de
+// autoridade que este blog controla sozinho. Total por página segue 6, agora todos no
+// mesmo bloco, onde o leitor que terminou o texto está de fato olhando.
 const vizinho = catList.length > 1 ? catList[(selfPos + 1) % catList.length] : null;
+const vizinho2 = catList.length > 2 ? catList[(selfPos + 2) % catList.length] : null;
 const usados = new Set([post.slug]);
 const related = [];
-if (vizinho && !usados.has(vizinho.slug)) { related.push(vizinho); usados.add(vizinho.slug); }
-for (const p of porRelevancia) {
-  if (related.length >= 3) break;
-  if (!usados.has(p.slug)) { related.push(p); usados.add(p.slug); }
+for (const v of [vizinho, vizinho2]) {
+  if (v && !usados.has(v.slug)) { related.push(v); usados.add(v.slug); }
 }
-
-// Sidebar: os 3 mais relevantes que sobraram — nunca repete o rodapé, porque link
-// repetido na mesma página não soma link interno.
-// São 3 e não 5 porque a altura do sidebar decide se o sticky pode ligar (ver o
-// comentário no Sidebar.astro). Com o rodapé, a página distribui 6 links do cluster.
-// Fallback com recentes para o card não aparecer pela metade em categoria pequena.
-const relatedSide = [];
+// Fallback com recentes para o bloco não sair pela metade em categoria pequena.
 for (const lista of [porRelevancia, recent]) {
   for (const p of lista) {
-    if (relatedSide.length >= 2) break;
-    if (!usados.has(p.slug)) { relatedSide.push(p); usados.add(p.slug); }
-  }
-}
-// 3º e último slot do sidebar: o 2º vizinho do anel. É o slot menos nobre da página,
-// então doá-lo à cobertura custa pouca relevância e dobra a garantia de distribuição
-// (2 links de anel por post em vez de 1) — menos post órfão no fim da cauda longa.
-const vizinho2 = catList.length > 2 ? catList[(selfPos + 2) % catList.length] : null;
-if (vizinho2 && !usados.has(vizinho2.slug)) { relatedSide.push(vizinho2); usados.add(vizinho2.slug); }
-for (const lista of [porRelevancia, recent]) {
-  for (const p of lista) {
-    if (relatedSide.length >= 3) break;
-    if (!usados.has(p.slug)) { relatedSide.push(p); usados.add(p.slug); }
+    if (related.length >= 6) break;
+    if (!usados.has(p.slug)) { related.push(p); usados.add(p.slug); }
   }
 }
 
@@ -255,8 +232,11 @@ if (faq.length) {
     tem_form: normaForm ? "sim" : "nao",
   }}
 >
-  <article class="post">
-    <div class="container md post-head">
+  <article class:list={["post", longform && "is-longform"]}>
+    <!-- `container` sem tamanho: a largura sai de --medida (ver <style>), para o h1, o
+         texto e os comentários dividirem a MESMA borda esquerda. Antes o cabeçalho era
+         `md` (1.024) e o texto ocupava 812 — as duas colunas não se alinhavam. -->
+    <div class="container post-head">
       <nav class="post-bc">
         <a href="/">Blog</a>
         {cat && <><span>/</span><a href={`/categoria/${catSlug}/`}>{cat}</a></>}
@@ -288,23 +268,6 @@ if (faq.length) {
           </div>
         )}
 
-        <!-- CTA da primeira dobra (ver frontmatter). Fora do {tldr && …} de propósito:
-             preso ao TL;DR, o único post sem resposta rápida (/certificast) perderia o
-             CTA do topo — e é justo o post em que o leitor rola menos. -->
-        <div class="post-cta-topo">
-          <img src="/assets/team/olivia-especialista.webp" alt="Olívia, especialista Templum" width="44" height="44" decoding="async" />
-          <div class="post-cta-topo-txt">
-            <strong>{tituloTopo}</strong>
-            <span>Gratuito · sem compromisso</span>
-          </div>
-          <a
-            href={urlTopo}
-            class="btn btn--primary btn--sm"
-            data-trk-event="cta-topo"
-            data-trk-norma={cta.slug}
-          >Falar com a Olívia <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
-        </div>
-
         <!-- Sumário: details FECHADO por padrão, e não uma lista aberta. Aberta, ela
              custaria ~200px de altura logo acima do texto — justo a altura que o CTA da
              tarja acabou de ganhar na dobra. Fechado, o rótulo já entrega o sinal de
@@ -325,7 +288,11 @@ if (faq.length) {
           </details>
         )}
 
-        <Fragment set:html={conteudo} />
+        <!-- Embrulho do corpo: dá um alvo para a capitular do longform ("> p:first-child")
+             sem que ela caia no parágrafo da Resposta rápida, que também é o primeiro
+             <p> de um irmão. Sem estilo próprio — em post normal é um div a mais e nada
+             muda. -->
+        <div class="post-corpo"><Fragment set:html={conteudo} /></div>
 
         {/* id="duvidas": o sumário dos posts aponta pra #duvidas. Sem o id, migrar o FAQ
             inline pra cá quebraria essa âncora. */}
@@ -365,25 +332,31 @@ if (faq.length) {
           </div>
         )}
       </div>
-      <!-- `norma` alimenta a chamada do card ("Precisa da ISO 9001?") e `ctaUrl`, o destino:
-           /form com a norma na querystring, ou a âncora do form da própria página. Mesmo
-           par usado pela tarja do topo e pelo CTA do meio — ver urlTopo/urlMeio acima. -->
-      <Sidebar
-        ref={post.slug}
-        author={d.author}
-        related={relatedSide}
-        catName={cat}
-        catSlug={catSlug}
-        categories={d.categories}
-        norma={normaClarity}
-        ctaUrl={normaForm
-          ? "#consultoria"
-          : `/form/?utm_source=blog&utm_medium=sidebar&origem=sidebar&utm_campaign=${post.slug}&utm_term=${cta.slug}${normaClarity ? `&norma=${encodeURIComponent(normaClarity)}` : ""}`}
-      />
+      <!-- SIDEBAR REMOVIDA em 21/08/2026 (componente ainda em git: components/Sidebar.astro).
+           Ela carregava autor + webinar + card da Olívia + 3 relacionados; o autor já
+           está no .post-meta, o webinar passou a aparecer no fim do artigo em qualquer
+           largura, o card da Olívia era o terceiro pedido igual da mesma página e os
+           relacionados dobraram no bloco do rodapé. O que fica no lugar dela é ar — e,
+           no longform, um trilho de índice, que é navegação e não oferta. -->
+
+      <!-- Trilho de índice fixo na margem direita (só no longform, só >=1180px).
+           Emprestado do antihype.com.br/long/*: ali é uma linha do tempo de anos; aqui,
+           a seção em que o leitor está. É o mesmo `sumario` do <details>, que no
+           longform desktop fica escondido para não haver dois índices na tela. -->
+      {longform && sumario.length > 0 && (
+        <nav class="post-rail" aria-label="Seções deste artigo">
+          <span class="post-rail-h">Neste artigo</span>
+          <ol>
+            {sumario.map((sec) => (
+              <li><a href={`#${sec.id}`} data-trk-event="link-trilho"><span>{sec.titulo}</span></a></li>
+            ))}
+          </ol>
+        </nav>
+      )}
     </div>
 
     <!-- Comentários (client-side: lê aprovados, envia como pendente) -->
-    <section class="container md post-comments">
+    <section class="container post-comments">
       <h2>Comentários</h2>
       <div id="cmt-list" class="cmt-list"><p class="cmt-empty">Carregando…</p></div>
       <form id="cmt-form" class="cmt-form">
@@ -422,6 +395,49 @@ if (faq.length) {
         // morto — o leitor tenta expandir onde a frase termina, não no rótulo "ver tudo".
         box.style.cursor = "pointer";
         box.addEventListener("click", function (e) { if (e.target !== b) abrir(); });
+      })();
+
+      // ---- Trilho de índice: qual seção está sendo lida ----
+      // A primeira linha desiste em 1.019 dos 1.020 posts (o trilho só existe no
+      // longform) e também no celular, onde o CSS o esconde: querySelector devolve o
+      // nó, mas offsetParent é null e a função sai sem ligar listener nenhum.
+      (function () {
+        var trilho = document.querySelector(".post-rail");
+        if (!trilho || !trilho.offsetParent) return;
+        var links = [].slice.call(trilho.querySelectorAll("a"));
+        var alvos = [], porId = {};
+        links.forEach(function (a) {
+          var id = decodeURIComponent((a.getAttribute("href") || "").slice(1));
+          var el = id && document.getElementById(id);
+          if (el) { alvos.push(el); porId[id] = a; }
+        });
+        if (!alvos.length) return;
+        var atual = null;
+        function marcar() {
+          // "Seção atual" = a ÚLTIMA cujo título já passou do topo, não a mais visível
+          // na tela. Numa seção de 600 palavras o título sai de vista e o leitor
+          // continua nela — pelo critério da visibilidade o trilho apagaria no meio da
+          // leitura, que é justo quando ele serve.
+          var novo = null;
+          for (var i = 0; i < alvos.length; i++) {
+            if (alvos[i].getBoundingClientRect().top <= 120) novo = alvos[i];
+          }
+          if (novo === atual) return;
+          atual = novo;
+          links.forEach(function (a) { a.classList.remove("is-atual"); });
+          if (atual && porId[atual.id]) porId[atual.id].classList.add("is-atual");
+        }
+        // rAF como trava: scroll dispara dezenas de vezes por segundo e cada passada
+        // são 8 getBoundingClientRect (leitura de layout). Uma por frame basta.
+        var preso = false;
+        function agendar() {
+          if (preso) return;
+          preso = true;
+          requestAnimationFrame(function () { preso = false; marcar(); });
+        }
+        marcar();
+        addEventListener("scroll", agendar, { passive: true });
+        addEventListener("resize", agendar);
       })();
 
       // ---- Zoom nas imagens do artigo ----
@@ -530,6 +546,109 @@ if (faq.length) {
   .post-comments .cmt-empty { color: var(--text-soft); font-size: 14px; }
 </style>
 
+<!-- ======================= LAYOUT LONGFORM =======================
+     Experimento aberto em 21/08/2026. Quem entra: src/data/longform.js.
+     A referência é o antihype.com.br/long/*, medido com CDP em 20/08/2026: coluna de 49
+     caracteres, corpo em Source Serif 22,4px/1,5, seção numerada e um trilho fixo na
+     margem. Daquilo, aqui entram três coisas — medida curta, serifada maior e seção
+     numerada — mais o trilho, que mora no <style> escopado acima.
+
+     Bloco GLOBAL de propósito, e não :global() espalhado no outro <style>: quase tudo
+     aqui mira HTML que vem do Supabase por set:html (os h2, p e blockquote do corpo),
+     que o Astro não vê no template e portanto não escopa. Todo seletor começa em
+     `.post.is-longform`, e a classe sai de uma lista de slugs — sem ela nada disto
+     existe, então não há como escapar para os outros 1.019 posts. -->
+<style is:global>
+  /* Serifada de SISTEMA, sem webfont. O relatório do Clarity de 20/08/2026 abriu com
+     LCP de 5s; puxar uma Source Serif do Google para o corpo seria pagar outro
+     round-trip justo no elemento que o LCP mede — e trocar legibilidade por velocidade
+     num artigo de 2.000 palavras é o negócio errado. Georgia e a Iowan Old Style do
+     iOS/macOS já estão na máquina do leitor e foram desenhadas para texto corrido.
+     A serifada fica só na PROSA. TL;DR, sumário, CTA, formulário e comentários seguem
+     em Montserrat — e os TÍTULOS também, por herdarem o `h1..h6` do global.css. Isso é
+     escolha, não esquecimento: título em Montserrat 800 é o que mantém a página
+     reconhecível como Templum enquanto o corpo muda de voz. A interface e a estrutura
+     falam a língua da marca; o texto corrido fala a língua de texto corrido. */
+  .post.is-longform .post-corpo,
+  .post.is-longform .post-faq-a { font-family: Georgia, "Iowan Old Style", "Times New Roman", ui-serif, serif; }
+  .post.is-longform .post-corpo { font-size: 20px; line-height: 1.7; color: #2C3038; }
+  .post.is-longform .post-corpo p { margin: 0 0 22px; }
+  .post.is-longform .post-faq-a li,
+  .post.is-longform .post-faq-a p { font-size: 17px; line-height: 1.7; }
+
+  /* Numeração 01., 02.… gerada por counter, sem tocar no HTML dos posts no banco.
+     O contador nasce em .post-content (não em .post-corpo) para o h2 do FAQ pegar o
+     próximo número: ele É uma seção do artigo, está no sumário e no trilho desde
+     sempre. Ressalva para quando isto virar padrão: o counter conta TODO h2, e 21 posts
+     do blog têm h2 de navegação ("Leia mais") que o sumário exclui — nesses o número do
+     trilho e o do texto sairiam desencontrados. Neste post não há nenhum. */
+  .post.is-longform .post-content { counter-reset: sec; }
+  .post.is-longform .post-content h2 { counter-increment: sec;
+    font-size: 30px; font-weight: 800; line-height: 1.18; letter-spacing: -0.015em;
+    margin: 54px 0 16px; }
+  .post.is-longform .post-content h2::before {
+    content: counter(sec, decimal-leading-zero) ".";
+    display: block; font-family: var(--font-sans); font-size: 12px; font-weight: 800;
+    letter-spacing: 0.12em; color: var(--orange); margin-bottom: 10px; }
+  .post.is-longform .post-content h3 { font-size: 22px; margin: 34px 0 12px; }
+
+  /* Capitular no primeiro parágrafo. Um por artigo, não um por seção como no antihype:
+     lá cada capítulo abre uma cena; aqui o texto é técnico e a repetição viraria
+     enfeite. `> p:first-child` é o motivo de o corpo ter ganhado o embrulho .post-corpo
+     — sem ele, o alvo natural (p:first-of-type) cairia também no parágrafo da Resposta
+     rápida. Se o post abrir com imagem, lista ou <strong>, a regra simplesmente não
+     casa e não há capitular: degrada em silêncio, que é o certo para um enfeite. */
+  .post.is-longform .post-corpo > p:first-child::first-letter {
+    float: left; font-size: 66px; line-height: 0.8; font-weight: 700;
+    margin: 8px 12px 0 0; color: var(--orange-ink); }
+  /* No celular a linha tem 35 caracteres: a mesma capitular de 66px comeria metade das
+     três primeiras linhas e o parágrafo abriria escorrendo pela lateral. */
+  @media (max-width: 560px) {
+    .post.is-longform .post-corpo > p:first-child::first-letter { font-size: 50px; margin: 6px 9px 0 0; }
+  }
+
+  /* Citação como citação, e não como caixa: tipo maior, sem itálico (itálico em
+     serifada de 19,5px cansa depois de duas linhas) e a régua laranja fina no lugar da
+     barra de 4px, que competia com o texto. */
+  .post.is-longform .post-corpo blockquote { border-left: 2px solid var(--orange);
+    padding: 2px 0 2px 22px; margin: 32px 0; font-style: normal; font-size: 22px;
+    line-height: 1.45; font-weight: 600; color: var(--text); }
+
+  /* O CTA do meio mora DENTRO do corpo (é injetado no HTML do artigo), então herdava a
+     serifada — inclusive no botão. Interface é interface: volta para Montserrat. */
+  .post.is-longform .post-corpo .cta-olivia,
+  .post.is-longform .post-corpo .btn { font-family: var(--font-sans); }
+
+  /* Imagem, tabela, figura e embed SANGRAM para fora da coluna de texto. Numa coluna de
+     600px um print de norma sai com 600px e ilegível — é o preço da coluna curta, e o
+     antihype paga do mesmo jeito: texto estreito, blocos de dado na folha inteira.
+     O truque é `left: 50%` + `translateX(-50%)`, e não margem negativa fixa: assim o
+     bloco fica CENTRADO na coluna qualquer que seja a largura dele. Com margem negativa,
+     um selo de 160px também levaria -44px e sairia torto para a esquerda; aqui ele
+     simplesmente fica no meio, e só quem é grande ocupa os 88px extras.
+     Tabela e embed ganham `width` porque existem para preencher; imagem não ganha, para
+     não esticar um PNG de 300px até 688 e virar borrão.
+     A regra só liga a partir de 1.080px, onde a margem livre de cada lado passa de
+     100px. Medido em 21/08/2026: com 88px de sangria sobram 32px até o trilho, em
+     qualquer largura (os dois estão presos ao mesmo container). Abaixo de 1.080 as
+     margens são zero e sangrar significaria estourar a tela. */
+  @media (min-width: 1080px) {
+    .post.is-longform .post-corpo > img,
+    .post.is-longform .post-corpo > figure,
+    .post.is-longform .post-corpo > table,
+    .post.is-longform .post-corpo > .wp-block-table,
+    .post.is-longform .post-corpo > iframe {
+      max-width: calc(100% + 88px); position: relative; left: 50%; transform: translateX(-50%); }
+    .post.is-longform .post-corpo > table,
+    .post.is-longform .post-corpo > .wp-block-table,
+    .post.is-longform .post-corpo > iframe { width: calc(100% + 88px); }
+  }
+
+  /* Com o trilho na tela, o <details> "Neste artigo" é o segundo índice da mesma
+     página. Ele volta abaixo de 1.180px, onde o trilho não cabe. */
+  @media (min-width: 1180px) { .post.is-longform .post-toc { display: none; } }
+</style>
+
 <style>
   /* Comentários */
   .post-comments { padding-bottom: 64px; }
@@ -552,6 +671,21 @@ if (faq.length) {
   .cmt-msg { font-size: 13px; color: var(--text-mid); }
   .cmt-note { font-size: 12.5px; color: var(--text-soft); margin-top: 10px; }
 
+  /* ---------- MEDIDA DE LEITURA ----------
+     A decisão que manda no resto do arquivo. Tipografia editorial põe o conforto entre
+     60 e 75 caracteres por linha: acima disso o olho perde a linha na volta e o leitor
+     relê a mesma frase sem perceber que releu.
+     Os números abaixo NÃO são estimativa — foram medidos no Chrome em 21/08/2026, com
+     canvas.measureText na fonte computada de um parágrafo real do post:
+       · Montserrat 17px  → 8,94px por caractere  → 660px = 74 c/linha (era 812px = 91)
+       · Georgia 20px     → 8,83px por caractere  → 600px = 68 c/linha
+     O antihype.com.br/long, referência que a gente foi medir, roda em ~52 — mais
+     apertado do que faz sentido aqui, onde o corpo tem tabela, print de norma e lista.
+     Cabeçalho, texto e comentários leem a MESMA variável, então as três bordas
+     esquerdas coincidem. O +48 são os 24px de padding do .container de cada lado. */
+  .post { --medida: 660px; }
+  .post.is-longform { --medida: 600px; }
+  .post-head, .post-comments { max-width: calc(var(--medida) + 48px); margin-inline: auto; }
   .post-head { padding-top: 40px; }
   .post-bc { font-size: 13px; color: var(--text-soft); display: flex; gap: 8px; margin-bottom: 16px; }
   .post-bc a { color: var(--orange-ink); font-weight: 600; }
@@ -563,10 +697,14 @@ if (faq.length) {
   .post-author iconify-icon { color: var(--orange); font-size: 18px; }
   .post-hero { margin: 28px 0 8px; border-radius: var(--r-24); overflow: hidden; aspect-ratio: 16/8; }
   .post-hero img { width: 100%; height: 100%; object-fit: cover; }
-  /* items-start + <aside> sticky (padrão do blog Evolutto). O aside gruda dentro
-     do grid, que é tão alto quanto o artigo → "trilho" pro sticky. */
-  .post-grid { display: grid; grid-template-columns: minmax(0,1fr) 340px; gap: 48px; align-items: start; padding-top: 32px; padding-bottom: 64px; }
-  @media (max-width: 980px) { .post-grid { grid-template-columns: 1fr; } }
+  /* Três colunas com a do meio limitada, em vez de "texto + sidebar": o texto fica
+     centrado na página exista trilho ou não, e o trilho mora na margem que a sidebar
+     desocupou. `min(100%, ...)` não é enfeite — sem ele a faixa do meio é uma pista
+     rígida de 720px, e num celular de 375 ela estoura o container em vez de encolher. */
+  .post-grid { display: grid; align-items: start; padding-top: 32px; padding-bottom: 64px;
+    grid-template-columns: minmax(0,1fr) min(100%, var(--medida)) minmax(0,1fr); }
+  .post-content { grid-column: 2; }
+  .post-rail { grid-column: 3; }
   /* tipografia do conteúdo do artigo */
   .post-content { font-size: 17px; line-height: 1.75; color: var(--text-2); min-width: 0; }
   /* scroll-margin-top = altura do header sticky (66px) + respiro. Sem isso, todo clique
@@ -629,36 +767,10 @@ if (faq.length) {
   .post-toc li a::before { content: counter(toc) "."; color: var(--orange-ink); font-weight: 800; flex: none; }
   .post-toc li a:hover { color: var(--orange-ink); }
 
-  /* Tarja de CTA da primeira dobra. Navy, e não a linguagem laranja do TL;DR logo acima:
-     dois blocos laranja empilhados viram um borrão só e o leitor não vê que o segundo
-     pede uma ação. Tarja (uma linha no desktop, duas no celular) e não card: o custo
-     vertical dela sai do espaço que o artigo tem na dobra, então cada pixel aqui é pago
-     com texto que o leitor deixa de ver. */
-  /* Os três blocos de CTA do artigo (tarja do topo, bloco do meio e o do fim) e o card
-     da sidebar viraram INTEIRO clicáveis por link esticado — `position: relative` no
-     bloco e um ::after do próprio botão cobrindo tudo. O relatório do Clarity de
-     20/08/2026 contou 634 cliques mortos no blog, e nestes blocos só o botão era link:
-     quem clicava na foto da Olívia ou na pergunta em negrito não ia a lugar nenhum.
-     Efeito colateral esperado, para quem for ler a série depois: o volume de cta-topo,
-     cta-meio e cta-artigo sobe, porque cliques que antes morriam agora contam. */
-  .post-cta-topo { position: relative; display: flex; align-items: center; gap: 16px; margin: 0 0 30px;
-    background: var(--navy); border-radius: var(--r-16); padding: 14px 18px; }
-  .post-cta-topo-txt { flex: 1; min-width: 0; }
-  .post-cta-topo strong { display: block; font-size: 16px; font-weight: 800; color: var(--cream); line-height: 1.25; }
-  .post-cta-topo-txt span { display: block; margin-top: 3px; font-size: 11.5px; color: rgba(255,244,221,0.55); }
-  .post-cta-topo .btn { flex: none; }
-  .post-cta-topo .btn::after { content: ""; position: absolute; inset: 0; }
-  /* O avatar mora dentro de .post-content, onde `:global(img)` do corpo do artigo daria
-     22px de margem e cantos de 16px na foto — mesma armadilha já documentada para o
-     .wb-card e o .cta-olivia. Dois nomes de classe aqui vencem aquele seletor. */
-  .post-content .post-cta-topo img { width: 44px; height: 44px; border-radius: 50%;
-    object-fit: cover; margin: 0; flex: none; border: 2px solid var(--orange); }
-  @media (max-width: 560px) {
-    .post-cta-topo { flex-wrap: wrap; }
-    /* o botão passa a ocupar a linha inteira: no celular ele é o alvo de toque, e alvo
-       estreito ao lado de texto longo é o clique que não acontece. */
-    .post-cta-topo .btn { flex: 1 0 100%; }
-  }
+  /* O link esticado (position: relative no bloco + ::after do botão cobrindo tudo)
+     continua nos CTAs que sobraram — meio e fim. Motivo, de 20/08/2026: o Clarity
+     contou 634 cliques mortos no blog e nestes blocos só o botão era link, então quem
+     clicava na foto da Olívia ou na pergunta em negrito não ia a lugar nenhum. */
   /* FAQ — vira FAQPage no JSON-LD (sanfoninhas no Google) */
   /* scroll-margin igual à dos h2: o FAQ é a última linha do sumário. */
   .post-faq { margin-top: 44px; scroll-margin-top: 86px; }
@@ -715,6 +827,53 @@ if (faq.length) {
   @media (max-width: 560px) {
     .post-content :global(.cta-olivia) { flex-direction: column; align-items: flex-start; }
   }
+  /* ---------- TRILHO DE ÍNDICE (longform) ----------
+     Sticky simples, e não o sticky progressivo que a sidebar teve e que foi removido em
+     20/08/2026 por fixar a coluna na tela de um leitor e rolar na de outro. A diferença
+     é que aqui o bloco é BAIXO (uma lista de 8 linhas): ele cabe em qualquer janela, e
+     é por caber que pode grudar. Se um dia passar de ~70vh, o overflow abaixo segura. */
+  /* Encostado na borda DIREITA do container (justify-self: end), e não colado no texto.
+     O texto fica centrado na página; se o trilho nasce logo depois dele, o conjunto
+     texto+trilho sai deslocado para a direita e a margem esquerda vira um vazio de
+     420px que puxa o olho. Encostando o trilho na borda, a folga se divide entre os
+     dois lados e a página volta a parecer centrada. É o arranjo do antihype, onde o
+     trilho é fixo na quina da janela. */
+  .post-rail { position: sticky; top: 86px; justify-self: end; width: 200px;
+    padding-left: 20px; border-left: 1px solid var(--border);
+    max-height: calc(100vh - 120px); overflow: auto; }
+  .post-rail-h { display: block; font-size: 10.5px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--text-soft); margin-bottom: 12px; }
+  .post-rail ol { list-style: none; margin: 0; padding: 0; counter-reset: trilho; }
+  .post-rail li { counter-increment: trilho; }
+  .post-rail a { display: flex; gap: 8px; padding: 6px 0; font-size: 12.5px; line-height: 1.35;
+    color: var(--text-soft); transition: color .15s var(--ease-soft); }
+  /* Título de seção recortado em 2 linhas: são 10 itens e alguns têm 50 caracteres. Sem
+     recorte o trilho fica mais alto que a janela e passa a rolar dentro de si mesmo —
+     um índice que precisa ser navegado não serve de índice. */
+  .post-rail a span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  /* Mesma numeração 01., 02.… dos h2 do corpo, para o trilho e o texto falarem a mesma
+     língua. decimal-leading-zero é o que dá o "01." sem zero escrito à mão. */
+  .post-rail a::before { content: counter(trilho, decimal-leading-zero); flex: none;
+    font-weight: 800; font-size: 10.5px; color: var(--text-faint); padding-top: 2px; }
+  .post-rail a:hover { color: var(--text-2); }
+  /* Seção atual: marcada pelo IntersectionObserver no fim do arquivo. É o único estado
+     da página que diz "você está aqui" — a barra de progresso do antihype resolvida com
+     um item em negrito, sem elemento novo na tela. */
+  .post-rail a.is-atual { color: var(--orange-ink); font-weight: 800; }
+  .post-rail a.is-atual::before { color: var(--orange); }
+  /* Abaixo de 1.180px não sobra margem: o trilho sai e quem serve é o <details> do
+     sumário, que volta a aparecer (regra no bloco global do longform). */
+  @media (max-width: 1179px) { .post-rail { display: none; } }
+
+  /* O h1 do longform avança 190px para dentro da margem direita — só ali, mantendo a
+     borda esquerda no lugar. Numa coluna de 600px este título ocupava CINCO linhas e
+     250px de dobra antes de o leitor ver uma palavra do texto; com 790 são três.
+     Mesma largura mínima do trilho (1.180px) porque é a partir dela que existe margem
+     para invadir; abaixo disso o avanço estouraria o container. */
+  @media (min-width: 1180px) {
+    .post.is-longform .post-title { width: calc(100% + 190px); }
+  }
+
   .post-related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   @media (max-width: 860px) { .post-related { grid-template-columns: 1fr; } }
 </style>
