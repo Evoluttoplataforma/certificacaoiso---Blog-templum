@@ -103,6 +103,16 @@
 # Canibalização de palavra-chave (despublicados) → consolida no conteúdo mais completo.
 # Diferente do bloco acima: aqui os dois posts têm conteúdo DIFERENTE (não é dupe idêntico) —
 # escolhido o mais aprofundado de cada par (diagnóstico da queda de tráfego, ago/2026).
+#
+# 21/08/2026, sobre o par do 14001: o 301 estava certo, mas ainda havia 30 posts com link
+# EDITORIAL para /iso-14001/, todos gastando um salto de redirecionamento. Os links foram
+# reapontados no banco para /iso-14001-2/. Números que sustentam a escolha do destino:
+# /iso-14001/ tinha 750 palavras, posição média 13,1 e 84 cliques em 15.783 impressões;
+# /iso-14001-2/ tem 3.431 palavras, posição 4,7 e 1.478 cliques em 170.106.
+# A URL feia (o "-2" é resíduo de duplicata do WordPress) fica como destino de propósito:
+# mover a página forte custaria risco em 170 mil impressões para ganhar um endereço bonito.
+# Lição para o próximo par: antes de escrever regra nova, `grep` neste arquivo — o do
+# 14001 já existia e eu escrevi uma duplicata.
 /iso-14001/    /iso-14001-2/   301
 /iso-14001     /iso-14001-2/   301
 /pbqp-h-2/     /pbqp-h/        301
