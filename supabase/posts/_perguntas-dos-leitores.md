@@ -43,6 +43,39 @@ ISO/SGQ) — é, de longe, a dúvida número um. Depois: parceria/consultoria co
 4. E se a empresa não passar na auditoria de certificação? — *ansiedade comercial recorrente*
 5. O auditor da ISO 9001 pode cobrar licença ambiental ou item de segurança? — *7*
 
+## O medidor: pergunta por mil palavras
+
+Achado do dia: **o número de comentários é um detector de lacuna de conteúdo.** Ninguém
+comenta num post que respondeu. Normalizando pelo tamanho do texto, aparece isto:
+
+| Post | Palavras | Perguntas | Por mil palavras |
+|---|---|---|---|
+| Os programas de PPRA e PCMSO são obrigatórios? | 502 | 160 | 319 |
+| Instrução de Trabalho (IT) na ISO 9001 | 580 | 57 | 98 |
+| Documentação ISO 9001 | 382 | 33 | 86 |
+| Cópias Controladas e Não Controladas | 175 | 9 | 51 |
+| ISO 9001: quais são os Procedimentos Obrigatórios | 277 | 14 | 50 |
+| O passo a passo para certificação ISO 9001 | 1.252 | 49 | 39 |
+| Pré-requisitos da ISO 9001 | 365 | 14 | 38 |
+| Auditoria e Certificação ISO 9001 | 627 | 21 | 34 |
+
+Todos são posts curtos sobre assunto grande. É a fila de reescrita, por ordem de dor.
+
+## As 97 perguntas feitas no /iso-9001/
+
+Cruzadas com o que a reescrita de 21/08/2026 responde:
+
+| Tema | Perguntas | Responde? |
+|---|---|---|
+| Quem pode / meu ramo | 31 | sim (FAQ + seção 1) |
+| Documentos, procedimentos, manual | 19 | **virou a seção 7** |
+| Curso / carreira | 14 | não — e não deve: não é lead de consultoria |
+| Auditoria (fase, o que o auditor olha) | 12 | **virou a seção 5** |
+| Obrigatoriedade | 7 | sim (FAQ) |
+| Prazo | 6 | sim (seções 2 e 3) |
+| Integrar com outra norma | 3 | não — fila |
+| Certificadora, preço, validade | 4 | sim |
+
 ## Fila: perguntas boas que ainda não têm dono
 
 Cada uma é uma pergunta real, repetida, e nenhuma está bem respondida hoje:
