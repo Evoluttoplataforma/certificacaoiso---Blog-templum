@@ -48,7 +48,19 @@
 // carreira" tiram esses leads da fila comercial sem precisar de um campo a mais.
 // `source` distingue de onde veio o lead em blog_templum_leads: "consultoria-artigo" no
 // fim do artigo, "form-blog" na página /form. É o que permite medir cada caminho.
-const { norma, crmNorma = "", slug = "", sbUrl, sbAnon, source = "consultoria-artigo" } = Astro.props;
+// `enxuto` (usado na /form): deixa só nome, e-mail e WhatsApp obrigatórios, com
+// empresa opcional, e ESCONDE funcionários, urgência e faturamento. Por que existe,
+// com número: entre 19 e 21/08/2026 a /form recebeu 42 sessões humanas e gerou ZERO
+// cadastro, com tempo ATIVO mediano de 15 segundos — ninguém chegou a tentar
+// preencher (o Clarity não registrou nenhum clique morto, clique de raiva ou erro de
+// script: não era defeito, era esforço). Seis campos obrigatórios, sendo dois selects
+// de qualificação, é caro demais para quem clicou em "falar com um especialista".
+// A qualificação não morre: nº de funcionários e urgência passam a ser perguntados na
+// página de obrigado e na própria conversa. Aqui o objetivo é o contato existir.
+const {
+  norma, crmNorma = "", slug = "", sbUrl, sbAnon, source = "consultoria-artigo",
+  enxuto = false,
+} = Astro.props;
 
 const funcionarios = ["1 a 10", "11 a 50", "51 a 100", "101 a 250", "251 a 500", "Mais de 500"];
 const faturamentos = ["Até R$ 50 mil", "R$ 50 mil a R$ 100 mil", "R$ 100 mil a R$ 300 mil", "R$ 300 mil a R$ 500 mil", "R$ 500 mil a R$ 1 milhão", "Acima de R$ 1 milhão"];
@@ -81,10 +93,11 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
       </div>
       <div class="field">
         <label for="lf-empresa">Empresa</label>
-        <input class="input" id="lf-empresa" name="empresa" autocomplete="organization" placeholder="Nome da empresa" required />
+        <input class="input" id="lf-empresa" name="empresa" autocomplete="organization" placeholder={enxuto ? "Opcional" : "Nome da empresa"} required={!enxuto} />
       </div>
     </div>
 
+    {!enxuto && (
     <div class="form-row">
       <div class="field">
         <label for="lf-func">Nº de funcionários</label>
@@ -102,6 +115,9 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
       </div>
     </div>
 
+    )}
+
+    {!enxuto && (
     <div class="field">
       <label for="lf-fat">Faturamento mensal <span class="hint">— opcional, ajuda a dimensionar a proposta</span></label>
       <select class="select" id="lf-fat" name="faturamento">
@@ -109,6 +125,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
         {faturamentos.map((f) => <option value={f}>{f}</option>)}
       </select>
     </div>
+    )}
 
     {/* isca de bot: campo fora do fluxo visual e do tab. Preenchido = descarta em silêncio. */}
     <div class="lf-hp" aria-hidden="true">
@@ -119,7 +136,10 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
     <button type="submit" class="btn btn--primary btn--block btn--lg" data-trk-event="lead-form-artigo" data-trk-norma={norma}>
       Falar com um especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
     </button>
-    <p class="lf-legal">Ao enviar, você concorda em receber contato da Templum sobre a certificação <span data-lf-norma>{norma}</span>. Seus dados são protegidos conforme a LGPD e não são compartilhados com terceiros.</p>
+    {/* "a certificação {norma}" saía como "a certificação certificação ISO" na /form,
+        onde a norma É o rótulo genérico. Quando o rótulo já tem a palavra, ela não
+        se repete. */}
+    <p class="lf-legal">Ao enviar, você concorda em receber contato da Templum sobre {/^certifica/i.test(norma) ? "" : "a certificação "}<span data-lf-norma>{norma}</span>. Seus dados são protegidos conforme a LGPD e não são compartilhados com terceiros.</p>
   </form>
 
   <div class="form-success lf-success" id="leadSuccess" hidden>

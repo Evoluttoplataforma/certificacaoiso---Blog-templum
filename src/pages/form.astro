@@ -32,22 +32,40 @@ const robots = "noindex,follow";
   clarityTags={{ page_type: "form", tem_form: "sim" }}
   dock={false}
 >
+  <!-- Uma seção só, duas colunas: o formulário SOBE para a primeira dobra.
+       Antes eram duas seções empilhadas — hero navy e, abaixo, o formulário — e a
+       medição na página no ar (21/08/2026) mostrou o custo disso: o primeiro campo
+       começava a 892px no celular, com a dobra em 844, e o botão de enviar a 1,8
+       telas. Quem chegava via CTA de artigo caía numa headline e em três bullets,
+       sem ver um campo. 42 sessões, zero cadastro, 15s de tempo ativo mediano. -->
   <section class="fm-hero section--navy">
-    <div class="container md">
-      <span class="tag-pill tag-pill--glow"><iconify-icon icon="solar:medal-ribbon-star-bold"></iconify-icon> Consultoria Templum</span>
-      <h1>Fale com um especialista sobre <em class="accent" data-fm-norma>certificação ISO</em></h1>
-      <p>Mais de 30 anos levando empresas até o certificado, com garantia de 200%. Conte seu cenário e a gente responde com o caminho — sem custo e sem compromisso.</p>
+    <div class="container lg fm-grid">
+      <div class="fm-pitch">
+        <span class="tag-pill tag-pill--glow"><iconify-icon icon="solar:medal-ribbon-star-bold"></iconify-icon> Consultoria Templum</span>
+        <h1>Fale com um especialista sobre <em class="accent" data-fm-norma>certificação ISO</em></h1>
+        <p>Mais de 30 anos levando empresas até o certificado, com garantia de 200%. Conte seu cenário e a gente responde com o caminho — sem custo e sem compromisso.</p>
+      </div>
+
       <ul class="check-list fm-benefits">
         <li class="check-item"><span class="check-circle"><iconify-icon icon="solar:check-read-linear"></iconify-icon></span><span>Diagnóstico gratuito do seu cenário</span></li>
         <li class="check-item"><span class="check-circle"><iconify-icon icon="solar:check-read-linear"></iconify-icon></span><span>Prazo e investimento claros, sem surpresa</span></li>
         <li class="check-item"><span class="check-circle"><iconify-icon icon="solar:check-read-linear"></iconify-icon></span><span>Garantia de 200%: se não certificar, devolvemos em dobro</span></li>
       </ul>
-    </div>
-  </section>
 
-  <section class="section section--cream fm-form-wrap">
-    <div class="container md">
-      <LeadForm norma="certificação ISO" crmNorma="" slug="form" source="form-blog" sbUrl={SB_URL} sbAnon={SB_ANON} />
+      <div class="fm-form">
+        <LeadForm norma="certificação ISO" crmNorma="" slug="form" source="form-blog" enxuto={true} sbUrl={SB_URL} sbAnon={SB_ANON} />
+        <!-- Alternativa de baixo atrito. Quem prefere conversar a digitar tinha
+             como única saída fechar a aba: o formulário era a única porta da
+             página. O clique daqui vira evento cta_whatsapp no Clarity (o handler
+             está no Base.astro), então dá para medir os dois caminhos. -->
+        <p class="fm-ou">ou, se preferir</p>
+        <a class="btn btn--wpp btn--block"
+           href="https://wa.me/5519993521270?text=Ol%C3%A1%2C%20vim%20do%20blog%20e%20quero%20falar%20com%20um%20especialista%20sobre%20certifica%C3%A7%C3%A3o%20ISO"
+           target="_blank" rel="noopener noreferrer"
+           data-trk-event="cta-form-whatsapp">
+          <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon> Falar agora no WhatsApp
+        </a>
+      </div>
     </div>
   </section>
 </Base>
@@ -57,15 +75,51 @@ const robots = "noindex,follow";
      porque o global define h1 { color: var(--text) } — sem isso o título fica escuro sobre
      escuro e só o <em> laranja aparece. line-height e max-width evitam a palavra órfã na
      segunda linha quando a norma entra no título pela querystring. */
-  .fm-hero { padding: 60px 0 48px; }
+  .fm-hero { padding: clamp(28px, 4vh, 56px) 0 clamp(40px, 6vh, 72px); }
+  /* Duas colunas no desktop; no celular a ordem é pitch curto → FORMULÁRIO →
+     bullets, para o primeiro campo entrar na primeira tela. */
+  /* ÁREAS, não `order`: os bullets precisam ser IRMÃOS do formulário no grid para
+     poderem descer no celular. Com eles dentro do bloco de texto, `order` não fazia
+     nada — o primeiro campo continuava a 889px, abaixo da dobra de 844. */
+  .fm-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    grid-template-areas: "pitch form" "bullets form";
+    /* auto/1fr + align-self:start nos bullets: a sobra de altura do cartão (que
+       ocupa as duas linhas) vai para a linha de baixo em vez de esticar o pitch,
+       senão os bullets descolam do parágrafo. */
+    grid-template-rows: auto 1fr;
+    gap: clamp(18px, 2.5vw, 28px) clamp(28px, 4vw, 64px);
+    align-items: start;
+  }
+  .fm-pitch { grid-area: pitch; }
+  .fm-benefits { grid-area: bullets; align-self: start; }
+  .fm-form { grid-area: form; position: sticky; top: 96px; }
+  @media (max-width: 900px) {
+    .fm-grid { grid-template-columns: 1fr; grid-template-areas: "pitch" "form" "bullets"; gap: 20px; }
+    .fm-form { position: static; }
+    /* No celular o pitch encolhe: cada pixel antes do primeiro campo é rolagem que
+       o visitante pode não fazer. Título menor, sem subtítulo. */
+    .fm-hero h1 { font-size: clamp(25px, 7vw, 32px); margin: 12px 0 10px; }
+    .fm-pitch > p { display: none; }
+    /* O cartão traz cabeçalho próprio ("Precisa de consultoria para X?" + parágrafo)
+       que, nesta página, repete a headline. No celular ele custava ~120px antes do
+       primeiro campo — some. No desktop fica, porque lá sobra dobra. */
+    .fm-form :global(.lf-head h2),
+    .fm-form :global(.lf-head p),
+    .fm-form :global(.lf-tag) { display: none; }
+    .fm-form :global(.lf-head) { margin-bottom: 4px; }
+  }
+  .fm-ou { text-align: center; font-size: 13px; color: rgba(255,244,221,0.55); margin: 16px 0 10px; }
+  .fm-form :global(.btn--wpp) { background: #25D366; color: #0b3d20; font-weight: 800; }
+  .fm-form :global(.btn--wpp:hover) { background: #1fbe5b; }
   .fm-hero h1 { color: var(--cream); font-size: clamp(28px, 4.2vw, 46px); font-weight: 800;
     line-height: 1.08; letter-spacing: -0.03em; margin: 18px 0 14px; max-width: 820px; text-wrap: balance; }
   .fm-hero h1 :global(em) { font-style: italic; }
-  .fm-hero > div > p { font-size: 17px; line-height: 1.6; color: rgba(255,244,221,0.78); max-width: 620px; margin: 0; }
-  .fm-benefits { display: inline-flex; flex-direction: column; gap: 10px; text-align: left; margin: 26px 0 0; }
-  .fm-form-wrap { padding-top: 8px; }
-  /* O LeadForm já traz a própria margem superior; aqui ela duplicaria o respiro. */
-  .fm-form-wrap :global(.lead-form) { margin-top: 0; }
+  .fm-pitch > p { font-size: 17px; line-height: 1.6; color: rgba(255,244,221,0.78); max-width: 620px; margin: 0; }
+  .fm-benefits { display: flex; flex-direction: column; gap: 10px; text-align: left; margin: 0; padding: 0; }
+  /* O LeadForm traz margem própria; dentro do hero ela empurraria o campo para baixo. */
+  .fm-form :global(.lead-form) { margin-top: 0; }
 </style>
 
 <script is:inline define:vars={{ NORMAS_VALIDAS, CRM_PRODUTO_MAP }}>
