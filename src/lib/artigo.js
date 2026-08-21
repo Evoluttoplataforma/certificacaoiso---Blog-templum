@@ -174,6 +174,31 @@ export function temSumarioEscrito(html) {
 }
 
 /**
+ * Embrulha toda <table> do corpo num contêiner que rola na horizontal.
+ *
+ * Por que existe: são 210 tabelas em 66 posts, e no celular a coluna de leitura tem 354px.
+ * Tabela com quatro colunas não caduz para esse tamanho — ela mantém a largura mínima do
+ * conteúdo e transborda. E como o global.css tem `body { overflow-x: clip }`, o transbordo
+ * não vira barra de rolagem: vira CORTE. A última coluna simplesmente não existe para o
+ * leitor de celular, e nada na tela avisa que ela existia.
+ * Encontrado em 21/08/2026 olhando o print do /iso-9001/ no celular, na tabela de preço:
+ * o leitor via "Porte · Duração · Investimento" e o total desaparecia na borda.
+ *
+ * `overflow-x: auto` no contêiner devolve a rolagem sem mexer no layout da tabela — que é
+ * o que se perde ao tentar resolver com `display: block` na própria <table>.
+ *
+ * O contêiner também é o alvo das regras de sangria em [slug].astro: quando a tabela ganha
+ * um pai, `.post-corpo > table` deixa de casar. Se mudar o nome da classe, mude lá.
+ */
+export function envolverTabelas(html) {
+  if (!html) return "";
+  // Sem aninhamento a considerar: tabela dentro de tabela não existe no corpo destes posts
+  // (conferido nos 66), e o WordPress nunca gerou isso aqui. Se um dia gerar, o `[^]*?`
+  // fecha na primeira </table> e o resultado é HTML quebrado — daí a checagem no build.
+  return html.replace(/<table[\s\S]*?<\/table>/gi, (t) => `<div class="post-tabela">${t}</div>`);
+}
+
+/**
  * Enfia um bloco de CTA no meio do corpo, na fronteira de um <h2>.
  *
  * Por que na fronteira de h2 e não a cada N parágrafos: cortar por parágrafo cai

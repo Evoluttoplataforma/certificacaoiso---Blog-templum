@@ -3,7 +3,6 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import TrackingKit from "../components/TrackingKit.astro";
-import WebinarDock from "../components/WebinarDock.astro";
 
 const {
   title = "Certificação ISO — Dicas para implementação e certificação nas normas ISO",
@@ -18,8 +17,9 @@ const {
   // já sabe device/browser/país/origem por conta própria — aqui vai só o que ele NÃO tem:
   // de que assunto é a página e se ela tem formulário. É o que faz a gravação ser filtrável.
   clarityTags = {},
-  // Dock do webinar no mobile. Ligado em tudo, MENOS onde já existe um pedido na tela:
-  // no /form/ uma barra fixa cobrindo o formulário disputaria o lead que já decidiu vir.
+  // `dock` ficou sem efeito em 21/08/2026, quando o dock do webinar saiu do mobile.
+  // A prop segue aceita para não quebrar a chamada de pages/form.astro (dock={false}) e
+  // qualquer outra que apareça — mas hoje ela não liga nada.
   dock = true,
 } = Astro.props;
 
@@ -259,16 +259,23 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
     {!noChrome && <Footer />}
     {!noChrome && (
       <>
-        {/* Float só no DESKTOP (WhatsApp). O float da Olívia, que era o par mobile deste,
-            saiu em 19/08/2026: no celular a tela é pequena e já tem o dock do webinar
-            embaixo e o botão Contato no topo — três elementos fixos pedindo atenção é
-            onde o leitor desiste do artigo. */}
+        {/* Float só no DESKTOP (WhatsApp). O par mobile dele — o float da Olívia — saiu
+            em 19/08/2026, e o dock do webinar saiu em 21/08. Hoje o celular tem UM
+            elemento fixo: o botão Contato no topo. Foi de três para um, e o motivo é
+            sempre o mesmo: elemento fixo come tela, e tela pequena é onde o leitor
+            desiste do artigo. */}
         <a class="whatsapp-float float-desktop" href="https://wa.me/5519993521270" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
           <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon>
         </a>
-        {/* Antes do float: o dock esconde a Olívia enquanto está aberto (um pedido por
-            vez), e a ordem no DOM deixa isso legível para quem for mexer depois. */}
-        {dock && <WebinarDock />}
+        {/* DOCK DO WEBINAR REMOVIDO em 21/08/2026 (componente segue em
+            components/WebinarDock.astro, sem uso). Era a barra fixa no rodapé do celular
+            com a foto da Dani, que deslizava a partir de 35% da rolagem.
+            Não foi por não funcionar: foi por ser o último elemento fixo cobrindo o texto
+            no aparelho onde a tela é menor. O webinar continua anunciado no fim do artigo
+            pelo WebinarCard (variante "conteudo"), que desde 21/08/2026 aparece em
+            qualquer largura — a oferta não se perdeu, só deixou de ser interrupção.
+            Com o dock fora, o rodapé do celular está livre: se algum dia entrar outra
+            coisa fixa ali, entra UMA, e medida. */}
       </>
     )}
     <script is:inline>

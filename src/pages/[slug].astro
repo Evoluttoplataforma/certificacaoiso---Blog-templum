@@ -5,7 +5,7 @@ import LeadForm from "../components/LeadForm.astro";
 import WebinarCard from "../components/WebinarCard.astro";
 import { catMeta } from "../data/categorias.js";
 import { ctaParaNorma } from "../data/cta-norma.js";
-import { ancorarSecoes, injetarCtaMeio, removerSumarioEscrito, temSumarioEscrito } from "../lib/artigo.js";
+import { ancorarSecoes, injetarCtaMeio, removerSumarioEscrito, temSumarioEscrito, envolverTabelas } from "../lib/artigo.js";
 import { normaDoForm } from "../data/lead-form-pages.js";
 import { normaDaPagina } from "../data/normas.js";
 import { getAllPosts, tldrOf } from "../lib/posts.js";
@@ -118,6 +118,10 @@ const { html: htmlLimpo } = podeLimpar
   ? removerSumarioEscrito(htmlAncorado)
   : { html: htmlAncorado };
 const temSumarioInline = temSumarioEscrito(htmlLimpo);
+// Tabela ganha contêiner que rola na horizontal — ver envolverTabelas() em lib/artigo.js.
+// Depois da limpeza do sumário e ANTES da injeção do CTA: o CTA entra na fronteira de um
+// <h2>, então nunca cai dentro de um <div class="post-tabela">.
+const htmlComTabelas = envolverTabelas(htmlLimpo);
 // O FAQ entra como última linha porque ele JÁ é uma seção da página, com id="duvidas"
 // desde sempre; deixá-lo fora faria o sumário mentir sobre a profundidade do artigo.
 // Só não entra quando o próprio corpo já tem um h2 com esse nome (73 posts têm) — senão
@@ -142,7 +146,7 @@ const urlMeio = normaForm
 const blocoCtaMeio = `<div class="cta-olivia"><img src="/assets/team/olivia-especialista.webp" alt="Olívia, especialista Templum" width="44" height="44" decoding="async" /><div><strong>Quer isso avaliado na sua empresa?</strong><p>${cta.texto}</p><a href="${urlMeio}" class="btn btn--primary" data-trk-event="cta-meio" data-trk-norma="${cta.slug}">Falar com a Olívia <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a></div></div>`;
 // injeta no HTML JÁ LIMPO: o CTA vai para a fronteira de h2 mais perto da metade do
 // TEXTO, e as ~15 linhas do sumário do corpo deslocavam esse cálculo.
-const conteudo = wordCount >= 1200 ? injetarCtaMeio(htmlLimpo, blocoCtaMeio) : htmlLimpo;
+const conteudo = wordCount >= 1200 ? injetarCtaMeio(htmlComTabelas, blocoCtaMeio) : htmlComTabelas;
 
 // ---------- RELACIONADOS: relevância por tag + garantia de distribuição ----------
 // Em lib/posts.js, `categories` é [category_name, ...tags] — categoria e tags no
@@ -440,6 +444,30 @@ if (faq.length) {
          trilho do longform. Nada aqui tem a ver com comentário. Se outra seção sair do
          template, confira o que estava colado nela. -->
     <script is:inline>
+      // ---- Tabela que rola: avisa que rola ----
+      // São 210 tabelas em 66 posts. No celular a coluna tem 354px e tabela de quatro
+      // colunas não caduz — ela rola dentro do contêiner .post-tabela. O problema é que
+      // rolagem sem barra visível (padrão no toque) fica idêntica ao corte que existia
+      // antes: a coluna some na borda e o leitor acha que quebrou. Daí a classe.
+      (function () {
+        var caixas = document.querySelectorAll(".post-content .post-tabela");
+        if (!caixas.length) return;
+        function medir(d) {
+          var rola = d.scrollWidth > d.clientWidth + 1;
+          d.classList.toggle("is-rolavel", rola);
+          d.classList.toggle("no-fim", rola && d.scrollLeft + d.clientWidth >= d.scrollWidth - 2);
+        }
+        caixas.forEach(function (d) {
+          medir(d);
+          // passive: o listener só lê classe, nunca chama preventDefault — deixar o
+          // navegador saber disso é o que mantém a rolagem da tabela fluida no toque.
+          d.addEventListener("scroll", function () { medir(d); }, { passive: true });
+        });
+        // Rotação de tela e mudança de fonte mudam a largura da caixa: sem remedir, o
+        // aviso fica pendurado numa tabela que já cabe.
+        addEventListener("resize", function () { caixas.forEach(medir); });
+      })();
+
       // ---- Barra de progresso de leitura ----
       // Só existe em artigo longo (ver temBarra no frontmatter), então a primeira linha
       // desiste calada na maioria dos posts.
@@ -750,12 +778,8 @@ if (faq.length) {
   @media (min-width: 1080px) {
     .post.is-longform .post-corpo > img,
     .post.is-longform .post-corpo > figure,
-    .post.is-longform .post-corpo > table,
-    .post.is-longform .post-corpo > .wp-block-table,
     .post.is-longform .post-corpo > iframe {
       max-width: calc(100% + 88px); position: relative; left: 50%; transform: translateX(-50%); }
-    .post.is-longform .post-corpo > table,
-    .post.is-longform .post-corpo > .wp-block-table,
     .post.is-longform .post-corpo > iframe { width: calc(100% + 88px); }
   }
 
@@ -848,15 +872,36 @@ if (faq.length) {
   .post-content :global(table) { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
   .post-content :global(th), .post-content :global(td) { border: 1px solid var(--border); padding: 9px 11px; text-align: left; vertical-align: top; }
   .post-content :global(th) { font-weight: 800; }
+  /* Contêiner da tabela (ver envolverTabelas() em lib/artigo.js). É ele que rola na
+     horizontal: no celular a coluna tem 354px e tabela de quatro colunas não caduz para
+     isso — sem o contêiner, o `overflow-x: clip` do body transforma o transbordo em CORTE
+     silencioso, e a última coluna deixa de existir para quem lê no telefone.
+     `overscroll-behavior-x: contain` evita que o gesto de rolar a tabela puxe a navegação
+     de "voltar" do iOS quando chega no fim. */
+  .post-content :global(.post-tabela) { overflow-x: auto; overscroll-behavior-x: contain;
+    margin: 24px 0; }
+  .post-content :global(.post-tabela table) { margin: 0; }
+  /* Aviso de que a tabela rola, e SÓ quando ela rola de verdade (a classe vem do script
+     no fim do arquivo). Sem isso, o leitor de celular vê a última coluna cortada na borda
+     e conclui que a página está quebrada — o corte antigo e a rolagem nova são visualmente
+     idênticos até a pessoa arrastar. Some ao chegar no fim da tabela. */
+  .post-content :global(.post-tabela.is-rolavel) { position: relative; padding-bottom: 22px; }
+  .post-content :global(.post-tabela.is-rolavel::after) {
+    content: "Arraste para ver a tabela completa \2192";
+    position: absolute; left: 0; bottom: 0; font-size: 11.5px; font-weight: 700;
+    color: var(--text-soft); letter-spacing: 0.01em; }
+  .post-content :global(.post-tabela.no-fim::after) { content: none; }
   /* Tabela SANGRA 60px para cada lado a partir de 1.080px. Numa coluna de leitura de
      660px, uma tabela de quatro colunas — como a de cláusula × evidência do /iso-9001/ —
      dá linha de 200px de altura e vira ilegível; e tabela é conteúdo que se VARRE com o
      olho, não que se lê em sequência, então largura é o que ela precisa.
      `left: 50%` + `translateX(-50%)` centra qualquer largura na coluna (mesmo truque do
      longform); a margem livre de cada lado passa de 200px nessa largura, então 60px
-     sangram com folga e não há trilho por perto em post normal. */
+     sangram com folga e não há trilho por perto em post normal.
+     Mora no CONTÊINER, não na tabela: com o embrulho, `table` já não é filha direta da
+     coluna, e a largura extra tem que ser da caixa que rola. */
   @media (min-width: 1080px) {
-    .post-content :global(table) { width: calc(100% + 120px); position: relative; left: 50%; transform: translateX(-50%); }
+    .post-content :global(.post-tabela) { width: calc(100% + 120px); position: relative; left: 50%; transform: translateX(-50%); }
   }
   /* TL;DR / Resposta rápida — citável por IA, answer-first */
   /* margin-bottom curta (12px, não 30px): a tarja de CTA vem SEMPRE logo abaixo e as
