@@ -505,16 +505,59 @@ if (faq.length) {
         var list = document.getElementById("cmt-list");
         var esc = function (s) { return (s || "").replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
         var fmt = function (d) { return new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" }); };
+
+        // PAGINAÇÃO. Motivo, medido em 21/08/2026: /iso-9001/ tem 270 comentários
+        // aprovados e o loader antigo pedia e renderizava TODOS. A página ficava com
+        // 97.000px de altura — 12 telas de artigo e 75 telas de comentário — e o bloco de
+        // artigos relacionados, que é a distribuição de link interno da página, nascia
+        // atrás dessa parede. Tem post com 403.
+        // Oito por vez: cabe numa tela, e é mais do que a mediana do blog inteiro.
+        // O `count=exact` vem no cabeçalho Content-Range e é o que permite escrever
+        // quantos faltam no botão — número vago não faz ninguém clicar.
+        var PAG = 8, vistos = 0, total = null, btn = null;
+
+        function cartao(x) {
+          var ini = (x.author_name || "?").trim().charAt(0).toUpperCase();
+          return '<div class="cmt"><div class="cmt-av">' + ini + '</div><div class="cmt-body"><div class="cmt-h"><strong>' + esc(x.author_name) + '</strong><time>' + fmt(x.created_at) + '</time></div><p>' + esc(x.content) + '</p></div></div>';
+        }
+
+        function botao() {
+          if (total === null || vistos >= total) { if (btn) { btn.remove(); btn = null; } return; }
+          if (!btn) {
+            btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "cmt-mais";
+            btn.addEventListener("click", function () { btn.disabled = true; btn.textContent = "Carregando…"; load(); });
+            list.parentNode.insertBefore(btn, list.nextSibling);
+          }
+          btn.disabled = false;
+          btn.textContent = "Ver mais " + Math.min(PAG, total - vistos) + " de " + (total - vistos) + " comentários";
+        }
+
         function load() {
-          fetch(SB_URL + "/rest/v1/blog_templum_comments?post_id=eq." + postId + "&status=eq.approved&select=author_name,content,created_at&order=created_at.desc", { headers: H })
-            .then(function (r) { return r.json(); })
+          var url = SB_URL + "/rest/v1/blog_templum_comments?post_id=eq." + postId
+            + "&status=eq.approved&select=author_name,content,created_at&order=created_at.desc"
+            + "&offset=" + vistos + "&limit=" + PAG;
+          fetch(url, { headers: Object.assign({}, H, { Prefer: "count=exact" }) })
+            .then(function (r) {
+              // Content-Range vem como "0-7/270"; sem o cabeçalho, o botão não aparece e
+              // o pior caso é o leitor ver 8 comentários — degrada sem quebrar.
+              var cr = r.headers.get("content-range") || "";
+              var n = parseInt((cr.split("/")[1] || ""), 10);
+              if (!isNaN(n)) total = n;
+              return r.json();
+            })
             .then(function (c) {
-              if (!c || !c.length) { list.innerHTML = '<p class="cmt-empty">Seja o primeiro a comentar.</p>'; return; }
-              list.innerHTML = c.map(function (x) {
-                var ini = (x.author_name || "?").trim().charAt(0).toUpperCase();
-                return '<div class="cmt"><div class="cmt-av">' + ini + '</div><div class="cmt-body"><div class="cmt-h"><strong>' + esc(x.author_name) + '</strong><time>' + fmt(x.created_at) + '</time></div><p>' + esc(x.content) + '</p></div></div>';
-              }).join("");
-            }).catch(function () { list.innerHTML = ""; });
+              if (!c || !c.length) {
+                if (!vistos) list.innerHTML = '<p class="cmt-empty">Seja o primeiro a comentar.</p>';
+                botao(); return;
+              }
+              if (!vistos) list.innerHTML = "";
+              list.insertAdjacentHTML("beforeend", c.map(cartao).join(""));
+              vistos += c.length;
+              botao();
+            })
+            .catch(function () { if (!vistos) list.innerHTML = ""; });
         }
         load();
         var f = document.getElementById("cmt-form"), msg = document.getElementById("cmt-msg");
@@ -560,6 +603,69 @@ if (faq.length) {
   .post-comments .cmt-h time { font-size: 12px; color: var(--text-soft); }
   .post-comments .cmt p { font-size: 14.5px; color: var(--text-2); line-height: 1.6; white-space: pre-line; overflow-wrap: anywhere; }
   .post-comments .cmt-empty { color: var(--text-soft); font-size: 14px; }
+  /* Botão de paginação dos comentários. É criado por JS depois do .cmt-list, então o
+     estilo precisa ser global igual aos cartões. */
+  .post-comments .cmt-mais { display: block; width: 100%; margin: -18px 0 32px; padding: 12px 16px;
+    background: var(--surface); border: 1px solid var(--border-2); border-radius: 999px;
+    font-family: inherit; font-size: 13.5px; font-weight: 800; color: var(--text-2); cursor: pointer;
+    transition: border-color .15s ease, color .15s ease; }
+  .post-comments .cmt-mais:hover { border-color: var(--orange); color: var(--orange-ink); }
+  .post-comments .cmt-mais:disabled { opacity: .6; cursor: default; }
+</style>
+
+<!-- ============ BLOCOS DE CONTEÚDO ESCRITOS NO CMS ============
+     Estas três classes são usadas DENTRO do corpo dos posts, que chega por set:html —
+     o Astro não vê esse HTML no template e não escopa nada dele. Daí o bloco global.
+     Nasceram na reescrita do /iso-9001/ (21/08/2026) e valem para qualquer post: quem
+     escrever no CMS pode usá-las.
+
+     .post-portas    — três (ou mais) caminhos no topo do artigo, para o leitor pular
+                       direto para a seção do problema dele. O /iso-9001/ atende três
+                       pessoas diferentes na mesma página — quem está sendo exigido por
+                       um cliente, quem vai implantar e quem quer entender a norma — e
+                       sem isso a página escolhia uma e perdia as outras duas.
+     .post-aprofunde — a linha de links no FIM de cada seção. Substitui o link no meio
+                       da frase: o post tinha 42 links, um a cada 57 palavras, com âncora
+                       que era pedaço de frase ("Medimos e avaliamos os resultados do
+                       desempenho"). Medido em 21/08/2026: nenhum dos 31 destinos
+                       dependia só deste post para receber link, então mover não custou
+                       cobertura — e a âncora agora descreve o destino.
+     .post-glossario — bloco de referência recolhido, no fim do texto. -->
+<style is:global>
+  .post-portas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 26px 0 34px; }
+  @media (max-width: 700px) { .post-portas { grid-template-columns: 1fr; } }
+  /* `a[href]` e não `a`: o corpo do artigo pinta todo link com
+     `.post-content a:not(.btn) { color: laranja; text-decoration: underline }`, que tem a
+     MESMA especificidade de `.post-content .post-portas a` — e aí quem ganha é quem vem
+     depois no bundle, o que muda sem avisar. O seletor de atributo desempata de vez, e as
+     portas deixam de sair sublinhadas de laranja. */
+  .post-content .post-portas a[href] { display: flex; flex-direction: column; gap: 4px;
+    background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--orange);
+    border-radius: var(--r-12); padding: 14px 16px; text-decoration: none; color: inherit;
+    transition: border-color .15s var(--ease-soft), transform .15s var(--ease-soft); }
+  .post-content .post-portas a[href]:hover { border-color: var(--orange); transform: translateY(-2px); }
+  .post-content .post-portas strong { font-size: 14.5px; font-weight: 800; color: var(--text); line-height: 1.25; }
+  .post-content .post-portas span { font-size: 12.5px; color: var(--text-mid); line-height: 1.4; }
+
+  /* A seta é o que diz que a linha é navegação e não texto — sem ela a lista de links
+     no fim da seção lê como continuação do parágrafo. */
+  .post-content .post-aprofunde { display: block; margin: 22px 0 0; padding: 10px 0 0;
+    border-top: 1px solid var(--border); font-size: 13.5px; color: var(--text-mid); line-height: 1.6; }
+  .post-content .post-aprofunde strong { color: var(--text-soft); font-weight: 800; font-size: 11.5px;
+    text-transform: uppercase; letter-spacing: 0.06em; margin-right: 4px; }
+  .post-content .post-aprofunde a { font-weight: 600; }
+
+  .post-content .post-glossario { border: 1px solid var(--border); border-radius: var(--r-12);
+    background: var(--surface); margin: 34px 0 0; padding: 0 18px; }
+  .post-content .post-glossario > summary { padding: 14px 0; cursor: pointer; list-style: none;
+    font-size: 14.5px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 10px; }
+  .post-content .post-glossario > summary::-webkit-details-marker { display: none; }
+  .post-content .post-glossario > summary::after { content: ""; margin-left: auto; width: 8px; height: 8px;
+    flex: none; border-right: 2px solid var(--text-soft); border-bottom: 2px solid var(--text-soft);
+    transform: rotate(45deg) translateY(-2px); transition: transform .2s var(--ease-soft); }
+  .post-content .post-glossario[open] > summary::after { transform: rotate(-135deg) translateY(-2px); }
+  .post-content .post-glossario ul { margin: 0 0 16px; padding-left: 20px; }
+  .post-content .post-glossario li { font-size: 14.5px; line-height: 1.6; color: var(--text-mid); }
 </style>
 
 <!-- ======================= LAYOUT LONGFORM =======================
@@ -737,8 +843,19 @@ if (faq.length) {
   /* embeds (YouTube etc.): display:block porque iframe é inline por padrão — sem isso
      o vídeo ganha um vão de descender embaixo e cola no parágrafo seguinte. */
   .post-content :global(iframe) { max-width: 100%; border-radius: var(--r-16); aspect-ratio: 16/9; width: 100%; display: block; margin: 24px 0; border: 0; }
-  .post-content :global(table) { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 15px; }
-  .post-content :global(th), .post-content :global(td) { border: 1px solid var(--border); padding: 10px 12px; text-align: left; }
+  .post-content :global(table) { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+  .post-content :global(th), .post-content :global(td) { border: 1px solid var(--border); padding: 9px 11px; text-align: left; vertical-align: top; }
+  .post-content :global(th) { font-weight: 800; }
+  /* Tabela SANGRA 60px para cada lado a partir de 1.080px. Numa coluna de leitura de
+     660px, uma tabela de quatro colunas — como a de cláusula × evidência do /iso-9001/ —
+     dá linha de 200px de altura e vira ilegível; e tabela é conteúdo que se VARRE com o
+     olho, não que se lê em sequência, então largura é o que ela precisa.
+     `left: 50%` + `translateX(-50%)` centra qualquer largura na coluna (mesmo truque do
+     longform); a margem livre de cada lado passa de 200px nessa largura, então 60px
+     sangram com folga e não há trilho por perto em post normal. */
+  @media (min-width: 1080px) {
+    .post-content :global(table) { width: calc(100% + 120px); position: relative; left: 50%; transform: translateX(-50%); }
+  }
   /* TL;DR / Resposta rápida — citável por IA, answer-first */
   /* margin-bottom curta (12px, não 30px): a tarja de CTA vem SEMPRE logo abaixo e as
      duas precisam ler como um bloco só. Quem devolve o respiro até o texto do artigo é

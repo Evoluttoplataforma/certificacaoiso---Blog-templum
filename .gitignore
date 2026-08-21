@@ -20,4 +20,6 @@ npm-debug.log*
 
 # Insumos de conteúdo (transcrições, briefings). Entram como matéria-prima dos
 # posts; o que vai pro ar é o conteúdo no Supabase, não o arquivo bruto.
-conteudo/
+# Ancorado na raiz de propósito: sem a barra da frente, a regra pegava qualquer pasta
+# chamada "conteudo" em qualquer nível — inclusive supabase/posts/, que É pra versionar.
+/conteudo/
