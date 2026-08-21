@@ -71,6 +71,17 @@ const normaClarity = normaDaPagina({ categories: d.categories, title: d.title, s
 // medido contra esta versão — o histórico das três tentativas está no git log.
 const cta = ctaParaNorma(d.categories || []);
 
+// ---------- TEMPO DE LEITURA E BARRA DE PROGRESSO ----------
+// 230 palavras por minuto. Não é número inventado: a faixa usada para texto de web é
+// 200–250, e 230 é o meio dela. Abaixo disso o artigo longo declara um tempo que assusta
+// (o /iso-9001/, com 4.660 palavras, sairia com 23 minutos a 200 ppm); acima, mente.
+// Serve para duas coisas: dizer ao leitor no que ele está entrando antes de começar, e
+// alimentar a barra de progresso — que precisa de um total para calcular quanto falta.
+const tempoLeitura = Math.max(1, Math.round(wordCount / 230));
+// A barra só existe em artigo longo. Num post de 3 minutos ela marca "falta 1 min" desde
+// o começo: é enfeite que não informa, e enfeite fixo na tela custa atenção.
+const temBarra = tempoLeitura >= 5;
+
 // ---------- LAYOUT LONGFORM (experimento — ver data/longform.js) ----------
 const longform = ehLongform(post.slug);
 
@@ -248,7 +259,19 @@ if (faq.length) {
     tem_form: normaForm ? "sim" : "nao",
   }}
 >
-  <article class:list={["post", longform && "is-longform"]}>
+  <article class:list={["post", longform && "is-longform"]} data-min={String(tempoLeitura)}>
+    <!-- Barra de progresso de leitura, e o selo de quanto falta. Os dois são decorativos
+         (aria-hidden): quem usa leitor de tela já sabe onde está no documento, e uma live
+         region anunciando "faltam 7 minutos" a cada rolagem seria tortura.
+         A barra mede o TEXTO, não a página: enche quando a última linha do artigo chega
+         ao fim da tela, não quando o rodapé acaba — senão o leitor veria 60% justo no
+         momento em que terminou de ler. -->
+    {temBarra && (
+      <>
+        <div class="post-progresso" aria-hidden="true"><span></span></div>
+        <div class="post-restante" aria-hidden="true" hidden><b>0</b> min restantes</div>
+      </>
+    )}
     <!-- `container` sem tamanho: a largura sai de --medida (ver <style>), para o h1, o
          texto e os comentários dividirem a MESMA borda esquerda. Antes o cabeçalho era
          `md` (1.024) e o texto ocupava 812 — as duas colunas não se alinhavam. -->
@@ -270,6 +293,7 @@ if (faq.length) {
            Sem revisão curada, nada muda: a data de publicação segue sozinha. -->
       <div class="post-meta">
         <span class="post-author"><iconify-icon icon="solar:user-circle-bold"></iconify-icon> {d.author}</span>
+        <span class="post-tempo"><iconify-icon icon="solar:clock-circle-bold"></iconify-icon> {tempoLeitura} min de leitura</span>
         {atualizadoEm ? (
           <>
             <span class="post-upd">
@@ -400,6 +424,168 @@ if (faq.length) {
          Os comentários seguem no banco — não são lixo, são oito anos de dúvida real de
          quem chegou pelo Google. As 824 perguntas de leitor foram mineradas e viraram FAQ:
          ver supabase/posts/_perguntas-dos-leitores.md. -->
+
+    <!-- ATENÇÃO, para não repetir o erro de 21/08/2026: este bloco ficava logo DEPOIS da
+         seção de comentários no arquivo e foi deletado junto com ela. Ficaram algumas
+         horas no ar sem funcionar o "ver tudo" do TL;DR (que virou clique morto, justo o
+         que ele existe para corrigir), o zoom das imagens e o destaque da seção atual no
+         trilho do longform. Nada aqui tem a ver com comentário. Se outra seção sair do
+         template, confira o que estava colado nela. -->
+    <script is:inline>
+      // ---- Barra de progresso de leitura ----
+      // Só existe em artigo longo (ver temBarra no frontmatter), então a primeira linha
+      // desiste calada na maioria dos posts.
+      (function () {
+        var alvo = document.querySelector(".post-progresso span");
+        if (!alvo) return;
+        var restante = document.querySelector(".post-restante");
+        var numero = restante && restante.querySelector("b");
+        var total = Number(alvo.closest(".post").dataset.min || 0);
+        var conteudo = document.querySelector(".post-content");
+        // Fim do TEXTO, não da página: o FAQ é a última seção lida; depois dele vêm
+        // webinar, formulário e relacionados, que não são leitura.
+        var fim = document.querySelector(".post-faq") || document.querySelector(".post-corpo");
+        if (!conteudo || !fim) return;
+
+        var ini = 0, alcance = 1;
+        function medir() {
+          ini = conteudo.getBoundingClientRect().top + scrollY;
+          var f = fim.getBoundingClientRect().bottom + scrollY;
+          // -innerHeight: a barra chega a 100% quando a última linha encosta no fim da
+          // tela, não quando ela passa pelo topo. Math.max(1) evita divisão por zero em
+          // artigo mais curto que a janela.
+          alcance = Math.max(1, f - ini - innerHeight);
+        }
+        function pintar() {
+          var p = (scrollY - ini) / alcance;
+          p = p < 0 ? 0 : p > 1 ? 1 : p;
+          alvo.style.transform = "scaleX(" + p + ")";
+          if (!restante || !total) return;
+          // O selo aparece só DENTRO do texto: antes de começar não há o que faltar, e
+          // depois do fim ele mentiria sobre uma leitura que já acabou.
+          var dentro = p > 0.02 && p < 0.995;
+          restante.hidden = !dentro;
+          if (dentro) {
+            restante.classList.add("is-vis");
+            var min = Math.max(1, Math.ceil((1 - p) * total));
+            if (numero.textContent !== String(min)) numero.textContent = min;
+          } else {
+            restante.classList.remove("is-vis");
+          }
+        }
+        var preso = false;
+        function agendar() {
+          if (preso) return;
+          preso = true;
+          requestAnimationFrame(function () { preso = false; pintar(); });
+        }
+        function remedir() { medir(); pintar(); }
+        remedir();
+        addEventListener("scroll", agendar, { passive: true });
+        // A altura do texto muda quando o leitor abre um <details> (sumário, FAQ,
+        // glossário) ou quando uma imagem carrega. Sem remedir, a barra passa a mentir.
+        addEventListener("resize", remedir);
+        addEventListener("load", remedir);
+        conteudo.addEventListener("toggle", remedir, true);
+      })();
+
+      (function () {
+        var b = document.querySelector(".post-tldr-more");
+        if (!b) return;
+        var box = b.closest(".post-tldr");
+        function abrir() { box.classList.remove("is-clamp"); box.style.cursor = ""; b.remove(); }
+        b.addEventListener("click", abrir);
+        // O texto recortado também abre: no Clarity, clique no parágrafo cortado é clique
+        // morto — o leitor tenta expandir onde a frase termina, não no rótulo "ver tudo".
+        box.style.cursor = "pointer";
+        box.addEventListener("click", function (e) { if (e.target !== b) abrir(); });
+      })();
+
+      // ---- Trilho de índice: qual seção está sendo lida ----
+      // A primeira linha desiste em 1.019 dos 1.020 posts (o trilho só existe no
+      // longform) e também no celular, onde o CSS o esconde: querySelector devolve o
+      // nó, mas offsetParent é null e a função sai sem ligar listener nenhum.
+      (function () {
+        var trilho = document.querySelector(".post-rail");
+        if (!trilho || !trilho.offsetParent) return;
+        var links = [].slice.call(trilho.querySelectorAll("a"));
+        var alvos = [], porId = {};
+        links.forEach(function (a) {
+          var id = decodeURIComponent((a.getAttribute("href") || "").slice(1));
+          var el = id && document.getElementById(id);
+          if (el) { alvos.push(el); porId[id] = a; }
+        });
+        if (!alvos.length) return;
+        var atual = null;
+        function marcar() {
+          // "Seção atual" = a ÚLTIMA cujo título já passou do topo, não a mais visível
+          // na tela. Numa seção de 600 palavras o título sai de vista e o leitor
+          // continua nela — pelo critério da visibilidade o trilho apagaria no meio da
+          // leitura, que é justo quando ele serve.
+          var novo = null;
+          for (var i = 0; i < alvos.length; i++) {
+            if (alvos[i].getBoundingClientRect().top <= 120) novo = alvos[i];
+          }
+          if (novo === atual) return;
+          atual = novo;
+          links.forEach(function (a) { a.classList.remove("is-atual"); });
+          if (atual && porId[atual.id]) porId[atual.id].classList.add("is-atual");
+        }
+        // rAF como trava: scroll dispara dezenas de vezes por segundo e cada passada
+        // são 8 getBoundingClientRect (leitura de layout). Uma por frame basta.
+        var preso = false;
+        function agendar() {
+          if (preso) return;
+          preso = true;
+          requestAnimationFrame(function () { preso = false; marcar(); });
+        }
+        marcar();
+        addEventListener("scroll", agendar, { passive: true });
+        addEventListener("resize", agendar);
+      })();
+
+      // ---- Zoom nas imagens do artigo ----
+      // São 3.290 imagens em 1.020 posts, e clicar numa delas não fazia nada — parte dos
+      // 634 cliques mortos do relatório de 20/08/2026. Comportamento esperado de imagem
+      // em artigo é ampliar, então é o que passa a acontecer. Sem biblioteca: overlay
+      // criado no primeiro clique e reaproveitado.
+      // Fica de fora imagem dentro de link (banner de consultoria) — ali o clique já tem
+      // destino — e imagem pequena (ícone, selo), que não tem o que ampliar.
+      (function () {
+        var conteudo = document.querySelector(".post-content");
+        if (!conteudo) return;
+        var over, alvo;
+        function fechar() { if (over) { over.hidden = true; document.body.style.overflow = ""; } }
+        conteudo.addEventListener("click", function (e) {
+          var img = e.target.closest && e.target.closest("img");
+          if (!img || img.closest("a") || img.naturalWidth < 320) return;
+          if (!over) {
+            over = document.createElement("div");
+            over.className = "img-zoom";
+            over.hidden = true;
+            over.innerHTML = '<button type="button" aria-label="Fechar">&times;</button><img alt="" />';
+            over.addEventListener("click", fechar);
+            document.body.appendChild(over);
+            alvo = over.querySelector("img");
+            document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") fechar(); });
+          }
+          alvo.src = img.currentSrc || img.src;
+          alvo.alt = img.alt || "";
+          over.hidden = false;
+          document.body.style.overflow = "hidden";
+        });
+        // Cursor de zoom SÓ onde o clique amplia de verdade — mesmo filtro do handler,
+        // inclusive o tamanho. Sem a checagem de largura, a foto da Olívia (160px) na
+        // tarja do topo ganhava cursor de zoom e não ampliava: seria criar clique morto
+        // justo na tela que veio corrigir clique morto. naturalWidth só existe depois da
+        // carga, daí marcar no load de quem ainda não chegou.
+        function marcaZoom(i) { if (!i.closest("a") && i.naturalWidth >= 320) i.classList.add("is-zoomable"); }
+        conteudo.querySelectorAll("img").forEach(function (i) {
+          if (i.complete) marcaZoom(i);
+          else i.addEventListener("load", function () { marcaZoom(i); }, { once: true });
+        });
+      })();
+    </script>
 
     {related.length > 0 && (
       <section class="section section--cream">
@@ -596,6 +782,34 @@ if (faq.length) {
   /* A publicação, quando há revisão, é contexto: menor, cinza, sem tarja. Fica na linha
      para quem quer saber a idade do texto — não para ser a primeira coisa lida. */
   .post-pub { font-size: 12.5px; color: var(--text-soft); }
+  .post-tempo { display: inline-flex; align-items: center; gap: 5px; }
+  .post-tempo iconify-icon { color: var(--orange); font-size: 15px; }
+
+  /* ---------- BARRA DE PROGRESSO DE LEITURA ----------
+     `fixed` no topo da janela com z-index 61, um acima do header (sticky, 60): encosta
+     nos 3px de cima dele, que é onde o olho procura esse tipo de barra. No topo da página
+     a escala é 0, então nada aparece sobre a tarja escura.
+     Anima por `transform: scaleX`, não por `width`: scaleX roda no compositor, sem
+     recalcular layout, e a barra acompanha a rolagem sem custar frame. Por isso também
+     não tem transition — ela precisa seguir o dedo 1:1, não chegar depois. */
+  .post-progresso { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 61;
+    pointer-events: none; }
+  .post-progresso span { display: block; height: 100%; background: var(--orange);
+    transform: scaleX(0); transform-origin: left center; will-change: transform; }
+
+  /* "faltam X min" no canto de baixo à ESQUERDA, porque à direita mora o dock do webinar
+     (fixed, right: 16px). Só no desktop: abaixo de 769px o dock vira barra de largura
+     inteira no rodapé e não sobra canto livre. */
+  .post-restante { position: fixed; left: 20px; bottom: 20px; z-index: 61;
+    background: var(--navy); color: var(--cream); font-size: 12px; font-weight: 700;
+    padding: 7px 13px; border-radius: 999px; pointer-events: none;
+    box-shadow: 0 6px 20px rgba(24,25,27,0.18);
+    opacity: 0; transition: opacity .25s var(--ease-soft); }
+  .post-restante.is-vis { opacity: 1; }
+  .post-restante[hidden] { display: none; }
+  .post-restante b { color: var(--orange); font-weight: 800; }
+  @media (max-width: 768px) { .post-restante { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .post-restante { transition: none; } }
   .post-author { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--text-2); }
   .post-author iconify-icon { color: var(--orange); font-size: 18px; }
   .post-hero { margin: 28px 0 8px; border-radius: var(--r-24); overflow: hidden; aspect-ratio: 16/8; }
