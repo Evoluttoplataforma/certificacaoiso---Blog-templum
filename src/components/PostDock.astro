@@ -1,0 +1,367 @@
+---
+// Dock de leitura — três pílulas fixas na margem DIREITA do artigo:
+//   ↑  volta ao topo
+//   ☰  abre os tópicos do post (o mesmo `sumario` do <details> e do trilho)
+//   ➤  compartilha
+//
+// Referência visual: antihype.com.br/long/* (pílula translúcida, empilhada na quina).
+// Aqui a pílula é creme/branca em vez de azul, que é a paleta da marca.
+//
+// Cinco decisões que não são óbvias:
+//   1. Nasce ESCONDIDO e só entra depois de ~1 tela de rolagem. No topo da página o
+//      botão "voltar ao topo" é clique morto, e clique morto é justo o que o relatório
+//      do Clarity de 20/08/2026 mandou parar de criar.
+//   2. É translúcido de propósito (blur + 92% de opacidade). Ele fica SOBRE o texto no
+//      celular, onde não há margem; deixar a linha adivinhável por baixo é o que evita
+//      a sensação de conteúdo tapado.
+//   3. O botão de tópicos SÓ existe se o post tem sumário (3+ seções) e desaparece no
+//      longform >=1180px, onde o trilho da margem já mostra a mesma lista aberta na
+//      tela. Dois índices simultâneos foi o erro corrigido em 21/08/2026 nos 279 posts
+//      com sumário escrito à mão — não repetir.
+//   4. Compartilhar abre a folha NATIVA do aparelho só no TOQUE (navigator.share +
+//      pointer:coarse): ali ela leva ao app que o leitor já usa, e um painel nosso
+//      seria uma escolha a mais antes da mesma ação. No desktop — onde o Chrome também
+//      tem navigator.share, mas o menu do sistema é estranho a quem lê no computador —
+//      abre o painel com WhatsApp, LinkedIn e copiar link.
+//   5. UTM só nos canais EXPLÍCITOS (WhatsApp/LinkedIn), onde se sabe o destino.
+//      A folha nativa e o "copiar link" entregam a URL limpa: quem cola um link no
+//      Slack ou num e-mail não deveria carregar utm_medium=whatsapp para sempre.
+//
+// Colisão com o que já é fixo na tela: no desktop, o float do WhatsApp (bottom 26px,
+// 56px de altura, z 900) — daí o bottom de 100px aqui. No celular não há nada fixo no
+// rodapé desde 21/08/2026 (ver Base.astro), então o dock sobe só o suficiente para
+// ficar longe da barra do navegador.
+const { sumario = [], titulo = "", url = "", temTrilho = false } = Astro.props;
+const compartilhaWhats = `https://api.whatsapp.com/send?text=${encodeURIComponent(`${titulo} ${url}?utm_source=compartilhado&utm_medium=whatsapp`)}`;
+const compartilhaIn = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`${url}?utm_source=compartilhado&utm_medium=linkedin`)}`;
+---
+
+<div class="pdock-wrap" data-pdock-wrap>
+  <!-- Véu: fecha o painel com um toque em qualquer lugar. No celular ele também escurece
+       o texto, que é o que separa "estou navegando" de "estou lendo". -->
+  <div class="pdock-veu" data-pdock-veu hidden></div>
+
+  <nav class="pdock" data-pdock aria-label="Atalhos de leitura">
+    <button class="pdock-b" type="button" data-pdock-topo aria-label="Voltar ao topo">
+      <iconify-icon icon="solar:arrow-up-bold"></iconify-icon>
+    </button>
+
+    {sumario.length > 0 && (
+      <button
+        class:list={["pdock-b", "pdock-b--indice", temTrilho && "tem-trilho"]}
+        type="button"
+        data-pdock-abre="indice"
+        aria-label="Tópicos deste artigo"
+        aria-expanded="false"
+        aria-controls="pdock-indice"
+      >
+        <iconify-icon icon="material-symbols:format-list-bulleted-rounded"></iconify-icon>
+      </button>
+    )}
+
+    <button
+      class="pdock-b"
+      type="button"
+      data-pdock-share
+      aria-label="Compartilhar este artigo"
+      aria-expanded="false"
+      aria-controls="pdock-share"
+    >
+      <iconify-icon icon="material-symbols:send-rounded"></iconify-icon>
+    </button>
+  </nav>
+
+  {sumario.length > 0 && (
+    <div class="pdock-painel" id="pdock-indice" data-pdock-painel="indice" hidden>
+      <div class="pdock-painel-h">
+        <span>Neste artigo</span>
+        <span class="pdock-painel-n">{sumario.length} seções</span>
+        <button class="pdock-x" type="button" data-pdock-fecha aria-label="Fechar tópicos">
+          <iconify-icon icon="solar:close-circle-linear"></iconify-icon>
+        </button>
+      </div>
+      <ol>
+        {sumario.map((s) => (
+          <li><a href={`#${s.id}`} data-trk-event="link-dock"><span>{s.titulo}</span></a></li>
+        ))}
+      </ol>
+    </div>
+  )}
+
+  <div class="pdock-painel pdock-painel--share" id="pdock-share" data-pdock-painel="share" hidden>
+    <div class="pdock-painel-h">
+      <span>Compartilhar</span>
+      <button class="pdock-x" type="button" data-pdock-fecha aria-label="Fechar">
+        <iconify-icon icon="solar:close-circle-linear"></iconify-icon>
+      </button>
+    </div>
+    <a class="pdock-share-op" href={compartilhaWhats} target="_blank" rel="noopener" data-pdock-canal="whatsapp">
+      <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon> WhatsApp
+    </a>
+    <a class="pdock-share-op" href={compartilhaIn} target="_blank" rel="noopener" data-pdock-canal="linkedin">
+      <iconify-icon icon="mdi:linkedin"></iconify-icon> LinkedIn
+    </a>
+    <button class="pdock-share-op" type="button" data-pdock-copiar>
+      <iconify-icon icon="solar:link-minimalistic-bold"></iconify-icon> Copiar link
+    </button>
+  </div>
+
+  <!-- aria-live: o "Link copiado" é a única confirmação de que o clique fez algo. -->
+  <div class="pdock-toast" data-pdock-toast role="status" aria-live="polite" hidden></div>
+</div>
+
+<script is:inline define:vars={{ titulo }}>
+  (function () {
+    var wrap = document.querySelector("[data-pdock-wrap]");
+    if (!wrap) return;
+    var dock = wrap.querySelector("[data-pdock]");
+    var veu = wrap.querySelector("[data-pdock-veu]");
+    var toast = wrap.querySelector("[data-pdock-toast]");
+    var paineis = {};
+    wrap.querySelectorAll("[data-pdock-painel]").forEach(function (p) {
+      paineis[p.getAttribute("data-pdock-painel")] = p;
+    });
+    var suave = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var ev = function (n) { if (window.clarityEvent) window.clarityEvent(n); };
+
+    // --- aparecer / desaparecer -------------------------------------------------------
+    // Uma tela de rolagem (innerHeight, com piso de 600px) em vez de uma % do documento:
+    // o gatilho tem que significar "o leitor já rolou o bastante para querer voltar", e
+    // isso é uma medida de TELA, igual em post de 800 e de 4.000 palavras.
+    var rolou = false, fimNaTela = false, mostrando = false, avisado = false;
+    function aplicar() {
+      var m = rolou && !fimNaTela;
+      if (m === mostrando) return;
+      mostrando = m;
+      dock.classList.toggle("on", m);
+      if (!m) fechar();
+      if (m && !avisado) { avisado = true; ev("post_dock_visto"); }
+    }
+    function checar() {
+      var r = (window.scrollY || document.documentElement.scrollTop || 0) > Math.max(600, innerHeight);
+      if (r === rolou) return;
+      rolou = r;
+      aplicar();
+    }
+    addEventListener("scroll", checar, { passive: true });
+    checar();
+
+    // --- sai da frente do pedido do fim do artigo -------------------------------------
+    // Mesma regra do card de webinar em WebinarDock.astro: enquanto o formulário de
+    // consultoria (ou o CTA genérico) está na tela, o dock some. Não é por estética —
+    // ali o alvo do polegar é "Enviar", e uma pílula de 46px na borda direita, na altura
+    // dos campos, é convite a tocar no lugar errado. Voltar ao topo pode esperar três
+    // dedos de rolagem; o formulário é o motivo da página existir.
+    var fim = document.querySelector(".lead-form, .post-cta");
+    if (fim && window.IntersectionObserver) {
+      new IntersectionObserver(function (e) {
+        fimNaTela = e[0].isIntersecting;
+        aplicar();
+      }, { rootMargin: "-40px 0px -40px 0px" }).observe(fim);
+    }
+
+    // --- paineis ---------------------------------------------------------------------
+    var aberto = null;
+    function fechar() {
+      if (!aberto) return;
+      paineis[aberto].hidden = true;
+      var b = wrap.querySelector('[aria-controls="pdock-' + aberto + '"]');
+      if (b) { b.setAttribute("aria-expanded", "false"); b.classList.remove("is-on"); }
+      veu.hidden = true;
+      aberto = null;
+    }
+    function abrir(nome, botao) {
+      if (aberto === nome) { fechar(); return; }
+      fechar();
+      aberto = nome;
+      paineis[nome].hidden = false;
+      veu.hidden = false;
+      botao.setAttribute("aria-expanded", "true");
+      botao.classList.add("is-on");
+      ev("post_dock_" + nome);
+    }
+    veu.addEventListener("click", fechar);
+    // O X existe porque no celular a folha COBRE a fileira de botões: sem ele, fechar
+    // depende de acertar o pedaço de texto que sobrou acima da folha.
+    wrap.querySelectorAll("[data-pdock-fecha]").forEach(function (b) {
+      b.addEventListener("click", fechar);
+    });
+    addEventListener("keydown", function (e) { if (e.key === "Escape") fechar(); });
+
+    // --- topo -------------------------------------------------------------------------
+    wrap.querySelector("[data-pdock-topo]").addEventListener("click", function () {
+      ev("post_dock_topo");
+      fechar();
+      scrollTo({ top: 0, behavior: suave ? "smooth" : "auto" });
+    });
+
+    // --- tópicos ----------------------------------------------------------------------
+    var bIndice = wrap.querySelector('[data-pdock-abre="indice"]');
+    if (bIndice) {
+      bIndice.addEventListener("click", function () { abrir("indice", bIndice); });
+      // Fecha ao escolher a seção: o painel cobre metade da tela no celular, e o leitor
+      // pediu para IR ao tópico, não para continuar olhando a lista.
+      paineis.indice.addEventListener("click", function (e) {
+        if (e.target.closest("a")) fechar();
+      });
+    }
+
+    // --- compartilhar ------------------------------------------------------------------
+    var bShare = wrap.querySelector("[data-pdock-share]");
+    var limpo = location.origin + location.pathname; // não carrega o utm com que o leitor CHEGOU
+    function avisar(txt) {
+      toast.textContent = txt;
+      toast.hidden = false;
+      clearTimeout(avisar.t);
+      avisar.t = setTimeout(function () { toast.hidden = true; }, 2200);
+    }
+    // Folha nativa SÓ no toque. O Chrome do macOS e do Windows também implementa
+    // navigator.share, e ali ela abre um menu do sistema operacional que a maioria de
+    // quem lê no desktop nunca usou — enquanto WhatsApp/LinkedIn/copiar são os três
+    // destinos que esse leitor de fato usa. No celular é o contrário: a folha nativa
+    // abre o app certo em um toque.
+    var noToque = matchMedia("(hover: none) and (pointer: coarse)").matches;
+    bShare.addEventListener("click", function () {
+      if (navigator.share && noToque) {
+        ev("post_dock_share_nativo");
+        navigator.share({ title: titulo, url: limpo }).catch(function () {});
+        return;
+      }
+      abrir("share", bShare);
+    });
+    paineis.share.querySelectorAll("[data-pdock-canal]").forEach(function (a) {
+      a.addEventListener("click", function () {
+        ev("post_dock_share_" + a.getAttribute("data-pdock-canal"));
+        fechar();
+      });
+    });
+    wrap.querySelector("[data-pdock-copiar]").addEventListener("click", function () {
+      ev("post_dock_share_copiar");
+      function ok() { avisar("Link copiado"); fechar(); }
+      // Caminho legado: a Clipboard API não existe fora de https/localhost e é negada
+      // em parte dos navegadores embutidos de app (Instagram, Facebook), de onde vem
+      // uma fatia do acesso por celular. Se os dois falharem, o aviso é curto de
+      // propósito — o toast é uma pílula de uma linha e uma URL inteira estouraria.
+      function legado() {
+        var t = document.createElement("textarea");
+        t.value = limpo;
+        t.setAttribute("readonly", "");
+        t.style.cssText = "position:fixed;top:-100px;opacity:0";
+        document.body.appendChild(t);
+        t.select();
+        var deu = false;
+        try { deu = document.execCommand("copy"); } catch (e) {}
+        t.remove();
+        if (deu) ok();
+        else avisar("Copie da barra de endereços");
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(limpo).then(ok, legado);
+      } else {
+        legado();
+      }
+    });
+  })();
+</script>
+
+<style>
+  .pdock-wrap {
+    position: fixed; right: 14px; bottom: 76px; z-index: 940;
+    /* pointer-events no wrap seria uma parede invisível sobre o texto: o wrap tem a
+       largura do botão, mas o véu (filho) ocupa a tela inteira. Cada filho reativa. */
+    pointer-events: none;
+  }
+  @media (min-width: 769px) {
+    /* Alinhado no MESMO eixo do float do WhatsApp (right 26 + 56/2 = 54) e 18px acima
+       dele. Duas colunas de botão flutuante na mesma quina, desalinhadas, lê como bug. */
+    .pdock-wrap { right: 30px; bottom: 100px; }
+  }
+
+  .pdock {
+    display: flex; flex-direction: column; gap: 8px; pointer-events: auto;
+    opacity: 0; transform: translateY(10px); visibility: hidden;
+    transition: opacity .24s var(--ease-soft), transform .24s var(--ease-soft), visibility .24s;
+  }
+  .pdock.on { opacity: 1; transform: none; visibility: visible; }
+
+  .pdock-b {
+    width: 46px; height: 40px; border-radius: 100px; cursor: pointer;
+    display: grid; place-items: center; font-size: 19px; color: var(--navy);
+    /* O corte diagonal creme/branco é o que dá o volume da referência sem sombra dura. */
+    background: linear-gradient(112deg, var(--cream) 0 46%, #fff 46% 100%);
+    border: 1px solid var(--border-2);
+    box-shadow: 0 1px 2px rgba(24,25,27,0.05), 0 10px 24px -8px rgba(24,25,27,0.18);
+    backdrop-filter: blur(6px);
+    transition: color .15s var(--ease-soft), border-color .15s var(--ease-soft),
+                transform .15s var(--ease-soft);
+  }
+  @media (min-width: 769px) { .pdock-b { width: 48px; height: 44px; font-size: 20px; } }
+  .pdock-b:hover { color: var(--orange-ink); border-color: rgba(255,89,37,0.45); }
+  .pdock-b:active { transform: scale(0.94); }
+  .pdock-b.is-on { background: var(--navy); border-color: var(--navy); color: var(--cream); }
+
+  /* Longform em tela larga: o trilho da margem já é este índice, aberto. */
+  @media (min-width: 1180px) { .pdock-b--indice.tem-trilho { display: none; } }
+
+  .pdock-veu { position: fixed; inset: 0; z-index: -1; pointer-events: auto;
+    background: rgba(24,25,27,0.28); }
+  .pdock-veu[hidden] { display: none; }
+  @media (min-width: 769px) { .pdock-veu { background: transparent; } }
+
+  /* Painel: no desktop sai À ESQUERDA dos botões (a quina direita é estreita); no
+     celular vira folha de baixo, largura toda — lista de 15 seções não cabe em 200px. */
+  .pdock-painel {
+    position: absolute; bottom: 0; right: calc(100% + 10px); width: 270px;
+    pointer-events: auto; background: var(--surface); color: var(--text);
+    border: 1px solid var(--border-2); border-radius: var(--r-16);
+    box-shadow: var(--shadow-lift); padding: 12px 4px 8px 12px;
+    max-height: min(62vh, 460px); overflow: auto; overscroll-behavior: contain;
+  }
+  .pdock-painel[hidden] { display: none; }
+  .pdock-painel-h { display: flex; align-items: baseline; gap: 8px; padding: 0 8px 8px 0;
+    font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--text-soft); }
+  .pdock-painel-n { text-transform: none; letter-spacing: 0; font-weight: 700; }
+  .pdock-x { margin-left: auto; margin-right: 6px; align-self: center; background: none;
+    border: 0; padding: 0; display: grid; place-items: center; font-size: 20px;
+    color: var(--text-faint); cursor: pointer; }
+  .pdock-x:hover { color: var(--text-2); }
+
+  .pdock-painel ol { list-style: none; margin: 0; padding: 0; counter-reset: pd; }
+  .pdock-painel li { counter-increment: pd; }
+  .pdock-painel li a { display: flex; gap: 8px; padding: 7px 8px 7px 0; font-size: 13.5px;
+    line-height: 1.35; font-weight: 600; color: var(--text-2); text-decoration: none; }
+  .pdock-painel li a::before { content: counter(pd, decimal-leading-zero); flex: none;
+    font-weight: 800; font-size: 10.5px; color: var(--text-faint); padding-top: 3px; }
+  .pdock-painel li a:hover { color: var(--orange-ink); }
+
+  .pdock-share-op { display: flex; align-items: center; gap: 10px; width: 100%;
+    padding: 10px 8px 10px 0; font-family: inherit; font-size: 14px; font-weight: 700;
+    color: var(--text-2); background: none; border: 0; text-align: left; cursor: pointer;
+    text-decoration: none; }
+  .pdock-share-op iconify-icon { font-size: 18px; color: var(--orange); flex: none; }
+  .pdock-share-op:hover { color: var(--orange-ink); }
+
+  .pdock-toast { position: absolute; bottom: 0; right: calc(100% + 10px); white-space: nowrap;
+    pointer-events: none; background: var(--navy); color: var(--cream); border-radius: 100px;
+    padding: 8px 14px; font-size: 12.5px; font-weight: 700; box-shadow: var(--shadow-card); }
+  .pdock-toast[hidden] { display: none; }
+
+  @media (max-width: 768px) {
+    .pdock-painel {
+      position: fixed; left: 0; right: 0; bottom: 0; width: auto; max-height: 70vh;
+      border-radius: var(--r-20) var(--r-20) 0 0; border-bottom: 0;
+      padding: 14px 8px calc(14px + env(safe-area-inset-bottom, 0px)) 18px;
+    }
+    .pdock-painel li a { font-size: 15px; padding: 10px 8px 10px 0; }
+    .pdock-share-op { font-size: 15.5px; padding: 12px 8px 12px 0; }
+    /* 44px de alvo no toque — mesmo critério do ✕ do dock do webinar. */
+    /* margin-block, e não a shorthand `margin`: ela apagaria o margin-left:auto que
+       joga o ✕ para a borda direita da folha. */
+    .pdock-x { font-size: 26px; min-width: 44px; min-height: 44px; margin-block: -10px; }
+    .pdock-toast { right: 0; bottom: calc(100% + 10px); }
+  }
+
+  @media print { .pdock-wrap { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .pdock { transition: none; } }
+</style>

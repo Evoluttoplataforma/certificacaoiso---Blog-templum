@@ -3,6 +3,7 @@ import Base from "../layouts/Base.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import LeadForm from "../components/LeadForm.astro";
 import WebinarCard from "../components/WebinarCard.astro";
+import PostDock from "../components/PostDock.astro";
 import { catMeta } from "../data/categorias.js";
 import { ctaParaNorma } from "../data/cta-norma.js";
 import { ancorarSecoes, injetarCtaMeio, removerSumarioEscrito, temSumarioEscrito, envolverTabelas } from "../lib/artigo.js";
@@ -631,6 +632,13 @@ if (faq.length) {
         </div>
       </section>
     )}
+
+    <!-- Atalhos de leitura na margem direita (topo · tópicos · compartilhar).
+         Fora do .post-grid de propósito: é `position: fixed`, não participa do fluxo, e
+         dentro da grade ele viraria uma terceira coluna de 46px na conta do CSS.
+         `temTrilho` desliga o botão de tópicos no longform >=1180px, onde o .post-rail
+         já mostra a MESMA lista aberta na margem — ver o componente. -->
+    <PostDock sumario={sumario} titulo={d.title} url={url} temTrilho={longform} />
   </article>
 </Base>
 
