@@ -4,13 +4,15 @@ import { categorias } from "../data/categorias.js";
 import { produtos } from "../data/produtos.js";
 const TEMPLUM = "https://templum.com.br";
 ---
-<a href="/form/?utm_source=blog&utm_medium=top-banner&origem=top-banner" class="top-banner">
-  <iconify-icon icon="solar:fire-bold"></iconify-icon>
-  <span class="tb-full"><strong>Garantia de 200%:</strong> certifique ou devolvemos o dobro do investimento.</span>
-  <span class="tb-short"><strong>Garantia de 200%</strong> — o dobro de volta</span>
-  <span class="tb-link">Falar com especialista <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></span>
-</a>
-
+{/* A tarja preta de "Garantia de 200%" saiu em 24/08/2026. Era o 4º pedido da mesma
+    coisa acima da dobra e aparecia nas 1.035 páginas — inclusive na /form/, mandando
+    o leitor para o formulário em que ele já estava. É a mesma decisão que tirou o CTA
+    do topo e a sidebar do artigo em 21/08 (ver o comentário em [slug].astro): CTA
+    repetido não soma clique, divide, porque o leitor aprende a pular o formato antes de
+    ler a oferta.
+    Para quem for ler a série depois: a queda em top-banner a partir desta data é ISTO,
+    não sazonalidade. A garantia continua no /form/ (onde decide a conversão) e o
+    "Falar com especialista" continua no header, que é sticky. */}
 <header class="hd">
   <div class="hd-inner">
     <a href="/" class="templum-logo" aria-label="Blog Certificação ISO — Templum">
@@ -67,13 +69,6 @@ const TEMPLUM = "https://templum.com.br";
 </header>
 
 <style>
-  .top-banner { background: var(--surface-deep); color: var(--cream); display: flex; align-items: center; justify-content: center; gap: 10px; padding: 9px 24px; font-size: 13px; font-weight: 600; text-align: center; flex-wrap: wrap; text-decoration: none; }
-  .top-banner .tb-short { display: none; }
-  .top-banner iconify-icon { color: var(--orange); font-size: 15px; }
-  .top-banner .tb-link { display: inline-flex; align-items: center; gap: 5px; color: var(--orange); font-weight: 700; }
-  .top-banner .tb-link iconify-icon { color: var(--orange); transition: transform .3s var(--ease-soft); }
-  .top-banner .tb-link:hover iconify-icon { transform: translateX(3px); }
-
   .hd { position: sticky; top: 0; z-index: 60; background: rgba(255,255,255,0.92); backdrop-filter: saturate(180%) blur(14px); -webkit-backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid var(--border); }
   .hd-inner { display: flex; align-items: center; gap: 14px; height: 66px; max-width: 1400px; margin: 0 auto; padding: 0 24px; }
   .templum-logo { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
@@ -129,9 +124,6 @@ const TEMPLUM = "https://templum.com.br";
        exatamente o que deve sobrar, e por isso vem depois dela. */
     .hd-actions .btn.hd-contato { display: inline-flex; padding: 9px 16px; }
     .hd-search { display: none; }
-    .top-banner { font-size: 12px; padding: 7px 14px; gap: 7px; flex-wrap: nowrap; white-space: nowrap; }
-    .top-banner .tb-full, .top-banner .tb-link { display: none; }
-    .top-banner .tb-short { display: inline; }
   }
 </style>
 <script is:inline>
