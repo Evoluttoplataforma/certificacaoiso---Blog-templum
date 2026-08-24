@@ -21,6 +21,11 @@ const TEMPLUM = "https://templum.com.br";
     </a>
     <nav class="hd-nav" aria-label="Navegação do blog">
       <a class="hd-link" href="/">Início</a>
+      {/* Porta de saída para o site principal. Ficava só como botão "Site Templum" ao
+          lado do "Falar com especialista" — dois CTAs outline disputando o mesmo canto,
+          e o leitor que queria conhecer a empresa não procura isso na régua de botões,
+          procura no menu. Virou item de navegação e saiu de lá. */}
+      <a class="hd-link" href={`${TEMPLUM}/?utm_source=blog&utm_medium=header-nav&origem=blog-menu`}>Conheça a Templum</a>
       {/* Menu por CERTIFICAÇÃO (data/produtos.js), não por categoria editorial: é assim
           que o leitor busca. "Outros temas" mantém as categorias acessíveis — sem elas,
           todo post que não é de nenhuma das 13 certificações (auditoria, gestão, IA)
@@ -49,7 +54,6 @@ const TEMPLUM = "https://templum.com.br";
           procurar" e o Contato é um "quero falar" — e é o segundo que gera lead. A busca
           continua a um toque no menu (item "Buscar artigos") e no campo da home. */}
       <a href="/form/?utm_source=blog&utm_medium=header-contato&origem=header-contato" class="btn btn--primary btn--sm hd-contato" data-trk-event="cta-header-contato">Contato</a>
-      <a href={`${TEMPLUM}`} class="btn btn--outline btn--sm hd-ghost">Site Templum</a>
       <a href="/form/?utm_source=blog&utm_medium=header&origem=header" class="btn btn--dark btn--sm">Falar com especialista</a>
     </div>
     <button class="hd-burger" aria-label="Abrir menu" id="hdBurger"><iconify-icon icon="solar:hamburger-menu-linear"></iconify-icon></button>
@@ -57,12 +61,12 @@ const TEMPLUM = "https://templum.com.br";
   <div class="hd-mobile" id="hdMobile">
     <nav>
       <a href="/">Início</a>
+      <a href={`${TEMPLUM}/?utm_source=blog&utm_medium=header-mobile-nav&origem=blog-menu`}>Conheça a Templum</a>
       <span class="hd-mobile-head">Certificações</span>
       {produtos.map((p) => <a class="hd-mobile-sub" href={p.url}>{p.nome}</a>)}
       <span class="hd-mobile-head">Outros temas</span>
       {categorias.map((c) => <a class="hd-mobile-sub" href={`/categoria/${c.slug}/`}>{c.nome}</a>)}
       <a href="/buscar/">Buscar artigos</a>
-      <a href={TEMPLUM}>Site Templum</a>
     </nav>
     <a href="/form/?utm_source=blog&utm_medium=header-mobile&origem=header-mobile" class="btn btn--primary btn--block">Falar com especialista</a>
   </div>
@@ -110,12 +114,21 @@ const TEMPLUM = "https://templum.com.br";
   .hd-search:hover { color: var(--orange); border-color: var(--orange); }
   .hd-search iconify-icon { font-size: 20px; }
   .hd-burger { display: none; margin-left: auto; font-size: 26px; color: var(--text); padding: 6px; background: none; border: 0; cursor: pointer; }
-  .hd-mobile { display: none; flex-direction: column; gap: 12px; padding: 18px 24px 26px; background: var(--surface); border-bottom: 1px solid var(--border); }
+  /* O painel rola por conta própria, e isso não é enfeite: ele vive dentro do `.hd`,
+     que é `position: sticky; top: 0`. Com 27 linhas (13 certificações + 11 categorias)
+     ele passa de 1200px, e um sticky mais alto que a tela não devolve o que ficou
+     embaixo — a página rola por baixo do header e o resto do menu fica inalcançável.
+     Era exatamente aí que "Outros temas" caía. `dvh` porque a barra de endereço do
+     Safari/Chrome no celular muda a altura útil, e `100vh` mediria a tela sem ela. */
+  .hd-mobile { display: none; flex-direction: column; gap: 12px; padding: 18px 24px 26px;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    max-height: calc(100dvh - 66px); overflow-y: auto;
+    overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
   .hd-mobile.open { display: flex; }
   .hd-mobile nav { display: flex; flex-direction: column; }
   .hd-mobile nav a { padding: 11px 0; font-weight: 600; border-bottom: 1px solid var(--border); color: var(--text); }
   .hd-mobile nav a.hd-mobile-sub { padding-left: 14px; font-size: 14.5px; font-weight: 500; color: var(--text-mid); }
-  @media (max-width: 1100px) { .hd-nav, .hd-ghost { display: none; } .hd-burger { display: inline-flex; } }
+  @media (max-width: 1100px) { .hd-nav { display: none; } .hd-burger { display: inline-flex; } }
   /* O Contato é mobile-only: no desktop o header já tem "Falar com especialista". */
   .hd-contato { display: none; }
   @media (max-width: 560px) {
