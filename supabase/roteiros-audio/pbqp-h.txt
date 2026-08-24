@@ -1,0 +1,29 @@
+# Roteiro do resumo em áudio — /pbqp-h/
+# 21º áudio da leva. Entrou depois de o conserto do ranking mostrar que este post é o
+# 13º do blog (288 cliques), e não o 58º — 237 dos cliques dele estavam arquivados sob
+# /pbqp-h-2/, que é 301 pra cá.
+#
+# O /principais-duvidas-sobre-o-geric/ já tem áudio, então aqui a conexão com o GERIC
+# fica só na ORDEM (o PBQP-H vem primeiro) — sem repetir as contas da Caixa, que são o
+# conteúdo do outro resumo.
+PBQP-H, em resumo.
+
+É a certificação de qualidade da construção civil, e é exigida pela Caixa e por outras instituições financeiras para liberar financiamento à produção, além de habilitar a construtora em licitação municipal e estadual.
+
+Uma distinção que confunde: o PBQP-H é o programa do governo federal. Quem certifica de fato é o SiAC, o Sistema de Avaliação da Conformidade de Empresas de Serviços e Obras, que está dentro dele — e o SiAC é construído com base na ISO nove mil e um.
+
+O SiAC tem dois níveis, e a diferença entre eles é numérica. O nível B exige setenta por cento dos requisitos da norma implementados e quarenta por cento dos serviços controlados. O nível A exige cem por cento dos requisitos e cem por cento dos serviços controlados. Os dois valem três anos, com auditoria de manutenção anual e recertificação no terceiro ano.
+
+E não, você não precisa passar pelo B antes do A. A empresa escolhe o nível. O que costuma decidir isso não é ambição, é quantidade de obra: o nível B existe justamente para a construtora que não tem serviços suficientes em andamento para mostrar ao auditor.
+
+O que leva ao ponto mais importante deste resumo. Os pré-requisitos não são documentais, são operacionais.
+
+Você precisa de obra em andamento. Na auditoria de certificação é preciso comprovar que a empresa já executou pelo menos cinquenta por cento dos serviços controlados — e, no dia da auditoria, estar executando um quarto deles. Construtora com uma obra só, já em fase de acabamento, não tem o que mostrar.
+
+Precisa também da ART, a Anotação de Responsabilidade Técnica, emitida em nome da empresa que busca a certificação, não do engenheiro em nome próprio. Precisa do CNAE de construção e das atividades de construção civil no contrato social. E precisa ter a responsabilidade pela empreitada global da obra — não a parcial.
+
+Sobre o GERIC, a análise de crédito da Caixa: a ordem importa e é sempre a mesma. O PBQP-H é pré-requisito para a Caixa aceitar o GERIC. O banco só avalia o crédito de construtora que comprove padrão de qualidade na execução e na gestão. E como a análise do GERIC é mais rápida que a implementação do PBQP-H, o caminho mais curto para o crédito é rodar as duas frentes em paralelo — não uma depois da outra.
+
+Uma atenção à versão, que derruba projeto: o regimento em vigor é o SiAC dois mil e vinte e um. Desde dois mil e vinte e dois só são emitidos certificados nessa versão. Entre as mudanças, duas mexem no dia a dia: o PPRA foi substituído pelo PGR, alinhado à nova Norma Regulamentadora número um; e os laboratórios de controle tecnológico precisam ser acreditados pelo Inmetro, ou estar em processo de acreditação. Material que descreve o SiAC de dois mil e dezoito está desatualizado.
+
+No artigo estão as oito etapas da implementação, a lista completa de serviços controlados e o que mudou em cada revisão.
