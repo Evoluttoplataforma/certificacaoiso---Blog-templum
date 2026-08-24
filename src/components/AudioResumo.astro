@@ -217,10 +217,18 @@ const rotuloDur = duracao
   .post-audio.is-tocando .post-audio-play .i-pause { display: block; }
 
   .post-audio-meio { flex: 1 1 auto; min-width: 0; }
-  .post-audio-topo { display: flex; align-items: baseline; gap: 8px; }
-  .post-audio-label { font-size: 14.5px; font-weight: 800; color: var(--text); }
+  .post-audio-topo { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+  /* Em tela estreita o rótulo corta em vez de quebrar: uma segunda linha empurraria
+     a barra para fora do alinhamento com o play e o chip de velocidade. */
+  .post-audio-label {
+    font-size: 14.5px; font-weight: 800; color: var(--text);
+    min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
   .post-audio-dur,
-  .post-audio-tempo { font-size: 12.5px; color: var(--text-soft); font-variant-numeric: tabular-nums; }
+  .post-audio-tempo {
+    flex: none; white-space: nowrap;
+    font-size: 12.5px; color: var(--text-soft); font-variant-numeric: tabular-nums;
+  }
 
   /* Barra: 3px em repouso, some quase por completo antes do play — o player fechado
      precisa parecer uma linha de convite, não um controle de mídia esperando input. */
@@ -256,9 +264,13 @@ const rotuloDur = duracao
     .post-audio { gap: 11px; padding: 11px 13px; }
     .post-audio-play { width: 40px; height: 40px; font-size: 16px; }
     .post-audio-label { font-size: 13.5px; }
-    /* O seletor de velocidade é o primeiro a sair no celular: ocupa a mesma largura
-       de um dedo e é o controle que menos gente usa num resumo de 90 segundos. */
-    .post-audio-vel { display: none; }
+    /* O seletor de velocidade fica — quem ouve no celular é justamente quem quer
+       acelerar. Ele encolhe em vez de sumir: 34px de alvo (o dedo acerta) num chip
+       mais estreito, e o texto do meio cede a largura porque já tem min-width: 0. */
+    .post-audio-vel {
+      padding: 0 9px; min-width: 42px; height: 34px;
+      display: grid; place-items: center; font-size: 11.5px;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
