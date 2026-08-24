@@ -1,0 +1,29 @@
+# Roteiro do resumo em áudio — /principais-duvidas-sobre-o-geric/
+# Post de intenção altíssima (construtora buscando financiar obra) e cheio de número
+# concreto. Abre pelos dois erros de expectativa que a página resolve — "GERIC não é
+# dinheiro" e "incide sobre custo, não sobre VGV" — porque são o que faz a construtora
+# chegar ao banco com a conta errada.
+# "VGV" escrito por extenso na primeira menção: a sigla soletrada em TTS sai instável.
+GERIC da Caixa: as principais dúvidas, em resumo.
+
+Comecemos pelos dois mal-entendidos que custam mais caro.
+
+Primeiro: o GERIC não é dinheiro liberado. É uma capacidade de contratação — a declaração de até quanto de custo de obra a Caixa aceita contratar com aquele CNPJ. O valor fica registrado no sistema do banco, e a Caixa nem emite certificado de GERIC. Ele só se converte em recurso quando um empreendimento específico é contratado.
+
+Segundo: o GERIC incide sobre o custo de obra mais o BDI. Nunca sobre o valor geral de vendas. Considerando um custo em torno de sessenta e cinco por cento do valor geral de vendas, um GERIC de vinte milhões de reais sustenta um empreendimento de aproximadamente trinta milhões. Fazer a conta pelo valor de vendas cheio é a origem da maior parte das expectativas furadas na primeira conversa com o banco.
+
+Os pré-requisitos para entrar no processo: pelo menos um ano de CNPJ ativo com movimentação, faturamento acima de quinhentos mil reais no último ano fiscal, CNAE de construção e registro no CREA.
+
+Sobre quanto se aprova, não existe fórmula pública — mas existe um detalhe da análise que muda tudo: ela considera os três últimos exercícios com peso decrescente. O ano mais recente pesa mais, o mais antigo pesa menos. Um ano fraco ou zerado justamente no exercício de maior peso derruba o resultado — e é o que acontece com quem passou dois anos esperando aprovação de projeto sem faturar. Por isso a pergunta certa não é "quanto eu consigo hoje", e sim o que fazer nos próximos três exercícios para chegar ao banco com o limite já construído.
+
+Agora o prazo, e aqui está a informação mais acionável de todo o artigo. O GERIC leva de noventa a cento e vinte dias, quando a documentação contábil e fiscal já está organizada. O PBQP-H leva de seis a oito meses de implementação em média.
+
+Ou seja: o gargalo do cronograma é a certificação, não o GERIC. Quem deixa o PBQP-H para quando o banco exigir descobre que a exigência chega antes do certificado sair, e o empreendimento fica parado esperando auditoria. O caminho mais curto é começar a certificação e, em paralelo, organizar a documentação do GERIC.
+
+E tem um detalhe da auditoria que pega muita gente: ela exige obra em andamento, com serviços controlados em execução — o certificador precisa ver cerca de oito serviços acontecendo. Construtora com uma obra só, já em acabamento, não tem o que mostrar.
+
+E o ponto que quase nenhum material explica: aprovado não é liberado. A Caixa faz duas contas separadas. A primeira é a capacidade de contratação, que é o GERIC. A segunda é a liquidez — quanto dinheiro entra de fato na obra, que depende da evolução da obra, das vendas financiadas e da linha para pessoa jurídica. A construtora costuma tratar as duas como uma só.
+
+Três últimas informações de planejamento. A validade do GERIC é anual, reavaliada pelo faturamento atualizado: não é conquista definitiva, é um ativo do CNPJ que precisa ser alimentado todo ano. A Caixa não financia empreendimento na linha de apoio à produção com custo de obra abaixo de quinze milhões de reais — isso precisa ser considerado antes da compra do terreno. E evite a chamada locação de GERIC, alugar a capacidade de crédito de outra empresa: custa entre seis e dez por cento do valor da obra e coloca em xeque a integridade do pleito junto ao banco.
+
+No artigo estão os seis erros que mais atrasam a aprovação, os quatro pilares da contratação e um autodiagnóstico.

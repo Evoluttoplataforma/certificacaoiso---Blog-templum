@@ -207,6 +207,10 @@ function normalize(p, catImgMap = {}) {
       keywords: p.seo_keywords || [],
       ogImage: p.og_image || undefined,
       readingTime: p.reading_time_min || undefined,
+      // Resumo em áudio (ver scripts/audio-resumo.mjs). Só ~20 posts têm; nos outros
+      // isto é undefined e o player nem chega a ser renderizado.
+      audioUrl: p.audio_url || undefined,
+      audioDuration: p.audio_duration_s || undefined,
     },
   };
 }

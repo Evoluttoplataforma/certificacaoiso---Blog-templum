@@ -1,0 +1,22 @@
+# Roteiro do resumo em áudio — /iso-9001-requisitos-tudo-que-voce-precisa-saber/
+# O corpo deste post é quase só índice de links, com vários itens "em construção".
+# O FAQ é que tem substância: onde estão os requisitos, o que é aplicável, qual
+# cláusula mais aparece em auditoria e por que a ordem numérica não é cronograma.
+# O roteiro sai daí — é o que o ouvinte que buscou "requisitos" precisa saber.
+Os requisitos da ISO nove mil e um, em resumo.
+
+Primeiro, onde eles estão: os requisitos auditáveis ficam nas cláusulas quatro a dez. As cláusulas um, dois e três tratam de escopo, referências normativas e termos — não contêm requisito nenhum. Se alguém te disser que a norma tem dez requisitos, são sete.
+
+São estes. Quatro: contexto da organização. Cinco: liderança. Seis: planejamento. Sete: apoio, que reúne recursos, competência, conscientização, comunicação e informação documentada. Oito: operação. Nove: avaliação de desempenho. E dez: melhoria.
+
+Agora três coisas que respondem à maioria das dúvidas.
+
+Primeira: todos os requisitos se aplicam, mas a norma permite justificar a não aplicabilidade de alguns quando eles não fazem sentido para o seu escopo. O caso clássico é projeto e desenvolvimento, na cláusula oito, para quem só fabrica sob especificação do cliente. A justificativa precisa estar documentada, e nenhuma exclusão pode afetar a sua capacidade de entregar produto ou serviço conforme.
+
+Segunda: não existe manual da qualidade obrigatório, nem os seis procedimentos obrigatórios. Isso era da versão de dois mil e oito. A versão atual substituiu tudo por informação documentada — a empresa mantém os documentos e registros que precisa, e é ela quem define formato e quantidade.
+
+Terceira, e essa é a mais útil na prática: qual requisito mais aparece na auditoria. Em volume de achados, a cláusula oito, operação, porque é onde o sistema encontra a rotina real — controle de processos, provedores externos, produção, liberação e tratamento de saídas não conformes. Mas em gravidade, os que mais derrubam sistemas são outros dois: liderança, quando a direção não participa, e avaliação de desempenho, quando os indicadores existem mas ninguém os analisa.
+
+E um último ponto que economiza meses: você não precisa implementar na ordem numérica. A numeração é organização da norma, não cronograma. Na prática funciona começar pelo contexto e pelos processos, definir liderança e política, levantar riscos e objetivos, e só então detalhar a operação — deixando avaliação de desempenho e melhoria para quando já houver dado a analisar.
+
+No artigo cada requisito tem o seu próprio detalhamento, item por item.

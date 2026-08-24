@@ -1,0 +1,22 @@
+# Roteiro do resumo em áudio — /procedimentos-obrigatorios-2/
+# A resposta é um número, e ele contraria o que o ouvinte aprendeu: zero. Abrir com
+# isso é o resumo inteiro em três segundos; o resto do roteiro explica por quê.
+Procedimentos obrigatórios da ISO nove mil e um, em resumo.
+
+Se você chegou procurando a lista, a resposta é direta: ela não existe mais. A ISO nove mil e um, na versão de dois mil e quinze, não exige um único procedimento documentado. Zero.
+
+A lista que muita gente ainda usa era da versão de dois mil e oito: seis procedimentos com nome e sobrenome, mais o manual da qualidade. Era uma lista fechada, e a implantação virava um exercício de produzir aqueles seis textos — muitas vezes copiados de outra empresa, com o nome trocado.
+
+A revisão de dois mil e quinze trocou tudo isso por um termo único, "informação documentada", e passou a exigir resultado em vez de listar documentos. O que a norma continua nomeando são quatro coisas que você precisa manter: o escopo do sistema de gestão, a política da qualidade, os objetivos da qualidade e a informação necessária para apoiar a operação dos processos. Esse quarto item é o único aberto — e é nele que entram procedimentos e instruções de trabalho, se você decidir que precisa deles.
+
+Em troca, veio uma lista bem maior de coisas que você precisa reter como evidência: competência das pessoas, resultados de monitoramento, calibração, análise dos requisitos do cliente, avaliação de fornecedores, tratamento de saídas não conformes, auditoria interna, análise crítica pela direção.
+
+Repare na inversão. A lista antiga pedia texto que descrevia intenção. A atual pede registro que prova execução. É por isso que o auditor de hoje passa mais tempo pedindo evidência com data do que lendo procedimento.
+
+O manual da qualidade também deixou de ser obrigatório. Você pode ter um, e há cliente que pede, mas não é requisito.
+
+Seguir a lista antiga hoje traz dois problemas concretos. Primeiro: você escreve o que ninguém pede — procedimento de ação preventiva, por exemplo, quando a versão de dois mil e quinze eliminou esse conceito e o substituiu pela abordagem de riscos e oportunidades. Segundo, e mais caro: você cuida bem dos seis textos e mal dos registros. E é nos registros que a auditoria procura evidência de funcionamento. Sistema com procedimento impecável e indicador sem histórico não passa na fase dois.
+
+Uma coisa que vale lembrar: cada documento a mais precisa ser aprovado, controlado, treinado, revisado e recolhido quando muda — para sempre. Sistema enxuto não é sistema pobre. É sistema que a empresa consegue manter depois que a consultoria sai.
+
+No artigo está a régua para decidir o que escrever e o que não escrever.

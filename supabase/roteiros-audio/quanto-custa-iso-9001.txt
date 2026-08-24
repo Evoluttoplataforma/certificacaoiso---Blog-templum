@@ -1,0 +1,22 @@
+# Roteiro do resumo em áudio — /quanto-custa-iso-9001/
+# O corpo deste post é antigo e bem promocional (visita a mil reais, salário de
+# analista). O FAQ, que também é a página, tem a substância boa: os três blocos de
+# custo, por que consultoria e certificação não podem vir no mesmo pacote e o custo
+# recorrente do ciclo. O roteiro puxa dali — é o que responde à pergunta do título.
+Quanto custa a ISO nove mil e um, em resumo.
+
+Não existe tabela única, mas existe uma estrutura, e ela vale para qualquer empresa. O custo se divide em três blocos distintos.
+
+O primeiro é a implantação: a consultoria, quando houver, mais as horas internas da sua equipe — que é justamente o item que quase ninguém coloca no orçamento.
+
+O segundo é a auditoria de certificação, cobrada pelo organismo certificador e calculada por dias de auditoria, conforme o número de colaboradores, de unidades e a complexidade da operação.
+
+O terceiro é a manutenção do ciclo de três anos: auditorias anuais e a recertificação no fim. Esse bloco é o que mais pega gente de surpresa. Quem monta o orçamento só com a auditoria inicial descobre no segundo ano que o certificado tem custo recorrente.
+
+Uma coisa que não é opcional: consultoria e certificação são contratações separadas, com empresas diferentes. O organismo que emite o certificado não pode prestar consultoria a quem ele audita, porque isso comprometeria a imparcialidade. Quando alguém oferece o pacote fechado, consultoria e certificação juntas, isso normalmente significa certificado sem acreditação reconhecida. Não é economia.
+
+O que faz o preço subir: número de colaboradores no escopo, quantidade de unidades, complexidade e risco da atividade, e deslocamento dos auditores. Ou seja, reduzir custo começa por definir bem o escopo — sem excluir a operação que o seu cliente quer ver certificada.
+
+E dá para implantar sem consultoria? Dá, e sai mais barato em dinheiro. O custo se desloca para tempo: alguém da equipe precisa dominar a norma e ter horas dedicadas ao projeto. Funciona melhor em empresa que já tem processo organizado. Quando não é o caso, o retrabalho costuma consumir a economia.
+
+No artigo estão as faixas de investimento por formato de consultoria e o passo a passo até o certificado.

@@ -1,0 +1,28 @@
+# Roteiro do resumo em áudio — /como-fazer-o-levantamento.../
+# Este post e o /como-identificar-aspecto-impacto-ambiental/ tratam do mesmo tema e
+# ambos estão na leva. Para os áudios não virarem o mesmo texto duas vezes, a divisão é:
+# lá, o CONCEITO (causa/efeito, entrada/saída); aqui, o MÉTODO (as quatro etapas, a
+# pontuação por severidade/ocorrência/detecção e o exemplo da máquina).
+Como fazer o levantamento de aspectos e impactos ambientais, em resumo.
+
+O LAIA é o processo sistemático de identificar, avaliar e gerenciar os aspectos e impactos ambientais das atividades, produtos e serviços da empresa. É a base de qualquer sistema de gestão ambiental — e também insumo do licenciamento, já que a resolução Conama duzentos e trinta e sete torna o estudo de impacto exigência legal para atividades potencialmente poluidoras.
+
+O método tem quatro etapas.
+
+A primeira é identificar os aspectos. Isso significa mapear todos os processos, da aquisição de matéria-prima até a disposição final dos resíduos, olhando entradas e saídas de cada um. E inclui as atividades de apoio, que quase sempre ficam de fora: manutenção, limpeza, transporte.
+
+Um detalhe que muda o resultado: considere as condições normais, as anormais — partida, parada, manutenção — e as situações de emergência, como vazamento, incêndio e transbordo. É nas condições anormais e de emergência que moram os impactos mais graves, e é justamente o que mais se esquece.
+
+Veja como fica concreto no exemplo de uma máquina operatriz. Os aspectos são: consumo de energia elétrica; geração de resíduos sólidos, como cavaco, óleo usado e estopa contaminada; geração de efluentes, como fluido de corte e água de limpeza; emissões atmosféricas, como névoa de óleo e material particulado; e geração de ruído e vibração.
+
+A segunda etapa é avaliar a significância dos impactos. Três dimensões: severidade, que é a magnitude e a gravidade; ocorrência, que é a frequência; e detecção, que é a capacidade de identificar e controlar o impacto antes que ele se torne significativo. A norma não exige um método específico — matriz, análise de risco, o que servir. O que ela cobra é que o critério exista, esteja documentado e seja aplicado de forma consistente a todos os aspectos.
+
+Voltando à máquina: resíduo sólido e efluente saem como impacto significativo, pelo potencial de contaminação de solo e água. Energia e emissões, como moderado. Ruído, baixo.
+
+A terceira etapa é definir as ações de controle para os impactos significativos — prevenção, controle, correção ou compensação — com responsável, prazo e recurso definidos. No exemplo: programa de gerenciamento de resíduos com segregação na fonte, sistema de tratamento de efluente com separação de óleo, e exaustão com filtragem do ar.
+
+E a quarta é implementar e monitorar, com indicadores mensuráveis, reporte periódico à direção e — o que mais se negligencia — treinamento. Todo funcionário precisa saber quais aspectos estão associados ao que ele faz.
+
+Uma última: levantamento que não muda em anos costuma ser sinal de que virou documento de gaveta. Revise sempre que houver processo novo, produto novo, equipamento novo, mudança de legislação ou incidente.
+
+No artigo estão as tabelas completas de aspecto e impacto e os benefícios do levantamento bem feito.

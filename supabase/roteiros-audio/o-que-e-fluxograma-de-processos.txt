@@ -1,0 +1,22 @@
+# Roteiro do resumo em áudio — /o-que-e-fluxograma-de-processos/
+# Segundo post em cliques (1.986) e o mais "genérico" da lista — o corpo é didático e
+# um pouco solto. O que diferencia é o FAQ: quatro símbolos bastam, fluxograma não é
+# mapeamento, e a ISO 9001 NÃO exige fluxograma. Começar pelo "não exige" é o oposto
+# do que o leitor espera de um blog de certificação, e é a informação correta.
+Fluxograma de processo, em resumo.
+
+É a representação gráfica da sequência de atividades de um processo, do início ao fim, usando símbolos padronizados. Serve para enxergar de uma vez o que um procedimento escrito levaria páginas para descrever — e para revelar retrabalho, gargalo e etapa sem dono.
+
+Vamos começar por uma coisa que costuma surpreender: a ISO nove mil e um não exige fluxograma. A norma exige que a organização determine os seus processos e as interações entre eles, mas não impõe formato. Fluxograma é a forma mais usada porque é a mais fácil de auditar e de treinar, não porque a norma mande fazer assim.
+
+Sobre os símbolos: existem dezenas, mas quatro resolvem a maioria dos processos administrativos. Oval para início e fim. Retângulo para atividade ou tarefa. Losango para decisão, que sempre abre dois ou mais caminhos. E seta para o sentido do fluxo. Fluxograma com excesso de símbolos fica ilegível — o que derrota o propósito dele.
+
+Dos tipos, dois dominam. O linear mostra a sequência de trabalho com os pontos de decisão, e é bom para explicar uma tarefa específica. O funcional, também chamado de fluxograma de raias, divide o processo entre áreas e departamentos — é o que você usa quando o fluxo atravessa a empresa e precisa ficar claro quem entrega o quê para quem.
+
+O passo a passo tem cinco etapas: definir o processo e o objetivo; listar todas as atividades e decisões, sem se preocupar com a ordem ainda; identificar o responsável por cada atividade; desenhar usando os símbolos certos; e então analisar o desenho criticamente, procurando gargalo, atividade desnecessária e oportunidade de simplificação.
+
+Essa última etapa é a que quase todo mundo pula. Sem análise, o fluxograma é só mais um documento na pasta. E uma dica que muda a qualidade do resultado: envolva quem executa o processo no dia a dia. Ninguém conhece o processo melhor do que essa pessoa, e o desenho feito sem ela costuma retratar o processo que a empresa acha que tem.
+
+Por fim, uma distinção que confunde muita gente: fluxograma não é mapeamento de processos. O fluxograma é o desenho da sequência. O mapeamento é o trabalho completo — entradas, saídas, responsáveis, sistemas, indicadores e riscos. O fluxograma é uma das entregas do mapeamento, não o mapeamento inteiro.
+
+No artigo estão os exemplos dos dois tipos, a simbologia completa e os softwares para desenhar.

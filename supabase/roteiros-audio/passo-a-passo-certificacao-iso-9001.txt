@@ -1,0 +1,25 @@
+# Roteiro do resumo em áudio — /passo-a-passo-certificacao-iso-9001/
+# O corpo é bem comercial (compara formatos de consultoria e termina em oferta). O FAQ
+# tem o que o ouvinte precisa: o que realmente alonga o cronograma, por que a auditoria
+# interna é obrigatória e o erro do primeiro passo. Os sete passos ficam, o pitch sai.
+O passo a passo da certificação ISO nove mil e um, em resumo.
+
+São sete passos, nesta ordem.
+
+Um: definir o método de implementação — equipe própria, consultoria presencial ou consultoria digital. Dois: montar a equipe do projeto. Três: diagnóstico e planejamento, com cronograma, prazos e responsáveis. Quatro: envolver os colaboradores. Cinco: implementar os requisitos da norma e treinar as pessoas. Seis: executar a auditoria interna. E sete: contratar a auditoria de certificação.
+
+Vale destacar três coisas que essa lista não deixa óbvias.
+
+A primeira é o erro do primeiro passo. Começar escrevendo documento antes de diagnosticar os processos é o que gera um sistema que descreve uma empresa que não existe. E o auditor compara o que está escrito com o que acontece.
+
+A segunda é sobre o quarto passo, envolver as pessoas — que parece o mais macio da lista e é, na prática, a principal dificuldade para conseguir o certificado. E não é culpa de ninguém: só a notícia de que vai ter implantação já gera desconfiança e boato sobre demissão. Isso é natureza humana. Por isso a comunicação da direção sobre o projeto não é gentileza, é gestão de risco.
+
+A terceira é o que realmente alonga o cronograma. Não é escrever documento. É operar o sistema tempo suficiente para gerar registro que o auditor possa amostrar — somado à agenda do organismo certificador entre a fase um e a fase dois da auditoria.
+
+E a auditoria interna, no passo seis, não é opcional. Ela e a análise crítica pela direção são requisitos da própria norma, e a auditoria de certificação verifica se as duas aconteceram. Chamar o organismo certificador sem ter rodado esse ciclo é o motivo mais banal de adiamento da fase dois.
+
+Duas informações finais. Consultoria não é obrigatória: dá para implantar com equipe própria, desde que alguém domine a norma e tenha tempo dedicado. Mas quem emite o certificado nunca é a consultoria — são contratações separadas, por regra de imparcialidade.
+
+E o certificado vale três anos, com auditorias de manutenção normalmente anuais e recertificação ao fim do ciclo. Não conformidade grave sem tratamento, ou sistema que deixou de operar, pode levar à suspensão e ao cancelamento.
+
+No artigo estão os formatos de implementação comparados e o detalhe de cada um dos sete passos.

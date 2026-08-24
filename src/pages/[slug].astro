@@ -4,6 +4,7 @@ import ArticleCard from "../components/ArticleCard.astro";
 import LeadForm from "../components/LeadForm.astro";
 import WebinarCard from "../components/WebinarCard.astro";
 import PostDock from "../components/PostDock.astro";
+import AudioResumo from "../components/AudioResumo.astro";
 import { catMeta } from "../data/categorias.js";
 import { ctaParaNorma } from "../data/cta-norma.js";
 import { ancorarSecoes, injetarCtaMeio, removerSumarioEscrito, temSumarioEscrito, envolverTabelas } from "../lib/artigo.js";
@@ -225,6 +226,22 @@ const schemas = [
     abstract: tldr || undefined,
     wordCount: wordCount || undefined,
     keywords: keywords.length ? keywords : undefined,
+    // AudioObject: declara que o artigo tem versão narrada. Serve pra dois públicos —
+    // o Google (que usa `audio` em Article) e os assistentes/LLMs que respondem "tem
+    // versão em áudio?". `duration` em ISO-8601 (PT1M32S) porque é o formato que o
+    // schema.org exige; segundo cru é ignorado silenciosamente.
+    audio: d.audioUrl
+      ? {
+          "@type": "AudioObject",
+          contentUrl: d.audioUrl,
+          encodingFormat: "audio/mpeg",
+          name: `Resumo em áudio: ${d.title}`,
+          duration: d.audioDuration
+            ? `PT${Math.floor(d.audioDuration / 60)}M${d.audioDuration % 60}S`
+            : undefined,
+          inLanguage: "pt-BR",
+        }
+      : undefined,
   },
   {
     "@context": "https://schema.org",
@@ -333,6 +350,15 @@ if (faq.length) {
             <p>{tldr}</p>
             {tldrLongo && <button type="button" class="post-tldr-more">ver tudo</button>}
           </div>
+        )}
+
+        <!-- Resumo em áudio, entre a Resposta rápida e o sumário. A ordem é a do leitor
+             decidindo o que fazer com o artigo: leio a resposta em uma frase → escolho
+             ouvir OU navegar → leio. Abaixo do sumário, o player ficaria depois da
+             decisão de navegar, quando ela já foi tomada; acima da Resposta rápida,
+             empurraria a resposta que o leitor (e a IA que cita o post) vem buscar. -->
+        {d.audioUrl && (
+          <AudioResumo url={d.audioUrl} duracao={d.audioDuration} titulo={d.title} />
         )}
 
         <!-- Sumário: details FECHADO por padrão, e não uma lista aberta. Aberta, ela

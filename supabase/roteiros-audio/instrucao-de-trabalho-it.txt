@@ -1,0 +1,25 @@
+# Roteiro do resumo em áudio — /instrucao-de-trabalho-it/
+# Escrito sem a sigla "IT": o TTS pt-BR lê "IT" como a palavra inglesa "it" tão
+# frequentemente quanto lê "i-tê", e o resumo inteiro gira em torno desse termo.
+# "Instrução de trabalho" é mais longo e nunca sai errado.
+Instrução de trabalho, em resumo.
+
+É o documento que descreve como executar uma tarefa específica, passo a passo, com detalhe suficiente para que duas pessoas diferentes cheguem ao mesmo resultado.
+
+A confusão mais comum é com procedimento, e a régua é simples: o procedimento fala de processo, a instrução de trabalho fala de tarefa. Se o texto diz "o setor de compras avalia o fornecedor e o gestor aprova", é procedimento. Se diz "abra a planilha, confira os campos e, se algum estiver vazio, devolva ao solicitante", é instrução de trabalho.
+
+E a ISO nove mil e um exige instrução de trabalho? Não. A norma não cita esse documento como obrigatório em nenhum requisito, e desde a versão de dois mil e quinze não existe lista de documentos obrigatórios. O que ela pede é a informação documentada que a própria organização determinar como necessária. Quem determina é você.
+
+Então a pergunta certa não é "a norma exige?". É: o que acontece se essa tarefa for feita errado? Escreva a instrução quando o erro for caro ou irreversível; quando a tarefa for rara, porque ninguém lembra a sequência; quando houver troca de pessoas, por turno, férias ou rotatividade; e, principalmente, quando o resultado depender de critério. "Apertar bem" e "conferir se está ok" são as duas frases que mais geraram não conformidade na história das auditorias.
+
+E não escreva quando a tarefa é óbvia para quem foi treinado, ou quando o sistema já força o caminho certo. Instrução que ninguém usa é passivo: precisa ser revisada, treinada e controlada para sempre.
+
+O modelo cabe em uma página, com sete campos: identificação com versão e data; objetivo e aplicação; a função responsável — cargo, não nome de pessoa; os recursos, incluindo instrumento calibrado; os passos numerados, um verbo por passo, no imperativo; o critério de aceitação; e o que fazer se der errado.
+
+Desses sete, o critério de aceitação é o que o auditor mais cobra e o que mais falta. E critério é número, não julgamento: dois por cento, quarenta newton-metro. "Dentro do especificado" não é critério.
+
+E agora o achado mais útil deste artigo: a não conformidade mais comum em auditoria não é falta de instrução de trabalho. É instrução desatualizada em uso no posto. A versão três está no sistema, e a folha plastificada na bancada é a versão um, porque alguém melhorou o processo e não passou pelo documento.
+
+Faça a si mesmo a pergunta que antecipa isso: quando o processo mudar, quem lembra de recolher a folha da bancada? Se a resposta é "ninguém", o problema não é o documento. É o controle.
+
+No artigo tem o modelo comentado campo por campo e um exemplo preenchido de ponta a ponta.

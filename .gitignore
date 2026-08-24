@@ -23,3 +23,8 @@ npm-debug.log*
 # Ancorado na raiz de propósito: sem a barra da frente, a regra pegava qualquer pasta
 # chamada "conteudo" em qualquer nível — inclusive supabase/posts/, que É pra versionar.
 /conteudo/
+
+# MP3 dos resumos em áudio, cacheados por hash do roteiro (scripts/audio-resumo.mjs).
+# O que vai pro ar mora no Supabase Storage; isto é só pra não repagar o TTS numa
+# retentativa. ~50MB e crescendo — não entra no repo do blog.
+.audio-cache/

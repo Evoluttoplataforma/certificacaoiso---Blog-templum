@@ -1,0 +1,29 @@
+# Roteiro do resumo em áudio — /iso-9001-requisitos-7-5-informacao-documentada/
+# Entra na leva no lugar de raio-x-empresas-certificadas (estatística de 2005, sem data).
+# Numeração escrita como "sete ponto cinco": em dígitos, o TTS pt-BR lê "sete vírgula
+# cinco", que é outro número.
+# A tese do post é contraintuitiva e é o que fica: o sete ponto cinco serve para ter
+# MENOS documento, não mais.
+O requisito sete ponto cinco da ISO nove mil e um, em resumo.
+
+É o requisito que mais gera dúvida, e por um motivo específico: foi ele que eliminou a lista de documentos obrigatórios. Em vez de dizer o que escrever, ele diz como decidir — e cobra que a decisão faça sentido.
+
+São três itens.
+
+O primeiro, sete ponto cinco ponto um, define o que entra no sistema: a informação documentada exigida pela norma, mais a que a organização determinar como necessária. E existe uma nota dentro do próprio requisito que quase ninguém cita, mas que é a régua de tudo: a extensão da informação documentada pode variar conforme o tamanho da organização, a complexidade dos processos e a competência das pessoas.
+
+O que o auditor pergunta aqui é: por que vocês decidiram documentar isso e não aquilo? E a resposta não pode ser "porque o consultor mandou". Precisa vir do risco do processo.
+
+O segundo item, sete ponto cinco ponto dois, trata de criar e atualizar. Três exigências curtas: identificação e descrição, com título, data e autor; formato e meio; e análise e aprovação por alguém competente.
+
+Repare no que não está escrito: não há exigência de campo de assinatura, de cabeçalho padronizado, de logotipo, de numeração num formato específico nem de matriz de revisões no rodapé. Tudo isso é prática de mercado, não requisito. E o item autoriza explicitamente fugir do documento de texto: vídeo, foto, planilha e tela de sistema são formatos válidos.
+
+O terceiro, sete ponto cinco ponto três, é o controle — e é o que mais aparece em relatório de auditoria. A informação precisa estar disponível onde e quando necessário, protegida, com versão controlada, recuperável e com critério de retenção.
+
+"Onde e quando necessário" é a frase que o auditor testa com os pés: ele caminha até o posto de trabalho e pede o documento. Se a pessoa não sabe onde está, ou abre uma versão antiga, o requisito não está atendido — não importa o que o sistema mostre na sala da qualidade.
+
+As três não conformidades mais frequentes são sempre as mesmas. Versão desatualizada em uso: sistema na versão quatro, bancada na versão dois. Registro que ninguém acha: o auditor pede a ficha de um lote de oito meses atrás e a busca leva vinte minutos — recuperabilidade é requisito explícito, não conveniência. E documento de origem externa sem controle: a própria norma comprada anos atrás, a legislação já revogada, a especificação do cliente na versão anterior, todas circulando como se valessem.
+
+E fecho com a leitura que quase ninguém faz: o sete ponto cinco é aliado de quem quer sistema enxuto. Como ele devolveu a decisão para a empresa, é o texto que você usa para defender ter menos documento — desde que a decisão esteja apoiada em risco, competência e complexidade.
+
+No artigo cada subitem está aberto, com o que o auditor faz para verificar cada linha.

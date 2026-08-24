@@ -1,0 +1,27 @@
+# Roteiro do resumo em áudio — /checklist-preparacao-auditoria-interna-iso/
+# ATENÇÃO: o post tem uma tabela com nomes de cláusula da ISO 9001:2008 rotulados como
+# ":2015" ("Cláusula 7.1 → Realização do Produto", "Cláusula 8.1 → Medição, Análise e
+# Melhoria"). Na versão 2015, 7 é Apoio, 8 é Operação e 9 é Avaliação de Desempenho.
+# O roteiro NÃO reproduz esse mapeamento — narra o método de construir o checklist, que
+# está correto. Ver o relatório: a tabela do post precisa de correção editorial.
+Checklist de preparação para auditoria interna ISO, em resumo.
+
+O checklist é a ferramenta que organiza a auditoria interna: ela funciona como roteiro, garante que todos os requisitos da norma sejam revisados e que nada seja esquecido. Mas o valor dela está em como é construída, não em ter uma.
+
+São quatro passos.
+
+O primeiro é identificar os requisitos. Cada norma tem os seus, então o checklist da ISO nove mil e um não serve para a ISO quatorze mil e um nem para a ISO vinte e sete mil e um. Vale ir ao texto da norma, não a um modelo de terceiro.
+
+O segundo é definir os critérios de avaliação — e este é o passo que separa o checklist útil do checklist decorativo. Os critérios precisam ser claros, objetivos e mensuráveis, e alinhados aos objetivos da organização. "Verificar se a satisfação do cliente é medida" não é critério. "Pesquisa de satisfação aplicada, com taxa de retorno e ação sobre os resultados" é.
+
+O terceiro é comunicar e treinar. E não só a equipe de auditoria: também os funcionários dos departamentos que vão ser auditados. Quando as pessoas entendem o propósito e o processo, o engajamento sobe e a auditoria deixa de ser vivida como inspeção.
+
+O quarto é simular. Rodar uma auditoria de teste com o checklist, tratada com a mesma seriedade da real, documentando as observações. A simulação revela as falhas do próprio checklist antes da auditoria valer — e reduz a ansiedade da equipe, que é um fator real de qualidade do resultado.
+
+Durante a execução, o checklist mantém o auditor nos aspectos críticos e assegura cobertura. E a documentação precisa registrar mais do que não conformidade: também os pontos positivos e as sugestões de melhoria. É esse material que vira o relatório para a direção.
+
+Depois da auditoria, duas coisas. Primeira: analisar as não conformidades — classificar por gravidade e urgência, investigar a causa fundamental, recomendar a ação corretiva, monitorar a implementação e avaliar a eficácia. Note que são seis etapas, e a última é a mais esquecida: sem avaliar eficácia, você não sabe se resolveu.
+
+Segunda: atualizar o próprio checklist. Ele é documento vivo. Incorporar requisito novo, ajustar critério, incluir processo novo, excluir processo obsoleto — e garantir que a equipe saiba da mudança. Checklist que não muda entre ciclos é sinal de auditoria que não aprendeu nada com a anterior.
+
+No artigo estão os modelos de tabela para montar o seu e os critérios por norma.

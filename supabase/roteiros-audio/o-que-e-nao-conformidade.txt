@@ -1,0 +1,30 @@
+# Roteiro do resumo em áudio — /o-que-e-nao-conformidade/
+# O achado deste post é contraintuitivo e vale o áudio inteiro: NEM TODA não
+# conformidade pede ação corretiva, e o tratamento pode acabar em três passos. Quem
+# não sabe disso abre análise de causa raiz para tudo e afoga o sistema.
+# Siglas escritas por extenso — "NC" e "RNC" saem errado no TTS.
+Não conformidade: o que é e como tratar, em resumo.
+
+A definição da ISO nove mil está em quatro palavras: não atendimento de um requisito. E requisito é uma necessidade ou expectativa — do cliente, do produto, da lei, do regulamento, da própria norma.
+
+Então o cliente que reclama que o produto não foi entregue como combinado está apontando uma não conformidade: o requisito dele não foi atendido. Não precisa de auditoria para existir.
+
+Antes da prática, um ponto de cultura que decide se o sistema funciona: encontrar uma não conformidade é bom. Existem empresas em que abrir uma é motivo de punição, e já houve caso de virar desconto na folha de pagamento. Isso é o contrário do princípio de melhoria contínua — porque ensina a esconder problema, e problema escondido aparece na auditoria ou no cliente.
+
+E identificar não é tarefa só da pessoa da qualidade: o financeiro, o RH e o assistente de operação também apontam. Vale dizer "possível" não conformidade, porque nem tudo é — às vezes é oportunidade de melhoria, ideia ou sugestão.
+
+Agora o tratamento, em três passos.
+
+Primeiro: identificação e ação imediata. Diante de uma saída não conforme, a norma dá as opções — corrigir, segregar, conter, devolver, suspender a entrega, informar o cliente ou obter autorização para aceitação sob concessão.
+
+Segundo: descrição. É o relatório de não conformidade, e ele registra a origem, se o caso é reincidente, qual requisito não foi atendido, o que aconteceu com evidências, o que foi afetado e a ação de correção já tomada.
+
+E aqui vem o ponto que muita gente não sabe: para muitas não conformidades, a história acaba aqui. Identificação, ação imediata e descrição: está tratada. Não precisa de mais nada.
+
+Porque não é toda não conformidade que exige ação corretiva. A norma diz para avaliar a necessidade de agir para eliminar as causas — avaliar, não fazer sempre. Confundir as duas coisas é o que enche o sistema de análises de causa raiz que ninguém conclui.
+
+Quando a ação corretiva é necessária, ela tem três etapas. Analisar a causa, com brainstorming, cinco porquês ou diagrama de Ishikawa. Depois a ação em si, que ataca o causador real e não o sintoma — um plano de ação estruturado ajuda aqui. E, por fim, a análise de eficácia: sem ela, você pode não ter eliminado a causa e o mesmo problema volta.
+
+Guarde a diferença: correção é agir rápido no sufoco. Ação corretiva vai contra a causa. Seu sistema de gestão não foi feito para apagar incêndio.
+
+No artigo tem a planilha de registro de não conformidades e o detalhe de cada etapa.

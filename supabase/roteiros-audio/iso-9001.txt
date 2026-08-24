@@ -1,0 +1,23 @@
+# Roteiro do resumo em áudio — /iso-9001/
+# Números escritos em palavras de propósito: o TTS lê "R$ 2.000" como "erre cifrão dois
+# ponto zero zero zero" e "9001:2015" com pausa no meio. Em palavras, sai como um
+# brasileiro fala. Siglas idem — "SGQ" viraria "esse gê quê".
+ISO nove mil e um, em resumo.
+
+É a norma internacional que define os requisitos de um sistema de gestão da qualidade. Em uma frase: ela padroniza como a sua empresa trabalha, para que o que você promete ao cliente saia igual todas as vezes. Serve para qualquer porte e qualquer setor — indústria, serviço, terceiro setor, órgão público.
+
+Vamos ao que você provavelmente veio buscar: quanto custa e quanto demora.
+
+São duas contas separadas, pagas para empresas diferentes. A primeira é implantar o sistema de gestão. Na Templum, isso parte de dois mil reais por mês, num plano de seis meses, para empresas de até dez funcionários. Acima de cinquenta funcionários, o plano é de doze meses, a partir de três mil e quinhentos por mês.
+
+A segunda conta é a auditoria de certificação, paga direto ao organismo certificador. E ela não acontece uma vez só: tem manutenção todo ano e recertificação a cada três anos. Quem monta o orçamento olhando só o primeiro ano se surpreende no segundo.
+
+Uma regra que evita prejuízo: quem implanta não pode certificar. São necessariamente duas empresas. Se alguém oferece o pacote fechado "implanto e te certifico", o seu cliente pode simplesmente não aceitar esse certificado.
+
+O caminho até o certificado tem seis etapas, e é sempre o mesmo: diagnóstico; escopo e contexto; desenho dos processos e das evidências; operação assistida; auditoria interna e análise crítica pela direção; e, por fim, a auditoria de certificação.
+
+A etapa que mais derruba projeto é a operação assistida. O auditor da fase dois não procura documento bonito — ele procura evidência de que o sistema funcionou, com data. Sistema montado no mês anterior à auditoria não tem o que mostrar.
+
+E tem uma novidade que muda a decisão de quem vai começar agora: a ISO nove mil e um versão dois mil e vinte e seis já está na etapa final de votação, com publicação esperada para setembro de dois mil e vinte e seis. Até lá, vale a versão dois mil e quinze.
+
+No artigo completo estão as tabelas de custo por porte, os requisitos com a evidência que o auditor pede em cada um, e o que responder ao cliente que pediu o certificado para semana que vem.

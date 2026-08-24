@@ -1,0 +1,22 @@
+# Roteiro do resumo em áudio — /iso-14001-2/
+# O gancho é o mal-entendido licença × certificado. É a dúvida que traz gente pra este
+# post e a única coisa do artigo que, se o ouvinte errar, custa dinheiro de verdade.
+ISO quatorze mil e um, em resumo.
+
+É a norma internacional de sistemas de gestão ambiental: ela estrutura como a empresa identifica, controla e melhora os seus impactos no meio ambiente. A versão em vigor é a de dois mil e quinze, com uma emenda de dois mil e vinte e quatro que trouxe as mudanças climáticas para dentro da análise de contexto.
+
+Comecemos pelo mal-entendido que só aparece nesta norma: o certificado não substitui licença ambiental. A licença é obrigação legal, emitida pelo órgão ambiental. O certificado é voluntário, emitido por um organismo privado acreditado. Ter um não dispensa o outro.
+
+E a relação é o inverso do que muita gente imagina: a norma cobra a conformidade legal, ela não protege de nada. A ISO quatorze mil e um exige levantar os requisitos legais aplicáveis e avaliar periodicamente se estão sendo atendidos, com registro. Quem opera com licença vencida chega na auditoria com uma não conformidade pronta.
+
+A implantação leva, em média, de dez a dezoito meses. É mais que a ISO nove mil e um, por causa de dois trabalhos de campo que não têm atalho.
+
+O primeiro é o levantamento de aspectos e impactos ambientais, o LAIA: percorrer cada processo identificando o que a operação consome, gera e descarta, e avaliar a significância de cada impacto. LAIA copiado de modelo é a não conformidade mais previsível de todas, porque não corresponde à sua operação.
+
+O segundo é o levantamento dos requisitos legais: licenças, condicionantes, outorgas, resoluções do Conama, legislação estadual e municipal.
+
+E os projetos travam quase sempre nos mesmos três pontos: LAIA genérico, que não sobrevive a uma pergunta do auditor sobre um processo específico; licença vencida ou condicionante não cumprida aparecendo na auditoria; e controle operacional sem evidência — a empresa controla de fato, mas não registra, e o que não tem registro não existe para a fase dois.
+
+Uma coisa que você pode fazer hoje, sem contratar ninguém: junte as suas licenças e olhe os vencimentos e as condicionantes. É o achado mais comum de auditoria ambiental, e o mais fácil de descobrir agora.
+
+No artigo estão as seis etapas da implantação, as duas contas do investimento e o que responder ao cliente que já pediu o certificado.

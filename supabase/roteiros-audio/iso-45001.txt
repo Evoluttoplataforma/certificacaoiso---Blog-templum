@@ -1,0 +1,21 @@
+# Roteiro do resumo em áudio — /iso-45001/
+# Duas coisas datadas e acionáveis puxam este roteiro: a OHSAS morreu (e ainda circula
+# como se fosse alternativa) e a fiscalização punitiva dos riscos psicossociais já
+# começou. Prazo em cima do ouvinte vale mais que a definição da norma.
+ISO quarenta e cinco mil e um, em resumo.
+
+É a norma internacional de saúde e segurança ocupacional. Ela estrutura como a empresa identifica perigos, avalia riscos e age para evitar acidentes e doenças do trabalho. A versão vigente é a de dois mil e dezoito, com a emenda de dois mil e vinte e quatro sobre mudanças climáticas.
+
+Primeiro, um alerta: a OHSAS dezoito mil e um não existe mais. Foi cancelada em março de dois mil e vinte e um, e os certificados emitidos nela perderam a validade. Se você encontrar material apresentando a OHSAS como alternativa à ISO quarenta e cinco mil e um, esse material está desatualizado.
+
+Agora a parte que mais importa para quem opera no Brasil: como a norma conversa com a lei. A ISO quarenta e cinco mil e um é voluntária; as Normas Regulamentadoras são obrigatórias. Elas não competem — se encaixam.
+
+O PGR, o Programa de Gerenciamento de Riscos exigido pela Norma Regulamentadora número um, é essencialmente um inventário de riscos com plano de ação. É exatamente o núcleo do que a ISO quarenta e cinco mil e um pede no planejamento. Na prática: quem implementa a norma já produz a maior parte das evidências que a fiscalização do trabalho quer ver. E o contrário também vale — um PGR bem feito adianta boa parte da certificação.
+
+Se você ainda trabalha com PPRA, atenção: ele foi substituído pelo PGR.
+
+E tem um prazo que já venceu. Desde agosto de dois mil e vinte e quatro, os fatores de risco psicossociais precisam entrar no PGR nos mesmos moldes dos riscos físicos e químicos. A fiscalização punitiva começou em vinte e seis de maio de dois mil e vinte e seis. Ou seja: isso não é mais aviso, é autuação.
+
+Sobre prazo de implantação: uma empresa de porte médio costuma levar cerca de doze meses entre implementação e auditoria de certificação. O que mais mexe nesse número é o grau de risco das atividades, o número de unidades e o envolvimento da direção.
+
+No artigo estão a estrutura completa da norma, as vantagens da implantação e como funciona a auditoria de certificação.

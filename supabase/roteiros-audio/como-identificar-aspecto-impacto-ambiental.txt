@@ -1,0 +1,21 @@
+# Roteiro do resumo em áudio — /como-identificar-aspecto-impacto-ambiental/
+# Post curto (3 mil caracteres), então roteiro curto — ~1 minuto. Forçar dois minutos
+# aqui significaria inventar conteúdo que a página não tem.
+# O FAQ carrega o peso: o método entrada/saída, situação de emergência e significância.
+Aspectos e impactos ambientais: como identificar, em resumo.
+
+A definição primeiro, porque a confusão entre os dois termos atravessa todo sistema de gestão ambiental. Aspecto é a causa: o elemento da atividade, do produto ou do serviço da empresa que interage com o meio ambiente. Impacto é o efeito: a modificação do meio ambiente que resulta desse aspecto.
+
+Em exemplos fica imediato. Consumo de água é aspecto; redução da disponibilidade de recursos hídricos é o impacto. Geração de resíduo sólido é aspecto; contaminação do solo é o impacto. Emissão de material particulado é aspecto; poluição do ar é o impacto. E note: reaproveitamento de água tratada também é aspecto — com impacto positivo. Aspecto não é sinônimo de problema.
+
+Como identificar, na prática: percorra os processos e, em cada etapa, liste entradas e saídas. O que entra — água, energia, matéria-prima, produto químico. E o que sai — resíduo, efluente, emissão, ruído, calor. Cada entrada e cada saída é um aspecto candidato. Para cada um, descreva a alteração que ele provoca no meio ambiente.
+
+E aqui está o erro mais comum: considerar só a operação normal. É preciso incluir também as situações anormais e de emergência — vazamento, derramamento, falha de equipamento. É justamente onde estão os impactos mais graves.
+
+Depois de identificados, vem a parte que a norma cobra de verdade: a significância. A ISO quatorze mil e um exige que a própria empresa estabeleça os critérios para decidir qual aspecto é significativo — normalmente combinando severidade, probabilidade, abrangência, requisito legal aplicável e percepção das partes interessadas. E os aspectos significativos precisam ser tratados com controle operacional, objetivo ou plano de ação.
+
+Sobre documentação: a versão atual da norma não exige um procedimento formal, como a de dois mil e quatro pedia. Mas exige manter informação documentada dos aspectos, dos critérios e dos aspectos significativos. Ou seja: o registro é obrigatório, o formato de procedimento é opcional.
+
+E com que frequência revisar? A norma não fixa prazo. A prática usual é revisão anual, mais revisão imediata sempre que houver mudança relevante: processo novo, equipamento novo, troca de matéria-prima, mudança de legislação, obra, expansão ou incidente ambiental.
+
+No artigo tem a matriz de causa e efeito para montar o seu levantamento.

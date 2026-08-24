@@ -1,0 +1,28 @@
+# Roteiro do resumo em áudio — /as-sete-ferramentas-da-qualidade/
+# O post é enorme (28 mil caracteres) e a maior parte é exemplo prático com gráfico —
+# conteúdo que não sobrevive ao áudio. O roteiro entrega o que sobrevive: para que
+# serve cada uma, a ordem de uso (folha → Pareto → Ishikawa) e o aviso de não adotar
+# as sete de uma vez.
+As sete ferramentas da qualidade, em resumo.
+
+São técnicas para identificar, analisar e resolver problemas de processo. São chamadas de básicas porque resolvem a maior parte dos problemas do chão de fábrica e do escritório sem exigir estatística avançada.
+
+Vamos a elas, com a função de cada uma em uma frase.
+
+Folha de verificação: coletar dado, registrando o problema como ele acontece. Diagrama de Pareto: priorizar, mostrando quais causas têm maior impacto. Diagrama de Ishikawa, o espinha de peixe: levantar as causas possíveis de um problema, organizadas por categoria. Histograma: mostrar a distribuição de frequência de um conjunto de dados. Diagrama de dispersão: analisar como uma variável se comporta em relação a outra. Carta de controle: monitorar a variação de um processo ao longo do tempo. E fluxograma: mapear o processo, revelando gargalo e retrabalho.
+
+Agora a parte que vale mais que a lista: a ordem de uso.
+
+Comece pela coleta, com a folha de verificação. Sem dado, qualquer ferramenta seguinte vira palpite. Com os dados na mão, o Pareto mostra onde atacar primeiro — e o Ishikawa ajuda a levantar as causas possíveis daquele problema prioritário.
+
+Sobre o Ishikawa, uma distinção útil: ele abre o leque, organizando muitas causas possíveis em categorias — método, máquina, mão de obra, material, medição e meio ambiente. Os cinco porquês fazem o contrário: aprofundam uma causa até a raiz. Usados juntos funcionam melhor. O diagrama levanta as hipóteses, os porquês testam a mais provável.
+
+E o aviso mais importante do artigo: usar uma ferramenta sem análise prévia é prejudicial. Adotar algo que não faz sentido para a organização gera retrabalho, gasto de tempo e desmotivação de quem fez.
+
+Então escolha pelo objetivo, não pela lista. Se você quer saber a frequência com que um dado aparece, é histograma. Se quer saber como uma variável se comporta em relação a outra, é diagrama de dispersão. Entenda a tarefa primeiro, escolha a ferramenta depois.
+
+Isso elimina uma ideia muito difundida e muito errada: a de que ter qualidade exige adotar as sete.
+
+Por último: elas servem para empresa de serviço, sim. Nasceram na indústria japonesa, mas o raciocínio vale em qualquer processo com repetição e variação. Reclamação de cliente, prazo estourado, retrabalho de proposta e erro de faturamento se analisam com Pareto e Ishikawa exatamente como um defeito de peça.
+
+No artigo cada ferramenta tem um exemplo prático completo, com os gráficos.

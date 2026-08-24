@@ -1,0 +1,24 @@
+# Roteiro do resumo em áudio — /diferencas-entre-programa-5s-housekeeping/
+# Post na lista de "em alta" (cresceu 400% em 7 dias). A pergunta do título é uma
+# comparação, então o roteiro entrega a comparação em uma frase antes de explicar —
+# e usa as duas perguntas do FAQ que o corpo não responde: housekeeping basta? serve
+# para escritório?
+Programa 5S e housekeeping: qual é a diferença, em resumo.
+
+A resposta curta: housekeeping é limpeza e arrumação do ambiente — uma prática operacional. O 5S é um programa de mudança de comportamento em cinco etapas, que inclui a limpeza mas não para nela. Todo 5S tem housekeeping dentro; nem todo housekeeping vira 5S.
+
+O 5S nasceu no Japão depois da Segunda Guerra e o nome vem de cinco palavras japonesas. Seiri, classificação: separar o necessário do desnecessário. Seiton, organização: cada coisa com um lugar definido e acessível. Seiso, limpeza: manter o ambiente limpo como rotina, com cada pessoa responsável pelo seu espaço. Seiketsu, padronização: criar o padrão que sustenta os três primeiros. E shitsuke, disciplina: transformar tudo isso em hábito e em cultura.
+
+O housekeeping, por outro lado, é o conjunto de atividades regulares que mantêm o ambiente limpo, organizado e seguro: limpeza de pisos e superfícies, organização de ferramentas, reposição de consumíveis, inspeção de segurança, manutenção de iluminação e climatização, gestão de resíduos.
+
+As duas diferenças que realmente importam.
+
+A primeira é de escopo. O 5S é proativo: busca identificar e eliminar as causas da desorganização e da ineficiência, e mexe em processo e em cultura. O housekeeping tende a ser reativo: lida com a sujeira e a desorganização depois que elas aparecem.
+
+A segunda é de envolvimento. O 5S exige treinamento e participação ativa de todos, da liderança à linha de frente — cada pessoa é responsável por incorporar os princípios no seu trabalho. O housekeeping normalmente é atribuído a uma equipe específica de limpeza ou manutenção.
+
+E aí vem a pergunta prática: housekeeping é suficiente para a minha empresa? Depende do objetivo. Se a meta é ambiente limpo e seguro, resolve. Se a meta é reduzir desperdício, tempo de procura, retrabalho e variação de processo, é preciso ir até os dois últimos sensos do 5S — padronização e disciplina. São eles que transformam esforço pontual em padrão que se mantém sozinho.
+
+Uma última, que surpreende: o 5S serve para escritório, e costuma dar retorno rápido. Os desperdícios só mudam de forma — pasta duplicada, arquivo sem padrão de nome, e-mail que ninguém acha, aprovação parada. O senso de utilização aplicado a arquivo digital e o de padronização aplicado a nomenclatura resolvem problemas que ninguém enxergava como desperdício.
+
+No artigo estão os dois lados detalhados e como as duas práticas se complementam.

@@ -1,0 +1,24 @@
+# Roteiro do resumo em áudio — /iso-17025/
+# Siglas trocadas por nome completo: "Cgcre" e "RBC" não têm leitura estável em TTS
+# pt-BR, e é justamente o nome do órgão que o ouvinte precisa levar daqui.
+# A distinção acreditação × certificação abre o roteiro porque é o erro que faz
+# laboratório procurar o organismo errado.
+ISO dezessete mil e vinte e cinco, em resumo.
+
+É a norma que atesta a competência técnica de laboratórios para executar ensaios, calibrações e amostragens com resultados válidos e rastreáveis. A versão em vigor é a de dois mil e dezessete.
+
+E começamos pela distinção que confunde quase todo mundo: laboratório não é certificado, é acreditado. Certificação atesta que um sistema de gestão atende a uma norma — é o caso da ISO nove mil e um. Acreditação atesta competência técnica para executar um ensaio ou uma calibração específicos, com incerteza de medição declarada.
+
+Isso tem duas consequências práticas. A primeira: o escopo é detalhado por método, classe de ensaio e produto. Não vale para "o laboratório inteiro". A segunda: quem acredita no Brasil não é um organismo privado. É a Coordenação Geral de Acreditação do Inmetro, e dentro dela a Divisão de Acreditação de Laboratórios.
+
+Outra dúvida muito comum: a norma não se aplica a laboratório de análises clínicas. Esse tem referencial próprio, a ISO quinze mil, cento e oitenta e nove. A ISO dezessete mil e vinte e cinco cobre três atividades: ensaio, calibração, e amostragem seguida de ensaio.
+
+Para implementar, o caminho começa sempre pelo mesmo lugar: o escopo. Definir exatamente quais ensaios ou calibrações você quer acreditar. Sem isso não dá para dimensionar nada do que vem depois.
+
+E o que vem depois são quatro coisas. Método validado — normalizado e reconhecido internacionalmente, ou validado internamente por ensaios de repetibilidade, reprodutibilidade e comparação entre laboratórios. Cálculo da incerteza de medição, que expressa a dispersão dos valores e é o que dá confiança ao resultado. Rastreabilidade metrológica: a cadeia ininterrupta de calibrações que liga a sua medição a um padrão nacional ou internacional — na prática, todo equipamento que afeta o resultado precisa ser calibrado por laboratório acreditado, com incerteza declarada em cada etapa. E auditoria interna, na versão vigente da norma.
+
+Por último, a solicitação da avaliação ao Inmetro, que é conduzida por especialista do próprio órgão.
+
+Vale entender por que isso importa comercialmente: existe uma série de produtos que só entram no mercado se analisados por laboratório acreditado, e todo laboratório de ensaio acreditado e toda empresa certificada precisam calibrar equipamento em laboratório acreditado. A demanda por calibração acreditada não é opcional na cadeia — é estrutural.
+
+No artigo estão as mudanças da versão de dois mil e dezessete e o passo a passo completo da implementação.
