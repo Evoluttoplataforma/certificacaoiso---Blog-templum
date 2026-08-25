@@ -1,0 +1,28 @@
+# Roteiro do resumo em áudio — /iso-27001/
+# Dois ganchos, nesta ordem. Primeiro: a edição 2013 morreu em 31/10/2025 e o material
+# com 114 controles em 14 seções é o que mais circula — quem baixa um checklist velho
+# implementa uma norma que não é mais certificável. Segundo: o mito de que isso é
+# projeto de TI, que é o que trava a certificação DEPOIS de já contratada.
+# O corpo do post é de 2019 e está datado em tom (super-herói, vilões cibernéticos) —
+# o que sustenta este roteiro são as seções revisadas e o FAQ.
+# Siglas por extenso: SGSI, SoA, TI e LGPD não têm leitura estável em TTS pt-BR, e é
+# justamente o nome do documento que o ouvinte precisa levar daqui.
+ISO vinte e sete mil e um, em resumo.
+
+É a norma internacional de gestão da segurança da informação. Em vez de prescrever tecnologia, ela exige que a empresa identifique os riscos das suas informações e aplique controles proporcionais a esses riscos, protegendo confidencialidade, integridade e disponibilidade. A versão em vigor é a de dois mil e vinte e dois, com a emenda de dois mil e vinte e quatro que trouxe as mudanças climáticas para a análise de contexto.
+
+Um alerta antes de tudo: a edição de dois mil e treze saiu de circulação. O período de transição terminou em trinta e um de outubro de dois mil e vinte e cinco, e os certificados emitidos nela não valem mais. O jeito de reconhecer conteúdo velho é olhar o Anexo A: se um checklist, uma planilha ou uma proposta de consultoria apresentar cento e quatorze controles em quatorze seções, está descrevendo uma norma que não é mais certificável.
+
+Na versão vigente são noventa e três controles em quatro temas: trinta e sete organizacionais, oito de pessoas, quatorze físicos e trinta e quatro tecnológicos. Onze são novos, ligados sobretudo a nuvem, monitoramento e desenvolvimento seguro.
+
+E tem uma coisa sobre o Anexo A que muda como você planeja o projeto: ele não é uma lista obrigatória. Cada empresa escolhe os controles pertinentes ao seu contexto e justifica as exclusões em um documento chamado Declaração de Aplicabilidade. É exatamente isso que o auditor confere — não se você implementou os noventa e três, mas se as suas escolhas e as suas exclusões se sustentam diante dos riscos que você mesmo levantou.
+
+Agora o mito que mais atrapalha: esta não é uma norma da área de tecnologia. O apoio dela é necessário, mas o assunto é governança. Quem conduz é um comitê multidisciplinar, com direção, tecnologia, jurídico e os líderes dos principais processos. Projeto entregue só para o pessoal de tecnologia é a forma mais comum de travar a certificação depois de já contratada.
+
+Duas confusões rápidas. A ISO vinte e sete mil e dois não é certificável: é o guia que detalha como implementar cada controle. Você audita contra a vinte e sete mil e um e consulta a vinte e sete mil e dois para saber como fazer. E a Lei Geral de Proteção de Dados não é a mesma coisa que a norma: a lei é obrigatória e trata de dados pessoais, a norma é voluntária e trata de toda informação relevante para o negócio. Elas se apoiam — o sistema de gestão da vinte e sete mil e um é a estrutura que sustenta boa parte das obrigações da lei.
+
+A norma não é obrigatória por lei no Brasil, mas virou exigência de contrato: aparece como critério de habilitação em licitações, em compras de grandes empresas e em qualquer negócio que trate dados de terceiros.
+
+Sobre prazo: uma organização de porte médio costuma levar cerca de doze meses entre implementação e certificação. A auditoria acontece em dois estágios e o certificado vale três anos, com auditorias de manutenção anuais.
+
+No artigo estão as cinco etapas da implementação, os requisitos cláusula por cláusula e o que a empresa precisa investir.
