@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import TrackingKit from "../components/TrackingKit.astro";
+import Pulso from "../components/Pulso.astro";
 
 const {
   title = "Certificação ISO — Dicas para implementação e certificação nas normas ISO",
@@ -59,6 +60,13 @@ const websiteSchema = {
   },
 };
 const allSchemas = [orgSchema, websiteSchema, ...schemas];
+
+// O Pulso (caixinha de 1 clique) só existe em ARTIGO. O portão sai do page_type que
+// já chega aqui, então nenhuma página precisou ser tocada — e de quebra ficam de fora,
+// por construção, as duas páginas onde ele seria contraproducente: a /form e a
+// /presentes/<slug>, que JÁ são a conversão. Perguntar "em que pé você está?" a quem
+// está com o formulário aberto é atrapalhar o que se quer que aconteça.
+const temPulso = clarityTags?.page_type === "artigo";
 ---
 
 <!doctype html>
@@ -267,6 +275,10 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
         <a class="whatsapp-float float-desktop" href="https://wa.me/5519993521270" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
           <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon>
         </a>
+        {/* Pulso: o único fixo NOVO do celular desde que os três antigos saíram — e o
+            único que se apaga sozinho. Aparece uma vez por visitante, some ao responder
+            ou fechar, e não volta por 90 dias. Ver Pulso.astro. */}
+        {temPulso && <Pulso norma={clarityTags.norma || ""} categoria={clarityTags.categoria || ""} />}
         {/* DOCK DO WEBINAR REMOVIDO em 21/08/2026 (componente segue em
             components/WebinarDock.astro, sem uso). Era a barra fixa no rodapé do celular
             com a foto da Dani, que deslizava a partir de 35% da rolagem.

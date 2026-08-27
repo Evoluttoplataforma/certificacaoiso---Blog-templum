@@ -1,0 +1,101 @@
+-- ============================================================================
+-- Pulso — as consultas de leitura. Rodar no SQL editor do Supabase.
+-- 2026-08-27
+--
+-- Baseline a bater: 0,78 lead/dia (18–26/08/2026, form-blog + consultoria-artigo),
+-- sobre ~360 sessões/dia = 0,22% de conversão.
+--
+-- Como ler o conjunto:
+--   · taxa de resposta < 5% em 7 dias  → o FORMATO está errado, não a pergunta;
+--   · resposta alta e (3) perto de zero → o problema é a OFERTA, não o público.
+--     É aí, e só aí, que a conversa sobre reativar as iscas volta a fazer sentido.
+-- ============================================================================
+
+
+-- 1) O A/B: qual momento responde mais? -------------------------------------
+-- Denominador é `visto` (por isso a caixinha registra a exibição também).
+select
+  variante,
+  count(*) filter (where evento = 'visto')     as apareceu,
+  count(*) filter (where evento = 'resposta')  as respondeu,
+  count(*) filter (where evento = 'dispensa')  as fechou,
+  round(100.0 * count(*) filter (where evento = 'resposta')
+              / nullif(count(*) filter (where evento = 'visto'), 0), 1) as taxa_resposta_pct
+from blog_templum_pulso
+where created_at > now() - interval '7 days'
+group by variante
+order by variante;
+
+
+-- 2) QUEM CHEGA E O QUE QUER — a pergunta original ---------------------------
+select
+  resposta,
+  count(*) as respostas,
+  round(100.0 * count(*) / sum(count(*)) over (), 1) as pct,
+  count(*) filter (where device = 'mobile') as no_celular,
+  round(avg(scroll_pct)) as scroll_medio,
+  round(avg(ms_ate_acao) / 1000.0) as segundos_ate_responder
+from blog_templum_pulso
+where evento = 'resposta' and created_at > now() - interval '7 days'
+group by resposta
+order by respostas desc;
+
+-- 2b) O mesmo recorte por norma — é onde se decide QUAL oferta vale a pena.
+select
+  coalesce(nullif(norma, ''), '(sem norma)') as norma,
+  count(*) as respostas,
+  count(*) filter (where resposta = 'vou-implantar') as vou_implantar,
+  count(*) filter (where resposta = 'travei')        as travei,
+  count(*) filter (where resposta = 'pesquisando')   as pesquisando,
+  count(*) filter (where resposta = 'carreira')      as carreira
+from blog_templum_pulso
+where evento = 'resposta' and created_at > now() - interval '14 days'
+group by 1
+having count(*) >= 5
+order by respostas desc;
+
+-- 2c) As páginas que mais trazem gente de intenção alta. Pauta editorial:
+--     é aqui que vale investir conteúdo e CTA, não no que só tem pageview.
+select
+  page,
+  count(*) filter (where resposta in ('vou-implantar', 'travei')) as quentes,
+  count(*) as respostas
+from blog_templum_pulso
+where evento = 'resposta' and created_at > now() - interval '14 days'
+group by page
+having count(*) filter (where resposta in ('vou-implantar', 'travei')) > 0
+order by quentes desc
+limit 25;
+
+
+-- 3) O NÚMERO QUE DECIDE: resposta → lead ------------------------------------
+-- Cruza pelo visitor_id, que é o mesmo __ci_uid nas duas tabelas.
+-- Só conta o lead que veio DEPOIS da resposta (senão a caixinha leva crédito por
+-- lead que já existia).
+select
+  p.resposta,
+  count(distinct p.visitor_id) as pessoas,
+  count(distinct l.visitor_id) as viraram_lead,
+  round(100.0 * count(distinct l.visitor_id)
+              / nullif(count(distinct p.visitor_id), 0), 1) as conversao_pct
+from blog_templum_pulso p
+left join blog_templum_leads l
+  on l.visitor_id = p.visitor_id
+ and l.visitor_id <> ''
+ and l.created_at >= p.created_at
+where p.evento = 'resposta'
+  and coalesce(p.visitor_id, '') <> ''
+  and p.created_at > now() - interval '30 days'
+group by p.resposta
+order by viraram_lead desc;
+
+
+-- 4) Higiene: a caixinha está aparecendo onde deveria? ------------------------
+-- Só deve haver linha de página de ARTIGO. /form, /presentes/*, /buscar/, home e
+-- categoria não podem aparecer aqui.
+select page, count(*) as vistos
+from blog_templum_pulso
+where evento = 'visto' and created_at > now() - interval '2 days'
+  and (page = '/' or page like '/form%' or page like '/presentes%'
+       or page like '/buscar%' or page like '/categoria%')
+group by page;

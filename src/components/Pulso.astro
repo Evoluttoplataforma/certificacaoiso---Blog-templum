@@ -1,0 +1,442 @@
+---
+// PULSO — a caixinha de 1 clique dos artigos.
+//
+// O PROBLEMA QUE ELA RESOLVE (medido em 27/08/2026):
+// o blog tem ~360 sessões/dia e 0,78 lead/dia — 0,22% de conversão. Desde que as 23
+// iscas saíram do ar (19/08, supabase/descontinua-iscas-cta-olivia.sql) existe UM
+// caminho de conversão no blog inteiro: "fale com um especialista". Os quatro públicos
+// que chegam aqui veem o MESMO pedido, e três deles não têm o que fazer com ele — quem
+// buscou "o que é fluxograma de processos" no Google não vai pedir uma consultoria.
+//
+// Então a caixinha faz duas coisas no mesmo clique: descobre em que pé a pessoa está
+// (o diagnóstico que faltava) e troca o próximo passo pelo que faz sentido para ela.
+// O lead é consequência da segmentação, não pedágio.
+//
+// TRÊS DECISÕES QUE PARECEM DETALHE E NÃO SÃO:
+//
+//   1. NADA NA ENTRADA. Overlay na chegada, em blog que vive de orgânico do Google, é
+//      interstício penalizável no celular. E o clique de quem ainda não leu não diz o
+//      que a pessoa quer — mede ansiedade, não intenção. Por isso os dois braços do
+//      A/B disparam DEPOIS que ela leu alguma coisa.
+//
+//   2. É O ÚNICO ELEMENTO FIXO NOVO DO CELULAR, e é transiente. Agosto inteiro foi
+//      gasto tirando os três fixos do mobile (float da Olívia 19/08, dock do webinar
+//      21/08 — ver Base.astro), porque elemento fixo come tela e tela pequena é onde o
+//      leitor desiste. Esta caixinha só se justifica porque aparece UMA vez por
+//      visitante, some ao responder ou fechar e não volta por 90 dias.
+//
+//   3. O NÚMERO NÃO SAI DO CLARITY. Tag custom não aparece na Data Export API —
+//      `dimension1=CustomTag` é ignorado em silêncio (testado com token real em
+//      19/08/2026). O Clarity aqui serve para ASSISTIR a sessão de quem respondeu
+//      "travei"; a contagem sai de blog_templum_pulso (supabase/pulso.sql).
+//
+// No desktop ela nasce na quina ESQUERDA de propósito: a direita já tem o float do
+// WhatsApp (bottom 26, z 900) e o dock de leitura (bottom 76, z 940).
+const {
+  norma = "",
+  categoria = "",
+} = Astro.props;
+
+const SB_URL = import.meta.env.SUPABASE_URL || "https://yfpdrckyuxltvznqfqgh.supabase.co";
+const SB_ANON = import.meta.env.SUPABASE_ANON_KEY || "sb_publishable_Yfg9Ts5WRqD4Gc3jeWAS2A_-YWZrtiQ";
+
+// "com a ISO 9001" / "com a certificação ISO" — o artigo entra uma vez só, aqui.
+const alvo = norma ? `a ${norma}` : "a certificação ISO";
+const whats = "5519993521270";
+const msgWhats = `Olá! Estou implantando ${norma || "um sistema de gestão"} e travei numa parte. Pode me ajudar?`;
+
+// O link da /form segue a convenção dos outros CTAs do artigo ([slug].astro:147) e não
+// pode se desviar dela. São três parâmetros com trabalho a fazer, e cada um responde a
+// uma pergunta diferente do outro lado:
+//   · `norma`   → a /form escreve a headline com ele E traduz para o cf_produto do
+//                 Orbit. É SELECT no CRM: mandar por `utm_term` (que a /form não lê)
+//                 fazia o lead chegar sem produto, sem porte e sem faturamento;
+//   · `utm_campaign` → a página de origem em blog_templum_leads.page. Sem ele a /form
+//                 cai no referrer, que funciona — mas some quando o navegador corta o
+//                 referrer, e aí o lead nasce apontando para a própria /form;
+//   · `origem`  → qual CTA trouxe a pessoa. Não é UTM de propósito: o tracking-kit
+//                 reescreve utm_source/utm_medium no clique de link interno, e a
+//                 atribuição interna morreria no relatório (ver LeadForm.astro).
+const slugDaPagina = Astro.url.pathname.replace(/^\/|\/$/g, "");
+const hrefForm =
+  `/form/?utm_source=blog&utm_medium=pulso&origem=pulso&utm_campaign=${slugDaPagina}` +
+  (norma ? `&norma=${encodeURIComponent(norma)}` : "");
+---
+
+<aside class="pulso" data-pulso hidden role="dialog" aria-labelledby="pulso-titulo">
+  <button class="pulso-x" type="button" data-pulso-x aria-label="Fechar">
+    <iconify-icon icon="solar:close-circle-linear"></iconify-icon>
+  </button>
+
+  <!-- Passo 1: a pergunta -->
+  <div class="pulso-passo" data-pulso-passo="pergunta">
+    <span class="pulso-olho">Rapidinho — 1 clique</span>
+    <h2 class="pulso-titulo" id="pulso-titulo">Em que pé você está com {alvo}?</h2>
+    <div class="pulso-ops">
+      <button type="button" class="pulso-op" data-pulso-r="pesquisando">Só pesquisando o assunto</button>
+      <button type="button" class="pulso-op" data-pulso-r="vou-implantar">Vou implantar na minha empresa</button>
+      <button type="button" class="pulso-op" data-pulso-r="travei">Já estou implantando e travei</button>
+      <button type="button" class="pulso-op" data-pulso-r="carreira">É para a faculdade / minha carreira</button>
+    </div>
+  </div>
+
+  <!-- Passo 2, um por resposta. Todos já no HTML: o clique só troca o `hidden`, não
+       monta string — assim o conteúdo é auditável no "ver código-fonte". -->
+
+  {/* Topo de funil. Oferta comercial aqui só queima o leitor: ele devolve leitura. */}
+  <div class="pulso-passo" data-pulso-passo="pesquisando" hidden>
+    <span class="pulso-olho pulso-olho--ok"><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Anotado</span>
+    <h2 class="pulso-titulo">Então fica com o que ajuda a entender</h2>
+    <div class="pulso-links" data-pulso-links></div>
+    <button type="button" class="pulso-secundario" data-pulso-audio hidden>
+      <iconify-icon icon="solar:play-circle-bold"></iconify-icon> Ouvir o resumo desta página
+    </button>
+  </div>
+
+  {/* Intenção real. A /form está enxuta desde 21/08 (3 campos obrigatórios). */}
+  <div class="pulso-passo" data-pulso-passo="vou-implantar" hidden>
+    <span class="pulso-olho pulso-olho--ok"><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Anotado</span>
+    <h2 class="pulso-titulo">Quer o caminho com prazo e investimento?</h2>
+    <p class="pulso-p">Um especialista monta o cenário {norma ? `de ${norma}` : ""} da sua empresa — sem custo e sem compromisso.</p>
+    <a class="pulso-cta" href={hrefForm} data-pulso-ir="form">
+      Receber o plano <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+    </a>
+  </div>
+
+  {/* A mais quente das quatro. Quem travou quer resposta hoje, não formulário. */}
+  <div class="pulso-passo" data-pulso-passo="travei" hidden>
+    <span class="pulso-olho pulso-olho--ok"><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Anotado</span>
+    <h2 class="pulso-titulo">Onde travou? Manda pra gente</h2>
+    <p class="pulso-p">Fala direto com quem implanta {norma || "sistema de gestão"} todo dia. Resposta no WhatsApp.</p>
+    <a class="pulso-cta" href={`https://wa.me/${whats}?text=${encodeURIComponent(msgWhats)}`} target="_blank" rel="noopener" data-pulso-ir="whatsapp">
+      <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon> Falar agora
+    </a>
+    <a class="pulso-secundario pulso-secundario--link" href={hrefForm} data-pulso-ir="form">Prefiro receber por e-mail</a>
+  </div>
+
+  {/* A qualificação que hoje só acontece DENTRO do formulário — aqui ela é de graça e
+      acontece antes. Estudante e carreira não veem oferta nenhuma, de propósito. */}
+  <div class="pulso-passo" data-pulso-passo="carreira" hidden>
+    <span class="pulso-olho pulso-olho--ok"><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Anotado</span>
+    <h2 class="pulso-titulo">Boa — esse material é seu</h2>
+    <p class="pulso-p">Continua por aqui: o blog tem mais de mil artigos sobre norma, auditoria e implantação.</p>
+    <div class="pulso-links" data-pulso-links></div>
+  </div>
+</aside>
+
+<style>
+  /* Desktop: quina ESQUERDA (a direita tem WhatsApp z900 + dock z940). */
+  .pulso {
+    position: fixed; left: 24px; bottom: 24px; z-index: 960;
+    width: min(360px, calc(100vw - 48px));
+    background: var(--surface); color: var(--text);
+    border: 1px solid var(--border-2); border-radius: var(--r-20);
+    box-shadow: var(--shadow-lift);
+    padding: 20px 20px 18px;
+    opacity: 0; transform: translateY(12px);
+    transition: opacity 0.28s var(--ease-soft), transform 0.28s var(--ease-soft);
+  }
+  .pulso[hidden] { display: none; }
+  .pulso.is-in { opacity: 1; transform: none; }
+
+  .pulso-x {
+    position: absolute; top: 8px; right: 8px;
+    width: 36px; height: 36px; display: grid; place-items: center;
+    font-size: 20px; color: var(--text-soft); border-radius: 999px;
+  }
+  .pulso-x:hover { color: var(--text); background: rgba(24,25,27,0.05); }
+
+  .pulso-olho {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--orange-ink); margin-bottom: 8px;
+  }
+  .pulso-olho--ok { color: var(--success); }
+  .pulso-titulo { font-size: 17.5px; font-weight: 800; line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 14px; padding-right: 26px; }
+  .pulso-p { font-size: 14px; line-height: 1.55; color: var(--text-mid); margin: -6px 0 14px; }
+
+  .pulso-ops { display: flex; flex-direction: column; gap: 8px; }
+  .pulso-op {
+    /* 44px de alvo mínimo: é botão de dedo, não de mouse. */
+    min-height: 44px; text-align: left; padding: 11px 14px;
+    font-size: 14.5px; font-weight: 600; line-height: 1.35; color: var(--text);
+    background: var(--bg); border: 1px solid var(--border-2); border-radius: var(--r-12);
+    transition: background 0.15s, border-color 0.15s, transform 0.15s;
+  }
+  .pulso-op:hover { background: rgba(255,89,37,0.08); border-color: var(--orange); transform: translateX(2px); }
+  .pulso-op:focus-visible, .pulso-cta:focus-visible, .pulso-x:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+
+  .pulso-cta {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; min-height: 46px; padding: 12px 18px;
+    background: var(--orange-ink); color: #fff; border-radius: var(--r-12);
+    font-size: 14.5px; font-weight: 700;
+  }
+  .pulso-cta:hover { background: var(--orange-dark); }
+
+  .pulso-secundario {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;
+    font-size: 13px; font-weight: 600; color: var(--orange-ink);
+  }
+  .pulso-secundario:hover { text-decoration: underline; }
+  .pulso-secundario--link { display: block; text-align: center; width: 100%; color: var(--text-mid); }
+
+  .pulso-links { display: flex; flex-direction: column; gap: 8px; }
+  .pulso-links a {
+    display: block; padding: 10px 12px; border-radius: var(--r-12);
+    background: var(--bg); border: 1px solid var(--border);
+    font-size: 14px; font-weight: 600; line-height: 1.35; color: var(--text);
+  }
+  .pulso-links a:hover { border-color: var(--orange); color: var(--orange-ink); }
+
+  /* Celular: folha na base, largura toda. Nada mais é fixo aqui desde 21/08/2026. */
+  @media (max-width: 720px) {
+    .pulso {
+      left: 0; right: 0; bottom: 0; width: 100%;
+      border-radius: var(--r-20) var(--r-20) 0 0;
+      border-left: 0; border-right: 0; border-bottom: 0;
+      padding: 18px 16px calc(16px + env(safe-area-inset-bottom, 0px));
+      max-height: 72vh; overflow-y: auto;
+      transform: translateY(100%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pulso { transition: opacity 0.01s; transform: none; }
+    .pulso.is-in { transform: none; }
+    .pulso-op:hover { transform: none; }
+  }
+</style>
+
+<script is:inline define:vars={{ SB_URL, SB_ANON, NORMA: norma, CATEGORIA: categoria }}>
+  (function () {
+    var box = document.querySelector("[data-pulso]");
+    if (!box) return;
+
+    var LS = "__ci_pulso";
+    var DIAS = 90;
+    var t0 = Date.now();
+    var coarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+
+    // ---- portas de teste: ?pulso=engajamento|saida|reset -------------------
+    var forcado = "";
+    try { forcado = new URLSearchParams(location.search).get("pulso") || ""; } catch (e) {}
+    var teste = forcado === "engajamento" || forcado === "saida";
+    if (forcado === "reset") { try { localStorage.removeItem(LS); } catch (e) {} }
+
+    function guardado(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+
+    if (!teste) {
+      // Quem já é lead não é incomodado: __wl_lead é a chave que o tracking-kit
+      // grava na conversão (ver capture.leadStorageKey em TrackingKit.astro).
+      if (guardado("__wl_lead")) return;
+      // Já respondeu ou dispensou nos últimos 90 dias → não volta.
+      var marca = guardado(LS);
+      if (marca) {
+        var quando = parseInt(String(marca).split("|")[1] || "0", 10);
+        if (Date.now() - quando < DIAS * 864e5) return;
+      }
+    }
+
+    // ---- braço do A/B: determinístico pelo visitante -----------------------
+    // Pelo hash do __ci_uid (e não por sorteio a cada página) para que a MESMA
+    // pessoa caia sempre no mesmo braço — senão o A/B compara sessões, não gente.
+    function hash(s) { var h = 0; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return Math.abs(h); }
+    var uid = window.__ciUid || "";
+    var variante = teste ? forcado
+      : uid ? (hash(uid) % 2 ? "saida" : "engajamento")
+      : (Math.random() < 0.5 ? "saida" : "engajamento");
+
+    function pct() {
+      var h = document.documentElement;
+      var max = (h.scrollHeight - h.clientHeight) || 1;
+      return Math.max(0, Math.min(100, Math.round((window.scrollY / max) * 100)));
+    }
+
+    // ---- registro (blog_templum_pulso) ------------------------------------
+    // Duas linhas por pessoa, de propósito: 'visto' é o denominador. Sem ele,
+    // "37 responderam" não vira taxa nenhuma.
+    function registra(evento, resposta) {
+      var host = "";
+      try { host = document.referrer ? new URL(document.referrer).host : ""; } catch (e) {}
+      try {
+        fetch(SB_URL + "/rest/v1/blog_templum_pulso", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            apikey: SB_ANON,
+            Authorization: "Bearer " + SB_ANON,
+            Prefer: "return=minimal",
+          },
+          keepalive: true,
+          body: JSON.stringify({
+            visitor_id: window.__ciUid || "",
+            evento: evento,
+            resposta: resposta || null,
+            variante: variante,
+            page: location.pathname,
+            norma: NORMA || "",
+            categoria: CATEGORIA || "",
+            device: coarse ? "mobile" : "desktop",
+            referrer_host: host,
+            ms_ate_acao: Date.now() - t0,
+            scroll_pct: pct(),
+          }),
+        });
+      } catch (e) {}
+    }
+
+    // ---- exibir -----------------------------------------------------------
+    var aberto = false;
+    function mostra() {
+      if (aberto) return;
+      aberto = true;
+      desarma();
+      box.hidden = false;
+      // dois frames: sem isso o navegador aplica a classe no mesmo estilo inicial
+      // e a transição não roda (o card aparece seco).
+      requestAnimationFrame(function () { requestAnimationFrame(function () { box.classList.add("is-in"); }); });
+      registra("visto", null);
+    }
+
+    function fecha(evento, resposta) {
+      box.classList.remove("is-in");
+      setTimeout(function () { box.hidden = true; }, 300);
+      try { localStorage.setItem(LS, (resposta || "dispensa") + "|" + Date.now()); } catch (e) {}
+      if (evento) registra(evento, resposta);
+    }
+
+    // ---- gatilhos ---------------------------------------------------------
+    var ouvintes = [];
+    function ouve(alvo, ev, fn, op) { alvo.addEventListener(ev, fn, op); ouvintes.push([alvo, ev, fn, op]); }
+    function desarma() { ouvintes.forEach(function (o) { o[0].removeEventListener(o[1], o[2], o[3]); }); ouvintes = []; }
+
+    if (variante === "engajamento") {
+      // 25% de rolagem OU 20s — o que vier primeiro. Nunca antes de 8s: quem chega
+      // e ainda está se situando na página não respondeu nada, só foi interrompido.
+      var tenta = function () {
+        if (Date.now() - t0 < 8000) return;
+        if (pct() >= 25 || Date.now() - t0 >= 20000) mostra();
+      };
+      ouve(window, "scroll", tenta, { passive: true });
+      setTimeout(tenta, 8200);
+      setTimeout(tenta, 20200);
+    } else {
+      // SAÍDA. No desktop é o ponteiro deixando a janela pelo topo.
+      if (!coarse) {
+        ouve(document, "mouseout", function (e) {
+          if (!e.relatedTarget && e.clientY <= 0 && Date.now() - t0 > 5000) mostra();
+        }, false);
+      } else {
+        // No celular não existe mouseleave. O sinal honesto é o botão VOLTAR — mas
+        // só depois que a pessoa passou de 25% do artigo, para não sequestrar a
+        // navegação de quem entrou e saiu na hora. O estado é empilhado UMA vez e
+        // consumido UMA vez: o segundo "voltar" leva embora normalmente.
+        var empilhado = false;
+        var arma = function () {
+          if (empilhado || pct() < 25) return;
+          empilhado = true;
+          try { history.pushState({ pulso: 1 }, "", location.href); } catch (e) {}
+        };
+        ouve(window, "scroll", arma, { passive: true });
+        ouve(window, "popstate", function () { if (empilhado) mostra(); }, false);
+
+        // Rede: 45s parado depois de ter lido — aba esquecida também é saída.
+        var ocioso;
+        var reinicia = function () {
+          clearTimeout(ocioso);
+          ocioso = setTimeout(function () { if (pct() >= 25) mostra(); }, 45000);
+        };
+        ouve(window, "scroll", reinicia, { passive: true });
+        ouve(window, "touchstart", reinicia, { passive: true });
+        reinicia();
+      }
+    }
+
+    // ---- resposta ---------------------------------------------------------
+    function passo(nome) { return box.querySelector('[data-pulso-passo="' + nome + '"]'); }
+
+    box.addEventListener("click", function (e) {
+      var b = e.target.closest ? e.target.closest("[data-pulso-r]") : null;
+      if (b) { responde(b.getAttribute("data-pulso-r")); return; }
+      if (e.target.closest && e.target.closest("[data-pulso-x]")) { fecha("dispensa", null); return; }
+      // clique no CTA do passo 2: nomeia o destino no Clarity antes de sair
+      var ir = e.target.closest ? e.target.closest("[data-pulso-ir]") : null;
+      if (ir && window.clarityEvent) {
+        window.clarityEvent("pulso_ir_" + ir.getAttribute("data-pulso-ir"));
+        if (window.clarityUpgrade) window.clarityUpgrade("pulso_ir");
+      }
+    });
+
+    // ESC fecha. Fora do `ouve` de propósito: desarma() roda dentro de mostra(), e a
+    // tecla precisa continuar valendo justamente DEPOIS que a caixinha apareceu.
+    document.addEventListener("keydown", function (e) {
+      if ((e.key === "Escape" || e.key === "Esc") && aberto && !box.hidden) fecha("dispensa", null);
+    });
+
+    function responde(r) {
+      // Clarity: a resposta vira SEGMENTO e a sessão vira gravação. É o que permite
+      // assistir ao filme de quem respondeu "travei" — a tag não sai na API, mas o
+      // painel filtra por ela, e o upgrade() impede que a amostragem descarte a sessão.
+      if (window.clarityTag) {
+        window.clarityTag("pulso", r);
+        window.clarityTag("pulso_variante", variante);
+      }
+      if (window.clarityEvent) window.clarityEvent("pulso_resposta");
+      if (window.clarityUpgrade) window.clarityUpgrade("pulso_" + r);
+      if (typeof window.gtag === "function") {
+        try { window.gtag("event", "pulso_resposta", { resposta: r, variante: variante, norma: NORMA || "" }); } catch (e) {}
+      }
+
+      registra("resposta", r);
+      try { localStorage.setItem(LS, r + "|" + Date.now()); } catch (e) {}
+
+      var alvo = passo(r);
+      if (!alvo) { fecha(null, r); return; }
+      preenche(alvo, r);
+      passo("pergunta").hidden = true;
+      alvo.hidden = false;
+    }
+
+    // Os links do passo "pesquisando"/"carreira" saem do bloco de relacionados que a
+    // PRÓPRIA página já renderiza (.post-related) — nada de segunda fonte de verdade
+    // nem de prop atravessando o Base só para isso.
+    function preenche(alvo, r) {
+      var caixa = alvo.querySelector("[data-pulso-links]");
+      if (caixa && !caixa.childElementCount) {
+        var achados = document.querySelectorAll(".post-related a[href]");
+        var vistos = {}, n = 0;
+        for (var i = 0; i < achados.length && n < 2; i++) {
+          var a = achados[i], href = a.getAttribute("href");
+          var texto = (a.textContent || "").trim();
+          if (!href || !texto || vistos[href]) continue;
+          vistos[href] = 1; n++;
+          var novo = document.createElement("a");
+          novo.href = href + (href.indexOf("?") > -1 ? "&" : "?") + "origem=pulso";
+          novo.textContent = texto;
+          caixa.appendChild(novo);
+        }
+        if (!n) {
+          var busca = document.createElement("a");
+          busca.href = "/buscar/?origem=pulso";
+          busca.textContent = "Ver todos os artigos do blog";
+          caixa.appendChild(busca);
+        }
+      }
+      // Resumo em áudio: só oferece se a página realmente tem um.
+      if (r === "pesquisando") {
+        var audio = document.querySelector(".post-audio");
+        var botao = alvo.querySelector("[data-pulso-audio]");
+        if (audio && botao) {
+          botao.hidden = false;
+          botao.addEventListener("click", function () {
+            audio.scrollIntoView({ behavior: "smooth", block: "center" });
+            var play = audio.querySelector(".post-audio-play");
+            if (play) setTimeout(function () { play.click(); }, 450);
+            fecha(null, "pesquisando");
+          });
+        }
+      }
+    }
+  })();
+</script>
