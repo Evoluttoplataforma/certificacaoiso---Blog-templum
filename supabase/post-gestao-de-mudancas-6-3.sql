@@ -1,0 +1,69 @@
+-- Post da live de 26/08/2026 — "Gestão de Mudanças" (requisito 6.3) — 27/08/2026
+--
+-- O QUE FOI FEITO (via MCP do Supabase, não por este arquivo):
+--   1 post inserido em blog_templum_posts, status='published', autora
+--   'Daniela Albuquerque', categoria 'Qualidade e Inovação', published_at
+--   2026-08-27 17:45:00Z.
+--
+--   slug: gestao-de-mudancas-iso-9001-2026-requisito-6-3
+--   id:   1aa686c1-0112-4870-9a20-7926ff541164
+--
+-- Este arquivo é REFERÊNCIA e ROLLBACK. O conteúdo do post vive no banco e não foi
+-- duplicado aqui: duas cópias divergem na primeira edição feita pelo CMS, e a do banco
+-- é a que o build lê. Mesma decisão do supabase/post-analise-critica-9-3.sql.
+--
+-- Por que existe: é o quarto post da série que transforma a live semanal da Templum
+-- (quarta, 16h) em artigo — depois de cultura-da-qualidade-e-nr1 (05/08),
+-- riscos-e-oportunidades-iso-9001-2026 (13/08) e analise-critica-9-3 (20/08).
+-- Mesmo formato: h2 com id, FAQ (vira FAQPage no JSON-LD), sem menção a produto.
+--
+-- SEM sumário escrito à mão no corpo, ao contrário dos três anteriores: desde o
+-- 5c4ea38 (removerSumarioEscrito em src/lib/artigo.js) o índice do template é o único,
+-- e um "Neste artigo:" no corpo seria removido no build de qualquer forma.
+--
+-- CANIBALIZAÇÃO: já existe /iso-9001-requisitos-6-3-planejamento-de-mudancas/, que
+-- percorre o texto do requisito item por item. Os dois não competem — este é a leitura
+-- da revisão 2026 e do fluxo — e o post novo linka para o antigo no fecho. Mesmo
+-- arranjo usado entre o post do 9.3 e /reuniao-de-analise-critica-pela-direcao-na-iso-9001/.
+--
+-- PENDÊNCIA EDITORIAL (confirmar com a Daniela):
+--   1. A tese central do post — a exigência de COMUNICAR a mudança antes de
+--      implementá-la e de VERIFICAR A EFICÁCIA depois, como linhas novas do 6.3 —
+--      vem do texto em revisão lido por ela na live, não de norma publicada. O post
+--      ressalva isso duas vezes ("o texto em revisão acrescenta", e o parágrafo de
+--      abertura da última seção) e repete a publicação esperada para setembro. Mesmo
+--      enquadramento dos posts de riscos e oportunidades e de análise crítica.
+--   2. As nove etapas do fluxo, e a marcação da 6ª e da 9ª como novas, são o
+--      framework apresentado por ela na live — não numeração da norma.
+--   3. O 8.5.6 aparece na transcrição como "856"; foi lido como 8.5.6 (controle de
+--      mudanças na produção e provisão de serviço), que é o que complementa o 8.1.
+--
+-- O QUE FICOU DE FORA, DE PROPÓSITO:
+--   · a demonstração do Templo OS, que ocupa a segunda metade da live. A seção
+--     "Como descentralizar sem perder o controle" preserva o que ali é método
+--     (lista de itens que disparam o fluxo, papel autorizador com prazo, regra de
+--     notificação escrita, registro que nasce no ponto da mudança) descrito de forma
+--     agnóstica de ferramenta. Se a decisão for passar a citar produto nesta série,
+--     é aqui que entra;
+--   · os números comerciais ditos na live (2.000 empresas certificadas, crescimento
+--     médio de 30%, caso de 400%, preço e voucher), que não se sustentam num artigo
+--     técnico e não são verificáveis pelo leitor.
+
+-- ---------------------------------------------------------------------------
+-- CONFERÊNCIA
+-- ---------------------------------------------------------------------------
+-- select slug, status, reading_time_min, char_length(content) as chars,
+--        jsonb_array_length(faq) as faq
+--   from blog_templum_posts
+--  where slug = 'gestao-de-mudancas-iso-9001-2026-requisito-6-3';
+-- Esperado: published · 11 min · 17580 chars · 6 perguntas.
+--
+-- No dist (build de 27/08): 9 âncoras no índice, 6 Question no FAQPage,
+-- 17 links internos do corpo com destino existente, presente em sitemap.xml,
+-- rss.xml, search-index.json e categoria/qualidade-e-inovacao.
+
+-- ---------------------------------------------------------------------------
+-- ROLLBACK — tirar do ar SEM apagar (o build só lê status='published')
+-- ---------------------------------------------------------------------------
+-- update blog_templum_posts set status='draft'
+--  where slug = 'gestao-de-mudancas-iso-9001-2026-requisito-6-3';
