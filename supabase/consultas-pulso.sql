@@ -5,6 +5,14 @@
 -- Baseline a bater: 0,78 lead/dia (18–26/08/2026, form-blog + consultoria-artigo),
 -- sobre ~360 sessões/dia = 0,22% de conversão.
 --
+-- ⚠ CORTE DA MEDIÇÃO: **2026-08-28 11:46 UTC**. Tudo ANTES disso está contaminado e
+-- não serve para taxa nenhuma. Na primeira noite no ar, 64% das exibições foram
+-- crawler (94 delas em exatos 8,2s, 99% de rolagem, 83 páginas, sem referrer, e ZERO
+-- dispensa — público humano não tem 0% de dispensa), e no celular a caixinha nascia
+-- aos 50s por estrangulamento do setTimeout em aba de fundo. Os dois defeitos foram
+-- corrigidos nesse horário. Some `and created_at > '2026-08-28 11:46+00'` a qualquer
+-- consulta abaixo antes de tirar conclusão.
+--
 -- Como ler o conjunto:
 --   · taxa de resposta < 5% em 7 dias  → o FORMATO está errado, não a pergunta;
 --   · resposta alta e (3) perto de zero → o problema é a OFERTA, não o público.
