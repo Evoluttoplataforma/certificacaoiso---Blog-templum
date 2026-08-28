@@ -311,16 +311,41 @@ const hrefForm =
     function ouve(alvo, ev, fn, op) { alvo.addEventListener(ev, fn, op); ouvintes.push([alvo, ev, fn, op]); }
     function desarma() { ouvintes.forEach(function (o) { o[0].removeEventListener(o[1], o[2], o[3]); }); ouvintes = []; }
 
+    // ---- porteiro: só arma depois de um GESTO HUMANO ----------------------
+    // Na primeira noite no ar, 94 das 154 exibições dispararam em exatamente 8,2s,
+    // com 99% de rolagem, em 83 páginas diferentes, sem referrer — e NENHUMA delas
+    // fechou a caixinha. Não existe público humano com 0% de dispensa: era crawler
+    // carregando a página, indo até o fim e esperando. 64% do denominador virava
+    // lixo, e taxa de resposta com denominador podre não decide nada.
+    //
+    // A lista é a mesma ideia do bootstrap de tracking do Base.astro, MENOS `scroll`
+    // — que é justamente o evento que o robô produz. Ponteiro, dedo, roda e tecla
+    // são gestos que um crawler headless não emite.
+    var gestos = ["pointermove", "pointerdown", "touchstart", "keydown", "wheel"];
+    var opG = { once: true, passive: true, capture: true };
+    function porteiro() {
+      gestos.forEach(function (e) { window.removeEventListener(e, porteiro, opG); });
+      arma();
+    }
+    gestos.forEach(function (e) { window.addEventListener(e, porteiro, opG); });
+
+    function arma() {
     if (variante === "engajamento") {
-      // 25% de rolagem OU 20s — o que vier primeiro. Nunca antes de 8s: quem chega
-      // e ainda está se situando na página não respondeu nada, só foi interrompido.
+      // 25% de rolagem, e nunca antes de 8s: quem chega e ainda está se situando na
+      // página não respondeu nada, só foi interrompido.
+      //
+      // O timer de 20s ficou SÓ no desktop. No celular ele estava chegando aos 50s
+      // medidos — `setTimeout` é estrangulado quando a aba vai pro fundo, então a
+      // caixinha nascia atrasada, quando a pessoa já tinha voltado pro Google. O que
+      // sobra no celular é a rolagem, que é sinal de leitura de verdade e não de
+      // relógio.
       var tenta = function () {
         if (Date.now() - t0 < 8000) return;
-        if (pct() >= 25 || Date.now() - t0 >= 20000) mostra();
+        if (pct() >= 25 || (!coarse && Date.now() - t0 >= 20000)) mostra();
       };
       ouve(window, "scroll", tenta, { passive: true });
       setTimeout(tenta, 8200);
-      setTimeout(tenta, 20200);
+      if (!coarse) setTimeout(tenta, 20200);
     } else {
       // SAÍDA. No desktop é o ponteiro deixando a janela pelo topo.
       if (!coarse) {
@@ -333,12 +358,12 @@ const hrefForm =
         // navegação de quem entrou e saiu na hora. O estado é empilhado UMA vez e
         // consumido UMA vez: o segundo "voltar" leva embora normalmente.
         var empilhado = false;
-        var arma = function () {
+        var empilha = function () {
           if (empilhado || pct() < 25) return;
           empilhado = true;
           try { history.pushState({ pulso: 1 }, "", location.href); } catch (e) {}
         };
-        ouve(window, "scroll", arma, { passive: true });
+        ouve(window, "scroll", empilha, { passive: true });
         ouve(window, "popstate", function () { if (empilhado) mostra(); }, false);
 
         // Rede: 45s parado depois de ter lido — aba esquecida também é saída.
@@ -352,6 +377,7 @@ const hrefForm =
         reinicia();
       }
     }
+    } // fim de arma()
 
     // ---- resposta ---------------------------------------------------------
     function passo(nome) { return box.querySelector('[data-pulso-passo="' + nome + '"]'); }

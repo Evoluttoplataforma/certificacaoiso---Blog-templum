@@ -93,9 +93,14 @@ order by viraram_lead desc;
 -- 4) Higiene: a caixinha está aparecendo onde deveria? ------------------------
 -- Só deve haver linha de página de ARTIGO. /form, /presentes/*, /buscar/, home e
 -- categoria não podem aparecer aqui.
+-- `/categoria/%` com a barra, e não `/categoria%`: existe artigo cujo slug COMEÇA com
+-- a palavra (/categoria-diamante-do-pqta-premia-55-cartorios-no-pais/), e o prefixo
+-- solto acusava ele como se o portão tivesse vazado. Falso positivo em consulta de
+-- higiene é pior que consulta nenhuma — manda caçar bug que não existe.
 select page, count(*) as vistos
 from blog_templum_pulso
 where evento = 'visto' and created_at > now() - interval '2 days'
-  and (page = '/' or page like '/form%' or page like '/presentes%'
-       or page like '/buscar%' or page like '/categoria%')
+  and (page = '/' or page like '/form/%' or page = '/form'
+       or page like '/presentes/%' or page like '/buscar/%'
+       or page like '/categoria/%')
 group by page;
