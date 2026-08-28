@@ -112,3 +112,27 @@ where evento = 'visto' and created_at > now() - interval '2 days'
        or page like '/presentes/%' or page like '/buscar/%'
        or page like '/categoria/%')
 group by page;
+
+
+-- 5) O DEGRAU QUE FALTAVA: resposta → clique no passo 2 -----------------------
+-- Acrescentado em 28/08/2026. No primeiro dia o clique no CTA do passo 2 só
+-- existia como evento do Clarity, e "0 lead do pulso" era ambíguo: não dava para
+-- saber se a oferta estava errada ou se ninguém tinha chegado a clicar. Agora dá.
+select
+  resposta,
+  count(*) filter (where evento = 'resposta') as responderam,
+  count(*) filter (where evento = 'clique')   as clicaram,
+  round(100.0 * count(*) filter (where evento = 'clique')
+              / nullif(count(*) filter (where evento = 'resposta'), 0), 1) as aceitou_o_passo_pct
+from blog_templum_pulso
+where created_at > '2026-08-28 11:46+00'
+group by resposta
+having resposta is not null
+order by responderam desc;
+
+-- 5b) Para onde foram: 'form' | 'whatsapp' | 'leitura' | 'audio'.
+select resposta, destino, count(*) as cliques
+from blog_templum_pulso
+where evento = 'clique' and created_at > '2026-08-28 11:46+00'
+group by resposta, destino
+order by cliques desc;

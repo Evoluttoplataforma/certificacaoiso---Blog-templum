@@ -8,10 +8,11 @@
 -- confundir com "não tem dado" (testado com token real em 19/08/2026). O Clarity
 -- serve para ASSISTIR a sessão de quem respondeu; o número sai daqui.
 --
--- DUAS LINHAS POR PESSOA, de propósito: uma em `visto` (a caixinha apareceu) e
--- outra no clique (`resposta` ou `dispensa`). Sem a linha de `visto` não existe
--- denominador, e "37 pessoas responderam" não vira taxa nenhuma. A ~360 sessões
--- por dia isso é ruído para o Postgres e é a diferença entre medir e adivinhar.
+-- ATÉ TRÊS LINHAS POR PESSOA, de propósito: uma em `visto` (a caixinha apareceu) e
+-- outra no clique (`resposta` ou `dispensa`), e uma terceira em `clique` quando a
+-- pessoa aceita o próximo passo. Sem a linha de `visto` não existe denominador, e
+-- "37 pessoas responderam" não vira taxa nenhuma. A ~360 sessões por dia isso é
+-- ruído para o Postgres e é a diferença entre medir e adivinhar.
 --
 -- `visitor_id` é o MESMO __ci_uid que blog_templum_leads.visitor_id guarda (ver
 -- src/layouts/Base.astro). É o que permite responder a única pergunta que decide
@@ -23,10 +24,16 @@ create table if not exists public.blog_templum_pulso (
   -- __ci_uid do visitante. Vazio quando o localStorage está bloqueado (aba
   -- privada) — a linha entra igual, só não cruza com lead.
   visitor_id    text,
-  -- 'visto' | 'resposta' | 'dispensa'
+  -- 'visto' | 'resposta' | 'dispensa' | 'clique'
   evento        text not null,
   -- 'pesquisando' | 'vou-implantar' | 'travei' | 'carreira'. Nulo em 'visto'.
+  -- Em 'clique' repete a resposta que levou ao passo 2 — é o que liga o clique à
+  -- pergunta, sem precisar de um join da tabela com ela mesma.
   resposta      text,
+  -- 'form' | 'whatsapp' | 'leitura' | 'audio'. Só em 'clique'. Sem esta coluna não dá
+  -- para separar "a oferta está errada" de "ninguém chegou a clicar" — que é a
+  -- pergunta que decide o próximo passo do funil.
+  destino       text,
   -- 'engajamento' | 'saida' — o braço do A/B, sorteado pelo hash do visitor_id.
   variante      text,
   page          text,
@@ -48,7 +55,7 @@ alter table public.blog_templum_pulso enable row level security;
 
 drop policy if exists "pulso_anon_insert" on public.blog_templum_pulso;
 create policy "pulso_anon_insert" on public.blog_templum_pulso
-  for insert to anon with check (evento in ('visto', 'resposta', 'dispensa'));
+  for insert to anon with check (evento in ('visto', 'resposta', 'dispensa', 'clique'));
 
 drop policy if exists "pulso_auth_all" on public.blog_templum_pulso;
 create policy "pulso_auth_all" on public.blog_templum_pulso

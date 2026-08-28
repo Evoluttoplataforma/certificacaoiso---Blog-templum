@@ -88,7 +88,7 @@ const hrefForm =
     <span class="pulso-olho pulso-olho--ok"><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Anotado</span>
     <h2 class="pulso-titulo">Então fica com o que ajuda a entender</h2>
     <div class="pulso-links" data-pulso-links></div>
-    <button type="button" class="pulso-secundario" data-pulso-audio hidden>
+    <button type="button" class="pulso-secundario" data-pulso-audio data-pulso-ir="audio" hidden>
       <iconify-icon icon="solar:play-circle-bold"></iconify-icon> Ouvir o resumo desta página
     </button>
   </div>
@@ -256,7 +256,7 @@ const hrefForm =
     // ---- registro (blog_templum_pulso) ------------------------------------
     // Duas linhas por pessoa, de propósito: 'visto' é o denominador. Sem ele,
     // "37 responderam" não vira taxa nenhuma.
-    function registra(evento, resposta) {
+    function registra(evento, resposta, destino) {
       var host = "";
       try { host = document.referrer ? new URL(document.referrer).host : ""; } catch (e) {}
       try {
@@ -273,6 +273,7 @@ const hrefForm =
             visitor_id: window.__ciUid || "",
             evento: evento,
             resposta: resposta || null,
+            destino: destino || null,
             variante: variante,
             page: location.pathname,
             norma: NORMA || "",
@@ -288,6 +289,9 @@ const hrefForm =
 
     // ---- exibir -----------------------------------------------------------
     var aberto = false;
+    // Guarda a resposta que abriu o passo 2, para o evento 'clique' dizer de qual
+    // pergunta ele nasceu sem precisar de join da tabela com ela mesma.
+    var ultimaResposta = "";
     function mostra() {
       if (aberto) return;
       aberto = true;
@@ -386,11 +390,19 @@ const hrefForm =
       var b = e.target.closest ? e.target.closest("[data-pulso-r]") : null;
       if (b) { responde(b.getAttribute("data-pulso-r")); return; }
       if (e.target.closest && e.target.closest("[data-pulso-x]")) { fecha("dispensa", null); return; }
-      // clique no CTA do passo 2: nomeia o destino no Clarity antes de sair
+
+      // Clique no CTA do passo 2. Vai para o Clarity (grava a sessão) E para o
+      // Supabase — no primeiro dia isto era só evento do Clarity, e a diferença
+      // entre "a oferta está errada" e "ninguém chegou a clicar" ficava sem
+      // resposta por SQL. É o degrau que faltava entre responder e virar lead.
       var ir = e.target.closest ? e.target.closest("[data-pulso-ir]") : null;
-      if (ir && window.clarityEvent) {
-        window.clarityEvent("pulso_ir_" + ir.getAttribute("data-pulso-ir"));
+      if (ir) {
+        var destino = ir.getAttribute("data-pulso-ir");
+        if (window.clarityEvent) window.clarityEvent("pulso_ir_" + destino);
         if (window.clarityUpgrade) window.clarityUpgrade("pulso_ir");
+        // keepalive no fetch (ver registra) é o que faz o POST sobreviver à
+        // navegação que este mesmo clique dispara.
+        registra("clique", ultimaResposta, destino);
       }
     });
 
@@ -414,6 +426,7 @@ const hrefForm =
         try { window.gtag("event", "pulso_resposta", { resposta: r, variante: variante, norma: NORMA || "" }); } catch (e) {}
       }
 
+      ultimaResposta = r;
       registra("resposta", r);
       try { localStorage.setItem(LS, r + "|" + Date.now()); } catch (e) {}
 
@@ -440,12 +453,14 @@ const hrefForm =
           var novo = document.createElement("a");
           novo.href = href + (href.indexOf("?") > -1 ? "&" : "?") + "origem=pulso";
           novo.textContent = texto;
+          novo.setAttribute("data-pulso-ir", "leitura");
           caixa.appendChild(novo);
         }
         if (!n) {
           var busca = document.createElement("a");
           busca.href = "/buscar/?origem=pulso";
           busca.textContent = "Ver todos os artigos do blog";
+          busca.setAttribute("data-pulso-ir", "leitura");
           caixa.appendChild(busca);
         }
       }
