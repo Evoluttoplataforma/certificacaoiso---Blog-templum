@@ -16,8 +16,8 @@
 //
 //   1. NADA NA ENTRADA. Overlay na chegada, em blog que vive de orgânico do Google, é
 //      interstício penalizável no celular. E o clique de quem ainda não leu não diz o
-//      que a pessoa quer — mede ansiedade, não intenção. Por isso os dois braços do
-//      A/B disparam DEPOIS que ela leu alguma coisa.
+//      que a pessoa quer — mede ansiedade, não intenção. Por isso ela dispara DEPOIS
+//      que a pessoa leu alguma coisa — hoje, na saída (ver o A/B abaixo).
 //
 //   2. É O ÚNICO ELEMENTO FIXO NOVO DO CELULAR, e é transiente. Agosto inteiro foi
 //      gasto tirando os três fixos do mobile (float da Olívia 19/08, dock do webinar
@@ -29,6 +29,16 @@
 //      `dimension1=CustomTag` é ignorado em silêncio (testado com token real em
 //      19/08/2026). O Clarity aqui serve para ASSISTIR a sessão de quem respondeu
 //      "travei"; a contagem sai de blog_templum_pulso (supabase/pulso.sql).
+//
+// O A/B DOS DOIS GATILHOS ACABOU EM 29/08/2026, com 309 exibições:
+//
+//              exibições  respostas  taxa   dispensa
+//   saida             99          7  7,1%       26%
+//   engajamento      210          2  1,0%       23%
+//
+// Sete vezes. Ficou só a `saida`. O braço morto continua acessível por
+// `?pulso=engajamento` e a coluna `variante` continua sendo gravada — o histórico
+// segue comparável e reabrir não custa reescrita.
 //
 // No desktop ela nasce na quina ESQUERDA de propósito: a direita já tem o float do
 // WhatsApp (bottom 26, z 900) e o dock de leitura (bottom 76, z 940).
@@ -238,14 +248,17 @@ const hrefForm =
       }
     }
 
-    // ---- braço do A/B: determinístico pelo visitante -----------------------
-    // Pelo hash do __ci_uid (e não por sorteio a cada página) para que a MESMA
-    // pessoa caia sempre no mesmo braço — senão o A/B compara sessões, não gente.
-    function hash(s) { var h = 0; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return Math.abs(h); }
-    var uid = window.__ciUid || "";
-    var variante = teste ? forcado
-      : uid ? (hash(uid) % 2 ? "saida" : "engajamento")
-      : (Math.random() < 0.5 ? "saida" : "engajamento");
+    // ---- braço único: `saida` ---------------------------------------------
+    // O A/B rodou de 27/08 20:51 a 29/08 e não deu resultado apertado: `saida` fez 7
+    // respostas em 99 exibições (7,1%); `engajamento`, 2 em 210 (1,0%). No celular a
+    // `engajamento` era a pior célula da tabela inteira — 34 exibições, 21 dispensas
+    // (62%) e ZERO respostas.
+    //
+    // Não fica rodando até dar significância: com 24 exibições no sábado o A/B
+    // levaria meses, e cada dia dele gastava em metade do tráfego a ÚNICA exibição
+    // que cada visitante tem (depois dela são 90 dias de silêncio). Custo de esperar
+    // > valor de confirmar.
+    var variante = teste ? forcado : "saida";
 
     function pct() {
       var h = document.documentElement;
@@ -357,20 +370,16 @@ const hrefForm =
           if (!e.relatedTarget && e.clientY <= 0 && Date.now() - t0 > 5000) mostra();
         }, false);
       } else {
-        // No celular não existe mouseleave. O sinal honesto é o botão VOLTAR — mas
-        // só depois que a pessoa passou de 25% do artigo, para não sequestrar a
-        // navegação de quem entrou e saiu na hora. O estado é empilhado UMA vez e
-        // consumido UMA vez: o segundo "voltar" leva embora normalmente.
-        var empilhado = false;
-        var empilha = function () {
-          if (empilhado || pct() < 25) return;
-          empilhado = true;
-          try { history.pushState({ pulso: 1 }, "", location.href); } catch (e) {}
-        };
-        ouve(window, "scroll", empilha, { passive: true });
-        ouve(window, "popstate", function () { if (empilhado) mostra(); }, false);
-
-        // Rede: 45s parado depois de ter lido — aba esquecida também é saída.
+        // No celular não existe mouseleave. Aqui havia o botão VOLTAR empilhado com
+        // history.pushState, e ele saiu em 29/08/2026: o "voltar" é O gesto de
+        // navegação do celular, e trocá-lo por uma caixinha faz a pessoa fechar por
+        // reflexo — o que não é resposta nenhuma, mas conta como exibição gasta e
+        // queima os 90 dias daquele visitante. O celular vinha fazendo 55% de
+        // dispensa contra 31% do desktop.
+        //
+        // Sobra a rede do ocioso, que é o mesmo sinal sem o sequestro: 45s parado
+        // DEPOIS de passar de 25% do artigo. Aba esquecida em cima de artigo lido é
+        // saída de verdade. São menos exibições, e cada uma vale mais.
         var ocioso;
         var reinicia = function () {
           clearTimeout(ocioso);
