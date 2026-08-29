@@ -288,6 +288,10 @@ const hrefForm =
             resposta: resposta || null,
             destino: destino || null,
             variante: variante,
+            // Repetido em TODAS as linhas da exibição (não só em 'visto'), igual
+            // `resposta` é repetida em 'clique': é o que deixa "dispensa por gatilho"
+            // ser uma consulta de uma linha, sem join da tabela com ela mesma.
+            gatilho: gatilho || null,
             page: location.pathname,
             norma: NORMA || "",
             categoria: CATEGORIA || "",
@@ -305,9 +309,16 @@ const hrefForm =
     // Guarda a resposta que abriu o passo 2, para o evento 'clique' dizer de qual
     // pergunta ele nasceu sem precisar de join da tabela com ela mesma.
     var ultimaResposta = "";
-    function mostra() {
+    // Qual gatilho abriu a caixinha. Existe para responder a pergunta que ficou sem
+    // resposta no corte de 29/08: com um gatilho só por device, "mobile com zero
+    // exibição" e "mobile que aparece e é fechado" pedem decisões OPOSTAS — tirar o
+    // componente do celular, ou mudar a forma dele — e sem isto as duas leituras eram
+    // inferência.
+    var gatilho = "";
+    function mostra(g) {
       if (aberto) return;
       aberto = true;
+      gatilho = g || "";
       desarma();
       box.hidden = false;
       // dois frames: sem isso o navegador aplica a classe no mesmo estilo inicial
@@ -358,7 +369,10 @@ const hrefForm =
       // relógio.
       var tenta = function () {
         if (Date.now() - t0 < 8000) return;
-        if (pct() >= 25 || (!coarse && Date.now() - t0 >= 20000)) mostra();
+        // A rolagem tem precedência quando os dois valem, para o nome do gatilho não
+        // depender de qual timer acordou primeiro.
+        if (pct() >= 25) mostra("rolagem");
+        else if (!coarse && Date.now() - t0 >= 20000) mostra("relogio");
       };
       ouve(window, "scroll", tenta, { passive: true });
       setTimeout(tenta, 8200);
@@ -367,7 +381,7 @@ const hrefForm =
       // SAÍDA. No desktop é o ponteiro deixando a janela pelo topo.
       if (!coarse) {
         ouve(document, "mouseout", function (e) {
-          if (!e.relatedTarget && e.clientY <= 0 && Date.now() - t0 > 5000) mostra();
+          if (!e.relatedTarget && e.clientY <= 0 && Date.now() - t0 > 5000) mostra("mouseout");
         }, false);
       } else {
         // No celular não existe mouseleave. Aqui havia o botão VOLTAR empilhado com
@@ -383,7 +397,7 @@ const hrefForm =
         var ocioso;
         var reinicia = function () {
           clearTimeout(ocioso);
-          ocioso = setTimeout(function () { if (pct() >= 25) mostra(); }, 45000);
+          ocioso = setTimeout(function () { if (pct() >= 25) mostra("ocioso"); }, 45000);
         };
         ouve(window, "scroll", reinicia, { passive: true });
         ouve(window, "touchstart", reinicia, { passive: true });

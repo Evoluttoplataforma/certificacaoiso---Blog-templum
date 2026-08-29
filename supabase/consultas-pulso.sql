@@ -35,6 +35,29 @@ group by variante
 order by variante;
 
 
+-- 1b) O GATILHO: aparece pouco, ou aparece e é fechado? ---------------------
+-- A pergunta que decide se o Pulso continua no celular. Desde 29/08 há um gatilho
+-- por device, e as duas leituras pedem decisões OPOSTAS:
+--   · poucas exibições e dispensa baixa  → o gatilho não pega ninguém: tirar o
+--     componente do device (ou trocar o gatilho);
+--   · muitas exibições e dispensa alta   → pega e incomoda: mudar a FORMA.
+-- `gatilho` é nulo em tudo gravado antes de 2026-08-29 — o filtro abaixo é de rigor.
+select
+  coalesce(gatilho, '(antes de 29/08)') as gatilho,
+  device,
+  count(*) filter (where evento = 'visto')     as apareceu,
+  count(*) filter (where evento = 'resposta')  as respondeu,
+  count(*) filter (where evento = 'dispensa')  as fechou,
+  round(100.0 * count(*) filter (where evento = 'resposta')
+              / nullif(count(*) filter (where evento = 'visto'), 0), 1) as taxa_resposta_pct,
+  round(100.0 * count(*) filter (where evento = 'dispensa')
+              / nullif(count(*) filter (where evento = 'visto'), 0), 1) as taxa_dispensa_pct
+from blog_templum_pulso
+where created_at > '2026-08-29 00:00+00'
+group by 1, 2
+order by apareceu desc;
+
+
 -- 2) QUEM CHEGA E O QUE QUER — a pergunta original ---------------------------
 select
   resposta,
