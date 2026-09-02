@@ -1,0 +1,36 @@
+# Roteiro do resumo em áudio — /nr-1/
+# Hub da vertical NR-1, criado em 02/09/2026. O post é longo e cobre a norma item a
+# item; o áudio não tenta resumir a estrutura — pega os quatro pontos que mudam uma
+# decisão e deixa o resto para o texto.
+#
+# Ordem escolhida: a dispensa vem primeiro porque é o engano mais caro e o mais comum
+# ("sou pequeno, não preciso"), e porque a inversão que ela esconde é boa de ouvir —
+# para se dispensar do PGR você precisa TER FEITO o levantamento de perigos. Depois a
+# hierarquia das medidas (é o que mais gera autuação e não depende de perícia), depois
+# a ordem de serviço, e por último o benefício dos três anos, que é o gancho comercial
+# e o único ponto do roteiro que ninguém mais está falando.
+#
+# "NR-1" NUNCA aparece escrito assim: o precedente do repo (roteiro do PBQP-H) é
+# "Norma Regulamentadora número um", e sigla com hífen e dígito é justamente o que o
+# TTS pt-BR lê de forma instável. Daí em diante, "a norma".
+# Itens numerados ficam fora do áudio de propósito — "um ponto cinco ponto quatro" não
+# se segura de ouvido. Quem quiser o número vai ao texto.
+Norma Regulamentadora número um, em resumo.
+
+É a norma que organiza todas as outras. As demais tratam de temas específicos — equipamento de proteção, máquinas, trabalho em altura — e esta define quem responde pelo quê e o método com que a empresa identifica e trata os riscos do trabalho. Se você tem pelo menos um empregado com carteira assinada, ela se aplica. Não há isenção por tamanho nem por setor.
+
+E é aqui que mora o engano mais caro. Existe tratamento diferenciado para o microempreendedor individual, para a microempresa e para a empresa de pequeno porte, mas ele dispensa da elaboração do Programa de Gerenciamento de Riscos — nunca de cumprir a norma. O próprio texto diz isso com todas as letras.
+
+O microempreendedor individual está dispensado do programa, sem condição nenhuma. Já a microempresa e a empresa de pequeno porte precisam de três condições ao mesmo tempo: estar nos graus de risco um ou dois, não identificar exposição a agentes físicos, químicos e biológicos no levantamento preliminar de perigos, e declarar as informações digitais no sistema do governo. Falta uma, a dispensa cai.
+
+Repare na inversão que isso esconde: para se dispensar do programa, você precisa ter feito o levantamento de perigos. A dispensa não é do trabalho de olhar para os riscos — é do trabalho de formalizar o programa depois de olhar. Quem não fez o levantamento não está dispensado: está sem documento. E a maior parte das empresas que se considera dispensada não está.
+
+Segundo ponto, e é o que mais gera autuação. As medidas de prevenção têm ordem obrigatória: primeiro eliminar o risco; depois controlar com proteção coletiva; depois com medidas administrativas; e só então entregar equipamento de proteção individual. O equipamento é o último recurso, não o primeiro. Distribuir protetor auricular sem registrar por que não foi possível enclausurar a fonte de ruído é pular três degraus — e a ficha de entrega assinada prova que o equipamento foi entregue, não que ele era a medida cabível.
+
+Terceiro, a ordem de serviço, o documento em que a empresa informa formalmente ao trabalhador os riscos da função dele. Ela precisa ser por função, não uma só para a empresa inteira: uma folha igual para o auxiliar administrativo e para o operador de empilhadeira não informa nada. E é ela que sustenta a cobrança — sem ordem de serviço com ciência registrada, não há como demonstrar que o trabalhador conhecia a regra.
+
+Vale conferir a data da sua. A atualização que trouxe os fatores de risco psicossociais para dentro do gerenciamento de riscos está em vigor desde vinte e seis de maio de dois mil e vinte e seis. Quem não revisou a ordem de serviço depois disso tem hoje um documento incompleto por omissão.
+
+E um último ponto, que quase ninguém cita. A avaliação de riscos precisa ser revista a cada dois anos. Mas o texto abre uma exceção: para organizações que possuam certificação em sistema de gestão de saúde e segurança do trabalho, o prazo pode ser de até três anos. Ou seja, a própria norma dá um ano a mais de intervalo para quem tem a ISO quarenta e cinco mil e um certificada — um benefício regulatório escrito na lei, que se soma ao fato de que quem já tem o sistema de gestão não parte do zero.
+
+No artigo estão a norma item a item, o que precisa constar no inventário de riscos e no plano de ação, os três tipos de treinamento obrigatório e os erros que mais aparecem na fiscalização.
