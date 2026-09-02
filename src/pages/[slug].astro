@@ -168,11 +168,29 @@ const relevancia = (p) => {
   if (catDe(p) === minhaCat) s += 1;
   return s;
 };
+// Empate resolve pela DISTÂNCIA CÍCLICA ao post atual — não pela data.
+//
+// Resolver empate por recência parece inofensivo e não é: a maioria dos posts antigos não
+// tem tag curada, então contra eles TODO candidato empata em 1 (só a categoria), e o
+// desempate vira "o mais novo da categoria leva". Medido em 02/09/2026 sobre os 1.000
+// posts: os 4 posts mais recentes de "Qualidade e Inovação" recebiam ~560 links internos
+// CADA — cerca de 2.200 links, um quinto do orçamento interno do blog, em 4 páginas. E 4
+// posts não recebiam nenhum.
+//
+// A distância cíclica é o mesmo princípio do anel logo abaixo, generalizado: entre
+// candidatos igualmente relevantes, vence quem está mais perto do post atual na lista, e
+// como cada post ocupa uma posição diferente, os empates se espalham em vez de convergir.
+// Continua determinístico (mesmo build, mesmo resultado) e a relevância segue mandando:
+// quem compartilha tag ganha antes, sempre. Efeito medido: concentração máxima caiu de
+// 567 para 19 links, e os órfãos de 4 para 1. Os hubs (/iso-27001/, /nr-1/, /o-que-e-a-
+// iso-37001/) sobem sozinhos ao topo, porque compartilham tag com muita gente — que é
+// exatamente o que se quer de um hub.
+const _len = catList.length;
 const porRelevancia = catList
-  .filter((p) => p.slug !== post.slug)
-  .map((p) => ({ p, s: relevancia(p) }))
-  // empate resolve pelo mais recente
-  .sort((a, b) => b.s - a.s || +new Date(b.p.data.pubDate) - +new Date(a.p.data.pubDate))
+  .map((p, i) => ({ p, i }))
+  .filter((x) => x.p.slug !== post.slug)
+  .map((x) => ({ p: x.p, s: relevancia(x.p), d: (((x.i - selfPos) % _len) + _len) % _len }))
+  .sort((a, b) => b.s - a.s || a.d - b.d)
   .map((x) => x.p);
 
 const recent = posts
