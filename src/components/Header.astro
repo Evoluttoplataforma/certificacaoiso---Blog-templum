@@ -28,7 +28,7 @@ const TEMPLUM = "https://templum.com.br";
       <a class="hd-link" href={`${TEMPLUM}/?utm_source=blog&utm_medium=header-nav&origem=blog-menu`}>Conheça a Templum</a>
       {/* Menu por CERTIFICAÇÃO (data/produtos.js), não por categoria editorial: é assim
           que o leitor busca. "Outros temas" mantém as categorias acessíveis — sem elas,
-          todo post que não é de nenhuma das 13 certificações (auditoria, gestão, IA)
+          todo post que não é de nenhuma das 14 certificações (auditoria, gestão, IA)
           ficaria sem porta de entrada pelo menu. */}
       <div class="hd-item">
         <button class="hd-link hd-trigger" type="button" aria-haspopup="true">Certificações <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon></button>
@@ -88,7 +88,7 @@ const TEMPLUM = "https://templum.com.br";
   .hd-item .mega { position: absolute; top: calc(100% + 10px); left: 0; min-width: 720px; background: #fff; border: 1px solid var(--border); border-radius: var(--r-16, 16px); box-shadow: 0 18px 50px rgba(0,0,0,0.13); padding: 14px; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all .2s var(--ease-soft); z-index: 70; }
   .hd-item:hover .mega, .hd-item:focus-within .mega { opacity: 1; visibility: visible; transform: translateY(0); }
   .hd-item:hover .hd-trigger iconify-icon, .hd-item:focus-within .hd-trigger iconify-icon { transform: rotate(180deg); }
-  /* 3 colunas: 13 certificações em 2 colunas viram uma lista de 7 linhas que estoura a
+  /* 3 colunas: 14 certificações em 2 colunas viram uma lista de 7 linhas que estoura a
      altura da viewport em notebook. */
   .mega-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
   .mega-link { display: flex; align-items: center; gap: 11px; padding: 9px 11px; border-radius: 12px; color: var(--text); transition: background .15s; }
@@ -115,7 +115,7 @@ const TEMPLUM = "https://templum.com.br";
   .hd-search iconify-icon { font-size: 20px; }
   .hd-burger { display: none; margin-left: auto; font-size: 26px; color: var(--text); padding: 6px; background: none; border: 0; cursor: pointer; }
   /* O painel rola por conta própria, e isso não é enfeite: ele vive dentro do `.hd`,
-     que é `position: sticky; top: 0`. Com 27 linhas (13 certificações + 11 categorias)
+     que é `position: sticky; top: 0`. Com 28 linhas (14 certificações + 11 categorias)
      ele passa de 1200px, e um sticky mais alto que a tela não devolve o que ficou
      embaixo — a página rola por baixo do header e o resto do menu fica inalcançável.
      Era exatamente aí que "Outros temas" caía. `dvh` porque a barra de endereço do

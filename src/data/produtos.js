@@ -1,4 +1,4 @@
-// Menu de CERTIFICAÇÕES — as 13 que a Templum atende, na ordem do site.
+// Menu de CERTIFICAÇÕES — as 14 que a Templum atende, na ordem do site.
 //
 // Por que não é por categoria editorial: "Qualidade e Inovação" é divisão de redação.
 // Quem chega no blog procura por norma — digita "ISO 9001", "PBQP-H", "GERIC". O menu
@@ -8,17 +8,20 @@
 // navegação, e sair do domínio no primeiro clique quebra a sessão e o visitor_id do
 // Clarity. Quem quer falar tem o botão Contato no header.
 //
-// TODA url foi conferida no Supabase (status=published). Quatro não eram o óbvio:
+// TODA url foi conferida no Supabase (status=published). Cinco não eram o óbvio:
 //   · ISO 14001 → /iso-14001-2/           (o /iso-14001/ é RASCUNHO e daria 404)
 //   · ISO 37001 → /o-que-e-a-iso-37001/   (não existe /iso-37001/)
 //   · FSSC 22000 → /iso-22000/            (o hub se chama "FSSC ISO 22000")
 //   · GERIC → /principais-duvidas-sobre-o-geric/
+//   · PQTA → /pqta-2026-requisitos-erros-e-por-onde-comecar/
+//     (hub atualizado em 03/09/2026; o "o que é" antigo continua em
+//     /pqta-programa-de-qualidade-em-cartorios/)
 //
 // Os ícones foram conferidos um a um na API do Iconify (api.iconify.design/solar.json):
 // o <iconify-icon> resolve o nome em runtime e nome inexistente não dá erro — deixa um
 // buraco no menu, que ninguém percebe até alguém reclamar. "solar:scales-bold" e
 // "solar:truck-bold", que pareciam óbvios, NÃO existem; os certos são scale-bold e
-// delivery-bold.
+// delivery-bold. PQTA usa medal-ribbons-star-bold (mesmo do site /consultoria/pqta).
 export const produtos = [
   { nome: "ISO 9001", desc: "Gestão da Qualidade", url: "/iso-9001/",
     icon: "solar:medal-ribbon-star-bold", cor: "#1167E4" },
@@ -48,4 +51,8 @@ export const produtos = [
     icon: "solar:wallet-money-bold", cor: "#7F2611" },
   { nome: "LGPD", desc: "Proteção de Dados", url: "/lgpd/",
     icon: "solar:lock-keyhole-bold", cor: "#14A7AF" },
+  // PQTA: mesma cor/ícone do site (tokens.css --norm-pqta). Destino = hub 2026
+  // published no Supabase — não a LP templum.com.br/consultoria/pqta/.
+  { nome: "PQTA", desc: "Qualidade em Cartórios", url: "/pqta-2026-requisitos-erros-e-por-onde-comecar/",
+    icon: "solar:medal-ribbons-star-bold", cor: "#C9A227" },
 ];
