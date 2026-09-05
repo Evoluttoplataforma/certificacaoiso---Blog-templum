@@ -10,7 +10,7 @@
 //   - maior primeiro porque assim "iso-90012015" (slug sem hífen antes do ano) cai em
 //     9001 em vez de não casar nada, e "iso-14001" nunca é lido como um número de 4.
 const ISO_NUMS = [
-  "9001", "14001", "45001", "45003", "27001", "27002", "27701", "22000", "22301", "22716",
+  "9001", "14001", "45001", "45003", "27001", "27002", "27701", "42001", "22000", "22301", "22716",
   "37001", "37301", "17025", "17020", "17021", "17065", "50001", "26000", "56002", "31000",
   "55001", "41001", "21001", "21500", "13485", "20000", "39001", "30401", "10002", "10015",
   "19011", "14064", "14067", "28000", "15189", "20121", "44001", "46001", "3834", "9004",
@@ -100,7 +100,7 @@ export function crmDaNorma(norma) {
 // Rótulos que a página /form aceita em ?norma= — evita headline com texto arbitrário
 // vindo da URL (o valor é escrito na página, então precisa ser de lista fechada).
 export const NORMAS_VALIDAS = Object.keys(CRM_PRODUTO).concat([
-  "ISO 17025", "ISO 50001", "ISO 27701", "ISO 26000", "ISO 56002", "ISO 31000",
+  "ISO 17025", "ISO 50001", "ISO 27701", "ISO 42001", "ISO 26000", "ISO 56002", "ISO 31000",
   "ISO 55001", "ISO 13485", "ISO 22301", "ISO 20000", "ISO 37301", "ISO 19011",
   "IATF 16949", "BRCGS", "SA 8000", "AS 9100",
 ]);

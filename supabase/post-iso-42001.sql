@@ -1,0 +1,28 @@
+-- Guia único ISO/IEC 42001 — 05/09/2026
+--
+-- O QUE FOI FEITO (via script + API Supabase; menu/CTA no git do blog):
+--   1 post published em blog_templum_posts, categoria IA, autora Daniela Albuquerque.
+--   id:   be518d78-ab0e-4355-bf67-2e8475b426fa
+--   slug: iso-42001
+--   ~2684 palavras / reading_time_min ≈ 12
+--   FAQ jsonb (6), tldr, SEO (title ≠ H1), canonical /iso-42001/
+--   Áudio: supabase/roteiros-audio/iso-42001.txt → scripts/audio-resumo.mjs (~89s)
+--
+--   Retrofit: link /iso-42001/ no trecho ISO/IEC 42001 do post
+--   iso-27701-2025-o-que-muda-independencia-da-iso-27001.
+--
+--   Código do blog (git): produtos.js, normas.js, cta-norma.js, lead-form-pages.js,
+--   Header (contagem 15). Form no pilar com crm="" até existir cf_produto no Orbit.
+--
+--   Scripts: supabase/posts/_publish-iso-42001.mjs (INSERT)
+--            supabase/posts/_expand-iso-42001.mjs (PATCH de profundidade)
+--
+-- Este arquivo é REFERÊNCIA e ROLLBACK. Conteúdo vive no banco.
+--
+-- Fontes de insumo (anonimizadas na redação — sem nomes de pessoas/concorrentes):
+--   transcrições ISO 42001 em Desktop/Marketing Templum (intro, papéis, aula).
+--
+-- ROLLBACK:
+-- update blog_templum_posts set status='draft' where slug = 'iso-42001';
+--
+-- Para republicar o estático: CMS → Republicar site (Edge Function blog-templum-rebuild).

@@ -1,4 +1,4 @@
-// Menu de CERTIFICAÇÕES — as 14 que a Templum atende, na ordem do site.
+// Menu de CERTIFICAÇÕES — as 15 que a Templum atende, na ordem do site.
 //
 // Por que não é por categoria editorial: "Qualidade e Inovação" é divisão de redação.
 // Quem chega no blog procura por norma — digita "ISO 9001", "PBQP-H", "GERIC". O menu
@@ -29,6 +29,8 @@ export const produtos = [
     icon: "solar:leaf-bold", cor: "#00A844" },
   { nome: "ISO 27001", desc: "Segurança da Informação", url: "/iso-27001/",
     icon: "solar:shield-keyhole-bold", cor: "#14A7AF" },
+  { nome: "ISO 42001", desc: "Gestão de Inteligência Artificial", url: "/iso-42001/",
+    icon: "solar:cpu-bolt-bold", cor: "#6D28D9" },
   { nome: "ISO 45001", desc: "Saúde e Segurança Ocupacional", url: "/iso-45001/",
     icon: "solar:shield-warning-bold", cor: "#FF5925" },
   { nome: "ISO 37001", desc: "Antissuborno", url: "/o-que-e-a-iso-37001/",

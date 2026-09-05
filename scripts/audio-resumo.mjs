@@ -23,6 +23,7 @@
  */
 
 import { createHash } from "node:crypto";
+import { existsSync, readFileSync } from "node:fs";
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -34,6 +35,23 @@ const DIR_ROTEIROS = path.join(AQUI, "..", "supabase", "roteiros-audio");
 // cache, um erro depois do TTS bem-sucedido joga fora áudio pago e a retentativa
 // cobra de novo. Fora do git — ver .gitignore.
 const DIR_CACHE = path.join(AQUI, "..", ".audio-cache");
+
+// Carrega `.env` local (gitignored) sem dependência extra. Env já setada no shell ganha.
+{
+  const envPath = path.join(AQUI, "..", ".env");
+  if (existsSync(envPath)) {
+    for (const linha of readFileSync(envPath, "utf8").split(/\r?\n/)) {
+      const t = linha.trim();
+      if (!t || t.startsWith("#")) continue;
+      const i = t.indexOf("=");
+      if (i < 1) continue;
+      const k = t.slice(0, i).trim();
+      let v = t.slice(i + 1).trim();
+      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);
+      if (k && process.env[k] === undefined) process.env[k] = v;
+    }
+  }
+}
 
 const SB_URL = process.env.SUPABASE_URL || "https://yfpdrckyuxltvznqfqgh.supabase.co";
 const SB_SERVICE = process.env.SUPABASE_SERVICE_KEY || "";

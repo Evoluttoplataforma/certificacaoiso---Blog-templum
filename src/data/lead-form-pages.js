@@ -31,6 +31,9 @@ export const LEAD_FORM_PAGES = {
   "iso-14001-2": { display: "ISO 14001", crm: "ISO 14001" },
   "iso-45001": { display: "ISO 45001", crm: "ISO 45001" },
   "iso-27001": { display: "ISO 27001", crm: "ISO 27001" },
+  // ISO 42001: display para headline; crm vazio até o Orbit ter cf_produto próprio
+  // (valor inválido cega todos os custom fields — mesmo padrão do 17025).
+  "iso-42001": { display: "ISO 42001", crm: "" },
   "iso-22000": { display: "FSSC 22000", crm: "FSSC 22000" },
   "iso-17025": { display: "ISO 17025", crm: "" }, // sem opção no cf_produto do CRM
   "pbqp-h": { display: "PBQP-H", crm: "PBQP-H" },

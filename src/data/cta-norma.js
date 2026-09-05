@@ -21,6 +21,10 @@ const CTAS = {
     titulo: "Sua segurança da informação passa em auditoria?",
     texto: "Diagnóstico gratuito do seu SGSI: onde estão as lacunas de controle, antes de o auditor apontar.",
   },
+  "iso-42001": {
+    titulo: "Sua IA tem governança de verdade?",
+    texto: "Diagnóstico gratuito do uso de inteligência artificial: papéis, risco, impacto e o que falta para um SGIA auditável.",
+  },
   "iso-14001": {
     titulo: "Seu sistema ambiental está completo?",
     texto: "Diagnóstico gratuito do seu SGA: aspecto significativo sem controle, requisito legal e o que falta para certificar.",
@@ -77,6 +81,8 @@ const REGRAS = [
   // NR-1 e psicossocial ANTES da regra de 45001: aquela captura /nr-?\d/, então sem esta
   // linha toda a vertical de NR-1 receberia o CTA genérico de SST.
   [/\bnr\s*-?\s*0?1\b|psicossoc|sa[úu]de mental|burnout|ass[ée]dio/i, "nr-1"],
+  // 42001 ANTES de 27001: posts de IA/governança não podem cair no CTA de SGSI genérico.
+  [/\b42001\b|SGIA|gest[aã]o de intelig[eê]ncia artificial|governan[çc]a de IA/i, "iso-42001"],
   [/\b27701\b|\b27001\b|\blgpd\b|criptograf|mascaramento|prote[çc][ãa]o de dados|seguran[çc]a da informa[çc][ãa]o/i, "iso-27001"],
   [/\b37001\b|\b37301\b|antissuborno|suborno|integridade corporativa/i, "compliance"],
   [/\b45001\b|\bsst\b|\bsso\b|\bnr-?\d|seguran[çc]a do trabalho|ocupacional|\bepi\b/i, "iso-45001"],
@@ -121,6 +127,7 @@ const POR_CATEGORIA = {
 export const ROTULO_DO_CTA = {
   "iso-9001": "ISO 9001",
   "iso-27001": "ISO 27001",
+  "iso-42001": "ISO 42001",
   "iso-14001": "ISO 14001",
   "iso-45001": "ISO 45001",
   "iso-22000": "ISO 22000",

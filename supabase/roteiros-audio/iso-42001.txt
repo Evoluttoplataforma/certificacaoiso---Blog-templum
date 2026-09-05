@@ -1,0 +1,15 @@
+# Roteiro do resumo em áudio — /iso-42001/
+# Guia único da ISO quatro dois mil e um, 05/09/2026.
+# Ordem: o que é → papéis → risco × impacto → certificação.
+# "42001" → "quatro dois mil e um"; "ISO" fica "ISO"; "SGIA" por extenso na primeira vez.
+ISO quatro dois mil e um, em resumo.
+
+É a norma internacional de sistema de gestão de inteligência artificial. Não ensina a treinar modelo. Exige que a organização governe o desenvolvimento, o fornecimento ou o uso de inteligência artificial com política, papéis, risco, impacto, controles e melhoria contínua — no mesmo esqueleto das outras normas ISO de gestão.
+
+Três papéis cobrem a maior parte dos casos. Produtor: quem desenvolve o sistema. Fornecedor: quem entrega solução que incorpora inteligência artificial. Usuário: quem emprega a ferramenta em processo interno ou em decisão operacional. O escopo pode combinar papéis. E uso não homologado — o famoso shadow A I — continua sendo risco mesmo quando a empresa “oficialmente” ainda não tem projeto de inteligência artificial.
+
+O ponto que mais separa amador de sistema é a dupla análise. Avaliação de risco olha o dano para a organização. Avaliação de impacto olha o efeito em indivíduos, grupos e sociedade — viés, discriminação, dano a pessoas. As duas se complementam. Tratar só o risco interno deixa de fora o que a norma cobra sobre quem a inteligência artificial atinge.
+
+A certificação é voluntária. O ciclo típico tem auditoria inicial em duas fases, manutenção anual e recertificação a cada três anos. Quem já tem ISO vinte e sete mil e um encurta a espinha de gestão; o trabalho novo é o recorte de inteligência artificial.
+
+No artigo estão os anexos de controle, exemplos setoriais sem marca e a ponte com privacidade e segurança da informação.
