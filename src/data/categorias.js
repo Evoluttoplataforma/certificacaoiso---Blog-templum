@@ -15,14 +15,15 @@ export const categorias = [
     desc: "Como chegar pronto na auditoria: não conformidades, ações corretivas, análise de causa raiz e evidências que o auditor realmente pede. Guias e modelos para auditorias internas e de certificação que viram melhoria contínua, não dor de cabeça." },
   { nome: "Segurança e Compliance", slug: "seguranca-e-compliance", icon: "solar:shield-keyhole-bold", cor: "#14A7AF",
     desc: "ISO 27001, LGPD e gestão de compliance para proteger informação e reduzir riscos. Do mapeamento de processos ao tratamento de dados pessoais, conteúdos para empresas que precisam de segurança da informação com base sólida e auditável." },
+  // IA no bloco do hero (home usa slice(0, 9)): sobe junto da vertical ISO 42001 / governança.
+  { nome: "IA", slug: "ia", icon: "solar:cpu-bolt-bold", cor: "#6D28D9",
+    desc: "Inteligência artificial e ISO 42001 sem hype: governança, papéis, risco e impacto. Conteúdos para quem precisa decidir se a IA da empresa está sob controle — e o que um SGIA auditável exige na prática." },
   { nome: "Gestão e Marketing", slug: "gestao-e-marketing", icon: "solar:chart-2-bold", cor: "#BC0000",
     desc: "Gestão, liderança, processos e crescimento para quem usa a certificação como alavanca de negócio. OKR, indicadores, fluxo de caixa, relacionamento com o cliente e produtividade — ideias práticas para organizar a empresa e crescer do jeito certo." },
   { nome: "Transportes e Logística", slug: "transportes-e-logistica", icon: "solar:delivery-bold", cor: "#2E3191",
     desc: "SASSMAQ, ISO 9001 e gestão para operações de transporte e logística. Conteúdos sobre segurança, qualidade no atendimento, controle de frota e os requisitos que abrem portas com grandes embarcadores e clientes exigentes." },
   { nome: "ESG", slug: "esg", icon: "solar:earth-bold", cor: "#9DBF0D",
     desc: "ESG na prática, por onde começar e como provar resultado. Da governança às metas ambientais e sociais, reunimos conteúdos para empresas que querem estruturar a agenda ESG com indicadores reais — e não só discurso." },
-  { nome: "IA", slug: "ia", icon: "solar:cpu-bolt-bold", cor: "#FF5925",
-    desc: "Inteligência artificial aplicada à gestão e à certificação, sem hype. Casos reais de onde a IA gera retorno em processos, atendimento e análise de dados — e como adotar com baixo risco. Conteúdos para empresários e gestores, não para cientistas de dados." },
 ];
 
 // nome → slug (p/ mapear as categorias dos posts)

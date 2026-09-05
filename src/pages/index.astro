@@ -40,7 +40,7 @@ const fmtHero = (dt) => dt.toLocaleDateString("pt-BR", { day: "2-digit", month: 
         <input type="search" name="q" placeholder="Buscar artigo (norma, tema, dúvida…)" aria-label="Buscar artigos" />
         <button type="submit" class="btn btn--primary btn--sm">Buscar</button>
       </form>
-      <div class="bloghero-cats">{categorias.slice(0, 8).map((c) => <a href={`/categoria/${c.slug}/`} class="bh-cat"><iconify-icon icon={c.icon} style={`color:${c.cor}`}></iconify-icon> {c.nome}</a>)}</div>
+      <div class="bloghero-cats">{categorias.slice(0, 9).map((c) => <a href={`/categoria/${c.slug}/`} class="bh-cat"><iconify-icon icon={c.icon} style={`color:${c.cor}`}></iconify-icon> {c.nome}</a>)}</div>
     </div>
   </section>
 
