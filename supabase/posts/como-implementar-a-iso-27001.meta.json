@@ -1,0 +1,36 @@
+{
+ "title": "Como implementar a ISO 27001: o passo a passo, da decisão ao certificado",
+ "seo_title": "Como implementar a ISO 27001: passo a passo completo",
+ "seo_description": "O passo a passo de quem implementa a ISO 27001 de verdade: as 11 etapas na ordem que funciona, quem faz o quê, a evidência que cada etapa deixa e os erros que fazem o projeto recomeçar.",
+ "tldr": "Implementar a ISO 27001 é montar um SGSI que continue funcionando depois do projeto — e provar isso com registro. O caminho tem 11 etapas e a ordem não é decorativa: diagnóstico, escopo, contexto e política, levantamento de ativos, sistemática de risco, avaliação de riscos, tratamento e Declaração de Aplicabilidade, implantação dos controles, conscientização, operação com registro e, por fim, auditoria interna e análise crítica pela direção. O erro mais caro é começar pelos 93 controles do Anexo A em vez de começar pelo risco: o Anexo A é a lista de conferência, não o ponto de partida. E a etapa que nenhuma consultoria encurta é operar tempo suficiente para gerar evidência — controle implantado ontem não tem histórico para o auditor amostrar hoje.",
+ "faq": [
+  {
+   "pergunta": "Por onde começar a implementação da ISO 27001?",
+   "resposta": "<p>Pelo <strong>escopo e pela avaliação de riscos</strong>, nunca pelos controles. A sequência que funciona é: diagnóstico do que já existe, definição do escopo do SGSI, análise de contexto e partes interessadas, política aprovada pela direção, levantamento de processos e ativos de informação, sistemática de risco com critérios escritos <em>antes</em> dos resultados, e só então a escolha dos controles a partir do que o risco apontou. O Anexo A entra depois, como lista de conferência para achar lacuna.</p>"
+  },
+  {
+   "pergunta": "Quanto tempo leva para implementar a ISO 27001?",
+   "resposta": "<p>Depende de três variáveis: maturidade de partida (empresa que já tem ISO 9001 aproveita boa parte da estrutura de gestão), tamanho do escopo e — a que mais atrasa — quantas horas por semana a equipe realmente tem. O que não dá para encurtar é o tempo de operação: alguns registros só existem com o passar do calendário, como revisão trimestral de acessos e teste de restauração de backup. Desconfie de prazo fechado dado antes de conhecer o seu escopo.</p>"
+  },
+  {
+   "pergunta": "Preciso implantar todos os 93 controles do Anexo A?",
+   "resposta": "<p>Não. Você precisa <strong>analisar todos os 93</strong> e declarar, na Declaração de Aplicabilidade, quais se aplicam e por quê — com justificativa também para os excluídos. Os controles aplicáveis saem do tratamento de riscos, não de uma meta de cobertura. Exclusão mal justificada, de controle que a operação usa todo dia, é um dos achados mais comuns na auditoria.</p>"
+  },
+  {
+   "pergunta": "A implementação da ISO 27001 é responsabilidade da TI?",
+   "resposta": "<p>Não. A norma não exige tecnologia nenhuma — exige que o risco seja avaliado e tratado. Dos 93 controles do Anexo A, 37 são organizacionais, 8 são de pessoas, 14 são físicos e 34 são tecnológicos. RH responde por triagem, termo de responsabilidade e desligamento; jurídico e compras, por cláusulas contratuais e avaliação de fornecedores; facilities, pelos controles físicos; a direção, pela política e pela aceitação do risco residual. TI implanta a parte tecnológica e fornece evidência técnica.</p>"
+  },
+  {
+   "pergunta": "Dá para implementar a ISO 27001 sem consultoria?",
+   "resposta": "<p>Dá, e faz sentido quando já existe um sistema de gestão certificado rodando, alguém com competência em segurança da informação e — principalmente — hora alocada de verdade. O custo aparece em hora interna, que costuma ser a maior linha do projeto e a que ninguém orça. A consultoria encurta a curva onde ela é mais cara: sistemática de risco, Declaração de Aplicabilidade, documentação e preparação para a auditoria. O que ela não pode ser é o mesmo organismo que vai certificar: a separação é regra de imparcialidade.</p>"
+  },
+  {
+   "pergunta": "Que documentos a ISO 27001 obriga a ter?",
+   "resposta": "<p>Escopo do SGSI, política de segurança da informação, processo e critérios de avaliação de riscos, processo de tratamento de riscos, Declaração de Aplicabilidade, objetivos de segurança da informação, evidência de competência, resultados da avaliação e do tratamento de riscos, evidência de monitoramento e medição, programa e resultados da auditoria interna, resultados da análise crítica pela direção e os registros de não conformidade e ação corretiva. A lista item por item, por cláusula, está em requisitos da ISO 27001.</p>"
+  },
+  {
+   "pergunta": "Como sei que estou pronto para chamar o auditor?",
+   "resposta": "<p>Faça a prova de evidência: escolha três controles quaisquer da sua Declaração de Aplicabilidade e peça o registro da última vez que cada um aconteceu. Se os três aparecem em minutos, com data e responsável, o sistema opera. Se precisam ser construídos, ainda não. Além disso, o estágio 1 verifica se existem escopo, política, avaliação de riscos, SoA, controles com histórico, uma auditoria interna completa e uma análise crítica pela direção realizada.</p>"
+  }
+ ]
+}

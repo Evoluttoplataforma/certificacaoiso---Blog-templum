@@ -1,0 +1,32 @@
+{
+ "title": "SGSI: o que é o Sistema de Gestão da Segurança da Informação",
+ "seo_title": "SGSI: o que é o Sistema de Gestão da Segurança da Informação",
+ "seo_description": "O que é um SGSI, do que ele é feito, por que não é a mesma coisa que ferramenta de TI, como se relaciona com a ISO 27001 e com a LGPD — e quatro perguntas que revelam se o seu existe de verdade.",
+ "tldr": "SGSI é a sigla de Sistema de Gestão da Segurança da Informação: o conjunto de política, processos, papéis e controles com que uma organização decide quanto risco de informação aceita correr e o que faz para manter esse risco no tamanho escolhido. Ele protege três propriedades — confidencialidade, integridade e disponibilidade — e vale para informação em qualquer suporte, inclusive papel e conversa. Não é firewall nem antivírus: tecnologia é um dos meios de tratar risco, e dos 93 controles do Anexo A da ISO 27001 apenas 34 são tecnológicos. A ISO/IEC 27001 é a norma que especifica os requisitos de um SGSI e a única certificável nesse tema, mas dá para ter o sistema sem certificar.",
+ "faq": [
+  {
+   "pergunta": "O que significa SGSI?",
+   "resposta": "<p>Sistema de Gestão da Segurança da Informação. É o conjunto de política, processos, papéis, controles e registros com que a organização gerencia os riscos sobre suas informações — decidindo antes, atribuindo dono e gerando evidência do que foi feito. Em inglês aparece como ISMS (<em>Information Security Management System</em>).</p>"
+  },
+  {
+   "pergunta": "SGSI e ISO 27001 são a mesma coisa?",
+   "resposta": "<p>Não. O SGSI é o sistema; a <strong>ISO/IEC 27001 é a norma que especifica os requisitos desse sistema</strong> e a única contra a qual uma organização se certifica no tema. A ISO/IEC 27002 orienta a implementação dos controles e a ISO/IEC 27005 trata da gestão de riscos — nenhuma das duas é certificável.</p>"
+  },
+  {
+   "pergunta": "Dá para ter um SGSI sem certificar na ISO 27001?",
+   "resposta": "<p>Dá, e é comum. Muita empresa implanta o sistema pela redução de risco e só busca o certificado quando um cliente, um edital ou um investidor exige. O sistema funciona do mesmo jeito; o que o certificado acrescenta é a verificação independente por um organismo acreditado — que é o que o mercado aceita como prova.</p>"
+  },
+  {
+   "pergunta": "O SGSI é responsabilidade da TI?",
+   "resposta": "<p>Não. A TI implanta e opera boa parte dos controles tecnológicos, mas quem define o que é confidencial, quem pode acessar, por quanto tempo guardar e qual risco aceitar é a área dona da informação e a direção. Dos 93 controles do Anexo A, 37 são organizacionais, 8 são de pessoas e 14 são físicos — a maior parte não se resolve dentro da TI.</p>"
+  },
+  {
+   "pergunta": "O SGSI precisa cobrir a empresa inteira?",
+   "resposta": "<p>Não. O escopo pode ser uma unidade, um serviço ou um produto — mas o que ficar de fora não é auditado nem coberto pelo certificado. Escopo estreito demais entrega um certificado que não atende à exigência do cliente; largo demais multiplica esforço e dias de auditoria. Em qualquer recorte, as interfaces com o que está fora precisam ficar explícitas, principalmente em nuvem.</p>"
+  },
+  {
+   "pergunta": "O SGSI resolve a LGPD?",
+   "resposta": "<p>Resolve a parte de segurança — é o caminho mais direto para atender e <em>provar</em> as medidas técnicas e administrativas do art. 46. Mas não cobre base legal, finalidade, direitos do titular, encarregado, relatório de impacto nem comunicação de incidente à ANPD, que são exigências da lei e não requisitos da norma. O SGSI também protege informação que não é dado pessoal, como contrato, código-fonte e projeto.</p>"
+  }
+ ]
+}

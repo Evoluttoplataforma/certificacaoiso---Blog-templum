@@ -1,0 +1,32 @@
+{
+ "title": "Certificação ISO 27001 para pessoas: o que existe (e o que não existe)",
+ "seo_title": "Certificação ISO 27001 para pessoas: existe? O que muda",
+ "seo_description": "A ISO 27001 certifica organizações, não pessoas. O que existe para profissionais é certificação de competência — auditor interno, auditor líder, implementador líder. Qual delas resolve o seu caso.",
+ "tldr": "A ISO 27001 não certifica pessoas: ela certifica o SGSI de uma organização, com escopo declarado, por um organismo acreditado, em auditoria de dois estágios. Para profissionais existem certificações de competência — auditor interno, auditor líder e implementador líder —, emitidas por organismos de certificação de pessoas, cuja referência normativa é a ISO/IEC 17024. Uma não substitui a outra: contratar profissional certificado não deixa a empresa certificada, e certificado de participação em curso não é certificação profissional. Onde as duas se encontram é na auditoria interna, porque a norma exige competência comprovada e imparcialidade de quem audita.",
+ "faq": [
+  {
+   "pergunta": "Existe certificação ISO 27001 para pessoas?",
+   "resposta": "<p>Não da forma como se imagina. A ISO 27001 certifica o sistema de gestão de uma <strong>organização</strong>, com escopo declarado, por um organismo acreditado. Para pessoas existem certificações de competência — auditor interno, auditor líder, implementador líder — emitidas por organismos de certificação de pessoas e esquemas de registro de auditores. São documentos diferentes, com efeitos diferentes.</p>"
+  },
+  {
+   "pergunta": "Se eu contratar um profissional certificado, minha empresa fica certificada?",
+   "resposta": "<p>Não. A certificação da empresa só é obtida com auditoria de um organismo certificador acreditado sobre o SGSI implantado. Um profissional certificado acelera e qualifica o projeto — e serve como evidência de competência dentro do sistema —, mas não emite nem substitui o certificado da organização.</p>"
+  },
+  {
+   "pergunta": "Qual a diferença entre certificado de curso e certificação profissional?",
+   "resposta": "<p>O <strong>certificado de participação</strong> comprova que você fez o treinamento e é emitido por quem deu o curso; ele serve como evidência de competência no SGSI. A <strong>certificação profissional</strong> comprova que você foi avaliado contra um esquema, quase sempre com exame e às vezes com comprovação de experiência, e é emitida por um organismo independente de quem treinou, com validade e renovação. Anúncio de \"certificação internacional em 8 horas\" costuma ser a primeira vendida com o nome da segunda.</p>"
+  },
+  {
+   "pergunta": "Preciso ser certificado para fazer a auditoria interna da ISO 27001?",
+   "resposta": "<p>A norma não exige um certificado específico: exige <strong>competência determinada e comprovada</strong> (7.2) e <strong>imparcialidade</strong> (9.2). Formação de auditor interno é o caminho mais rápido de comprovar a competência. A imparcialidade é a restrição que mais pega equipes pequenas: ninguém audita o próprio trabalho, então ou se cruzam auditores entre áreas ou se contrata um auditor externo para conduzir a auditoria interna.</p>"
+  },
+  {
+   "pergunta": "Qual certificação de ISO 27001 escolher para a minha carreira?",
+   "resposta": "<p>Depende de onde você quer atuar. <strong>Auditor líder</strong> faz sentido para quem vai auditar terceiros, em geral trabalhando com organismos certificadores, e costuma exigir auditorias registradas para o reconhecimento pleno. <strong>Implementador líder</strong> é para quem vai construir o SGSI dentro das organizações. <strong>Auditor interno</strong> é o suficiente para quem vai conduzir a auditoria exigida pela cláusula 9.2 na própria empresa.</p>"
+  },
+  {
+   "pergunta": "O curso precisa ser da versão 2022 da norma?",
+   "resposta": "<p>Precisa. A versão vigente é a ISO/IEC 27001:2022, com 93 controles do Anexo A organizados em quatro temas, mais a Emenda 1:2024 sobre mudanças climáticas no contexto. Material que ainda ensina os 114 controles e as 14 seções da edição de 2013 está desatualizado — a validade daquela edição se encerrou em outubro de 2025.</p>"
+  }
+ ]
+}

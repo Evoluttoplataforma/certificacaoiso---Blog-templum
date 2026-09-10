@@ -53,6 +53,15 @@ export const LEAD_FORM_PAGES = {
   // converter aqui em ~60 dias, tire desta lista antes de tirar das outras.
   "o-que-e-fluxograma-de-processos": { display: "ISO 9001", crm: "ISO 9001" },
 
+  // --- fundo de funil da vertical de ISO 27001 (10/09/2026) ---
+  // As três páginas em que o leitor já não está perguntando "o que é": está decidindo
+  // como fazer, com quem e por quanto. "consultoria iso 27001" (549 impressões em 6
+  // meses, posição 19,5) e "contratar consultoria iso 27001" são consulta de compra —
+  // o form aqui é o próximo passo, não interrupção.
+  "consultoria-iso-27001": { display: "ISO 27001", crm: "ISO 27001" },
+  "como-implementar-a-iso-27001": { display: "ISO 27001", crm: "ISO 27001" },
+  "certificacao-iso-27001-etapas-prazo-custo": { display: "ISO 27001", crm: "ISO 27001" },
+
   // --- pilar da vertical de NR-1 (riscos psicossociais) ---
   // Ganha o formulário completo por dois motivos: a fiscalização punitiva já começou
   // (26/05/2026), então a intenção aqui é resolver um problema com prazo vencido, não

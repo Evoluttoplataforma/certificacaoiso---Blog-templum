@@ -1,0 +1,137 @@
+<p>Implementar a <a href="/iso-27001/">ISO 27001</a> é construir um Sistema de Gestão da Segurança da Informação que funcione sozinho depois que o projeto acabar — e conseguir provar isso com registro. Não é escrever política, não é comprar ferramenta e não é marcar os 93 controles do Anexo A como "implementado". Este artigo é o passo a passo do projeto inteiro, na ordem que funciona, com o que fica pronto e a evidência que sobra em cada etapa.</p>
+<p>Um aviso que economiza meses: <strong>a ordem não é decorativa</strong>. Quem começa pelos controles antes de avaliar risco implanta o que a norma não pediu, deixa de fora o que ela pediria, e chega na auditoria com um sistema que descreve uma empresa que não existe. A avaliação de riscos é o que determina todo o resto.</p>
+<p><strong>Neste artigo:</strong></p>
+<ul>
+<li><a href="#antes">As três decisões que vêm antes do passo 1</a></li>
+<li><a href="#passos">O passo a passo, em 11 etapas</a></li>
+<li><a href="#quem">Quem faz o quê (e por que não é projeto de TI)</a></li>
+<li><a href="#prazo">Cronograma: o que acelera e o que não acelera</a></li>
+<li><a href="#sozinho">Sozinho, com consultoria ou com software</a></li>
+<li><a href="#erros">Os erros que fazem a implementação recomeçar</a></li>
+<li><a href="#pronto">Como saber que está pronto para o auditor</a></li>
+<li><a href="#duvidas">Dúvidas frequentes</a></li>
+</ul>
+
+<h2 id="antes">As três decisões que vêm antes do passo 1</h2>
+<p>Antes de qualquer atividade técnica, três decisões precisam sair da direção. Elas definem custo, prazo e se o projeto termina.</p>
+<p><strong>1. Por que estamos certificando.</strong> Exigência de um cliente, entrada em licitação, requisito de investidor, pré-condição para operar em outro país, ou decisão própria de reduzir risco. A resposta muda o escopo: se a 27001 foi pedida por um cliente para um serviço específico, aquele serviço precisa estar dentro — certificado que não cobre o serviço contratado não resolve o problema que motivou o projeto.</p>
+<p><strong>2. Quem responde pelo projeto.</strong> A norma exige liderança demonstrada (cláusula 5), e demonstrada significa amostrável: direção que aprova política, define papéis, libera recurso e participa da análise crítica. Projeto delegado inteiro para um analista de TI trava na primeira decisão que envolve outra área.</p>
+<p><strong>3. Quanto tempo a equipe tem por semana.</strong> É a variável que mais atrasa certificação, e a única que ninguém coloca no cronograma. Levantamento de ativos, avaliação de riscos, escrita de documento, conscientização, auditoria interna — tudo isso é hora de gente que já tem outra função.</p>
+<p><strong>Evidência esperada:</strong> ata ou documento de abertura com o objetivo do SGSI, o responsável designado, os papéis e a alocação acordada. Parece burocracia; é o que o auditor usa para verificar 5.1 e 5.3.</p>
+
+<h2 id="passos">O passo a passo, em 11 etapas</h2>
+
+<h3>1. Diagnóstico: o que já existe</h3>
+<p>Comparar a operação atual com o que a norma exige, requisito por requisito. Empresa que já tem <a href="/iso-9001/">ISO 9001</a> costuma descobrir que metade da estrutura de gestão está pronta — contexto, informação documentada, competência, auditoria interna, ação corretiva, análise crítica são requisitos comuns. O que se aproveita e o que não se aproveita está em <a href="/iso-27001-e-iso-9001/">ISO 27001 e ISO 9001</a>.</p>
+<p><strong>O que fica pronto:</strong> uma lista de lacunas com esforço estimado, que vira o cronograma.</p>
+
+<h3>2. Escopo do SGSI</h3>
+<p>Quais processos, unidades, pessoas e ativos de informação entram — e as interfaces com o que fica fora, principalmente provedores de nuvem e serviços terceirizados. Decisão de negócio antes de ser técnica, e a mais cara de refazer: mudar escopo depois do estágio 1 muda os dias de auditoria já contratados. O detalhamento está em <a href="/iso-27001-e-o-escopo-do-sistema-de-gestao-da-seguranca-da-informacao/">como definir o escopo do SGSI</a>.</p>
+<p><strong>Evidência esperada:</strong> escopo documentado (requisito 4.3), com limites explícitos e justificativa do que ficou fora.</p>
+
+<h3>3. Contexto, partes interessadas e política</h3>
+<p>Questões internas e externas que afetam a segurança da informação, quem são as partes interessadas e o que cada uma exige — cliente, regulador, matriz, seguradora. Desde a <strong>Emenda 1:2024</strong>, entra também a determinação de se as mudanças climáticas são pertinentes ao contexto: para segurança da informação isso é concreto, porque evento climático extremo é causa de indisponibilidade de data center e de queda de link.</p>
+<p>Com o contexto na mão, a direção aprova a <strong>política de segurança da informação</strong>: curta, aprovada, comunicada e disponível. Política de 14 páginas que ninguém leu não atende ao requisito, porque a evidência de 5.2 inclui a comunicação.</p>
+<p><strong>Evidência esperada:</strong> análise de contexto com questões nomeadas (não uma SWOT genérica), lista de partes interessadas com requisitos, política aprovada com controle de versão e prova de divulgação.</p>
+
+<h3>4. Levantamento de processos, informações e ativos</h3>
+<p>A etapa mais trabalhosa e a que sustenta todo o resto. Mapear que informação existe dentro do escopo, onde ela nasce, por onde trafega, quem acessa, onde fica armazenada e quando é descartada — incluindo o que está em SaaS, em planilha local e em papel. A 27001 não trata só de dado digital: há 14 controles físicos no Anexo A. O método está em <a href="/iso-27001-o-guia/">ISO 27001: mapeamento de processos e ativos de informação</a>.</p>
+<p><strong>Evidência esperada:</strong> inventário de ativos de informação com dono atribuído — pessoa com nome, não "TI".</p>
+
+<h3>5. Sistemática de avaliação de riscos</h3>
+<p>Definir os critérios <em>antes</em> de olhar os resultados: como identificar risco, como estimar consequência e probabilidade, qual a escala, o que é risco aceitável e quem aceita. Critério escrito depois que os riscos apareceram é o achado mais fácil de um auditor experiente — a escala sempre acaba calibrada para caber no que a empresa já fazia.</p>
+<p>A referência prática é a <a href="/matriz-de-riscos-o-que-e-e-como-aplicar/">matriz de riscos</a>, e a norma de apoio é a ISO/IEC 27005. A 27001 não obriga método específico: obriga método consistente e repetível.</p>
+<p><strong>Evidência esperada:</strong> processo de avaliação de riscos documentado, com critérios de aceitação aprovados pelo dono do risco.</p>
+
+<h3>6. Avaliação de riscos executada</h3>
+<p>Aplicar a sistemática ao inventário: identificar riscos sobre confidencialidade, integridade e disponibilidade, atribuir dono a cada um, analisar e priorizar. Aqui o projeto para de ser teórico — é esta lista que vai dizer quais controles você precisa e em que profundidade.</p>
+<p><strong>Evidência esperada:</strong> resultado da avaliação de riscos (requisito 8.2), com riscos nomeados em linguagem de negócio, não uma lista de vulnerabilidades técnicas copiada de scanner.</p>
+
+<h3>7. Tratamento de riscos e Declaração de Aplicabilidade</h3>
+<p>Para cada risco: reduzir, transferir, evitar ou aceitar. Os controles saem do tratamento e <strong>só então</strong> são conferidos contra o Anexo A, que serve de lista de verificação para achar lacuna — nunca de ponto de partida.</p>
+<p>Disso nasce a <strong>Declaração de Aplicabilidade (SoA)</strong>: os 93 controles do Anexo A, cada um com justificativa de inclusão ou exclusão, o status de implementação e a referência ao risco que o motiva. É o documento mais consultado da auditoria, e o mais fácil de escrever mal.</p>
+<p><strong>Evidência esperada:</strong> plano de tratamento de riscos com prazo e responsável, SoA completa e aceitação formal dos riscos residuais por quem tem autoridade para aceitar.</p>
+
+<h3>8. Implantação dos controles</h3>
+<p>Aqui o SGSI encosta na operação real: gestão de acessos, fornecedores, desenvolvimento seguro, operação de TI, pessoas, ambiente físico. Os 93 controles se organizam em quatro temas — <strong>37 organizacionais, 8 de pessoas, 14 físicos e 34 tecnológicos</strong> —, o que ajuda a distribuir a implantação por área em vez de empilhar tudo na TI.</p>
+<p>Três controles concentram boa parte dos achados e têm guia próprio aqui: <a href="/backup-e-copia-de-seguranca-iso-27001-controle-8-13/">backup e cópia de segurança (8.13)</a>, <a href="/controle-criptografico-iso-27001-politica-tamanho-de-chave-gestao/">controle criptográfico (8.24)</a> e <a href="/mascaramento-de-dados-iso-27001-controle-8-11/">mascaramento de dados (8.11)</a>. Se há trabalho remoto no escopo, some a <a href="/relacao-da-iso-27001-com-o-home-office/">ISO 27001 no home office</a>.</p>
+<p><strong>Evidência esperada:</strong> o controle operando e deixando rastro — não o procedimento que descreve o controle.</p>
+
+<h3>9. Competência, conscientização e comunicação</h3>
+<p>Cada pessoa dentro do escopo precisa saber o que a política exige dela, e a empresa precisa provar competência de quem executa atividade crítica. Treinamento com lista de presença é registro de participação; a norma pede também <strong>avaliação de eficácia</strong> — alguma forma de verificar se a mensagem mudou o comportamento. O paralelo direto está em <a href="/iso-9001-requisitos-7-2-competencia/">competência: o requisito 7.2</a>.</p>
+<p><strong>Evidência esperada:</strong> plano de conscientização proporcional ao risco de cada função, registros de participação e alguma medida de eficácia (teste, simulação de phishing, checagem em campo).</p>
+
+<h3>10. Operar tempo suficiente para gerar evidência</h3>
+<p>A etapa que ninguém coloca no cronograma e que nenhuma consultoria consegue encurtar. O sistema precisa rodar: acessos revisados, incidentes registrados e tratados, testes de restauração de backup executados, indicadores medidos, fornecedores avaliados. Alguns registros só existem com o passar do calendário — revisão trimestral de acesso precisa de trimestres.</p>
+<p><strong>Evidência esperada:</strong> registros com datas distribuídas ao longo de meses. Doze registros criados na mesma semana anterior à auditoria contam a história do que realmente aconteceu.</p>
+
+<h3>11. Auditoria interna e análise crítica pela direção</h3>
+<p>São requisitos (9.2 e 9.3), não boas práticas — e a falta de qualquer um dos dois trava a certificação já no estágio 1. A auditoria interna precisa de auditor competente e imparcial: ninguém audita o próprio trabalho. O roteiro está em <a href="/auditoria-iso-27001/">auditoria da ISO 27001</a> e a preparação em <a href="/checklist-preparacao-auditoria-interna-iso/">checklist de preparação para a auditoria interna</a>.</p>
+<p>A análise crítica é reunião de decisão, não de apresentação de números: entram desempenho do SGSI, resultado de auditorias, incidentes, mudanças de contexto e riscos; saem decisões com responsável e prazo.</p>
+<p><strong>Evidência esperada:</strong> programa e relatório de auditoria interna com não conformidades tratadas, e ata de análise crítica que registre decisões — não uma pauta cumprida.</p>
+
+<p>Depois disso vem a auditoria de certificação, em dois estágios, com o ciclo de três anos que descrevemos em <a href="/certificacao-iso-27001-etapas-prazo-custo/">certificação ISO 27001: etapas, prazo e custo</a>.</p>
+
+<h2 id="quem">Quem faz o quê (e por que não é projeto de TI)</h2>
+<p>A confusão mais cara da 27001 é tratá-la como projeto de tecnologia. A norma não exige tecnologia nenhuma: exige que o risco seja avaliado e tratado, e boa parte dos controles é de processo, contrato e comportamento. Uma divisão que funciona:</p>
+<ul>
+<li><strong>Direção</strong> — aprova política e escopo, aceita risco residual, libera recurso, conduz a análise crítica;</li>
+<li><strong>Responsável pelo SGSI</strong> (coordenador, comitê ou encarregado) — conduz o cronograma, mantém SoA e documentação, prepara auditoria interna;</li>
+<li><strong>Donos dos processos</strong> — respondem pelos ativos e pelos riscos da sua área, e são quem o auditor entrevista no estágio 2;</li>
+<li><strong>TI</strong> — implanta os controles tecnológicos e fornece evidência técnica (logs, backup, acessos, criptografia);</li>
+<li><strong>RH</strong> — controles de pessoas: triagem na contratação, termo de responsabilidade, processo disciplinar, desligamento com devolução de ativo e corte de acesso;</li>
+<li><strong>Jurídico e compras</strong> — cláusulas de segurança e confidencialidade em contrato, avaliação de fornecedor, requisitos de <a href="/relacao-do-lgpd-com-a-iso-27001/">LGPD</a>;</li>
+<li><strong>Facilities</strong> — os 14 controles físicos: perímetro, acesso a áreas, descarte de mídia, mesa limpa.</li>
+</ul>
+<p>Quando a lista acima colapsa numa pessoa só, o projeto não fica menor: ele fica mais lento e mais frágil, porque cada evidência depende de alguém que não participou da decisão.</p>
+
+<h2 id="prazo">Cronograma: o que acelera e o que não acelera</h2>
+<p>Não existe prazo padrão, e quem promete um antes de conhecer o escopo está adivinhando. O que dá para afirmar é a composição:</p>
+<p><strong>Acelera:</strong> já ter sistema de gestão certificado (a estrutura de documentação, auditoria e ação corretiva se aproveita); escopo bem recortado; equipe com hora alocada de verdade; direção que decide rápido; documentação partindo de modelos adaptados em vez de folha em branco.</p>
+<p><strong>Não acelera:</strong> o tempo de operação. Controle implantado ontem não tem histórico para o auditor amostrar hoje. Some ainda a agenda do organismo certificador, o intervalo entre estágio 1 e estágio 2 e o prazo para tratar não conformidades.</p>
+<p>Na prática, a etapa mais longa raramente é escrever documento — é a 10. Quem planeja o cronograma até a entrega dos documentos e marca a auditoria logo depois costuma descobrir isso no estágio 1.</p>
+
+<h2 id="sozinho">Sozinho, com consultoria ou com software</h2>
+<p>As três formas funcionam, para empresas diferentes.</p>
+<p><strong>Sozinho</strong> faz sentido quando já existe um sistema de gestão certificado rodando, alguém com competência em segurança da informação e tempo alocado. O custo é hora interna, e ela é maior do que parece.</p>
+<p><strong>Com consultoria</strong> encurta a curva onde ela é mais cara: sistemática de risco, SoA, documentação e preparação para a auditoria. Duas checagens antes de contratar: o consultor precisa deixar conhecimento na equipe (o SGSI vai continuar sem ele) e <strong>não pode ser o mesmo organismo que vai certificar</strong> — a separação é regra de imparcialidade, não preferência comercial. É o que detalhamos em <a href="/consultoria-iso-27001/">consultoria ISO 27001</a>.</p>
+<p><strong>Com software</strong> resolve a parte que mais consome tempo depois da certificação: manter documento versionado, risco atualizado, ação com prazo e evidência ao alcance da mão na auditoria. Ferramenta nenhuma implanta controle nem avalia risco por você — mas planilha solta é o motivo mais comum de a empresa passar na certificação e chegar bagunçada na primeira manutenção.</p>
+
+<h2 id="erros">Os erros que fazem a implementação recomeçar</h2>
+<ul>
+<li><strong>Começar pelo Anexo A.</strong> Os 93 controles não são um checklist de implantação: são a lista de conferência do que o risco apontou. Começar por eles produz controle sem risco associado — e o auditor pergunta exatamente isso;</li>
+<li><strong>Escrever documento antes de mapear a operação.</strong> Gera procedimento que descreve uma empresa ideal e uma operação que continua igual;</li>
+<li><strong>Escopo definido pela conveniência.</strong> Estreito demais entrega certificado que não atende ao cliente; largo demais multiplica esforço e dias de auditoria;</li>
+<li><strong>SoA sem lastro.</strong> Controle declarado aplicável e implementado, sem registro amostrável, é não conformidade quase certa no estágio 2;</li>
+<li><strong>Exclusão de controle mal justificada.</strong> "Não aplicável" para um controle que a operação usa todo dia é achado clássico — e o auditor confere contra o que viu em campo;</li>
+<li><strong>Tratar conscientização como um treinamento único.</strong> Sem avaliação de eficácia e sem repetição, o registro existe e o comportamento não;</li>
+<li><strong>Marcar a auditoria antes de operar.</strong> É o erro mais caro do cronograma, porque não tem correção rápida: só o calendário resolve;</li>
+<li><strong>Deixar a análise crítica para a semana da auditoria.</strong> Ata de reunião que aconteceu sete dias antes, com decisões sem prazo, é a forma mais rápida de mostrar ao auditor que o sistema não opera.</li>
+</ul>
+
+<h2 id="pronto">Como saber que está pronto para o auditor</h2>
+<p>Uma prova simples: escolha três controles quaisquer da sua SoA e peça a evidência da última vez que cada um aconteceu. Se as três aparecerem em minutos, com data e responsável, o sistema opera. Se precisarem ser construídas, ainda não.</p>
+<p>Além disso, confira o mínimo que o estágio 1 verifica:</p>
+<ul>
+<li>escopo documentado e coerente com o que a empresa vende;</li>
+<li>política aprovada, comunicada e vigente;</li>
+<li>avaliação de riscos executada com critérios prévios e donos atribuídos;</li>
+<li>plano de tratamento e SoA completos, com riscos residuais aceitos formalmente;</li>
+<li>controles implantados <em>e com histórico</em>;</li>
+<li>uma rodada completa de auditoria interna, com não conformidades tratadas com <a href="/analise-de-causa-raiz-o-que-e-e-como-fazer/">análise de causa</a>;</li>
+<li>uma análise crítica pela direção realizada, com decisões registradas;</li>
+<li>organismo certificador escolhido e com acreditação verificada para a ISO/IEC 27001.</li>
+</ul>
+
+<h2>Leia mais</h2>
+<ul>
+<li><a href="/iso-27001/">ISO 27001: o que é, requisitos e como certificar</a></li>
+<li><a href="/requisitos-da-iso-27001/">Requisitos da ISO 27001: as cláusulas 4 a 10 explicadas</a></li>
+<li><a href="/certificacao-iso-27001-etapas-prazo-custo/">Certificação ISO 27001: etapas, prazo e custo</a></li>
+<li><a href="/auditoria-iso-27001/">Auditoria ISO 27001: interna, de certificação e o que o auditor pede</a></li>
+<li><a href="/sgsi/">SGSI: o que é o Sistema de Gestão da Segurança da Informação</a></li>
+<li><a href="/iso-27001-e-o-escopo-do-sistema-de-gestao-da-seguranca-da-informacao/">Como definir o escopo do SGSI</a></li>
+<li><a href="/como-implementar-a-iso-27001-para-garantir-principal-beneficio/">Os desafios e as falhas mais comuns na implementação</a></li>
+<li><a href="/consultoria-iso-27001/">Consultoria ISO 27001: o que ela faz e o que continua sendo seu</a></li>
+<li><a href="/iso-27001-o-que-fazer-para-manter-o-sistema-de-gestao/">Como manter o SGSI depois da certificação</a></li>
+</ul>

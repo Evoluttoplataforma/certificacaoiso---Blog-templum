@@ -1,0 +1,36 @@
+{
+ "title": "Auditoria ISO 27001: interna, de certificação e o que o auditor pede",
+ "seo_title": "Auditoria ISO 27001: como funciona e o que o auditor pede",
+ "seo_description": "Como funciona a auditoria da ISO 27001: a interna que a norma exige (9.2), os estágios 1 e 2 da certificação, o que o auditor pede em cada cláusula e em cada controle, e como tratar uma não conformidade para ela não voltar.",
+ "tldr": "Auditoria de ISO 27001 é coleta de evidência por amostragem: o auditor verifica se o que você declarou na Declaração de Aplicabilidade deixa rastro na operação. São quatro tipos — interna (requisito 9.2, obrigatória antes da certificação), de segunda parte (cliente ou fornecedor), de certificação em dois estágios e as de manutenção e recertificação do ciclo de três anos. No estágio 1 a pergunta é \"existe e está coerente?\"; no estágio 2 ela vira \"mostre a última vez que isso aconteceu\". Os achados vão de oportunidade de melhoria a não conformidade maior, que bloqueia a certificação — e o tratamento só encerra o assunto quando inclui correção, análise de causa, avaliação de recorrência, ação corretiva e verificação de eficácia.",
+ "faq": [
+  {
+   "pergunta": "A auditoria interna é obrigatória na ISO 27001?",
+   "resposta": "<p>Sim. A cláusula 9.2 exige auditorias internas em intervalos planejados, com programa que considere a importância dos processos e os resultados de auditorias anteriores. Sem ao menos uma rodada completa, com achados tratados, a certificação trava no estágio 1 — junto com a análise crítica pela direção, que é o outro requisito que costuma faltar.</p>"
+  },
+  {
+   "pergunta": "Quem pode fazer a auditoria interna da ISO 27001?",
+   "resposta": "<p>Alguém competente e imparcial: <strong>ninguém audita o próprio trabalho</strong>. Competência aqui é dupla — técnica de auditoria (a referência de prática é a ISO 19011) e conhecimento de segurança da informação, porque quem não entende de gestão de acessos não sabe o que amostrar. Em empresa pequena, onde a mesma pessoa implantou quase tudo, a saída é cruzar auditores entre áreas ou contratar um auditor externo para fazer a auditoria interna — o que é permitido e comum. O que não pode é o organismo que vai certificar prestar esse serviço.</p>"
+  },
+  {
+   "pergunta": "Qual a diferença entre estágio 1 e estágio 2?",
+   "resposta": "<p>No estágio 1, o organismo avalia se você está pronto para ser auditado: analisa escopo, documentação, avaliação de riscos, Declaração de Aplicabilidade e confirma que auditoria interna e análise crítica aconteceram. No estágio 2, ele verifica a implementação — entrevista quem executa, amostra registros e confere se o controle declarado deixa rastro. Entre os dois há um intervalo previsto para você tratar o que apareceu, e esse intervalo entra no cronograma.</p>"
+  },
+  {
+   "pergunta": "O que é não conformidade maior e menor na ISO 27001?",
+   "resposta": "<p>A <strong>maior</strong> é a ausência ou falha sistêmica de um requisito, ou uma falha que compromete a capacidade do SGSI de atingir seus resultados — não ter feito auditoria interna, não ter SoA, ou o mesmo desvio repetido em várias áreas. Ela bloqueia a recomendação de certificação até ser tratada e verificada. A <strong>menor</strong> é um desvio pontual, como um registro faltando na amostra: não impede a certificação, mas exige plano de ação aceito pelo organismo. Várias menores ligadas ao mesmo requisito podem ser reclassificadas como uma maior.</p>"
+  },
+  {
+   "pergunta": "O que o auditor mais pede nos controles do Anexo A?",
+   "resposta": "<p>Registro, não procedimento. Os pedidos mais frequentes são a última revisão de acessos comparada com a lista do RH, o registro do último <strong>teste de restauração</strong> de backup (não a rotina de backup), a gestão de chaves criptográficas, o tratamento dos incidentes do período, os contratos e a avaliação de fornecedores, o checklist de desligamento com corte de acesso datado, e o teste do plano de continuidade. Declarar zero incidente em doze meses costuma ser lido como falta de registro, não como excelência.</p>"
+  },
+  {
+   "pergunta": "Como responder a uma não conformidade da auditoria?",
+   "resposta": "<p>Na ordem que a cláusula 10.2 pede: correção do caso concreto, análise de causa (\"falha humana\" não é causa, é onde a análise parou), avaliação de recorrência em outras áreas, ação corretiva com responsável e prazo, e verificação de eficácia em nova amostra depois de tempo suficiente. Pular a análise de causa é a forma mais rápida de transformar uma NC menor deste ano em NC maior no ano que vem.</p>"
+  },
+  {
+   "pergunta": "Como se preparar para a auditoria de certificação?",
+   "resposta": "<p>Faça a prova de evidência antes do auditor: escolha três controles quaisquer da SoA e peça o registro da última vez que cada um aconteceu. Se aparecem em minutos, com data e responsável, o sistema opera. Prepare registros, não respostas — o auditor entrevista quem executa, e resposta decorada que não bate com o registro gera achado maior do que a resposta honesta.</p>"
+  }
+ ]
+}

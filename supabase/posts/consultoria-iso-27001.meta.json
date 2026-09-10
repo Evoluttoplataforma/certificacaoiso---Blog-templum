@@ -1,0 +1,32 @@
+{
+ "title": "Consultoria ISO 27001: o que ela faz, o que é seu e como escolher",
+ "seo_title": "Consultoria ISO 27001: o que ela faz e como escolher",
+ "seo_description": "O que uma consultoria de ISO 27001 entrega, o que continua sendo trabalho da sua equipe, as 8 perguntas para fazer antes de assinar, os sinais de alerta e como comparar propostas.",
+ "tldr": "Consultoria de ISO 27001 entrega método — diagnóstico, escopo, sistemática de riscos, Declaração de Aplicabilidade, documentação e preparação para a auditoria —, não o certificado: esse só um organismo acreditado emite, e por regra de imparcialidade ele não pode ser quem consultou. Continuam com a sua equipe as decisões (escopo e aceitação de risco), o conhecimento da operação, a execução dos controles com registro e as respostas ao auditor no estágio 2. Antes de assinar, pergunte quem faz a avaliação de riscos e com qual método, quantas horas da sua equipe o projeto consome por semana e o que fica quando o consultor sair. Consultoria e certificação são duas contas separadas, e a maior linha do projeto — as horas internas — não aparece em nenhuma proposta.",
+ "faq": [
+  {
+   "pergunta": "A consultoria pode emitir o certificado ISO 27001?",
+   "resposta": "<p>Não. O certificado é emitido por um <strong>organismo de certificação acreditado</strong>, depois de auditoria em dois estágios — e esse organismo não pode prestar consultoria a quem ele audita. A separação é regra de imparcialidade, não preferência comercial: quem oferece \"consultoria e certificação no mesmo pacote\" está oferecendo um certificado que o mercado não aceita.</p>"
+  },
+  {
+   "pergunta": "O que continua sendo trabalho da minha equipe?",
+   "resposta": "<p>Decidir escopo e aceitar risco residual (a norma exige que seja a direção), fornecer o conhecimento da operação no levantamento de ativos, operar os controles com registro no dia a dia, responder ao auditor no estágio 2 — ele entrevista quem executa — e manter o sistema depois, ao longo do ciclo de três anos. Consultoria que promete \"deixa tudo com a gente\" está vendendo um sistema que não sobrevive à primeira auditoria de manutenção.</p>"
+  },
+  {
+   "pergunta": "Como escolher uma consultoria de ISO 27001?",
+   "resposta": "<p>Comece perguntando se ela também certifica — se sim, encerre. Depois: quem faz a avaliação de riscos e com qual método, que documentos vêm prontos e o que a sua equipe escreve, quantas horas por semana o projeto consome, se há formação de auditor interno, o que acontece se aparecer não conformidade, se já implantaram em empresa parecida com a sua e o que fica quando o projeto acabar. Respostas vagas nessas perguntas custam meses depois.</p>"
+  },
+  {
+   "pergunta": "Quanto custa uma consultoria de ISO 27001?",
+   "resposta": "<p>Varia com o tamanho do escopo, a maturidade de partida, o número de unidades e quanto da documentação você quer receber pronto. O importante é não confundir com o custo da certificação, que é cobrado pelo organismo e calculado por dias de auditoria, com piso normativo na <strong>ISO/IEC 27006-1</strong>. E existe uma terceira conta, que nenhuma proposta mostra: as horas internas da equipe, que costumam ser a maior linha do projeto.</p>"
+  },
+  {
+   "pergunta": "Dá para certificar sem consultoria?",
+   "resposta": "<p>Dá, principalmente em empresa que já tem sistema de gestão certificado, alguém com competência em segurança da informação e hora alocada de verdade. A consultoria encurta a curva onde ela é mais cara — sistemática de risco, SoA, documentação e preparação para a auditoria — e evita o retrabalho de descobrir na auditoria interna que a avaliação de riscos precisa ser refeita.</p>"
+  },
+  {
+   "pergunta": "A consultoria da Templum tem garantia?",
+   "resposta": "<p>Tem. Cumprido o método, se a certificação não sair, o valor investido volta em dobro — as condições exatas ficam na proposta. Além da garantia, o modelo inclui diagnóstico antes da proposta, cronograma sob medida, documentação elaborada em conjunto, checkpoints de validação a cada etapa, consultor disponível em horário comercial, selo que comprova a implantação em andamento e gestão do sistema em software em vez de planilha.</p>"
+  }
+ ]
+}

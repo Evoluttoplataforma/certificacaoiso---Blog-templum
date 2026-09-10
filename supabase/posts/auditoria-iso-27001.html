@@ -1,0 +1,102 @@
+<p>Auditoria de <a href="/iso-27001/">ISO 27001</a> é uma coleta de evidência com amostragem. O auditor não avalia se a sua empresa é segura — ele verifica se o que você declarou existir realmente existe, opera e deixa rastro. Entender isso muda a preparação inteira: o que se prepara não é discurso, é registro.</p>
+<p>Este artigo cobre os dois lados da mesa. Primeiro a <strong>auditoria interna</strong>, que é requisito da norma (cláusula 9.2) e trava a certificação quando falta. Depois a <strong>auditoria de certificação</strong>, com o que o auditor pede em cada cláusula e em cada controle, os tipos de achado e o que fazer com uma não conformidade sem que ela volte no ano seguinte.</p>
+<p><strong>Neste artigo:</strong></p>
+<ul>
+<li><a href="#tipos">Os quatro tipos de auditoria que a 27001 envolve</a></li>
+<li><a href="#interna">Auditoria interna: como fazer a que a norma exige</a></li>
+<li><a href="#pede">O que o auditor pede, cláusula por cláusula</a></li>
+<li><a href="#controles">O que ele pede nos controles do Anexo A</a></li>
+<li><a href="#achados">Achados: NC maior, NC menor, observação e oportunidade</a></li>
+<li><a href="#nc">Como tratar uma não conformidade para ela não voltar</a></li>
+<li><a href="#erros">Os erros que geram achado sem que a segurança esteja ruim</a></li>
+<li><a href="#duvidas">Dúvidas frequentes</a></li>
+</ul>
+
+<h2 id="tipos">Os quatro tipos de auditoria que a 27001 envolve</h2>
+<ul>
+<li><strong>Auditoria interna (primeira parte).</strong> Feita pela própria empresa, ou por alguém contratado por ela, contra a norma e contra o próprio SGSI. É requisito 9.2 e precisa acontecer <em>antes</em> da certificação;</li>
+<li><strong>Auditoria de segunda parte.</strong> Quando um cliente audita você, ou quando você audita um fornecedor crítico. Não emite certificado, mas costuma ser a mais dura, porque quem audita tem interesse direto no resultado;</li>
+<li><strong>Auditoria de certificação (terceira parte).</strong> Feita pelo organismo certificador acreditado, em dois estágios;</li>
+<li><strong>Manutenção e recertificação.</strong> Dentro do ciclo de três anos, auditorias de manutenção — normalmente anuais, com escopo reduzido — e, ao final, a recertificação, que reavalia o sistema inteiro. O calendário e o custo estão em <a href="/certificacao-iso-27001-etapas-prazo-custo/">certificação ISO 27001: etapas, prazo e custo</a>.</li>
+</ul>
+<p>A diferença entre interna e externa não é rigor, é finalidade: a interna existe para você achar o problema primeiro. Mais sobre a distinção em <a href="/auditorias-internas-e-externas-iso/">auditorias internas e externas</a>.</p>
+
+<h2 id="interna">Auditoria interna: como fazer a que a norma exige</h2>
+<p>A auditoria interna da 27001 tem cinco elementos que o auditor externo confere um a um.</p>
+<p><strong>1. Programa de auditoria.</strong> Não é um evento anual: é um plano que define frequência, métodos, responsabilidades e critérios, e que leva em conta a <em>importância dos processos e os resultados de auditorias anteriores</em>. Processo crítico e área que teve não conformidade no ciclo passado precisam aparecer com mais frequência. Programa que audita tudo uma vez por ano, na mesma semana, com a mesma profundidade, ignora o requisito.</p>
+<p><strong>2. Escopo e critérios de cada auditoria.</strong> O critério é o conjunto contra o qual você audita: a norma, a política, os procedimentos internos, requisitos contratuais e legais. Sem critério declarado não existe não conformidade — existe opinião.</p>
+<p><strong>3. Competência do auditor.</strong> Auditar segurança da informação exige conhecer a norma <em>e</em> o assunto: quem não entende de gestão de acessos não sabe o que amostrar em 8.2. A referência de prática é a ISO 19011. Formação de auditor interno resolve a parte da técnica de auditoria; o conhecimento do tema vem da experiência ou de quem acompanha.</p>
+<p><strong>4. Imparcialidade.</strong> Ninguém audita o próprio trabalho. Em empresa pequena, onde a mesma pessoa fez quase tudo, a saída é cruzar auditores entre áreas ou contratar auditor externo para a auditoria interna — o que é permitido e comum.</p>
+<p><strong>5. Relato e tratamento.</strong> Resultados reportados à direção, não conformidades registradas e tratadas com prazo. Auditoria interna que produz relatório sem achado, ano após ano, não convence auditor nenhum: sistema que opera gera desvio.</p>
+<p><strong>Evidência esperada:</strong> programa de auditoria, plano de cada auditoria, registro de competência do auditor, relatórios com achados e evidência do tratamento. A preparação prática está em <a href="/checklist-preparacao-auditoria-interna-iso/">checklist de preparação para a auditoria interna</a>.</p>
+
+<h2 id="pede">O que o auditor pede, cláusula por cláusula</h2>
+<p>A auditoria de certificação acontece em dois estágios. No <strong>estágio 1</strong> a pergunta é "existe e está coerente?" — documentação, escopo, avaliação de riscos, SoA, auditoria interna e análise crítica. No <strong>estágio 2</strong> a pergunta muda para <strong>"mostre a última vez que isso aconteceu"</strong>. É essa mudança que reprova sistema de fachada.</p>
+<ul>
+<li><strong>4 — Contexto.</strong> Análise de contexto com questões nomeadas (não uma SWOT genérica), partes interessadas com o que cada uma exige, escopo documentado com interfaces e dependências externas explícitas. Desde a Emenda 1:2024, a determinação sobre mudanças climáticas serem ou não pertinentes precisa estar registrada;</li>
+<li><strong>5 — Liderança.</strong> Política aprovada, comunicada e disponível; papéis e responsabilidades atribuídos com nome; evidência de que a direção decide sobre o SGSI — a ata da análise crítica é a prova principal;</li>
+<li><strong>6 — Planejamento.</strong> Critérios de risco definidos antes dos resultados, avaliação executada com donos atribuídos, plano de tratamento, <strong>Declaração de Aplicabilidade</strong> com justificativa de inclusão e exclusão dos 93 controles, aceitação formal do risco residual, e objetivos de segurança mensuráveis com plano para alcançá-los;</li>
+<li><strong>7 — Apoio.</strong> Registros de competência de quem executa atividade crítica, plano e registros de conscientização com avaliação de eficácia, controle de informação documentada (versão, aprovação, distribuição, retenção);</li>
+<li><strong>8 — Operação.</strong> Evidência de que os processos planejados acontecem: reavaliação de riscos em intervalos definidos e quando há mudança significativa, controle de processos terceirizados, gestão de mudanças;</li>
+<li><strong>9 — Avaliação de desempenho.</strong> O que é medido, por qual método e quem analisa; resultados de monitoramento; auditoria interna completa; ata de análise crítica com as entradas exigidas e decisões registradas;</li>
+<li><strong>10 — Melhoria.</strong> Registros de não conformidade com correção, <a href="/analise-de-causa-raiz-o-que-e-e-como-fazer/">análise de causa</a>, ação corretiva e verificação de eficácia. O paralelo detalhado está em <a href="/nao-conformidade-acao-corretiva-iso-9001-2026-requisito-10-2/">não conformidade e ação corretiva</a>.</li>
+</ul>
+<p>Cada requisito, item por item, está em <a href="/requisitos-da-iso-27001/">requisitos da ISO 27001: as cláusulas 4 a 10</a>.</p>
+
+<h2 id="controles">O que ele pede nos controles do Anexo A</h2>
+<p>Nos controles, a auditoria é quase sempre a mesma pergunta em formas diferentes: <em>o controle declarado na SoA deixa rastro na operação?</em> Os pedidos mais frequentes:</p>
+<ul>
+<li><strong>Gestão de acessos.</strong> A lista de quem tem acesso a quê, a última revisão de acessos com data e responsável, e a comparação com o RH — usuário ativo de alguém desligado há três meses é achado imediato;</li>
+<li><strong>Backup (8.13).</strong> Não a rotina de backup: o <strong>registro do último teste de restauração</strong>. Backup que nunca foi restaurado é um plano, não um controle. Detalhes em <a href="/backup-e-copia-de-seguranca-iso-27001-controle-8-13/">backup e cópia de segurança na ISO 27001</a>;</li>
+<li><strong>Criptografia (8.24).</strong> A política de uso, o que está cifrado, e principalmente a <a href="/controle-criptografico-iso-27001-politica-tamanho-de-chave-gestao/">gestão de chaves</a> — quem guarda, como se troca, o que acontece quando a pessoa sai;</li>
+<li><strong>Dados em ambiente de teste (8.11 e 8.33).</strong> Se há dado real em homologação, com ou sem <a href="/mascaramento-de-dados-iso-27001-controle-8-11/">mascaramento</a>;</li>
+<li><strong>Fornecedores.</strong> Contratos com cláusula de segurança, avaliação antes da contratação e monitoramento depois, e o que acontece na rescisão (devolução e exclusão de dados);</li>
+<li><strong>Incidentes.</strong> O registro dos incidentes do período, o tratamento de cada um, e as lições aprendidas que viraram mudança de controle. Empresa que declara zero incidente em doze meses geralmente não tem controle: tem falta de registro;</li>
+<li><strong>Pessoas.</strong> Termo de responsabilidade assinado, triagem na contratação quando aplicável, processo disciplinar definido, checklist de desligamento com devolução de ativo e corte de acesso — com data;</li>
+<li><strong>Físico.</strong> Registro de entrada em áreas restritas, descarte de mídia, e a caminhada pelo escritório: mesa com credencial anotada em papel vale mais que qualquer procedimento;</li>
+<li><strong>Continuidade.</strong> O teste do plano, não o plano.</li>
+</ul>
+<p>O padrão, repetido: <strong>o auditor amostra o registro, não o documento que descreve o registro</strong>.</p>
+
+<h2 id="achados">Achados: NC maior, NC menor, observação e oportunidade</h2>
+<ul>
+<li><strong>Não conformidade maior.</strong> Ausência ou falha sistêmica de um requisito, ou uma falha que compromete a capacidade do SGSI de atingir seus resultados. Exemplos típicos: não ter feito auditoria interna, não ter análise crítica, SoA inexistente, ou o mesmo desvio se repetindo em várias áreas. Bloqueia a recomendação de certificação até ser tratada e verificada;</li>
+<li><strong>Não conformidade menor.</strong> Desvio pontual, sem colapso do requisito — um registro faltando numa amostra, um documento desatualizado. Não impede a certificação, mas exige plano de ação aceito pelo organismo;</li>
+<li><strong>Observação.</strong> Ponto que ainda não é desvio, mas tende a virar se nada mudar;</li>
+<li><strong>Oportunidade de melhoria.</strong> Sugestão. O auditor de terceira parte não pode dizer <em>como</em> resolver — orientar seria consultoria, e o organismo que certifica não pode consultar quem audita.</li>
+</ul>
+<p>Vale saber que várias menores relacionadas ao mesmo requisito podem ser reclassificadas como uma maior. É o mecanismo que impede que um problema sistêmico seja fatiado em pequenos achados.</p>
+
+<h2 id="nc">Como tratar uma não conformidade para ela não voltar</h2>
+<p>A sequência que a cláusula 10.2 pede, na ordem:</p>
+<ol>
+<li><strong>Correção</strong> — resolver o caso concreto (revogar o acesso, corrigir o documento). É o que quase todo mundo faz, e é a parte que não impede a repetição;</li>
+<li><strong>Análise de causa</strong> — por que o sistema permitiu isso. "Falha humana" não é causa: é o ponto onde a análise parou. Método em <a href="/analise-de-causa-raiz-o-que-e-e-como-fazer/">análise de causa raiz</a>;</li>
+<li><strong>Avaliação de recorrência</strong> — se o mesmo desvio pode existir em outra área ou outro processo. É aqui que a maioria dos planos de ação falha;</li>
+<li><strong>Ação corretiva</strong> — mudar o processo, o controle ou a competência, com responsável e prazo;</li>
+<li><strong>Verificação de eficácia</strong> — em nova amostra, depois de tempo suficiente. Sem essa verificação, o achado volta na auditoria seguinte, agravado por ter sido "tratado".</li>
+</ol>
+<p>Prazos e formato do plano de ação são definidos pelo organismo, e costumam ser curtos para NC maior. Combine isso na abertura da auditoria, não depois da reunião de encerramento.</p>
+
+<h2 id="erros">Os erros que geram achado sem que a segurança esteja ruim</h2>
+<ul>
+<li><strong>Registro criado na véspera.</strong> Doze meses de "revisão mensal" produzidos na mesma semana têm metadados, e o auditor olha;</li>
+<li><strong>SoA desatualizada.</strong> A empresa mudou o controle e não mexeu na Declaração de Aplicabilidade — o documento passa a mentir sobre a própria operação;</li>
+<li><strong>Escopo que não bate com a realidade.</strong> Certificado para um serviço, operação rodando em outra unidade não declarada;</li>
+<li><strong>Zero incidente registrado.</strong> Interpretado como ausência de processo de registro, não como excelência;</li>
+<li><strong>Indicador sem análise.</strong> Número medido, nenhuma decisão tomada a partir dele — 9.1 pede o resultado <em>e</em> a avaliação;</li>
+<li><strong>Ação corretiva sem causa.</strong> O caminho mais curto para transformar uma NC menor deste ano em NC maior no ano que vem;</li>
+<li><strong>Preparar as pessoas com respostas prontas.</strong> O auditor entrevista quem executa. Resposta decorada que não bate com o registro produz achado maior do que a resposta honesta "eu faço assim, e está anotado aqui".</li>
+</ul>
+
+<h2>Leia mais</h2>
+<ul>
+<li><a href="/iso-27001/">ISO 27001: o que é, requisitos e como certificar</a></li>
+<li><a href="/requisitos-da-iso-27001/">Requisitos da ISO 27001: as cláusulas 4 a 10 explicadas</a></li>
+<li><a href="/como-implementar-a-iso-27001/">Como implementar a ISO 27001: o passo a passo</a></li>
+<li><a href="/certificacao-iso-27001-etapas-prazo-custo/">Certificação ISO 27001: etapas, prazo e custo</a></li>
+<li><a href="/sgsi/">SGSI: o que é o Sistema de Gestão da Segurança da Informação</a></li>
+<li><a href="/checklist-preparacao-auditoria-interna-iso/">Checklist de preparação para a auditoria interna</a></li>
+<li><a href="/iso-27001-o-que-fazer-para-manter-o-sistema-de-gestao/">Como manter o SGSI depois da certificação</a></li>
+<li><a href="/consultoria-iso-27001/">Consultoria ISO 27001: o que ela faz e o que continua sendo seu</a></li>
+</ul>

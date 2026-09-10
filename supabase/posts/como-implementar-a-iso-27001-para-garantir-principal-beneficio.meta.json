@@ -1,0 +1,24 @@
+{
+ "title": "Implementação da ISO 27001: os desafios e as falhas mais comuns",
+ "seo_title": "ISO 27001: os erros mais comuns na implementação",
+ "seo_description": "Os desafios que atrasam a implementação da ISO 27001 e as falhas que só aparecem na auditoria: escopo mal definido, documentação sem manutenção, exclusão indevida de controle e análise de riscos sem critério.",
+ "tldr": "As implementações de ISO 27001 atrasam quase sempre pelos mesmos motivos, e nenhum deles é técnico: falta de envolvimento das pessoas, resistência a mudanças, falta de tempo alocado da equipe e um levantamento de ativos feito pela metade. As falhas que só aparecem na auditoria são outras quatro: escopo mal recortado, informação documentada sem manutenção, controle do Anexo A declarado \"não aplicável\" quando a operação o usa todo dia, e análise de riscos sem critério definido antes dos resultados. O caminho completo, etapa por etapa, está no passo a passo da implementação.",
+ "faq": [
+  {
+   "pergunta": "Qual o maior erro de quem implementa a ISO 27001 sozinho?",
+   "resposta": "<p>Começar pelo Anexo A. Os 93 controles não são uma lista de implantação: são a conferência do que a avaliação de riscos apontou. Quem começa por eles implanta o que a norma não pediu, deixa de fora o que ela pediria e chega na auditoria com controle sem risco associado — que é exatamente a pergunta que o auditor faz.</p>"
+  },
+  {
+   "pergunta": "Por que a definição de escopo é tão crítica na ISO 27001?",
+   "resposta": "<p>Porque a norma permite delimitar o SGSI a uma parte da organização, e o que ficar de fora não é auditado nem coberto pelo certificado. Escopo abrangente demais transforma o projeto num trabalho sem fim e aumenta os dias de auditoria; escopo reduzido demais entrega um certificado que não cobre o serviço que o cliente contratou — e não resolve a exigência comercial que motivou o projeto.</p>"
+  },
+  {
+   "pergunta": "Preciso parar a operação para implementar a ISO 27001?",
+   "resposta": "<p>Não. A implantação acontece dentro da operação em funcionamento, e é justamente por isso que a disponibilidade da equipe é a variável que mais atrasa o cronograma. Acordar quantas horas por semana cada pessoa tem, antes de montar o plano, evita a maior parte dos atrasos.</p>"
+  },
+  {
+   "pergunta": "É comum reprovar na auditoria de certificação da ISO 27001?",
+   "resposta": "<p>O mais comum não é reprovar: é adiar. O estágio 1 costuma apontar que falta auditoria interna, falta análise crítica pela direção ou faltam registros de operação — e a certificação é remarcada. Falhas de sistema, como Declaração de Aplicabilidade sem lastro ou controle declarado implementado sem registro amostrável, aparecem no estágio 2 como não conformidade.</p>"
+  }
+ ]
+}

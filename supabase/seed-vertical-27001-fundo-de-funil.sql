@@ -1,0 +1,102 @@
+-- Vertical ISO 27001 — leva de FUNDO DE FUNIL, 10/09/2026
+--
+-- O QUE FOI FEITO (via REST com service_role, não por este arquivo):
+--   1. 4 posts novos inseridos em blog_templum_posts, status='published',
+--      categoria 'Segurança e Compliance', autor 'Equipe Templum'.
+--   2. 2 posts existentes REESCRITOS (content, title, tldr, faq, seo_*, tags).
+--   3. 8 posts existentes receberam link contextual para os novos (retrofit).
+--
+-- O texto dos 6 posts escritos/reescritos vive em supabase/posts/<slug>.html
+-- (+ .meta.json) e é aplicável com supabase/aplicar-conteudo.mjs. O estado ANTERIOR
+-- de tudo que foi tocado está em supabase/backup/<slug>-antes-2026-09-10.json —
+-- é de lá que sai qualquer rollback.
+--
+-- POR QUE ESTA LEVA EXISTE
+-- O Search Console de 6 meses (até 07/08/2026) mostra a vertical inteira presa no topo
+-- de funil: "iso 27001" traz 10.249 impressões e as consultas de COMPRA ficam sem página
+-- própria — "implementação iso 27001" (235 impr., pos. 38), "consultoria iso 27001"
+-- (549, pos. 19,5), "auditoria iso 27001" (71, pos. 41,9), "sgsi" + "sgsi iso 27001"
+-- (283 somadas, sem página dedicada). O print de 24h do Rodrigo confirmou o mesmo padrão
+-- com "implementar iso 27001", "contratar consultoria iso 27001" e "certificação iso
+-- 27001 para pessoas". A meta da vertical é lead qualificado, não tráfego.
+--
+-- ---------------------------------------------------------------------------
+-- 1. POSTS NOVOS
+-- ---------------------------------------------------------------------------
+--   como-implementar-a-iso-27001          "implementar/implementação iso 27001"
+--   auditoria-iso-27001                   "auditoria iso 27001"
+--   sgsi                                  "sgsi", "sgsi iso 27001"
+--   certificacao-iso-27001-para-pessoas   "certificação iso 27001 para pessoas"
+--
+-- ---------------------------------------------------------------------------
+-- 2. REESCRITAS
+-- ---------------------------------------------------------------------------
+--   consultoria-iso-27001
+--     Estava QUEBRADO: a lista dos 8 diferenciais renderizava <ol><li></li></ol> vazios
+--     com o texto dentro de <pre><code>### **...**</code></pre> — markdown cru virando
+--     bloco de código numa página de intenção de compra em posição 15,8. Reescrito
+--     inteiro: o que a consultoria faz, o que NÃO pode fazer (imparcialidade: quem
+--     certifica não consulta), o que continua sendo da equipe do cliente, o modelo da
+--     Templum, 8 perguntas antes de assinar, sinais de alerta e como comparar propostas.
+--     ⚠️ Dois números vieram da página comercial mais recente (pacote-fechado-x-novo-
+--     modelo, 2025) e não foram verificados nesta sessão: a garantia "o dobro do valor
+--     de volta" (a página antiga dizia 120%) e "mais de 1.900 empresas certificadas".
+--     Confirmar com o comercial; se mudou, ajustar em supabase/posts/consultoria-iso-27001.html.
+--
+--   como-implementar-a-iso-27001-para-garantir-principal-beneficio
+--     Repositionado para não canibalizar o post novo: perdeu os "8 passos" (que agora
+--     vivem, mais completos, em /como-implementar-a-iso-27001/) e ficou com o que era
+--     só dele — desafios de projeto e falhas que só aparecem na auditoria. Título,
+--     seo_title, seo_description e tldr trocados; aponta para o canônico já no 2º parágrafo.
+--
+-- ---------------------------------------------------------------------------
+-- 3. RETROFIT DE LINK (8 posts, só content — sem tocar revised_at)
+-- ---------------------------------------------------------------------------
+--   iso-27001 (hub, 5 links novos no "Aprofunde em cada etapa" + 2 no "Por onde começar")
+--   requisitos-da-iso-27001 · certificacao-iso-27001-etapas-prazo-custo
+--   iso-27001-e-o-escopo-do-sistema-de-gestao-da-seguranca-da-informacao
+--   seguranca-da-informacao · iso-27001-o-que-fazer-para-manter-o-sistema-de-gestao
+--   vantagens-da-iso-27001 · empresas-que-precisam-da-iso-27001
+--
+-- Não bumpei revised_at nesses 8: acrescentar link não é revisão de conteúdo, e inflar
+-- dateModified é o que faz o Google desconfiar (ver comentário em src/pages/[slug].astro).
+-- Nas 2 reescritas o revised_at FOI bumpado, com now() — data seca vira meia-noite UTC
+-- e o selo renderiza um dia antes no horário de Brasília.
+--
+-- ---------------------------------------------------------------------------
+-- CONFERÊNCIA
+-- ---------------------------------------------------------------------------
+-- select slug, status, reading_time_min,
+--        array_length(regexp_split_to_array(
+--          trim(regexp_replace(content,'<[^>]+>',' ','g')),'\s+'),1) as palavras
+--   from blog_templum_posts
+--  where slug in ('como-implementar-a-iso-27001','auditoria-iso-27001','sgsi',
+--                 'certificacao-iso-27001-para-pessoas','consultoria-iso-27001',
+--                 'como-implementar-a-iso-27001-para-garantir-principal-beneficio')
+--  order by palavras desc;
+--
+-- ---------------------------------------------------------------------------
+-- ROLLBACK 1 — tirar os 4 posts novos do ar SEM apagar (o build só lê published)
+-- ---------------------------------------------------------------------------
+-- update blog_templum_posts set status='draft'
+--  where slug in ('como-implementar-a-iso-27001','auditoria-iso-27001','sgsi',
+--                 'certificacao-iso-27001-para-pessoas');
+--
+-- ---------------------------------------------------------------------------
+-- ROLLBACK 2 — desfazer reescrita ou retrofit de um post
+-- ---------------------------------------------------------------------------
+-- Os arquivos supabase/backup/<slug>-antes-2026-09-10.json têm id, title, content,
+-- tldr, faq, seo_title, seo_description, tags e seo_keywords do estado anterior.
+-- Restaurar por REST (o conteúdo é grande demais para literal SQL escrito à mão):
+--   node --env-file=.env -e "…PATCH blog_templum_posts?slug=eq.<slug> com o JSON…"
+--
+-- ---------------------------------------------------------------------------
+-- PENDÊNCIAS DESTA LEVA
+-- ---------------------------------------------------------------------------
+--  a) Faixas de preço em R$ para a 27001 continuam faltando: /certificacao-iso-27001-
+--     etapas-prazo-custo/ explica a estrutura de custo (piso normativo na ISO/IEC 27006-1)
+--     mas não dá número, e "certificação iso 27001 preço" é consulta de compra. Preço não
+--     se inventa — depende do Rodrigo trazer as faixas reais.
+--  b) Conferir com o comercial a garantia e o número de empresas certificadas citados em
+--     consultoria-iso-27001 (ver acima).
+--  c) /categoria/iso-27001/ segue dando 404 com impressão registrada.
