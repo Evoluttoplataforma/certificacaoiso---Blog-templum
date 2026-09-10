@@ -15,10 +15,26 @@ const dataDoCard = d.revisedDate && +new Date(d.revisedDate) > +new Date(d.pubDa
   ? new Date(d.revisedDate) : new Date(d.pubDate);
 const dataFmt = dataDoCard.toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
 const cat = (d.categories && d.categories[0]) || "";
+
+// Imagem do card em 3 larguras (ver scripts/imagens-webp.mjs). A URL vem do BANCO
+// (blog_templum_categories.image_url), então não dá para usar <Image> do astro:assets,
+// que precisa de import estático — o srcset é montado por string, e só quando a URL tem
+// a forma exata que o script gera. Qualquer outra (jpg, externa, categoria nova ainda sem
+// variante) cai no <img> simples de antes, sem srcset: melhor perder a otimização do que
+// apontar para um arquivo que não existe.
+// `sizes` calculado da grade real (.blog-grid + .container.lg, 1200px, gap 26px):
+// 1 coluna até 600px, 2 até 900px, 3 acima — daí 366px no desktop.
+const mCat = /^\/assets\/categorias\/([a-z0-9-]+)\.webp$/.exec(d.categoryImage || "");
+const thumbSrcset = mCat
+  ? `/assets/categorias/${mCat[1]}-400.webp 400w, /assets/categorias/${mCat[1]}-640.webp 640w, ${d.categoryImage} 800w`
+  : undefined;
+const thumbSizes = thumbSrcset
+  ? "(max-width: 600px) calc(100vw - 36px), (max-width: 900px) calc(50vw - 37px), 366px"
+  : undefined;
 ---
 <article class="ac">
   <a href={url} class="ac-thumb" aria-label={d.title}>
-    {d.categoryImage ? <img src={d.categoryImage} alt="" width="640" height="400" loading="lazy" decoding="async" onerror="this.style.display='none'" /> : <span class="ac-thumb-fb"><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>}
+    {d.categoryImage ? <img src={d.categoryImage} srcset={thumbSrcset} sizes={thumbSizes} alt="" width="800" height="533" loading="lazy" decoding="async" onerror="this.style.display='none'" /> : <span class="ac-thumb-fb"><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>}
   </a>
   <div class="ac-body">
     <span class="ac-tags">

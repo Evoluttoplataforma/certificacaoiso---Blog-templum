@@ -21,8 +21,17 @@ import Base from "../layouts/Base.astro";
     var input = document.getElementById("q"), results = document.getElementById("results"), hint = document.getElementById("hint");
     var data = [];
     function norm(s) { return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+    // Mesmas 3 larguras do ArticleCard (ver scripts/imagens-webp.mjs). Aqui o card é
+    // montado em JS, então o srcset também: mesma regra, mesmo fallback silencioso para
+    // URL que não tenha a forma exata que o script gera.
+    function thumbAttrs(url) {
+      var m = /^\/assets\/categorias\/([a-z0-9-]+)\.webp$/.exec(url || "");
+      if (!m) return "";
+      return ' srcset="/assets/categorias/' + m[1] + '-400.webp 400w, /assets/categorias/' + m[1] +
+        '-640.webp 640w, ' + url + ' 800w" sizes="(max-width: 600px) calc(100vw - 36px), (max-width: 900px) calc(50vw - 37px), 366px"';
+    }
     function card(p) {
-      var thumb = p.img ? '<img src="' + p.img + '" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover">' : '<span class="ac-thumb-fb"><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>';
+      var thumb = p.img ? '<img src="' + p.img + '"' + thumbAttrs(p.img) + ' alt="" width="800" height="533" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">' : '<span class="ac-thumb-fb"><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>';
       return '<article class="ac"><a href="/' + p.s + '/" class="ac-thumb" aria-label="' + (p.t||"").replace(/"/g,"&quot;") + '">' + thumb + '</a><div class="ac-body">' +
         (p.c ? '<span class="ac-cat">' + p.c + '</span>' : '') +
         '<h2 class="ac-title"><a href="/' + p.s + '/">' + p.t + '</a></h2>' +

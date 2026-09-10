@@ -23,12 +23,22 @@ const maisLidos = (await getPopularPosts(16, { emAltaPrimeiro: true }))
 // No hero, data de revisão curada quando existir — o artigo mais lido costuma ser
 // antigo de publicação e recém-revisado; mostrar a data de 2019 envelhece a home.
 const dHero = destaque?.data;
+
+// Mesmas 3 larguras do ArticleCard (scripts/imagens-webp.mjs), com `sizes` do slot do
+// destaque: a coluna da imagem é 1.1 de 2.1 num container de 1200px (≈584px) e vira
+// largura cheia abaixo de 820px. O preload no Base.astro recebe os MESMOS valores —
+// preload com href sozinho + srcset na tag faria o navegador baixar duas variantes.
+const mHero = /^\/assets\/categorias\/([a-z0-9-]+)\.webp$/.exec(dHero?.categoryImage || "");
+const heroSrcset = mHero
+  ? `/assets/categorias/${mHero[1]}-400.webp 400w, /assets/categorias/${mHero[1]}-640.webp 640w, ${dHero.categoryImage} 800w`
+  : "";
+const heroSizes = heroSrcset ? "(max-width: 820px) calc(100vw - 36px), 584px" : "";
 const heroRevisado = dHero?.revisedDate && +new Date(dHero.revisedDate) > +new Date(dHero.pubDate)
   ? new Date(dHero.revisedDate) : null;
 const fmtHero = (dt) => dt.toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
 ---
 
-<Base preloadImage={destaque?.data.categoryImage} clarityTags={{ page_type: "home", tem_form: "nao" }}>
+<Base preloadImage={destaque?.data.categoryImage} preloadImageSrcset={heroSrcset} preloadImageSizes={heroSizes} clarityTags={{ page_type: "home", tem_form: "nao" }}>
   <!-- HERO -->
   <section class="bloghero section--navy">
     <div class="container lg">
@@ -49,7 +59,7 @@ const fmtHero = (dt) => dt.toLocaleDateString("pt-BR", { day: "2-digit", month: 
     <section class="section">
       <div class="container lg">
         <a href={`/${destaque.slug}/`} class="bh-feat">
-          <div class="bh-feat-img">{destaque.data.categoryImage ? <img src={destaque.data.categoryImage} alt="" width="800" height="500" fetchpriority="high" decoding="async" onerror="this.style.display='none'" /> : <span><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>}</div>
+          <div class="bh-feat-img">{destaque.data.categoryImage ? <img src={destaque.data.categoryImage} srcset={heroSrcset || undefined} sizes={heroSizes || undefined} alt="" width="800" height="533" fetchpriority="high" decoding="async" onerror="this.style.display='none'" /> : <span><iconify-icon icon="solar:document-text-bold"></iconify-icon></span>}</div>
           <div class="bh-feat-body">
             {destaque.data.categories?.[0] && <span class="ac-cat">{destaque.data.categories[0]}</span>}
             <h2>{destaque.data.title}</h2>

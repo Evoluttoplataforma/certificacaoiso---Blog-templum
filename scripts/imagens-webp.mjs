@@ -20,14 +20,26 @@ const kb = (n) => String(Math.round(n / 1024)).padStart(4);
 
 const JOBS = [
   { src: "public/assets/team/olivia-especialista.png", out: "public/assets/team/olivia-especialista.webp", w: 160, q: 84 },
+  // Categorias: TRÊS larguras, porque o mesmo card é servido em slots muito diferentes.
+  // Medido em 10/09/2026 (Lighthouse, produção): o card ocupa 374x249 CSS px no celular
+  // e ~383px na grade de 3 colunas do desktop — e recebia 800px em qualquer um dos dois.
+  // Só na home isso é 42 KB desperdiçados por card no desktop (DPR 1).
+  //   400 → desktop DPR 1 e celular pequeno
+  //   640 → celular DPR 2 (o caso mais comum) e desktop DPR 2
+  //   800 → telas densas e o `src` de fallback de quem não entende srcset
+  // Sufixo no nome (-400/-640) em vez de pasta por tamanho: o ArticleCard monta o
+  // srcset por string a partir da URL que vem do BANCO (blog_templum_categories.image_url),
+  // e trocar sufixo é a operação mais simples e reversível que existe ali.
   ...readdirSync("public/assets/categorias")
     .filter((f) => f.endsWith(".jpg"))
-    .map((f) => ({
-      src: `public/assets/categorias/${f}`,
-      out: `public/assets/categorias/${f.replace(/\.jpg$/, ".webp")}`,
-      w: 800,
-      q: 76,
-    })),
+    .flatMap((f) => {
+      const base = `public/assets/categorias/${f.replace(/\.jpg$/, "")}`;
+      return [
+        { src: `public/assets/categorias/${f}`, out: `${base}.webp`, w: 800, q: 76 },
+        { src: `public/assets/categorias/${f}`, out: `${base}-640.webp`, w: 640, q: 76 },
+        { src: `public/assets/categorias/${f}`, out: `${base}-400.webp`, w: 400, q: 78 },
+      ];
+    }),
 ];
 
 let antes = 0;

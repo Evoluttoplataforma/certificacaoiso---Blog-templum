@@ -14,6 +14,11 @@ const {
   noChrome = false,
   robots = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
   preloadImage = "",
+  // Quando a imagem pré-carregada tem srcset, o preload PRECISA repetir srcset e sizes:
+  // sem isso o navegador baixa a variante do preload (href) E depois a que o srcset
+  // escolher — duas imagens pelo preço de uma otimização. Ver index.astro (card destaque).
+  preloadImageSrcset = "",
+  preloadImageSizes = "",
   // Tags de contexto para o Microsoft Clarity (page_type, norma, categoria...). O Clarity
   // já sabe device/browser/país/origem por conta própria — aqui vai só o que ele NÃO tem:
   // de que assunto é a página e se ela tem formulário. É o que faz a gravação ser filtrável.
@@ -246,7 +251,7 @@ const temPulso = clarityTags?.page_type === "artigo";
     <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-500.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-600.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-800.woff2" crossorigin />
-    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} imagesrcset={preloadImageSrcset || undefined} imagesizes={preloadImageSizes || undefined} fetchpriority="high" />}
     <!-- Ícones (Iconify) — self-hosted, defer p/ não bloquear o render.
          Os dois arquivos saem de scripts/icones-bundle.mjs e a ORDEM importa: o primeiro
          define window.IconifyPreload com os 40 SVGs que o blog usa, e o componente só o

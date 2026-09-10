@@ -1,32 +1,64 @@
-# Certificação ISO (blog da Templum Consultoria)
+# Certificação ISO — blog da Templum Consultoria
 
-> Blog com mais de 1.000 artigos práticos sobre implementação e certificação das normas ISO — escrito por especialistas da Templum Consultoria, consultoria com método próprio, +30 anos e garantia de 200%.
+> Blog com mais de 1.000 artigos práticos sobre implementação e certificação das normas ISO, escrito por especialistas da Templum Consultoria — consultoria com método próprio, +30 anos e garantia de 200%. O conteúdo é educacional: explica o que cada norma exige, que evidência o auditor pede e o que costuma reprovar.
 
-## Sobre
-Conteúdo educacional sobre certificação ISO e gestão: ISO 9001 (qualidade), ISO 14001 (ambiental), ISO 45001 (saúde e segurança do trabalho), ISO 27001 (segurança da informação), PBQP-H (construção civil), FSSC 22000/HACCP (segurança de alimentos), ESG, SASSMAQ, IA aplicada à gestão e auditoria. Mantido pela Templum Consultoria (templum.com.br).
+## Guias das normas
 
-## Seções principais
-- Início: https://certificacaoiso.com.br/
-- Buscar artigos: https://certificacaoiso.com.br/buscar/
+- [ISO 9001](https://certificacaoiso.com.br/iso-9001/): sistema de gestão da qualidade — requisitos, custo, prazo e como certificar.
+- [ISO 14001](https://certificacaoiso.com.br/iso-14001-2/): sistema de gestão ambiental, aspectos e impactos, requisitos legais.
+- [ISO 45001](https://certificacaoiso.com.br/iso-45001/): saúde e segurança ocupacional, perigos e riscos, integração com as NRs.
+- [ISO 27001](https://certificacaoiso.com.br/iso-27001/): segurança da informação, SGSI, Anexo A e os 93 controles da versão 2022.
+- [ISO 37001](https://certificacaoiso.com.br/o-que-e-a-iso-37001/): sistema de gestão antissuborno, edição 2025 e prazo de transição.
+- [ISO 42001](https://certificacaoiso.com.br/iso-42001/): gestão de inteligência artificial.
+- [ISO 17025](https://certificacaoiso.com.br/iso-17025/): competência de laboratórios de ensaio e calibração.
+- [FSSC 22000](https://certificacaoiso.com.br/fssc-22000/): esquema de segurança de alimentos reconhecido pelo GFSI.
+- [ISO 22000](https://certificacaoiso.com.br/iso-22000/): norma do sistema de gestão da segurança de alimentos.
+- [HACCP / APPCC](https://certificacaoiso.com.br/haccp-o-que-e/): análise de perigos e pontos críticos de controle, os 7 princípios.
+- [PBQP-H](https://certificacaoiso.com.br/pbqp-h/): qualidade na construção civil e os níveis do SiAC.
+- [NR-1](https://certificacaoiso.com.br/nr-1/): a norma que organiza as demais NRs, GRO, PGR e riscos psicossociais.
+- [LGPD](https://certificacaoiso.com.br/lgpd/): proteção de dados pessoais e o que ela exige das empresas.
+- [SASSMAQ](https://certificacaoiso.com.br/o-que-e-sassmaq/): segurança no transporte de produtos químicos.
+- [ESG](https://certificacaoiso.com.br/o-que-e-esg/): ambiental, social e governança, com indicador em vez de discurso.
+
+## Artigos mais consultados
+
+- [Requisitos da ISO 9001](https://certificacaoiso.com.br/iso-9001-requisitos-tudo-que-voce-precisa-saber/): as cláusulas 4 a 10 explicadas uma a uma.
+- [Quanto custa a ISO 9001](https://certificacaoiso.com.br/quanto-custa-iso-9001/): faixas de investimento e o que faz o preço variar.
+- [Passo a passo da certificação ISO 9001](https://certificacaoiso.com.br/passo-a-passo-certificacao-iso-9001/): do diagnóstico à emissão do certificado.
+- [O que é fluxograma de processos](https://certificacaoiso.com.br/o-que-e-fluxograma-de-processos/): símbolos, tipos e como desenhar o seu.
+- [Requisitos da ISO 27001](https://certificacaoiso.com.br/requisitos-da-iso-27001/): cláusulas 4 a 10 com a evidência esperada em cada uma.
+- [Como implementar a ISO 27001](https://certificacaoiso.com.br/como-implementar-a-iso-27001/): as 11 etapas na ordem que funciona.
+- [Certificação ISO 27001: etapas, prazo e custo](https://certificacaoiso.com.br/certificacao-iso-27001-etapas-prazo-custo/): estágios 1 e 2 e o que define o preço.
+- [Requisitos da FSSC 22000](https://certificacaoiso.com.br/requisitos-fssc-22000/): os três blocos e os 18 requisitos adicionais.
+- [Auditoria interna ISO: checklist de preparação](https://certificacaoiso.com.br/checklist-preparacao-auditoria-interna-iso/): o que ter pronto antes do auditor.
+- [Não conformidade e ação corretiva](https://certificacaoiso.com.br/nao-conformidade-acao-corretiva-iso-9001-2026-requisito-10-2/): o requisito 10.2 e a causa que não se repete.
+- [Análise de causa raiz](https://certificacaoiso.com.br/analise-de-causa-raiz-o-que-e-e-como-fazer/): métodos e como chegar à causa de verdade.
+- [Guia das mudanças da ISO 9001:2026](https://certificacaoiso.com.br/guia-definitivo-das-mudancas-iso-2026/): o que muda na revisão da norma.
 
 ## Categorias
-- Qualidade e Inovação (ISO 9001): https://certificacaoiso.com.br/categoria/qualidade-e-inovacao/
-- Construção Civil (PBQP-H): https://certificacaoiso.com.br/categoria/construcao-civil/
-- Segurança dos Alimentos (FSSC 22000/HACCP): https://certificacaoiso.com.br/categoria/seguranca-dos-alimentos/
-- Meio Ambiente (ISO 14001): https://certificacaoiso.com.br/categoria/meio-ambiente/
-- Saúde e Segurança do Trabalho (ISO 45001): https://certificacaoiso.com.br/categoria/saude-e-seguranca-do-trabalho/
-- Auditoria: https://certificacaoiso.com.br/categoria/auditoria/
-- Segurança e Compliance (ISO 27001): https://certificacaoiso.com.br/categoria/seguranca-e-compliance/
-- Gestão e Marketing: https://certificacaoiso.com.br/categoria/gestao-e-marketing/
-- Transportes e Logística (SASSMAQ): https://certificacaoiso.com.br/categoria/transportes-e-logistica/
-- ESG: https://certificacaoiso.com.br/categoria/esg/
-- IA aplicada à gestão: https://certificacaoiso.com.br/categoria/ia/
 
-## Recursos
-- Feed RSS: https://certificacaoiso.com.br/rss.xml
-- Sitemap: https://certificacaoiso.com.br/sitemap.xml
+- [Qualidade e Inovação](https://certificacaoiso.com.br/categoria/qualidade-e-inovacao/): ISO 9001, processos, indicadores e ferramentas da qualidade.
+- [Construção Civil](https://certificacaoiso.com.br/categoria/construcao-civil/): PBQP-H, SiAC, GERIC e gestão de obra.
+- [Segurança dos Alimentos](https://certificacaoiso.com.br/categoria/seguranca-dos-alimentos/): FSSC 22000, ISO 22000, HACCP, BPF e GFSI.
+- [Meio Ambiente](https://certificacaoiso.com.br/categoria/meio-ambiente/): ISO 14001, aspectos e impactos, licenciamento.
+- [Saúde e Segurança do Trabalho](https://certificacaoiso.com.br/categoria/saude-e-seguranca-do-trabalho/): ISO 45001, NR-1, PGR e riscos psicossociais.
+- [Auditoria](https://certificacaoiso.com.br/categoria/auditoria/): auditoria interna e de certificação, achados e ação corretiva.
+- [Segurança e Compliance](https://certificacaoiso.com.br/categoria/seguranca-e-compliance/): ISO 27001, LGPD, ISO 37001 e programa de integridade.
+- [Gestão e Marketing](https://certificacaoiso.com.br/categoria/gestao-e-marketing/): planejamento estratégico, liderança e crescimento.
+- [Transportes e Logística](https://certificacaoiso.com.br/categoria/transportes-e-logistica/): SASSMAQ e gestão de frota.
+- [ESG](https://certificacaoiso.com.br/categoria/esg/): ambiental, social, governança e relato de indicadores.
+- [IA aplicada à gestão](https://certificacaoiso.com.br/categoria/ia/): ISO 42001 e uso de inteligência artificial em sistemas de gestão.
+
+## Navegação e recursos
+
+- [Início](https://certificacaoiso.com.br/): últimos artigos, temas em alta e as normas atendidas.
+- [Buscar artigos](https://certificacaoiso.com.br/buscar/): busca em todo o acervo do blog.
+- [Materiais gratuitos](https://certificacaoiso.com.br/presentes/): checklists, planilhas e guias para baixar.
+- [Feed RSS](https://certificacaoiso.com.br/rss.xml): publicações mais recentes.
+- [Sitemap](https://certificacaoiso.com.br/sitemap.xml): todas as URLs do site.
 
 ## Empresa e contato
-- Templum Consultoria: https://templum.com.br
-- Falar com especialista (diagnóstico gratuito): https://templum.com.br/form
-- Plataforma de gestão (processos, indicadores, qualidade): https://orbitgestao.com.br
+
+- [Templum Consultoria](https://templum.com.br): consultoria de certificação que mantém este blog.
+- [Falar com um especialista](https://certificacaoiso.com.br/form/): diagnóstico gratuito do seu sistema de gestão.
+- [Orbit Gestão](https://orbitgestao.com.br): plataforma de processos, indicadores e documentos.
