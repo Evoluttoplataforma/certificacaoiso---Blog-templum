@@ -1,0 +1,62 @@
+{
+ "id": "a3c02698-6295-4a8f-9a30-59394358730a",
+ "slug": "fssc-22000-versao-7",
+ "title": "FSSC 22000 Versão 7: o que muda e o prazo para se adequar",
+ "tldr": "A Versão 7 da FSSC 22000 foi publicada em maio de 2026 e substitui a base de programas de pré-requisitos: sai a série ISO/TS 22002 e entra a ISO 22002-x:2025, com a nova ISO 22002-100:2025 como PPR guarda-chuva. Também endurece cultura de segurança de alimentos, food defense, food fraud e gestão de fornecedores, cria requisitos de sustentabilidade ligados aos ODS e reorganiza as categorias da cadeia alimentar. Auditorias na V6 são aceitas até 30 de abril de 2027; a auditoria de upgrade para a V7 acontece entre 1º de maio de 2027 e 30 de abril de 2028.",
+ "content": "<p>Se a sua empresa é certificada na FSSC 22000, a conta já está correndo: a <strong>Versão 7 do esquema foi publicada em maio de 2026</strong> e a auditoria de upgrade tem janela definida. Diferente da V6, que ajustou requisitos, a V7 troca a fundação — toda a base de programas de pré-requisitos (PPRs) muda de norma.</p>\n<p><strong>Neste artigo:</strong></p>\n<ul>\n<li><a href=\"#o-que-e-a-fssc-22000-versao-7\">O que é a FSSC 22000 Versão 7</a></li>\n<li><a href=\"#o-prazo-de-transicao\">O prazo de transição: até quando você pode auditar na V6</a></li>\n<li><a href=\"#a-mudanca-de-base-a-serie-iso-22002-2025\">A mudança de base: a série ISO 22002:2025</a></li>\n<li><a href=\"#o-que-muda-nos-requisitos-adicionais\">O que muda nos requisitos adicionais</a></li>\n<li><a href=\"#as-categorias-da-cadeia-foram-reorganizadas\">As categorias da cadeia foram reorganizadas</a></li>\n<li><a href=\"#o-que-fazer-agora\">O que fazer agora, na prática</a></li>\n</ul>\n<h2 id=\"o-que-e-a-fssc-22000-versao-7\">O que é a FSSC 22000 Versão 7</h2>\n<p>A FSSC 22000 não é uma norma: é um <strong>esquema de certificação</strong> reconhecido pelo GFSI, montado sobre três pilares — a <a href=\"/iso-22000/\">ISO 22000</a>, os programas de pré-requisitos setoriais e os requisitos adicionais próprios da FSSC. Quem já leu nosso comparativo entre <a href=\"/diferenca-entre-os-programas-do-gfsi/\">FSSC, IFS e BRC</a> conhece a lógica.</p>\n<p>É justamente por ser um esquema que a V7 tem peso maior que uma revisão comum. Ela foi construída em torno de quatro motores: a publicação da nova série ISO 22002:2025 de PPRs, o alinhamento aos requisitos de benchmarking do GFSI v2024, o reforço da contribuição das organizações para os Objetivos de Desenvolvimento Sustentável da ONU e uma reorganização da estrutura de categorias da cadeia alimentar.</p>\n<h2 id=\"o-prazo-de-transicao\">O prazo de transição: até quando você pode auditar na V6</h2>\n<p>A transição é escalonada e acompanha o seu ciclo de auditoria — não existe uma data única em que todo mundo vira a chave. O calendário divulgado pelos organismos certificadores é este:</p>\n<table>\n<thead>\n<tr><th>Marco</th><th>Data</th></tr>\n</thead>\n<tbody>\n<tr><td>Publicação da Versão 7.0</td><td>maio de 2026</td></tr>\n<tr><td>Último dia para auditorias na Versão 6</td><td>30 de abril de 2027</td></tr>\n<tr><td>Janela das auditorias de upgrade para a V7</td><td>1º de maio de 2027 a 30 de abril de 2028</td></tr>\n<tr><td>A partir daqui, toda auditoria é na V7</td><td>1º de maio de 2028</td></tr>\n</tbody>\n</table>\n<p>Traduzindo: a sua próxima auditoria a partir de maio de 2027 já será na Versão 7. Se o seu ciclo tem recertificação no início de 2027, você ainda audita na V6 — mas a de manutenção seguinte cai na V7. <strong>Confirme a data exata do seu upgrade com o seu organismo certificador</strong>, porque ela depende do mês em que o seu ciclo cai.</p>\n<h2 id=\"a-mudanca-de-base-a-serie-iso-22002-2025\">A mudança de base: a série ISO 22002:2025</h2>\n<p>Esta é a mudança que dá mais trabalho e é a menos comentada. A V6 apontava para a série ISO/TS 22002, com documentos de 2009 a 2019. A V7 adota a <strong>série ISO 22002:2025</strong> inteira e acrescenta duas peças novas:</p>\n<ul>\n<li><strong>ISO 22002-100:2025</strong> — um PPR \"guarda-chuva\", com requisitos comuns a várias categorias. É novidade absoluta: não existia equivalente na V6.</li>\n<li><strong>ISO 22002-7:2025</strong> — o primeiro PPR dedicado ao varejo, que ocupa o lugar da antiga PAS 221.</li>\n</ul>\n<p>As demais partes foram atualizadas para a edição 2025: manufatura de alimentos (22002-1), catering (22002-2), embalagens (22002-4), transporte e armazenagem (22002-5) e ração animal (22002-6). Na prática, o seu manual de BPF e os procedimentos de PPR foram escritos contra uma norma que a V7 não referencia mais — é revisão documental, não ajuste de redação. Se a sua base de <a href=\"/introducao-as-boas-praticas-de-fabricacao-bpf/\">boas práticas de fabricação</a> nunca foi revisada desde a implantação, esse é o ponto de partida.</p>\n<h2 id=\"o-que-muda-nos-requisitos-adicionais\">O que muda nos requisitos adicionais</h2>\n<p>Os requisitos adicionais da FSSC — onde estão as exigências que vão além da ISO 22000 — ficam no documento <strong>Part 2: Requirements for Certification</strong> e, na V7, são <strong>18 requisitos, numerados de 2.5.1 a 2.5.18</strong>. O que mudou não foi só a lista: subiu a régua de evidência. Os temas com mudança relevante:</p>\n<ul>\n<li><strong>Cultura de segurança de alimentos:</strong> deixa de ser um requisito introdutório e passa a exigir evidência objetiva, com envolvimento demonstrável da alta direção. Já tratamos do tema em <a href=\"/cultura-de-seguranca-de-alimentos-como-implementar-de-forma-pratica-continua-e-auditavel-nas-empresas/\">como implementar cultura de segurança de alimentos de forma auditável</a>.</li>\n<li><strong>Food defense e food fraud:</strong> planos mais robustos e verificação estendida a fornecedores. Vale revisitar <a href=\"/requisitos-food-fraud-e-food-defense/\">como atender os requisitos de food fraud e food defense</a>.</li>\n<li><strong>Gestão de fornecedores:</strong> critérios de aprovação e monitoramento mais firmes, incluindo situações de compra emergencial.</li>\n<li><strong>Rastreabilidade:</strong> controles reforçados.</li>\n<li><strong>Gestão de alergênicos:</strong> plano formal passa a ser exigido de forma mais ampla.</li>\n<li><strong>Perda e desperdício de alimentos:</strong> política com metas mensuráveis — um requisito de sustentabilidade com cara de indicador.</li>\n<li><strong>Sustentabilidade e ODS:</strong> objetivos documentados, indicadores e monitoramento, considerando impacto climático dos processos e riscos associados.</li>\n<li><strong>Controle de qualidade, gestão de equipamentos e design de embalagem:</strong> requisitos novos ou ampliados. O de design de embalagem foi construído junto com a World Packaging Organization.</li>\n<li><strong>Cálculo do tempo de auditoria:</strong> critérios e regras de arredondamento atualizados — pode mexer no custo da sua auditoria.</li>\n</ul>\n<h2 id=\"as-categorias-da-cadeia-foram-reorganizadas\">As categorias da cadeia foram reorganizadas</h2>\n<p>A V7 introduz uma subcategorização mais granular das categorias da cadeia alimentar. O objetivo declarado é dar clareza sobre quais requisitos se aplicam a quem — mas o efeito colateral é que <strong>o escopo do seu certificado pode ser reclassificado</strong>. Vale conferir com o organismo certificador em qual subcategoria a sua operação cai antes do upgrade, porque isso define quais PPRs você precisa atender.</p>\n<h2 id=\"o-que-fazer-agora\">O que fazer agora, na prática</h2>\n<ol>\n<li><strong>Descubra a data do seu upgrade.</strong> Ligue para o organismo certificador e pergunte em qual auditoria do seu ciclo a V7 entra. Todo o resto do planejamento depende disso.</li>\n<li><strong>Faça o gap assessment contra a V7</strong>, cláusula por cláusula, com atenção especial aos PPRs: é ali que está o maior volume de ajuste documental.</li>\n<li><strong>Confirme sua nova subcategoria</strong> e a lista de PPRs aplicáveis.</li>\n<li><strong>Ataque primeiro o que gera registro histórico</strong> — cultura, sustentabilidade, perda e desperdício, alergênicos. Requisito que exige indicador e tendência não se resolve na véspera da auditoria: precisa de meses de dados.</li>\n<li><strong>Treine a equipe e rode auditoria interna na V7</strong> antes da auditoria de upgrade.</li>\n</ol>\n<p>A diferença entre uma transição tranquila e uma auditoria com não conformidade maior costuma ser o tempo de largada. Se quiser apoio para o diagnóstico e a adequação à V7, <a href=\"https://templum.com.br/\">conheça a consultoria da Templum</a>.</p>",
+ "faq": [
+  {
+   "pergunta": "Quando a FSSC 22000 Versão 7 foi publicada?",
+   "resposta": "A Versão 7.0 do esquema FSSC 22000 foi publicada em maio de 2026, com um período de transição para que organizações certificadas e organismos certificadores se adequem aos novos requisitos."
+  },
+  {
+   "pergunta": "Até quando posso ser auditado na FSSC 22000 Versão 6?",
+   "resposta": "Auditorias na Versão 6 são aceitas até 30 de abril de 2027. As auditorias de upgrade para a Versão 7 acontecem entre 1º de maio de 2027 e 30 de abril de 2028, e a partir de 1º de maio de 2028 todas as auditorias seguem a V7. A data exata do seu upgrade depende do mês do seu ciclo de auditoria e deve ser confirmada com o organismo certificador."
+  },
+  {
+   "pergunta": "Qual é a principal mudança da Versão 6 para a Versão 7 da FSSC 22000?",
+   "resposta": "A troca da base de programas de pré-requisitos. A V7 abandona a série ISO/TS 22002 e adota a série ISO 22002:2025, incluindo duas novidades: a ISO 22002-100:2025, um PPR guarda-chuva com requisitos comuns a várias categorias, e a ISO 22002-7:2025, primeiro PPR dedicado ao varejo, que substitui a PAS 221."
+  },
+  {
+   "pergunta": "A Versão 7 da FSSC 22000 muda a ISO 22000?",
+   "resposta": "Não. A ISO 22000:2018 continua sendo a norma de referência do esquema. O que muda são os programas de pré-requisitos, os requisitos adicionais da FSSC e a estrutura de categorias da cadeia alimentar."
+  },
+  {
+   "pergunta": "O que a FSSC 22000 Versão 7 exige em sustentabilidade?",
+   "resposta": "A V7 reforça a contribuição das organizações para os Objetivos de Desenvolvimento Sustentável da ONU, com objetivos documentados, indicadores e monitoramento de desempenho, considerando o impacto climático dos processos e os riscos associados. Entra também uma política de perda e desperdício de alimentos com metas mensuráveis."
+  },
+  {
+   "pergunta": "Preciso refazer a documentação do sistema para a Versão 7?",
+   "resposta": "Boa parte dela, sim. Como os programas de pré-requisitos passam a referenciar a série ISO 22002:2025, os manuais e procedimentos de PPR escritos contra a série ISO/TS 22002 precisam ser revisados. O caminho mais seguro é um gap assessment cláusula por cláusula antes de definir o plano de adequação."
+  },
+  {
+   "pergunta": "Quantos requisitos adicionais a FSSC 22000 Versão 7 tem?",
+   "resposta": "São 18 requisitos adicionais, numerados de 2.5.1 a 2.5.18 no documento Part 2: Requirements for Certification. Eles são as exigências próprias do esquema, que vão além da ISO 22000 e dos programas de pré-requisitos, e cobrem temas como gestão de alergênicos, controle de qualidade, gestão de equipamentos, food defense, food fraud, perda e desperdício de alimentos, rastreabilidade e cultura de segurança de alimentos."
+  },
+  {
+   "pergunta": "Onde baixar o documento oficial da FSSC 22000 Versão 7?",
+   "resposta": "Os documentos do esquema são de download gratuito no site da Foundation FSSC, na área de documentos da versão 7 (fssc.com). O esquema é publicado em partes: a Part 2 é a que traz os requisitos para certificação, incluindo os requisitos adicionais 2.5.1 a 2.5.18."
+  }
+ ],
+ "seo_title": "FSSC 22000 Versão 7: o que muda e até quando adequar",
+ "seo_description": "A V7 da FSSC 22000 saiu em maio de 2026 e troca toda a base de PPRs pela série ISO 22002:2025. Veja o que muda, o prazo de transição e o que fazer agora.",
+ "tags": [
+  "FSSC 22000",
+  "FSSC 22000 versão 7",
+  "ISO 22000",
+  "ISO 22002-100",
+  "segurança de alimentos",
+  "GFSI",
+  "programas de pré-requisitos",
+  "transição FSSC"
+ ],
+ "seo_keywords": [
+  "fssc 22000 versão 7",
+  "fssc 22000 v7",
+  "fssc 22000 mudanças",
+  "iso 22002-100",
+  "transição fssc 22000",
+  "fssc 22000 2026"
+ ],
+ "excerpt": "A Versão 7 da FSSC 22000 saiu em maio de 2026 e troca toda a base de programas de pré-requisitos pela série ISO 22002:2025. Veja o que muda e o prazo do upgrade."
+}

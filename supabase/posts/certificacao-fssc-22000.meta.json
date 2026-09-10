@@ -1,0 +1,32 @@
+{
+ "title": "Certificação FSSC 22000: etapas, auditoria e custo",
+ "seo_title": "Certificação FSSC 22000: etapas, auditoria e custo",
+ "seo_description": "Como funciona a certificação FSSC 22000: o que ter pronto antes do auditor, os estágios 1 e 2, a auditoria não anunciada, o ciclo de três anos, as classes de não conformidade e o que define o custo.",
+ "tldr": "A certificação FSSC 22000 acontece em dois estágios de auditoria por um organismo acreditado e licenciado pela fundação, depois de a empresa ter definido categoria e escopo, implantado os PPRs, feito a análise de perigos e o plano HACCP, atendido aos requisitos adicionais e operado tempo suficiente para gerar registro — com auditoria interna e análise crítica pela direção realizadas. O certificado vale três anos, com manutenções anuais e uma auditoria não anunciada dentro do ciclo. O custo da certificação vem do tempo de auditoria, calculado pelas regras do esquema e da ISO 22003-1 a partir do número de funcionários, turnos, estudos HACCP, categoria e número de sites; o da implantação inclui a obra que os PPRs exigirem, que em planta antiga costuma ser a maior linha.",
+ "faq": [
+  {
+   "pergunta": "Quanto tempo leva para certificar na FSSC 22000?",
+   "resposta": "<p>Depende da maturidade de partida, do tamanho do escopo e — principalmente — de duas coisas que não se aceleram: a obra que os programas de pré-requisitos exigirem e o tempo de operação necessário para gerar registro. Tendência de monitoramento ambiental, indicadores de cultura e verificação de PPR precisam de meses de dados. Some a agenda do organismo certificador, o intervalo entre estágio 1 e estágio 2 e o prazo para tratar não conformidades.</p>"
+  },
+  {
+   "pergunta": "Quanto custa a certificação FSSC 22000?",
+   "resposta": "<p>São dois custos separados. O da <strong>certificação</strong> é cobrado pelo organismo e vem do tempo de auditoria, que segue as regras do esquema e da ISO 22003-1: parte do número de funcionários no escopo (incluindo sazonais, terceiros e todos os turnos) e é ajustado por número de estudos HACCP, categoria, linhas, produtos, sites e deslocamento. O da <strong>implantação</strong> inclui consultoria, obra e equipamento exigidos pelos PPRs, análises laboratoriais, treinamento e as horas internas da equipe. Peça sempre o orçamento do ciclo de três anos, não só da auditoria inicial.</p>"
+  },
+  {
+   "pergunta": "A auditoria não anunciada da FSSC 22000 é obrigatória?",
+   "resposta": "<p>Sim. O esquema exige uma auditoria sem aviso prévio dentro do ciclo de certificação, e a organização precisa recebê-la — recusar tem consequência sobre o certificado. Vale deixar definido na portaria quem recebe um auditor sem agendamento e comunicar ao organismo, com antecedência, as janelas de exclusão permitidas, como parada programada.</p>"
+  },
+  {
+   "pergunta": "O que acontece se aparecer não conformidade na auditoria?",
+   "resposta": "<p>Depende da classe. A <strong>crítica</strong> afeta diretamente a segurança ou a legalidade do produto e tem consequência imediata sobre o certificado, incluindo suspensão e auditoria de acompanhamento no local. A <strong>maior</strong> impede a recomendação de certificação até ser tratada e verificada com evidência. A <strong>menor</strong> exige correção, análise de causa e plano de ação, verificados na auditoria seguinte. Os prazos são curtos: combine-os na reunião de abertura.</p>"
+  },
+  {
+   "pergunta": "Quanto tempo vale o certificado FSSC 22000?",
+   "resposta": "<p>Três anos, com auditorias de manutenção — normalmente anuais, com escopo reduzido — e uma auditoria não anunciada dentro do ciclo. Ao fim, a recertificação reavalia o sistema inteiro. Mudanças relevantes de escopo, produto ou site precisam ser comunicadas ao organismo e podem exigir auditoria extraordinária.</p>"
+  },
+  {
+   "pergunta": "Como escolher o organismo certificador da FSSC 22000?",
+   "resposta": "<p>Confirme três coisas: que ele é <strong>licenciado pela fundação FSSC</strong> para o seu escopo (a lista é pública no site do esquema), que a acreditação dele cobre a <strong>categoria</strong> da sua operação — acreditação para uma categoria não vale para outra — e que ele tem auditores familiarizados com a sua tecnologia de processo. E confirme que não há vínculo de consultoria com quem implantou o seu sistema.</p>"
+  }
+ ]
+}

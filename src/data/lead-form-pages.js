@@ -35,6 +35,7 @@ export const LEAD_FORM_PAGES = {
   // (valor inválido cega todos os custom fields — mesmo padrão do 17025).
   "iso-42001": { display: "ISO 42001", crm: "" },
   "iso-22000": { display: "FSSC 22000", crm: "FSSC 22000" },
+  "fssc-22000": { display: "FSSC 22000", crm: "FSSC 22000" },
   "iso-17025": { display: "ISO 17025", crm: "" }, // sem opção no cf_produto do CRM
   "pbqp-h": { display: "PBQP-H", crm: "PBQP-H" },
   "o-que-e-sassmaq": { display: "SASSMAQ", crm: "SASSMAQ" },
@@ -61,6 +62,13 @@ export const LEAD_FORM_PAGES = {
   "consultoria-iso-27001": { display: "ISO 27001", crm: "ISO 27001" },
   "como-implementar-a-iso-27001": { display: "ISO 27001", crm: "ISO 27001" },
   "certificacao-iso-27001-etapas-prazo-custo": { display: "ISO 27001", crm: "ISO 27001" },
+
+  // --- fundo de funil da vertical de FSSC 22000 (10/09/2026) ---
+  // "certificação fssc 22000" e "requisitos fssc 22000" são consulta de quem já tem a
+  // exigência do cliente na mesa; o form é o passo seguinte. O `crm` é FSSC 22000 nas
+  // duas — é o produto que o comercial atende, mesmo quando a página fala de ISO 22000.
+  "certificacao-fssc-22000": { display: "FSSC 22000", crm: "FSSC 22000" },
+  "requisitos-fssc-22000": { display: "FSSC 22000", crm: "FSSC 22000" },
 
   // --- pilar da vertical de NR-1 (riscos psicossociais) ---
   // Ganha o formulário completo por dois motivos: a fiscalização punitiva já começou

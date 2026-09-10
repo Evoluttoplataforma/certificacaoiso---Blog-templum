@@ -1,0 +1,32 @@
+{
+ "title": "Requisitos da FSSC 22000: os três blocos e os 18 requisitos adicionais",
+ "seo_title": "Requisitos da FSSC 22000: a lista completa explicada",
+ "seo_description": "Os requisitos da FSSC 22000 vêm de três documentos: ISO 22000 (cláusulas 4 a 10), os PPRs da sua categoria e os 18 requisitos adicionais 2.5.1 a 2.5.18. O que cada um pede e a evidência que o auditor procura.",
+ "tldr": "Não existe um checklist único da FSSC 22000: os requisitos vêm de três documentos e você é auditado contra os três. O primeiro bloco é a ISO 22000, com as cláusulas 4 a 10 e a análise de perigos que separa oPRP de PCC. O segundo são os programas de pré-requisitos da sua categoria da cadeia — série ISO/TS 22002 na Versão 6, série ISO 22002:2025 na Versão 7. O terceiro são os 18 requisitos adicionais da seção 2.5 do documento Part 2, gratuito no site da fundação: food defense, food fraud, alergênicos, monitoramento ambiental, cultura, controle de qualidade, corpos estranhos, gestão de equipamentos, perda e desperdício, comunicação ao certificador em até 3 dias úteis, entre outros. Quem vem da ISO 22000 leva quase todas as não conformidades neste terceiro bloco.",
+ "faq": [
+  {
+   "pergunta": "Quantos requisitos tem a FSSC 22000?",
+   "resposta": "<p>Os requisitos adicionais próprios do esquema são <strong>18</strong>, numerados de 2.5.1 a 2.5.18 na seção 2.5 do documento <em>Part 2: Requirements for Certification</em>. A eles somam-se as cláusulas 4 a 10 da ISO 22000 e os programas de pré-requisitos da sua categoria — os três blocos juntos formam o que é auditado. Nem todos os 18 se aplicam a todas as categorias: a aplicabilidade está declarada em cada requisito.</p>"
+  },
+  {
+   "pergunta": "Onde encontro a lista oficial de requisitos da FSSC 22000?",
+   "resposta": "<p>No documento <strong>Part 2 — Requirements for Certification</strong>, publicado gratuitamente no site da fundação (fssc.com), em inglês. Já a ISO 22000 e a especificação de PPR da sua categoria são normas pagas, compradas separadamente. Traduções não oficiais existem, mas não substituem o documento original em caso de divergência.</p>"
+  },
+  {
+   "pergunta": "Qual a diferença entre PPR, oPRP e PCC?",
+   "resposta": "<p><strong>PPR</strong> é a condição básica que vale para o ambiente todo — higiene, layout, pragas, manutenção — e não é dirigida a um perigo específico. <strong>oPRP</strong> é uma medida de controle aplicada a um perigo significativo identificado na análise de perigos, monitorada e com ação quando falha. <strong>PCC</strong> é o ponto onde o controle é essencial para prevenir ou reduzir o perigo a nível aceitável, com limite crítico mensurável e monitoramento capaz de detectar a perda de controle a tempo. Classificar errado é um dos achados mais comuns do estágio 2.</p>"
+  },
+  {
+   "pergunta": "Estar certificado na ISO 22000 significa atender à FSSC 22000?",
+   "resposta": "<p>Não. A ISO 22000 é apenas o primeiro dos três blocos. Faltam os programas de pré-requisitos setoriais e os 18 requisitos adicionais da FSSC — e é justamente neles que se concentram as não conformidades de quem chega ao esquema vindo da ISO 22000.</p>"
+  },
+  {
+   "pergunta": "O que a FSSC exige em monitoramento ambiental?",
+   "resposta": "<p>Um programa baseado em risco, com pontos de coleta, frequência, parâmetros e limites definidos — e, principalmente, <strong>análise de tendência e ação sobre resultado positivo</strong>. A falha mais comum não é deixar de coletar: é coletar, arquivar o laudo e não tomar decisão nenhuma a partir dele.</p>"
+  },
+  {
+   "pergunta": "Preciso avisar o certificador quando acontece um recall?",
+   "resposta": "<p>Sim. O requisito de comunicação (2.5.17) obriga a informar o organismo certificador <strong>em até 3 dias úteis</strong> sobre eventos graves que afetem o sistema de gestão ou a integridade da certificação — recall público, surto ligado a segurança de alimentos, ação de autoridade regulatória, processo judicial, desastre natural, ataque cibernético. E a implementar as medidas do seu processo de preparação e resposta a emergências.</p>"
+  }
+ ]
+}

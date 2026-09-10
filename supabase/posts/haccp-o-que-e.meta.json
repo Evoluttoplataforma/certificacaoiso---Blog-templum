@@ -1,0 +1,32 @@
+{
+ "title": "HACCP (APPCC): o que é, os 7 princípios e como montar o plano",
+ "seo_title": "HACCP (APPCC): o que é, 7 princípios e as 12 etapas",
+ "seo_description": "O que é o HACCP/APPCC, os 7 princípios e as 12 etapas do Codex, como decidir o que é PCC, limites críticos e monitoramento — e como o método entra na ISO 22000 e na FSSC 22000.",
+ "tldr": "HACCP (em português, APPCC) é o método que identifica os perigos capazes de tornar um alimento inseguro e define onde, no processo, o controle é indispensável — em vez de confiar na análise do produto pronto. Nasceu nos anos 1960 do trabalho entre Pillsbury, NASA e o exército americano, e foi consolidado pelo Codex Alimentarius em 7 princípios e 12 etapas. Ele não se sustenta sem os programas de pré-requisitos: planta com muitos PCCs costuma ter BPF frágil, não rigor. Na ISO 22000 os princípios aparecem dentro da cláusula 8, com a distinção entre PPR, oPRP e PCC; na FSSC 22000 somam-se os pré-requisitos setoriais e 18 requisitos adicionais. No Brasil, o APPCC está na regulamentação sanitária desde a Portaria MS nº 1.428/1993 e, para produtos de origem animal, na Portaria MAPA nº 46/1998.",
+ "faq": [
+  {
+   "pergunta": "O que significa HACCP?",
+   "resposta": "<p><em>Hazard Analysis and Critical Control Points</em> — em português, <strong>APPCC: Análise de Perigos e Pontos Críticos de Controle</strong>. É um método preventivo: em vez de testar o produto pronto, mapeia-se o processo, identificam-se os perigos razoavelmente esperados e controla-se nas etapas em que o controle é essencial.</p>"
+  },
+  {
+   "pergunta": "Quais são os 7 princípios do HACCP?",
+   "resposta": "<p>1) conduzir a análise de perigos; 2) determinar os pontos críticos de controle; 3) estabelecer limites críticos; 4) estabelecer o monitoramento; 5) estabelecer as ações corretivas; 6) estabelecer os procedimentos de verificação; 7) estabelecer documentação e registros. No Codex Alimentarius, esses princípios são aplicados dentro de 12 etapas — as cinco primeiras, preparatórias, são onde a maioria dos planos nasce errada.</p>"
+  },
+  {
+   "pergunta": "Qual a diferença entre PCC e oPRP?",
+   "resposta": "<p>O <strong>PCC</strong> é a etapa em que o controle é essencial e existe um <strong>limite crítico mensurável</strong>, com monitoramento capaz de detectar a perda de controle a tempo de agir sobre o produto. O <strong>oPRP</strong> também controla um perigo significativo identificado na análise, mas sem esse limite que separe seguro de inseguro em tempo real — é monitorado e tem ação definida quando falha. Já o <strong>PPR</strong> é a condição básica do ambiente, não dirigida a um perigo específico.</p>"
+  },
+  {
+   "pergunta": "HACCP é obrigatório no Brasil?",
+   "resposta": "<p>Depende do segmento. O APPCC está na regulamentação sanitária brasileira desde a Portaria MS nº 1.428/1993, e para produtos de origem animal sob inspeção federal a exigência foi detalhada pela Portaria MAPA nº 46/1998; outros segmentos têm regras próprias. Como esse conjunto muda e varia por produto e órgão competente, confirme a norma vigente do seu segmento antes de desenhar o plano.</p>"
+  },
+  {
+   "pergunta": "Existe certificado HACCP?",
+   "resposta": "<p>HACCP é um método, não uma norma de sistema de gestão — embora existam esquemas de certificação de sistemas HACCP no mercado. O que grandes compradores costumam exigir é uma certificação reconhecida pelo GFSI, como a FSSC 22000, que incorpora o HACCP dentro de um sistema de gestão completo, com pré-requisitos setoriais e requisitos adicionais.</p>"
+  },
+  {
+   "pergunta": "Quantos PCCs um processo deve ter?",
+   "resposta": "<p>Não há número certo — há um sinal de alerta. Plano com muitos PCCs quase sempre indica programas de pré-requisitos frágeis, que estão sendo compensados dentro do plano HACCP. O caminho é fortalecer BPF, higienização, controle de pragas e manutenção, e deixar como ponto crítico apenas aquilo em que o controle é realmente essencial e mensurável.</p>"
+  }
+ ]
+}

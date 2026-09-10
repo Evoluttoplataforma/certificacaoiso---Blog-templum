@@ -1,0 +1,32 @@
+{
+ "title": "ISO 22000: o que é, requisitos e como certificar",
+ "seo_title": "ISO 22000: o que é, requisitos e a diferença para a FSSC",
+ "seo_description": "A ISO 22000 é a norma do sistema de gestão da segurança de alimentos, da produção primária à mesa. O que ela exige cláusula por cláusula, a diferença entre PPR, oPRP e PCC, e por que ela não é a FSSC 22000.",
+ "tldr": "A ISO 22000 é a norma internacional que define os requisitos de um sistema de gestão da segurança de alimentos, aplicável a toda a cadeia — da produção primária à mesa. A versão vigente é a de 2018, que adotou a Estrutura de Alto Nível, separou o ciclo PDCA do sistema do ciclo operacional e esclareceu a diferença entre PPR, oPRP e PCC. Ela é certificável, mas não é reconhecida pelo GFSI sozinha: quem tem exigência de cliente ou meta de exportação precisa da FSSC 22000, que soma a ISO 22000 aos programas de pré-requisitos setoriais e a 18 requisitos adicionais. Estar certificado na ISO 22000 não significa atender à FSSC — e é nos dois blocos que faltam que se concentram as não conformidades dessa transição.",
+ "faq": [
+  {
+   "pergunta": "O que é a ISO 22000?",
+   "resposta": "<p>É a norma internacional que define os requisitos de um <strong>sistema de gestão da segurança de alimentos</strong>, aplicável a qualquer organização da cadeia — da produção primária ao serviço de alimentação, incluindo embalagens, insumos, transporte e armazenagem. Ela combina a estrutura de um sistema de gestão, os princípios do HACCP/APPCC e os programas de pré-requisitos. A versão vigente é a ISO 22000:2018.</p>"
+  },
+  {
+   "pergunta": "Qual é a diferença entre ISO 22000 e FSSC 22000?",
+   "resposta": "<p>A ISO 22000 é uma <strong>norma</strong>; a FSSC 22000 é um <strong>esquema de certificação</strong> que soma a ISO 22000, os programas de pré-requisitos setoriais (série ISO 22002) e 18 requisitos adicionais próprios. A diferença que pesa é comercial: a ISO 22000 sozinha não é reconhecida pelo GFSI, e é esse reconhecimento que grandes varejistas e indústrias exigem dos fornecedores.</p>"
+  },
+  {
+   "pergunta": "Qual a diferença entre PPR, oPRP e PCC?",
+   "resposta": "<p><strong>PPR</strong> é a condição básica de higiene e infraestrutura que vale para o ambiente inteiro, sem ser dirigida a um perigo específico. <strong>oPRP</strong> é uma medida de controle aplicada a um perigo significativo identificado na análise, com monitoramento e ação definida quando falha. <strong>PCC</strong> é a etapa em que o controle é essencial, com limite crítico mensurável e monitoramento capaz de detectar a perda de controle a tempo. A classificação sai da análise de perigos — nunca do costume.</p>"
+  },
+  {
+   "pergunta": "Quanto tempo vale o certificado ISO 22000?",
+   "resposta": "<p>Três anos, com auditorias de acompanhamento anuais e recertificação ao fim do ciclo. Na FSSC 22000 há ainda uma auditoria não anunciada obrigatória dentro do ciclo, que chega sem aviso prévio em dia de produção.</p>"
+  },
+  {
+   "pergunta": "O que é o GFSI?",
+   "resposta": "<p>A <em>Global Food Safety Initiative</em> é uma iniciativa criada em 2000, conduzida por grandes varejistas e indústrias de alimentos. Ela não certifica ninguém: avalia esquemas de certificação contra os seus requisitos de benchmarking e reconhece os que passam — FSSC 22000, BRCGS e IFS, entre outros. Quando um contrato pede \"certificação reconhecida pelo GFSI\", é disso que se trata.</p>"
+  },
+  {
+   "pergunta": "Que empresas podem se certificar na ISO 22000?",
+   "resposta": "<p>Qualquer organização da cadeia alimentar, de qualquer porte: produção primária, indústrias de alimentos e bebidas, fabricantes de ingredientes e de embalagens, serviços de alimentação, transporte e armazenagem, varejo, ração animal e fornecedores de equipamentos e produtos de limpeza usados na indústria. O porte importa menos que a clareza do escopo.</p>"
+  }
+ ]
+}

@@ -11,7 +11,7 @@
 // TODA url foi conferida no Supabase (status=published). Cinco não eram o óbvio:
 //   · ISO 14001 → /iso-14001-2/           (o /iso-14001/ é RASCUNHO e daria 404)
 //   · ISO 37001 → /o-que-e-a-iso-37001/   (não existe /iso-37001/)
-//   · FSSC 22000 → /iso-22000/            (o hub se chama "FSSC ISO 22000")
+//   · FSSC 22000 → /fssc-22000/           (hub do esquema, criado em 10/09/2026)
 //   · GERIC → /principais-duvidas-sobre-o-geric/
 //   · PQTA → /pqta-2026-requisitos-erros-e-por-onde-comecar/
 //     (hub atualizado em 03/09/2026; o "o que é" antigo continua em
@@ -37,7 +37,10 @@ export const produtos = [
     icon: "solar:scale-bold", cor: "#2E3191" },
   { nome: "PBQP-H", desc: "Qualidade na Construção", url: "/pbqp-h/",
     icon: "solar:buildings-2-bold", cor: "#7F2611" },
-  { nome: "FSSC 22000", desc: "Segurança de Alimentos", url: "/iso-22000/",
+  // FSSC 22000 aponta para /fssc-22000/ desde 10/09/2026: o hub do ESQUEMA passou a
+  // existir. Antes caía em /iso-22000/, que é a página da NORMA — e quem digita "FSSC"
+  // está procurando o esquema do GFSI, não a ISO.
+  { nome: "FSSC 22000", desc: "Segurança de Alimentos", url: "/fssc-22000/",
     icon: "solar:donut-bitten-bold", cor: "#FFB600" },
   { nome: "HACCP", desc: "Segurança de Alimentos", url: "/haccp-o-que-e/",
     icon: "solar:chef-hat-bold", cor: "#E08700" },

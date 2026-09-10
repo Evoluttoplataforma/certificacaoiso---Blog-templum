@@ -1,0 +1,36 @@
+{
+ "title": "FSSC 22000: o que é, como funciona o esquema e como certificar",
+ "seo_title": "FSSC 22000: o que é, requisitos e como certificar",
+ "seo_description": "FSSC 22000 é o esquema de certificação de segurança de alimentos reconhecido pelo GFSI: ISO 22000 + PPRs do seu setor + 18 requisitos adicionais. Categorias, versões V6 e V7, custo e como certificar.",
+ "tldr": "FSSC 22000 é a sigla de Food Safety System Certification 22000 — um esquema de certificação de segurança de alimentos reconhecido pelo GFSI e mantido por uma fundação independente. Não é uma norma ISO: é a soma de três blocos — a norma ISO 22000, os programas de pré-requisitos do seu setor e 18 requisitos adicionais próprios (2.5.1 a 2.5.18). Por isso empresa certificada na ISO 22000 não está certificada na FSSC. A certificação é feita por categoria da cadeia alimentar, vale três anos, inclui uma auditoria não anunciada no ciclo e é exigida principalmente por grandes varejistas, indústrias multinacionais e para exportação. A Versão 6 vale para auditorias até 30 de abril de 2027; a Versão 7, publicada em maio de 2026, entra na sequência.",
+ "faq": [
+  {
+   "pergunta": "O que significa FSSC 22000?",
+   "resposta": "<p><em>Food Safety System Certification</em> 22000 — Certificação de Sistema de Segurança de Alimentos. É um esquema de certificação publicado em 2009 e mantido pela Foundation FSSC, reconhecido pelo GFSI. O número 22000 vem da ISO 22000, que é a norma de sistema de gestão usada como base do esquema.</p>"
+  },
+  {
+   "pergunta": "Qual a diferença entre ISO 22000 e FSSC 22000?",
+   "resposta": "<p>A ISO 22000 é uma <strong>norma</strong> de sistema de gestão da segurança de alimentos, certificável, mas não reconhecida pelo GFSI sozinha. A FSSC 22000 é um <strong>esquema</strong> que soma a ISO 22000 aos programas de pré-requisitos do setor (a série ISO 22002) e a 18 requisitos adicionais próprios — e é reconhecida pelo GFSI, que é o que os grandes compradores pedem. Estar certificado na ISO 22000 não significa estar certificado na FSSC 22000.</p>"
+  },
+  {
+   "pergunta": "A FSSC 22000 é obrigatória?",
+   "resposta": "<p>Por lei, não. Na prática, ela é exigida por contrato: redes de varejo, indústrias multinacionais e compradores no exterior padronizaram a exigência de uma certificação reconhecida pelo GFSI. Ela também não substitui a legislação sanitária brasileira — registro, licenciamento e as exigências da Anvisa e do MAPA continuam valendo, e o esquema cobra que você as atenda.</p>"
+  },
+  {
+   "pergunta": "Onde baixar os documentos da FSSC 22000?",
+   "resposta": "<p>No site da fundação (fssc.com), gratuitamente. O esquema é publicado em cinco partes mais apêndices, anexos e guias de orientação; quem vai implantar usa sobretudo a <strong>Part 2 — Requirements for Certification</strong>, onde estão os requisitos adicionais. O idioma oficial é o inglês; traduções, quando existem, não substituem a versão oficial. Já a ISO 22000 e as especificações de PPR são normas pagas, compradas à parte.</p>"
+  },
+  {
+   "pergunta": "Quanto tempo vale o certificado FSSC 22000?",
+   "resposta": "<p>Três anos, com auditorias de manutenção anuais e uma <strong>auditoria não anunciada</strong> dentro do ciclo. Ao fim dos três anos há a recertificação, que reavalia o sistema inteiro. Não conformidade crítica pode levar à suspensão do certificado.</p>"
+  },
+  {
+   "pergunta": "Quem pode se certificar na FSSC 22000?",
+   "resposta": "<p>Organizações de várias categorias da cadeia: produção primária animal (A), manipulação de vegetais pré-processados (BIII), processamento de alimentos e pet food (C, incluindo abatedouros em C0), ração animal (D), catering e food service (E), atacado, varejo e trading (F), transporte e armazenagem (G), materiais de embalagem (I) e bio/químicos (K). A categoria define quais PPRs e requisitos adicionais se aplicam — e o tempo de auditoria.</p>"
+  },
+  {
+   "pergunta": "Em qual versão devo implantar hoje: V6 ou V7?",
+   "resposta": "<p>Depende de quando cai a sua primeira auditoria. A Versão 6 vale para auditorias até 30 de abril de 2027, e a de upgrade para a Versão 7 acontece entre 1º de maio de 2027 e 30 de abril de 2028. Quem está começando o projeto agora costuma economizar implantando direto contra a V7, em vez de certificar na V6 e refazer a documentação de PPR um ano depois — mas confirme a data do seu ciclo com o organismo certificador antes de decidir.</p>"
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+-- Vertical FSSC 22000 / segurança de alimentos — leva de 10/09/2026
+--
+-- O QUE FOI FEITO (via REST com service_role, não por este arquivo):
+--   1. 3 posts novos em blog_templum_posts, status='published',
+--      categoria 'Segurança dos Alimentos', autor 'Equipe Templum'.
+--   2. 2 posts existentes REESCRITOS (content, title, excerpt, tldr, faq, seo_*, tags).
+--   3. 10 posts receberam parágrafo final com link contextual (retrofit).
+--   4. TAGS populadas em 48 posts da categoria — ver "o achado" abaixo.
+--
+-- Texto em supabase/posts/<slug>.html (+ .meta.json), aplicável com
+-- supabase/aplicar-conteudo.mjs. Estado anterior em
+-- supabase/backup/<slug>-antes-2026-09-10.json.
+--
+-- ---------------------------------------------------------------------------
+-- O DIAGNÓSTICO
+-- ---------------------------------------------------------------------------
+-- Search Console de 6 meses (até 07/08/2026) + print de 24h de 10/09/2026:
+--   "iso 22000"        1.079 impressões, pos. 7,05   → tinha hub (/iso-22000/)
+--   "fssc 22000"         331 impressões, pos. 18,89  → NÃO TINHA PÁGINA DE CABEÇA
+--   "haccp"              580 impressões, pos. 23,78  → página de 6 mil car. de 2018
+--   "o que é haccp"       72 impressões, pos. 75,38
+--   + do print: "certificação fssc 22000", "requisitos fssc 22000", "iso fssc 22000",
+--     "fssc 22000 significado", "fssc 22000 versão 6 português pdf", "iso 22000 e fssc"
+-- Quem ranqueava para "fssc" eram os posts de MUDANÇA DE VERSÃO (notícia), não uma
+-- página do esquema. Daí a posição 18,89 num termo em que o blog tem 20+ artigos.
+--
+-- ---------------------------------------------------------------------------
+-- O ACHADO: 50 de 51 posts da categoria estavam SEM TAG
+-- ---------------------------------------------------------------------------
+-- Só `fssc-22000-versao-7` tinha tags. Em src/pages/[slug].astro o anel de relacionados
+-- pontua tag em comum com peso 3 e categoria com peso 1 — sem tags, a vertical inteira
+-- empatava em 1 e os links internos saíam de um pool de 51 posts sem relação de tema.
+-- É o mesmo problema que a ISO 27001 tinha em agosto (ver seed-vertical-27001-*.sql).
+-- Espinha comum aplicada: `segurança de alimentos` + 1 a 5 específicas, por mapa curado
+-- (FSSC 22000, ISO 22000, HACCP, APPCC, BPF, PPR, GFSI, Global Markets, food defense,
+-- food fraud, cultura de segurança de alimentos, higiene, qualidade, rastreabilidade,
+-- legislação sanitária, auditoria, não conformidade…). Efeito conferido no build: os
+-- relacionados dos posts novos e reescritos passaram a cair todos dentro do tema.
+--
+-- ---------------------------------------------------------------------------
+-- 1. POSTS NOVOS
+-- ---------------------------------------------------------------------------
+--   fssc-22000              hub do ESQUEMA: 3 pilares, categorias A–K, documentos
+--                           (Part 1 a 5, gratuitos no site da fundação — responde à
+--                           consulta "versão 6 português pdf"), V6 x V7, custo, GFSI.
+--   requisitos-fssc-22000   os 3 blocos + os 18 requisitos adicionais 2.5.1 a 2.5.18,
+--                           um a um, com evidência esperada.
+--   certificacao-fssc-22000 estágios 1 e 2, a auditoria NÃO ANUNCIADA obrigatória,
+--                           ciclo de 3 anos, classes de NC e o que forma o custo
+--                           (tempo de auditoria por funcionários, turnos, estudos HACCP).
+--
+-- ---------------------------------------------------------------------------
+-- 2. REESCRITAS
+-- ---------------------------------------------------------------------------
+--   iso-22000    Era "FSSC ISO 22000: Segurança dos Alimentos", texto de 2018 que
+--                misturava norma e esquema, com "Food Safety Sistem Certification"
+--                escrito errado e links com fragmento #:~:text=. Virou a página da
+--                NORMA: cláusulas 4 a 10, o que mudou em 2018 (Anexo SL, duplo PDCA),
+--                PPR x oPRP x PCC, e a comparação com a FSSC apontando para o hub novo.
+--   haccp-o-que-e  580 impressões em "haccp" com 6.137 caracteres. Virou guia: origem
+--                (Codex/Pillsbury/NASA), 7 princípios, 12 etapas, como decidir PCC,
+--                limites críticos, verificação x validação, regulamentação brasileira
+--                (Portaria MS 1.428/1993 e MAPA 46/1998, com ressalva de conferir a
+--                norma vigente do segmento) e os erros de auditoria.
+--
+-- ---------------------------------------------------------------------------
+-- 3. RETROFIT (10 posts, só content — sem tocar revised_at)
+-- ---------------------------------------------------------------------------
+--   fssc-22000-versao-7 · fssc-22000-versao-6-guia-de-mudancas… · fssc-22000-versao-6-
+--   guias-de-orientacao… · diferenca-entre-os-programas-do-gfsi · seguranca-de-alimentos-
+--   auditorias-nao-anunciadas · beneficios-da-implementacao-da-fssc-22000 ·
+--   o-que-e-seguranca-dos-alimentos · entendendo-como-realizar-avaliacao-de-perigos-appcc-
+--   passo-passo · cultura-de-seguranca-de-alimentos-… · fssc-22000-v6
+--
+-- ---------------------------------------------------------------------------
+-- REPO
+-- ---------------------------------------------------------------------------
+--   src/data/produtos.js       menu: FSSC 22000 passou a apontar para /fssc-22000/
+--   src/data/lead-form-pages.js  +fssc-22000, +certificacao-fssc-22000, +requisitos-fssc-22000
+--
+-- ---------------------------------------------------------------------------
+-- CONFERÊNCIA
+-- ---------------------------------------------------------------------------
+-- select slug, status, cardinality(tags) as tags, reading_time_min
+--   from blog_templum_posts
+--  where category_name = 'Segurança dos Alimentos'
+--  order by tags, slug;
+--
+-- ---------------------------------------------------------------------------
+-- ROLLBACK 1 — tirar os 3 posts novos do ar sem apagar
+-- ---------------------------------------------------------------------------
+-- update blog_templum_posts set status='draft'
+--  where slug in ('fssc-22000','requisitos-fssc-22000','certificacao-fssc-22000');
+--
+-- ROLLBACK 2 — reescritas e retrofits: os JSON em supabase/backup/*-antes-2026-09-10.json
+-- têm title, content, excerpt, tldr, faq, seo_* e tags anteriores. Restaurar por REST.
+--
+-- ROLLBACK 3 — tags: eram TODAS vazias antes desta leva, então
+-- update blog_templum_posts set tags='{}' where category_name='Segurança dos Alimentos'
+--   and slug <> 'fssc-22000-versao-7';   -- este já tinha tags desde 18/08/2026
+--
+-- ---------------------------------------------------------------------------
+-- PENDÊNCIAS
+-- ---------------------------------------------------------------------------
+--  a) CANIBALIZAÇÃO não resolvida: 6 páginas disputam "segurança dos alimentos"
+--     (seguranca-dos-alimentos, seguranca-de-alimentos, o-que-e-seguranca-dos-alimentos,
+--     qualidade-higiene-e-seguranca-dos-alimentos, seguranca-dos-alimentos-como-
+--     oportunidade, seguranca-dos-alimentos-nao-basta-ser-gostoso) e 2 disputam HACCP
+--     (haccp-o-que-e e o-que-e-o-haccp-hazard-analysis-and-control-point-system, este
+--     com 1.750 caracteres). Consolidar exige decisão editorial + redirect.
+--  b) 6 rascunhos de versões antigas da FSSC (v4, v5, "nova versao da fssc", "novo
+--     esquema") continuam em draft — decidir entre arquivar de vez ou reaproveitar.
+--  c) src/data/guia-da-norma.js (arquivo ainda não commitado, WIP do Rodrigo) mapeia
+--     "FSSC 22000" → slug `iso-22000`. Quando for commitado, vale apontar para
+--     `fssc-22000`, que agora é o hub do esquema.
+--  d) Sem valores em R$ para a certificação FSSC — mesma pendência da ISO 27001.
