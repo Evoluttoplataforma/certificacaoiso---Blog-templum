@@ -1,0 +1,34 @@
+# Roteiro do resumo em áudio — /o-que-e-a-iso-37001/
+# Hub da vertical de antissuborno. O post cobre a norma cláusula por cláusula; o áudio
+# não tenta acompanhar essa estrutura — pega o que muda uma decisão nesta semana.
+#
+# Ordem escolhida: o PRAZO abre porque virou há dez dias. Desde 31/08/2026 nenhum
+# organismo emite ou renova na edição de 2016, e quem está certificado nela tem data de
+# validade: 28/02/2027. É a única parte do resumo que tem urgência real de calendário,
+# e quem ouve isso no carro tem o que fazer na segunda-feira.
+# Depois vem a definição larga de suborno, que é o engano mais comum ("aqui não tem
+# dinheiro trocando de mão, então não é suborno") e que explica sozinha por que a due
+# diligence de terceiros é o requisito mais cobrado. Depois o que mudou em 2025, depois
+# licitações — o gancho comercial no Brasil — e por último a ressalva de que a
+# certificação não atesta ausência de suborno, que é da própria norma e é o trecho que
+# dá credibilidade ao resto.
+#
+# "ISO 37001" nunca aparece com dígitos: é "ISO trinta e sete mil e um", como o roteiro
+# da 27001 já faz. Números de cláusula (8.2, 5.1.3) ficam fora — não se seguram de
+# ouvido, e quem quiser o número vai ao texto. As leis entram pelo NOME (Lei
+# Anticorrupção, Lei de Licitações) e não pelo número, pelo mesmo motivo.
+ISO trinta e sete mil e um, em resumo.
+
+Começo pelo que tem data marcada. Se a sua empresa é certificada na edição de dois mil e dezesseis, o relógio já virou: desde trinta e um de agosto deste ano, nenhum organismo emite ou renova certificado na versão antiga. As auditorias de transição vão até trinta de janeiro de dois mil e vinte e sete, e em vinte e oito de fevereiro os certificados na edição antiga expiram. Quem não migrar até lá simplesmente perde o certificado. E quem está começando a implantar agora não tem escolha a fazer: implanta direto na edição de dois mil e vinte e cinco.
+
+Dito isso, o que a norma é. Ela define os requisitos de um sistema de gestão antissuborno, e é certificável — não é um guia de boas intenções. Quase toda empresa tem uma política de ética no papel; quase nenhuma consegue provar que ela funciona. A norma troca o discurso pela evidência: risco mapeado, controle implementado, registro do que foi feito.
+
+O ponto que mais surpreende é a definição de suborno, que é bem mais larga do que a intuição sugere. Três consequências práticas. Primeira: não precisa ter dinheiro envolvido. Emprego para um parente, uma diária de hotel, um ingresso, uma consultoria que não gera entrega — tudo isso cabe em vantagem indevida de qualquer valor. Segunda: não precisa envolver agente público. A norma cobre o setor privado também, e nas duas direções: a empresa que oferece e o funcionário que aceita. Terceira: o indireto conta. É por isso que a avaliação de terceiros é o requisito mais cobrado na auditoria — o representante comercial, o despachante e o intermediário são a rota clássica, e a edição nova reforça que essa avaliação não é uma foto tirada na entrada, é acompanhamento com data.
+
+Sobre o que mudou em dois mil e vinte e cinco, a revisão foi conservadora, mas três pontos aparecem na auditoria. A cultura antissuborno deixou de ser espírito da norma e virou requisito próprio, com comprometimento da alta direção cobrado como item auditável. Fusões e aquisições entraram explicitamente nos controles: comprar uma empresa é herdar o passivo dela. E as mudanças climáticas entraram na análise de contexto, junto com todas as outras normas de sistema de gestão.
+
+No Brasil há um uso muito concreto para isso. A Lei de Licitações exige programa de integridade nas contratações de grande vulto, usa o programa como critério de desempate e como condição para reabilitar empresa sancionada. A Lei Anticorrupção o trata como atenuante de sanção e como peça de acordo de leniência. A certificação não substitui a avaliação que o órgão de controle faz, e não garante enquadramento automático — mas quem já opera o sistema chega nessas exigências com o dever de casa feito, em vez de montar um programa às pressas depois que o edital saiu.
+
+E uma ressalva que a própria norma registra, e que vale ouvir até o fim: a conformidade com ela não é garantia de que nenhum suborno ocorreu ou vai ocorrer. Nenhum sistema de gestão elimina o risco de conduta individual desonesta. O que ele entrega é outra coisa, e vale mais do que parece — capacidade demonstrável de prevenir, detectar e responder. Quando um caso acontece, a diferença entre a empresa que tem sistema e a que não tem aparece na hora: uma detecta rápido, investiga, corrige e comprova que agiu; a outra descobre pela imprensa e não tem nada para mostrar.
+
+No artigo estão as cláusulas quatro a dez explicadas, os controles que mais aparecem na auditoria, a diferença entre esta norma e a de compliance, e os erros que mais reprovam.
