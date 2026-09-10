@@ -18,6 +18,16 @@
 /o-que-e-iso-9001/                    /iso-9001/  301
 /o-que-e-iso-9001                     /iso-9001/  301
 
+# /o-que-e-o-haccp-hazard-analysis-and-control-point-system/ → /haccp-o-que-e/ (10/09/2026).
+# Mesma consolidação da /o-que-e-iso-9001/, mesmo motivo: o post tinha 1.750 caracteres —
+# só a lista dos 7 princípios, já inteira na página canônica — e não aparece entre as
+# páginas com impressão no Search Console de 6 meses. "haccp" traz 241 impressões em 24h
+# e o blog tinha DOIS textos disputando a consulta; o menor não tinha nada de próprio.
+# Zero link editorial apontava para ele (conferido no conteúdo dos 1.072 posts do banco),
+# então o 301 não quebra nada. Status 'draft' no Supabase para sair do build e do sitemap.
+/o-que-e-o-haccp-hazard-analysis-and-control-point-system/   /haccp-o-que-e/  301
+/o-que-e-o-haccp-hazard-analysis-and-control-point-system    /haccp-o-que-e/  301
+
 # Páginas de "sucesso" do plugin de isca do WordPress (pós-download de e-book/planilha).
 # Iam para a isca em /presentes/; desde 19/08/2026 vão direto pro /form/ (iscas descontinuadas).
 # NÃO usar wildcard aqui: existe post real publicado em /sucesso-na-iso-9001/ (não é isca) que um /sucesso-* pegaria por engano.
