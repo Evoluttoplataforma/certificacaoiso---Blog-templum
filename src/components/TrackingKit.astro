@@ -54,6 +54,9 @@ window.__loadTrackingKit = function () {
     // que quebrou aqui dentro em vez de só apontar o domínio.
     s.crossOrigin = 'anonymous';
     if (cb) s.onload = cb;
+    // Sem este arquivo o 02-dispatch.js não roda — e é ele que configura o GA4 principal e
+    // o Google Ads desde 10/09/2026 (ver Base.astro). O fallback devolve os dois `config`.
+    s.onerror = function () { if (typeof window.__gtagFallback === 'function') window.__gtagFallback(); };
     document.head.appendChild(s);
   }
   load('01-capture.js', function () {

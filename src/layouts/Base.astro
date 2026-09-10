@@ -94,11 +94,28 @@ const temPulso = clarityTags?.page_type === "artigo";
           // Google gtag (GA4 x2 + Ads)
           var g=document.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-2BW8QTYLB5";document.head.appendChild(g);
           gtag("js", new Date());
-          gtag("config","G-2BW8QTYLB5",{send_page_view:false});
+          // MEDIDO em 10/09/2026 (Chrome real, com o debug do kit ligado): o 02-dispatch.js
+          // do tracking-kit configura G-2BW8QTYLB5 e AW-17896226473 por conta própria, a
+          // partir do TRACKING_CONFIG — e configurá-los aqui também deixava o dataLayer com
+          // `config` DUPLICADO dos dois. No GA4 isso é inofensivo (ambos com
+          // send_page_view:false, e quem manda o page_view é o kit); no Ads não, porque o
+          // `config` de destino AW dispara o ping de página — eram dois ccm/collect por
+          // carregamento. Aqui fica só a 2ª propriedade GA4, que o kit não conhece.
+          // ⚠️ Sob automação (navigator.webdriver ou UA de headless) o kit se desliga por
+          // design — "bot detectado ... eventos desligados". Testar isto com puppeteer sem
+          // mascarar UA e webdriver mede o caminho errado e parece regressão.
           gtag("config","G-FV41GWD427",{send_page_view:false});
-          gtag("config","AW-17896226473");
+          // Rede de segurança: sem o kit (CDN fora, bloqueador), estes dois ficariam sem
+          // configuração — inclusive a marcação do Ads. Refeitos uma única vez pelo onerror
+          // do loader em TrackingKit.astro.
+          window.__gtagFallback = function () {
+            if (window.__gtagFbDone) return; window.__gtagFbDone = true;
+            gtag("config","G-2BW8QTYLB5",{send_page_view:false});
+            gtag("config","AW-17896226473");
+          };
           // tracking-kit (definido em TrackingKit.astro)
           if (typeof window.__loadTrackingKit === "function") window.__loadTrackingKit();
+          else window.__gtagFallback();
         }
         var evs = ["pointerdown","touchstart","keydown","scroll","mousemove"];
         var opts = { once: true, passive: true, capture: true };
