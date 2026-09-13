@@ -7,6 +7,10 @@
 /elemento-planejamento-estrategico/   /elementos-planejamento-estrategico/  301
 /planejamento-estrategico/            /como-fazer-planejamento-estrategico/  301
 
+# PE 2027: slug saiu de "tirar do papel" (alinhado à thumb "Da teoria à execução").
+/planejamento-estrategico-2027-como-tirar-do-papel-e-executar/   /planejamento-estrategico-2027-da-teoria-a-execucao/  301
+/planejamento-estrategico-2027-como-tirar-do-papel-e-executar    /planejamento-estrategico-2027-da-teoria-a-execucao/  301
+
 # /o-que-e-iso-9001/ → /iso-9001/ (21/08/2026). Não foi reescrita: foi consolidação, e o
 # Search Console decidiu. O post tinha 318 palavras, posição média 60,6 e ZERO clique em
 # 529 impressões — ou seja, ninguém o via. E disputava a mesma consulta que o /iso-9001/
