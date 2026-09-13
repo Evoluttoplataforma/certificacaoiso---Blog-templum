@@ -75,12 +75,28 @@ function snippetFrom(html) {
 // Otimização AIEO/GEO do conteúdo (no build, p/ todos os posts):
 // 1) hierarquia de heading: desloca p/ o nível mais raso virar h2 (o título da página é o h1)
 // 2) âncoras sem texto (vazias ou só com <img>) ganham aria-label
-// 3) âncoras genéricas ("clique aqui"…) p/ a Templum viram texto descritivo
+// 3) âncoras genéricas ("clique aqui"…) p/ a Templum viram texto descritivo,
+//    exceto captura (pesquisa, webinar, cadastro no OS)
 // Imagens que não existem mais (quebradas) — tratadas como sem-imagem no build.
 const BROKEN_IMAGES = new Set([
   "/wp-content/uploads/2021/05/Design-sem-nome-41.webp",
   "/wp-content/uploads/2021/05/Design-sem-nome-22.webp",
 ]);
+
+function ehCapturaTemplum(href) {
+  return /app\.templum\.com\.br/i.test(href)
+    || /\/pesquisa\//i.test(href)
+    || /\/webinar/i.test(href)
+    || /\/webserie/i.test(href);
+}
+
+function rotuloLinkTemplum(href) {
+  if (/app\.templum\.com\.br/i.test(href)) return "Cadastre-se no Templum OS";
+  if (/\/pesquisa\//i.test(href) || /\/webinar/i.test(href) || /\/webserie/i.test(href)) {
+    return "Assistir ao replay e baixar o material";
+  }
+  return "Conheça a consultoria da Templum";
+}
 
 function processContent(html) {
   if (!html) return "";
@@ -125,7 +141,7 @@ function processContent(html) {
     const dom = ((href.match(/^https?:\/\/(?:www\.)?([^/]+)/i) || [])[1] || "").replace(/"/g, "");
     let label;
     if (/youtube|youtu\.be/i.test(href)) label = "Assistir ao vídeo no YouTube";
-    else if (/templum\.com\.br/i.test(href)) label = "Conheça a consultoria da Templum";
+    else if (/templum\.com\.br/i.test(href)) label = rotuloLinkTemplum(href);
     else if (dom) label = "Acessar " + dom;
     else return m;
     if (hasImg) { // imagem (com/sem texto) → preserva, adiciona aria-label
@@ -137,7 +153,11 @@ function processContent(html) {
 
   // 3) anchor text genérico → descritivo (apenas links Templum, p/ não desvirtuar)
   out = out.replace(/(<a\b[^>]*href="[^"]*templum\.com\.br[^"]*"[^>]*>)(\s*)(clique aqui|saiba mais|leia mais|veja aqui|acesse aqui|confira aqui|veja mais|aqui)(\s*)(<\/a>)/gi,
-    (m, open, s1, _t, s2, close) => `${open}${s1}Conheça a consultoria da Templum${s2}${close}`);
+    (m, open, s1, _t, s2, close) => {
+      const href = (open.match(/href="([^"]*)"/i) || [])[1] || "";
+      if (ehCapturaTemplum(href)) return m;
+      return `${open}${s1}Conheça a consultoria da Templum${s2}${close}`;
+    });
 
   // 4) IMAGENS DO TEXTO: loading="lazy" + decoding="async" nas que não têm.
   //
