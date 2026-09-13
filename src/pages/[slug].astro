@@ -7,7 +7,7 @@ import PostDock from "../components/PostDock.astro";
 import AudioResumo from "../components/AudioResumo.astro";
 import { catMeta } from "../data/categorias.js";
 import { ctaParaNorma } from "../data/cta-norma.js";
-import { ancorarSecoes, injetarCtaMeio, removerSumarioEscrito, temSumarioEscrito, envolverTabelas } from "../lib/artigo.js";
+import { ancorarSecoes, injetarCtaMeio, removerSumarioEscrito, temSumarioEscrito, envolverTabelas, envolverYoutube } from "../lib/artigo.js";
 import { normaDoForm } from "../data/lead-form-pages.js";
 import { normaDaPagina } from "../data/normas.js";
 import { getAllPosts, tldrOf } from "../lib/posts.js";
@@ -124,6 +124,11 @@ const temSumarioInline = temSumarioEscrito(htmlLimpo);
 // Depois da limpeza do sumário e ANTES da injeção do CTA: o CTA entra na fronteira de um
 // <h2>, então nunca cai dentro de um <div class="post-tabela">.
 const htmlComTabelas = envolverTabelas(htmlLimpo);
+// YouTube: capa no HTML, player só no clique — ver envolverYoutube() em lib/artigo.js.
+const posterYt = d.heroImage
+  ? (/^https?:/i.test(d.heroImage) ? d.heroImage : new URL(d.heroImage, SITE).href)
+  : "";
+const htmlComVideo = envolverYoutube(htmlComTabelas, posterYt);
 // O FAQ entra como última linha porque ele JÁ é uma seção da página, com id="duvidas"
 // desde sempre; deixá-lo fora faria o sumário mentir sobre a profundidade do artigo.
 // Só não entra quando o próprio corpo já tem um h2 com esse nome (73 posts têm) — senão
@@ -148,7 +153,7 @@ const urlMeio = normaForm
 const blocoCtaMeio = `<div class="cta-olivia"><img src="/assets/team/olivia-especialista.webp" alt="Olívia, especialista Templum" width="44" height="44" decoding="async" /><div><strong>Quer isso avaliado na sua empresa?</strong><p>${cta.texto}</p><a href="${urlMeio}" class="btn btn--primary" data-trk-event="cta-meio" data-trk-norma="${cta.slug}">Falar com a Olívia <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a></div></div>`;
 // injeta no HTML JÁ LIMPO: o CTA vai para a fronteira de h2 mais perto da metade do
 // TEXTO, e as ~15 linhas do sumário do corpo deslocavam esse cálculo.
-const conteudo = wordCount >= 1200 ? injetarCtaMeio(htmlComTabelas, blocoCtaMeio) : htmlComTabelas;
+const conteudo = wordCount >= 1200 ? injetarCtaMeio(htmlComVideo, blocoCtaMeio) : htmlComVideo;
 
 // ---------- RELACIONADOS: relevância por tag + garantia de distribuição ----------
 // Em lib/posts.js, `categories` é [category_name, ...tags] — categoria e tags no
@@ -283,6 +288,27 @@ if (faq.length) {
       acceptedAnswer: { "@type": "Answer", text: f.resposta },
     })),
   });
+}
+
+// YouTube no corpo: player na página (permanência) + VideoObject (discoverability).
+// Só declara se o HTML já tem embed — o artigo precisa ser útil sem o vídeo, mas o
+// Google indexa melhor quando o vídeo está na mesma URL do texto.
+const ytId = (post.content || "").match(/youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/)?.[1];
+if (ytId) {
+  const videoObject = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: d.title,
+    description: seoDesc,
+    thumbnailUrl: d.heroImage ? new URL(d.heroImage, SITE).href : `https://i.ytimg.com/vi/${ytId}/maxresdefault.jpg`,
+    embedUrl: `https://www.youtube.com/embed/${ytId}`,
+    contentUrl: `https://www.youtube.com/watch?v=${ytId}`,
+    uploadDate: new Date(d.pubDate).toISOString(),
+    inLanguage: "pt-BR",
+    publisher: { "@id": `${SITE}/#organization` },
+  };
+  schemas[0].video = videoObject;
+  schemas.push(videoObject);
 }
 ---
 
@@ -582,6 +608,28 @@ if (faq.length) {
         box.addEventListener("click", function (e) { if (e.target !== b) abrir(); });
       })();
 
+      // YouTube: a capa é um <a> para o vídeo. Sem JS, abre o YouTube. Com JS, o clique
+      // troca a capa pelo iframe — o JS pesado do player não entra no carregamento.
+      (function () {
+        document.querySelectorAll(".yt-facade").forEach(function (el) {
+          var hit = el.querySelector(".yt-facade-hit");
+          if (!hit) return;
+          hit.addEventListener("click", function (e) {
+            var id = el.getAttribute("data-yt");
+            if (!id) return;
+            e.preventDefault();
+            var iframe = document.createElement("iframe");
+            iframe.src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+            iframe.title = el.getAttribute("data-title") || "YouTube";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+            iframe.setAttribute("allowfullscreen", "");
+            iframe.referrerPolicy = "strict-origin-when-cross-origin";
+            el.classList.add("is-on");
+            el.replaceChildren(iframe);
+          });
+        });
+      })();
+
       // ---- Trilho de índice: qual seção está sendo lida ----
       // A primeira linha desiste em 1.019 dos 1.020 posts (o trilho só existe no
       // longform) e também no celular, onde o CSS o esconde: querySelector devolve o
@@ -830,9 +878,11 @@ if (faq.length) {
   @media (min-width: 1080px) {
     .post.is-longform .post-corpo > img,
     .post.is-longform .post-corpo > figure,
-    .post.is-longform .post-corpo > iframe {
+    .post.is-longform .post-corpo > iframe,
+    .post.is-longform .post-corpo > .yt-facade {
       max-width: calc(100% + 88px); position: relative; left: 50%; transform: translateX(-50%); }
-    .post.is-longform .post-corpo > iframe { width: calc(100% + 88px); }
+    .post.is-longform .post-corpo > iframe,
+    .post.is-longform .post-corpo > .yt-facade { width: calc(100% + 88px); }
   }
 
   /* Com o trilho na tela, o <details> "Neste artigo" é o segundo índice da mesma
@@ -918,6 +968,36 @@ if (faq.length) {
   .post-content :global(ul), .post-content :global(ol) { margin: 0 0 18px 22px; display: flex; flex-direction: column; gap: 8px; }
   .post-content :global(blockquote) { border-left: 4px solid var(--orange); padding: 6px 0 6px 20px; margin: 24px 0; font-style: italic; color: var(--text-mid); }
   .post-content :global(figure) { margin: 22px 0; }
+  .post-content :global(figure.post-video) { margin: 8px 0 28px; }
+  .post-content :global(figure.post-video iframe),
+  .post-content :global(figure.post-video .yt-facade) { margin: 0; }
+  .post-content :global(figure.post-video figcaption) {
+    font-size: 14px; line-height: 1.45; color: var(--text-mid); margin-top: 10px;
+  }
+  .post-content :global(.yt-facade) {
+    position: relative; aspect-ratio: 16/9; width: 100%; display: block;
+    margin: 24px 0; border-radius: var(--r-16); overflow: hidden; background: #222831;
+  }
+  .post-content :global(.yt-facade-hit) {
+    display: block; width: 100%; height: 100%; position: relative; color: inherit;
+    text-decoration: none;
+  }
+  .post-content :global(.yt-facade img) {
+    width: 100%; height: 100%; object-fit: cover; margin: 0; border-radius: 0; display: block;
+  }
+  .post-content :global(.yt-facade-play) {
+    position: absolute; inset: 0; margin: auto; width: 68px; height: 48px;
+    border-radius: 14px; background: #FF5925;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    pointer-events: none;
+  }
+  .post-content :global(.yt-facade-play)::after {
+    content: ""; position: absolute; left: 26px; top: 14px;
+    border-style: solid; border-width: 10px 0 10px 16px;
+    border-color: transparent transparent transparent #fff;
+  }
+  .post-content :global(.yt-facade.is-on) { background: #000; }
+  .post-content :global(.yt-facade.is-on iframe) { margin: 0; border-radius: 0; width: 100%; height: 100%; }
   /* embeds (YouTube etc.): display:block porque iframe é inline por padrão — sem isso
      o vídeo ganha um vão de descender embaixo e cola no parágrafo seguinte. */
   .post-content :global(iframe) { max-width: 100%; border-radius: var(--r-16); aspect-ratio: 16/9; width: 100%; display: block; margin: 24px 0; border: 0; }

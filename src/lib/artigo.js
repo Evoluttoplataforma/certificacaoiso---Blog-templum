@@ -199,6 +199,38 @@ export function envolverTabelas(html) {
 }
 
 /**
+ * Troca iframe do YouTube por capa + play. O player de verdade só nasce no clique.
+ *
+ * Por que não deixar o iframe no HTML: o embed oficial puxa ~1 MB de JS do youtube.com
+ * na primeira pintura, mesmo com `loading="lazy"` (o iframe ainda reserva conexão e
+ * compete com o texto). Por que não só um link para o YouTube: o leitor sai da URL do
+ * artigo no momento em que o vídeo começa — perde o restante do texto e o Google perde
+ * permanência. A fachada resolve os dois: sem JS extra no load; sem JS no navegador, o
+ * `<a>` abre o YouTube; com JS, o clique troca a capa pelo player na própria página.
+ *
+ * `posterUnico` entra só quando o post tem UM vídeo (caso típico: replay da live + capa
+ * do artigo). Dois embeds no mesmo corpo voltariam à thumb padrão do YouTube, para não
+ * estampar a mesma capa em dois players.
+ */
+export function envolverYoutube(html, posterUnico) {
+  if (!html) return "";
+  if (html.includes("yt-facade")) return html;
+
+  const ids = [...html.matchAll(/youtube(?:-nocookie)?\.com\/embed\/([a-zA-Z0-9_-]{11})/gi)].map((m) => m[1]);
+  const posterFixo = ids.length === 1 && posterUnico ? posterUnico : null;
+
+  return html.replace(/<iframe\b([^>]*)>\s*<\/iframe>/gi, (full, attrs) => {
+    const src = (attrs.match(/\bsrc\s*=\s*["']([^"']+)["']/i) || [])[1] || "";
+    const id = (src.match(/youtube(?:-nocookie)?\.com\/embed\/([a-zA-Z0-9_-]{11})/) || [])[1];
+    if (!id) return full;
+    const title = (attrs.match(/\btitle\s*=\s*["']([^"']+)["']/i) || [])[1] || "Vídeo no YouTube";
+    const titleEsc = title.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+    const poster = posterFixo || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+    return `<div class="yt-facade" data-yt="${id}" data-title="${titleEsc}"><a class="yt-facade-hit" href="https://www.youtube.com/watch?v=${id}" rel="noopener noreferrer" target="_blank"><img src="${poster}" alt="${titleEsc}" width="1280" height="720" loading="lazy" decoding="async" /><span class="yt-facade-play" aria-hidden="true"></span></a></div>`;
+  });
+}
+
+/**
  * Enfia um bloco de CTA no meio do corpo, na fronteira de um <h2>.
  *
  * Por que na fronteira de h2 e não a cada N parágrafos: cortar por parágrafo cai
