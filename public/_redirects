@@ -132,9 +132,30 @@
 /pbqp-h-2/     /pbqp-h/        301
 /pbqp-h-2      /pbqp-h/        301
 
+# PBQP-H: consolidação de definições e clones no hub /pbqp-h/ (set/2026).
+# Motivo: GSC com posição ~11 e CTR 0,7% no filtro PBQP-H; várias URLs
+# disputavam "pbqp-h" / "o que é". Mesmo padrão de /o-que-e-iso-9001/ → /iso-9001/.
+# Posts redirecionados ficam draft no Supabase (fora do sitemap).
+/o-que-e-pbqp-h/                 /pbqp-h/  301
+/o-que-e-pbqp-h                  /pbqp-h/  301
+/o-que-e-o-pbqp-h/               /pbqp-h/  301
+/o-que-e-o-pbqp-h                /pbqp-h/  301
+/pbqp-h-2-2/                     /pbqp-h/  301
+/pbqp-h-2-2                      /pbqp-h/  301
+/conheca-o-pbqp-h/               /pbqp-h/  301
+/conheca-o-pbqp-h                /pbqp-h/  301
+
+# SiAC 2021: thin/duplicatas → guia longo /pbqp-h-siac-2021/
+/atualizacao-pbqp-h-siac-2021/           /pbqp-h-siac-2021/  301
+/atualizacao-pbqp-h-siac-2021            /pbqp-h-siac-2021/  301
+/o-que-mudou-na-versao-2021-pbqp-h/      /pbqp-h-siac-2021/  301
+/o-que-mudou-na-versao-2021-pbqp-h       /pbqp-h-siac-2021/  301
+/siac-2021-o-que-mudou-2/                /pbqp-h-siac-2021/  301
+/siac-2021-o-que-mudou-2                 /pbqp-h-siac-2021/  301
+/siac-2021-o-que-mudou/                  /pbqp-h-siac-2021/  301
+/siac-2021-o-que-mudou                   /pbqp-h-siac-2021/  301
+
 # Varredura completa de canibalização (título idêntico, versão "-2" é mais completa) — ago/2026.
-/siac-2021-o-que-mudou/          /siac-2021-o-que-mudou-2/          301
-/siac-2021-o-que-mudou           /siac-2021-o-que-mudou-2/          301
 /pbqp-h-transformando-as-bases-da-construcao-civil/    /pbqp-h-transformando-as-bases-da-construcao-civil-2/    301
 /pbqp-h-transformando-as-bases-da-construcao-civil     /pbqp-h-transformando-as-bases-da-construcao-civil-2/    301
 /principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1/    /principais-vantagens-da-certificacao-iso-9001-para-pequenas-empresas-parte-1-2-2/    301

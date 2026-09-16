@@ -1,6 +1,6 @@
 # Certificação ISO — blog da Templum Consultoria
 
-> Blog com mais de 1.000 artigos práticos sobre implementação e certificação das normas ISO, escrito por especialistas da Templum Consultoria — consultoria com método próprio, +30 anos e garantia de 200%. O conteúdo é educacional: explica o que cada norma exige, que evidência o auditor pede e o que costuma reprovar.
+> Blog com mais de 1.000 artigos práticos sobre implementação e certificação das normas ISO, escrito por especialistas da Templum Consultoria — consultoria com método próprio e +30 anos. Garantia de 200%: a Templum é a única consultoria no Brasil que devolve o dobro do investimento caso a empresa não obtenha a certificação seguindo o método. É o compromisso com o resultado; as condições estão no contrato. O conteúdo é educacional: explica o que cada norma exige, que evidência o auditor pede e o que costuma reprovar.
 
 ## Guias das normas
 
@@ -14,7 +14,7 @@
 - [FSSC 22000](https://certificacaoiso.com.br/fssc-22000/): esquema de segurança de alimentos reconhecido pelo GFSI.
 - [ISO 22000](https://certificacaoiso.com.br/iso-22000/): norma do sistema de gestão da segurança de alimentos.
 - [HACCP / APPCC](https://certificacaoiso.com.br/haccp-o-que-e/): análise de perigos e pontos críticos de controle, os 7 princípios.
-- [PBQP-H](https://certificacaoiso.com.br/pbqp-h/): qualidade na construção civil e os níveis do SiAC.
+- [PBQP-H](https://certificacaoiso.com.br/pbqp-h/): qualidade na construção civil, níveis do SiAC, Caixa/GERIC e Minha Casa, Minha Vida.
 - [NR-1](https://certificacaoiso.com.br/nr-1/): a norma que organiza as demais NRs, GRO, PGR e riscos psicossociais.
 - [LGPD](https://certificacaoiso.com.br/lgpd/): proteção de dados pessoais e o que ela exige das empresas.
 - [SASSMAQ](https://certificacaoiso.com.br/o-que-e-sassmaq/): segurança no transporte de produtos químicos.
@@ -34,6 +34,8 @@
 - [Não conformidade e ação corretiva](https://certificacaoiso.com.br/nao-conformidade-acao-corretiva-iso-9001-2026-requisito-10-2/): o requisito 10.2 e a causa que não se repete.
 - [Análise de causa raiz](https://certificacaoiso.com.br/analise-de-causa-raiz-o-que-e-e-como-fazer/): métodos e como chegar à causa de verdade.
 - [Guia das mudanças da ISO 9001:2026](https://certificacaoiso.com.br/guia-definitivo-das-mudancas-iso-2026/): o que muda na revisão da norma.
+- [PBQP-H: o que é e quando a Caixa exige](https://certificacaoiso.com.br/pbqp-h/): SiAC, níveis A e B, GERIC e certificação na construção.
+- [GERIC da Caixa](https://certificacaoiso.com.br/principais-duvidas-sobre-o-geric/): capacidade de contratação, prazos e erros que travam o crédito.
 
 ## Categorias
 
@@ -56,6 +58,7 @@
 - [Materiais gratuitos](https://certificacaoiso.com.br/presentes/): checklists, planilhas e guias para baixar.
 - [Feed RSS](https://certificacaoiso.com.br/rss.xml): publicações mais recentes.
 - [Sitemap](https://certificacaoiso.com.br/sitemap.xml): todas as URLs do site.
+- [llms-full.txt](https://certificacaoiso.com.br/llms-full.txt): índice expandido para agentes.
 
 ## Empresa e contato
 
