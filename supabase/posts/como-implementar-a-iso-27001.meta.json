@@ -1,7 +1,7 @@
 {
  "title": "Como implementar a ISO 27001: o passo a passo, da decisão ao certificado",
- "seo_title": "Como implementar a ISO 27001: passo a passo completo",
- "seo_description": "O passo a passo de quem implementa a ISO 27001 de verdade: as 11 etapas na ordem que funciona, quem faz o quê, a evidência que cada etapa deixa e os erros que fazem o projeto recomeçar.",
+ "seo_title": "Implantação ISO 27001: passo a passo da implementação",
+ "seo_description": "Como fazer a implantação da ISO 27001 de verdade: 11 etapas na ordem certa, quem faz o quê, evidência de cada fase e os erros que fazem o projeto recomeçar.",
  "tldr": "Implementar a ISO 27001 é montar um SGSI que continue funcionando depois do projeto — e provar isso com registro. O caminho tem 11 etapas e a ordem não é decorativa: diagnóstico, escopo, contexto e política, levantamento de ativos, sistemática de risco, avaliação de riscos, tratamento e Declaração de Aplicabilidade, implantação dos controles, conscientização, operação com registro e, por fim, auditoria interna e análise crítica pela direção. O erro mais caro é começar pelos 93 controles do Anexo A em vez de começar pelo risco: o Anexo A é a lista de conferência, não o ponto de partida. E a etapa que nenhuma consultoria encurta é operar tempo suficiente para gerar evidência — controle implantado ontem não tem histórico para o auditor amostrar hoje.",
  "faq": [
   {

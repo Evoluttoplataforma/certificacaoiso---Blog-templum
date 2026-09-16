@@ -243,6 +243,14 @@
 /tudo-o-que-precisa-saber-sobre-a-iso-27001-e-seguranca-da-informacao/    /seguranca-da-informacao/    301
 /tudo-o-que-precisa-saber-sobre-a-iso-27001-e-seguranca-da-informacao     /seguranca-da-informacao/    301
 
+# ISO 27001 (set/2026): clone de benefícios + categoria legada.
+# Motivo: GSC filtro 27001 com pos ~13,8 e CTR 1%; uma URL por intenção.
+# /vantagens-da-iso-27001/ vira draft no Supabase (fora do sitemap).
+/vantagens-da-iso-27001/                 /7-beneficios-da-iso-27001-para-o-seu-negocio/  301
+/vantagens-da-iso-27001                  /7-beneficios-da-iso-27001-para-o-seu-negocio/  301
+/categoria/iso-27001/                    /categoria/seguranca-e-compliance/              301
+/categoria/iso-27001                     /categoria/seguranca-e-compliance/              301
+
 # Cluster "planejamento estrategico": 45 artigos distintos (nao sao duplicatas de texto,
 # a similaridade literal e zero), mas estes 9 pares disputavam a MESMA consulta, ambos na
 # pagina 1, dividindo os cliques. Consolidado no de maior impressao/posicao.

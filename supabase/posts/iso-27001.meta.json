@@ -1,0 +1,44 @@
+{
+  "title": "ISO 27001:2022: o que é, requisitos e como certificar",
+  "seo_title": "ISO 27001:2022: o que é, SGSI, 93 controles e como certificar",
+  "seo_description": "O que é a ISO 27001:2022 (SGSI), os 93 controles do Anexo A, diferença para a 27002, etapas de certificação e por que a edição 2013 não vale mais desde out/2025.",
+  "tldr": "A ISO 27001:2022 é a norma internacional de gestão da segurança da informação (SGSI): o que ela é, os 93 controles do Anexo A e como a empresa se certifica. A edição de 2013 deixou de valer em outubro de 2025. A implementação passa por contexto, avaliação de riscos, controles, análise de eficácia e melhoria. Quem emite o certificado é o organismo acreditado; a consultoria prepara a empresa.",
+  "faq": [
+    {
+      "pergunta": "O que é a ISO 27001?",
+      "resposta": "<p>A ISO/IEC 27001 é a norma internacional que define os requisitos de um <strong>Sistema de Gestão da Segurança da Informação (SGSI)</strong>. Em vez de prescrever tecnologias, ela exige que a empresa identifique os riscos das suas informações e aplique controles proporcionais a esses riscos, protegendo confidencialidade, integridade e disponibilidade.</p>"
+    },
+    {
+      "pergunta": "Qual é a versão atual da ISO 27001?",
+      "resposta": "<p>A <strong>ISO/IEC 27001:2022</strong>, com a Emenda 1 de 2024. A versão 2013 saiu de circulação: o período de transição terminou em 31 de outubro de 2025 e os certificados na edição antiga não valem mais. <a href=\"#versao-2022\">Veja o que mudou</a>.</p>"
+    },
+    {
+      "pergunta": "A ISO 27001 é obrigatória?",
+      "resposta": "<p>Não por lei. Mas na prática virou exigência contratual: aparece como critério de habilitação em licitações, em processos de compra de grandes empresas e em contratos que envolvem dados de terceiros. Veja <a href=\"/empresas-que-precisam-da-iso-27001/\">quais empresas precisam da ISO 27001</a>.</p>"
+    },
+    {
+      "pergunta": "Quantos controles tem o Anexo A da ISO 27001?",
+      "resposta": "<p>São <strong>93 controles</strong> na versão 2022, agrupados em quatro temas: 37 organizacionais, 8 de pessoas, 14 físicos e 34 tecnológicos. A versão 2013 tinha 114 controles em 14 seções. Nenhum controle é obrigatório em si: a empresa justifica o que aplica e o que exclui na Declaração de Aplicabilidade.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre ISO 27001 e ISO 27002?",
+      "resposta": "<p>A <strong>ISO 27001 é certificável</strong>: traz os requisitos do sistema de gestão e a lista de controles do Anexo A. A <strong>ISO 27002 não é certificável</strong>: é o guia que detalha como implementar cada um daqueles controles. Comparativo completo em <a href=\"/iso-27001-e-iso-27002/\">ISO 27001 e ISO 27002</a>.</p>"
+    },
+    {
+      "pergunta": "Onde obter a norma ISO 27001 em PDF?",
+      "resposta": "<p>Não há PDF gratuito legal da norma. A edição oficial (ABNT NBR ISO/IEC 27001:2022) é comprada no <a href=\"https://www.abntcatalogo.com.br/\" rel=\"noopener noreferrer\" target=\"_blank\">catálogo da ABNT</a> ou na loja da ISO. Sites que oferecem \"norma ISO 27001 PDF grátis\" distribuem cópia não autorizada e costumam estar desatualizados (ainda na edição 2013).</p>"
+    },
+    {
+      "pergunta": "ISO 27001 e LGPD são a mesma coisa?",
+      "resposta": "<p>Não. A LGPD é lei brasileira e trata de <strong>dados pessoais</strong>; a ISO 27001 é uma norma voluntária e trata de <strong>toda informação relevante para o negócio</strong>. Elas se apoiam: o SGSI da 27001 é a estrutura que sustenta boa parte das obrigações da LGPD. Veja a <a href=\"/relacao-do-lgpd-com-a-iso-27001/\">relação entre a LGPD e a ISO 27001</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto tempo demora para certificar na ISO 27001?",
+      "resposta": "<p>Uma organização de porte médio costuma levar cerca de <strong>12 meses</strong>, contando implementação e auditoria. O prazo depende de três variáveis: quem participa do projeto, quanto tempo essas pessoas conseguem dedicar e o método escolhido. <a href=\"#tempo\">Veja o detalhamento</a>.</p>"
+    },
+    {
+      "pergunta": "Quem emite o certificado ISO 27001?",
+      "resposta": "<p>Um <strong>organismo de certificação acreditado</strong> (no Brasil, acreditado pelo Inmetro). A consultoria prepara a empresa e o organismo certificador audita e emite o certificado: por exigência das regras de acreditação, quem consulta não pode certificar. A auditoria acontece em dois estágios e o certificado vale três anos, com auditorias de manutenção anuais.</p>"
+    }
+  ]
+}
