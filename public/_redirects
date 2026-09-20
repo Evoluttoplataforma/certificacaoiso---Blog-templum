@@ -394,3 +394,13 @@
 # Hoje: 230 regras, todas static, zero dynamic. Enquanto ficar assim o teto é
 # 2.000 e o problema não volta.
 # ─────────────────────────────────────────────────────────────────────────────
+
+# Bloco B (set/2026): FAQ/SiAC thin/benefícios/mudanças → canônicos do cluster
+/perguntas-frequentes-sobre-o-pbqp-h/     /pbqp-h/  301
+/perguntas-frequentes-sobre-o-pbqp-h      /pbqp-h/  301
+/siac-pbqp-h/                             /pbqp-h-siac-2021/  301
+/siac-pbqp-h                              /pbqp-h-siac-2021/  301
+/beneficios-pbqp-h/                       /7-beneficios-do-pbqp-h-para-sua-empresa/  301
+/beneficios-pbqp-h                        /7-beneficios-do-pbqp-h-para-sua-empresa/  301
+/principais-mudancas-no-pbqp-h/           /pbqp-h-siac-2021/  301
+/principais-mudancas-no-pbqp-h            /pbqp-h-siac-2021/  301
