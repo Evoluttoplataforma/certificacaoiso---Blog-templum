@@ -1,0 +1,40 @@
+{
+ "title": "5S: o que é, os 5 sensos e como implementar",
+ "seo_title": "Programa 5S: o que é, os 5 sensos e como implementar",
+ "seo_description": "O que é o 5S e cada senso (Seiri a Shitsuke), como implantar na empresa e a relação com a ISO 9001. Guia prático do blog Certificação ISO.",
+ "tldr": "O 5S usa cinco sensos: utilização, organização, limpeza, padronização e disciplina. Melhora segurança, produtividade e padrão no ambiente de trabalho. Não é requisito explícito da ISO 9001, mas facilita evidências de ordem e ambiente (7.1.4). Comece por área piloto e audite o 5º S.",
+ "faq": [
+  {
+   "pergunta": "O que é o 5S?",
+   "resposta": "<p>O <strong>5S</strong> é um programa de organização do trabalho com cinco sensos japoneses: utilização, organização, limpeza, padronização e disciplina. Serve para indústria, serviços, obras e escritórios.</p>\n<p><a href=\"#o-que-e-um-sistema-5s\">Definição completa</a> · <a href=\"#quais-sao-os-5-sensos-de-5s\">Os cinco sensos</a>.</p>"
+  },
+  {
+   "pergunta": "Quais são os 5 sensos do 5S?",
+   "resposta": "<p><strong>Seiri</strong> (utilização): separar o necessário do desnecessário. <strong>Seiton</strong> (organização): um lugar para cada item. <strong>Seiso</strong> (limpeza): manter limpo e achar a causa da sujeira. <strong>Seiketsu</strong> (padronização): rotina e regras visíveis. <strong>Shitsuke</strong> (disciplina): sustentar o hábito.</p>"
+  },
+  {
+   "pergunta": "5S é obrigatório na ISO 9001?",
+   "resposta": "<p>Não como nome de requisito. A <a href=\"/iso-9001/\">ISO 9001</a> exige ambiente controlado, processos padronizados e melhoria contínua, e o 5S ajuda a mostrar isso na prática, sobretudo na cláusula 7.1.4. Detalhes em <a href=\"/programa-5s-e-a-iso-9001/\">programa 5S e ISO 9001</a>.</p>"
+  },
+  {
+   "pergunta": "Por onde começar a implementar o 5S?",
+   "resposta": "<p>Pelo <strong>Seiri</strong>, em uma <strong>área piloto</strong>. Implantação na empresa inteira de uma vez vira mutirão e some em poucos meses. Conclua os cinco sensos na piloto, registre antes e depois, depois expanda.</p>\n<p><a href=\"#como-implementar-o-programa-5s-na-sua-empresa\">Passo a passo no artigo</a>.</p>"
+  },
+  {
+   "pergunta": "Existe certificação de 5S?",
+   "resposta": "<p>Não há norma ISO nem certificado oficial de 5S reconhecido pelo Inmetro. Selos de consultorias podem motivar o time, mas não substituem <a href=\"/iso-9001/\">certificação ISO 9001</a>. Compare <a href=\"/programas-5s-e-8s-diferencas-e-aplicacoes/\">5S e 8S</a> se a dúvida for qual programa adotar.</p>"
+  },
+  {
+   "pergunta": "Quanto tempo leva para ver resultado do 5S?",
+   "resposta": "<p>Mudança visual costuma aparecer em dias ou semanas na área piloto. Disciplina (5º S) exige meses de auditoria interna, indicadores e liderança presente.</p>"
+  },
+  {
+   "pergunta": "5S serve só para chão de fábrica?",
+   "resposta": "<p>Não. Estoque, hospital, obra, escritório e home office usam a mesma lógica: descarte, lugar definido, limpeza, padrão e hábito.</p>"
+  },
+  {
+   "pergunta": "Por que o 5S não se sustenta na maioria das empresas?",
+   "resposta": "<p>Porque param no terceiro senso. Seiri, Seiton e Seiso dão resultado rápido; Seiketsu e Shitsuke exigem padrão, auditoria e exemplo da liderança. Sem os dois últimos, a área volta ao estado original em poucos meses.</p>"
+  }
+ ]
+}
