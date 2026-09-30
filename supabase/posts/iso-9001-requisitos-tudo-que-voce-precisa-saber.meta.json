@@ -1,0 +1,32 @@
+{
+  "title": "Requisitos da ISO 9001: cláusulas 4 a 10 explicadas",
+  "seo_title": "Requisitos da ISO 9001: cláusulas 4 a 10 explicadas",
+  "seo_description": "Requisitos da ISO 9001 (cláusulas 4 a 10): o que cada item exige, o que é auditável, exclusões e o que muda com a ISO 9001:2026.",
+  "tldr": "Os requisitos auditáveis da ISO 9001 estão nas cláusulas 4 a 10. Não há manual obrigatório como na 2008. Exclusões precisam de justificativa documentada. A revisão 2026 mantém a estrutura e reforça cultura, ética e riscos. Guia: hub ISO 9001, passo a passo e quanto custa.",
+  "faq": [
+    {
+      "pergunta": "Quais são os requisitos da ISO 9001?",
+      "resposta": "<p>Os requisitos auditáveis estão nas cláusulas <strong>4 a 10</strong>: contexto, liderança, planejamento, apoio, operação, avaliação de desempenho e melhoria. As cláusulas 1 a 3 não contêm requisitos.</p>"
+    },
+    {
+      "pergunta": "A ISO 9001 exige manual da qualidade?",
+      "resposta": "<p>Não na versão 2015 (e na lógica da 2026). A exigência de manual e de seis procedimentos obrigatórios era da 2008. Hoje vale <strong>informação documentada</strong>: a empresa define o que precisa manter para o sistema funcionar.</p>"
+    },
+    {
+      "pergunta": "Todos os requisitos são obrigatórios?",
+      "resposta": "<p>Todos se aplicam, mas a norma permite justificar a não aplicabilidade quando o item não faz sentido no escopo (caso clássico: 8.3 projeto e desenvolvimento). A justificativa precisa estar documentada e não pode afetar a capacidade de entregar conforme.</p>"
+    },
+    {
+      "pergunta": "Qual requisito mais gera achado na auditoria?",
+      "resposta": "<p>Em volume, a cláusula <strong>8 (operação)</strong>. Em gravidade, falhas de <strong>liderança (5)</strong> e de <strong>avaliação de desempenho (9)</strong> quando indicadores existem sem análise.</p>"
+    },
+    {
+      "pergunta": "Preciso implementar na ordem numérica?",
+      "resposta": "<p>Não. A numeração organiza a norma, não o cronograma. Na prática: contexto e processos (4), liderança (5), riscos e objetivos (6), operação (8), depois avaliação (9) e melhoria (10).</p>"
+    },
+    {
+      "pergunta": "A ISO 9001:2026 muda os requisitos 4 a 10?",
+      "resposta": "<p>A estrutura de alto nível permanece. O conteúdo de alguns temas se reforça (cultura, ética, riscos e oportunidades). Detalhe em <a href=\"/guia-definitivo-das-mudancas-iso-2026/\">guia da ISO 9001:2026</a>.</p>"
+    }
+  ]
+}
