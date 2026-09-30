@@ -1,9 +1,21 @@
 {
- "title": "ISO 9001: Tudo o que você precisa saber sobre a certificação",
- "seo_title": "ISO 9001: o que é, requisitos, custo e prazo em 2026",
- "seo_description": "O que é, requisitos, quanto custa (a partir de R$ 2.000/mês) e quanto tempo leva — e o que responder quando um cliente ou edital exige o certificado.",
- "tldr": "A ISO 9001 é a norma internacional que define os requisitos de um sistema de gestão da qualidade: ela padroniza como a empresa trabalha para entregar sempre o que prometeu ao cliente. Qualquer porte e qualquer setor podem certificar. A implantação leva de 6 a 12 meses e parte de R$ 2.000 por mês; a auditoria do organismo certificador é uma conta separada, renovada todo ano. A ISO 9001:2026 já está em FDIS e a publicação é esperada para setembro de 2026 — até lá, vale a ISO 9001:2015.",
+ "title": "ISO 9001: guia completo da certificação (norma, requisitos e prazo)",
+ "seo_title": "Certificação ISO 9001: o que é, NBR 9001, custo e prazo",
+ "seo_description": "Certificação ISO 9001: o que é, diferença para a norma e NBR 9001, requisitos, custo (a partir de R$ 2.000/mês), prazo e o que responder quando cliente ou edital exige o certificado.",
+ "tldr": "Certificação ISO 9001 comprova, por auditoria independente, que o SGQ atende à norma ISO 9001 (no Brasil, ABNT NBR ISO 9001) e gera certificado válido por três anos. A norma define requisitos; a certificadora audita; a consultoria ajuda a implantar. Implantação: 6 a 12 meses, a partir de R$ 2.000/mês; auditoria do organismo em conta separada. ISO 9001:2026 publicada em 16/09/2026; certificados 2015 válidos na transição.",
  "faq": [
+  {
+   "pergunta": "O que é certificação ISO 9001?",
+   "resposta": "<p><strong>Certificação ISO 9001</strong> é o processo em que um <strong>organismo certificador</strong> (certificadora) audita o sistema de gestão da qualidade da empresa, verifica o atendimento aos requisitos da norma ISO 9001 e emite um certificado válido por três anos, com auditorias de manutenção anuais.</p>\n<p>Implantar a norma e obter o certificado são etapas diferentes: primeiro o SGQ precisa existir e rodar com evidências; depois vem a auditoria de certificação em duas fases. <a href=\"#o-que-e\">Norma x certificação</a> · <a href=\"#caminho\">Etapas até o certificado</a>.</p>"
+  },
+  {
+   "pergunta": "NBR 9001 é a mesma coisa que ISO 9001?",
+   "resposta": "<p>Sim, no sentido prático para empresas no Brasil. A <strong>ABNT NBR ISO 9001</strong> é a adoção brasileira da norma internacional <strong>ISO 9001</strong>: os requisitos do SGQ são os mesmos. Editais e formulários de fornecedor costumam citar ISO 9001, NBR 9001 ou certificação ISO 9001 como a mesma exigência de sistema de gestão da qualidade.</p>\n<p>O certificado é emitido após auditoria de organismo acreditado, independentemente do nome que apareça no edital. <a href=\"#o-que-e\">O que é a norma</a>.</p>"
+  },
+  {
+   "pergunta": "O que é uma certificadora ISO 9001?",
+   "resposta": "<p>Uma <strong>certificadora ISO 9001</strong> (organismo de certificação, OCP) é a empresa independente que conduz a auditoria de certificação e emite o certificado. No Brasil, o organismo precisa estar acreditado pelo <strong>Inmetro</strong> para o escopo de sistemas de gestão da qualidade.</p>\n<p>Certificadora audita e certifica; <strong>consultoria</strong> ajuda a implantar o SGQ. Pelas regras de acreditação, quem consultou não pode certificar a mesma empresa. A Templum é consultoria. <a href=\"#certificadoras\">Quem certifica no Brasil</a>.</p>"
+  },
   {
    "pergunta": "Meu cliente aceita \"em implantação\" no lugar do certificado?",
    "resposta": "<p>Com frequência, sim — desde que a declaração traga três informações: o <strong>escopo</strong> que será certificado, o <strong>organismo certificador contratado</strong> e a <strong>data da auditoria</strong>. O que comprador nenhum aceita é \"estamos avaliando\". A diferença entre as duas respostas é a existência de uma data.</p>\n<p>Não existe certificado provisório, nem certificado emitido por consultoria. Quem oferece isso está criando um problema seu para depois. <a href=\"#exigencia\">Veja o que fazer quando a exigência chega</a>.</p>"
@@ -69,16 +81,16 @@
    "resposta": "<p>Nossos clientes levam de <strong>6 a 12 meses</strong> na implantação, conforme o porte e a maturidade de gestão que já existe. Depois disso vêm a auditoria de certificação, em duas fases, e a emissão do certificado.</p>\n<p>O trabalho não termina no certificado: o retorno de um sistema de gestão aparece no médio prazo, quando as decisões passam a usar o que o sistema mede.</p>"
   },
   {
-   "pergunta": "Quando a ISO 9001:2026 será publicada?",
-   "resposta": "<p>A publicação da versão final está prevista para <strong>setembro de 2026</strong>. Hoje a norma está na etapa de FDIS (Final Draft International Standard), em que o texto já não muda mais — por isso é possível falar em mudanças concretas. <strong>Até a publicação, a versão em vigor é a ISO 9001:2015</strong>, e certificados nela seguem válidos. <a href=\"#iso-9001-2026\">Veja o que muda</a>.</p>"
+   "pergunta": "A ISO 9001:2026 já foi publicada?",
+   "resposta": "<p>Sim. A <strong>ISO 9001:2026 foi publicada em 16 de setembro de 2026</strong>. A FDIS de maio de 2026 foi a última etapa antes da publicação. Certificados na ISO 9001:2015 seguem válidos durante o período de transição. <a href=\"#iso-9001-2026\">Veja o que muda</a>.</p>"
   },
   {
-   "pergunta": "Estou começando agora: implanto na 2015 ou espero a 2026?",
-   "resposta": "<p>Implante agora, na 2015. Revisões de norma vêm com período de transição — nas anteriores foram três anos — e a adequação acontece nas auditorias de manutenção, que já estariam no seu calendário.</p>\n<p>Esperar seis meses para \"começar na versão certa\" sai mais caro: são seis meses sem sistema rodando, e é justamente o histórico de funcionamento que a auditoria de certificação pede.</p>"
+   "pergunta": "Estou começando agora: implanto na 2015 ou na 2026?",
+   "resposta": "<p>Prefira alinhar à 2026 desde o início, se o seu organismo certificador já estiver preparado para auditar a nova edição. Se ainda não estiver, implante na 2015 com plano de transição: a adequação entra nas auditorias de manutenção.</p>\n<p>Parar o projeto para \"esperar a versão certa\" sai mais caro: são meses sem sistema rodando, e é justamente o histórico de funcionamento que a auditoria de certificação pede.</p>"
   },
   {
    "pergunta": "Quem já é certificado precisa fazer alguma coisa agora?",
-   "resposta": "<p>Não há urgência. Toda revisão de norma vem com um período de transição, e as auditorias de manutenção são o momento natural de absorver as mudanças. O erro é deixar para a véspera: quanto mais maduro o sistema de gestão hoje, menor o esforço de adequação depois.</p>"
+   "resposta": "<p>Não há urgência imediata, mas o relógio da transição já começou. As auditorias de manutenção são o momento natural de absorver as mudanças. O erro é deixar para a véspera: quanto mais maduro o sistema de gestão hoje, menor o esforço de adequação.</p>"
   }
  ]
 }

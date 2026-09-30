@@ -2,8 +2,8 @@
 //
 // Por que existe: o corpo dos posts mora no banco, mas post grande escrito à mão merece
 // revisão em diff antes de virar produção — e merece poder voltar. Então o texto vive no
-// repositório e este script é o que empurra. O .meta.json é opcional e aceita tldr,
-// seo_title, seo_description e faq.
+// repositório e este script é o que empurra. O .meta.json é opcional e aceita title,
+// tldr, seo_title, seo_description e faq.
 //
 //   SUPABASE_SERVICE_KEY=... node supabase/aplicar-conteudo.mjs iso-9001
 //   SUPABASE_SERVICE_KEY=... node supabase/aplicar-conteudo.mjs iso-9001 --dry
@@ -11,6 +11,24 @@
 // Antes de sobrescrever, grava o estado atual em supabase/backup/<slug>-antes-<data>.json.
 // Sem esse backup o script não continua: reescrita de post sem rollback não se faz.
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+{
+  const envPath = path.join(path.dirname(fileURLToPath(import.meta.url)), "../.env");
+  if (existsSync(envPath)) {
+    for (const linha of readFileSync(envPath, "utf8").split(/\r?\n/)) {
+      const t = linha.trim();
+      if (!t || t.startsWith("#")) continue;
+      const i = t.indexOf("=");
+      if (i < 1) continue;
+      const k = t.slice(0, i).trim();
+      let v = t.slice(i + 1).trim();
+      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);
+      if (k && process.env[k] === undefined) process.env[k] = v;
+    }
+  }
+}
 
 // `API` e não `URL`: const URL sombreia o construtor global e o script morre na
 // primeira linha que usa new URL(). Custou um minuto; fica registrado.
@@ -28,7 +46,7 @@ const metaPath = new URL(`${slug}.meta.json`, base);
 const meta = existsSync(metaPath) ? JSON.parse(readFileSync(metaPath, "utf8")) : {};
 
 const campos = { content: html };
-for (const k of ["tldr", "seo_title", "seo_description", "faq"]) if (meta[k] !== undefined) campos[k] = meta[k];
+for (const k of ["title", "tldr", "seo_title", "seo_description", "faq"]) if (meta[k] !== undefined) campos[k] = meta[k];
 
 const palavras = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
 console.log(`${slug}: ${html.length} bytes · ${palavras} palavras · campos: ${Object.keys(campos).join(", ")}`);
@@ -44,6 +62,7 @@ const bk = new URL(`../backup/${slug}-antes-${dia}.json`, base);
 writeFileSync(bk, JSON.stringify(antes[0], null, 1));
 console.log("backup:", bk.pathname);
 
+campos.revised_at = new Date().toISOString();
 const r = await fetch(q, { method: "PATCH", headers: { ...H, Prefer: "return=representation" }, body: JSON.stringify(campos) });
 if (!r.ok) { console.error("falhou:", r.status, await r.text()); process.exit(1); }
 console.log("aplicado. rebuild do blog é o próximo passo (npm run build + push, ou publicar pelo CMS).");

@@ -16,9 +16,14 @@ import { getPopularPosts, emAltaMap } from "../lib/posts.js";
 const emAlta = emAltaMap();
 const porCliques = await getPopularPosts(16);
 const destaque = porCliques[0];
-const maisLidos = (await getPopularPosts(16, { emAltaPrimeiro: true }))
-  .filter((p) => p.slug !== destaque?.slug)
-  .slice(0, 15);
+const pilar27001 = (await getPopularPosts()).find((p) => p.slug === "iso-27001");
+const gridEmAlta = (await getPopularPosts(16, { emAltaPrimeiro: true })).filter(
+  (p) => p.slug !== destaque?.slug,
+);
+const maisLidos =
+  !pilar27001 || destaque?.slug === "iso-27001"
+    ? gridEmAlta.slice(0, 15)
+    : [pilar27001, ...gridEmAlta.filter((p) => p.slug !== "iso-27001")].slice(0, 15);
 
 // No hero, data de revisão curada quando existir — o artigo mais lido costuma ser
 // antigo de publicação e recém-revisado; mostrar a data de 2019 envelhece a home.
