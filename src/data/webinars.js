@@ -75,15 +75,8 @@ export const WEBINARS = [
     requisito: "Requisito 4.4",
     url: "https://templum.com.br/webinar-gestao-processos-iso9001/",
   },
-  {
-    slug: "controle-documentos",
-    inicio: "2026-09-30T19:00:00Z",
-    fim: "2026-09-30T20:30:00Z",
-    data: "30/09",
-    titulo: "Controle de Documentos",
-    requisito: "Requisito 7.5",
-    url: "https://templum.com.br/webinar-controle-documentos-iso9001/",
-  },
+  // Série ISO 9001:2026 (quartas) encerrada em 30/09/2026 com Controle de Documentos (7.5).
+  // Quando houver nova rodada, adicionar entradas acima e rodar scripts/webinars-webp.mjs.
 ];
 
 // Primeiro webinar que ainda não terminou. `agora` entra por parâmetro pra a mesma função
