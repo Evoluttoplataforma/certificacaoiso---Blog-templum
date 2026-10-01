@@ -1,0 +1,28 @@
+{
+  "title": "Mapeamento de processos e ISO 9001: requisito 4.4",
+  "seo_title": "Mapeamento de processos e ISO 9001: requisito 4.4",
+  "seo_description": "Mapeamento de processos na ISO 9001: ligação com o requisito 4.4, abordagem por processos, ferramentas e como a Templum mapeia com a Tartaruga turbinada.",
+  "tldr": "Mapeamento de processos traduz a ISO 9001 em desenho de entradas, saídas, sequência e donos (requisito 4.4). Não substitui procedimento operacional. Fluxograma, planilha ou tartaruga servem se houver critério, indicador e ligação com o SGQ. Base para auditoria e melhoria.",
+  "faq": [
+    {
+      "pergunta": "A ISO 9001 exige fluxograma de processos?",
+      "resposta": "<p>Não exige formato específico. Exige determinar processos, entradas, saídas, sequência, critérios e responsabilidades (4.4). Fluxograma é meio comum, não obrigação nominal.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre mapa de processo e procedimento?",
+      "resposta": "<p>O mapa mostra o fluxo e as ligações entre etapas e áreas. O procedimento detalha como executar uma atividade. Confundir os dois gera documento longo que ninguém usa na operação.</p>"
+    },
+    {
+      "pergunta": "Mapeamento de processos ajuda na certificação ISO 9001?",
+      "resposta": "<p>Ajuda muito. Auditor pergunta como processos se encaixam no SGQ. Sem mapa ou equivalente, fica difícil mostrar riscos, indicadores e melhoria por processo.</p>"
+    },
+    {
+      "pergunta": "Por onde começar o mapeamento na empresa?",
+      "resposta": "<p>Processos que entregam valor ao cliente (principais) e os de apoio críticos. Comece pequeno, valide com quem opera e expanda. Veja <a href=\"/mapeamento-dos-processos/\">5 passos de mapeamento</a>.</p>"
+    },
+    {
+      "pergunta": "O que mudou na ISO 9001:2026 para processos?",
+      "resposta": "<p>A estrutura 4.4 permanece; a leitura reforça processo a serviço da operação e da estratégia. Detalhe em <a href=\"/gestao-processos-iso-9001-2026-requisito-4-4/\">gestão de processos na 2026</a>.</p>"
+    }
+  ]
+}

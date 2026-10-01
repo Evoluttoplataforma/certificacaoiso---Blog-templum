@@ -1,0 +1,32 @@
+{
+  "title": "Não conformidade e ação corretiva na ISO 9001:2026: requisito 10.2 e a causa que não se repete",
+  "seo_title": "Não conformidade e ação corretiva: o 10.2 que não se “fecha”",
+  "seo_description": "Requisito 10.2 ISO 9001: correção x ação corretiva, método Falcone, eficácia pela frequência do evento e por que meta de NC zero esconde problema.",
+  "tldr": "O requisito 10.2 da ISO 9001 pede reagir à não conformidade, avaliar a necessidade de ação para eliminar as causas, implementar o que for necessário, analisar a eficácia e reter informação documentada ,  não “fechar a NC” antes da auditoria. Correção age no efeito (retrabalhar, reparar, reprocessar, refugar ou conceder); ação corretiva age na causa fundamental. Meta de não conformidade zero e cultura punitiva ensinam a esconder problema, o oposto do que a norma quer. No método Falcone, o caminho passa por identificar o problema com clareza, observar dados, trabalhar causas influentes e hipóteses (Ishikawa + cinco porquês) e só então agir. A análise de eficácia não tem prazo fixo: ela acompanha a frequência com que o evento pode se repetir.",
+  "faq": [
+    {
+      "pergunta": "O que a ISO 9001 pede no requisito 10.2?",
+      "resposta": "<p>Quando uma não conformidade é identificada, a organização precisa reagir ,  controlar, corrigir e lidar com as consequências , , avaliar a necessidade de ação para eliminar as causas, implementar a ação necessária, analisar criticamente a eficácia, atualizar riscos e oportunidades se fizer sentido e reter informação documentada. O objetivo não é “fechar a NC”: é impedir que a mesma causa volte a produzir o mesmo erro.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre correção e ação corretiva?",
+      "resposta": "<p>Correção age no efeito: você encontrou o erro e contém o problema naquele momento. As cinco disposições clássicas são retrabalhar, reparar, reprocessar, refugar ou liberar sob concessão (com autoridade definida). Ação corretiva age na causa fundamental ,  a causa que, eliminada, impede a reincidência. Enxugar o chão é correção; fechar o cano é ação corretiva.</p>"
+    },
+    {
+      "pergunta": "Toda não conformidade exige ação corretiva?",
+      "resposta": "<p>Não. A norma pede avaliar a necessidade de ação para eliminar as causas ,  avaliar, não executar sempre. A decisão precisa de fatos e dados: probabilidade de reincidência e impacto se voltar a acontecer. Tratar toda NC com análise de causa raiz completa afoga o sistema; deixar de avaliar por achar a NC “pequena” também falha, porque o critério não é o tamanho do rótulo e sim o risco.</p>"
+    },
+    {
+      "pergunta": "Por que meta de não conformidade zero é um problema?",
+      "resposta": "<p>Porque premia a ausência de registro, não a ausência de causa. Quando registrar gera punição, desconto ou vergonha, a equipe aprende a esconder desvio. A matéria do InfoMoney sobre cultura de ocultação de erros (casos VoePass e Boeing) mostra até onde isso leva: panes conhecidas que continuam decolando. Na prática de qualidade, zero NC em auditoria costuma ser sinal de auditor fraco ou de problema escondido ,  não de sistema perfeito.</p>"
+    },
+    {
+      "pergunta": "Como o método Falcone ajuda no tratamento de não conformidade?",
+      "resposta": "<p>Ele traduz o 10.2 em linguagem de gestão de problemas: identificar o problema com clareza e impacto no resultado; observar (onde, quando, quem, quanto); levantar causas influentes e hipóteses (Ishikawa); afunilar com cinco porquês até a causa fundamental; agir; verificar; padronizar; e concluir com o aprendizado. O gestor entende “resolver problema” mais rápido do que “tratar não conformidade” .  e a investigação demora na causa certa, não na ação conveniente.</p>"
+    },
+    {
+      "pergunta": "Qual o prazo certo para a análise de eficácia?",
+      "resposta": "<p>Não existe prazo fixo genérico (30, 60, 90 dias) que sirva para todo caso. A eficácia só pode ser observada depois que o evento teve chance real de se repetir na frequência do processo. Se o ciclo é anual, três meses de “eficaz” não provam nada. Se o ciclo de vendas dura cerca de quarenta dias, a verificação pode precisar de dois ciclos. Reincidência depois de ação concluída pode ser encerrada como não eficaz e abrir novo registro .  muitas vezes o defeito estava no próprio tratamento, não só no processo.</p>"
+    }
+  ]
+}
