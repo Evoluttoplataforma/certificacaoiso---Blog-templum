@@ -1,9 +1,8 @@
 /**
- * Gera PNG 1080x1080 (_feed) dos webinars a partir do layout de set/2026.
+ * Gera PNG no padrão oficial (1080×1350) a partir do master de set/2026.
  * Uso: node scripts/criativos-webinars/render-feed-1080.mjs
- * Requer: npx playwright install chromium (uma vez)
  */
-import { writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { mkdirSync, existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
@@ -11,23 +10,30 @@ import { chromium } from "playwright";
 
 const AQUI = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(AQUI, "out-2026-10");
-const REF = path.join(AQUI, "referencia-set-2026.png");
-const DANI = path.join(AQUI, "assets", "dani.jpg");
-const PANEL = path.join(AQUI, "assets", "painel-direito.png");
+const MASTER = path.join(AQUI, "masters", "feed-referencia-completa.jpg");
+const ASSETS = path.join(AQUI, "assets");
+const LAYER_RIGHT = path.join(ASSETS, "layer-right.jpg");
+const LAYER_CTA = path.join(ASSETS, "layer-cta.jpg");
+
+const W = 1080;
+const H = 1350;
+const CTA_H = 130;
 
 const CRIATIVOS = [
   {
     arquivo: "01a_07-10_foco-cliente-politica_feed-1080x1080.png",
     requisito: "REQUISITOS 5.1, 5.2 E 6.2",
-    titulo: "FOCO NO CLIENTE,<br>POLÍTICA E OBJETIVOS",
-    tituloSize: 52,
+    titulo: "FOCO NO CLIENTE, POLÍTICA E OBJETIVOS",
+    tituloSize: 46,
+    tagline: 'DA POLÍTICA AO OBJETIVO <span class="acc">QUE O CLIENTE SENTE</span>.',
     data: "07/10",
   },
   {
     arquivo: "02a_14-10_requisitos-produtos-servicos_feed-1080x1080.png",
     requisito: "REQUISITO 8.2",
-    titulo: "REQUISITOS PARA<br>PRODUTOS E SERVIÇOS",
-    tituloSize: 50,
+    titulo: "REQUISITOS PARA PRODUTOS E SERVIÇOS",
+    tituloSize: 44,
+    tagline: 'DO PEDIDO AO CRITÉRIO <span class="acc">ANTES DE PRODUZIR</span>.',
     data: "14/10",
   },
   {
@@ -35,38 +41,45 @@ const CRIATIVOS = [
     requisito: "REQUISITO 8.4",
     titulo: "COMPRAS",
     tituloSize: 72,
+    tagline: 'FORNECEDOR AVALIADO, RISCO <span class="acc">SOB CONTROLE</span>.',
     data: "21/10",
   },
   {
     arquivo: "04a_28-10_controle-qualidade_feed-1080x1080.png",
-    requisito: "REQ. 8.1 · 8.5.1 · 8.5.5 · 8.6 · 8.7 · 7.1.5 · 9.1",
-    requisitoSize: 20,
-    titulo: "CONTROLE DE<br>QUALIDADE",
-    tituloSize: 58,
+    requisito: "REQUISITOS 8.1, 8.5.1, 8.5.5, 8.6, 8.7, 7.1.5 E 9.1",
+    requisitoSize: 21,
+    titulo: "CONTROLE DE QUALIDADE",
+    tituloSize: 52,
+    tagline: 'DO PLANEJAMENTO À LIBERAÇÃO <span class="acc">COM EVIDÊNCIA</span>.',
     data: "28/10",
   },
 ];
 
-async function painelDireitoDataUrl() {
-  mkdirSync(path.dirname(PANEL), { recursive: true });
-  if (!existsSync(PANEL) && existsSync(REF)) {
-    const scaled = await sharp(REF).resize({ height: 1080 }).toBuffer();
-    const { width } = await sharp(scaled).metadata();
-    const w = Math.min(520, width);
-    const left = Math.max(0, width - w);
-    await sharp(scaled).extract({ left, top: 0, width: w, height: 1080 }).png().toFile(PANEL);
+async function ensureLayers() {
+  if (!existsSync(MASTER)) {
+    throw new Error(
+      `Master não encontrado: ${MASTER}\nCopie o JFIF oficial para masters/feed-referencia-completa.jpg`,
+    );
   }
-  if (existsSync(PANEL)) {
-    const buf = await sharp(PANEL).png().toBuffer();
-    return `data:image/png;base64,${buf.toString("base64")}`;
+  mkdirSync(ASSETS, { recursive: true });
+  const mainH = H - CTA_H;
+  if (!existsSync(LAYER_CTA)) {
+    await sharp(MASTER).extract({ left: 0, top: H - CTA_H, width: W, height: CTA_H }).jpeg({ quality: 95 }).toFile(LAYER_CTA);
   }
-  if (!existsSync(DANI)) throw new Error(`Falta ${PANEL} ou ${DANI}`);
-  const buf = await sharp(DANI).jpeg().toBuffer();
-  return `data:image/jpeg;base64,${buf.toString("base64")}`;
+  if (!existsSync(LAYER_RIGHT)) {
+    await sharp(MASTER).extract({ left: 500, top: 0, width: W - 500, height: mainH }).jpeg({ quality: 95 }).toFile(LAYER_RIGHT);
+  }
 }
 
-function htmlDo(c, panelDataUrl) {
-  const reqSize = c.requisitoSize ?? 24;
+function b64(file) {
+  const buf = readFileSync(file);
+  const ext = path.extname(file).toLowerCase();
+  const mime = ext === ".png" ? "image/png" : "image/jpeg";
+  return `data:${mime};base64,${buf.toString("base64")}`;
+}
+
+function htmlDo(c, layerRight, layerCta) {
+  const reqSize = c.requisitoSize ?? 26;
   return `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -76,117 +89,131 @@ function htmlDo(c, panelDataUrl) {
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { width: 1080px; height: 1080px; overflow: hidden; background: #050505; font-family: Montserrat, sans-serif; }
-  .canvas { position: relative; width: 1080px; height: 1080px; background: #050505; }
-  .left { position: relative; z-index: 2; width: 620px; height: 100%; padding: 56px 48px 48px 56px; color: #fff; }
+  body {
+    width: ${W}px; height: ${H}px; overflow: hidden;
+    background: #050505; font-family: Montserrat, sans-serif;
+  }
+  .canvas { position: relative; width: ${W}px; height: ${H}px; background: #050505; }
+  .layer-right {
+    position: absolute; right: 0; top: 0; width: ${W - 500}px; height: ${H - CTA_H}px;
+    object-fit: cover; object-position: top center;
+  }
+  .layer-cta {
+    position: absolute; left: 0; bottom: 0; width: ${W}px; height: ${CTA_H}px;
+  }
+  .left {
+    position: absolute; left: 0; top: 0; z-index: 2;
+    width: 560px; height: ${H - CTA_H}px; padding: 52px 36px 40px 56px; color: #fff;
+  }
   .badge {
-    display: inline-flex; align-items: center; gap: 12px;
-    background: #ff5925; color: #050505; font-weight: 900; font-size: 22px;
-    letter-spacing: 0.06em; padding: 14px 22px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 14px;
+    background: #ff5925; color: #050505; font-weight: 900; font-size: 24px;
+    letter-spacing: 0.04em; padding: 16px 26px 16px 22px; border-radius: 999px;
     text-transform: uppercase;
   }
-  .badge svg { width: 28px; height: 28px; flex-shrink: 0; }
+  .badge svg { width: 32px; height: 32px; flex-shrink: 0; }
   .req {
-    margin-top: 36px; font-size: ${reqSize}px; font-weight: 700;
-    letter-spacing: 0.12em; text-transform: uppercase; color: #f2f2f2;
-    line-height: 1.35; max-width: 560px;
+    margin-top: 34px; font-size: ${reqSize}px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; color: #fff; line-height: 1.35;
   }
   .titulo {
-    margin-top: 18px; font-size: ${c.tituloSize}px; font-weight: 900;
-    line-height: 1.08; letter-spacing: -0.02em; text-transform: uppercase;
-    max-width: 560px;
+    margin-top: 20px; font-size: ${c.tituloSize}px; font-weight: 900;
+    line-height: 1.06; letter-spacing: -0.01em; text-transform: uppercase;
   }
   .iso {
-    margin-top: 22px; font-size: 58px; font-weight: 900; color: #ff5925;
-    letter-spacing: -0.02em; line-height: 1;
+    margin-top: 26px; font-size: 82px; font-weight: 900; color: #ff5925;
+    letter-spacing: -0.03em; line-height: 0.95;
   }
-  .rule {
-    margin-top: 28px; width: 100%; max-width: 520px; height: 3px;
-    background: linear-gradient(90deg, rgba(255,89,37,0.15), #ff5925 45%, rgba(255,89,37,0.15));
-    box-shadow: 0 0 18px rgba(255,89,37,0.55);
+  .tagline {
+    margin-top: 22px; font-size: 30px; font-weight: 800; line-height: 1.2;
+    text-transform: uppercase; max-width: 520px;
   }
-  .speaker { margin-top: 28px; display: flex; align-items: center; gap: 14px; }
-  .speaker icon {
-    width: 34px; height: 34px; border-radius: 50%; border: 2px solid #ff5925;
-    display: inline-flex; align-items: center; justify-content: center;
+  .tagline .acc { color: #ff5925; }
+  .speaker { margin-top: 36px; display: flex; align-items: center; gap: 16px; }
+  .speaker .ico {
+    width: 38px; height: 38px; border-radius: 50%; border: 2px solid #ff5925;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
-  .speaker .nome { font-size: 26px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
+  .speaker .nome { font-size: 28px; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.15; }
   .speaker .nome em { font-style: normal; color: #ff5925; }
-  .speaker .cargo { margin-top: 6px; font-size: 15px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #d8d8d8; }
+  .speaker .cargo { margin-top: 8px; font-size: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #e8e8e8; }
   .when {
-    position: absolute; left: 56px; bottom: 52px;
-    display: flex; align-items: center; gap: 28px;
-    border: 2px solid #ff5925; border-radius: 16px; padding: 22px 32px;
-    background: rgba(5,5,5,0.72);
+    position: absolute; left: 56px; bottom: 36px;
+    display: flex; align-items: stretch;
+    border: 2px solid #ff5925; border-radius: 14px;
+    background: rgba(5,5,5,0.55); overflow: hidden;
   }
-  .when .item { display: flex; align-items: center; gap: 14px; }
-  .when svg { width: 36px; height: 36px; color: #ff5925; flex-shrink: 0; }
-  .when .val { font-size: 44px; font-weight: 900; letter-spacing: 0.02em; }
-  .when .val small { display: block; font-size: 22px; font-weight: 700; letter-spacing: 0.14em; margin-top: 2px; }
-  .right {
-    position: absolute; right: 0; top: 0; width: 520px; height: 1080px;
-    pointer-events: none; overflow: hidden;
+  .when .col {
+    display: flex; align-items: center; gap: 14px; padding: 20px 28px;
   }
-  .panel {
-    position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: cover; object-position: center top;
-  }
+  .when .col svg { width: 40px; height: 40px; color: #ff5925; flex-shrink: 0; }
+  .when .val { font-size: 46px; font-weight: 900; line-height: 1; }
+  .when .val.time { font-size: 38px; }
+  .when .val small { display: block; font-size: 22px; font-weight: 800; letter-spacing: 0.08em; margin-top: 4px; }
+  .when .sep { width: 2px; background: #ff5925; margin: 12px 0; }
 </style>
 </head>
 <body>
 <div class="canvas">
+  <img class="layer-right" src="${layerRight}" alt="" />
   <div class="left">
     <div class="badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/><polygon points="10,10 10,14 14,12" fill="currentColor" stroke="none"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 20h8M12 17v3"/><polygon points="9,9 9,13 13,11" fill="currentColor" stroke="none"/></svg>
       Webinar gratuito
     </div>
     <p class="req">${c.requisito}</p>
     <h1 class="titulo">${c.titulo}</h1>
     <p class="iso">ISO 9001:2026</p>
-    <div class="rule"></div>
+    <p class="tagline">${c.tagline}</p>
     <div class="speaker">
-      <icon aria-hidden="true">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff5925" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 14.5-4 16 0"/></svg>
-      </icon>
+      <div class="ico" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff5925" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 14.5-4 16 0"/></svg>
+      </div>
       <div>
         <div class="nome">Com <em>Dani Albuquerque</em></div>
         <div class="cargo">Especialista em gestão e qualidade</div>
       </div>
     </div>
     <div class="when">
-      <div class="item">
+      <div class="col">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
         <div class="val">${c.data}</div>
       </div>
-      <div class="item">
+      <div class="sep"></div>
+      <div class="col">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg>
-        <div class="val">ÀS<small>16H</small></div>
+        <div class="val time">ÀS<small>16H</small></div>
       </div>
     </div>
   </div>
-  <div class="right"><img class="panel" src="${panelDataUrl}" alt="" /></div>
+  <img class="layer-cta" src="${layerCta}" alt="" />
 </div>
 </body>
 </html>`;
 }
 
 async function main() {
+  await ensureLayers();
   mkdirSync(OUT, { recursive: true });
-  const panelDataUrl = await painelDireitoDataUrl();
+  const layerRight = b64(LAYER_RIGHT);
+  const layerCta = b64(LAYER_CTA);
 
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1080 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({
+    viewport: { width: W, height: H },
+    deviceScaleFactor: 1,
+  });
 
   for (const c of CRIATIVOS) {
     const dest = path.join(OUT, c.arquivo);
-    await page.setContent(htmlDo(c, panelDataUrl), { waitUntil: "networkidle" });
-    await page.waitForTimeout(400);
+    await page.setContent(htmlDo(c, layerRight, layerCta), { waitUntil: "networkidle" });
+    await page.waitForTimeout(500);
     await page.screenshot({ path: dest, type: "png" });
     console.log("OK", c.arquivo);
   }
 
   await browser.close();
-  console.log(`\n${CRIATIVOS.length} criativos em ${OUT}`);
+  console.log(`\n${CRIATIVOS.length} criativos (${W}×${H}) em ${OUT}`);
   console.log("Próximo: node scripts/webinars-webp.mjs scripts/criativos-webinars/out-2026-10");
 }
 

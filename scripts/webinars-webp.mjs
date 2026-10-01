@@ -20,7 +20,10 @@ if (!arquivos.length) throw new Error(`nenhum criativo _feed encontrado em ${pas
 for (const f of arquivos.sort()) {
   const slug = slugDoArquivo(f);
   if (!slug) { console.warn(`pulado (nome fora do padrão): ${f}`); continue; }
-  const info = await sharp(`${pasta}/${f}`).resize(640).webp({ quality: 78 }).toFile(`${DEST}/${slug}.webp`);
+  const info = await sharp(`${pasta}/${f}`)
+    .resize(640, 640, { fit: "cover", position: "centre" })
+    .webp({ quality: 78 })
+    .toFile(`${DEST}/${slug}.webp`);
   console.log(`${slug.padEnd(22)} ${String(Math.round(info.size / 1024)).padStart(4)}KB  ${info.width}x${info.height}`);
 }
 // Avatar da palestrante para o dock do mobile (WebinarDock.astro). O criativo 1:1 inteiro

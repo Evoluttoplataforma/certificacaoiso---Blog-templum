@@ -1,19 +1,19 @@
-# Criativos feed (1080×1080) — webinars ISO 9001:2026
+# Criativos feed — webinars ISO 9001:2026
 
-Layout alinhado ao criativo de setembro/2026 (badge laranja, tipografia Montserrat, Dani + globo).
+Padrão oficial **1080×1350** (master em `masters/feed-referencia-completa.jpg`, export do arquivo de set/2026).
+
+Camadas fixas extraídas do master: Dani + globo + “Mão na massa” (`assets/layer-right.jpg`) e faixa **INSCREVA-SE E PARTICIPE** (`assets/layer-cta.jpg`). Texto da esquerda é gerado no HTML.
 
 ## Gerar outubro/2026
+
+Coloque o JFIF oficial em `masters/feed-referencia-completa.jpg` (se ainda não estiver).
 
 ```bash
 node scripts/criativos-webinars/render-feed-1080.mjs
 node scripts/webinars-webp.mjs scripts/criativos-webinars/out-2026-10
 ```
 
-PNG ficam em `out-2026-10/` (não versionar PNGs pesados se preferir; manter webp em `public/assets/webinars/`).
-
-Foto da palestrante: `assets/dani.jpg` (cópia de `site-templum/site/public/assets/img/socios/dani.jpg`).
-
-Referência visual: `referencia-set-2026.png`.
+PNG em `out-2026-10/`; webp do card do blog em `public/assets/webinars/`.
 
 ## Nomenclatura (designer / script webp)
 
