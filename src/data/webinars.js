@@ -75,8 +75,42 @@ export const WEBINARS = [
     requisito: "Requisito 4.4",
     url: "https://templum.com.br/webinar-gestao-processos-iso9001/",
   },
-  // Série ISO 9001:2026 (quartas) encerrada em 30/09/2026 com Controle de Documentos (7.5).
-  // Quando houver nova rodada, adicionar entradas acima e rodar scripts/webinars-webp.mjs.
+  {
+    slug: "foco-cliente-politica",
+    inicio: "2026-10-07T19:00:00Z",
+    fim: "2026-10-07T20:30:00Z",
+    data: "07/10",
+    titulo: "Foco no Cliente, Política e Objetivos",
+    requisito: "Requisitos 5.1, 5.2 e 6.2",
+    url: "https://templum.com.br/webinar-foco-cliente-politica-objetivos-iso9001/",
+  },
+  {
+    slug: "requisitos-produtos-servicos",
+    inicio: "2026-10-14T19:00:00Z",
+    fim: "2026-10-14T20:30:00Z",
+    data: "14/10",
+    titulo: "Requisitos para Produtos e Serviços",
+    requisito: "Requisito 8.2",
+    url: "https://templum.com.br/webinar-requisitos-produtos-servicos-iso9001/",
+  },
+  {
+    slug: "compras",
+    inicio: "2026-10-21T19:00:00Z",
+    fim: "2026-10-21T20:30:00Z",
+    data: "21/10",
+    titulo: "Compras",
+    requisito: "Requisito 8.4",
+    url: "https://templum.com.br/webinar-compras-iso9001/",
+  },
+  {
+    slug: "controle-qualidade",
+    inicio: "2026-10-28T19:00:00Z",
+    fim: "2026-10-28T20:30:00Z",
+    data: "28/10",
+    titulo: "Controle de Qualidade",
+    requisito: "Requisitos 8.1, 8.5.1, 8.5.5, 8.6, 8.7, 7.1.5 e 9.1",
+    url: "https://templum.com.br/webinar-controle-qualidade-iso9001/",
+  },
 ];
 
 // Primeiro webinar que ainda não terminou. `agora` entra por parâmetro pra a mesma função
