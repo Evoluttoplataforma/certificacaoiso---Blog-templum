@@ -1,0 +1,36 @@
+{
+  "title": "5S e ISO 9001: como o programa 5S apoia a certificação",
+  "seo_title": "5S e ISO 9001: onde o 5S entra nos requisitos",
+  "seo_description": "O 5S não é requisito da ISO 9001, mas atende vários deles. Mapa senso por senso, requisito 7.1.4 e relação com a ISO 9001:2026.",
+  "tldr": "Nenhuma cláusula da ISO 9001 exige 5S, e não existe certificação de 5S. O que existe é a certificação ISO 9001, auditável por organismo acreditado. O 5S entra como meio: 7.1.3, 7.1.4, 7.5, 8.5.1, 8.5.4 e melhoria contínua. Para virar evidência, o programa precisa de auditoria interna, registro fotográfico, metas e indicador. Sem isso é mutirão, não SGQ.",
+  "faq": [
+    {
+      "pergunta": "O 5S é obrigatório para conseguir a ISO 9001?",
+      "resposta": "\n<p>Não. Nenhuma cláusula da ISO 9001 exige o programa 5S. A norma exige resultados :  ambiente adequado para operar os processos, padronização, preservação e melhoria contínua :  e deixa o método por conta da empresa. O 5S é um dos caminhos mais baratos e rápidos para chegar nesses resultados com evidência, mas não é o único.</p>\n"
+    },
+    {
+      "pergunta": "Existe certificação 5S?",
+      "resposta": "\n<p>Não existe. O 5S é um programa de gestão, não uma norma certificável: não há organismo acreditado que emita certificado de 5S nem requisito normativo a auditar. Quem certifica é a ISO 9001, norma internacional auditável por organismo acreditado.</p>\n"
+    },
+    {
+      "pergunta": "Quais requisitos da ISO 9001 o 5S ajuda a atender?",
+      "resposta": "\n<p>Na ISO 9001:2015, o 5S contribui diretamente para 7.1.3 (infraestrutura), 7.1.4 (ambiente para a operação dos processos), 7.5 (informação documentada, via padronização), 8.5.1 (controle de produção e provisão de serviço), 8.5.4 (preservação) e 10.3 (melhoria contínua). Também produz evidência de 5.1, liderança e comprometimento.</p>\n"
+    },
+    {
+      "pergunta": "O que é o ambiente para a operação dos processos (7.1.4)?",
+      "resposta": "\n<p>É o conjunto de condições necessárias para que cada processo funcione. A nota do requisito cita fatores físicos (temperatura, iluminação, ruído, umidade, fluxo de ar e higiene), sociais e psicológicos. O requisito é por processo, não genérico: iluminação é condição crítica numa inspeção dimensional, ruído é num atendimento por telefone.</p>\n"
+    },
+    {
+      "pergunta": "Quais são os cinco sensos do 5S e como se escrevem?",
+      "resposta": "\n<p>Seiri (senso de utilização), Seiton (senso de organização), Seiso (senso de limpeza), Seiketsu (senso de padronização) e Shitsuke (senso de disciplina). São sequenciais: não se organiza o que ainda não foi triado, e tentar padronizar a desordem é o erro mais comum de quem começa pelo quarto S.</p>\n"
+    },
+    {
+      "pergunta": "Vale começar pelo 5S antes de implementar a ISO 9001?",
+      "resposta": "\n<p>Costuma valer, por três motivos: investimento baixo com resultado visível em semanas, mudança de comportamento antes da mudança de documento, e registro fotográfico de antes e depois que convence a alta direção a investir na certificação. Mas o 5S não substitui um sistema de gestão :  ele prepara o terreno.</p>\n"
+    },
+    {
+      "pergunta": "O 5S muda com a ISO 9001:2026?",
+      "resposta": "<p>A tendência é o 5S ficar mais relevante. A ISO 9001:2026 reforça cultura da qualidade, terreno do Shitsuke. Certificados 2015 valem na transição; evidências de ambiente e padronização do 5S continuam úteis na auditoria.</p>"
+    }
+  ]
+}

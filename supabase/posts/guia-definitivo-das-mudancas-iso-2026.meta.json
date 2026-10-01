@@ -1,0 +1,32 @@
+{
+  "title": "Mudanças ISO 9001:2026 e ISO 14001: guia prático",
+  "seo_title": "Mudanças ISO 9001:2026 e ISO 14001: guia prático",
+  "seo_description": "O que mudou na ISO 9001:2026 (publicada em set/2026) e na revisão da ISO 14001, com clima, cultura da qualidade e riscos. Análise baseada em Nigel Croft.",
+  "tldr": "A ISO 9001:2026 foi publicada em 16/09/2026; a estrutura 4 a 10 permanece, com reforço em cultura, ética, riscos e oportunidades e clima no contexto. ISO 14001 segue em revisão com mudanças pontuais. Certificados 2015 valem na transição. Prepare gap, evidências e links ao hub ISO 9001.",
+  "faq": [
+    {
+      "pergunta": "A ISO 9001:2026 já foi publicada?",
+      "resposta": "<p>Sim. A <strong>ISO 9001:2026</strong> foi publicada em <strong>16 de setembro de 2026</strong>. Certificados na edição 2015 continuam válidos durante o prazo de transição definido pelo organismo certificador.</p>"
+    },
+    {
+      "pergunta": "Preciso recertificar na hora que saiu a 2026?",
+      "resposta": "<p>Não imediatamente. A transição é gradual. O organismo informa prazos; enquanto isso, alinhe documentação e evidências aos novos temas (cultura, ética, riscos e oportunidades, clima no contexto quando aplicável).</p>"
+    },
+    {
+      "pergunta": "Quais são as principais mudanças da ISO 9001:2026?",
+      "resposta": "<p>Cultura de qualidade e ética (5.1.1), separação de riscos e oportunidades (6), clima no contexto (4.1), infraestrutura em modelos híbridos (7.1.3) e orientações no Anexo A. Lista detalhada: <a href=\"/iso-9001-2026-as-6-principais-mudancas-da-fdis/\">seis mudanças da 2026</a>.</p>"
+    },
+    {
+      "pergunta": "A ISO 14001 também mudou em 2026?",
+      "resposta": "<p>A revisão da ISO 14001 estava prevista para início de 2026, com mudanças moderadas (Anexo SL, 6.3 gestão de mudanças, clareza ambiental). Acompanhe o hub <a href=\"/iso-14001-2/\">ISO 14001</a> para atualizações.</p>"
+    },
+    {
+      "pergunta": "Mudanças climáticas são obrigatórias na ISO 9001?",
+      "resposta": "<p>A norma exige que a organização <strong>determine</strong> se mudanças climáticas são relevantes no contexto (4.1), não que todo SGQ tenha o mesmo pacote de ações climáticas.</p>"
+    },
+    {
+      "pergunta": "Por onde começar a transição para a ISO 9001:2026?",
+      "resposta": "<p>Diagnóstico de gap, priorize liderança e cultura, riscos/oportunidades e evidências de operação. Método: <a href=\"/passo-a-passo-certificacao-iso-9001/\">passo a passo</a> e <a href=\"/iso-9001-requisitos-tudo-que-voce-precisa-saber/\">requisitos 4 a 10</a>.</p>"
+    }
+  ]
+}
