@@ -8,6 +8,7 @@ const ano = 2026;
     <div>
       <span class="templum-logo onDark"><img src="/assets/logo/templum.png" alt="Templum" width="389" height="129" /></span>
       <p class="ft-sub">Dicas para implementação e certificação nas normas ISO. Um conteúdo da <a href={TEMPLUM}>Templum Consultoria</a>.</p>
+      <p class="ft-legal">Templum Consultoria Digital LTDA. · CNPJ 00.198.308/0001-93</p>
       <a href="/form/?utm_source=blog&utm_medium=footer&origem=footer" class="btn btn--primary btn--sm">Falar com um especialista</a>
     </div>
     <div>
@@ -21,21 +22,25 @@ const ano = 2026;
         <li><a href={`${TEMPLUM}/auditoria`}>Auditoria</a></li>
         <li><a href={`${TEMPLUM}/solucoes-de-ia`}>Soluções de IA</a></li>
         <li><a href={`${TEMPLUM}/quem-somos/sobre`}>Quem somos</a></li>
+        <li><a href="/politica-de-privacidade/">Política de privacidade</a></li>
       </ul>
     </div>
   </div>
-  <div class="ft-bottom"><div class="container lg">© {ano} Templum Consultoria · Certificação ISO</div></div>
+  <div class="ft-bottom"><div class="container lg">© {ano} Templum Consultoria Digital LTDA. · CNPJ 00.198.308/0001-93 · <a href="/politica-de-privacidade/">Política de privacidade</a></div></div>
 </footer>
 <style>
   .ft { background: var(--navy); color: rgba(255,244,221,0.75); padding: 56px 0 0; }
   .ft .templum-logo img { height: 40px; }
   .ft-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 36px; }
   @media (max-width: 760px) { .ft-grid { grid-template-columns: 1fr; gap: 28px; } }
-  .ft-sub { font-size: 14px; line-height: 1.6; margin: 16px 0 18px; max-width: 360px; color: rgba(255,244,221,0.7); }
+  .ft-sub { font-size: 14px; line-height: 1.6; margin: 16px 0 8px; max-width: 360px; color: rgba(255,244,221,0.7); }
+  .ft-legal { font-size: 13px; line-height: 1.5; margin: 0 0 18px; max-width: 360px; color: rgba(255,244,221,0.55); }
   .ft-sub a { color: var(--orange); text-decoration: underline; text-underline-offset: 2px; }
   .ft h3 { color: var(--cream); font-size: 14px; font-weight: 800; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.04em; }
   .ft ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 9px; }
   .ft ul a { color: rgba(255,244,221,0.7); font-size: 14px; }
   .ft ul a:hover { color: var(--orange); }
   .ft-bottom { margin-top: 44px; border-top: 1px solid rgba(255,244,221,0.12); padding: 20px 0; font-size: 13px; }
+  .ft-bottom a { color: rgba(255,244,221,0.75); text-decoration: underline; text-underline-offset: 2px; }
+  .ft-bottom a:hover { color: var(--orange); }
 </style>

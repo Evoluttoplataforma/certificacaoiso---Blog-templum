@@ -40,9 +40,16 @@ const orgSchema = {
   "@type": "Organization",
   "@id": `${SITE}/#organization`,
   name: "Templum Consultoria",
+  legalName: "Templum Consultoria Digital LTDA.",
+  taxID: "00.198.308/0001-93",
   alternateName: "Certificação ISO",
   url: `${SITE}/`,
   logo: { "@type": "ImageObject", url: `${SITE}/assets/logo/templum.png` },
+  parentOrganization: {
+    "@type": "Organization",
+    name: "Templum Consultoria",
+    url: "https://templum.com.br",
+  },
   sameAs: [
     "https://www.instagram.com/templumconsultoriailimitada/",
     "https://www.linkedin.com/company/3033783/",

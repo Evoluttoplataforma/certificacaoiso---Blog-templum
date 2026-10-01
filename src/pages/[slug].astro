@@ -7,7 +7,7 @@ import PostDock from "../components/PostDock.astro";
 import AudioResumo from "../components/AudioResumo.astro";
 import { catMeta } from "../data/categorias.js";
 import { ctaParaNorma } from "../data/cta-norma.js";
-import { ancorarSecoes, injetarCtaMeio, removerSumarioEscrito, temSumarioEscrito, envolverTabelas, envolverYoutube } from "../lib/artigo.js";
+import { ancorarSecoes, injetarCtaMeio, removerSumarioEscrito, temSumarioEscrito, envolverTabelas, envolverYoutube, extrairYoutube } from "../lib/artigo.js";
 import { normaDoForm } from "../data/lead-form-pages.js";
 import { normaDaPagina } from "../data/normas.js";
 import { getAllPosts, tldrOf } from "../lib/posts.js";
@@ -293,14 +293,17 @@ if (faq.length) {
 // YouTube no corpo: player na página (permanência) + VideoObject (discoverability).
 // Só declara se o HTML já tem embed — o artigo precisa ser útil sem o vídeo, mas o
 // Google indexa melhor quando o vídeo está na mesma URL do texto.
-const ytId = (post.content || "").match(/youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/)?.[1];
+const ytMeta = extrairYoutube(post.content || "");
+const ytId = ytMeta?.id;
 if (ytId) {
+  const thumbYt = ytMeta.poster
+    || (d.heroImage ? new URL(d.heroImage, SITE).href : `https://i.ytimg.com/vi/${ytId}/maxresdefault.jpg`);
   const videoObject = {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     name: d.title,
     description: seoDesc,
-    thumbnailUrl: d.heroImage ? new URL(d.heroImage, SITE).href : `https://i.ytimg.com/vi/${ytId}/maxresdefault.jpg`,
+    thumbnailUrl: thumbYt,
     embedUrl: `https://www.youtube.com/embed/${ytId}`,
     contentUrl: `https://www.youtube.com/watch?v=${ytId}`,
     uploadDate: new Date(d.pubDate).toISOString(),
@@ -1139,6 +1142,12 @@ if (ytId) {
   @media (max-width: 560px) {
     .post-content :global(.cta-olivia) { flex-direction: column; align-items: flex-start; }
   }
+  .post-content :global(.cta-replay) { margin: 30px 0; background: var(--bg); border: 1px solid var(--border);
+    border-left: 4px solid var(--orange); border-radius: var(--r-16); padding: 22px 24px; }
+  .post-content :global(.cta-replay strong) { display: block; font-size: 18px; font-weight: 800;
+    color: var(--text); margin-bottom: 6px; }
+  .post-content :global(.cta-replay p) { font-size: 14.5px; color: var(--text-mid); margin: 0 0 14px; }
+  .post-content :global(.cta-replay a.btn) { text-decoration: none; }
   /* ---------- TRILHO DE ÍNDICE (longform) ----------
      Sticky simples, e não o sticky progressivo que a sidebar teve e que foi removido em
      20/08/2026 por fixar a coluna na tela de um leitor e rolar na de outro. A diferença

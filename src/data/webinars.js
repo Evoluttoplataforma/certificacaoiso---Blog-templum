@@ -18,8 +18,11 @@
 //     e o nome do arquivo é o slug daqui.
 //
 // Depois do último da lista o card SAI DO AR sozinho (fail-safe: melhor não anunciar nada
-// do que anunciar um webinar que já aconteceu). Quando chegarem os criativos de outubro,
-// é adicionar as linhas e rodar o script de conversão.
+// do que anunciar um webinar que já aconteceu).
+//
+// Imagens: scripts/criativos-webinars/out-YYYY-MM/ + manifest.json →
+//   node scripts/webinars-publish-assets.mjs scripts/criativos-webinars/out-YYYY-MM
+// Ver scripts/criativos-webinars/README.md. Troca semanal no ar: WebinarCard.astro (JS no cliente).
 export const WEBINARS = [
   {
     slug: "analise-critica",

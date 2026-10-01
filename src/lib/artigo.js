@@ -212,6 +212,21 @@ export function envolverTabelas(html) {
  * do artigo). Dois embeds no mesmo corpo voltariam à thumb padrão do YouTube, para não
  * estampar a mesma capa em dois players.
  */
+export function extrairYoutube(html) {
+  if (!html) return null;
+  const id = (
+    html.match(/youtube(?:-nocookie)?\.com\/embed\/([a-zA-Z0-9_-]{11})/i) ||
+    html.match(/\bdata-yt=["']([a-zA-Z0-9_-]{11})["']/) ||
+    html.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/)
+  )?.[1];
+  if (!id) return null;
+  const poster = (
+    html.match(/\bdata-poster=["']([^"']+)["']/i) ||
+    html.match(/class="yt-facade"[\s\S]{0,1200}?<img[^>]+src=["']([^"']+)["']/i)
+  )?.[1] || "";
+  return { id, poster };
+}
+
 export function envolverYoutube(html, posterUnico) {
   if (!html) return "";
   if (html.includes("yt-facade")) return html;
@@ -225,7 +240,8 @@ export function envolverYoutube(html, posterUnico) {
     if (!id) return full;
     const title = (attrs.match(/\btitle\s*=\s*["']([^"']+)["']/i) || [])[1] || "Vídeo no YouTube";
     const titleEsc = title.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
-    const poster = posterFixo || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+    const posterAttr = (attrs.match(/\bdata-poster\s*=\s*["']([^"']+)["']/i) || [])[1] || "";
+    const poster = posterAttr || posterFixo || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
     return `<div class="yt-facade" data-yt="${id}" data-title="${titleEsc}"><a class="yt-facade-hit" href="https://www.youtube.com/watch?v=${id}" rel="noopener noreferrer" target="_blank"><img src="${poster}" alt="${titleEsc}" width="1280" height="720" loading="lazy" decoding="async" /><span class="yt-facade-play" aria-hidden="true"></span></a></div>`;
   });
 }

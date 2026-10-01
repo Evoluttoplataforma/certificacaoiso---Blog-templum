@@ -8,3 +8,4 @@ REGRAS DE GIT (não dar zika):
 - Só commite/pushe quando o usuário pedir. Commit de IA termina com: Co-Authored-By: Claude <noreply@anthropic.com>
 - Nunca commitar: .env, secrets, service_role, node_modules, dist, e o export do WordPress (../blog-certificacaoiso/*.xml ~58MB).
 - O worker.js faz proxy de /acesso* -> Worker do CMS. Conteúdo (posts/iscas/comentários) vive no Supabase (não vai por git).
+- Copy: nunca usar travessão (U+2014) nem traço médio (U+2013) em artigo, título, meta, FAQ ou qualquer texto público. Ver .cursor/rules/sem-travessao-em-copy.mdc.

@@ -1,20 +1,40 @@
-# Criativos feed — webinars ISO 9001:2026
+# Criativos webinar no blog
 
-Padrão oficial **1080×1350** (master em `masters/feed-referencia-completa.jpg`, export do arquivo de set/2026).
+O card no **fim de todos os artigos** (`WebinarCard`) já troca sozinho por data (`src/data/webinars.js` + script inline no componente). Você só precisa alimentar **datas**, **URLs** e **imagens**.
 
-Camadas fixas extraídas do master: Dani + globo + “Mão na massa” (`assets/layer-right.jpg`) e faixa **INSCREVA-SE E PARTICIPE** (`assets/layer-cta.jpg`). Texto da esquerda é gerado no HTML.
+## A cada mês / série
 
-## Gerar outubro/2026
+1. **Datas e copy** — editar `src/data/webinars.js` (`inicio`/`fim` em UTC, `slug`, `url`, `titulo`).
+2. **Artes** — colocar os `.webp` (ou PNG `_feed-1080x1080`) nesta pasta, ex.: `out-2026-10/`.
+3. **Manifesto** — `manifest.json` na mesma pasta mapeia `slug` → nome do arquivo:
 
-Coloque o JFIF oficial em `masters/feed-referencia-completa.jpg` (se ainda não estiver).
+```json
+{
+  "arquivos": {
+    "foco-cliente-politica": "Live-ISO-9001-foco no cliente.webp"
+  }
+}
+```
+
+4. **Publicar assets** (na raiz do repo blog):
 
 ```bash
-node scripts/criativos-webinars/render-feed-1080.mjs
+node scripts/webinars-publish-assets.mjs scripts/criativos-webinars/out-2026-10
+```
+
+5. **`npm run build`** e deploy (`git push origin main`).
+
+## Alternativa: PNG do feed 1080
+
+Se vier só PNG no padrão `01a_07-10_foco-cliente-politica_feed-1080x1080.png`:
+
+```bash
+npm i -D sharp
 node scripts/webinars-webp.mjs scripts/criativos-webinars/out-2026-10
 ```
 
-PNG em `out-2026-10/`; webp do card do blog em `public/assets/webinars/`.
+(O script infere o slug pelo nome do arquivo.)
 
-## Nomenclatura (designer / script webp)
+## Slug = nome do arquivo no site
 
-`01a_DD-MM_{slug}_feed-1080x1080.png` → slug deve bater com `src/data/webinars.js`.
+Imagem servida em: `/assets/webinars/{slug}.webp` — tem que bater com `slug` em `webinars.js`.
