@@ -34,7 +34,7 @@ function mergeFaq(existing, additions) {
 }
 
 const AVISO =
-  `<div class="post-aviso post-aviso-atualizacao"><p><strong>4ª edição SASSMAQ (2026):</strong> o manual foi publicado em 11/09/2026, com <strong>180 dias de transição</strong> (até <strong>11/03/2027</strong> você pode usar a 3ª ou a 4ª edição; depois, só a 4ª). Certificado emitido na 3ª edição segue válido até o vencimento. Detalhes: <a href="${URL_NOVO}">mudanças, ciclo de auditoria e prazos</a>.</p></div>\n`;
+  `<div class="post-aviso post-aviso-atualizacao"><p><strong>4ª edição SASSMAQ (2026):</strong> manual publicado em 11/09/2026. <strong>Até 11/03/2027 (transição):</strong> a auditoria pode usar o manual da <strong>3ª edição (2014)</strong> ou da <strong>4ª edição (4.0)</strong>, conforme acordo com o certificador. <strong>A partir de 12/03/2027:</strong> novas avaliações e manutenções seguem <strong>somente a 4ª edição</strong>. Certificado já emitido na 3ª edição continua válido até a data de vencimento. <a href="${URL_NOVO}">Mudanças, ciclo de auditoria e prazos</a>.</p></div>\n`;
 
 function prependAviso(content) {
   if (content.includes("post-aviso-atualizacao") || content.includes(SLUG_NOVO)) return content;
