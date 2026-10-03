@@ -1,0 +1,28 @@
+{
+ "title": "Como conseguir a certificação PBQP-H (passo a passo)",
+ "seo_title": "Como conseguir a certificação PBQP-H: requisitos SiAC e passo a passo",
+ "seo_description": "Como conseguir a certificação PBQP-H: requisitos de qualidade do SiAC, preparação em obra, auditoria interna e contratação do OAC. Passo a passo para construtoras.",
+ "tldr": "A certificação PBQP-H exige implementar o SiAC, gerar evidência em obra, passar por auditoria interna e ser auditada por um OAC. Escolha Nível B ou A conforme o objetivo (Caixa/GERIC pedem Nível A). Consultoria não emite certificado.",
+ "faq": [
+  {
+   "pergunta": "Qual é o passo a passo para certificar no PBQP-H?",
+   "resposta": "<p>Implementar os requisitos do SiAC na empresa e na obra, treinar a equipe, fazer auditoria interna (corrigir falhas) e contratar um OAC para a auditoria de certificação nos níveis B ou A.</p>"
+  },
+  {
+   "pergunta": "Preciso de obra em andamento?",
+   "resposta": "<p>Sim. Sem obra amostrável (serviços controlados executados e em execução no dia da auditoria) o OAC não consegue fechar evidência. Detalhe dos pré-requisitos no <a href=\"/pbqp-h/\">hub PBQP-H</a>.</p>"
+  },
+  {
+   "pergunta": "Quem emite o certificado?",
+   "resposta": "<p>Um Organismo de Avaliação da Conformidade (OAC) acreditado e autorizado no SiAC. Consultoria implementa e prepara; não certifica.</p>"
+  },
+  {
+   "pergunta": "Nível A ou Nível B?",
+   "resposta": "<p>A empresa escolhe. Para Caixa/GERIC e MCMV federal, o caminho usual é o <a href=\"/pbqp-h-nivel-a/\">Nível A</a>. Comparativo: <a href=\"/as-diferencas-entre-o-nivel-b-e-o-nivel-a-do-pbqp-h/\">A vs B</a>.</p>"
+  },
+  {
+   "pergunta": "Quais são os requisitos de qualidade do PBQP-H e como me preparar?",
+   "resposta": "<p>Implemente o <strong>SiAC 2021</strong> na gestão e na obra (PQO, serviços controlados, fornecedores, indicadores), com obra amostrável e auditoria interna feita. Detalhes: <a href=\"#requisitos-qualidade-preparacao\">preparação neste artigo</a> e <a href=\"/pbqp-h-siac-2021/\">SiAC 2021</a>.</p>"
+  }
+ ]
+}

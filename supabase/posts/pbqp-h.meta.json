@@ -1,0 +1,56 @@
+{
+ "title": "PBQP-H: o que é, níveis SiAC e quando a Caixa exige",
+ "seo_title": "PBQP-H: o que é, níveis SiAC e quando a Caixa exige",
+ "seo_description": "PBQP-H (SiAC): o que é, como verificar certificação no portal oficial, certificadoras OAC, requisitos, níveis A e B, GERIC e Caixa. Guia para construtoras.",
+ "tldr": "PBQP-H certifica construtoras pelo SiAC (níveis B e A). Verifique certificado e validade na consulta pública do SiAC (gov.br). Certificadoras são OAC acreditados; consultoria não emite certificado. Caixa exige Nível A para GERIC e MCMV federal.",
+ "faq": [
+  {
+   "pergunta": "O que é o PBQP-H?",
+   "resposta": "<p>É o Programa Brasileiro da Qualidade e Produtividade do Habitat. Para a construtora, a certificação operacional é a do <strong>SiAC</strong>: sistema de avaliação da conformidade baseado na ISO 9001 e adaptado à construção civil, com níveis B e A.</p>"
+  },
+  {
+   "pergunta": "Quais empresas podem ter o PBQP-H?",
+   "resposta": "<p>Qualquer empresa que execute obras pode buscar o PBQP-H, desde que a atividade de construção conste no contrato social e o CNAE seja de construção. O porte não é critério: o SiAC avalia processos e evidências em obra.</p>"
+  },
+  {
+   "pergunta": "Preciso implementar o Nível B e o Nível A?",
+   "resposta": "<p>Não. A construtora escolhe o nível na auditoria. O Nível B cobre cerca de 70% dos requisitos; o Nível A cobre 100%. Para crédito GERIC e participação no Minha Casa, Minha Vida, a Caixa exige Nível A.</p>"
+  },
+  {
+   "pergunta": "Qual é a diferença entre o Nível B e o Nível A?",
+   "resposta": "<p>No Nível B: cerca de 70% dos requisitos e no mínimo 40% dos serviços controlados. No Nível A: 100% dos requisitos e 100% dos serviços controlados. Detalhes em <a href=\"/as-diferencas-entre-o-nivel-b-e-o-nivel-a-do-pbqp-h/\">diferenças entre os níveis</a>.</p>"
+  },
+  {
+   "pergunta": "Quais são os pré-requisitos para a empresa se certificar no PBQP-H?",
+   "resposta": "<p>Obra em andamento (na auditoria: ao menos 50% dos serviços controlados já executados e 1/4 em execução no dia), ART em nome da empresa certificanda e, se empreiteira, responsabilidade global da empreitada com contrato registrado. Sem isso a auditoria não fecha evidência.</p>"
+  },
+  {
+   "pergunta": "Preciso do PBQP-H para conseguir o GERIC?",
+   "resposta": "<p>Sim. A Caixa só avalia o GERIC de construtoras com PBQP-H (Nível A na prática do crédito à produção). O PBQP-H atesta qualidade de obra e gestão; o GERIC mede capacidade financeira. Veja <a href=\"#geric\">como os dois se conectam</a>.</p>"
+  },
+  {
+   "pergunta": "Quanto custa e quanto tempo leva a certificação PBQP-H?",
+   "resposta": "<p>Não há tabela única. O custo mistura implementação, auditoria interna e dias do organismo; o prazo costuma girar em torno de meses a cerca de um ano, conforme engajamento e porte. Detalhe em <a href=\"/pbqp-h-qual-o-custo-para-certificacao/\">custo</a> e <a href=\"/pbqp-h-qual-o-prazo-para-certificar-minha-empresa/\">prazo</a>.</p>"
+  },
+  {
+   "pergunta": "Qual é a validade da certificação PBQP-H?",
+   "resposta": "<p>O ciclo é de 3 anos, com auditorias de manutenção em 12 e 24 meses e recertificação no 36º mês. O certificado é emitido por organismo acreditado (OAC), não pela consultoria.</p>"
+  },
+  {
+   "pergunta": "Quem emite o certificado PBQP-H?",
+   "resposta": "<p>Organismos de Avaliação da Conformidade (OAC) acreditados pela Cgcre/Inmetro e autorizados no SiAC. Consulte a lista oficial no portal do PBQP-H do Ministério das Cidades.</p>"
+  },
+  {
+   "pergunta": "Como verificar se uma empresa é certificada pelo PBQP-H e se a certificação está atualizada?",
+   "resposta": "<p>Use a consulta pública do <strong>SiAC</strong> no <a href=\"https://www.gov.br/cidades/pt-br/assuntos/construcao-civil/programa-brasileiro-da-qualidade-e-produtividade-do-habitat-pbqp-h/sistema-de-avaliacao-da-conformidade-siac\" rel=\"nofollow\">portal do Ministério das Cidades (gov.br)</a>. Informe CNPJ ou razão social e confira nível (A ou B), OAC emissor, datas e situação do certificado no ciclo de três anos. Passo a passo: <a href=\"/como-verificar-certificacao-pbqp-h/\">como verificar certificação PBQP-H</a>.</p>"
+  },
+  {
+   "pergunta": "Quais são as certificadoras (OAC) do PBQP-H?",
+   "resposta": "<p>São os <strong>Organismos de Avaliação da Conformidade (OAC)</strong> acreditados pela Cgcre/Inmetro e autorizados no SiAC. A lista oficial está no <a href=\"https://www.gov.br/cidades/pt-br/acesso-a-informacao/acoes-e-programas/pbqp-h\" rel=\"nofollow\">portal PBQP-H</a>. Consultoria implementa; OAC audita e emite certificado.</p>"
+  },
+  {
+   "pergunta": "Quais são os requisitos de qualidade exigidos pelo PBQP-H e como se preparar para eles?",
+   "resposta": "<p>Os requisitos vêm do <strong>SiAC</strong> (gestão + obra: PQO, serviços controlados, fornecedores, indicadores). Prepare obra com ART, evidências, auditoria interna e escolha de nível A ou B. Guia: <a href=\"/como-conseguiur-a-certificacao-do-pbqp-h/\">como conseguir a certificação</a> e <a href=\"/pbqp-h-siac-2021/\">SiAC 2021</a>.</p>"
+  }
+ ]
+}

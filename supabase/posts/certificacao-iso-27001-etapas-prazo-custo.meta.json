@@ -1,0 +1,40 @@
+{
+ "title": "Certificação ISO 27001: etapas, prazo e custo",
+ "seo_title": "Certificação ISO 27001: passos, prazo e custo",
+ "seo_description": "Passos para obter a certificação ISO 27001, quanto tempo leva, estágios 1 e 2 e o que define o custo do SGSI.",
+ "tldr": "A certificação ISO 27001 acontece em dois estágios de auditoria por um organismo acreditado — estágio 1, de análise documental e prontidão, e estágio 2, de verificação da implementação — depois de a empresa ter definido escopo, avaliado riscos, montado a Declaração de Aplicabilidade, implantado os controles e rodado ao menos uma auditoria interna e uma análise crítica pela direção. O certificado vale três anos, com auditorias de manutenção anuais. O custo da certificação é calculado por dias de auditoria com piso definido na ISO/IEC 27006-1, a partir do número de pessoas no escopo e de fatores de complexidade; consultoria e certificação são contratações obrigatoriamente separadas, porque o organismo certificador não pode consultar quem ele audita.",
+ "faq": [
+  {
+   "pergunta": "Quanto custa a certificação ISO 27001?",
+   "resposta": "<p>São dois custos separados. O da <strong>certificação</strong> é cobrado pelo organismo e calculado essencialmente por dias de auditoria, que variam com o número de pessoas dentro do escopo, a quantidade de sites, a criticidade da informação tratada, a complexidade da infraestrutura, a presença de desenvolvimento de software, o grau de terceirização e nuvem, e o deslocamento dos auditores — e deve ser orçado para o <strong>ciclo completo de três anos</strong>, incluindo manutenções e recertificação. O da <strong>implantação</strong> envolve consultoria, quando houver, e as horas internas da equipe, que é a maior linha e a que ninguém orça.</p>"
+  },
+  {
+   "pergunta": "Como é calculado o preço da auditoria de certificação ISO 27001?",
+   "resposta": "<p>O tempo mínimo de auditoria não é arbitrado pelo certificador: ele segue a <strong>ISO/IEC 27006-1</strong>, norma que os organismos precisam cumprir para serem acreditados a certificar SGSI. O cálculo parte do número de pessoas que executam trabalho dentro do escopo e é ajustado por fatores de complexidade. Como o preço é em boa medida função dos dias de auditoria, <strong>recortar bem o escopo é a alavanca de custo mais forte</strong> — e a mais arriscada, porque escopo estreito demais entrega um certificado que não atende à exigência do cliente.</p>"
+  },
+  {
+   "pergunta": "Quanto tempo leva para certificar na ISO 27001?",
+   "resposta": "<p>Depende da maturidade de partida, do tamanho do escopo e da disponibilidade real da equipe. Quem já tem outro sistema de gestão certificado reaproveita boa parte da estrutura. A etapa que mais alonga o cronograma não é escrever documentos: é <strong>operar o sistema tempo suficiente para gerar evidência</strong> que o auditor possa amostrar — revisão trimestral de acessos exige trimestres, teste de restauração exige testes feitos. Somam-se a agenda do organismo, o intervalo entre estágio 1 e estágio 2 e o prazo para tratar não conformidades.</p>"
+  },
+  {
+   "pergunta": "O que acontece no estágio 1 e no estágio 2 da auditoria?",
+   "resposta": "<p>No <strong>estágio 1</strong> o organismo avalia escopo, documentação, avaliação de riscos, SoA e prontidão, confirma que a auditoria interna e a análise crítica aconteceram, e planeja o estágio 2. No <strong>estágio 2</strong> verifica-se a implementação: entrevistas com quem executa, amostragem de registros e teste dos controles declarados na Declaração de Aplicabilidade. A pergunta muda de \"existe o documento?\" para \"mostre a última vez que isso aconteceu\" — e é aí que sistema real se separa de pasta de documentos.</p>"
+  },
+  {
+   "pergunta": "A consultoria pode emitir o certificado ISO 27001?",
+   "resposta": "<p>Não. Quem emite é o organismo de certificação acreditado, e ele não pode prestar consultoria a quem audita, porque isso comprometeria a imparcialidade. Consultoria e certificação são contratações necessariamente separadas — quem oferece as duas no mesmo pacote está oferecendo um certificado que o mercado não aceita.</p>"
+  },
+  {
+   "pergunta": "Por quanto tempo vale o certificado ISO 27001?",
+   "resposta": "<p>Três anos, com auditorias de manutenção normalmente anuais e recertificação ao fim do ciclo. Não conformidade grave sem tratamento, ou sistema que deixou de operar, podem levar à suspensão e ao cancelamento do certificado.</p>"
+  },
+  {
+   "pergunta": "Como saber se o organismo certificador é acreditado para a ISO 27001?",
+   "resposta": "<p>Confirme três coisas: qual organismo de acreditação o reconhece (no Brasil, o <strong>Inmetro/Cgcre</strong>), se o <strong>escopo de acreditação cobre a ISO/IEC 27001</strong> — acreditação para ISO 9001 não serve — e se o certificado aparece no diretório público do acreditador. Para certificar SGSI o organismo precisa atender à ISO/IEC 17021-1 e à ISO/IEC 27006-1, que define desde o tempo de auditoria até a qualificação de quem audita.</p>"
+  },
+  {
+   "pergunta": "Quais são os passos para obter a certificação ISO 27001 e quanto tempo costuma levar?",
+   "resposta": "<p>Escopo, riscos, SoA, operação, auditoria interna, estágios 1 e 2. Prazo usual de meses a um ano. Detalhe: <a href=\"#passos-e-prazo-certificacao\">passos e prazo neste artigo</a>.</p>"
+  }
+ ]
+}

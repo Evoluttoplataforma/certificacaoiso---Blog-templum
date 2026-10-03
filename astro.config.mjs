@@ -19,7 +19,7 @@ export default defineConfig({
   build: { format: 'directory', inlineStylesheets: 'always' },
   trailingSlash: 'always',
   markdown: {
-    // 1) links internos absolutos → relativos (+ resolve órfãos); 2) linkbuilding orbitgestao.
+    // 1) links internos absolutos → relativos (+ resolve órfãos); 2) linkbuilding Templum OS.
     remarkPlugins: [remarkInternalLinks, remarkOrbitLinks],
   },
 });

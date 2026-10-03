@@ -1,0 +1,32 @@
+{
+ "title": "PBQP-H e SiAC 2021: como os dois se relacionam",
+ "seo_title": "SiAC 2021 e PBQP-H: requisitos, níveis e certificação",
+ "seo_description": "PBQP-H e SiAC 2021: o que é o SiAC, requisitos de qualidade, níveis A e B, OAC e como verificar certificação no portal oficial.",
+ "tldr": "O SiAC 2021 é o regimento que certifica construtoras no PBQP-H (níveis B e A). Vale desde a transição concluída em 2022. Inclui exigências de obra (como PQO) além da base ISO 9001. Hub geral: /pbqp-h/.",
+ "faq": [
+  {
+   "pergunta": "O que é o SiAC no PBQP-H?",
+   "resposta": "<p>É o Sistema de Avaliação da Conformidade de Empresas de Serviços e Obras: o regimento que define como a construtora é auditada e certificada nos níveis B e A.</p>"
+  },
+  {
+   "pergunta": "Qual versão do SiAC vale hoje?",
+   "resposta": "<p>A de 2021. Desde 2022 os certificados novos seguem essa versão. Detalhes neste artigo e no <a href=\"/pbqp-h/\">hub PBQP-H</a>.</p>"
+  },
+  {
+   "pergunta": "SiAC e ISO 9001 são a mesma coisa?",
+   "resposta": "<p>Não. O SiAC é baseado na ISO 9001 e adaptado à construção (obra, PQO, serviços e materiais controlados). Comparativo: <a href=\"/quais-as-diferencas-entre-o-sistema-iso-9001-e-o-pbqp-h/\">ISO 9001 vs PBQP-H</a>.</p>"
+  },
+  {
+   "pergunta": "Preciso de PQO no SiAC?",
+   "resposta": "<p>Sim, o Plano de Qualidade da Obra é peça central da evidência em canteiro. Guia: <a href=\"/pqo-o-plano-de-qualidade-da-obra-no-pbqp-h/\">PQO no PBQP-H</a>.</p>"
+  },
+  {
+   "pergunta": "Quais são os requisitos de qualidade exigidos pelo PBQP-H?",
+   "resposta": "<p>Estão no <strong>regimento SiAC</strong>: requisitos de SGQ (base ISO 9001) mais exigências de construção (PQO, serviços e materiais controlados, fornecedores, indicadores). Nível B e A diferem na cobertura. <a href=\"/pbqp-h/#requisitos-preparacao\">Preparação no hub</a>.</p>"
+  },
+  {
+   "pergunta": "Como verificar se a certificação PBQP-H está atualizada?",
+   "resposta": "<p>Pela consulta pública do SiAC no <a href=\"https://www.gov.br/cidades/pt-br/assuntos/construcao-civil/programa-brasileiro-da-qualidade-e-produtividade-do-habitat-pbqp-h/sistema-de-avaliacao-da-conformidade-siac\" rel=\"nofollow\">gov.br</a>. <a href=\"/como-verificar-certificacao-pbqp-h/\">Passo a passo de verificação</a>.</p>"
+  }
+ ]
+}

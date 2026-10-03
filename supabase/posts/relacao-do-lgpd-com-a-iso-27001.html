@@ -1,0 +1,98 @@
+<p>A pergunta chega quase sempre na mesma forma: <em>"se eu certificar na ISO 27001, estou em conformidade com a LGPD?"</em> A resposta curta é não. A resposta útil é entender exatamente onde uma cobre a outra, onde não cobre, e o que fazer com a sobreposição — porque ela é grande e mal aproveitada.</p>
+<p>São instrumentos de natureza diferente. A <strong>LGPD é lei</strong>: obriga, define direitos e prevê sanção. A <strong>ISO 27001 é norma técnica voluntária</strong>: não obriga ninguém, mas entrega a estrutura de gestão que a lei exige sem explicar como construir.</p>
+<p><strong>Neste artigo:</strong></p>
+<ul>
+<li><a href="#o-que-sao">O que cada uma é, e por que não se substituem</a></li>
+<li><a href="#onde-atende">Onde a ISO 27001 atende ao que a LGPD exige</a></li>
+<li><a href="#nao-resolve">O que a ISO 27001 não resolve na LGPD</a></li>
+<li><a href="#incidente">Incidente: onde as duas se encontram na prática</a></li>
+<li><a href="#27701">Onde entra a ISO 27701</a></li>
+<li><a href="#certificado">Certificado não é conformidade</a></li>
+<li><a href="#comecar">Por onde começar com as duas na mesa</a></li>
+<li><a href="#duvidas">Dúvidas frequentes</a></li>
+</ul>
+
+<h2 id="o-que-sao">O que cada uma é, e por que não se substituem</h2>
+<p>A confusão nasce de um detalhe que passa batido: <strong>as duas tratam de conjuntos de informação diferentes, e nenhum contém o outro</strong>.</p>
+<table>
+<thead><tr><th>&nbsp;</th><th>LGPD</th><th>ISO 27001</th></tr></thead>
+<tbody>
+<tr><td>Natureza</td><td>Lei federal (13.709/2018), obrigatória</td><td>Norma técnica internacional, voluntária</td></tr>
+<tr><td>Objeto</td><td>Apenas <strong>dado pessoal</strong>, de pessoa natural</td><td><strong>Toda</strong> informação relevante ao negócio</td></tr>
+<tr><td>Foco</td><td>Direitos do titular e legalidade do tratamento</td><td>Gestão de risco de confidencialidade, integridade e disponibilidade</td></tr>
+<tr><td>Quem cobra</td><td>ANPD, Ministério Público, titular, cliente em contrato</td><td>Organismo de certificação acreditado, cliente em contrato</td></tr>
+<tr><td>Consequência de falhar</td><td>Sanção administrativa, ação judicial, dano reputacional</td><td>Não conformidade, suspensão ou perda do certificado</td></tr>
+<tr><td>Diz <em>o quê</em> fazer</td><td>Sim, em detalhe jurídico</td><td>Sim, em detalhe de gestão</td></tr>
+<tr><td>Diz <em>como</em> fazer</td><td>Praticamente não</td><td>Sim — é a razão de ela existir</td></tr>
+</tbody>
+</table>
+<p>Repare no cruzamento: existe informação crítica que <strong>não</strong> é dado pessoal — código-fonte, planejamento estratégico, formulação de produto, tabela de preços, contrato. A LGPD não alcança nada disso. E existe exigência sobre dado pessoal que <strong>não</strong> é segurança — base legal, finalidade, direito do titular. A ISO 27001 não alcança nada disso.</p>
+
+<h2 id="onde-atende">Onde a ISO 27001 atende ao que a LGPD exige</h2>
+<p>O ponto de contato mais direto é o <strong>artigo 46 da LGPD</strong>: os agentes de tratamento devem adotar "medidas de segurança, técnicas e administrativas" aptas a proteger os dados pessoais. A lei diz que é obrigatório. Não diz quais medidas, em que profundidade, nem como provar que existem.</p>
+<p>É exatamente esse vazio que um SGSI preenche. Quem implementa a ISO 27001 já constrói, por exigência da própria norma:</p>
+<ul>
+<li><strong>avaliação de riscos</strong> documentada, com critérios definidos — a base para justificar por que cada medida foi escolhida, que é o que um questionamento da ANPD ou de um cliente vai pedir;</li>
+<li><strong>controle de acesso</strong>, com quem pode ver o quê e revisão periódica dos acessos concedidos;</li>
+<li><strong>gestão de incidentes</strong>, com procedimento definido antes do incidente e canal para quem detectar reportar;</li>
+<li><strong>gestão de fornecedores</strong> — que na LGPD aparece como a responsabilidade solidária entre controlador e operador;</li>
+<li><strong>conscientização das pessoas</strong>, com registro. A maior parte dos vazamentos passa por erro humano, não por invasão sofisticada;</li>
+<li><strong>informação documentada</strong> sob controle de versão, retenção e descarte;</li>
+<li><strong>criptografia e mascaramento</strong>, quando o risco justificar — detalhamos em <a href="/controle-criptografico-iso-27001-politica-tamanho-de-chave-gestao/">controle criptográfico (8.24)</a> e <a href="/mascaramento-de-dados-iso-27001-controle-8-11/">mascaramento de dados (8.11)</a>, este último diretamente ligado à anonimização e à pseudonimização da lei;</li>
+<li><strong>continuidade e backup</strong>, que respondem pela disponibilidade — ver <a href="/backup-e-copia-de-seguranca-iso-27001-controle-8-13/">backup e cópia de segurança (8.13)</a>.</li>
+</ul>
+<p>Há um ganho colateral que vale mais do que parece: a ISO 27001 obriga a <strong>saber onde a informação está</strong>. O inventário de ativos e o mapa da informação que saem do <a href="/iso-27001-o-guia/">mapeamento de processos</a> são, na prática, metade do trabalho de um inventário de tratamento de dados pessoais. Muita empresa faz esse levantamento duas vezes, por projetos separados que não conversam.</p>
+
+<h2 id="nao-resolve">O que a ISO 27001 não resolve na LGPD</h2>
+<p>Esta é a lista que costuma faltar nas conversas comerciais, e é ela que evita frustração depois da auditoria:</p>
+<ul>
+<li><strong>Base legal.</strong> A LGPD exige que todo tratamento se apoie em uma hipótese do artigo 7º (ou do artigo 11, para dado sensível). Escolher e registrar a base legal de cada tratamento é trabalho jurídico. Nenhum controle do Anexo A faz isso;</li>
+<li><strong>Finalidade e minimização.</strong> A lei exige propósito legítimo, específico e informado, e tratamento limitado ao mínimo necessário. Um SGSI protege bem um dado que a empresa nem deveria estar coletando;</li>
+<li><strong>Direitos do titular.</strong> Confirmação, acesso, correção, portabilidade, eliminação, informação sobre compartilhamento, revogação do consentimento — com prazos de atendimento. A ISO 27001 não prevê esse processo;</li>
+<li><strong>Encarregado (DPO).</strong> A LGPD exige a figura e a divulgação pública da sua identidade. A 27001 exige responsabilidades atribuídas no SGSI, o que não é a mesma coisa;</li>
+<li><strong>Relatório de Impacto (RIPD).</strong> Instrumento do artigo 38, que a ANPD pode solicitar. Parente da avaliação de riscos, mas com objeto diferente: o risco aos <em>direitos do titular</em>, não ao negócio;</li>
+<li><strong>Transferência internacional</strong> e as regras próprias para ela;</li>
+<li><strong>Prazo de retenção vinculado à finalidade.</strong> A 27001 pede regra de retenção; a LGPD determina eliminação ao término da finalidade — que é uma decisão jurídica, não técnica.</li>
+</ul>
+<p>A leitura honesta é esta: <strong>a ISO 27001 cobre com folga a dimensão de segurança da LGPD e não toca na dimensão de legalidade.</strong> Programa de adequação que só contrata segurança fica exposto; programa que só contrata jurídico protege dado no papel e vaza na prática.</p>
+
+<p><a href="https://certificacaoiso.com.br/form/?utm_source=blog&utm_medium=banner-artigo&utm_campaign=relacao-do-lgpd-com-a-iso-27001&amp;norma=ISO%2027001"><img src="/wp-content/uploads/2020/03/27001.webp" alt="Consultoria ISO 27001 da Templum" loading="lazy" decoding="async"></a></p>
+
+<h2 id="incidente">Incidente: onde as duas se encontram na prática</h2>
+<p>O vazamento é o momento em que a sobreposição deixa de ser teórica. Um único incidente aciona as duas frentes ao mesmo tempo, com obrigações diferentes:</p>
+<ul>
+<li><strong>Pela LGPD</strong>, se houver dado pessoal envolvido: avaliar o incidente (natureza, categoria e número de titulares afetados), acionar o encarregado, comunicar a ANPD e os titulares quando houver risco ou dano relevante, e documentar a avaliação e as medidas adotadas. A <strong>Resolução CD/ANPD nº 15/2024</strong> regulamentou essa comunicação e fixou prazo — confirme o prazo vigente com o seu jurídico antes de montar o procedimento, porque é o tipo de regra que muda;</li>
+<li><strong>Pela ISO 27001</strong>, para todo o resto: acionar o procedimento de gestão de incidentes, conter, registrar, tratar a causa e alimentar a melhoria do sistema.</li>
+</ul>
+<p>Quem tem SGSI implantado descobre o incidente mais cedo e chega na comunicação com a informação organizada — que é justamente o que o prazo legal cobra. Quem não tem passa os primeiros dias descobrindo o que aconteceu, e o prazo corre igual. O passo a passo está em <a href="/iso-27001-e-lgpd-como-lidar-com-vazamento-de-dados/">ISO 27001 e LGPD: como lidar com vazamento de dados</a>.</p>
+
+<h2 id="27701">Onde entra a ISO 27701</h2>
+<p>A ISO/IEC 27701 é a norma que traduz privacidade em sistema de gestão: separa os papéis de controlador e de operador, trata risco de privacidade de forma dedicada e cobre boa parte do que a 27001 deixa de fora — inclusive o que se aproxima de finalidade, direitos do titular e responsabilidade na cadeia.</p>
+<p>Uma mudança importante e recente: <strong>até a edição de 2019 a 27701 só podia ser certificada junto com a ISO 27001</strong>. A edição de <strong>2025 a tornou um sistema de gestão independente</strong>, com Anexo A reorganizado e avaliação de risco de privacidade própria. Quem já tem a 27001 continua levando vantagem, porque boa parte dos controles é compartilhada. Entenda em <a href="/iso-27701-2025-o-que-muda-independencia-da-iso-27001/">ISO 27701:2025: o que muda</a> e veja a comparação em <a href="/qual-a-relacao-da-iso-27001-com-a-iso-27701/">ISO 27001 e ISO 27701: qual a diferença</a>.</p>
+<p>Ainda assim, vale a mesma ressalva: 27701 é norma internacional, LGPD é lei brasileira. A 27701 é o que mais perto chega de dar estrutura de gestão à privacidade, mas continua sendo necessário mapear as exigências específicas da lei.</p>
+
+<h2 id="certificado">Certificado não é conformidade</h2>
+<p>Não existe "certificação LGPD" reconhecida oficialmente, e a ANPD não aceita certificado como prova de conformidade. O que a lei prevê, no <strong>artigo 50</strong>, é que o agente de tratamento pode formular regras de boas práticas e programas de governança, e que essa demonstração conta a seu favor — inclusive na dosimetria de uma eventual sanção, quando a autoridade considera as medidas adotadas.</p>
+<p>É aí que o certificado tem valor real: <strong>como evidência auditada por terceiro independente de que a dimensão de segurança do programa existe e opera</strong>. Não é escudo, é prova. E na prática comercial vale ainda mais: cada vez mais contrato e questionário de fornecedor pedem a ISO 27001 explicitamente, e ter o certificado encerra uma negociação que sem ele consome semanas de formulários.</p>
+
+<h2 id="comecar">Por onde começar com as duas na mesa</h2>
+<ol>
+<li><strong>Faça um levantamento só.</strong> O inventário de ativos de informação do SGSI e o inventário de tratamento de dados pessoais compartilham a maior parte do esforço. Rodar os dois em projetos separados é o desperdício mais comum;</li>
+<li><strong>Defina o escopo do SGSI olhando para onde está o dado pessoal.</strong> Se o processo que trata dado de titular ficar fora do certificado, o certificado não ajuda no argumento de LGPD. Veja <a href="/iso-27001-e-o-escopo-do-sistema-de-gestao-da-seguranca-da-informacao/">como definir o escopo</a>;</li>
+<li><strong>Separe as duas naturezas de risco.</strong> Risco ao negócio vai para a avaliação da <a href="/requisitos-da-iso-27001/">cláusula 6 da ISO 27001</a>; risco aos direitos do titular vai para o RIPD. Eles se alimentam, mas não são o mesmo documento;</li>
+<li><strong>Use os controles do Anexo A como resposta ao artigo 46</strong>, com a rastreabilidade explícita: este controle atende a esta exigência, por esta razão. É essa ligação que sobrevive a um questionamento;</li>
+<li><strong>Trate jurídico e segurança como um projeto, não dois.</strong> Base legal sem controle é promessa; controle sem base legal é dado protegido que não deveria estar ali.</li>
+</ol>
+
+<h2>Leia mais</h2>
+<ul>
+<li><a href="/iso-27001-e-lgpd-como-lidar-com-vazamento-de-dados/">ISO 27001 e LGPD: como lidar com vazamento de dados</a></li>
+<li><a href="/iso-27001/">ISO 27001: o que é, requisitos e como certificar</a></li>
+<li><a href="/requisitos-da-iso-27001/">Requisitos da ISO 27001: as cláusulas 4 a 10 explicadas</a></li>
+<li><a href="/certificacao-iso-27001-etapas-prazo-custo/">Certificação ISO 27001: etapas, prazo e custo</a></li>
+<li><a href="/por-que-os-cartorios-deveriam-pensar-na-27001-e-nao-apenas-na-lgpd/">ISO 27001 em cartórios: por que não basta a LGPD</a></li>
+<li><a href="/iso-27001-na-contabilidade-escritorio-de-contabilidade-deveriam-pensar-na-iso-27001-e-nao-apenas-na-lgpd/">ISO 27001 na contabilidade: por que ir além da LGPD</a></li>
+<li><a href="/iso-27701-2025-o-que-muda-independencia-da-iso-27001/">ISO 27701:2025: a norma de privacidade ficou independente da 27001</a></li>
+<li><a href="/seguranca-da-informacao/">Segurança da informação: o que é, riscos e como proteger</a></li>
+<li><a href="/consultoria-iso-27001/">Consultoria ISO 27001: como funciona</a></li>
+</ul>

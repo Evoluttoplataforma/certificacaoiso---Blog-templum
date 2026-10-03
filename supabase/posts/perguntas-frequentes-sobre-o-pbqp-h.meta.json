@@ -1,0 +1,32 @@
+{
+ "title": "Perguntas frequentes sobre o PBQP-H (SiAC, OAC e verificação)",
+ "seo_title": "FAQ PBQP-H: verificar certificação, OAC e requisitos SiAC",
+ "seo_description": "Perguntas frequentes PBQP-H: como verificar certificação no SiAC, certificadoras OAC, pré-requisitos, níveis A e B e como obter o certificado.",
+ "tldr": "FAQ PBQP-H: verifique certificado no SiAC (gov.br), certificadoras são OAC acreditados, pré-requisitos incluem obra e ART, e o caminho passa por implementação SiAC + auditoria do OAC.",
+ "faq": [
+  {
+   "pergunta": "Como verificar se uma empresa é certificada pelo PBQP-H?",
+   "resposta": "<p>Pela consulta pública do SiAC no <a href=\"https://www.gov.br/cidades/pt-br/assuntos/construcao-civil/programa-brasileiro-da-qualidade-e-produtividade-do-habitat-pbqp-h/sistema-de-avaliacao-da-conformidade-siac\" rel=\"nofollow\">Ministério das Cidades</a>, usando CNPJ ou razão social. Veja <a href=\"/como-verificar-certificacao-pbqp-h/\">como verificar certificação PBQP-H</a>.</p>"
+  },
+  {
+   "pergunta": "Quais são as certificadoras pbqp-h?",
+   "resposta": "<p>Os <strong>OAC</strong> autorizados no SiAC, acreditados pela Cgcre/Inmetro. Relação oficial no <a href=\"https://www.gov.br/cidades/pt-br/acesso-a-informacao/acoes-e-programas/pbqp-h\" rel=\"nofollow\">portal PBQP-H</a>.</p>"
+  },
+  {
+   "pergunta": "Quais empresas podem ter o PBQP-H?",
+   "resposta": "<p>Empresas que executam obras, com CNAE e contrato social de construção. Porte não é critério. Detalhes no <a href=\"/pbqp-h/\">hub PBQP-H</a>.</p>"
+  },
+  {
+   "pergunta": "Quais os pré-requisitos para a certificação no PBQP-H?",
+   "resposta": "<p>Obra amostrável, ART em nome da certificanda, requisitos do SiAC do nível escolhido e, se empreiteira, responsabilidade global documentada. Resumo no <a href=\"/pbqp-h/#requisitos-preparacao\">hub</a>.</p>"
+  },
+  {
+   "pergunta": "Como obter o PBQP-H?",
+   "resposta": "<p>Implementar SiAC, gerar evidências, auditoria interna e contratar OAC para certificação. <a href=\"/como-conseguiur-a-certificacao-do-pbqp-h/\">Passo a passo</a>.</p>"
+  },
+  {
+   "pergunta": "A empresa pode ir direto para o Nível A?",
+   "resposta": "<p>Sim. Não é obrigatório passar pelo B. Para Caixa/GERIC o usual é Nível A. <a href=\"/as-diferencas-entre-o-nivel-b-e-o-nivel-a-do-pbqp-h/\">Comparativo A vs B</a>.</p>"
+  }
+ ]
+}

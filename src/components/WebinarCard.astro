@@ -26,10 +26,11 @@ const w = webinarAtual();
     <img
       data-wb-img
       src={`/assets/webinars/${w.slug}.webp`}
-      alt={`Webinar gratuito: ${w.titulo} — quarta, ${w.data}, às 16h`}
+      alt={`Webinar gratuito: ${w.titulo}, quarta ${w.data}, às 16h`}
       width="640"
-      height="640"
-      loading="lazy"
+      height="800"
+      loading="eager"
+      fetchpriority="high"
       decoding="async"
     />
     <span class="wb-body">
@@ -68,7 +69,7 @@ const w = webinarAtual();
         var img = c.querySelector("[data-wb-img]");
         if (img) {
           img.setAttribute("src", "/assets/webinars/" + w.slug + ".webp");
-          img.setAttribute("alt", "Webinar gratuito: " + w.titulo + " — quarta, " + w.data + ", às 16h");
+          img.setAttribute("alt", "Webinar gratuito: " + w.titulo + ", quarta " + w.data + ", às 16h");
         }
         var t = c.querySelector("[data-wb-titulo]");
         if (t) t.textContent = w.titulo;

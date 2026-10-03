@@ -1,0 +1,16 @@
+{
+ "title": "ISO 27001 para pequenas empresas: requisitos-chave e escopo enxuto",
+ "seo_title": "ISO 27001 em pequenas empresas: requisitos e certificação",
+ "seo_description": "Requisitos-chave da ISO 27001 em PME: escopo, SoA, cláusulas 4 a 10 na prática e erros que atrasam a certificação.",
+ "tldr": "Pequenas empresas atendem as mesmas cláusulas 4 a 10 da ISO 27001 com escopo e SoA proporcionais. Foque ativos críticos, evidência simples e auditoria interna real.",
+ "faq": [
+  {
+   "pergunta": "Quais são os requisitos-chave da ISO 27001 e como eles se aplicam a pequenas empresas?",
+   "resposta": "<p>Cláusulas 4 a 10 com escopo focado, riscos reais, SoA enxuta e operação documentada. Este artigo detalha a prática para PME.</p>"
+  },
+  {
+   "pergunta": "Pequena empresa precisa dos 93 controles do Anexo A?",
+   "resposta": "<p>Precisa avaliar todos; aplica só os pertinentes, com justificativa na SoA. O número aplicado costuma ser menor em PME.</p>"
+  }
+ ]
+}

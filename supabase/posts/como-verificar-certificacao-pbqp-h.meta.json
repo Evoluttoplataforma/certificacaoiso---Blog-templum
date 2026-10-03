@@ -1,0 +1,24 @@
+{
+ "title": "Como verificar certificação PBQP-H no SiAC (passo a passo)",
+ "seo_title": "Verificar certificação PBQP-H: consulta SiAC e validade",
+ "seo_description": "Como verificar se uma empresa é certificada pelo PBQP-H e se está atualizada: consulta no SiAC (gov.br), OAC, níveis A/B e ciclo de validade.",
+ "tldr": "Verifique PBQP-H na consulta pública do SiAC (gov.br) com CNPJ: confira nível A ou B, OAC, escopo e validade no ciclo de 3 anos. Certificado válido aparece no SiAC; consultoria não emite certificação.",
+ "faq": [
+  {
+   "pergunta": "Como posso verificar se uma empresa é certificada pelo PBQP-H e se a certificação está atualizada?",
+   "resposta": "<p>Pela consulta pública do SiAC no <a href=\"https://www.gov.br/cidades/pt-br/assuntos/construcao-civil/programa-brasileiro-da-qualidade-e-produtividade-do-habitat-pbqp-h/sistema-de-avaliacao-da-conformidade-siac\" rel=\"nofollow\">gov.br</a>, com CNPJ ou razão social. Confira situação, nível, OAC e datas do ciclo de três anos.</p>"
+  },
+  {
+   "pergunta": "Onde fica a lista de certificadoras pbqp-h?",
+   "resposta": "<p>No <a href=\"https://www.gov.br/cidades/pt-br/acesso-a-informacao/acoes-e-programas/pbqp-h\" rel=\"nofollow\">portal PBQP-H</a>, na relação de OAC autorizados no SiAC, acreditados pela Cgcre/Inmetro.</p>"
+  },
+  {
+   "pergunta": "Consultoria emite certificado PBQP-H?",
+   "resposta": "<p>Não. Só o <strong>OAC</strong> emite após auditoria. Consultoria prepara implementação e evidências.</p>"
+  },
+  {
+   "pergunta": "PBQP-H Nível B vale para a Caixa?",
+   "resposta": "<p>Para GERIC e MCMV federal o caminho usual é <strong>Nível A</strong>. Veja <a href=\"/pbqp-h-nivel-a/\">PBQP-H Nível A</a>.</p>"
+  }
+ ]
+}

@@ -1,11 +1,11 @@
-// Linkbuilding contextual → orbitgestao.com.br (plataforma de gestão da Templum).
+// Linkbuilding contextual → Templum OS (cadastro app.templum.com.br/register).
 // Roda no build (não altera os .md). Insere NO MÁXIMO 1 link por artigo, na 1ª
 // menção relevante em TEXTO CORRIDO — nunca em títulos, nunca dentro de links já
 // existentes, nunca em código/imagens. Âncora = a própria expressão genérica
 // encontrada (varia naturalmente por artigo → evita over-optimization).
 import path from "node:path";
 
-const ORBIT = "https://orbitgestao.com.br";
+const TEMPLUM_OS_REGISTER = "https://app.templum.com.br/register";
 
 // Expressões-alvo em ordem de prioridade (mais específica → mais genérica).
 // A primeira que aparecer (no 1º nó de texto elegível) vira o link.
@@ -32,7 +32,7 @@ const SKIP = new Set([
 export default function remarkOrbitLinks() {
   return (tree, file) => {
     const slug = file?.path ? path.basename(file.path).replace(/\.mdx?$/, "") : "blog";
-    const url = `${ORBIT}/?utm_source=blog&utm_medium=link-contextual&utm_campaign=${encodeURIComponent(slug)}`;
+    const url = `${TEMPLUM_OS_REGISTER}?utm_source=blog&utm_medium=link-contextual&utm_campaign=${encodeURIComponent(slug)}`;
     let done = false;
 
     const walk = (node) => {

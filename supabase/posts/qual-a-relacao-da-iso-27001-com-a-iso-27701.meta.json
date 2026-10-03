@@ -1,0 +1,24 @@
+{
+ "title": "Qual a relação da ISO 27001 com a ISO 27701?",
+ "seo_title": "ISO 27001 e ISO 27701: qual a diferença?",
+ "seo_description": "A ISO 27701 trata da privacidade de dados pessoais e, desde a edição de 2025, é certificável sem a ISO 27001. Veja o que mudou e o que as duas compartilham.",
+ "tldr": "A ISO 27001 cuida da segurança de toda a informação; a ISO 27701 estende essa estrutura para a privacidade de dados pessoais, separando os papéis de controlador e de operador. Até a edição de 2019, a 27701 só podia ser certificada junto com a ISO 27001. Desde a ISO/IEC 27701:2025 ela é um sistema de gestão independente e não exige mais a 27001 — mas quem já tem o SGSI aproveita a maior parte dos controles, e a transição vai até 2028.",
+ "faq": [
+  {
+   "pergunta": "Qual a diferença entre ISO 27001 e ISO 27701?",
+   "resposta": "<p>A ISO 27001 trata da <strong>segurança</strong> de toda informação da organização. A ISO 27701 estende esse sistema para a <strong>privacidade</strong>, com requisitos e controles específicos para o tratamento de dados pessoais, distinguindo os papéis de controlador e de operador.</p>"
+  },
+  {
+   "pergunta": "Posso certificar na ISO 27701 sem ter a ISO 27001?",
+   "resposta": "<p><strong>Sim, desde a edição de 2025.</strong> A ISO/IEC 27701:2025 tornou-se um sistema de gestão independente e deixou de exigir a ISO 27001 certificada como pré-requisito. Até a edição de 2019 a resposta era não: a 27701 só era auditada sobre um SGSI já conforme à ISO 27001. Quem já tem a 27001 continua levando vantagem, porque boa parte dos controles é compartilhada e as duas podem ser auditadas juntas. O prazo de transição para a nova edição vai até 2028.</p>"
+  },
+  {
+   "pergunta": "A ISO 27701 resolve a LGPD?",
+   "resposta": "<p>É a norma que mais se aproxima disso, porque foi desenhada para dar estrutura de gestão à privacidade. Mas ela é internacional e a LGPD é lei brasileira: continua sendo necessário mapear as exigências específicas da lei, como base legal, direitos do titular e o papel do encarregado.</p>"
+  },
+  {
+   "pergunta": "Qual é a relação entre ISO 27701 e ISO 27001 no âmbito de gestão de privacidade?",
+   "resposta": "<p>27001 estrutura o SGSI; 27701 acrescenta requisitos de privacidade (SGPI). Desde 2025 a 27701 pode ser certificada de forma independente. Muitas empresas mantêm os dois sistemas integrados.</p>"
+  }
+ ]
+}
