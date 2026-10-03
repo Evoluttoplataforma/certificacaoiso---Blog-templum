@@ -18,7 +18,8 @@
 - [PBQP-H](https://certificacaoiso.com.br/pbqp-h/): qualidade na construção civil, níveis do SiAC, verificação de certificado, OAC, Caixa/GERIC e Minha Casa, Minha Vida.
 - [NR-1](https://certificacaoiso.com.br/nr-1/): a norma que organiza as demais NRs, GRO, PGR e riscos psicossociais.
 - [LGPD](https://certificacaoiso.com.br/lgpd/): proteção de dados pessoais e o que ela exige das empresas.
-- [SASSMAQ](https://certificacaoiso.com.br/o-que-e-sassmaq/): segurança no transporte de produtos químicos.
+- [SASSMAQ](https://certificacaoiso.com.br/o-que-e-sassmaq/): avaliação ABIQUIM no transporte rodoviário de químicos; guia hub atualizado para a 4ª edição.
+- [SASSMAQ 4.0 (2026)](https://certificacaoiso.com.br/sassmaq-4-edicao-2026-mudancas-prazo-transicao/): o que muda na certificação Abiquim, transportadora, prazo até 11/03/2027, ESG, ciclo trienal e roteiro de conformidade.
 - [ESG](https://certificacaoiso.com.br/o-que-e-esg/): ambiental, social e governança, com indicador em vez de discurso.
 
 ## Artigos mais consultados
