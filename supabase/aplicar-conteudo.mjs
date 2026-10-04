@@ -3,7 +3,7 @@
 // Por que existe: o corpo dos posts mora no banco, mas post grande escrito à mão merece
 // revisão em diff antes de virar produção — e merece poder voltar. Então o texto vive no
 // repositório e este script é o que empurra. O .meta.json é opcional e aceita title,
-// tldr, seo_title, seo_description e faq.
+// tldr, seo_title, seo_description, faq, published_at e revised_at (ISO).
 //
 //   SUPABASE_SERVICE_KEY=... node supabase/aplicar-conteudo.mjs iso-9001
 //   SUPABASE_SERVICE_KEY=... node supabase/aplicar-conteudo.mjs iso-9001 --dry
@@ -46,7 +46,7 @@ const metaPath = new URL(`${slug}.meta.json`, base);
 const meta = existsSync(metaPath) ? JSON.parse(readFileSync(metaPath, "utf8")) : {};
 
 const campos = { content: html };
-for (const k of ["title", "tldr", "seo_title", "seo_description", "faq"]) if (meta[k] !== undefined) campos[k] = meta[k];
+for (const k of ["title", "tldr", "seo_title", "seo_description", "faq", "published_at", "revised_at"]) if (meta[k] !== undefined) campos[k] = meta[k];
 
 const palavras = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
 console.log(`${slug}: ${html.length} bytes · ${palavras} palavras · campos: ${Object.keys(campos).join(", ")}`);
@@ -62,7 +62,7 @@ const bk = new URL(`../backup/${slug}-antes-${dia}.json`, base);
 writeFileSync(bk, JSON.stringify(antes[0], null, 1));
 console.log("backup:", bk.pathname);
 
-campos.revised_at = new Date().toISOString();
+if (meta.revised_at === undefined) campos.revised_at = new Date().toISOString();
 const r = await fetch(q, { method: "PATCH", headers: { ...H, Prefer: "return=representation" }, body: JSON.stringify(campos) });
 if (!r.ok) { console.error("falhou:", r.status, await r.text()); process.exit(1); }
 console.log("aplicado. rebuild do blog é o próximo passo (npm run build + push, ou publicar pelo CMS).");

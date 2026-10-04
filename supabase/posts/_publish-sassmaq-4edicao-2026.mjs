@@ -49,7 +49,8 @@ if (Array.isArray(existing) && existing.length) {
   process.exit(0);
 }
 
-const publishedAt = new Date().toISOString();
+// 12/09/2026: dia seguinte ao anúncio oficial da 4ª edição (11/09), alinhado à data editorial.
+const publishedAt = "2026-09-12T15:00:00+00:00";
 const row = {
   title: meta.title,
   slug,
