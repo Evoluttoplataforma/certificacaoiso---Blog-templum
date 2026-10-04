@@ -6,7 +6,9 @@
 
 ## Consultoria ISO: escolher parceiro e contratar
 
-- [Como escolher consultoria ISO no Brasil](https://certificacaoiso.com.br/como-escolher-consultoria-iso/): consultoria x certificadora, perguntas antes de assinar, cenários (PME, remoto, construção, urgência, pós-certificação).
+- [Como escolher consultoria ISO no Brasil](https://certificacaoiso.com.br/como-escolher-consultoria-iso/): consultoria x certificadora, perguntas antes de assinar, território PME remota (cases + vitrine Clientes Templum), urgência cliente/edital, construção, pós-certificação.
+- [Consultoria ISO 9001 para PME remota](https://certificacaoiso.com.br/consultoria-iso-9001-pme-remota/): implantação online, prazos de referência, papéis consultoria/certificadora, cases (Miranda Feliciano, Dimarzio) e depoimentos em vídeo (vitrine Clientes Templum).
+- [Cliente ou edital exige ISO 9001](https://certificacaoiso.com.br/iso-9001-cliente-edital-exige-certificado/): o que responder sem certificado, prazos realistas, licitação vs. fornecedor, passos com urgência comercial.
 - [Consultoria ISO 9001](https://certificacaoiso.com.br/consultoria-iso-9001/): quando vale contratar, o que entrega, como escolher, custo e garantia condicionada.
 - [Consultoria ISO 27001](https://certificacaoiso.com.br/consultoria-iso-27001/): o que a consultoria faz, o que fica com a equipe, oito perguntas e sinais de alerta.
 - [Quanto custa a ISO 9001](https://certificacaoiso.com.br/quanto-custa-iso-9001/): consultoria, organismo certificador e manutenção (contas separadas); modelos presencial, compartilhado e remoto.

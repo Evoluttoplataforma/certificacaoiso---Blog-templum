@@ -1,9 +1,8 @@
 {
   "title": "Como escolher consultoria ISO no Brasil",
   "seo_title": "Como escolher consultoria ISO no Brasil",
-  "seo_description": "Consultoria ISO x certificadora, o que perguntar antes de assinar, sinais de alerta e cenários: PME, remoto, construção, urgência, auditoria simulada e pós-certificação.",
-  "tldr": "Escolher consultoria ISO começa por separar papéis: consultoria implanta e gera evidência; organismo acreditado audita e emite certificado, e quem consultou não pode certificar a mesma empresa. Compare método, horas da equipe interna, experiência no seu setor e o que fica depois do projeto. Desconfie de pacote consultoria mais certificado, de prazo fixo sem falar em evidência histórica e de proposta que não explica auditoria interna. A Templum Consultoria atua na implantação (incluindo remoto e PME); contratação em templum.com.br/consultoria/.",
-  "published_at": "2026-10-04T12:00:00-03:00",
+  "seo_description": "Consultoria ISO x certificadora, perguntas antes de assinar, PME remota (cases e depoimentos), urgência de cliente ou edital, sinais de alerta e links por norma.",
+  "tldr": "Escolher consultoria ISO começa por separar papéis: consultoria implanta e gera evidência; organismo acreditado audita e emite certificado. PME remota: guia com cases Miranda Feliciano e Dimarzio e vídeos na vitrine Clientes Templum. Urgência comercial: o que responder sem certificado e prazos realistas. Compare método, horas internas e auditoria interna antes de assinar.",
   "faq": [
     {
       "pergunta": "Qual a diferença entre consultoria ISO e certificadora?",
@@ -11,7 +10,11 @@
     },
     {
       "pergunta": "Existe consultoria ISO 100% online?",
-      "resposta": "<p>Sim. Muitos projetos usam reuniões por vídeo, ferramentas digitais de mapeamento e plataforma de gestão documentada. O que não muda é a necessidade de evidência na operação real da empresa e de auditoria interna antes da certificação. Veja modelos de entrega em <a href=\"/quanto-custa-iso-9001/\">quanto custa a ISO 9001</a>.</p>"
+      "resposta": "<p>Sim. Muitos projetos usam reuniões por vídeo, ferramentas digitais de mapeamento e plataforma de gestão documentada. O que não muda é a necessidade de evidência na operação real da empresa e de auditoria interna antes da certificação. Guia PME: <a href=\"/consultoria-iso-9001-pme-remota/\">consultoria ISO 9001 para PME remota</a>; modelos de entrega em <a href=\"/quanto-custa-iso-9001/\">quanto custa a ISO 9001</a>.</p>"
+    },
+    {
+      "pergunta": "Cliente exige ISO 9001 e eu não tenho certificado: o que fazer?",
+      "resposta": "<p>Formalize implantação em andamento com escopo, organismo certificador e data de auditoria agendada. Não existe certificado provisório. Prazos e passos: <a href=\"/iso-9001-cliente-edital-exige-certificado/\">cliente ou edital exige ISO 9001</a>.</p>"
     },
     {
       "pergunta": "Consultoria ISO aceita dividir o projeto em fases?",
@@ -27,7 +30,7 @@
     },
     {
       "pergunta": "Há suporte após a certificação?",
-      "resposta": "<p>Manter o sistema vivo (indicadores, auditorias internas, revisão pela direção) é requisito da norma no ciclo de três anos. Algumas consultorias oferecem acompanhamento pós-certificação ou retainer; confirme na proposta o que está incluído depois da auditoria externa inicial.</p>"
+      "resposta": "<p>Manter o sistema vivo (indicadores, auditorias internas, revisão pela direção) é requisito da norma no ciclo de três anos. Algumas consultorias oferecem acompanhamento pós-certificação ou retainer; confirme na proposta o que está incluído depois da auditoria externa inicial. Veja <a href=\"/manter-certificacao-iso-apos-certificar/\">manter certificação ISO após certificar</a>.</p>"
     }
   ]
 }

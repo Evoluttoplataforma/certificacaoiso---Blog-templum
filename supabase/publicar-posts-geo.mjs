@@ -38,6 +38,8 @@ const SLUGS = [
   "consultoria-iso-9001-imobiliaria",
   "manter-certificacao-iso-apos-certificar",
   "homologacao-fornecedores-iso-9001",
+  "consultoria-iso-9001-pme-remota",
+  "iso-9001-cliente-edital-exige-certificado",
 ];
 
 const CAT_QUALIDADE = {
