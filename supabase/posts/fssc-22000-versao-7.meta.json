@@ -1,0 +1,58 @@
+{
+ "published_at": "2026-05-01T15:00:00+00:00",
+ "revised_at": "2026-10-04T00:00:00+00:00",
+ "title": "FSSC 22000 Versão 7: o que muda e o prazo para se adequar",
+ "seo_title": "FSSC 22000 Versão 7: o que muda e até quando adequar",
+ "seo_description": "FSSC 22000 V7 (2026): ISO 22002:2025, ISO 22002-100, prazo até 30/04/2027 na V6, upgrade 2027-2028, auditoria, estudos HACCP e PPR por categoria.",
+ "tldr": "A Versão 7 da FSSC 22000 foi publicada em maio de 2026 e substitui a base de PPRs: sai ISO/TS 22002 e entra ISO 22002-x:2025, com ISO 22002-100:2025 como Part 100 comum. Endurece cultura, food defense, food fraud, fornecedores e sustentabilidade. Auditorias na V6 até 30/04/2027; upgrade completo na próxima auditoria devida entre 01/05/2027 e 30/04/2028. Sites com menos de 20 FTE e até 2 estudos HACCP podem ter mínimo de 1,5 dia de auditoria.",
+ "faq": [
+  {
+   "pergunta": "Qual é o cronograma para implementar a FSSC 22000 Versão 7?",
+   "resposta": "<p>Publicação em <strong>1º de maio de 2026</strong>, com janela de implementação de 12 meses. Auditorias na <strong>Versão 6</strong> até <strong>30 de abril de 2027</strong>. Upgrade para V7 entre <strong>1º de maio de 2027 e 30 de abril de 2028</strong>. A partir de <strong>1º de maio de 2028</strong>, todas as auditorias são na V7. A data exata do seu upgrade segue o ciclo do certificado: confirme com o organismo certificador.</p>"
+  },
+  {
+   "pergunta": "Até quando posso ser auditado na FSSC 22000 Versão 6?",
+   "resposta": "<p>Até <strong>30 de abril de 2027</strong> para auditorias conduzidas contra a V6. Depois, na janela de upgrade, a auditoria completa passa a ser contra a V7.</p>"
+  },
+  {
+   "pergunta": "Posso fazer uma auditoria de upgrade para a V7 separada do meu ciclo?",
+   "resposta": "<p>Não como visita avulsa fora do calendário. O upgrade é <strong>auditoria completa</strong> contra a V7 na <strong>próxima auditoria devida</strong> (manutenção, recertificação etc.) dentro da janela de upgrade. Detalhes em <a href=\"/certificacao-fssc-22000/#upgrade-v7\">certificação FSSC 22000</a>.</p>"
+  },
+  {
+   "pergunta": "Recertificação em outubro de 2026: a manutenção de 2027 será anunciada?",
+   "resposta": "<p>Outubro de 2026 ainda pode ser auditoria na V6. Em 2027 a visita pode ser <strong>anunciada ou não anunciada</strong>, conforme a regra da auditoria não anunciada do seu ciclo de três anos e a programação do organismo certificador. O upgrade para V7 pode coincidir com essa visita ou com outra dentro da janela: <strong>confirme com o OC</strong>.</p>"
+  },
+  {
+   "pergunta": "Qual a diferença entre ISO 22002-1:2025 e ISO 22002-100:2025?",
+   "resposta": "<p>A <strong>22002-100</strong> traz requisitos de PPR <strong>comuns a vários segmentos</strong>. A <strong>22002-1</strong> traz requisitos <strong>adicionais</strong> da fabricação de alimentos. Fabricante de alimento atende <strong>as duas</strong>. Embalagem usa 100 + 22002-4, não a Part 1. Veja a tabela em <a href=\"/requisitos-fssc-22000/#tabela-iso-22002\">requisitos da FSSC 22000</a>.</p>"
+  },
+  {
+   "pergunta": "Por que a norma saiu de ISO/TS 22002 para ISO 22002?",
+   "resposta": "<p>A ISO publicou em 2025 a família <strong>ISO 22002-x</strong>, substituindo as antigas especificações técnicas ISO/TS. Na V7 do esquema FSSC, os PPRs passam a referenciar normas ISO, não TS.</p>"
+  },
+  {
+   "pergunta": "O que significa no máximo 2 estudos HACCP para a organização?",
+   "resposta": "<p>É o número de <strong>análises de perigos para famílias de produtos/processos</strong> com perigos e tecnologia semelhantes, conforme definição do esquema e ISO 22003-1. Entra no cálculo de duração de auditoria; na V7, sites com menos de 20 FTE e até dois estudos podem ter redução até mínimo de 1,5 dia.</p>"
+  },
+  {
+   "pergunta": "A isenção de processo simples para 1,5 dia de auditoria existia na V6. O que mudou na V7?",
+   "resposta": "<p>Na V7 saiu a exigência de <strong>processo simples</strong> para reduzir duração. Mantém-se redução para organizações com <strong>menos de 20 FTE</strong> e <strong>até 2 estudos HACCP</strong>, com mínimo de <strong>1,5 dia</strong>. O certificador pode aumentar o tempo se o escopo exigir.</p>"
+  },
+  {
+   "pergunta": "Fabricante de embalagem precisa atender ISO 22002-1 de alimentos?",
+   "resposta": "<p>Não, se produz <strong>somente</strong> material de embalagem. Aplica <strong>ISO 22002-100:2025 + ISO 22002-4:2025</strong>. A Part 1 é para fabricação de alimentos. A categoria correta está na Part 1, seção 3, tabela 1 do esquema.</p>"
+  },
+  {
+   "pergunta": "Perda e desperdício de alimentos vale para embalagem na V7?",
+   "resposta": "<p>O requisito adicional <strong>2.5.16</strong> (política de redução de FLW com metas) <strong>não se aplica à categoria I (embalagem)</strong>. Embalagem pode ter exigências de design (2.5.13 g) ligadas a FLW quando projeta embalagem primária. A cláusula 8.1 da 22002-100 trata gestão de FLW onde existir, focando contaminação.</p>"
+  },
+  {
+   "pergunta": "A Versão 7 da FSSC 22000 muda a ISO 22000?",
+   "resposta": "<p>Não. Continua valendo a <strong>ISO 22000:2018</strong> como norma de sistema de gestão. Mudam PPRs, requisitos adicionais 2.5.x e categorias da cadeia.</p>"
+  },
+  {
+   "pergunta": "Decisões do BoS podem mudar as regras de transição?",
+   "resposta": "<p>Sim. A lista de decisões do Conselho de Partes Interessadas é <strong>dinâmica</strong> e obrigatória no período de transição. Pode haver novas decisões enquanto o esquema passa por benchmarking GFSI. Acompanhe as publicações oficiais junto com a Part 2 do esquema.</p>"
+  }
+ ]
+}

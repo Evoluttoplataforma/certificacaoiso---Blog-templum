@@ -27,6 +27,14 @@
   {
    "pergunta": "Preciso avisar o certificador quando acontece um recall?",
    "resposta": "<p>Sim. O requisito de comunicação (2.5.17) obriga a informar o organismo certificador <strong>em até 3 dias úteis</strong> sobre eventos graves que afetem o sistema de gestão ou a integridade da certificação — recall público, surto ligado a segurança de alimentos, ação de autoridade regulatória, processo judicial, desastre natural, ataque cibernético. E a implementar as medidas do seu processo de preparação e resposta a emergências.</p>"
+  },
+  {
+   "pergunta": "Qual a diferença entre ISO 22002-100 e ISO 22002-1 na FSSC 22000 V7?",
+   "resposta": "<p>A <strong>22002-100</strong> reúne PPRs comuns a vários segmentos. A <strong>22002-1</strong> acrescenta requisitos da <strong>fabricação de alimentos</strong>. Quem fabrica alimento atende ambas. Embalagem usa 100 + 22002-4. Tabela em <a href=\"/requisitos-fssc-22000/#tabela-iso-22002\">qual ISO 22002 aplicar</a>.</p>"
+  },
+  {
+   "pergunta": "Fabricante de embalagem precisa da ISO 22002-1?",
+   "resposta": "<p>Não, se o escopo é <strong>somente material de embalagem</strong>. Aplica <strong>ISO 22002-100 + ISO 22002-4</strong>. A Part 1 é para fabricação de alimentos.</p>"
   }
  ]
 }

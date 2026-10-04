@@ -13,6 +13,8 @@
 - [ISO 42001](https://certificacaoiso.com.br/iso-42001/): gestão de inteligência artificial.
 - [ISO 17025](https://certificacaoiso.com.br/iso-17025/): competência de laboratórios de ensaio e calibração.
 - [FSSC 22000](https://certificacaoiso.com.br/fssc-22000/): esquema de segurança de alimentos reconhecido pelo GFSI.
+- [FSSC 22000 Versão 7](https://certificacaoiso.com.br/fssc-22000-versao-7/): transição 2026-2028, ISO 22002:2025, ISO 22002-100, upgrade, estudos HACCP e FAQ de auditoria.
+- [Certificação FSSC 22000](https://certificacaoiso.com.br/certificacao-fssc-22000/): etapas, ciclo de três anos, auditoria não anunciada, tempo de auditoria V7 e custo.
 - [ISO 22000](https://certificacaoiso.com.br/iso-22000/): norma do sistema de gestão da segurança de alimentos.
 - [HACCP / APPCC](https://certificacaoiso.com.br/haccp-o-que-e/): análise de perigos e pontos críticos de controle, os 7 princípios.
 - [PBQP-H](https://certificacaoiso.com.br/pbqp-h/): qualidade na construção civil, níveis do SiAC, verificação de certificado, OAC, Caixa/GERIC e Minha Casa, Minha Vida.
