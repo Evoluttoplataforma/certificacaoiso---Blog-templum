@@ -1,0 +1,33 @@
+{
+  "title": "Gestão de indicadores na ISO 9001:2026: requisitos 6.2 e 9.1 e o número que gera decisão",
+  "seo_title": "Gestão de indicadores ISO 9001:2026: 6.2 e 9.1",
+  "seo_description": "Do objetivo da qualidade (6.2) ao número que muda a análise (9.1). Vermelho é sinal, não vergonha. Cadeia, micrometas e tendência histórica.",
+  "tldr": "Na ISO 9001, gestão de indicadores não é painel bonito para auditoria. O 6.2 pede objetivo mensurável; o 9.1 pede monitoramento, medição e análise que sustentem decisão. Indicador que fica dois meses sem preencher não serve para gestão: só consome tempo. Vermelho no painel é alerta (como a luz da gasolina), não vergonha a esconder. A cadeia é objetivo → medição → análise da causa → decisão e plano de ação. Meta anual sem micrometa e sem histórico vira achado quando já passou o ponto de não retorno. Tendência histórica ganha peso na análise crítica da versão 2026. Poucos indicadores certos, amarrados a processo e a decisão, batem o teatro de muitos números.",
+  "published_at": "2026-10-04T15:00:00-03:00",
+  "faq": [
+    {
+      "pergunta": "Os indicadores devem estar registrados em cada setor da empresa?",
+      "resposta": "<p>Sim, no sentido de processo: a empresa existe para entregar resultado; os processos operacionalizam a estratégia. Se todos os processos atingem as metas planejadas, a empresa tem chance de atingir a meta dela. Por isso todo processo relevante precisa de indicador. Não é “um gráfico por sala” para impressionar. É o número que mostra se aquele processo está puxando a estratégia para frente ou travando.</p>"
+    },
+    {
+      "pergunta": "Meta anual atrasada ainda no intervalo de medição: abre não conformidade?",
+      "resposta": "<p>Pode abrir, sim. Indicador é conta. Em algum momento a meta tem ponto de não retorno: não dá mais tempo (nem recurso) para reverter. Se o monitoramento mensal já mostra que o acumulado não fecha o ano e a empresa não sabe o que está fazendo para atingir, isso é falha de análise de indicador, não “espera janeiro”. Observação sobre frequência longa ajuda no desenho; não substitui plano de ação quando a tendência já falhou.</p>"
+    },
+    {
+      "pergunta": "Quais indicadores medir em marketing, promoção de vendas ou em um SGSI (ISO 27001)?",
+      "resposta": "<p>Não existe lista pronta do tipo “este KPI você tem que ter”. Há indicadores perenes por norma (na ISO 9001, satisfação do cliente; na ISO 27001, análise dos controles), mas o número concreto muda de empresa para empresa. Comece pelo objetivo do processo e pela decisão que o número precisa apoiar. Se depois de três meses o dado não muda contratação, investimento, prioridade ou risco, você mediu o indicador errado.</p>"
+    },
+    {
+      "pergunta": "Quais indicadores fazem sentido para construtoras de Minha Casa Minha Vida?",
+      "resposta": "<p>Parta do que a obra já vive: prazo final é insuficiente sozinho. Use marcos no cronograma (por laje, por etapa) para ver produtividade e mão de obra parada antes do atraso virar crise. Some satisfação além da compra (clareza do comercial, tempo de resposta) e pós-venda ou assistência técnica. O clássico “vendeu, cliente pagou, pronto” quebra a cadeia de indicação e gera problema que o indicador de prazo sozinho não mostra.</p>"
+    },
+    {
+      "pergunta": "Quais métodos usar para medir satisfação do cliente?",
+      "resposta": "<p>Depende do público. Podem funcionar taxa de retenção, recompra, reclamação, pesquisa de reação, NPS ou proxy operacional (por exemplo, solicitações de revisão de garantia quando o cliente não responde pesquisa). Metodologias como ServQual ajudam a descobrir a quais atributos o cliente dá importância antes de medir só “atendimento”. O método certo é o que gera resposta e decisão na sua operação, não o formulário genérico.</p>"
+    },
+    {
+      "pergunta": "Uma matriz de indicadores (processo, área, objetivo, método) é útil?",
+      "resposta": "<p>Sim: é informação documentada que organiza o sistema. Mais útil do que a matriz bonita, porém, é o indicador representar a realidade da empresa e alimentar tomada de decisão. Matriz cheia e painel parado há dois meses continua sendo teatro.</p>"
+    }
+  ]
+}

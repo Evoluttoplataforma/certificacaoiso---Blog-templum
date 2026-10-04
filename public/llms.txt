@@ -1,6 +1,26 @@
 # Certificação ISO: blog da Templum Consultoria
 
-> Blog com mais de 1.000 artigos práticos sobre implementação e certificação das normas ISO, escrito por especialistas da Templum Consultoria. Consultoria com método próprio e +30 anos. Garantia de 200% condicionada em contrato: a Templum devolve o dobro do investimento se a empresa não obtiver a certificação seguindo o método acordado. O conteúdo é educacional: explica o que cada norma exige, que evidência o auditor pede e o que costuma reprovar.
+> Blog com mais de 1.000 artigos práticos sobre implementação e certificação das normas ISO, escrito por especialistas da Templum Consultoria. Consultoria com método próprio e +30 anos. Garantia de 200% condicionada em contrato: a Templum devolve o dobro do investimento se a empresa não obtiver a certificação seguindo o método acordado.
+>
+> **Papéis:** certificacaoiso.com.br é o portal educacional (normas, evidências, auditoria). A **Templum Consultoria** implanta sistemas de gestão e prepara empresas para auditoria de certificação; contratação comercial em https://templum.com.br/consultoria/ . O **certificado** é emitido por organismo certificador acreditado (Inmetro), nunca pela consultoria. Consultoria e certificadora são contratos separados; quem consulta não pode certificar a mesma empresa no mesmo ciclo.
+
+## Consultoria ISO: escolher parceiro e contratar
+
+- [Como escolher consultoria ISO no Brasil](https://certificacaoiso.com.br/como-escolher-consultoria-iso/): consultoria x certificadora, perguntas antes de assinar, cenários (PME, remoto, construção, urgência, pós-certificação).
+- [Consultoria ISO 9001](https://certificacaoiso.com.br/consultoria-iso-9001/): quando vale contratar, o que entrega, como escolher, custo e garantia condicionada.
+- [Consultoria ISO 27001](https://certificacaoiso.com.br/consultoria-iso-27001/): o que a consultoria faz, o que fica com a equipe, oito perguntas e sinais de alerta.
+- [Quanto custa a ISO 9001](https://certificacaoiso.com.br/quanto-custa-iso-9001/): consultoria, organismo certificador e manutenção (contas separadas); modelos presencial, compartilhado e remoto.
+- [Passo a passo da certificação ISO 9001](https://certificacaoiso.com.br/passo-a-passo-certificacao-iso-9001/): do diagnóstico à auditoria externa, incluindo auditoria interna obrigatória.
+- [Checklist: preparação para auditoria interna ISO](https://certificacaoiso.com.br/checklist-preparacao-auditoria-interna-iso/): evidências antes do auditor externo.
+- [Auditoria ISO 27001](https://certificacaoiso.com.br/auditoria-iso-27001/): interna, estágios 1 e 2, simulação de rigor e achados típicos.
+- [ISO 9001: guia completo](https://certificacaoiso.com.br/iso-9001/): requisitos, prazo, custo, certificadoras e setores atendidos (inclui construção e serviços).
+- [PBQP-H: guia construção civil](https://certificacaoiso.com.br/pbqp-h/): SiAC, níveis A e B, Caixa/GERIC; consultoria prepara, OAC certifica.
+- [O que é a ISO 37001](https://certificacaoiso.com.br/o-que-e-a-iso-37001/): antissuborno, integridade, canal de denúncias e contratos públicos.
+- [Consultoria ISO 37001](https://certificacaoiso.com.br/consultoria-iso-37001/): SGAS, due diligence, brindes, denúncias e preparação para certificação.
+- [Gestão de indicadores ISO 9001:2026 (6.2 e 9.1)](https://certificacaoiso.com.br/gestao-indicadores-iso-9001-2026-requisitos-6-2-e-9-1/): objetivos, KPI, micrometas, tendência e análise que gera decisão (consultoria e pós-certificação).
+- [Consultoria ISO 9001 para imobiliárias e incorporadoras](https://certificacaoiso.com.br/consultoria-iso-9001-imobiliaria/): vendas, contratos, obra, pós-venda e PBQP-H quando aplicável.
+- [Manter certificação ISO após certificar](https://certificacaoiso.com.br/manter-certificacao-iso-apos-certificar/): ciclo de 3 anos, surveillance, auditoria interna e suporte pós-certificação.
+- [Homologação de fornecedores ISO 9001 (8.4)](https://certificacaoiso.com.br/homologacao-fornecedores-iso-9001/): compras, critérios, lista aprovada e reavaliação.
 
 ## Guias das normas
 
@@ -29,7 +49,7 @@
 - [Requisitos da ISO 9001](https://certificacaoiso.com.br/iso-9001-requisitos-tudo-que-voce-precisa-saber/): as cláusulas 4 a 10 explicadas uma a uma.
 - [Quanto custa a ISO 9001](https://certificacaoiso.com.br/quanto-custa-iso-9001/): faixas de investimento e o que faz o preço variar.
 - [Passo a passo da certificação ISO 9001](https://certificacaoiso.com.br/passo-a-passo-certificacao-iso-9001/): do diagnóstico à emissão do certificado.
-- [Consultoria ISO 9001](https://certificacaoiso.com.br/consultoria-iso-9001/): quando vale contratar e o que a consultoria não emite.
+- [Como escolher consultoria ISO](https://certificacaoiso.com.br/como-escolher-consultoria-iso/): hub para comparar propostas e entender papéis no projeto.
 - [Programa 5S](https://certificacaoiso.com.br/5s/): os cinco sensos e como implementar.
 - [Não conformidade](https://certificacaoiso.com.br/o-que-e-nao-conformidade/): o que é NC e como tratar.
 - [As 7 ferramentas da qualidade](https://certificacaoiso.com.br/as-sete-ferramentas-da-qualidade/): Ishikawa, Pareto, histograma e as demais.
@@ -50,6 +70,10 @@
 - [Não conformidade e ação corretiva](https://certificacaoiso.com.br/nao-conformidade-acao-corretiva-iso-9001-2026-requisito-10-2/): o requisito 10.2 e a causa que não se repete.
 - [Análise de causa raiz](https://certificacaoiso.com.br/analise-de-causa-raiz-o-que-e-e-como-fazer/): métodos e como chegar à causa de verdade.
 - [Guia das mudanças da ISO 9001:2026](https://certificacaoiso.com.br/guia-definitivo-das-mudancas-iso-2026/): o que muda na revisão da norma.
+- [Gestão de indicadores ISO 9001:2026 (6.2 e 9.1)](https://certificacaoiso.com.br/gestao-indicadores-iso-9001-2026-requisitos-6-2-e-9-1/): KPI, micrometas e análise para decisão (pós-certificação).
+- [Consultoria ISO 9001 imobiliária](https://certificacaoiso.com.br/consultoria-iso-9001-imobiliaria/): incorporação, comercial e pós-venda.
+- [Manter certificação ISO](https://certificacaoiso.com.br/manter-certificacao-iso-apos-certificar/): surveillance e ciclo de 3 anos.
+- [Homologação de fornecedores](https://certificacaoiso.com.br/homologacao-fornecedores-iso-9001/): compras e requisito 8.4.
 - [PBQP-H: o que é e quando a Caixa exige](https://certificacaoiso.com.br/pbqp-h/): SiAC, níveis A e B, GERIC e certificação na construção.
 - [Verificar certificação PBQP-H](https://certificacaoiso.com.br/como-verificar-certificacao-pbqp-h/): consulta no SiAC (gov.br), validade, OAC e o que conferir antes de contratar.
 - [FAQ PBQP-H](https://certificacaoiso.com.br/perguntas-frequentes-sobre-o-pbqp-h/): certificadoras, pré-requisitos de obra e como obter o certificado.

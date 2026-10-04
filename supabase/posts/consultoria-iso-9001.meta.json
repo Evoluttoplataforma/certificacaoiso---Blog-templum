@@ -1,8 +1,8 @@
 {
   "title": "Consultoria ISO 9001: quando vale contratar",
   "seo_title": "Consultoria ISO 9001: quando vale contratar",
-  "seo_description": "O que a consultoria ISO 9001 faz (e o que não faz), quando vale contratar, como escolher e como o custo se relaciona com a certificação.",
-  "tldr": "Consultoria ISO 9001 encurta a implantação do SGQ, mas não emite certificado. Organismo é contrato à parte. Vale quando falta domínio interno ou o prazo aperta. Custo varia com porte e escopo; garantia Templum, quando houver, é condicionada em contrato.",
+  "seo_description": "Consultoria ISO 9001: o que faz, remoto, fases, construção civil, auditoria interna simulada, custo e como escolher. Não emite certificado; organismo acreditado à parte.",
+  "tldr": "Consultoria ISO 9001 implanta o SGQ e prepara a auditoria interna; o certificado sai de organismo acreditado, contrato separado. Vale quando falta domínio interno ou o prazo aperta. Projetos podem ser remotos ou em fases; construtoras costumam combinar ISO 9001 e PBQP-H. Compare propostas com o hub como escolher consultoria ISO.",
   "faq": [
     {
       "pergunta": "O que uma consultoria ISO 9001 faz?",
@@ -23,6 +23,18 @@
     {
       "pergunta": "A Templum garante a certificação?",
       "resposta": "<p>Quando aplicável, a garantia de 200% é <strong>condicionada ao cumprimento do método em contrato</strong>. Não é promessa absoluta fora das condições acordadas.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO 9001 atende 100% online?",
+      "resposta": "<p>Sim, muitos projetos usam reuniões por vídeo, mapeamento digital e plataforma de gestão. A empresa precisa gerar evidência na operação e participar da auditoria interna. Detalhes de modelos em <a href=\"/quanto-custa-iso-9001/\">quanto custa a ISO 9001</a>.</p>"
+    },
+    {
+      "pergunta": "A consultoria cuida de todo o processo até a auditoria externa?",
+      "resposta": "<p>Cuida da <strong>implantação</strong> e da preparação (incluindo auditoria interna assistida). A auditoria de certificação é do organismo acreditado, contratado à parte. Veja as etapas em <a href=\"/passo-a-passo-certificacao-iso-9001/\">passo a passo da certificação</a>.</p>"
+    },
+    {
+      "pergunta": "Como comparar consultorias ISO 9001?",
+      "resposta": "<p>Use as perguntas do hub <a href=\"/como-escolher-consultoria-iso/\">como escolher consultoria ISO</a>: separação consultoria/certificadora, auditoria interna, horas internas, setor e pós-certificação.</p>"
     }
   ]
 }

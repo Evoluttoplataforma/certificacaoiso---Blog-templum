@@ -1,0 +1,29 @@
+{
+  "title": "Homologação de fornecedores na ISO 9001 (requisito 8.4)",
+  "seo_title": "Homologação de fornecedores ISO 9001: compras e 8.4",
+  "seo_description": "Como homologar fornecedores na ISO 9001: critérios, avaliação, lista aprovada, reavaliação e procedimento de compras. Consultoria ajuda a desenhar sem burocracia.",
+  "tldr": "Homologação de fornecedores na ISO 9001 decorre do requisito 8.4: definir critérios, avaliar, aprovar, monitorar e reavaliar fornecedores externos conforme o impacto no produto ou serviço. Procedimento claro de compras evita compra por urgência sem critério. Consultoria ajuda a desenhar matriz de criticidade, formulário de avaliação e evidência para auditoria, sem lista infinita de homologados inativos.",
+  "published_at": "2026-10-04T17:00:00-03:00",
+  "faq": [
+    {
+      "pergunta": "ISO 9001 exige homologar todos os fornecedores?",
+      "resposta": "<p>Exige controle proporcional ao impacto. Fornecedor crítico (matéria-prima, serviço que afeta conformidade) pede avaliação formal; fornecedor ocasional de baixo risco pode ter critério simplificado, documentado.</p>"
+    },
+    {
+      "pergunta": "O que entra no procedimento de homologação?",
+      "resposta": "<p>Critérios (qualidade, prazo, certificados, visita quando aplicável), responsável, registro de aprovação, prazo de reavaliação e o que fazer se o fornecedor falhar.</p>"
+    },
+    {
+      "pergunta": "Certificado ISO do fornecedor substitui avaliação?",
+      "resposta": "<p>Ajuda, mas não substitui completamente: escopo do certificado, produto que você compra e desempenho na prática ainda entram na decisão.</p>"
+    },
+    {
+      "pergunta": "Consultoria ajuda a estruturar compras e homologação?",
+      "resposta": "<p>Sim, no desenho de processo 8.4, formulários e integração com não conformidade quando entrega falha. Veja <a href=\"/consultoria-iso-9001/\">consultoria ISO 9001</a>.</p>"
+    },
+    {
+      "pergunta": "Onde aprofundar a leitura da norma?",
+      "resposta": "<p>Artigo complementar: <a href=\"/a-qualificacao-de-fornecedores-segundo-a-iso-90012015/\">qualificação de fornecedores segundo a ISO 9001</a>.</p>"
+    }
+  ]
+}

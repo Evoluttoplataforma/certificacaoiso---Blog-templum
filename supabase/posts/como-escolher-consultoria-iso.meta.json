@@ -1,0 +1,33 @@
+{
+  "title": "Como escolher consultoria ISO no Brasil",
+  "seo_title": "Como escolher consultoria ISO no Brasil",
+  "seo_description": "Consultoria ISO x certificadora, o que perguntar antes de assinar, sinais de alerta e cenários: PME, remoto, construção, urgência, auditoria simulada e pós-certificação.",
+  "tldr": "Escolher consultoria ISO começa por separar papéis: consultoria implanta e gera evidência; organismo acreditado audita e emite certificado, e quem consultou não pode certificar a mesma empresa. Compare método, horas da equipe interna, experiência no seu setor e o que fica depois do projeto. Desconfie de pacote consultoria mais certificado, de prazo fixo sem falar em evidência histórica e de proposta que não explica auditoria interna. A Templum Consultoria atua na implantação (incluindo remoto e PME); contratação em templum.com.br/consultoria/.",
+  "published_at": "2026-10-04T12:00:00-03:00",
+  "faq": [
+    {
+      "pergunta": "Qual a diferença entre consultoria ISO e certificadora?",
+      "resposta": "<p>A <strong>consultoria</strong> ajuda a implantar o sistema, documentar processos, treinar a equipe e preparar a auditoria interna. A <strong>certificadora</strong> (organismo de certificação acreditado) conduz a auditoria de certificação e emite o certificado. Por imparcialidade, quem consultou não pode certificar a mesma empresa no mesmo ciclo.</p>"
+    },
+    {
+      "pergunta": "Existe consultoria ISO 100% online?",
+      "resposta": "<p>Sim. Muitos projetos usam reuniões por vídeo, ferramentas digitais de mapeamento e plataforma de gestão documentada. O que não muda é a necessidade de evidência na operação real da empresa e de auditoria interna antes da certificação. Veja modelos de entrega em <a href=\"/quanto-custa-iso-9001/\">quanto custa a ISO 9001</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO aceita dividir o projeto em fases?",
+      "resposta": "<p>Depende da consultoria e do escopo. Fases comuns: diagnóstico, desenho do sistema, operação assistida, auditoria interna e preparação para o organismo. Dividir ajuda a diluir investimento, mas o certificado só sai depois do ciclo completo de implantação e auditoria externa.</p>"
+    },
+    {
+      "pergunta": "Como saber se a consultoria simula o rigor da auditoria externa?",
+      "resposta": "<p>Pergunte se há <strong>auditoria interna conduzida ou acompanhada</strong>, checklist de evidências e simulação de entrevista com quem opera o processo. Use o <a href=\"/checklist-preparacao-auditoria-interna-iso/\">checklist de auditoria interna</a> como referência do que ter pronto.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO para construção civil e PBQP-H?",
+      "resposta": "<p>Construtoras costumam precisar de ISO 9001, PBQP-H (SiAC) ou ambos. A consultoria prepara gestão e obra; a certificação PBQP-H é feita por OAC acreditado. Guia: <a href=\"/pbqp-h/\">PBQP-H</a> e <a href=\"/como-conseguiur-a-certificacao-do-pbqp-h/\">como conseguir a certificação</a>.</p>"
+    },
+    {
+      "pergunta": "Há suporte após a certificação?",
+      "resposta": "<p>Manter o sistema vivo (indicadores, auditorias internas, revisão pela direção) é requisito da norma no ciclo de três anos. Algumas consultorias oferecem acompanhamento pós-certificação ou retainer; confirme na proposta o que está incluído depois da auditoria externa inicial.</p>"
+    }
+  ]
+}

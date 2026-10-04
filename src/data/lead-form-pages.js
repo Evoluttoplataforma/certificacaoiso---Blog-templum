@@ -40,11 +40,18 @@ export const LEAD_FORM_PAGES = {
   "pbqp-h": { display: "PBQP-H", crm: "PBQP-H" },
   "o-que-e-sassmaq": { display: "SASSMAQ", crm: "SASSMAQ" },
   "o-que-e-a-iso-37001": { display: "ISO 37001", crm: "ISO 37001" },
+  "consultoria-iso-37001": { display: "ISO 37001", crm: "ISO 37001" },
 
   // --- alta intenção comercial (quem já está decidindo) ---
   "quanto-custa-iso-9001": { display: "ISO 9001", crm: "ISO 9001" },
   "passo-a-passo-certificacao-iso-9001": { display: "ISO 9001", crm: "ISO 9001" },
   "iso-9001-requisitos-tudo-que-voce-precisa-saber": { display: "ISO 9001", crm: "ISO 9001" },
+  "consultoria-iso-9001": { display: "ISO 9001", crm: "ISO 9001" },
+  "como-escolher-consultoria-iso": { display: "ISO 9001", crm: "ISO 9001" },
+  "gestao-indicadores-iso-9001-2026-requisitos-6-2-e-9-1": { display: "ISO 9001", crm: "ISO 9001" },
+  "consultoria-iso-9001-imobiliaria": { display: "ISO 9001", crm: "ISO 9001" },
+  "manter-certificacao-iso-apos-certificar": { display: "ISO 9001", crm: "ISO 9001" },
+  "homologacao-fornecedores-iso-9001": { display: "ISO 9001", crm: "ISO 9001" },
   // GERIC é a fila técnica da Caixa para financiar obra. O CRM tem produto próprio
   // para isso, então o lead entra como GERIC — e não como PBQP-H, que é o meio.
   "principais-duvidas-sobre-o-geric": { display: "GERIC", crm: "GERIC" },
