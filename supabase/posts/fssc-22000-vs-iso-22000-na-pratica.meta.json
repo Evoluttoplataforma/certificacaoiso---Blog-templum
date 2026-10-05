@@ -1,0 +1,24 @@
+{
+  "title": "FSSC 22000 vs. ISO 22000 na prática: diferença e quando migrar",
+  "seo_title": "FSSC 22000 vs. ISO 22000 na prática: diferença e quando migrar",
+  "seo_description": "FSSC 22000 vs. ISO 22000 na prática: norma vs. esquema GFSI, três blocos do FSSC, quando o cliente exige FSSC e caminho para migrar de ISO 22000.",
+  "tldr": "ISO 22000 é a norma de SGSA; FSSC 22000 é esquema GFSI = ISO 22000 + PPRs ISO 22002 do setor + 18 requisitos FSSC. Certificado ISO 22000 não substitui FSSC. Grandes compradores e exportação costumam exigir FSSC.",
+  "faq": [
+    {
+      "pergunta": "Qual a diferença entre FSSC 22000 e ISO 22000 na prática?",
+      "resposta": "<p>A ISO 22000 certifica o sistema de gestão da segurança de alimentos. A FSSC 22000 audita o mesmo SGSA mais PPRs setoriais e requisitos adicionais do esquema, com reconhecimento GFSI. Ter ISO 22000 não significa estar certificado na FSSC.</p>"
+    },
+    {
+      "pergunta": "Empresa certificada na ISO 22000 já atende FSSC 22000?",
+      "resposta": "<p>Não automaticamente. É preciso fechar lacunas de PPR (ISO 22002), cumprir requisitos adicionais FSSC e passar auditoria de organismo licenciado pelo esquema FSSC.</p>"
+    },
+    {
+      "pergunta": "Quando vale migrar de ISO 22000 para FSSC?",
+      "resposta": "<p>Quando cliente, exportação ou matriz exige esquema GFSI e cita FSSC (ou equivalente benchmarked). Confirme por escrito antes de contratar certificação.</p>"
+    },
+    {
+      "pergunta": "Quem emite certificado FSSC 22000 no Brasil?",
+      "resposta": "<p>Organismo certificador acreditado e licenciado pela Foundation FSSC, contrato separado da consultoria. Veja <a href=\"/fssc-22000-organismos-certificadores-brasil/\">organismos certificadores FSSC no Brasil</a>.</p>"
+    }
+  ]
+}

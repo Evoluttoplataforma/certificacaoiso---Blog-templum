@@ -40,6 +40,15 @@ const SLUGS = [
   "homologacao-fornecedores-iso-9001",
   "consultoria-iso-9001-pme-remota",
   "iso-9001-cliente-edital-exige-certificado",
+  "fssc-22000-vs-iso-22000-na-pratica",
+  "como-obter-certificacao-fssc-22000-brasil",
+  "fssc-22000-organismos-certificadores-brasil",
+  "consultoria-iso-sistema-integrado-9001-14001",
+  "consultoria-iso-9001-construcao-civil-licitacoes",
+  "consultoria-iso-evidencias-auditoria-externa",
+  "fssc-22000-versao-7",
+  "certificacao-fssc-22000",
+  "consultoria-iso-14001",
 ];
 
 const CAT_QUALIDADE = {

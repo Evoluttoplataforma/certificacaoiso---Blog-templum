@@ -6,7 +6,7 @@
 
 ## Consultoria ISO: escolher parceiro e contratar
 
-- [Como escolher consultoria ISO no Brasil](https://certificacaoiso.com.br/como-escolher-consultoria-iso/): consultoria x certificadora, perguntas antes de assinar, PME remota (case Miranda Feliciano explicado passo a passo), urgência cliente/edital, construção, pós-certificação.
+- [Como escolher consultoria ISO no Brasil](https://certificacaoiso.com.br/como-escolher-consultoria-iso/): consultoria x certificadora, FAQ cenários ISO 9001, PME remota, ISO 14001, recertificação, evidências, licitações e ISO 37001.
 - [Consultoria ISO 9001 para PME remota](https://certificacaoiso.com.br/consultoria-iso-9001-pme-remota/): consultoria ISO 9001 online, prazos, consultoria x certificadora, case Miranda Feliciano (2 meses e 13 dias: o que foi feito) e Dimarzio Imóveis (6 meses).
 - [Cliente ou edital exige ISO 9001](https://certificacaoiso.com.br/iso-9001-cliente-edital-exige-certificado/): o que responder sem certificado, prazos realistas, licitação vs. fornecedor, passos com urgência comercial.
 - [Consultoria ISO 9001](https://certificacaoiso.com.br/consultoria-iso-9001/): quando vale contratar, o que entrega, como escolher, custo e garantia condicionada.
@@ -23,6 +23,10 @@
 - [Consultoria ISO 9001 para imobiliárias e incorporadoras](https://certificacaoiso.com.br/consultoria-iso-9001-imobiliaria/): vendas, contratos, obra, pós-venda e PBQP-H quando aplicável.
 - [Manter certificação ISO após certificar](https://certificacaoiso.com.br/manter-certificacao-iso-apos-certificar/): ciclo de 3 anos, surveillance, auditoria interna e suporte pós-certificação.
 - [Homologação de fornecedores ISO 9001 (8.4)](https://certificacaoiso.com.br/homologacao-fornecedores-iso-9001/): compras, critérios, lista aprovada e reavaliação.
+- [Consultoria ISO 9001 + ISO 14001 (SGI)](https://certificacaoiso.com.br/consultoria-iso-sistema-integrado-9001-14001/): sistema integrado qualidade e meio ambiente, certificação e auditoria integrada.
+- [Consultoria ISO 9001 construção civil e licitações](https://certificacaoiso.com.br/consultoria-iso-9001-construcao-civil-licitacoes/): edital, PBQP-H, Caixa/GERIC e escopo obra vs. escritório.
+- [Consultoria ISO: evidências para auditoria externa](https://certificacaoiso.com.br/consultoria-iso-evidencias-auditoria-externa/): organizar registros, auditoria interna rigorosa e entrevistas.
+- [Consultoria ISO 14001](https://certificacaoiso.com.br/consultoria-iso-14001/): resíduos, energia e água, obras, órgãos ambientais e SGI com ISO 9001.
 
 ## Guias das normas
 
@@ -35,6 +39,9 @@
 - [ISO 42001](https://certificacaoiso.com.br/iso-42001/): gestão de inteligência artificial.
 - [ISO 17025](https://certificacaoiso.com.br/iso-17025/): competência de laboratórios de ensaio e calibração.
 - [FSSC 22000](https://certificacaoiso.com.br/fssc-22000/): esquema de segurança de alimentos reconhecido pelo GFSI.
+- [FSSC 22000 vs. ISO 22000 na prática](https://certificacaoiso.com.br/fssc-22000-vs-iso-22000-na-pratica/): norma vs. esquema GFSI, migrar de ISO 22000, três blocos do FSSC.
+- [Como obter certificação FSSC 22000 no Brasil](https://certificacaoiso.com.br/como-obter-certificacao-fssc-22000-brasil/): passo a passo, consultoria x OC licenciado FSSC, manutenção.
+- [Organismos certificadores FSSC 22000 no Brasil](https://certificacaoiso.com.br/fssc-22000-organismos-certificadores-brasil/): licenciamento FSSC, acreditação, checklist para escolher OC.
 - [FSSC 22000 Versão 7](https://certificacaoiso.com.br/fssc-22000-versao-7/): transição 2026-2028, ISO 22002:2025, ISO 22002-100, upgrade, estudos HACCP e FAQ de auditoria.
 - [Certificação FSSC 22000](https://certificacaoiso.com.br/certificacao-fssc-22000/): etapas, ciclo de três anos, auditoria não anunciada, tempo de auditoria V7 e custo.
 - [ISO 22000](https://certificacaoiso.com.br/iso-22000/): norma do sistema de gestão da segurança de alimentos.

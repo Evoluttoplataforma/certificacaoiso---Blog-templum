@@ -1,7 +1,7 @@
 {
   "title": "Como escolher consultoria ISO no Brasil",
   "seo_title": "Como escolher consultoria ISO no Brasil",
-  "seo_description": "Consultoria ISO x certificadora, perguntas antes de assinar, PME remota (cases e depoimentos), urgência de cliente ou edital, sinais de alerta e links por norma.",
+  "seo_description": "Como escolher consultoria ISO: certificadora x consultoria, PME remota, ISO 14001, recertificação, evidências, licitações, ISO 37001, FAQ por cenário e sinais de alerta.",
   "tldr": "Escolher consultoria ISO começa por separar papéis: consultoria implanta e gera evidência; organismo acreditado audita e emite certificado. PME remota: guia com case Miranda Feliciano (2 meses e 13 dias: processos, indicadores, auditorias) e Dimarzio (6 meses). Urgência comercial: o que responder sem certificado e prazos realistas. Compare método, horas internas e auditoria interna antes de assinar.",
   "faq": [
     {
@@ -31,6 +31,22 @@
     {
       "pergunta": "Há suporte após a certificação?",
       "resposta": "<p>Manter o sistema vivo (indicadores, auditorias internas, revisão pela direção) é requisito da norma no ciclo de três anos. Algumas consultorias oferecem acompanhamento pós-certificação ou retainer; confirme na proposta o que está incluído depois da auditoria externa inicial. Veja <a href=\"/manter-certificacao-iso-apos-certificar/\">manter certificação ISO após certificar</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO ajuda a organizar evidências para auditoria externa?",
+      "resposta": "<p>Sim: matriz de registros, auditoria interna rigorosa e preparação de entrevistas. <a href=\"/consultoria-iso-evidencias-auditoria-externa/\">Consultoria ISO: evidências para auditoria externa</a>.</p>"
+    },
+    {
+      "pergunta": "Qual consultoria ISO 9001 para equipe enxuta?",
+      "resposta": "<p>Priorize escopo proporcional, processos críticos primeiro e consultoria remota com RD dedicado. <a href=\"/consultoria-iso-9001-pme-remota/\">PME remota</a> e FAQ em <a href=\"/como-escolher-consultoria-iso/#faq-9001\">cenários ISO 9001</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO 9001 acompanha até a recertificação?",
+      "resposta": "<p>Depende do contrato. Peça calendário de auditorias internas e simulação antes da surveillance. <a href=\"/manter-certificacao-iso-apos-certificar/#ate-recertificacao\">Acompanhamento até recertificação</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO 14001 no Brasil?",
+      "resposta": "<p>Hub dedicado: <a href=\"/consultoria-iso-14001/\">consultoria ISO 14001</a> (resíduos, energia, obras, órgãos ambientais). Integração com 9001: <a href=\"/consultoria-iso-sistema-integrado-9001-14001/\">SGI 9001 + 14001</a>.</p>"
     }
   ]
 }

@@ -78,6 +78,13 @@ export const LEAD_FORM_PAGES = {
   // duas — é o produto que o comercial atende, mesmo quando a página fala de ISO 22000.
   "certificacao-fssc-22000": { display: "FSSC 22000", crm: "FSSC 22000" },
   "requisitos-fssc-22000": { display: "FSSC 22000", crm: "FSSC 22000" },
+  "fssc-22000-vs-iso-22000-na-pratica": { display: "FSSC 22000", crm: "FSSC 22000" },
+  "como-obter-certificacao-fssc-22000-brasil": { display: "FSSC 22000", crm: "FSSC 22000" },
+  "fssc-22000-organismos-certificadores-brasil": { display: "FSSC 22000", crm: "FSSC 22000" },
+  "consultoria-iso-sistema-integrado-9001-14001": { display: "SGI", crm: "SGI" },
+  "consultoria-iso-9001-construcao-civil-licitacoes": { display: "ISO 9001", crm: "ISO 9001" },
+  "consultoria-iso-evidencias-auditoria-externa": { display: "ISO 9001", crm: "ISO 9001" },
+  "consultoria-iso-14001": { display: "ISO 14001", crm: "ISO 14001" },
 
   // --- pilar da vertical de NR-1 (riscos psicossociais) ---
   // Ganha o formulário completo por dois motivos: a fiscalização punitiva já começou

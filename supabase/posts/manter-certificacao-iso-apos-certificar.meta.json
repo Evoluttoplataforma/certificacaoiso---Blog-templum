@@ -1,7 +1,7 @@
 {
   "title": "Como manter a certificação ISO após a auditoria",
   "seo_title": "Manter certificação ISO: pós-auditoria e ciclo de 3 anos",
-  "seo_description": "Depois do certificado ISO: auditorias de manutenção, auditoria interna, análise crítica, indicadores e quando contratar suporte. Evite perder a certificação no ciclo.",
+  "seo_description": "Manter certificação ISO no ciclo de 3 anos: surveillance, recertificação, auditoria interna, indicadores e consultoria que acompanha até a recertificação (não só até a 1ª certificação).",
   "tldr": "Certificado ISO vale três anos, com auditorias de manutenção do organismo e exigência de sistema vivo: indicadores, auditoria interna, análise crítica pela direção e ações corretivas. Pós-certificação não é pausa: é quando muitas empresas perdem evidência e tomam NC na surveillance. Consultoria pode apoiar retainer, simulação de auditoria e indicadores; organismo continua auditando à parte.",
   "published_at": "2026-10-04T16:30:00-03:00",
   "faq": [
@@ -24,6 +24,10 @@
     {
       "pergunta": "Como manter indicadores vivos?",
       "resposta": "<p>Objetivos 6.2, monitoramento 9.1 e análise crítica 9.3. Guia prático: <a href=\"/gestao-indicadores-iso-9001-2026-requisitos-6-2-e-9-1/\">gestão de indicadores ISO 9001:2026</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO 9001 acompanha até a recertificação?",
+      "resposta": "<p>Pode, se estiver no contrato: auditorias internas no ciclo, simulação antes da surveillance e apoio na recertificação. Veja <a href=\"/manter-certificacao-iso-apos-certificar/#ate-recertificacao\">acompanhamento até recertificação</a>.</p>"
     }
   ]
 }
