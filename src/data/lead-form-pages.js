@@ -37,6 +37,10 @@ export const LEAD_FORM_PAGES = {
   "iso-22000": { display: "FSSC 22000", crm: "FSSC 22000" },
   "fssc-22000": { display: "FSSC 22000", crm: "FSSC 22000" },
   "iso-17025": { display: "ISO 17025", crm: "" }, // sem opção no cf_produto do CRM
+  "acreditacao-iso-17025-etapas": { display: "ISO 17025", crm: "" },
+  "documentacao-iso-17025": { display: "ISO 17025", crm: "" },
+  "iso-17025-vs-iso-9001": { display: "ISO 17025", crm: "" },
+  "o-que-mudou-na-iso-170252017": { display: "ISO 17025", crm: "" },
   "pbqp-h": { display: "PBQP-H", crm: "PBQP-H" },
   "o-que-e-sassmaq": { display: "SASSMAQ", crm: "SASSMAQ" },
   "o-que-e-a-iso-37001": { display: "ISO 37001", crm: "ISO 37001" },

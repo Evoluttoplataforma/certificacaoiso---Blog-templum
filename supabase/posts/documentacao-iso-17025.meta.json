@@ -1,0 +1,13 @@
+{
+  "title": "Documentação ISO 17025: políticas, procedimentos e registros",
+  "seo_title": "Como preparar documentação ISO 17025",
+  "seo_description": "Como preparar documentação para ISO 17025: políticas, procedimentos e registros ligados ao escopo de acreditação e à NBR ISO/IEC 17025:2017.",
+  "tldr": "Documentação ISO 17025: políticas de imparcialidade e qualidade, procedimentos por método no escopo, registros de calibração, laudos e auditoria. Amarrar cada documento ao escopo CGCRE.",
+  "tags": ["ISO 17025", "documentação", "laboratório"],
+  "faq": [
+    {
+      "pergunta": "Como preparar a documentação para ISO 17025 (políticas procedimentos registros)?",
+      "resposta": "<p>Separar política, procedimento e registro; mapear aos blocos 4 a 8 da norma e ao escopo. Tabela e erros comuns: <a href=\"/documentacao-iso-17025/#mapa-requisitos\">documentação ISO 17025</a>.</p>"
+    }
+  ]
+}

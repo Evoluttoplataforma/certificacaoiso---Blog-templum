@@ -41,7 +41,11 @@
 - [ISO 27701](https://certificacaoiso.com.br/iso-27701-2025-o-que-muda-independencia-da-iso-27001/): privacidade (SGPI/PIMS); edição 2025 independente da 27001; implementação e certificação.
 - [ISO 37001](https://certificacaoiso.com.br/o-que-e-a-iso-37001/): sistema de gestão antissuborno, edição 2025 e prazo de transição.
 - [ISO 42001](https://certificacaoiso.com.br/iso-42001/): gestão de inteligência artificial.
-- [ISO 17025](https://certificacaoiso.com.br/iso-17025/): competência de laboratórios de ensaio e calibração.
+- [ISO 17025](https://certificacaoiso.com.br/iso-17025/): acreditação CGCRE, ensaio/calibração, benefícios e hub da norma.
+- [Acreditação ISO 17025: etapas](https://certificacaoiso.com.br/acreditacao-iso-17025-etapas/): passos para laboratório de ensaio até avaliação Inmetro.
+- [Documentação ISO 17025](https://certificacaoiso.com.br/documentacao-iso-17025/): políticas, procedimentos e registros por requisito.
+- [ISO 17025 vs ISO 9001](https://certificacaoiso.com.br/iso-17025-vs-iso-9001/): acreditação de lab versus certificação SGQ.
+- [NBR ISO/IEC 17025:2017](https://certificacaoiso.com.br/o-que-mudou-na-iso-170252017/): estrutura da norma e mudanças em relação à edição anterior.
 - [FSSC 22000](https://certificacaoiso.com.br/fssc-22000/): esquema de segurança de alimentos reconhecido pelo GFSI.
 - [FSSC 22000 vs. ISO 22000 na prática](https://certificacaoiso.com.br/fssc-22000-vs-iso-22000-na-pratica/): norma vs. esquema GFSI, migrar de ISO 22000, três blocos do FSSC.
 - [Como obter certificação FSSC 22000 no Brasil](https://certificacaoiso.com.br/como-obter-certificacao-fssc-22000-brasil/): passo a passo, consultoria x OC licenciado FSSC, manutenção.
