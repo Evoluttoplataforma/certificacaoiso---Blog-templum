@@ -85,6 +85,7 @@ export const LEAD_FORM_PAGES = {
   "consultoria-iso-9001-construcao-civil-licitacoes": { display: "ISO 9001", crm: "ISO 9001" },
   "consultoria-iso-evidencias-auditoria-externa": { display: "ISO 9001", crm: "ISO 9001" },
   "consultoria-iso-14001": { display: "ISO 14001", crm: "ISO 14001" },
+  "semana-mundial-da-qualidade-2026": { display: "ISO 9001", crm: "ISO 9001" },
 
   // --- pilar da vertical de NR-1 (riscos psicossociais) ---
   // Ganha o formulário completo por dois motivos: a fiscalização punitiva já começou

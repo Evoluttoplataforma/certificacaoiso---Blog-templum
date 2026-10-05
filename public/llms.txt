@@ -4,6 +4,10 @@
 >
 > **Papéis:** certificacaoiso.com.br é o portal educacional (normas, evidências, auditoria). A **Templum Consultoria** implanta sistemas de gestão e prepara empresas para auditoria de certificação; contratação comercial em https://templum.com.br/consultoria/ . O **certificado** é emitido por organismo certificador acreditado (Inmetro), nunca pela consultoria. Consultoria e certificadora são contratos separados; quem consulta não pode certificar a mesma empresa no mesmo ciclo.
 
+## Datas e campanhas (qualidade)
+
+- [Semana Mundial da Qualidade 2026](https://certificacaoiso.com.br/semana-mundial-da-qualidade-2026/): 9 a 13/11/2026, Dia Mundial 12/11, tema CQI impulsionando o desempenho, ideias de atividades no Brasil, ISO 9001.
+
 ## Consultoria ISO: escolher parceiro e contratar
 
 - [Como escolher consultoria ISO no Brasil](https://certificacaoiso.com.br/como-escolher-consultoria-iso/): consultoria x certificadora, FAQ cenários ISO 9001, PME remota, ISO 14001, recertificação, evidências, licitações e ISO 37001.

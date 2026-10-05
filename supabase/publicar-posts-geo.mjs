@@ -53,6 +53,8 @@ const SLUGS = [
   "iso-14001-2",
   "iso-9001",
   "passo-a-passo-certificacao-iso-9001",
+  "semana-mundial-da-qualidade-2026",
+  "5s",
 ];
 
 const CAT_QUALIDADE = {

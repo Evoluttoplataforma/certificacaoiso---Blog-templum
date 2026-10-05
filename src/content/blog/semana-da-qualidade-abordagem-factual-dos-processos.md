@@ -10,6 +10,8 @@ wpId: 4789
 draft: false
 ---
 
+**Atualização 2026:** guia canônico [Semana da Qualidade 2026](https://certificacaoiso.com.br/semana-mundial-da-qualidade-2026/) (9 a 13/11, Dia Mundial 12/11).
+
 Olá, pessoal!
 
 A fim de continuar a nossa reflexão dessa semana, gostaria de falar um pouco sobre o princípio Abordagem Factual dos Processos.

@@ -10,6 +10,8 @@ wpId: 4784
 draft: false
 ---
 
+**Atualização 2026:** datas, tema CQI e ideias de atividades na [Semana Mundial da Qualidade 2026](https://certificacaoiso.com.br/semana-mundial-da-qualidade-2026/).
+
 Continuando as comemorações da Semana da Qualidade 2013, hoje gostaria de abordar 2 princípios da qualidade que têm tudo a ver com o tema escolhido de 2013.
 
 ### Os princípios são: Envolvimento das Pessoas e Liderança
