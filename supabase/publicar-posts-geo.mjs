@@ -52,6 +52,8 @@ const SLUGS = [
   "consultoria-iso-27001",
   "consultoria-iso-27701",
   "treinamento-iso-27001",
+  "iso-27000-vs-iso-27001",
+  "iso-27001-anexo-a-mapeamento-politicas",
   "iso-14001-2",
   "iso-9001",
   "passo-a-passo-certificacao-iso-9001",

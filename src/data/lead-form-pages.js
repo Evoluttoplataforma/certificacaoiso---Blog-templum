@@ -76,6 +76,8 @@ export const LEAD_FORM_PAGES = {
   "iso-27701-lgpd-gdpr-conformidade": { display: "ISO 27001", crm: "ISO 27001" },
   "iso-27701-2025-o-que-muda-independencia-da-iso-27001": { display: "ISO 27001", crm: "ISO 27001" },
   "consultoria-iso-27701": { display: "ISO 27001", crm: "ISO 27001" },
+  "iso-27000-vs-iso-27001": { display: "ISO 27001", crm: "ISO 27001" },
+  "iso-27001-anexo-a-mapeamento-politicas": { display: "ISO 27001", crm: "ISO 27001" },
   "semana-mundial-da-qualidade-2026": { display: "ISO 9001", crm: "ISO 9001" },
 
   // --- fundo de funil da vertical de FSSC 22000 (10/09/2026) ---

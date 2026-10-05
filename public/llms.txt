@@ -73,7 +73,9 @@
 - [Certificação ISO 27001: etapas, prazo e custo](https://certificacaoiso.com.br/certificacao-iso-27001-etapas-prazo-custo/): estágios 1 e 2 e o que define o preço.
 - [ISO 27001 e ISO 27701](https://certificacaoiso.com.br/qual-a-relacao-da-iso-27001-com-a-iso-27701/): diferença entre segurança da informação e privacidade.
 - [ISO 27001 para pequenas empresas](https://certificacaoiso.com.br/iso-27001-para-pequenas-empresas/): requisitos-chave, escopo e SoA enxutos para PME.
-- [Treinamento ISO 27001](https://certificacaoiso.com.br/treinamento-iso-27001/): recursos e ordem de estudo para entender SGSI e ISMS.
+- [Treinamento ISO 27001](https://certificacaoiso.com.br/treinamento-iso-27001/): trilha no blog, vídeos do canal Templum no YouTube e ordem de estudo para SGSI/ISMS.
+- [ISO 27000 vs ISO 27001](https://certificacaoiso.com.br/iso-27000-vs-iso-27001/): vocabulário (27000) versus requisitos certificáveis (27001).
+- [ISO 27001 Anexo A: mapeamento para políticas](https://certificacaoiso.com.br/iso-27001-anexo-a-mapeamento-politicas/): ligar controles 2022 a documentos e evidências existentes.
 - [Como implementar a ISO 27701](https://certificacaoiso.com.br/como-implementar-a-iso-27701/): passos práticos do SGPI em médio porte.
 - [Certificação ISO 27701](https://certificacaoiso.com.br/certificacao-iso-27701-etapas-e-requisitos/): critérios, etapas, prazo, custo e certificação isolada ou com 27001.
 - [ISO 27701 e LGPD/GDPR](https://certificacaoiso.com.br/iso-27701-lgpd-gdpr-conformidade/): como o SGPI apoia conformidade legal (sem substituir a lei).

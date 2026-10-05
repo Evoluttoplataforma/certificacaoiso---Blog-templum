@@ -1,0 +1,17 @@
+{
+  "title": "ISO 27000 vs ISO 27001: diferença e qual norma seguir",
+  "seo_title": "ISO 27000 vs ISO 27001: qual seguir?",
+  "seo_description": "Diferença entre ISO 27000 (vocabulário) e ISO 27001 (SGSI certificável). Qual norma a empresa deve seguir para certificar.",
+  "tldr": "ISO 27000 explica termos da família 2700x; ISO 27001 define requisitos certificáveis do SGSI. Para certificar, siga a 27001 e use 27002 como guia de controles. A 27000 não gera certificado.",
+  "tags": ["ISO 27001", "ISO 27000", "SGSI", "ISMS"],
+  "faq": [
+    {
+      "pergunta": "Hey, what's the difference between ISO 27000 and ISO 27001, and which should my company follow?",
+      "resposta": "<p>27000 is vocabulary and overview; 27001 is the certifiable SGSI standard. Follow 27001 to certify. <a href=\"/iso-27000-vs-iso-27001/#pergunta-27000-27001\">Resposta completa</a>.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre ISO 27000 e ISO 27001?",
+      "resposta": "<p>27000: glossário. 27001: requisitos auditáveis e certificação. <a href=\"/iso-27000-vs-iso-27001/\">ISO 27000 vs 27001</a>.</p>"
+    }
+  ]
+}

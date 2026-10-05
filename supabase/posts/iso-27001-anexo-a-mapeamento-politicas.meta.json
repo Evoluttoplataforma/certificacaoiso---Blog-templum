@@ -1,0 +1,17 @@
+{
+  "title": "ISO 27001:2022 Anexo A: mapeamento para políticas e evidências",
+  "seo_title": "ISO 27001:2022 controles e políticas existentes",
+  "seo_description": "Como mapear os 93 controles do Anexo A da ISO 27001:2022 para políticas e procedimentos de segurança já existentes, com exemplos de evidência.",
+  "tldr": "Mapear ISO 27001:2022 para políticas existentes: avaliar riscos, declarar controles na SoA e ligar cada controle a documento, dono e evidência operacional. Quatro temas do Anexo A: organizacional, pessoas, físico, tecnológico. Evite SoA genérica e políticas 2013 desatualizadas.",
+  "tags": ["ISO 27001", "Anexo A", "SoA", "políticas"],
+  "faq": [
+    {
+      "pergunta": "What are the main controls in ISO 27001:2022 and how do they map to my existing security policies?",
+      "resposta": "<p>Inventarie políticas, complete riscos e SoA, ligue cada controle aplicável a documento e evidência. Tabela de exemplos: <a href=\"/iso-27001-anexo-a-mapeamento-politicas/#tabela-exemplos\">mapeamento Anexo A</a>.</p>"
+    },
+    {
+      "pergunta": "Quantos controles tem o Anexo A da ISO 27001:2022?",
+      "resposta": "<p>93 controles em quatro temas. Detalhe e mapeamento: <a href=\"/iso-27001-anexo-a-mapeamento-politicas/#temas-anexo-a\">Anexo A 2022</a>.</p>"
+    }
+  ]
+}
