@@ -20,4 +20,4 @@ E foi exatamente isso que fez a Dimarzio Imóveis, de Campinas (SP). Além de im
 
 Souza conta também que o processo de implementação da ISO 9001 se deu em oito meses. Os focos foram o atendimento ao cliente e a padronização de relatórios. “A empresa que obtém o selo ISO 9001 demonstra que tem preocupação com a gestão da qualidade”. Além disso, a participação e o envolvimento dos colaboradores, que gostaram da ideia e se adaptaram rapidamente às novas exigências, foi fundamental no sucesso do projeto. Qualquer organização que pretende obter a certificação ISO 9001 deve estimular a participação de todos.
 
-![Campanha da Dimarzio Imóveis, empresa certificada ISO 9001](/wp-content/uploads/2011/04/anunciodimarzio-web.webp)
+![Campanha da Dimarzio Imóveis, empresa certificada ISO 9001](/wp-content/uploads/2011/04/anunciodimarzio-web-150x150.webp)
