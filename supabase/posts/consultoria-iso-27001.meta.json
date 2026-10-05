@@ -27,6 +27,10 @@
   {
    "pergunta": "A consultoria da Templum tem garantia?",
    "resposta": "<p>Tem. Cumprido o método, se a certificação não sair, o valor investido volta em dobro — as condições exatas ficam na proposta. Além da garantia, o modelo inclui diagnóstico antes da proposta, cronograma sob medida, documentação elaborada em conjunto, checkpoints de validação a cada etapa, consultor disponível em horário comercial, selo que comprova a implantação em andamento e gestão do sistema em software em vez de planilha.</p>"
+  },
+  {
+   "pergunta": "Existe consultoria ISO 27001 para pequenas empresas?",
+   "resposta": "<p>Sim, com escopo enxuto, SoA proporcional e dono interno de TI ou operação. Veja <a href=\"/consultoria-iso-27001/#pme\">consultoria ISO 27001 para PME</a> e <a href=\"/iso-27001-para-pequenas-empresas/\">ISO 27001 para pequenas empresas</a>.</p>"
   }
  ]
 }

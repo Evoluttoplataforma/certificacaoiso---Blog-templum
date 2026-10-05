@@ -14,6 +14,8 @@ A ISO 37001 é o Sistema de Gestão Antissuborno desenvolvido pela ISO (Internat
 
 Toda sua estrutura foi feita para o estabelecimento, implementação, manutenção, análise crítica e melhoria de um sistema de gestão Antissuborno.
 
+**Consultoria e licitações:** para implantar SGAS (canal de denúncias, brindes, contratos públicos), veja [consultoria ISO 37001](/consultoria-iso-37001/) e a seção [licitações e contratos públicos](/consultoria-iso-37001/#licitacoes). O certificado só um organismo acreditado emite; consultoria e certificadora são contratos separados.
+
 ## O que é suborno para a ISO 37001?
 
 Antes de explorarmos os benefícios e objetivos da norma, é crucial entendermos o conceito de suborno. Para a ISO 37001, suborno é:

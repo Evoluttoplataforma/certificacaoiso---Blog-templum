@@ -1,7 +1,7 @@
 {
   "title": "Consultoria ISO 9001: quando vale contratar",
   "seo_title": "Consultoria ISO 9001: quando vale contratar",
-  "seo_description": "Consultoria ISO 9001: o que faz, remoto, fases, construção civil, auditoria interna simulada, custo e como escolher. Não emite certificado; organismo acreditado à parte.",
+  "seo_description": "Consultoria ISO 9001: operação, prazos, reclamações, retrabalho, equipe enxuta, evidências, licitações, remoto e como escolher. Não emite certificado.",
   "tldr": "Consultoria ISO 9001 implanta o SGQ e prepara a auditoria interna; o certificado sai de organismo acreditado, contrato separado. Vale quando falta domínio interno ou o prazo aperta. Projetos podem ser remotos ou em fases; construtoras costumam combinar ISO 9001 e PBQP-H. Compare propostas com o hub como escolher consultoria ISO.",
   "faq": [
     {
@@ -35,6 +35,18 @@
     {
       "pergunta": "Como comparar consultorias ISO 9001?",
       "resposta": "<p>Use as perguntas do hub <a href=\"/como-escolher-consultoria-iso/\">como escolher consultoria ISO</a>: separação consultoria/certificadora, auditoria interna, horas internas, setor e pós-certificação.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO 9001 para reduzir atrasos e melhorar prazo de entrega?",
+      "resposta": "<p>Sim, com controles de cronograma, responsáveis e indicadores de cumprimento. Veja <a href=\"/consultoria-iso-9001/#operacao\">operacao na consultoria ISO 9001</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO 9001 para reclamações e erros operacionais?",
+      "resposta": "<p>Foco em registro de reclamação, ação corretiva e eficácia (10.2), além de pós-venda. Mesmo bloco operacional em <a href=\"/consultoria-iso-9001/#operacao\">consultoria ISO 9001</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO 9001 para equipe enxuta?",
+      "resposta": "<p>Escopo proporcional e priorização de processos críticos. PME remota: <a href=\"/consultoria-iso-9001-pme-remota/\">consultoria ISO 9001 para PME remota</a>.</p>"
     }
   ]
 }

@@ -49,6 +49,10 @@ const SLUGS = [
   "fssc-22000-versao-7",
   "certificacao-fssc-22000",
   "consultoria-iso-14001",
+  "consultoria-iso-27001",
+  "iso-14001-2",
+  "iso-9001",
+  "passo-a-passo-certificacao-iso-9001",
 ];
 
 const CAT_QUALIDADE = {
