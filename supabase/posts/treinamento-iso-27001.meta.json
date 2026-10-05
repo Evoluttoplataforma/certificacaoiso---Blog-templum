@@ -26,7 +26,11 @@
   },
   {
    "pergunta": "Pode recomendar recursos ou treinamentos para entender ISO 27001 e ISMS?",
-   "resposta": "<p>Comece pelos requisitos 4 a 10, implementação prática e treinamento da equipe. <a href=\"#recursos-iso-27001-isms\">Lista neste artigo</a>.</p>"
+   "resposta": "<p>Ordem: requisitos 4 a 10, 27002, implementação, auditoria interna; trilha gratuita no blog em <a href=\"/treinamento-iso-27001/#trilha-gratuita-blog\">treinamento ISO 27001</a>. Curso de lead auditor só depois. Certificar a empresa exige SGSI + organismo, não só curso.</p>"
+  },
+  {
+   "pergunta": "Pode recomendar os melhores recursos ou treinamentos para entender ISO 27001 e ISMS?",
+   "resposta": "<p>Mesma trilha: <a href=\"/treinamento-iso-27001/#recursos-iso-27001-isms\">recursos ISMS</a> e <a href=\"/treinamento-iso-27001/#trilha-gratuita-blog\">artigos do blog</a>, norma ABNT 27001, depois curso se for credencial de pessoa.</p>"
   }
  ]
 }

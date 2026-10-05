@@ -77,6 +77,8 @@
 - [Como implementar a ISO 27701](https://certificacaoiso.com.br/como-implementar-a-iso-27701/): passos práticos do SGPI em médio porte.
 - [Certificação ISO 27701](https://certificacaoiso.com.br/certificacao-iso-27701-etapas-e-requisitos/): critérios, etapas, prazo, custo e certificação isolada ou com 27001.
 - [ISO 27701 e LGPD/GDPR](https://certificacaoiso.com.br/iso-27701-lgpd-gdpr-conformidade/): como o SGPI apoia conformidade legal (sem substituir a lei).
+- [Consultoria ISO 27701](https://certificacaoiso.com.br/consultoria-iso-27701/): SGPI, controlador/operador, integração com 27001; consultoria não emite certificado.
+- [Semana da Qualidade 2026](https://certificacaoiso.com.br/semana-mundial-da-qualidade-2026/): tema CQI, pilares, ideias, PQTA cartórios, decoração/comunicação visual.
 - [OHSAS 18001 e ISO 45001](https://certificacaoiso.com.br/ohsas-18001-e-iso-45001/): a OHSAS acabou; o que mudou na migração.
 - [NR-1 e ISO 45001](https://certificacaoiso.com.br/nr-1-e-iso-45001/): como o sistema de gestão conversa com a NR-1 e o PGR.
 - [Requisitos da FSSC 22000](https://certificacaoiso.com.br/requisitos-fssc-22000/): os três blocos e os 18 requisitos adicionais.

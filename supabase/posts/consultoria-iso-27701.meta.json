@@ -1,0 +1,21 @@
+{
+  "title": "Consultoria ISO 27701: o que faz, o que é seu e como escolher",
+  "seo_title": "Consultoria ISO 27701: SGPI, LGPD e como escolher",
+  "seo_description": "Consultoria ISO 27701: implantação do SGPI, controlador e operador, LGPD, integração com ISO 27001. Consultoria não emite certificado.",
+  "tldr": "Consultoria ISO 27701 entrega método para SGPI: tratamentos, riscos de privacidade, controles A1/A2/A3 e auditoria interna. Não substitui jurídico/DPO nem emite certificado. Desde 2025 a certificação pode ser só 27701 ou integrada ao SGSI. Organismo acreditado certifica; consultoria e certificação são contas separadas.",
+  "tags": ["ISO 27701", "consultoria", "privacidade", "SGPI", "LGPD"],
+  "faq": [
+    {
+      "pergunta": "Consultoria ISO 27701 emite certificado?",
+      "resposta": "<p>Não. Certificado ISO 27701 é emitido por organismo acreditado após auditoria. Consultoria prepara o SGPI.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO 27701 resolve a LGPD?",
+      "resposta": "<p>Apoia gestão e evidência; a lei exige jurídico e operação próprios. <a href=\"/iso-27701-lgpd-gdpr-conformidade/\">27701 e LGPD</a>.</p>"
+    },
+    {
+      "pergunta": "Preciso de consultoria 27001 e 27701 juntas?",
+      "resposta": "<p>Depende do escopo. 27701:2025 pode ser isolada; integrar com 27001 reduz retrabalho. <a href=\"/consultoria-iso-27701/#27701-sozinha\">27701 isolada ou integrada</a>.</p>"
+    }
+  ]
+}

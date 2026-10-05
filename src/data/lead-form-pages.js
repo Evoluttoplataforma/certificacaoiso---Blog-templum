@@ -75,6 +75,8 @@ export const LEAD_FORM_PAGES = {
   "certificacao-iso-27701-etapas-e-requisitos": { display: "ISO 27001", crm: "ISO 27001" },
   "iso-27701-lgpd-gdpr-conformidade": { display: "ISO 27001", crm: "ISO 27001" },
   "iso-27701-2025-o-que-muda-independencia-da-iso-27001": { display: "ISO 27001", crm: "ISO 27001" },
+  "consultoria-iso-27701": { display: "ISO 27001", crm: "ISO 27001" },
+  "semana-mundial-da-qualidade-2026": { display: "ISO 9001", crm: "ISO 9001" },
 
   // --- fundo de funil da vertical de FSSC 22000 (10/09/2026) ---
   // "certificação fssc 22000" e "requisitos fssc 22000" são consulta de quem já tem a
@@ -89,7 +91,6 @@ export const LEAD_FORM_PAGES = {
   "consultoria-iso-9001-construcao-civil-licitacoes": { display: "ISO 9001", crm: "ISO 9001" },
   "consultoria-iso-evidencias-auditoria-externa": { display: "ISO 9001", crm: "ISO 9001" },
   "consultoria-iso-14001": { display: "ISO 14001", crm: "ISO 14001" },
-  "semana-mundial-da-qualidade-2026": { display: "ISO 9001", crm: "ISO 9001" },
 
   // --- pilar da vertical de NR-1 (riscos psicossociais) ---
   // Ganha o formulário completo por dois motivos: a fiscalização punitiva já começou
