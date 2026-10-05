@@ -1,16 +1,20 @@
 {
- "title": "Como implementar a ISO 27701: passos práticos (médio porte)",
- "seo_title": "Implementar ISO 27701: passos práticos e SGPI",
- "seo_description": "Passos práticos para implementar a ISO 27701 em empresa de médio porte: SGPI, controlador, operador, controles e auditoria.",
- "tldr": "Implementar ISO 27701: mapear tratamentos e papéis, políticas de privacidade, controles do SGPI, integração opcional com ISO 27001, auditoria interna e certificação.",
- "faq": [
-  {
-   "pergunta": "Quais são os passos práticos para implementar a ISO 27701 em uma empresa de médio porte?",
-   "resposta": "<p>Diagnóstico de tratamentos, papéis, políticas, controles SGPI, integração com SGSI se houver, auditoria interna. Lista: <a href=\"#passos-27701\">passos neste artigo</a>.</p>"
-  },
-  {
-   "pergunta": "Preciso ter ISO 27001 antes da 27701?",
-   "resposta": "<p>Não é obrigatório desde a 27701:2025 independente. Integrar os dois costuma reduzir retrabalho em incidentes e fornecedores.</p>"
-  }
- ]
+  "title": "Como implementar a ISO 27701: passos práticos (médio porte)",
+  "seo_title": "Implementar ISO 27701: passos práticos e SGPI",
+  "seo_description": "Passos práticos para implementar a ISO 27701 em empresa de médio porte: controlador, operador, Anexo A 2025, evidências e integração com ISO 27001.",
+  "tldr": "Implementar ISO 27701 em médio porte: escopo e patrocínio, inventário de tratamentos, papéis controlador/operador, políticas, avaliação de risco de privacidade, controles A1/A2/A3, operação com registros, auditoria interna e certificação. Desde 2025 não é obrigatório ter ISO 27001, mas integrar SGSI e SGPI reduz retrabalho em incidentes e fornecedores.",
+  "faq": [
+    {
+      "pergunta": "Quais são os passos práticos para implementar a ISO 27701 em uma empresa de médio porte?",
+      "resposta": "<p>Nove passos: escopo, diagnóstico, papéis, políticas, risco de privacidade, controles, operação, auditoria interna, certificação. Lista completa: <a href=\"/como-implementar-a-iso-27701/#passos-27701\">passos neste artigo</a>.</p>"
+    },
+    {
+      "pergunta": "Preciso ter ISO 27001 antes da 27701?",
+      "resposta": "<p>Não é obrigatório desde a 27701:2025. Integrar os dois costuma reduzir retrabalho. <a href=\"/iso-27701-2025-o-que-muda-independencia-da-iso-27001/\">Edição 2025</a>.</p>"
+    },
+    {
+      "pergunta": "ISO 27701 substitui a LGPD?",
+      "resposta": "<p>Não. A norma estrutura gestão e evidência; a lei define obrigações. <a href=\"/iso-27701-lgpd-gdpr-conformidade/\">ISO 27701 e LGPD/GDPR</a>.</p>"
+    }
+  ]
 }

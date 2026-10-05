@@ -39,6 +39,10 @@
   {
    "pergunta": "Quais são os critérios e etapas para obter a certificação ISO 27701?",
    "resposta": "<p>SGPI implementado, evidências, auditoria interna e auditoria de organismo no escopo 27701 (sozinho ou integrado). <a href=\"/certificacao-iso-27701-etapas-e-requisitos/\">Etapas de certificação ISO 27701</a>.</p>"
+  },
+  {
+   "pergunta": "Como a ISO 27701 ajuda na conformidade com LGPD/GPDR e outras regulamentações de privacidade?",
+   "resposta": "<p>Organiza SGPI com tratamentos, papéis controlador/operador, riscos e evidência auditável. Não substitui a lei. <a href=\"/iso-27701-lgpd-gdpr-conformidade/\">ISO 27701 e LGPD/GDPR</a>.</p>"
   }
  ]
 }

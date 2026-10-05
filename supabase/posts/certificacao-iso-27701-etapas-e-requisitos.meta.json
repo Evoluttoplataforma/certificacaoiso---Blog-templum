@@ -1,16 +1,28 @@
 {
- "title": "Certificação ISO 27701: critérios, etapas e requisitos",
- "seo_title": "Certificação ISO 27701: etapas e critérios",
- "seo_description": "Critérios e etapas para obter a certificação ISO 27701: SGPI, auditoria e relação com ISO 27001.",
- "tldr": "Certificar ISO 27701 exige SGPI operando, auditoria interna e estágios 1 e 2 do organismo. Pode ser certificação isolada ou integrada ao SGSI 27001.",
- "faq": [
-  {
-   "pergunta": "Quais são os critérios e etapas para obter a certificação ISO 27701?",
-   "resposta": "<p>SGPI com evidência, auditoria interna, estágios 1 e 2. <a href=\"#etapas\">Etapas neste artigo</a>.</p>"
-  },
-  {
-   "pergunta": "Quem emite o certificado ISO 27701?",
-   "resposta": "<p>Organismo de certificação acreditado, no escopo da norma. Consultoria não emite certificado.</p>"
-  }
- ]
+  "title": "Certificação ISO 27701: critérios, etapas e requisitos",
+  "seo_title": "Certificação ISO 27701: critérios, etapas e prazo",
+  "seo_description": "Critérios e etapas para obter a certificação ISO 27701: SGPI, estágios 1 e 2, prazo, custo, certificação isolada ou com ISO 27001. Consultoria não emite certificado.",
+  "tldr": "Certificar ISO 27701 exige SGPI operando com evidência de tratamentos, riscos de privacidade e controles do Anexo A, auditoria interna e análise crítica, depois estágios 1 e 2 de organismo acreditado. Desde 2025 a certificação pode ser só na 27701 ou integrada ao SGSI. Prazo típico da primeira certificação: cerca de 6 a 12 meses em médio porte. Custo depende de dias de auditoria e do escopo de tratamentos; consultoria e certificação são contratações separadas.",
+  "faq": [
+    {
+      "pergunta": "Quais são os critérios e etapas para obter a certificação ISO 27701?",
+      "resposta": "<p>Implantar SGPI, operar com registros, auditoria interna e análise crítica, contratar organismo acreditado (estágios 1 e 2), tratar NCs e manter o ciclo. Resumo numerado: <a href=\"/certificacao-iso-27701-etapas-e-requisitos/#criterios-etapas-pergunta\">critérios e etapas neste artigo</a>.</p>"
+    },
+    {
+      "pergunta": "Quem emite o certificado ISO 27701?",
+      "resposta": "<p>Organismo de certificação acreditado, com escopo para ISO/IEC 27701. Consultoria prepara; não emite certificado.</p>"
+    },
+    {
+      "pergunta": "Preciso ter ISO 27001 certificada para certificar na 27701?",
+      "resposta": "<p>Não desde a ISO/IEC 27701:2025. A certificação pode ser isolada ou integrada. <a href=\"/iso-27701-2025-o-que-muda-independencia-da-iso-27001/\">Edição 2025</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto tempo leva a certificação ISO 27701?",
+      "resposta": "<p>Em médio porte, cerca de 6 a 12 meses até o estágio 2 é faixa comum, se o inventário de tratamentos já estiver maduro. <a href=\"/certificacao-iso-27701-etapas-e-requisitos/#prazo\">Prazo neste artigo</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto custa certificar na ISO 27701?",
+      "resposta": "<p>Depende de dias de auditoria (escopo, sites, papéis controlador/operador) e do esforço de implantação. Não há tabela única. <a href=\"/certificacao-iso-27701-etapas-e-requisitos/#custo\">O que define o custo</a>.</p>"
+    }
+  ]
 }
