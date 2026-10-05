@@ -1,8 +1,8 @@
 {
   "title": "Cliente ou edital exige ISO 9001: o que responder e prazos reais",
   "seo_title": "Cliente ou edital exige ISO 9001: o que responder e prazos reais",
-  "seo_description": "Cliente, edital ou contrato exige ISO 9001? O que responder hoje, o que não existe (certificado provisório), prazos realistas e cases de PME que certificaram com consultoria remota.",
-  "tldr": "Sem certificado provisório: responda com escopo, organismo e data de auditoria agendada. Do decision ao certificado, conte cerca de 7 meses (PME pequena) a 12 meses (média). Cases publicados: Miranda Feliciano (2 meses e 13 dias), Dimarzio (6 meses). Depoimentos em Clientes Templum.",
+  "seo_description": "Cliente, edital ou contrato exige certificação ISO 9001? O que responder hoje, certificado provisório (não existe), prazos realistas e case de PME que certificou em 2 meses e 13 dias com consultoria online.",
+  "tldr": "Sem certificado provisório: responda com escopo, organismo certificador e data de auditoria agendada. Da decisão ao certificado, conte cerca de 7 meses (PME pequena) a 12 meses (média). Case Miranda Feliciano: em 2 meses e 13 dias mapeou processos, indicadores, auditoria interna e certificação externa.",
   "faq": [
     {
       "pergunta": "O que responder quando o cliente pede ISO 9001 e eu não tenho?",
@@ -14,7 +14,7 @@
     },
     {
       "pergunta": "Em quanto tempo consigo ISO 9001 com urgência?",
-      "resposta": "<p>Referência realista: cerca de 7 meses para PME pequena e até 12 meses para média, incluindo implantação e auditoria externa. Projetos mais rápidos existem com alto engajamento (ex.: case Miranda Feliciano no blog), mas dependem do seu contexto.</p>"
+      "resposta": "<p>Referência realista: cerca de 7 meses para PME pequena e até 12 meses para média, incluindo implantação e auditoria externa. Projetos mais rápidos existem com alto engajamento: o case Miranda Feliciano (advocacia) levou 2 meses e 13 dias; veja <a href=\"/consultoria-iso-9001-pme-remota/#case-miranda\">o que foi feito nesse prazo</a>.</p>"
     },
     {
       "pergunta": "Edital pode exigir ISO 9001 na habilitação?",
@@ -22,7 +22,7 @@
     },
     {
       "pergunta": "Consultoria remota ajuda quando o prazo apertou?",
-      "resposta": "<p>Ajuda a reduzir atrasos logísticos e retrabalho, mas não elimina etapas da norma. Veja <a href=\"/consultoria-iso-9001-pme-remota/\">consultoria ISO 9001 para PME remota</a> e cases na vitrine <a href=\"https://clientestemplum.glide.page/dl/6471c6\" rel=\"nofollow\">Clientes Templum</a>.</p>"
+      "resposta": "<p>Ajuda a reduzir atrasos logísticos e retrabalho, mas não elimina etapas da norma. Veja <a href=\"/consultoria-iso-9001-pme-remota/\">consultoria ISO 9001 para PME remota</a> e cases em <a href=\"https://templum.com.br/case-de-sucesso/\">cases de sucesso Templum</a>.</p>"
     }
   ]
 }
