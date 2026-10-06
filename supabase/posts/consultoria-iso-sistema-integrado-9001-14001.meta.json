@@ -2,7 +2,7 @@
   "title": "Consultoria ISO 9001 + ISO 14001: sistema integrado (SGI)",
   "seo_title": "Consultoria ISO 9001 + ISO 14001: sistema integrado (SGI)",
   "seo_description": "Consultoria para sistema integrado ISO 9001 e ISO 14001: estrutura SGI, certificação integrada, como escolher consultoria e diferença entre consultoria e certificadora.",
-  "tldr": "SGI 9001 + 14001 unifica processos, política, indicadores e auditoria interna; certificados continuam por norma. Consultoria integrada reduz duplicação; OC audita e emite.",
+  "tldr": "SGI 9001 + 14001 unifica processos, política, indicadores e auditoria interna; certificados continuam por norma (auditoria integrada é possível). Consultoria integrada reduz duplicação; LAIA e requisitos legais ambientais seguem obrigatórios no escopo 14001.",
   "faq": [
     {
       "pergunta": "O que é consultoria para sistema integrado ISO 9001 e ISO 14001?",
@@ -15,6 +15,18 @@
     {
       "pergunta": "PME pode certificar ISO 9001 e 14001 juntas?",
       "resposta": "<p>Sim, com escopo proporcional e responsável interno. Muitas PMEs fazem 9001 primeiro e 14001 em sequência ou em paralelo com consultoria integrada.</p>"
+    },
+    {
+      "pergunta": "Consultoria SGI substitui LAIA ou requisitos legais ambientais?",
+      "resposta": "<p>Não. Integrar documentação não dispensa <a href=\"/como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa/\">LAIA</a>, avaliação de conformidade legal (9.1.2) nem controles operacionais ambientais. O SGI só evita duplicar o que é comum às duas normas.</p>"
+    },
+    {
+      "pergunta": "Quanto tempo leva certificar 9001 e 14001 integradas?",
+      "resposta": "<p>Costuma ser mais longo que só ISO 9001: a 14001 adiciona LAIA e legal ambiental (média <strong>10 a 18 meses</strong> para o eixo ambiental). Calendário comum: paralelo com marcos distintos ou 9001 primeiro, 14001 em seguida. Veja <a href=\"/iso-14001-2/#o-processo-de-implementacao-da-iso-14001\">etapas ISO 14001</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria integrada emite certificado?",
+      "resposta": "<p>Não. Dois certificados (9001 e 14001) saem do organismo acreditado. Consultoria prepara evidências para auditoria integrada ou separada.</p>"
     }
   ]
 }

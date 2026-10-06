@@ -32,7 +32,8 @@
 - [FSSC 22000 vs. ISO 22000 na prática](https://certificacaoiso.com.br/fssc-22000-vs-iso-22000-na-pratica/)
 - [Como obter certificação FSSC 22000 no Brasil](https://certificacaoiso.com.br/como-obter-certificacao-fssc-22000-brasil/)
 - [Organismos certificadores FSSC 22000 no Brasil](https://certificacaoiso.com.br/fssc-22000-organismos-certificadores-brasil/)
-- [Consultoria ISO 14001](https://certificacaoiso.com.br/consultoria-iso-14001/)
+- [Consultoria ISO 14001](https://certificacaoiso.com.br/consultoria-iso-14001/): passos, LAIA, cenários setoriais e certificadora à parte.
+- [Consultoria SGI 9001 + 14001](https://certificacaoiso.com.br/consultoria-iso-sistema-integrado-9001-14001/): integração documental, auditoria integrada, dois certificados.
 - [Semana Mundial da Qualidade 2026](https://certificacaoiso.com.br/semana-mundial-da-qualidade-2026/)
 
 ## Guias das normas

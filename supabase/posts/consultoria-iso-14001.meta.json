@@ -1,7 +1,7 @@
 {
   "title": "Consultoria ISO 14001: resíduos, energia, obras e como escolher",
   "seo_title": "Consultoria ISO 14001 no Brasil: o que faz e como escolher",
-  "seo_description": "Consultoria ISO 14001: gestão de resíduos e reciclagem, redução de energia e água, obras e engenharia, órgãos ambientais, SGI com ISO 9001 e preparação para certificação.",
+  "seo_description": "Consultoria ISO 14001 no Brasil: o que faz, passos até certificar, LAIA, resíduos, energia, obras e diferença entre consultoria e certificadora.",
   "tldr": "Consultoria ISO 14001 implanta SGA: aspectos, impactos, legal, objetivos ambientais, controles e evidências. Vale para resíduos, consumo, obras e pressão de comunidade ou licitação. Certificado só organismo acreditado emite.",
   "faq": [
     {
@@ -27,6 +27,18 @@
     {
       "pergunta": "A consultoria emite certificado ISO 14001?",
       "resposta": "<p>Não. Organismo certificador acreditado audita e emite. Consultoria e certificadora são contratos separados.</p>"
+    },
+    {
+      "pergunta": "Quais os passos para certificar na ISO 14001 com consultoria?",
+      "resposta": "<p>Diagnóstico, escopo, LAIA e requisitos legais, objetivos e controles, auditoria interna, análise crítica e auditoria do organismo certificador. Detalhe em <a href=\"/consultoria-iso-14001/#passos\">passos da consultoria</a> e no <a href=\"/iso-14001-2/#o-processo-de-implementacao-da-iso-14001\">guia ISO 14001</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto tempo leva a consultoria ISO 14001?",
+      "resposta": "<p>Em média, <strong>10 a 18 meses</strong> até a auditoria de certificação, conforme porte, complexidade ambiental e disponibilidade da equipe interna. LAIA e conformidade legal costumam ser o gargalo.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO 14001 e ISO 14001:2026?",
+      "resposta": "<p>Projetos atuais seguem a <strong>ISO 14001:2015</strong> (certificável). A revisão paralela à ISO 9001 ainda não foi publicada; acompanhe em <a href=\"/guia-definitivo-das-mudancas-iso-2026/\">mudanças ISO 2026</a>.</p>"
     }
   ]
 }
