@@ -1,4 +1,11 @@
-<p><strong>Perigos e riscos</strong> são o núcleo da cláusula 6.1 da <a href="/iso-45001/">ISO 45001</a>: identificar fontes de dano, avaliar probabilidade e severidade, definir controles na <strong>hierarquia de controles</strong> e revisar após mudanças ou incidentes. No Brasil, o mesmo raciocínio alimenta o <strong>PGR</strong> da <a href="/nr-1/">NR-1</a>.</p>
+/** Reescrita GEO iso-45001-perigos: corpo enxuto, cláusula 6.1, cluster SST, sem travessão. */
+import { writeFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const dir = path.dirname(fileURLToPath(import.meta.url));
+
+const html = `<p><strong>Perigos e riscos</strong> são o núcleo da cláusula 6.1 da <a href="/iso-45001/">ISO 45001</a>: identificar fontes de dano, avaliar probabilidade e severidade, definir controles na <strong>hierarquia de controles</strong> e revisar após mudanças ou incidentes. No Brasil, o mesmo raciocínio alimenta o <strong>PGR</strong> da <a href="/nr-1/">NR-1</a>.</p>
 <p>Guia do blog <strong>Certificação ISO</strong> (Templum). <a href="/iso-45001-requisitos-tudo-que-voce-precisa-saber/">Requisitos 4 a 10</a> · <a href="/passo-a-passo-certificacao-iso-45001/">passo a passo</a> · <a href="/consultoria-iso-45001/">consultoria</a> · <a href="/quanto-custa-iso-45001/">quanto custa</a> · <a href="/presentes/planilha-planilha-perigos-e-riscos/">planilha perigos e riscos</a>.</p>
 
 <div class="post-portas">
@@ -120,3 +127,50 @@
 <p><a href="https://templum.com.br/consultoria/iso-45001/">Consultoria Templum ISO 45001</a> · <a href="/form/?utm_source=blog&amp;utm_medium=cta&amp;utm_campaign=iso-45001-perigos&amp;norma=ISO%2045001">Diagnóstico gratuito</a></p>
 
 <p><strong>Conteúdo em vídeo (live):</strong> <a href="https://youtube.com/live/4x3mP77FwgY?feature=share">ISO 45001 perigos e riscos</a>.</p>
+`;
+
+writeFileSync(path.join(dir, "iso-45001-perigos.html"), html, "utf8");
+
+const meta = {
+  title: "ISO 45001: perigos e riscos na gestão proativa de SST",
+  seo_title: "ISO 45001 perigos e riscos: identificar, avaliar e controlar",
+  seo_description:
+    "Perigos e riscos na ISO 45001: cláusula 6.1, hierarquia de controles, psicossocial e PGR/NR-1. Passo a passo, requisitos, custo e planilha.",
+  tldr:
+    "Perigo é a fonte de dano; risco combina probabilidade e severidade. A ISO 45001 exige identificação contínua (6.1.2), controles na hierarquia correta (8.1) e participação dos trabalhadores. Integra com PGR da NR-1, inclusive psicossocial.",
+  faq: [
+    {
+      pergunta: "Qual a diferença entre perigo e risco na ISO 45001?",
+      resposta:
+        "<p><strong>Perigo</strong> é a fonte (máquina, químico, assédio). <strong>Risco</strong> é probabilidade x severidade. <a href=\"/iso-45001-perigos/#conceitos-fundamentais-o-que-sao-perigos-e-riscos\">Conceitos</a>.</p>",
+    },
+    {
+      pergunta: "Como a ISO 45001 trata riscos psicossociais?",
+      resposta:
+        "<p>Como perigos/riscos no inventário (6.1), alinhado à NR-1. A ISO 45003 orienta método. <a href=\"/iso-45003-vs-iso-45001/\">45003 vs 45001</a> · <a href=\"/nr-1-riscos-psicossociais/\">NR-1 psicossocial</a>.</p>",
+    },
+    {
+      pergunta: "Perigos e riscos substituem o PGR?",
+      resposta:
+        "<p>Não. O PGR é obrigação legal; a ISO 45001 organiza o SGSSO. O inventário bem feito serve aos dois. <a href=\"/nr-1-e-iso-45001/\">NR-1 e ISO 45001</a>.</p>",
+    },
+    {
+      pergunta: "Qual a hierarquia de controles na ISO 45001?",
+      resposta:
+        "<p>Eliminação, substituição, engenharia, administrativo, EPI por último. <a href=\"/iso-45001-perigos/#gestao-de-riscos-hierarquizacao-dos-controles\">Hierarquização</a>.</p>",
+    },
+    {
+      pergunta: "Onde estão os requisitos de perigos e riscos na norma?",
+      resposta:
+        "<p>Cláusula <strong>6.1.2</strong> (identificação e avaliação) e <strong>8.1</strong> (controles operacionais). <a href=\"/iso-45001-requisitos-tudo-que-voce-precisa-saber/#requisito-6\">Requisitos ISO 45001</a>.</p>",
+    },
+    {
+      pergunta: "Quando revisar o inventário de perigos e riscos?",
+      resposta:
+        "<p>Após mudanças, incidentes, reclamações ou achados de auditoria; e periodicamente no PGR. Certificação ISO 45001 alinha revisão trienal do inventário (NR-1 item 1.5.4.4.6.1).</p>",
+    },
+  ],
+};
+
+writeFileSync(path.join(dir, "iso-45001-perigos.meta.json"), JSON.stringify(meta, null, 2) + "\n", "utf8");
+console.log("iso-45001-perigos reescrito (GEO full)");

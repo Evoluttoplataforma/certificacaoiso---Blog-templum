@@ -1,8 +1,8 @@
 {
   "title": "ISO 45001: perigos e riscos na gestão proativa de SST",
   "seo_title": "ISO 45001 perigos e riscos: identificar, avaliar e controlar",
-  "seo_description": "Perigos e riscos na ISO 45001: diferença perigo x risco, hierarquia de controles, psicossocial, PGR/NR-1, requisitos 6.1 e passo a passo até certificar.",
-  "tldr": "Perigo é a fonte potencial de dano; risco combina probabilidade e severidade. A ISO 45001 exige identificação contínua, participação dos trabalhadores e hierarquia de controles. Integra com PGR da NR-1 e com avaliação psicossocial no mesmo ciclo.",
+  "seo_description": "Perigos e riscos na ISO 45001: cláusula 6.1, hierarquia de controles, psicossocial e PGR/NR-1. Passo a passo, requisitos, custo e planilha.",
+  "tldr": "Perigo é a fonte de dano; risco combina probabilidade e severidade. A ISO 45001 exige identificação contínua (6.1.2), controles na hierarquia correta (8.1) e participação dos trabalhadores. Integra com PGR da NR-1, inclusive psicossocial.",
   "faq": [
     {
       "pergunta": "Qual a diferença entre perigo e risco na ISO 45001?",
@@ -23,6 +23,10 @@
     {
       "pergunta": "Onde estão os requisitos de perigos e riscos na norma?",
       "resposta": "<p>Cláusula <strong>6.1.2</strong> (identificação e avaliação) e <strong>8.1</strong> (controles operacionais). <a href=\"/iso-45001-requisitos-tudo-que-voce-precisa-saber/#requisito-6\">Requisitos ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Quando revisar o inventário de perigos e riscos?",
+      "resposta": "<p>Após mudanças, incidentes, reclamações ou achados de auditoria; e periodicamente no PGR. Certificação ISO 45001 alinha revisão trienal do inventário (NR-1 item 1.5.4.4.6.1).</p>"
     }
   ]
 }

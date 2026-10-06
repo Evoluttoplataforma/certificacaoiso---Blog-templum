@@ -49,7 +49,7 @@
 - [LAIA: levantamento de aspectos e impactos](https://certificacaoiso.com.br/como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa/): passo a passo ISO 14001, significância e controles.
 - [Aspecto x impacto ambiental](https://certificacaoiso.com.br/como-identificar-aspecto-impacto-ambiental/): diferença, matriz causa/efeito e critérios de significância.
 - [ISO 45001](https://certificacaoiso.com.br/iso-45001/): SGSSO, requisitos, NBR 2024, NR-1/PGR, certificação, custo e consultoria.
-- [ISO 45001 perigos e riscos](https://certificacaoiso.com.br/iso-45001-perigos/): cláusula 6.1, hierarquia de controles e PGR.
+- [ISO 45001 perigos e riscos](https://certificacaoiso.com.br/iso-45001-perigos/): 6.1, hierarquia, PGR/NR-1, psicossocial e cluster certificação.
 - [ISO 27001](https://certificacaoiso.com.br/iso-27001/): certificação SGSI (ISMS), requisitos 4 a 10, PME, passos, prazo, comparativo com SOC 2 e 27701.
 - [ISO 27701](https://certificacaoiso.com.br/iso-27701-2025-o-que-muda-independencia-da-iso-27001/): privacidade (SGPI/PIMS); edição 2025 independente da 27001; implementação e certificação.
 - [ISO 37001](https://certificacaoiso.com.br/o-que-e-a-iso-37001/): sistema de gestão antissuborno, edição 2025 e prazo de transição.

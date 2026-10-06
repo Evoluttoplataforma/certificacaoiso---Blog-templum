@@ -28,7 +28,7 @@ const POSTS = path.join(ROOT, "supabase", "posts");
 
 for (const script of [
   "_build-iso-45001-hub.mjs",
-  "_build-iso-45001-perigos-patch.mjs",
+  "_build-iso-45001-perigos-geo-full.mjs",
   "_build-nr-1-riscos-psicossociais-geo.mjs",
   "_build-ohsas-45001-geo.mjs",
   "_build-nr-1-hub-geo.mjs",
