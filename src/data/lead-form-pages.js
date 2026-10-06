@@ -108,6 +108,8 @@ export const LEAD_FORM_PAGES = {
   "consultoria-iso-14001": { display: "ISO 14001", crm: "ISO 14001" },
   "consultoria-iso-45001": { display: "ISO 45001", crm: "ISO 45001" },
   "quanto-custa-iso-45001": { display: "ISO 45001", crm: "ISO 45001" },
+  "iso-45001-requisitos-tudo-que-voce-precisa-saber": { display: "ISO 45001", crm: "ISO 45001" },
+  "nr-1-e-iso-45001": { display: "ISO 45001", crm: "ISO 45001" },
   "passo-a-passo-certificacao-iso-45001": { display: "ISO 45001", crm: "ISO 45001" },
   "iso-45003-vs-iso-45001": { display: "ISO 45001", crm: "ISO 45001" },
   "iso-45001-perigos": { display: "ISO 45001", crm: "ISO 45001" },

@@ -11,7 +11,7 @@ const backup = JSON.parse(
 let c = backup.content;
 
 const head = `<p><strong>A ISO 45001</strong> é a norma internacional de Sistema de Gestão de Saúde e Segurança Ocupacional (SGSSO). Versão certificável: <strong>ISO 45001:2018</strong> (ABNT NBR ISO 45001, republicação 2024). Substituiu a <a href="/ohsas-18001-e-iso-45001/">OHSAS 18001</a> (cancelada em 2021) e conversa com a <a href="/nr-1-e-iso-45001/">NR-1 e o PGR</a>.</p>
-<p>Guia do blog <strong>Certificação ISO</strong>, da <a href="https://templum.com.br/consultoria/iso-45001/"><strong>Templum Consultoria</strong></a>. Consultoria: <a href="/consultoria-iso-45001/">consultoria ISO 45001</a> · Passos: <a href="/passo-a-passo-certificacao-iso-45001/">passo a passo certificação</a> · Custo: <a href="/quanto-custa-iso-45001/">quanto custa a ISO 45001</a> · 45003: <a href="/iso-45003-vs-iso-45001/">ISO 45003 vs 45001</a>.</p>
+<p>Guia do blog <strong>Certificação ISO</strong>, da <a href="https://templum.com.br/consultoria/iso-45001/"><strong>Templum Consultoria</strong></a>. Requisitos: <a href="/iso-45001-requisitos-tudo-que-voce-precisa-saber/">cláusulas 4 a 10</a> · Consultoria: <a href="/consultoria-iso-45001/">consultoria ISO 45001</a> · Passos: <a href="/passo-a-passo-certificacao-iso-45001/">passo a passo certificação</a> · Custo: <a href="/quanto-custa-iso-45001/">quanto custa a ISO 45001</a> · 45003: <a href="/iso-45003-vs-iso-45001/">ISO 45003 vs 45001</a>.</p>
 
 <div class="post-portas">
   <a href="#respostas-diretas"><strong>Respostas diretas</strong><span>Requisitos, prazo, NBR, certificação</span></a>
@@ -24,7 +24,7 @@ const head = `<p><strong>A ISO 45001</strong> é a norma internacional de Sistem
 <h2 id="respostas-diretas">Respostas diretas: ISO 45001</h2>
 <ul>
 <li><strong>O que é:</strong> norma de <strong>sistema de gestão</strong> de saúde e segurança ocupacional (SGSSO), não substituto de PCMSO ou clínica.</li>
-<li><strong>Requisitos:</strong> cláusulas 4 a 10 (Anexo SL): contexto, liderança, planejamento (perigos/riscos), apoio, operação, avaliação e melhoria.</li>
+<li><strong>Requisitos:</strong> cláusulas 4 a 10 (Anexo SL): contexto, liderança, planejamento (perigos/riscos), apoio, operação, avaliação e melhoria. <a href="/iso-45001-requisitos-tudo-que-voce-precisa-saber/">Requisitos ISO 45001 explicados</a>.</li>
 <li><strong>Certificação:</strong> auditoria de organismo acreditado (Inmetro/IAF). Consultoria prepara; <a href="/consultoria-iso-45001/">consultoria ISO 45001</a> não emite certificado.</li>
 <li><strong>Prazo típico:</strong> cerca de <strong>10 a 14 meses</strong> até auditoria de certificação em porte médio. <a href="/passo-a-passo-certificacao-iso-45001/#prazo">Detalhe de prazo</a>.</li>
 <li><strong>Custo:</strong> implantação do SGSSO + auditoria do organismo + manutenção em 3 anos; consultoria e certificadora separadas. <a href="/quanto-custa-iso-45001/">Quanto custa a ISO 45001</a>.</li>
@@ -64,7 +64,7 @@ const meta = {
     {
       pergunta: "Quais são os requisitos principais da ISO 45001?",
       resposta:
-        "<p>Cláusulas 4 a 10 (Anexo SL): contexto, liderança, planejamento com perigos/riscos, apoio, operação, avaliação e melhoria. Detalhe: <a href=\"/iso-45001-perigos/\">perigos e riscos</a> e <a href=\"/passo-a-passo-certificacao-iso-45001/\">passo a passo</a>.</p>",
+        "<p>Cláusulas 4 a 10 (Anexo SL): contexto, liderança, planejamento com perigos/riscos, apoio, operação, avaliação e melhoria. <a href=\"/iso-45001-requisitos-tudo-que-voce-precisa-saber/\">Requisitos ISO 45001 (4 a 10)</a> · <a href=\"/iso-45001-perigos/\">perigos e riscos</a>.</p>",
     },
     {
       pergunta: "Qual é a versão atual da ISO 45001 e a NBR 2024?",

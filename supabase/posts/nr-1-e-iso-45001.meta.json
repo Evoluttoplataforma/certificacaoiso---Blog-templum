@@ -1,0 +1,32 @@
+{
+  "title": "NR-1 e ISO 45001: como o sistema de gestão resolve a norma de uma vez",
+  "seo_title": "NR-1 e ISO 45001: o sistema resolve a norma de uma vez",
+  "seo_description": "Cada exigência da NR-1 tem par na ISO 45001. Cinco ajustes para quem já tem SGSSO, custo e passo a passo para certificar, e por que a direção entra na mesa.",
+  "tldr": "Cada exigência da NR-1 tem correspondente na ISO 45001: perigos, riscos, controles, participação, competência, documentação e análise crítica. Quem já tem o sistema faz cinco ajustes (psicossocial). Certificação não é obrigatória pela NR-1; passo a passo e custo são projetos à parte.",
+  "faq": [
+    {
+      "pergunta": "A NR-1 exige certificação ISO 45001?",
+      "resposta": "<p>Não. É possível cumprir integralmente a NR-1 sem certificação. A ISO 45001 agrega SGSSO auditado por terceira parte, útil em fiscalização e exigências de clientes, mas é voluntária.</p>"
+    },
+    {
+      "pergunta": "Quem já tem ISO 45001 precisa criar um programa separado para a NR-1?",
+      "resposta": "<p>Não. São cinco ajustes: perigos psicossociais, instrumento validado, matriz de severidade, hierarquia de controles e análise crítica pela direção.</p>"
+    },
+    {
+      "pergunta": "O que é genuinamente novo para quem tem 45001?",
+      "resposta": "<p>Praticamente só o instrumento de avaliação psicossocial validado (Karasek, Siegrist, HSE-IT, COPSOQ) com critério de classificação.</p>"
+    },
+    {
+      "pergunta": "Por que a ISO 45001 ajuda no ponto mais difícil da NR-1?",
+      "resposta": "<p>Os fatores medidos são decisões de liderança. A 45001 exige comprometimento da direção (5.1), consulta aos trabalhadores (5.4) e análise crítica com dados (9.3).</p>"
+    },
+    {
+      "pergunta": "Quanto custa certificar na ISO 45001 depois do PGR?",
+      "resposta": "<p>Consultoria de implantação e auditoria do organismo são contas separadas; porte e risco definem o total. <a href=\"/quanto-custa-iso-45001/\">Quanto custa a ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Qual o passo a passo para certificar na ISO 45001?",
+      "resposta": "<p>Comprometimento, escopo, perigos e riscos, legal e controles, competência, auditoria interna e auditoria de certificação. <a href=\"/passo-a-passo-certificacao-iso-45001/\">Passo a passo certificação ISO 45001</a>.</p>"
+    }
+  ]
+}

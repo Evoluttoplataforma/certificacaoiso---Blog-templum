@@ -36,6 +36,7 @@
 - [Consultoria ISO 45001](https://certificacaoiso.com.br/consultoria-iso-45001/): PGR, NR-1, perigos/riscos, psicossocial, passos até certificar.
 - [Passo a passo ISO 45001](https://certificacaoiso.com.br/passo-a-passo-certificacao-iso-45001/): 7 etapas, desafios e prazo.
 - [Quanto custa a ISO 45001](https://certificacaoiso.com.br/quanto-custa-iso-45001/): consultoria, organismo, PGR e ciclo de 3 anos.
+- [Requisitos ISO 45001 (4 a 10)](https://certificacaoiso.com.br/iso-45001-requisitos-tudo-que-voce-precisa-saber/): o que auditar, NBR 2024, 45003 e PGR.
 - [ISO 45003 vs 45001](https://certificacaoiso.com.br/iso-45003-vs-iso-45001/): diretriz psicossocial, certificação e PGR.
 - [Consultoria SGI 9001 + 14001](https://certificacaoiso.com.br/consultoria-iso-sistema-integrado-9001-14001/): integração documental, auditoria integrada, dois certificados.
 - [Consultoria SGI 9001 + 14001 + 45001](https://certificacaoiso.com.br/consultoria-iso-sistema-integrado-9001-14001-45001/): qualidade, meio ambiente e SST.
@@ -132,6 +133,7 @@
 - [Consultoria ISO 45001](https://certificacaoiso.com.br/consultoria-iso-45001/)
 - [Passo a passo certificação ISO 45001](https://certificacaoiso.com.br/passo-a-passo-certificacao-iso-45001/)
 - [Quanto custa a ISO 45001](https://certificacaoiso.com.br/quanto-custa-iso-45001/)
+- [Requisitos ISO 45001](https://certificacaoiso.com.br/iso-45001-requisitos-tudo-que-voce-precisa-saber/)
 - [ISO 45003 vs ISO 45001](https://certificacaoiso.com.br/iso-45003-vs-iso-45001/)
 - [Perigos e riscos ISO 45001](https://certificacaoiso.com.br/iso-45001-perigos/)
 - [OHSAS 18001 acabou: migração para ISO 45001](https://certificacaoiso.com.br/ohsas-18001-e-iso-45001/)

@@ -56,6 +56,8 @@ const SLUGS = [
   "consultoria-iso-sistema-integrado-9001-14001-45001",
   "iso-45001-perigos",
   "quanto-custa-iso-45001",
+  "iso-45001-requisitos-tudo-que-voce-precisa-saber",
+  "nr-1-e-iso-45001",
   "consultoria-iso-27001",
   "consultoria-iso-27701",
   "treinamento-iso-27001",

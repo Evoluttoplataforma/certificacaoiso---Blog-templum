@@ -1,0 +1,34 @@
+{
+  "title": "Requisitos da ISO 45001: cláusulas 4 a 10 explicadas",
+  "seo_title": "Requisitos da ISO 45001: cláusulas 4 a 10 e o que auditar",
+  "seo_description": "Requisitos ISO 45001 (cláusulas 4 a 10): perigos e riscos, legal, controles, participação dos trabalhadores, auditoria interna. NBR 2024, PGR e diferença da ISO 45003.",
+  "tldr": "Requisitos certificáveis da ISO 45001:2018 estão nas cláusulas 4 a 10 (Anexo SL). Destaque para 6.1 perigos/riscos e legal, 5.4 participação, 8.1 controles e 9.2 auditoria interna. NBR ISO 45001:2024 alinha à edição 2018 + Emenda 1. Não confundir com ISO 45003 (diretriz psicossocial).",
+  "tags": ["ISO 45001", "requisitos", "SGSSO", "cláusulas", "certificação"],
+  "published_at": "2026-10-06T21:30:00.000Z",
+  "faq": [
+    {
+      "pergunta": "Quais são os requisitos da ISO 45001?",
+      "resposta": "<p>Cláusulas <strong>4 a 10</strong>: contexto, liderança, planejamento (perigos, riscos, legal), apoio, operação, avaliação de desempenho e melhoria. Detalhe em <a href=\"/iso-45001-requisitos-tudo-que-voce-precisa-saber/#visao-geral\">mapa das cláusulas</a>.</p>"
+    },
+    {
+      "pergunta": "Onde baixar a ISO 45001 PDF?",
+      "resposta": "<p>O texto oficial é pago (ISO/ABNT). Para implementar, use guias auditáveis no blog: <a href=\"/iso-45001/\">ISO 45001</a>, este artigo de requisitos e <a href=\"/passo-a-passo-certificacao-iso-45001/\">passo a passo</a>. Não substituem a norma na auditoria.</p>"
+    },
+    {
+      "pergunta": "ABNT NBR ISO 45001:2024 muda os requisitos?",
+      "resposta": "<p>Republicação alinhada à ISO 45001:2018 com <strong>Emenda 1:2024</strong> (clima no contexto). Requisitos certificáveis continuam os da estrutura 4 a 10.</p>"
+    },
+    {
+      "pergunta": "ISO 45003 faz parte dos requisitos certificáveis?",
+      "resposta": "<p>Não. A 45003 orienta riscos psicossociais dentro do planejamento 6.1 da 45001. <a href=\"/iso-45003-vs-iso-45001/\">ISO 45003 vs 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Qual cláusula mais gera não conformidade?",
+      "resposta": "<p>Frequentes: <strong>6.1</strong> (inventário de perigos superficial), <strong>8.1</strong> (controle não aplicado) e <strong>5.4</strong> (participação sem evidência).</p>"
+    },
+    {
+      "pergunta": "Preciso implementar na ordem 4, 5, 6…?",
+      "resposta": "<p>A numeração organiza a norma, não o cronograma. Na prática: contexto e liderança, depois 6.1 e legal, operação 8, então 9 e 10 rodando. <a href=\"/passo-a-passo-certificacao-iso-45001/\">Passo a passo</a>.</p>"
+    }
+  ]
+}

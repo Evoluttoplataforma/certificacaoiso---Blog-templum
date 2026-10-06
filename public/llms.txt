@@ -34,6 +34,8 @@
 - [Consultoria ISO 45001](https://certificacaoiso.com.br/consultoria-iso-45001/): PGR, NR-1, perigos e riscos, psicossocial e passos até certificar.
 - [Passo a passo certificação ISO 45001](https://certificacaoiso.com.br/passo-a-passo-certificacao-iso-45001/): 7 etapas, desafios e prazo típico.
 - [Quanto custa a ISO 45001](https://certificacaoiso.com.br/quanto-custa-iso-45001/): consultoria, organismo certificador, PGR e manutenção em 3 anos.
+- [Requisitos da ISO 45001](https://certificacaoiso.com.br/iso-45001-requisitos-tudo-que-voce-precisa-saber/): cláusulas 4 a 10, NBR 2024, PGR e diferença da ISO 45003.
+- [NR-1 e ISO 45001](https://certificacaoiso.com.br/nr-1-e-iso-45001/): mapa PGR x SGSSO, psicossocial, custo e passo a passo para certificar.
 - [ISO 45003 vs ISO 45001](https://certificacaoiso.com.br/iso-45003-vs-iso-45001/): diretriz psicossocial x norma certificável e NR-1.
 - [Consultoria SGI 9001 + 14001](https://certificacaoiso.com.br/consultoria-iso-sistema-integrado-9001-14001/): sistema integrado, auditoria integrada e dois certificados.
 - [Consultoria SGI 9001 + 14001 + 45001](https://certificacaoiso.com.br/consultoria-iso-sistema-integrado-9001-14001-45001/): qualidade, meio ambiente e SST integrados.
