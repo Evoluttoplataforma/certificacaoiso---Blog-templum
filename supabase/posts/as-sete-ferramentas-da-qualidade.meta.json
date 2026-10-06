@@ -1,0 +1,24 @@
+{
+  "title": "7 ferramentas da qualidade: lista, uso e ISO 9001",
+  "seo_title": "7 ferramentas da qualidade: lista, uso e ISO 9001",
+  "seo_description": "As 7 ferramentas da qualidade (Ishikawa, Pareto, histograma, fluxograma e mais): para que servem, quando usar e ligação com melhoria contínua na ISO 9001.",
+  "tldr": "As sete ferramentas da qualidade são métodos clássicos para analisar dados e processos: Ishikawa (causa), folha de verificação, histograma, Pareto, dispersão, fluxograma e carta de controle. Na ISO 9001 entram como apoio à melhoria (10.3) e ao tratamento de problemas (10.2), não como checklist obrigatório da norma.",
+  "faq": [
+    {
+      "pergunta": "Quais são as 7 ferramentas da qualidade?",
+      "resposta": "<p>Diagrama de Ishikawa, folha de verificação, histograma, gráfico de Pareto, diagrama de dispersão, fluxograma e carta de controle. Cada uma responde a um tipo de pergunta (causa, frequência, relação entre variáveis, fluxo do processo, estabilidade).</p>"
+    },
+    {
+      "pergunta": "A ISO 9001 exige usar as 7 ferramentas?",
+      "resposta": "<p>Não. A norma exige melhorar e tratar não conformidades com evidência. As ferramentas são meios reconhecidos; o auditor quer ver análise coerente, não todas as sete em todo problema.</p>"
+    },
+    {
+      "pergunta": "Qual ferramenta usar primeiro?",
+      "resposta": "<p>Para processo confuso: <a href=\"/o-que-e-fluxograma-de-processos/\">fluxograma</a>. Para muitas causas possíveis: Ishikawa ou <a href=\"/analise-de-causa-raiz-o-que-e-e-como-fazer/\">causa raiz</a>. Para priorizar: Pareto.</p>"
+    },
+    {
+      "pergunta": "Fluxograma é uma das 7 ferramentas?",
+      "resposta": "<p>Sim. Mapeia sequência e decisões. Complementa o <a href=\"/mapeamento-de-processos-e-a-iso-9001/\">mapeamento de processos na ISO 9001</a> (requisito 4.4).</p>"
+    }
+  ]
+}

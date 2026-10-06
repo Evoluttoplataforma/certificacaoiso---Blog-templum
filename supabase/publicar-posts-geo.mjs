@@ -64,6 +64,13 @@ const SLUGS = [
   "passo-a-passo-certificacao-iso-9001",
   "semana-mundial-da-qualidade-2026",
   "5s",
+  "o-que-e-fluxograma-de-processos",
+  "mapeamento-de-processos-e-a-iso-9001",
+  "as-sete-ferramentas-da-qualidade",
+  "o-que-e-nao-conformidade",
+  "a-qualificacao-de-fornecedores-segundo-a-iso-90012015",
+  "como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa",
+  "como-identificar-aspecto-impacto-ambiental",
 ];
 
 const CAT_QUALIDADE = {

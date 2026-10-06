@@ -1,0 +1,32 @@
+{
+  "title": "Fluxograma de processo: o que é, símbolos e passo a passo",
+  "seo_title": "Fluxograma de processo: o que é, símbolos e passo a passo",
+  "seo_description": "Fluxograma de processo explicado: tipos (linear e funcional), símbolos, como fazer passo a passo e ligação com ISO 9001 e mapeamento de processos.",
+  "tldr": "Fluxograma de processo é o desenho da sequência de atividades e decisões (retângulo, losango, setas). Serve para treinar equipe, achar gargalos e documentar o fluxo real. Na ISO 9001 entra no requisito 4.4 como ferramenta, não como formato obrigatório. Mapeamento completo: ver artigo de mapeamento e gestão de processos 2026.",
+  "faq": [
+    {
+      "pergunta": "O que é fluxograma de processo?",
+      "resposta": "<p>É a representação gráfica de um processo: etapas, decisões, responsáveis e direção do fluxo. Objetivo: tornar visível o que hoje só está na cabeça de quem opera.</p>"
+    },
+    {
+      "pergunta": "A ISO 9001 exige fluxograma?",
+      "resposta": "<p>Não exige fluxograma nominalmente. Exige determinar processos, entradas, saídas e sequência (4.4). Fluxograma é um meio comum. Veja <a href=\"/mapeamento-de-processos-e-a-iso-9001/\">mapeamento de processos e ISO 9001</a>.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre fluxograma e mapa de processos?",
+      "resposta": "<p>Fluxograma detalha um processo (passo a passo). Mapa de processos mostra como vários processos se conectam na empresa. Os dois se complementam.</p>"
+    },
+    {
+      "pergunta": "Fluxograma linear ou funcional: quando usar?",
+      "resposta": "<p>Linear: processo simples, uma sequência. Funcional (raias): quando várias áreas participam do mesmo fluxo. Exemplos e símbolos neste artigo.</p>"
+    },
+    {
+      "pergunta": "Como fazer um fluxograma passo a passo?",
+      "resposta": "<p>Defina escopo e objetivo, liste atividades com quem executa, desenhe com símbolos padronizados, valide com a operação e analise gargalos. Antes do desenho fino, muitas equipes usam a <a href=\"/como-mapear-processos-e-atender-os-requisitos-da-iso-90012015-utilizando-tartaruga-turbinada-da-templum/\">Tartaruga turbinada</a>.</p>"
+    },
+    {
+      "pergunta": "Fluxograma substitui instrução de trabalho?",
+      "resposta": "<p>Não. Fluxograma mostra o fluxo; instrução de trabalho detalha como executar uma tarefa. Veja <a href=\"/instrucao-de-trabalho-it/\">instrução de trabalho (IT)</a>.</p>"
+    }
+  ]
+}

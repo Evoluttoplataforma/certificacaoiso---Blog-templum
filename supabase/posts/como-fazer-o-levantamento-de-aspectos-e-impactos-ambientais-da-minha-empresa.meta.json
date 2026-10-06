@@ -1,0 +1,32 @@
+{
+  "title": "Como fazer o Levantamento de Aspectos e Impactos Ambientais da minha empresa?",
+  "seo_title": "Como fazer o LAIA: aspectos e impactos (ISO 14001)",
+  "seo_description": "Passo a passo do LAIA: identificar aspectos e impactos, avaliar significância, definir controles e revisar. O que a ISO 14001 exige e diferença para EIA/licenciamento.",
+  "tldr": "LAIA na ISO 14001: percorra processos (normal, anormal e emergência), liste entradas e saídas como aspectos, descreva impactos, aplique critérios de significância e ligue os significativos a controles operacionais e objetivos. Revise quando mudar operação, legislação ou após incidente. Não confunda com EIA/RIMA de licenciamento: são finalidades diferentes.",
+  "faq": [
+    {
+      "pergunta": "Qual a diferença entre aspecto e impacto ambiental?",
+      "resposta": "<p>O <strong>aspecto</strong> é o elemento da atividade da empresa que interage com o meio ambiente. O <strong>impacto</strong> é a consequência desse aspecto no ambiente. Veja exemplos em <a href=\"/como-identificar-aspecto-impacto-ambiental/\">aspecto x impacto</a>.</p>"
+    },
+    {
+      "pergunta": "Como saber se um aspecto ambiental é significativo?",
+      "resposta": "<p>Definindo critérios <strong>antes</strong> de avaliar e aplicando-os a todos os aspectos. Os mais usados combinam severidade do impacto, frequência ou probabilidade, exigência legal aplicável e sensibilidade das partes interessadas. O critério precisa estar documentado e ser aplicado de forma consistente.</p>"
+    },
+    {
+      "pergunta": "O levantamento precisa incluir situações de emergência?",
+      "resposta": "<p>Precisa. A norma exige considerar condições <strong>normais</strong>, <strong>anormais</strong> (partida, parada, manutenção) e <strong>situações de emergência</strong> (vazamento, incêndio, transbordo). É onde costumam morar os impactos mais graves e o que mais se esquece no levantamento.</p>"
+    },
+    {
+      "pergunta": "LAIA da ISO 14001 é a mesma coisa que EIA/RIMA?",
+      "resposta": "<p>Não. O LAIA do SGA ISO 14001 sustenta a gestão da operação certificada. EIA/RIMA atende licenciamento ambiental de empreendimentos conforme escala legal. Podem se complementar, mas o auditor da ISO 14001 avalia o LAIA do sistema, não substitui estudo de licenciamento.</p>"
+    },
+    {
+      "pergunta": "Com que frequência revisar o levantamento de aspectos e impactos?",
+      "resposta": "<p>Sempre que houver mudança relevante (processo, produto, equipamento, legislação, incidente) e, de forma programada, ao menos uma vez por ciclo de auditoria. LAIA que não muda em anos costuma ser documento de gaveta.</p>"
+    },
+    {
+      "pergunta": "O que fazer depois de concluir o LAIA?",
+      "resposta": "<p>Implementar <a href=\"/controles-operacionais-iso-14001-requisito-8-1/\">controles operacionais</a> para aspectos significativos, definir objetivos e indicadores ambientais, avaliar conformidade legal (9.1.2) e preparar auditoria interna. O hub <a href=\"/iso-14001-2/\">ISO 14001</a> resume prazo e etapas até a certificação.</p>"
+    }
+  ]
+}

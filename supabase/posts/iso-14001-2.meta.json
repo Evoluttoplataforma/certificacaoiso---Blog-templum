@@ -1,7 +1,7 @@
 {
  "title": "ISO 14001 - Sistema de Gestão Ambiental",
  "seo_title": "ISO 14001: o que é, requisitos e certificação ambiental",
- "seo_description": "ISO 14001 (SGA): aspectos e impactos, requisitos legais, prazo de implantação e certificação. Não substitui licença ambiental. Guia completo.",
+ "seo_description": "ISO 14001 (SGA): o que é, passos para certificar, LAIA, requisitos legais e diferença entre consultoria e certificadora. Versão 2015 e revisão 2026.",
  "tldr": "A ISO 14001 é a norma internacional de sistemas de gestão ambiental: ela estrutura como a empresa identifica, controla e melhora seus impactos no meio ambiente. A implantação leva de 10 a 18 meses — mais que a ISO 9001, porque o levantamento de aspectos e impactos (LAIA) e o de requisitos legais são trabalho de campo. E um ponto que gera confusão: o certificado não substitui licença ambiental. A norma cobra a conformidade legal, não dispensa dela.",
  "faq": [
   {
@@ -27,6 +27,14 @@
   {
    "pergunta": "Quem emite o certificado ISO 14001?",
    "resposta": "<p>Um <strong>organismo de certificação acreditado</strong> — no Brasil, pelo Inmetro. A consultoria prepara a empresa; o organismo audita e emite o certificado, que vale três anos com auditorias de manutenção anuais. Por regra de acreditação, quem consulta não pode certificar.</p>"
+  },
+  {
+   "pergunta": "Já existe ISO 14001:2026 publicada?",
+   "resposta": "<p>Ainda não. A versão certificável hoje é a <strong>ISO 14001:2015</strong> com a Emenda 1 de 2024 (mudanças climáticas no contexto). A nova revisão está em elaboração junto com a ISO 9001; quando houver FDIS publicada, a transição terá prazo definido pelo comitê. Até lá, projetos seguem a 2015.</p>"
+  },
+  {
+   "pergunta": "Quais os passos para obter a certificação ISO 14001?",
+   "resposta": "<p>Em linha geral: diagnóstico, escopo e contexto, <strong>LAIA</strong> e requisitos legais, controles operacionais, auditoria interna e análise crítica, depois auditoria de certificação em duas fases. O hub <a href=\"/iso-14001-2/#o-processo-de-implementacao-da-iso-14001\">detalha prazo e etapas</a>; o passo a passo de aspectos está em <a href=\"/como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa/\">como fazer o LAIA</a>.</p>"
   }
  ]
 }

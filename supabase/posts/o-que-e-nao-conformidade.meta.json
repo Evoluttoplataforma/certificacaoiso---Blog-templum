@@ -1,0 +1,28 @@
+{
+  "title": "Não conformidade (NC): o que é e como tratar na ISO 9001",
+  "seo_title": "Não conformidade (NC): o que é e como tratar na ISO 9001",
+  "seo_description": "Não conformidade é o não atendimento a um requisito. Veja diferença para oportunidade de melhoria, passos práticos e ligação com ação corretiva (10.2) na ISO 9001.",
+  "tldr": "Não conformidade (NC) é não atender a um requisito (ISO 9000). Identificar NC é positivo: revela falha real. Tratamento: contenção, registro (RNC), análise de causa quando necessário, ação corretiva e verificação de eficácia. Na ISO 9001:2015/2026 o núcleo está no requisito 10.2.",
+  "faq": [
+    {
+      "pergunta": "O que é não conformidade?",
+      "resposta": "<p>É o <strong>não atendimento de um requisito</strong> (cliente, produto, lei ou norma). Não é “erro moral”: é gap entre o que foi exigido e o que aconteceu.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre NC e oportunidade de melhoria?",
+      "resposta": "<p>NC já violou requisito. Oportunidade de melhoria é ideia ou gap sem violação comprovada. Nem todo apontamento vira NC.</p>"
+    },
+    {
+      "pergunta": "Quem pode registrar uma NC?",
+      "resposta": "<p>Qualquer pessoa que identifique não atendimento a requisito. Cultura de qualidade depende de apontar sem punição automática.</p>"
+    },
+    {
+      "pergunta": "Como tratar NC na ISO 9001?",
+      "resposta": "<p>Reagir ao produto/serviço afetado, corrigir, analisar causa quando fizer sentido, implementar ação corretiva e verificar eficácia. Detalhe: <a href=\"/nao-conformidade-acao-corretiva-iso-9001-2026-requisito-10-2/\">requisito 10.2</a>.</p>"
+    },
+    {
+      "pergunta": "NC exige sempre análise de causa raiz?",
+      "resposta": "<p>Não sempre. A norma pede eliminar causa para não repetir quando aplicável. Métodos: <a href=\"/analise-de-causa-raiz-o-que-e-e-como-fazer/\">causa raiz</a>, Ishikawa, 5 Porquês.</p>"
+    }
+  ]
+}

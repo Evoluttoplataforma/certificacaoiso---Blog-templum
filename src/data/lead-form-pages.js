@@ -29,6 +29,11 @@ export const LEAD_FORM_PAGES = {
   // --- pilares de norma (maior volume de impressão) ---
   "iso-9001": { display: "ISO 9001", crm: "ISO 9001" },
   "iso-14001-2": { display: "ISO 14001", crm: "ISO 14001" },
+  "como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa": {
+    display: "ISO 14001",
+    crm: "ISO 14001",
+  },
+  "como-identificar-aspecto-impacto-ambiental": { display: "ISO 14001", crm: "ISO 14001" },
   "iso-45001": { display: "ISO 45001", crm: "ISO 45001" },
   "iso-27001": { display: "ISO 27001", crm: "ISO 27001" },
   // ISO 42001: display para headline; crm vazio até o Orbit ter cf_produto próprio
@@ -66,6 +71,10 @@ export const LEAD_FORM_PAGES = {
   // Público é de qualidade/processos, mas não está pesquisando norma. Se o form não
   // converter aqui em ~60 dias, tire desta lista antes de tirar das outras.
   "o-que-e-fluxograma-de-processos": { display: "ISO 9001", crm: "ISO 9001" },
+  "mapeamento-de-processos-e-a-iso-9001": { display: "ISO 9001", crm: "ISO 9001" },
+  "as-sete-ferramentas-da-qualidade": { display: "ISO 9001", crm: "ISO 9001" },
+  "o-que-e-nao-conformidade": { display: "ISO 9001", crm: "ISO 9001" },
+  "a-qualificacao-de-fornecedores-segundo-a-iso-90012015": { display: "ISO 9001", crm: "ISO 9001" },
 
   // --- fundo de funil da vertical de ISO 27001 (10/09/2026) ---
   // As três páginas em que o leitor já não está perguntando "o que é": está decidindo

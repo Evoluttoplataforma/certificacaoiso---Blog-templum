@@ -1,0 +1,32 @@
+{
+  "title": "Como identificar aspectos e impactos ambientais",
+  "seo_title": "Aspecto e impacto ambiental: qual a diferença (ISO 14001)",
+  "seo_description": "Aspecto ambiental é causa, impacto é efeito. Exemplos em matriz, significância e o que a ISO 14001:2015 exige registrar no LAIA.",
+  "tldr": "Aspecto é o que a operação faz e que toca o meio ambiente (água, resíduo, emissão, ruído). Impacto é a mudança no ambiente por causa disso. Na ISO 14001 você lista os pares, define critérios de significância e trata os significativos com controle e objetivos. Matriz causa/efeito é o jeito mais claro de documentar.",
+  "faq": [
+    {
+      "pergunta": "Qual a diferença entre aspecto e impacto ambiental?",
+      "resposta": "<p>Aspecto é o elemento da atividade, produto ou serviço da organização que interage ou pode interagir com o meio ambiente. Impacto é a modificação do meio ambiente que resulta desse aspecto, positiva ou negativa. A relação é de causa e efeito: o aspecto é o que a empresa faz, o impacto é o que acontece com o meio ambiente por causa disso.</p>"
+    },
+    {
+      "pergunta": "Pode dar exemplos de aspecto e impacto ambiental?",
+      "resposta": "<p>Consumo de água é aspecto; redução da disponibilidade de recursos hídricos é o impacto. Geração de resíduo sólido é aspecto; contaminação do solo é o impacto. Emissão de material particulado é aspecto; poluição do ar e efeito na saúde da vizinhança são os impactos. Reaproveitamento de água tratada também é aspecto, com impacto positivo.</p>"
+    },
+    {
+      "pergunta": "Como identificar os aspectos e impactos ambientais da empresa?",
+      "resposta": "<p>Percorrendo os processos e, em cada etapa, listando entradas e saídas: o que entra (água, energia, matéria-prima, produto químico) e o que sai (resíduo, efluente, emissão, ruído, calor). Cada entrada e saída é um aspecto candidato; para cada um, descreva a alteração que ele provoca no meio ambiente. Considere também situações anormais e de emergência. Veja o passo a passo em <a href=\"/como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa/\">como fazer o LAIA</a>.</p>"
+    },
+    {
+      "pergunta": "O que é um aspecto ambiental significativo?",
+      "resposta": "<p>É o aspecto que, pelos critérios definidos pela própria organização, tem ou pode ter impacto ambiental relevante. A ISO 14001 exige que a empresa estabeleça esses critérios, normalmente combinando severidade, probabilidade, abrangência, requisito legal aplicável e percepção das partes interessadas, e que os aspectos significativos sejam tratados com controle operacional, objetivo ou plano de ação.</p>"
+    },
+    {
+      "pergunta": "A ISO 14001:2015 exige procedimento documentado para aspectos e impactos?",
+      "resposta": "<p>Não exige um procedimento formal, como a versão de 2004 pedia. A versão 2015 exige determinar os aspectos ambientais e os impactos associados, estabelecer critérios de significância e manter informação documentada dos aspectos, dos critérios e dos aspectos significativos. Ou seja: o registro é obrigatório, o formato de procedimento é opcional.</p>"
+    },
+    {
+      "pergunta": "Com que frequência revisar o levantamento de aspectos e impactos?",
+      "resposta": "<p>A norma não fixa prazo. A prática usual é revisão anual, somada a revisão imediata sempre que houver mudança relevante: novo processo, produto ou equipamento, alteração de matéria-prima, mudança de legislação aplicável, obra, expansão ou ocorrência de incidente ambiental.</p>"
+    }
+  ]
+}
