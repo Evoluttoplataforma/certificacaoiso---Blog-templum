@@ -177,6 +177,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
   @media (max-width: 620px) { .lead-form .form-row { grid-template-columns: 1fr; } }
 </style>
 
+<script is:inline src="/js/tpl-turnstile.js?v=1"></script>
 <script is:inline define:vars={{ SB_URL: sbUrl, SB_ANON: sbAnon, slug, norma, crmNorma, source }}>
   (function () {
     var form = document.getElementById("leadForm");
@@ -248,6 +249,9 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
         if (window.clarityTag) window.clarityTag("bot", "sim");
         form.hidden = true; if (success) success.hidden = false; return;
       }
+
+      var tokenPromise = window.tplTurnstileToken ? window.tplTurnstileToken() : Promise.reject();
+      tokenPromise.then(function (token) {
 
       var O = ov();
       var pagina = O.page || "/" + slug + "/";
@@ -344,13 +348,22 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
             mensagem: msg,
             evento: "blog-consultoria",
             pagina: "https://certificacaoiso.com.br" + pagina,
+            turnstile_token: token,
           }, utm)),
+        }).then(function () {
+          if (window.tplTurnstileReset) window.tplTurnstileReset();
+        }, function () {
+          if (window.tplTurnstileReset) window.tplTurnstileReset();
         });
       } catch (_) {}
 
       form.hidden = true;
       if (success) success.hidden = false;
       if (success && success.scrollIntoView) success.scrollIntoView({ behavior: "smooth", block: "center" });
+      }).catch(function () {
+        if (window.tplTurnstileReset) window.tplTurnstileReset();
+        if (window.tplLeadFail) window.tplLeadFail(form, btn);
+      });
     });
   })();
 </script>
