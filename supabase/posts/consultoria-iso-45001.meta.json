@@ -1,0 +1,37 @@
+{
+  "title": "Consultoria ISO 45001: PGR, SST e como escolher no Brasil",
+  "seo_title": "Consultoria ISO 45001 no Brasil: o que faz e como escolher",
+  "seo_description": "Consultoria ISO 45001 no Brasil: o que faz, passos até certificar, PGR, NR-1, perigos e riscos, psicossocial e diferença entre consultoria e certificadora.",
+  "tldr": "Consultoria ISO 45001 implanta SGSSO: perigos, riscos, legal, controles, participação dos trabalhadores e evidências. Vale para PGR, certificação voluntária, integração com NR-1 e SGI. Certificado só organismo acreditado emite.",
+  "tags": ["ISO 45001", "consultoria", "SST", "PGR", "NR-1"],
+  "faq": [
+    {
+      "pergunta": "Consultoria ISO 45001 ajuda com PGR e NR-1?",
+      "resposta": "<p>Sim. O núcleo do PGR (inventário e plano) coincide com o planejamento da ISO 45001. A consultoria estrutura o sistema; as NRs continuam obrigatórias. Veja <a href=\"/consultoria-iso-45001/#pgr-nr1\">PGR e NR-1</a> e <a href=\"/nr-1-e-iso-45001/\">NR-1 e ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO 45001 trata riscos psicossociais?",
+      "resposta": "<p>Sim, no mesmo ciclo de perigos e riscos, alinhado à NR-1. A <strong>ISO 45003</strong> é diretriz (não certificável); detalhe em <a href=\"/iso-45003-vs-iso-45001/\">45003 vs 45001</a>.</p>"
+    },
+    {
+      "pergunta": "A consultoria emite certificado ISO 45001?",
+      "resposta": "<p>Não. Organismo certificador acreditado audita e emite. Consultoria e certificadora são contratos separados.</p>"
+    },
+    {
+      "pergunta": "Quanto tempo leva a consultoria ISO 45001?",
+      "resposta": "<p>Em média, <strong>10 a 14 meses</strong> até a auditoria de certificação, conforme porte, grau de risco e maturidade do PGR. Passos em <a href=\"/consultoria-iso-45001/#passos\">consultoria ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto custa a consultoria ISO 45001?",
+      "resposta": "<p>Varia com escopo, porte, grau de risco, PGR e modelo (remoto ou presencial). Consultoria e organismo certificador são contas separadas. Veja <a href=\"/quanto-custa-iso-45001/\">quanto custa a ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria ISO 45001 substitui medicina do trabalho?",
+      "resposta": "<p>Não. PCMSO, exames e serviços clínicos seguem obrigatórios. A consultoria ISO organiza o <strong>sistema de gestão</strong> de SST, integrando legal e prevenção.</p>"
+    },
+    {
+      "pergunta": "Posso integrar ISO 45001 com ISO 9001 e 14001?",
+      "resposta": "<p>Sim, pelo Anexo SL. Veja <a href=\"/consultoria-iso-sistema-integrado-9001-14001-45001/\">consultoria SGI 9001 + 14001 + 45001</a>.</p>"
+    }
+  ]
+}

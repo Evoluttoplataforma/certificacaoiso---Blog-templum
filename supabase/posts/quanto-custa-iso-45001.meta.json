@@ -1,0 +1,38 @@
+{
+  "title": "Quanto custa a ISO 45001: consultoria, certificação e PGR",
+  "seo_title": "Quanto custa a ISO 45001 em 2026: consultoria e certificação",
+  "seo_description": "Quanto custa ISO 45001: implantação do SGSSO, consultoria, auditoria do organismo à parte e manutenção em 3 anos. O que encarece PGR, risco e psicossocial.",
+  "tldr": "O custo da ISO 45001 soma implantação do SGSSO (consultoria e/ou equipe interna), auditoria do organismo certificador e manutenções no ciclo de três anos. Consultoria e certificadora são contratos separados. Porte, grau de risco, unidades e maturidade do PGR mudam o total; prazo típico 10 a 14 meses até certificar.",
+  "tags": ["ISO 45001", "custo", "consultoria", "certificação", "PGR", "SST"],
+  "published_at": "2026-10-06T19:00:00.000Z",
+  "faq": [
+    {
+      "pergunta": "Quanto custa implementar a ISO 45001?",
+      "resposta": "<p>Não há tabela única. A conta inclui <strong>implantação do SGSSO</strong> (consultoria e/ou horas internas), <strong>auditoria do organismo</strong> (por dias de auditoria) e <strong>manutenção</strong> anual e recertificação. Porte, grau de risco e PGR do zero aumentam consultoria e dias de auditoria.</p><p><a href=\"#duas-contas\">Duas contas separadas</a> · <a href=\"/passo-a-passo-certificacao-iso-45001/#prazo\">Prazo típico</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto custa a consultoria ISO 45001?",
+      "resposta": "<p>Depende do método (remoto, presencial, híbrido), escopo (unidades, atividades), maturidade do PGR e se integra com ISO 9001/14001. Compare propostas com as mesmas entregáveis: inventário de riscos, legal, controles, auditoria interna e preparação para estágios 1 e 2.</p><p><a href=\"/consultoria-iso-45001/\">Consultoria ISO 45001</a> · <a href=\"/como-escolher-consultoria-iso/\">Como escolher consultoria</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria e certificação ISO 45001 são cobradas juntas?",
+      "resposta": "<p>Não, e não podem ser pelo mesmo fornecedor no mesmo ciclo. Quem consulta não pode certificar a mesma empresa. Orçamento completo tem linha de consultoria e linha do organismo acreditado.</p>"
+    },
+    {
+      "pergunta": "O PGR entra no custo da ISO 45001?",
+      "resposta": "<p>O PGR é <strong>obrigação legal</strong> (NR-1), contratado ou feito internamente à parte. Muito do inventário de riscos serve ao SGSSO, o que evita duplicar trabalho, mas certificação ISO 45001 continua sendo projeto voluntário com consultoria e organismo próprios.</p><p><a href=\"/nr-1-e-iso-45001/\">NR-1 e ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "O que compõe o custo da certificação ISO 45001?",
+      "resposta": "<p>Três blocos: implantação do sistema; auditoria inicial (estágios 1 e 2) paga ao organismo; manutenção no ciclo de três anos (surveillance e recertificação). <a href=\"#o-que-encarece\">Fatores que encarecem</a>.</p>"
+    },
+    {
+      "pergunta": "Qual a forma mais barata de certificar na ISO 45001?",
+      "resposta": "<p>Equipe interna experiente reduz consultoria, mas aumenta tempo e risco de retrabalho na auditoria. Consultoria só “tira dúvidas” ou PGR genérico costuma sair caro na fase 2. <a href=\"#economizar\">O que não cortar</a>.</p>"
+    },
+    {
+      "pergunta": "ISO 45001 e ISO 9001: o custo dobra?",
+      "resposta": "<p>Não necessariamente. SGI integrado compartilha política, objetivos, auditoria interna e revisão pela direção, mas o organismo emite <strong>certificado por norma</strong>. Veja <a href=\"/consultoria-iso-sistema-integrado-9001-14001-45001/\">SGI 9001 + 14001 + 45001</a>.</p>"
+    }
+  ]
+}

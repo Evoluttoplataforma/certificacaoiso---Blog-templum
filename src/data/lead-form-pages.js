@@ -106,6 +106,12 @@ export const LEAD_FORM_PAGES = {
   "consultoria-iso-9001-construcao-civil-licitacoes": { display: "ISO 9001", crm: "ISO 9001" },
   "consultoria-iso-evidencias-auditoria-externa": { display: "ISO 9001", crm: "ISO 9001" },
   "consultoria-iso-14001": { display: "ISO 14001", crm: "ISO 14001" },
+  "consultoria-iso-45001": { display: "ISO 45001", crm: "ISO 45001" },
+  "quanto-custa-iso-45001": { display: "ISO 45001", crm: "ISO 45001" },
+  "passo-a-passo-certificacao-iso-45001": { display: "ISO 45001", crm: "ISO 45001" },
+  "iso-45003-vs-iso-45001": { display: "ISO 45001", crm: "ISO 45001" },
+  "iso-45001-perigos": { display: "ISO 45001", crm: "ISO 45001" },
+  "consultoria-iso-sistema-integrado-9001-14001-45001": { display: "SGI", crm: "SGI" },
 
   // --- pilar da vertical de NR-1 (riscos psicossociais) ---
   // Ganha o formulário completo por dois motivos: a fiscalização punitiva já começou

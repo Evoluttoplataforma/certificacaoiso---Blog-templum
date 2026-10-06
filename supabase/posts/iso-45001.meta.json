@@ -1,0 +1,44 @@
+{
+  "title": "ISO 45001 e a Segurança do Trabalho",
+  "seo_title": "ISO 45001: o que é, requisitos, NBR 2024 e como certificar",
+  "seo_description": "ISO 45001: o que é SGSSO, requisitos, passo a passo, NR-1 e PGR, ISO 45003, ABNT NBR 2024 e diferença entre consultoria e certificadora.",
+  "tldr": "A ISO 45001:2018 estrutura o SGSSO: perigos, riscos, legal, controles e melhoria. Certificação via organismo acreditado. Encaixa com PGR/NR-1. ISO 45003 orienta psicossocial, sem certificado. ABNT NBR ISO 45001:2024 republica a norma com Emenda 1 (clima).",
+  "faq": [
+    {
+      "pergunta": "O que é a ISO 45001?",
+      "resposta": "<p>Norma internacional de <strong>Sistema de Gestão de Saúde e Segurança Ocupacional (SGSSO)</strong>. Define requisitos para prevenir lesões e doenças do trabalho. Hub: <a href=\"/iso-45001/#o-que-e-iso-45001\">o que é ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Quais são os requisitos principais da ISO 45001?",
+      "resposta": "<p>Cláusulas 4 a 10 (Anexo SL): contexto, liderança, planejamento com perigos/riscos, apoio, operação, avaliação e melhoria. Detalhe: <a href=\"/iso-45001-perigos/\">perigos e riscos</a> e <a href=\"/passo-a-passo-certificacao-iso-45001/\">passo a passo</a>.</p>"
+    },
+    {
+      "pergunta": "Qual é a versão atual da ISO 45001 e a NBR 2024?",
+      "resposta": "<p>A referência internacional certificável é <strong>ISO 45001:2018</strong>, com <strong>Emenda 1:2024</strong> (clima no contexto). A ABNT publicou <strong>NBR ISO 45001:2024</strong> alinhada a essa edição. Não é uma revisão 2024 de requisitos novos além da emenda.</p>"
+    },
+    {
+      "pergunta": "Como implantar a ISO 45001 passo a passo?",
+      "resposta": "<p>Comprometimento, diagnóstico, perigos/riscos, legal e controles, competência, auditoria interna e certificação. <a href=\"/passo-a-passo-certificacao-iso-45001/\">Passo a passo certificação ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "ISO 45003 é a mesma coisa que ISO 45001?",
+      "resposta": "<p>Não. A 45003 é diretriz de riscos psicossociais; a 45001 é certificável. <a href=\"/iso-45003-vs-iso-45001/\">ISO 45003 vs 45001</a>.</p>"
+    },
+    {
+      "pergunta": "A ISO 45001 substitui as Normas Regulamentadoras?",
+      "resposta": "<p>Não. NRs são lei; ISO 45001 é voluntária. Um SGSSO bem feito ajuda a organizar o cumprimento e as evidências do PGR.</p>"
+    },
+    {
+      "pergunta": "Quanto tempo leva para certificar na ISO 45001?",
+      "resposta": "<p>Em média, <strong>10 a 14 meses</strong> em porte médio. <a href=\"/passo-a-passo-certificacao-iso-45001/#prazo\">Prazo típico</a>.</p>"
+    },
+    {
+      "pergunta": "Quem emite o certificado ISO 45001?",
+      "resposta": "<p>Organismo de certificação acreditado (Inmetro/IAF). Consultoria não emite. <a href=\"/consultoria-iso-45001/\">Consultoria ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto custa a ISO 45001?",
+      "resposta": "<p>Soma implantação do SGSSO, auditoria do organismo e manutenção em 3 anos. Consultoria e certificadora são contratos separados. <a href=\"/quanto-custa-iso-45001/\">Quanto custa a ISO 45001</a>.</p>"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "ISO 45003 vs ISO 45001: diferença, certificação e NR-1",
+  "seo_title": "ISO 45003 vs ISO 45001: o que muda e como integrar ao PGR",
+  "seo_description": "ISO 45003 vs ISO 45001: diretriz psicossocial x norma certificável de SST. Como encaixar riscos psicossociais no PGR e no SGSSO, sem confundir com pdf grátis.",
+  "tldr": "ISO 45001 é certificável e cobre todo o SGSSO. ISO 45003 é guia só para riscos psicossociais, sem certificado. NR-1 exige psicossocial no PGR. Use inventário único de riscos e a 45003 como método de apoio.",
+  "tags": ["ISO 45001", "ISO 45003", "NR-1", "psicossocial"],
+  "faq": [
+    {
+      "pergunta": "Qual a diferença entre ISO 45003 e ISO 45001?",
+      "resposta": "<p>A <strong>ISO 45001</strong> define requisitos de SGSSO certificável. A <strong>ISO 45003</strong> orienta gestão de riscos psicossociais dentro desse sistema. Tabela em <a href=\"/iso-45003-vs-iso-45001/#tabela\">comparativo</a>.</p>"
+    },
+    {
+      "pergunta": "Existe certificação ISO 45003?",
+      "resposta": "<p>Não. É norma de diretrizes. Certificação de SST é na <strong>ISO 45001</strong>.</p>"
+    },
+    {
+      "pergunta": "ISO 45003 substitui a NR-1 sobre psicossocial?",
+      "resposta": "<p>Não. A NR-1 é lei brasileira. A 45003 pode ajudar no método, mas o PGR legal continua obrigatório.</p>"
+    },
+    {
+      "pergunta": "Onde baixar ISO 45003 pdf grátis?",
+      "resposta": "<p>O documento oficial é pago. Desconfie de pdf não oficial. Para ação legal e certificação, foque PGR/NR-1 e ISO 45001. <a href=\"/iso-45003-vs-iso-45001/#pdf\">PDF e materiais</a>.</p>"
+    }
+  ]
+}

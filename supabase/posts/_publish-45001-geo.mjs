@@ -1,12 +1,15 @@
 /**
- * Cria posts inexistentes e aplica conteúdo versionado (posts/*.html + .meta.json).
- * Uso: node supabase/publicar-posts-geo.mjs
+ * Fases A+B+C GEO ISO 45001: gera hubs, aplica no Supabase, patch nr-1 links.
+ * node supabase/posts/_publish-45001-geo.mjs
  */
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { spawnSync } from "node:child_process";
 
-const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
+const POSTS = path.join(ROOT, "supabase", "posts");
+
 {
   const envPath = path.join(ROOT, ".env");
   if (existsSync(envPath)) {
@@ -23,6 +26,11 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
   }
 }
 
+for (const script of ["_build-iso-45001-hub.mjs", "_build-iso-45001-perigos-patch.mjs"]) {
+  const r = spawnSync(process.execPath, [path.join(POSTS, script)], { stdio: "inherit", cwd: POSTS });
+  if (r.status !== 0) process.exit(r.status || 1);
+}
+
 const API = process.env.SUPABASE_URL || "https://yfpdrckyuxltvznqfqgh.supabase.co";
 const KEY = process.env.SUPABASE_SERVICE_KEY;
 if (!KEY) {
@@ -30,25 +38,13 @@ if (!KEY) {
   process.exit(1);
 }
 
+const CAT_SST = {
+  category_id: "47628dfe-71bd-426e-b828-f43569bcc870",
+  category_name: "Saúde e Segurança do Trabalho",
+  author_name: "Ricardo Tocha",
+};
+
 const SLUGS = [
-  "como-escolher-consultoria-iso",
-  "consultoria-iso-9001",
-  "consultoria-iso-37001",
-  "gestao-indicadores-iso-9001-2026-requisitos-6-2-e-9-1",
-  "consultoria-iso-9001-imobiliaria",
-  "manter-certificacao-iso-apos-certificar",
-  "homologacao-fornecedores-iso-9001",
-  "consultoria-iso-9001-pme-remota",
-  "iso-9001-cliente-edital-exige-certificado",
-  "fssc-22000-vs-iso-22000-na-pratica",
-  "como-obter-certificacao-fssc-22000-brasil",
-  "fssc-22000-organismos-certificadores-brasil",
-  "consultoria-iso-sistema-integrado-9001-14001",
-  "consultoria-iso-9001-construcao-civil-licitacoes",
-  "consultoria-iso-evidencias-auditoria-externa",
-  "fssc-22000-versao-7",
-  "certificacao-fssc-22000",
-  "consultoria-iso-14001",
   "iso-45001",
   "consultoria-iso-45001",
   "passo-a-passo-certificacao-iso-45001",
@@ -56,46 +52,13 @@ const SLUGS = [
   "consultoria-iso-sistema-integrado-9001-14001-45001",
   "iso-45001-perigos",
   "quanto-custa-iso-45001",
-  "consultoria-iso-27001",
-  "consultoria-iso-27701",
-  "treinamento-iso-27001",
-  "iso-27000-vs-iso-27001",
-  "iso-27001-anexo-a-mapeamento-politicas",
-  "iso-17025",
-  "acreditacao-iso-17025-etapas",
-  "documentacao-iso-17025",
-  "iso-17025-vs-iso-9001",
-  "o-que-mudou-na-iso-170252017",
-  "iso-14001-2",
-  "iso-9001",
-  "passo-a-passo-certificacao-iso-9001",
-  "semana-mundial-da-qualidade-2026",
-  "5s",
-  "o-que-e-fluxograma-de-processos",
-  "mapeamento-de-processos-e-a-iso-9001",
-  "as-sete-ferramentas-da-qualidade",
-  "o-que-e-nao-conformidade",
-  "a-qualificacao-de-fornecedores-segundo-a-iso-90012015",
-  "como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa",
-  "como-identificar-aspecto-impacto-ambiental",
 ];
-
-const CAT_QUALIDADE = {
-  category_id: "94802fc7-6dfd-4677-8054-e7092a3d5f91",
-  category_name: "Qualidade e Inovação",
-  author_name: "Ricardo Tocha",
-};
 
 const H = { apikey: KEY, Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" };
 
-function postsDir() {
-  return path.join(ROOT, "supabase", "posts");
-}
-
 function loadSlug(slug) {
-  const base = postsDir();
-  const html = readFileSync(path.join(base, `${slug}.html`), "utf8");
-  const metaPath = path.join(base, `${slug}.meta.json`);
+  const html = readFileSync(path.join(POSTS, `${slug}.html`), "utf8");
+  const metaPath = path.join(POSTS, `${slug}.meta.json`);
   const meta = existsSync(metaPath) ? JSON.parse(readFileSync(metaPath, "utf8")) : {};
   return { html, meta };
 }
@@ -124,7 +87,7 @@ async function insertPost(slug, html, meta) {
     revised_at: meta.revised_at || publishedAt,
     reading_time_min: Math.max(1, Math.round(words / 230)),
     tags: meta.tags || [],
-    ...CAT_QUALIDADE,
+    ...CAT_SST,
   };
   const r = await fetch(`${API}/rest/v1/blog_templum_posts`, {
     method: "POST",
@@ -132,8 +95,7 @@ async function insertPost(slug, html, meta) {
     body: JSON.stringify(row),
   });
   if (!r.ok) throw new Error(`insert ${slug}: ${r.status} ${await r.text()}`);
-  const created = await r.json();
-  console.log(`  criado: ${slug} id=${created[0]?.id || "?"}`);
+  console.log(`  criado: ${slug}`);
 }
 
 async function patchPost(slug, html, meta) {
@@ -141,7 +103,7 @@ async function patchPost(slug, html, meta) {
   const antes = await (await fetch(`${q}&select=slug,title,tldr,content,faq,seo_title,seo_description`, { headers: H })).json();
   if (!antes.length) throw new Error(`post sumiu: ${slug}`);
   const dia = new Date().toISOString().slice(0, 10);
-  const bk = path.join(postsDir(), `../backup/${slug}-antes-${dia}.json`);
+  const bk = path.join(POSTS, `../backup/${slug}-antes-${dia}.json`);
   writeFileSync(bk, JSON.stringify(antes[0], null, 2));
   console.log(`  backup: ${path.relative(ROOT, bk)}`);
 
@@ -160,6 +122,36 @@ async function patchPost(slug, html, meta) {
   console.log(`  aplicado: ${slug}`);
 }
 
+async function patchNr1Links() {
+  const slug = "nr-1";
+  const q = `${API}/rest/v1/blog_templum_posts?slug=eq.${slug}&select=slug,content`;
+  const rows = await (await fetch(q, { headers: H })).json();
+  if (!rows.length) {
+    console.log("  nr-1: post não encontrado, skip");
+    return;
+  }
+  let content = rows[0].content;
+  const marker = "consultoria-iso-45001";
+  if (content.includes(marker)) {
+    console.log("  nr-1: links 45001 já presentes");
+    return;
+  }
+  const insert =
+    '<p><strong>Certificação ISO 45001:</strong> para estruturar SST além do PGR legal, veja o <a href="/iso-45001/">guia ISO 45001</a>, <a href="/passo-a-passo-certificacao-iso-45001/">passo a passo até certificar</a> e <a href="/consultoria-iso-45001/">consultoria ISO 45001</a>. Psicossocial: <a href="/iso-45003-vs-iso-45001/">ISO 45003 vs 45001</a>.</p>\n\n';
+  content = content.replace(/<h2 id="para-que-serve">/, insert + '<h2 id="para-que-serve">');
+
+  const dia = new Date().toISOString().slice(0, 10);
+  writeFileSync(path.join(POSTS, `../backup/${slug}-antes-45001-geo-${dia}.json`), JSON.stringify(rows[0], null, 2));
+
+  const r = await fetch(q, {
+    method: "PATCH",
+    headers: { ...H, Prefer: "return=representation" },
+    body: JSON.stringify({ content, revised_at: new Date().toISOString() }),
+  });
+  if (!r.ok) throw new Error(`patch nr-1: ${r.status} ${await r.text()}`);
+  console.log("  aplicado: nr-1 (links 45001)");
+}
+
 for (const slug of SLUGS) {
   console.log(`\n--- ${slug} ---`);
   const { html, meta } = loadSlug(slug);
@@ -168,4 +160,7 @@ for (const slug of SLUGS) {
   else await patchPost(slug, html, meta);
 }
 
-console.log("\nConcluído. Próximo: rebuild (CMS ou npm run build + deploy).");
+console.log("\n--- nr-1 (fase C) ---");
+await patchNr1Links();
+
+console.log("\nConcluído. Próximo: npm run build (+ push se quiser llms no ar).");

@@ -1,0 +1,16 @@
+{
+  "title": "ISO 45001: perigos e riscos na gestão proativa de SST",
+  "seo_title": "ISO 45001 perigos e riscos: identificar, avaliar e controlar",
+  "seo_description": "Perigos e riscos na ISO 45001: conceitos, hierarquia de controles, psicossocial, PGR/NR-1 e passo a passo até certificar.",
+  "tldr": "Perigo é a fonte potencial de dano; risco combina probabilidade e severidade. A ISO 45001 exige processo contínuo de identificação e avaliação, participação dos trabalhadores e hierarquia de controles. Integra com PGR da NR-1.",
+  "faq": [
+    {
+      "pergunta": "Qual a diferença entre perigo e risco na ISO 45001?",
+      "resposta": "<p><strong>Perigo</strong> é a fonte (máquina, químico, assédio). <strong>Risco</strong> é a combinação de probabilidade e severidade desse perigo. Seção <a href=\"/iso-45001-perigos/#conceitos-fundamentais-o-que-sao-perigos-e-riscos\">conceitos</a>.</p>"
+    },
+    {
+      "pergunta": "Como a ISO 45001 trata riscos psicossociais?",
+      "resposta": "<p>Como perigos/riscos de SST, no inventário e plano. A ISO 45003 detalha método. <a href=\"/iso-45003-vs-iso-45001/\">45003 vs 45001</a>.</p>"
+    }
+  ]
+}
