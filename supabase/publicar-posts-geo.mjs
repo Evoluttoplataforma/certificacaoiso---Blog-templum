@@ -60,6 +60,8 @@ const SLUGS = [
   "nr-1-e-iso-45001",
   "nr-1-riscos-psicossociais",
   "iso-45001-cliente-edital-exige-certificado",
+  "ohsas-18001-e-iso-45001",
+  "nr-1",
   "consultoria-iso-27001",
   "consultoria-iso-27701",
   "treinamento-iso-27001",

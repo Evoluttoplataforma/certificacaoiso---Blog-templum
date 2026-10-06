@@ -1,0 +1,48 @@
+{
+  "title": "NR-1: o que é, o que a norma exige e como se adequar",
+  "seo_title": "NR-1: o que é, o que exige e como se adequar",
+  "seo_description": "NR-1: GRO, PGR, psicossocial, ordem de serviço, capacitação e MEI/ME/EPP. Links para ISO 45001, passo a passo, custo e guia de riscos psicossociais.",
+  "tldr": "A NR-1 (Disposições Gerais e Gerenciamento de Riscos Ocupacionais) é a norma que estabelece as regras válidas para todas as outras NRs. Ela obriga qualquer empresa com empregado CLT e se organiza em nove itens: os deveres do empregador (1.4), o gerenciamento de riscos com GRO e PGR (1.5), a capacitação (1.7) e o tratamento diferenciado a MEI, ME e EPP (1.8). O PGR precisa conter inventário de riscos e plano de ação, ser revisto a cada dois anos — três, para quem tem certificação em sistema de gestão de SST — e ter o histórico guardado por 20 anos. A redação atual é da Portaria MTE 1.419/2024 e vige desde 26/05/2026.",
+  "faq": [
+    {
+      "pergunta": "O que é a NR-1?",
+      "resposta": "<p>É a Norma Regulamentadora nº 1 — <em>Disposições Gerais e Gerenciamento de Riscos Ocupacionais</em>. Ela estabelece as regras gerais que valem para todas as outras NRs: campo de aplicação, direitos e deveres de empregador e trabalhador, o gerenciamento de riscos (GRO/PGR), capacitação e o tratamento diferenciado para MEI, ME e EPP.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre GRO e PGR?",
+      "resposta": "<p>GRO é o processo de gerenciar os riscos ocupacionais de forma contínua. PGR é o documento que comprova esse processo. Pelo item 1.5.7.1, o PGR contém no mínimo duas peças: o inventário de riscos e o plano de ação.</p>"
+    },
+    {
+      "pergunta": "A NR-1 se aplica a qualquer empresa?",
+      "resposta": "<p>Sim. O item 1.2.1 obriga empregadores e empregados, urbanos e rurais. Não há isenção por porte ou setor. O que existe é tratamento diferenciado no item 1.8, que dispensa MEI, ME e EPP de <em>elaborar o PGR</em> em condições específicas — nunca de cumprir a norma. Veja <a href=\"/nr-1-se-aplica-a-minha-empresa/\">a NR-1 se aplica à minha empresa?</a>.</p>"
+    },
+    {
+      "pergunta": "De quanto em quanto tempo o PGR precisa ser revisto?",
+      "resposta": "<p>A avaliação de riscos deve ser revista a cada dois anos (item 1.5.4.4.6), ou antes disso em situações como acidente, mudança de processo, medida insuficiente ou mudança na lei. Empresas com certificação em sistema de gestão de SST podem ter prazo de até três anos, pelo item 1.5.4.4.6.1.</p>"
+    },
+    {
+      "pergunta": "O que é a ordem de serviço da NR-1?",
+      "resposta": "<p>É o documento em que o empregador informa formalmente ao trabalhador os riscos da função e as regras a seguir. Vem da alínea \"c\" do item 1.4.1, que obriga a elaborar ordens de serviço sobre SST dando ciência aos trabalhadores. O item 1.4.2 \"a\" fecha o par: cabe ao trabalhador cumpri-las. Precisa ser revista quando o inventário de riscos muda.</p>"
+    },
+    {
+      "pergunta": "O MEI está dispensado do PGR?",
+      "resposta": "<p>Sim, pelo item 1.8.1. Mas a dispensa é só da elaboração do PGR: as demais obrigações das NRs continuam valendo (item 1.8.5). E o item 1.8.1.1 diz que a empresa contratante do MEI deve incluí-lo nas suas ações de prevenção e no próprio PGR quando ele atuar nas dependências dela.</p>"
+    },
+    {
+      "pergunta": "O que a NR-1 diz sobre riscos psicossociais?",
+      "resposta": "<p>O item 1.5.3.2.1 determina que a organização considere as condições de trabalho nos termos da NR-17, incluindo os fatores de risco psicossociais relacionados ao trabalho. Na prática, eles entram no inventário de riscos nos mesmos moldes dos demais riscos. Veja o <a href=\"/nr-1-riscos-psicossociais/\">guia completo</a>.</p>"
+    },
+    {
+      "pergunta": "Ter ISO 45001 ajuda a cumprir a NR-1?",
+      "resposta": "<p>Sim, e a própria norma reconhece isso. O item 1.5.3.1.2 admite que o gerenciamento de riscos seja atendido por sistemas de gestão, e o item 1.5.4.4.6.1 dá até três anos de intervalo de revisão para quem tem certificação em sistema de gestão de SST, contra os dois anos da regra geral. Veja <a href=\"/nr-1-e-iso-45001/\">NR-1 e ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Como a ISO 45001 ajuda no PGR e nos riscos psicossociais?",
+      "resposta": "<p>O SGSSO certificável usa a mesma lógica de inventário, controles e participação dos trabalhadores. Quem já tem 45001 estende o escopo psicossocial. <a href=\"/nr-1-e-iso-45001/\">NR-1 e ISO 45001</a> · <a href=\"/iso-45001-perigos/\">perigos e riscos</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto custa certificar na ISO 45001 além do PGR?",
+      "resposta": "<p>Projeto à parte: consultoria de implantação + organismo certificador. <a href=\"/quanto-custa-iso-45001/\">Quanto custa a ISO 45001</a>.</p>"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "OHSAS 18001 acabou: o que mudou para a ISO 45001",
+  "seo_title": "OHSAS 18001 acabou: o que mudou para a ISO 45001",
+  "seo_description": "OHSAS 18001 cancelada em 2021. Diferenças para ISO 45001, mito da ISO 18001, migração, passo a passo, custo e NR-1/PGR.",
+  "tldr": "A OHSAS 18001 foi cancelada em março de 2021. Não há mais certificação válida nela. O sucessor é a ISO 45001:2018 (Anexo SL, liderança, participação dos trabalhadores, riscos e oportunidades). Quem busca ISO 18001 em geral queria a OHSAS. Migração: gap analysis, ajuste do sistema e auditoria na ISO 45001.",
+  "faq": [
+    {
+      "pergunta": "A OHSAS 18001 ainda é válida?",
+      "resposta": "<p>Não. Foi <strong>cancelada em março de 2021</strong>, encerrado o período de migração. Certificados em OHSAS 18001 perderam a validade. A norma certificável é a <a href=\"/iso-45001/\">ISO 45001:2018</a>.</p>"
+    },
+    {
+      "pergunta": "OHSAS 18001 e ISO 18001 são a mesma coisa?",
+      "resposta": "<p>Na prática, quem busca “ISO 18001” quase sempre quer a antiga OHSAS 18001 (BSI). Nunca houve uma ISO 18001 de SST equivalente. O sucessor oficial é a ISO 45001.</p>"
+    },
+    {
+      "pergunta": "O que mudou da OHSAS 18001 para a ISO 45001?",
+      "resposta": "<p>Três mudanças pesam mais: o <strong>Anexo SL</strong> (mesma estrutura da ISO 9001 e 14001), o peso da <strong>liderança e da participação dos trabalhadores</strong>, e a troca da lógica de ação preventiva pela <strong>abordagem de riscos e oportunidades</strong>. Ver <a href=\"#comparativo\">tabela comparativa</a>.</p>"
+    },
+    {
+      "pergunta": "Minha empresa era certificada em OHSAS 18001. O que faço agora?",
+      "resposta": "<p>Se a migração não foi feita, a empresa está sem certificação válida em SST. O caminho é implementar a ISO 45001:2018 e passar por auditoria de certificação. Boa parte do sistema anterior se aproveita; o que costuma faltar é contexto, participação formal dos trabalhadores e riscos e oportunidades. Passos em <a href=\"#o-que-fazer-agora\">o que fazer agora</a>.</p>"
+    },
+    {
+      "pergunta": "Ainda dá para renovar certificado OHSAS?",
+      "resposta": "<p>Não. O ciclo de migração fechou. Qualquer renovação ou nova emissão precisa ser na ISO 45001:2018 com organismo acreditado.</p>"
+    },
+    {
+      "pergunta": "A ISO 45001 substitui a NR-1?",
+      "resposta": "<p>Não. A ISO 45001 é norma de sistema de gestão (voluntária para certificação). A NR-1 e o PGR são obrigação legal no Brasil. Elas se complementam: <a href=\"/nr-1-e-iso-45001/\">NR-1 e ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Como certificar na ISO 45001 depois da OHSAS?",
+      "resposta": "<p>Gap para cláusulas 4 a 10, operação do SGSSO, auditoria interna e organismo acreditado. <a href=\"/passo-a-passo-certificacao-iso-45001/\">Passo a passo ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto custa migrar de OHSAS para ISO 45001?",
+      "resposta": "<p>Depende do que já existe do sistema antigo. Contas: consultoria + organismo. <a href=\"/quanto-custa-iso-45001/\">Quanto custa a ISO 45001</a>.</p>"
+    }
+  ]
+}

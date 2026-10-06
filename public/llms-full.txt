@@ -136,7 +136,8 @@
 - [Requisitos ISO 45001](https://certificacaoiso.com.br/iso-45001-requisitos-tudo-que-voce-precisa-saber/)
 - [ISO 45003 vs ISO 45001](https://certificacaoiso.com.br/iso-45003-vs-iso-45001/)
 - [Perigos e riscos ISO 45001](https://certificacaoiso.com.br/iso-45001-perigos/)
-- [OHSAS 18001 acabou: migração para ISO 45001](https://certificacaoiso.com.br/ohsas-18001-e-iso-45001/)
+- [OHSAS 18001 acabou: migração para ISO 45001](https://certificacaoiso.com.br/ohsas-18001-e-iso-45001/): cancelamento 2021, ISO 18001, passo a passo e custo.
+- [NR-1 hub](https://certificacaoiso.com.br/nr-1/): GRO, PGR, psicossocial, ISO 45001 e revisão trienal do inventário.
 - [NR-1](https://certificacaoiso.com.br/nr-1/)
 - [NR-1 e ISO 45001](https://certificacaoiso.com.br/nr-1-e-iso-45001/)
 - [Cliente ou edital exige ISO 45001](https://certificacaoiso.com.br/iso-45001-cliente-edital-exige-certificado/)

@@ -68,7 +68,7 @@
 - [ISO 22000](https://certificacaoiso.com.br/iso-22000/): norma do sistema de gestão da segurança de alimentos.
 - [HACCP / APPCC](https://certificacaoiso.com.br/haccp-o-que-e/): análise de perigos e pontos críticos de controle, os 7 princípios.
 - [PBQP-H](https://certificacaoiso.com.br/pbqp-h/): qualidade na construção civil, níveis do SiAC, verificação de certificado, OAC, Caixa/GERIC e Minha Casa, Minha Vida.
-- [NR-1](https://certificacaoiso.com.br/nr-1/): a norma que organiza as demais NRs, GRO, PGR e riscos psicossociais.
+- [NR-1](https://certificacaoiso.com.br/nr-1/): GRO, PGR, psicossocial, respostas diretas e links ISO 45001 (passo a passo, custo, edital).
 - [LGPD](https://certificacaoiso.com.br/lgpd/): proteção de dados pessoais e o que ela exige das empresas.
 - [SASSMAQ](https://certificacaoiso.com.br/o-que-e-sassmaq/): avaliação ABIQUIM no transporte rodoviário de químicos; guia hub atualizado para a 4ª edição.
 - [SASSMAQ 4.0 (2026)](https://certificacaoiso.com.br/sassmaq-4-edicao-2026-mudancas-prazo-transicao/): o que muda na certificação Abiquim, transportadora, prazo até 11/03/2027, ESG, ciclo trienal e roteiro de conformidade.
@@ -100,7 +100,7 @@
 - [ISO 27701 e LGPD/GDPR](https://certificacaoiso.com.br/iso-27701-lgpd-gdpr-conformidade/): como o SGPI apoia conformidade legal (sem substituir a lei).
 - [Consultoria ISO 27701](https://certificacaoiso.com.br/consultoria-iso-27701/): SGPI, controlador/operador, integração com 27001; consultoria não emite certificado.
 - [Semana da Qualidade 2026](https://certificacaoiso.com.br/semana-mundial-da-qualidade-2026/): tema CQI, pilares, ideias, PQTA cartórios, decoração/comunicação visual.
-- [OHSAS 18001 e ISO 45001](https://certificacaoiso.com.br/ohsas-18001-e-iso-45001/): a OHSAS acabou; o que mudou na migração.
+- [OHSAS 18001 e ISO 45001](https://certificacaoiso.com.br/ohsas-18001-e-iso-45001/): cancelamento 2021, migração, passo a passo, custo e cluster 45001.
 - [NR-1 e ISO 45001](https://certificacaoiso.com.br/nr-1-e-iso-45001/): como o sistema de gestão conversa com a NR-1 e o PGR.
 - [Requisitos da FSSC 22000](https://certificacaoiso.com.br/requisitos-fssc-22000/): os três blocos e os 18 requisitos adicionais.
 - [Auditoria interna ISO: checklist de preparação](https://certificacaoiso.com.br/checklist-preparacao-auditoria-interna-iso/): o que ter pronto antes do auditor.
