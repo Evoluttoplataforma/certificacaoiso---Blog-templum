@@ -1,0 +1,40 @@
+{
+  "title": "NR-1 e riscos psicossociais: o guia completo para atender à lei",
+  "seo_title": "NR-1 e riscos psicossociais: guia para atender à lei",
+  "seo_description": "NR-1 e riscos psicossociais no PGR: prazo, instrumentos validados, ISO 45001, 45003, custo e passo a passo para certificar SGSSO.",
+  "tldr": "A NR-1 passou a exigir que os riscos psicossociais entrem no PGR nos mesmos moldes dos riscos físicos e químicos: identificação, matriz de risco, medida de controle e evidência. A obrigação vale desde 27/08/2024 (Portaria MTE 1.419) e a fiscalização punitiva começou em 26/05/2026. O STF suspendeu a multa de cinco dispositivos do item 1.5 (ADPF 1.316), mas não a obrigação — e o nexo causal, o FAP e o passivo trabalhista não dependem dela. Avalie com instrumento validado (Karasek, Siegrist, HSE-IT ou COPSOQ), não com pesquisa de clima.",
+  "faq": [
+    {
+      "pergunta": "A NR-1 obriga minha empresa a contratar um psicólogo?",
+      "resposta": "<p>Não. A norma não determina nenhum profissional específico. A avaliação pode ser conduzida pela estrutura que a empresa já tem — RH, SESMT e CIPA — com apoio externo pontual se a empresa quiser. O que a norma exige é que a avaliação seja feita com instrumento adequado e que haja evidência dela.</p>"
+    },
+    {
+      "pergunta": "Ter canal de denúncias já adequa a empresa à NR-1?",
+      "resposta": "<p>Não. O canal atende ao elemento de dar voz ao trabalhador, que é um entre cinco. Ele não avalia risco, não classifica em matriz e não gera plano de ação. Uma empresa com canal de denúncias e sem avaliação de risco psicossocial no PGR continua irregular. Veja <a href=\"/nr-1-mitos/\">5 mitos sobre a NR-1</a>.</p>"
+    },
+    {
+      "pergunta": "Empresa pequena está isenta?",
+      "resposta": "<p>Não. Existe flexibilização proporcional ao porte e ao grau de risco, mas a obrigação alcança qualquer empresa com empregados regidos pela CLT. Os detalhes por porte estão em <a href=\"/nr-1-se-aplica-a-minha-empresa/\">a NR-1 se aplica à minha empresa?</a>.</p>"
+    },
+    {
+      "pergunta": "Se o STF suspendeu as multas, ainda preciso fazer?",
+      "resposta": "<p>Sim. A ADPF 1.316 suspendeu a eficácia sancionatória de cinco dispositivos do item 1.5 — a multa sobre eles, não a obrigação de gerenciar o risco. E a exposição principal não é a multa: é o nexo causal entre transtorno mental e trabalho, o impacto no FAP e o passivo trabalhista. Nenhum dos três depende da sanção administrativa. Confirme o status atual do referendo antes de decidir.</p>"
+    },
+    {
+      "pergunta": "Pesquisa de clima serve como avaliação de risco psicossocial?",
+      "resposta": "<p>Não. Pesquisa de clima usa perguntas escritas internamente, sem validação científica, e mede satisfação. A avaliação de risco psicossocial exige instrumento validado com parâmetro de comparação, como Karasek (JCQ), Siegrist (ERI), HSE-IT ou COPSOQ. Veja <a href=\"/pesquisa-de-clima-nao-e-avaliacao-de-risco-psicossocial/\">a diferença entre os dois</a>.</p>"
+    },
+    {
+      "pergunta": "Quem já tem ISO 45001 precisa começar do zero?",
+      "resposta": "<p>Não. A ISO 45001 já exige identificação de perigos, avaliação de riscos, hierarquia de controles, consulta aos trabalhadores e documentação — a mesma engenharia da NR-1. O trabalho é estender o escopo do que existe, não criar um programa paralelo. Veja <a href=\"/nr-1-e-iso-45001/\">NR-1 e ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Riscos psicossociais entram na ISO 45001?",
+      "resposta": "<p>Sim, na cláusula 6.1 (perigos e riscos), no mesmo ciclo do PGR. <a href=\"/iso-45001-perigos/#perigos-psicossociais-o-desafio-emergente\">Perigos psicossociais</a> · <a href=\"/iso-45001-requisitos-tudo-que-voce-precisa-saber/#requisito-6\">Requisitos 6.1</a>.</p>"
+    },
+    {
+      "pergunta": "Como certificar na ISO 45001 após adequar o PGR?",
+      "resposta": "<p>Comprometimento, escopo, legal, controles, auditoria interna e organismo certificador. <a href=\"/passo-a-passo-certificacao-iso-45001/\">Passo a passo ISO 45001</a>.</p>"
+    }
+  ]
+}

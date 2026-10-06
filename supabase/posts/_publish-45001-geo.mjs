@@ -26,7 +26,11 @@ const POSTS = path.join(ROOT, "supabase", "posts");
   }
 }
 
-for (const script of ["_build-iso-45001-hub.mjs", "_build-iso-45001-perigos-patch.mjs"]) {
+for (const script of [
+  "_build-iso-45001-hub.mjs",
+  "_build-iso-45001-perigos-patch.mjs",
+  "_build-nr-1-riscos-psicossociais-geo.mjs",
+]) {
   const r = spawnSync(process.execPath, [path.join(POSTS, script)], { stdio: "inherit", cwd: POSTS });
   if (r.status !== 0) process.exit(r.status || 1);
 }
@@ -54,6 +58,8 @@ const SLUGS = [
   "quanto-custa-iso-45001",
   "iso-45001-requisitos-tudo-que-voce-precisa-saber",
   "nr-1-e-iso-45001",
+  "nr-1-riscos-psicossociais",
+  "iso-45001-cliente-edital-exige-certificado",
 ];
 
 const H = { apikey: KEY, Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" };

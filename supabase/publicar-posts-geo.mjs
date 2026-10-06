@@ -58,6 +58,8 @@ const SLUGS = [
   "quanto-custa-iso-45001",
   "iso-45001-requisitos-tudo-que-voce-precisa-saber",
   "nr-1-e-iso-45001",
+  "nr-1-riscos-psicossociais",
+  "iso-45001-cliente-edital-exige-certificado",
   "consultoria-iso-27001",
   "consultoria-iso-27701",
   "treinamento-iso-27001",

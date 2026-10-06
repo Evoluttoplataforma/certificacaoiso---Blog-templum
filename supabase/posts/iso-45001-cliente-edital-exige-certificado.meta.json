@@ -1,0 +1,30 @@
+{
+  "title": "Cliente ou edital exige ISO 45001: o que responder e prazos reais",
+  "seo_title": "Cliente ou edital exige ISO 45001: o que responder e prazos",
+  "seo_description": "Cliente ou edital exige ISO 45001? O que responder sem certificado, PGR x SGSSO, prazo 10 a 14 meses, passo a passo e consultoria x certificadora.",
+  "tldr": "Não há certificado provisório. Responda com escopo, status do PGR, organismo certificador e data de auditoria agendada. Prazo típico 10 a 14 meses até certificar em porte médio. PGR/NR-1 ajuda no 6.1, mas homologação pede certificado ISO quando pede ISO.",
+  "tags": ["ISO 45001", "edital", "cliente", "homologação", "SST"],
+  "published_at": "2026-10-06T22:45:00.000Z",
+  "faq": [
+    {
+      "pergunta": "O que responder quando o cliente pede ISO 45001 e eu não tenho?",
+      "resposta": "<p>Declaração de implantação com escopo, integração PGR/NR-1, organismo envolvido e data prevista de auditoria. <a href=\"/iso-45001-cliente-edital-exige-certificado/#responder-hoje\">O que enviar hoje</a>.</p>"
+    },
+    {
+      "pergunta": "PGR da NR-1 substitui certificado ISO 45001?",
+      "resposta": "<p>Não. PGR é obrigação legal; ISO 45001 é certificação voluntária de SGSSO. O inventário bem feito reduz retrabalho. <a href=\"/nr-1-e-iso-45001/\">NR-1 e ISO 45001</a>.</p>"
+    },
+    {
+      "pergunta": "Existe certificado provisório de ISO 45001?",
+      "resposta": "<p>Não. Certificado válido só após auditoria do organismo acreditado. Consultoria não emite.</p>"
+    },
+    {
+      "pergunta": "Em quanto tempo consigo ISO 45001 com urgência?",
+      "resposta": "<p>Referência: <strong>10 a 14 meses</strong> em porte médio, conforme PGR, unidades e risco. <a href=\"/passo-a-passo-certificacao-iso-45001/#prazo\">Prazo típico</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto custa quando o cliente exige ISO 45001?",
+      "resposta": "<p>Implantação (consultoria) + auditoria do organismo + manutenção em 3 anos. <a href=\"/quanto-custa-iso-45001/\">Quanto custa a ISO 45001</a>.</p>"
+    }
+  ]
+}
