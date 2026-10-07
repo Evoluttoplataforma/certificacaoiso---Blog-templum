@@ -1,0 +1,40 @@
+{
+  "title": "A NR-1 se aplica à minha empresa? CLT, porte e o que muda para as pequenas",
+  "seo_title": "A NR-1 se aplica à minha empresa? CLT, porte e pequenas",
+  "seo_description": "NR-1 se aplica à minha empresa? CLT, MEI, ME e EPP (item 1.8), dispensa de PGR, psicossocial em escritório, teste rápido e ISO 45001.",
+  "tldr": "Com empregado CLT, a NR-1 aplica. MEI dispensa elaborar PGR; ME/EPP só em grau de risco 1 ou 2 e condições cumulativas do item 1.8. Escritório tem psicossocial. Um CLT basta para a obrigação.",
+  "faq": [
+    {
+      "pergunta": "Minha empresa tem 20 funcionários. Preciso me adequar à NR-1?",
+      "resposta": "<p>Sim. A obrigação nasce do vínculo CLT, não do número de empregados. Existe flexibilização proporcional ao porte e ao grau de risco, que reduz a profundidade do que se exige, mas não elimina a avaliação, o plano de ação, o treinamento e a documentação.</p>"
+    },
+    {
+      "pergunta": "Sou um escritório administrativo, sem máquinas. Tenho risco psicossocial?",
+      "resposta": "<p>Provavelmente sim, e possivelmente alto. Risco psicossocial depende da organização do trabalho, não de máquina. Escritórios de contabilidade, empresas de tecnologia, consultorias e centrais de atendimento concentram carga excessiva, prazo inegociável e baixa autonomia — o desenho que mais adoece.</p>"
+    },
+    {
+      "pergunta": "Empresa só com sócios e prestadores PJ precisa de PGR?",
+      "resposta": "<p>Sem nenhum empregado CLT, a obrigação da NR-1 não se aplica. Mas um único empregado CLT já a cria, e contrato de PJ que na prática tem subordinação, horário e exclusividade é reclassificável como vínculo — o que traria a obrigação junto com o passivo trabalhista.</p>"
+    },
+    {
+      "pergunta": "Preciso contratar psicólogo ou comprar software?",
+      "resposta": "<p>Nenhum dos dois é exigido pela norma. A avaliação pode ser conduzida pelo RH, SESMT e CIPA existentes, com apoio externo se a empresa quiser, e o registro pode ser feito sem ferramenta dedicada. Software compra controle de prazo e histórico, não conformidade.</p>"
+    },
+    {
+      "pergunta": "MEI precisa de PGR?",
+      "resposta": "<p>O MEI empregador (1.8.1) fica dispensado de <em>elaborar</em> o PGR, mas continua obrigado às demais NR. Quem contrata MEI inclui-o no PGR quando atua nas dependências (1.8.1.1). <a href=\"/nr-1-mei-microempresa-epp/\">Teste MEI, ME e EPP</a>.</p>"
+    },
+    {
+      "pergunta": "Microempresa grau de risco 3 precisa de PGR?",
+      "resposta": "<p>Em regra, sim. A dispensa do 1.8.4 vale para graus de risco 1 e 2, com levantamento e declaração digital conforme a norma. Grau 3 exige PGR.</p>"
+    },
+    {
+      "pergunta": "Dispensa de PGR significa que não preciso cuidar de SST?",
+      "resposta": "<p>Não. Significa apenas não elaborar o documento PGR nas hipóteses do 1.8. Ordens de serviço, capacitação, NRs específicas e demais deveres do item 1.4 continuam. <a href=\"/nr-1/\">Hub NR-1</a>.</p>"
+    },
+    {
+      "pergunta": "ISO 45001 substitui o PGR para ME e EPP?",
+      "resposta": "<p>Não substitui a lei. Organiza o SGSSO e facilita inventário e revisão. Quem precisa de PGR continua precisando. <a href=\"/nr-1-e-iso-45001/\">NR-1 e ISO 45001</a>.</p>"
+    }
+  ]
+}

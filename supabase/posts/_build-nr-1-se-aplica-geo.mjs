@@ -1,0 +1,131 @@
+/** GEO nr-1-se-aplica-a-minha-empresa: CLT, MEI/ME/EPP (item 1.8), PGR, psicossocial, 45001. */
+import { readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const dir = path.dirname(fileURLToPath(import.meta.url));
+const exportPath = path.join(dir, "../backup/nr-1-se-aplica-a-minha-empresa-export-2026-10-06.json");
+const row = JSON.parse(readFileSync(exportPath, "utf8"));
+
+const html = `<p><strong>A NR-1 se aplica à minha empresa?</strong> Se você tem ao menos <strong>um empregado CLT</strong>, sim: a norma obriga empregadores e empregados (item 1.2.1). Não há isenção por porte, setor ou escritório. O que muda para MEI, microempresa e EPP é o <strong>item 1.8</strong>: em condições específicas, dispensa de <em>elaborar o PGR</em>, nunca de cumprir a NR-1.</p>
+<p>Guia do blog <strong>Certificação ISO</strong> (Templum). <a href="/nr-1/">Hub NR-1</a> · <a href="/nr-1-riscos-psicossociais/">riscos psicossociais</a> · <a href="/nr-1-e-iso-45001/">NR-1 e ISO 45001</a> · <a href="/iso-45001/">ISO 45001</a> · <a href="/nr-1-mei-microempresa-epp/">teste MEI, ME e EPP</a> · <a href="/nr-1-prazos-fiscalizacao/">prazos e fiscalização</a>.</p>
+
+<div class="post-portas">
+  <a href="#respostas-diretas"><strong>Respostas diretas</strong><span>CLT, PGR, porte</span></a>
+  <a href="#mei-me-epp"><strong>MEI, ME e EPP</strong><span>Item 1.8</span></a>
+  <a href="#escritorio-sem-maquina"><strong>Escritório</strong><span>Psicossocial</span></a>
+  <a href="#teste-irregular"><strong>Teste rápido</strong><span>Seu PGR</span></a>
+</div>
+
+<h2 id="respostas-diretas">Respostas diretas: a NR-1 se aplica?</h2>
+<ul>
+<li><strong>Empresa com CLT:</strong> a NR-1 aplica. Flexibilização é sobre <em>como</em> cumprir, não <em>se</em> cumprir.</li>
+<li><strong>Sem empregado CLT</strong> (só sócios, só MEI empregador, autônomos legítimos): obrigação de PGR pela NR-1 não nasce daí. <strong>Um CLT</strong> já cria a obrigação.</li>
+<li><strong>MEI empregador (1.8.1):</strong> dispensado de <em>elaborar PGR</em>; demais NR continuam.</li>
+<li><strong>ME e EPP (1.8.4):</strong> podem dispensar PGR só se grau de risco 1 ou 2, levantamento sem agentes físicos/químicos/biológicos (NR-9) <strong>e</strong> informações digitais (1.6.1). Condições cumulativas.</li>
+<li><strong>Psicossocial:</strong> entra no inventário quando há PGR. Escritório sem máquina pode ter risco psicossocial alto. <a href="/nr-1-riscos-psicossociais/">Guia psicossocial</a>.</li>
+<li><strong>ISO 45001:</strong> voluntária; complementa PGR. <a href="/nr-1-e-iso-45001/">Mapa NR-1 x 45001</a>.</li>
+</ul>
+
+<h2 id="clt-e-porte">Empregado CLT: a regra do item 1.2.1</h2>
+<p>A pergunta clássica é: \"somos trinta pessoas, escritório, sem máquina: vale para nós?\". Vale. A <a href="/nr-1/">NR-1</a> organiza o GRO e o PGR para quem emprega com CLT, urbano ou rural.</p>
+<p>Empresa grande e indústria pesada exigem profundidade maior (SESMT, inventário extenso). Pequeno porte exige o mesmo ciclo lógico: conhecer riscos, plano de ação, treinamento, evidência. Cada item é menor; nenhum some por ser pequeno.</p>
+
+<h2 id="mei-me-epp">MEI, microempresa e EPP: o item 1.8 (dispensa de PGR)</h2>
+<p>O item 1.8 é o mais mal citado. <strong>Não isenta de cumprir a NR-1.</strong> O 1.8.5 deixa claro: a dispensa refere-se à <em>elaboração do PGR</em>, não às demais disposições das NR.</p>
+
+<table>
+<tr><th>Quem</th><th>Condição</th><th>Do que fica dispensado</th></tr>
+<tr><td><strong>MEI</strong> (1.8.1)</td><td>Empregador enquadrado como MEI</td><td>Elaborar o PGR</td></tr>
+<tr><td><strong>ME e EPP</strong> (1.8.4)</td><td>Graus de risco 1 e 2; levantamento preliminar sem exposição a agentes físicos, químicos e biológicos (NR-9); <strong>e</strong> declaração das informações digitais (1.6.1)</td><td>Elaborar o PGR</td></tr>
+<tr><td><strong>MEI, ME e EPP</strong> (1.8.6)</td><td>Graus de risco 1 e 2; informações digitais declaradas; <strong>sem</strong> exposição a agentes físicos, químicos, biológicos e ergonômicos</td><td>Elaborar o PCMSO (programa)</td></tr>
+</table>
+
+<p><strong>Leituras que evitam autuação:</strong></p>
+<ul>
+<li>Condições do 1.8.4 são <strong>cumulativas</strong>. Grau de risco 3 ou exposição química típica de oficina/indústria: PGR volta a ser obrigatório.</li>
+<li>Contratar MEI não transfere risco: pelo 1.8.1.1, quem contrata inclui o MEI nas ações de prevenção e no PGR quando ele atua nas dependências ou local convencionado.</li>
+<li>Dispensa de PCMSO (1.8.6) <strong>não</strong> dispensa exames nem ASO (1.8.7.1).</li>
+<li>Graus de risco 1 e 2 vêm da CNAE (NR-4). ME/EPP sem SESMT pode usar ferramentas públicas de avaliação + plano de ação (1.8.3).</li>
+</ul>
+<p>Checklist condição a condição: <a href="/nr-1-mei-microempresa-epp/">NR-1 para MEI, microempresa e EPP</a>.</p>
+
+<h2 id="socio-pj-autonomo">Sócio, PJ e autônomo</h2>
+<p>Sem vínculo CLT na empresa, não nasce a obrigação de PGR por esse vínculo. Ressalvas práticas:</p>
+<ul>
+<li><strong>Um empregado CLT</strong> basta para exigir GRO/PGR (salvo dispensa 1.8 que caiba ao seu porte).</li>
+<li>PJ com subordinação, horário fixo e exclusividade pode ser reclassificado: a obrigação e o passivo trabalhista vêm juntos.</li>
+</ul>
+
+<h2 id="escritorio-sem-maquina">Escritório e \"não temos risco físico\"</h2>
+<p>Risco psicossocial depende da <strong>organização do trabalho</strong>, não de máquina. Setores administrativos frequentemente concentram carga, prazo inegociável, metas rígidas e baixa autonomia: TI, consultoria, contabilidade (picos sazonais), teleatendimento, saúde.</p>
+<p>Pagar hora extra cumpre a CLT; não apaga o fator se a sobrecarga virou rotina. Esse fator entra no inventário quando você mantém PGR.</p>
+<p>Para pequenas empresas: a norma não exige psicólogo nem software obrigatório. Exige avaliação, plano com prazo e responsável, treinamento e registro. Detalhe: <a href="/como-medir-riscos-psicossociais/">como medir riscos psicossociais</a>.</p>
+
+<h2 id="pequena-pratica">O que muda na prática para a empresa pequena</h2>
+<ul>
+<li><strong>Profundidade:</strong> inventário e plano menores, mas rastreáveis.</li>
+<li><strong>Equipe:</strong> RH, SESMT enxuto ou apoio externo por escolha, não por lista fechada na norma.</li>
+<li><strong>Registro:</strong> planilha e pasta organizada servem; ferramenta compra controle de prazo e histórico.</li>
+<li><strong>Tempo:</strong> questionário bem aplicado em dezenas de pessoas cabe em meio dia por ciclo.</li>
+</ul>
+
+<h2 id="iso-45001">Quem já tem ISO 45001 ou compliance</h2>
+<p>Com <a href="/iso-45001/">ISO 45001</a>, identificação de perigos, avaliação, hierarquia de controles e participação dos trabalhadores já existem (6.1 e 8.1). O trabalho é estender o escopo aos psicossociais, não montar programa paralelo. <a href="/nr-1-e-iso-45001/">NR-1 e ISO 45001</a> · <a href="/passo-a-passo-certificacao-iso-45001/">passo a passo certificação</a> · <a href="/quanto-custa-iso-45001/">quanto custa</a>.</p>
+<p>Com programa de compliance: canal de denúncia, código e treinamento de assédio cobrem parte do treinar e dar voz. <a href="/nr-1-e-programa-de-compliance/">NR-1 e compliance</a>.</p>
+<p>Documento ainda no modelo PPRA: <a href="/ppra/">PPRA foi substituído pelo PGR</a>.</p>
+
+<h2 id="teste-irregular">Teste rápido: estou irregular?</h2>
+<ol>
+<li>Abra o PGR (se você deve tê-lo). Procure \"psicossocial\". Se não aparece, o inventário está incompleto para a redação vigente.</li>
+<li>Se aparece, há <strong>avaliação com instrumento validado</strong>, classificação e plano de ação, ou só parágrafo genérico? Declaração sem método não sustenta fiscalização.</li>
+<li>ME/EPP: confira grau de risco, NR-9 e declaração digital antes de assumir dispensa do 1.8.4.</li>
+</ol>
+<p>Passo a passo completo: <a href="/nr-1-riscos-psicossociais/">NR-1 e riscos psicossociais</a>. Datas: <a href="/nr-1-prazos-fiscalizacao/">prazos da NR-1</a>. Erros comuns: <a href="/nr-1-mitos/">mitos sobre a NR-1</a>.</p>
+
+<h2 id="aprofunde">Aprofunde</h2>
+<ul>
+<li><a href="/nr-1/">NR-1: GRO, PGR e psicossocial</a></li>
+<li><a href="/nr-1-documentacao-evidencias/">Documentação e evidências NR-1</a></li>
+<li><a href="/iso-45001-perigos/">Perigos e riscos ISO 45001</a></li>
+<li><a href="/consultoria-iso-45001/">Consultoria ISO 45001</a></li>
+</ul>
+<p><a href="/form/?utm_source=blog&amp;utm_medium=cta&amp;utm_campaign=nr-1-se-aplica-a-minha-empresa&amp;norma=ISO%2045001">Diagnóstico gratuito SST</a></p>
+`;
+
+writeFileSync(path.join(dir, "nr-1-se-aplica-a-minha-empresa.html"), html, "utf8");
+
+const meta = {
+  title: row.title,
+  seo_title: row.seo_title,
+  seo_description:
+    "NR-1 se aplica à minha empresa? CLT, MEI, ME e EPP (item 1.8), dispensa de PGR, psicossocial em escritório, teste rápido e ISO 45001.",
+  tldr:
+    "Com empregado CLT, a NR-1 aplica. MEI dispensa elaborar PGR; ME/EPP só em grau de risco 1 ou 2 e condições cumulativas do item 1.8. Escritório tem psicossocial. Um CLT basta para a obrigação.",
+  faq: [
+    ...row.faq,
+    {
+      pergunta: "MEI precisa de PGR?",
+      resposta:
+        "<p>O MEI empregador (1.8.1) fica dispensado de <em>elaborar</em> o PGR, mas continua obrigado às demais NR. Quem contrata MEI inclui-o no PGR quando atua nas dependências (1.8.1.1). <a href=\"/nr-1-mei-microempresa-epp/\">Teste MEI, ME e EPP</a>.</p>",
+    },
+    {
+      pergunta: "Microempresa grau de risco 3 precisa de PGR?",
+      resposta:
+        "<p>Em regra, sim. A dispensa do 1.8.4 vale para graus de risco 1 e 2, com levantamento e declaração digital conforme a norma. Grau 3 exige PGR.</p>",
+    },
+    {
+      pergunta: "Dispensa de PGR significa que não preciso cuidar de SST?",
+      resposta:
+        "<p>Não. Significa apenas não elaborar o documento PGR nas hipóteses do 1.8. Ordens de serviço, capacitação, NRs específicas e demais deveres do item 1.4 continuam. <a href=\"/nr-1/\">Hub NR-1</a>.</p>",
+    },
+    {
+      pergunta: "ISO 45001 substitui o PGR para ME e EPP?",
+      resposta:
+        "<p>Não substitui a lei. Organiza o SGSSO e facilita inventário e revisão. Quem precisa de PGR continua precisando. <a href=\"/nr-1-e-iso-45001/\">NR-1 e ISO 45001</a>.</p>",
+    },
+  ],
+};
+
+writeFileSync(path.join(dir, "nr-1-se-aplica-a-minha-empresa.meta.json"), JSON.stringify(meta, null, 2) + "\n", "utf8");
+console.log("nr-1-se-aplica-a-minha-empresa.html + meta gerados");

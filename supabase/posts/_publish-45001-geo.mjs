@@ -32,6 +32,7 @@ for (const script of [
   "_build-nr-1-riscos-psicossociais-geo.mjs",
   "_build-ohsas-45001-geo.mjs",
   "_build-nr-1-hub-geo.mjs",
+  "_build-nr-1-se-aplica-geo.mjs",
 ]) {
   const r = spawnSync(process.execPath, [path.join(POSTS, script)], { stdio: "inherit", cwd: POSTS });
   if (r.status !== 0) process.exit(r.status || 1);
@@ -64,6 +65,7 @@ const SLUGS = [
   "iso-45001-cliente-edital-exige-certificado",
   "ohsas-18001-e-iso-45001",
   "nr-1",
+  "nr-1-se-aplica-a-minha-empresa",
 ];
 
 const H = { apikey: KEY, Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" };
