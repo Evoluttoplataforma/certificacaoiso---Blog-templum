@@ -1,4 +1,12 @@
-<p><strong>A ISO 45001</strong> é a norma internacional de Sistema de Gestão de Saúde e Segurança Ocupacional (SGSSO). Versão certificável: <strong>ISO 45001:2018</strong> (ABNT NBR ISO 45001, republicação 2024). Substituiu a <a href="/ohsas-18001-e-iso-45001/">OHSAS 18001</a> (cancelada em 2021) e conversa com a <a href="/nr-1-e-iso-45001/">NR-1 e o PGR</a>.</p>
+/** Reescrita corpo hub iso-45001: enxuto, cluster filho, sem Orbit/link errado. */
+import { writeFileSync, readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const dir = path.dirname(fileURLToPath(import.meta.url));
+const meta = JSON.parse(readFileSync(path.join(dir, "iso-45001.meta.json"), "utf8"));
+
+const html = `<p><strong>A ISO 45001</strong> é a norma internacional de Sistema de Gestão de Saúde e Segurança Ocupacional (SGSSO). Versão certificável: <strong>ISO 45001:2018</strong> (ABNT NBR ISO 45001, republicação 2024). Substituiu a <a href="/ohsas-18001-e-iso-45001/">OHSAS 18001</a> (cancelada em 2021) e conversa com a <a href="/nr-1-e-iso-45001/">NR-1 e o PGR</a>.</p>
 <p>Guia do blog <strong>Certificação ISO</strong>, da <a href="https://templum.com.br/consultoria/iso-45001/"><strong>Templum Consultoria</strong></a>. <a href="/iso-45001-requisitos-tudo-que-voce-precisa-saber/">Requisitos 4 a 10</a> · <a href="/passo-a-passo-certificacao-iso-45001/">passo a passo</a> · <a href="/quanto-custa-iso-45001/">quanto custa</a> · <a href="/consultoria-iso-45001/">consultoria</a> · <a href="/iso-45003-vs-iso-45001/">45003 vs 45001</a> · <a href="/iso-45001-cliente-edital-exige-certificado/">cliente ou edital exige</a>.</p>
 
 <div class="post-portas">
@@ -72,3 +80,8 @@
 <li><a href="/nr-1-se-aplica-a-minha-empresa/">NR-1 se aplica à minha empresa?</a></li>
 <li><a href="/nr-1-mei-microempresa-epp/">NR-1 MEI, ME e EPP</a></li>
 </ul>
+`;
+
+writeFileSync(path.join(dir, "iso-45001.html"), html, "utf8");
+writeFileSync(path.join(dir, "iso-45001.meta.json"), JSON.stringify(meta, null, 2) + "\n", "utf8");
+console.log("iso-45001 hub reescrito (GEO full)");

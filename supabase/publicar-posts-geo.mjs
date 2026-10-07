@@ -63,6 +63,7 @@ const SLUGS = [
   "ohsas-18001-e-iso-45001",
   "nr-1",
   "nr-1-se-aplica-a-minha-empresa",
+  "nr-1-mei-microempresa-epp",
   "consultoria-iso-27001",
   "consultoria-iso-27701",
   "treinamento-iso-27001",

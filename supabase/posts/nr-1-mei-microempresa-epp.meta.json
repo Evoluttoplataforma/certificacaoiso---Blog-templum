@@ -1,0 +1,28 @@
+{
+  "title": "NR-1 para MEI, microempresa e EPP: o que a norma realmente dispensa",
+  "seo_title": "NR-1 para MEI, ME e EPP: o que a norma realmente dispensa",
+  "seo_description": "Item 1.8 NR-1: MEI, ME e EPP, dispensa de PGR e PCMSO, condições cumulativas, grau de risco, psicossocial e ISO 45001.",
+  "tldr": "O item 1.8 da NR-1 dispensa MEI, ME e EPP de ELABORAR o PGR .  nunca de cumprir a norma, como o próprio item 1.8.5 deixa explícito. O MEI é dispensado sem condição adicional (1.8.1). ME e EPP precisam de três condições cumulativas: grau de risco 1 ou 2 pela NR-4, nenhuma exposição a agentes físicos, químicos e biológicos no levantamento preliminar, e a declaração digital do item 1.6.1. Falta uma, a dispensa cai. E contratar MEI não transfere o problema: a contratante deve incluí-lo no próprio PGR quando ele atua nas dependências dela.",
+  "faq": [
+    {
+      "pergunta": "MEI precisa fazer PGR?",
+      "resposta": "<p>Não. O item 1.8.1 da NR-1 dispensa o MEI de elaborar o PGR, sem condição adicional. Mas a dispensa é só desse documento: as demais obrigações das NRs continuam valendo (item 1.8.5). E a empresa que contrata o MEI precisa incluí-lo no próprio PGR quando ele atuar nas dependências dela (1.8.1.1).</p>"
+    },
+    {
+      "pergunta": "Microempresa está dispensada do PGR?",
+      "resposta": "<p>Só quando três condições valem ao mesmo tempo, pelo item 1.8.4: estar nos graus de risco 1 ou 2 da NR-4; não identificar, no levantamento preliminar de perigos, exposição a agentes físicos, químicos e biológicos conforme a NR-9; e declarar as informações digitais na forma do item 1.6.1. Faltando uma, o PGR é obrigatório.</p>"
+    },
+    {
+      "pergunta": "A dispensa do PGR dispensa o PCMSO também?",
+      "resposta": "<p>Não, são dispensas diferentes. A do PCMSO está no item 1.8.6 e exige, além de grau de risco 1 ou 2 e da declaração digital, que não haja exposição a agentes físicos, químicos, biológicos <em>e a fatores ergonômicos</em>. E mesmo dispensada do programa, a empresa continua obrigada a realizar os exames médicos e emitir o ASO (1.8.7.1).</p>"
+    },
+    {
+      "pergunta": "Onde vejo o grau de risco da minha empresa?",
+      "resposta": "<p>No Quadro I da NR-4, que relaciona cada CNAE a um grau de risco de 1 a 4. O item 1.8.7 da NR-1 é explícito ao dizer que os graus 1 e 2 mencionados nos subitens 1.8.4 e 1.8.6 são os previstos na NR-4.</p>"
+    },
+    {
+      "pergunta": "Empresa pequena precisa avaliar riscos psicossociais?",
+      "resposta": "<p>A obrigação está no item 1.5.3.2.1, dentro do gerenciamento de riscos. Quem está legitimamente dispensado de elaborar o PGR não precisa formalizá-los naquele documento, mas continua sujeito às demais disposições das NRs, inclusive à NR-17. e continua exposto ao nexo causal, ao FAP e ao passivo trabalhista, que não dependem de multa administrativa.</p>"
+    }
+  ]
+}

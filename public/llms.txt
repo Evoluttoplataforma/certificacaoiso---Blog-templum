@@ -39,6 +39,7 @@
 - [Cliente ou edital exige ISO 45001](https://certificacaoiso.com.br/iso-45001-cliente-edital-exige-certificado/): o que responder sem certificado, PGR x homologação, prazos.
 - [NR-1 riscos psicossociais](https://certificacaoiso.com.br/nr-1-riscos-psicossociais/): PGR, fiscalização, ISO 45001/45003 e instrumentos validados.
 - [NR-1 se aplica à minha empresa?](https://certificacaoiso.com.br/nr-1-se-aplica-a-minha-empresa/): CLT, MEI/ME/EPP (item 1.8), dispensa de PGR, psicossocial e ISO 45001.
+- [NR-1 MEI, microempresa e EPP](https://certificacaoiso.com.br/nr-1-mei-microempresa-epp/): item 1.8, PGR, PCMSO, grau de risco e teste rápido.
 - [ISO 45003 vs ISO 45001](https://certificacaoiso.com.br/iso-45003-vs-iso-45001/): diretriz psicossocial x norma certificável e NR-1.
 - [Consultoria SGI 9001 + 14001](https://certificacaoiso.com.br/consultoria-iso-sistema-integrado-9001-14001/): sistema integrado, auditoria integrada e dois certificados.
 - [Consultoria SGI 9001 + 14001 + 45001](https://certificacaoiso.com.br/consultoria-iso-sistema-integrado-9001-14001-45001/): qualidade, meio ambiente e SST integrados.
