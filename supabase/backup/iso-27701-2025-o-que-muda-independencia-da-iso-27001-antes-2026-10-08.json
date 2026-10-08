@@ -1,0 +1,94 @@
+{
+  "id": "98f57b0f-dc64-4a09-98cf-0c3feb60b40a",
+  "title": "ISO 27701:2025: a norma de privacidade ficou independente da ISO 27001",
+  "slug": "iso-27701-2025-o-que-muda-independencia-da-iso-27001",
+  "content": "<p><strong>ISO/IEC 27701:2025</strong> define requisitos do <strong>SGPI</strong> (sistema de gestão de privacidade da informação, PIMS): controlador, operador, risco de privacidade e evidência auditável. Desde 2025 a norma pode ser certificada <strong>sem ISO 27001 obrigatória</strong>; integrar com o <a href=\"/iso-27001/\">SGSI</a> continua recomendável.</p>\n<p>Guia <strong>Certificação ISO</strong> (Templum). <a href=\"/certificacao-iso-27701-etapas-e-requisitos/\">certificação ISO 27701</a> · <a href=\"/como-implementar-a-iso-27701/\">implementar</a> · <a href=\"/iso-27701-lgpd-gdpr-conformidade/\">LGPD e GDPR</a> · <a href=\"/qual-a-relacao-da-iso-27001-com-a-iso-27701/\">27001 e 27701</a> · <a href=\"/consultoria-iso-27701/\">consultoria</a>.</p>\n\n<div class=\"post-portas\">\n  <a href=\"#respostas-diretas\"><strong>Respostas diretas</strong><span>2025, SGPI, certificar</span></a>\n  <a href=\"/certificacao-iso-27701-etapas-e-requisitos/\"><strong>Certificar</strong><span>Critérios e etapas</span></a>\n  <a href=\"#anexo-a\"><strong>Anexo A</strong><span>A1, A2, A3</span></a>\n  <a href=\"/iso-27701-lgpd-gdpr-conformidade/\"><strong>LGPD</strong><span>Não substitui a lei</span></a>\n  <a href=\"/como-implementar-a-iso-27701/\"><strong>Implementar</strong><span>Médio porte</span></a>\n</div>\n\n<h2 id=\"respostas-diretas\">Respostas diretas: ISO 27701 e privacidade</h2>\n<ul>\n<li><strong>O que é:</strong> norma de <strong>SGPI/PIMS</strong> para dados pessoais como controlador e/ou operador. Cláusulas 4 a 10 + Anexo A (A1 controlador, A2 operador, A3 segurança mínima).</li>\n<li><strong>2025 e 27001:</strong> edição 2025 é <strong>sistema independente</strong>. Certificação na 27701 <strong>não exige</strong> SGSI 27001 certificado antes. <a href=\"/qual-a-relacao-da-iso-27001-com-a-iso-27701/\">Relação 27001 e 27701</a>.</li>\n<li><strong>Certificação:</strong> organismo acreditado, estágios 1 e 2, após SGPI operando com evidência. <a href=\"/certificacao-iso-27701-etapas-e-requisitos/\">Critérios e etapas</a>.</li>\n<li><strong>Implementar (médio porte):</strong> escopo, papéis, inventário de tratamentos, risco de privacidade (6.1), controles, operação, auditoria interna. <a href=\"/como-implementar-a-iso-27701/\">Passo a passo</a>.</li>\n<li><strong>LGPD/GDPR:</strong> SGPI organiza tratamentos, bases, titulares e fornecedores com evidência. <strong>Não substitui</strong> a legislação. <a href=\"/iso-27701-lgpd-gdpr-conformidade/\">27701 e conformidade</a>.</li>\n<li><strong>Prazo transição 2019→2025:</strong> cerca de <strong>3 anos (até 2028)</strong> para certificados na versão anterior.</li>\n<li><strong>Segurança:</strong> privacidade exige controles mínimos (tabela A3, alinhados à ISO 27002). <a href=\"/iso-27001/\">ISO 27001</a> acelera, mas não é pré-requisito de certificação.</li>\n</ul>\n\n<p>A ISO/IEC 27701 deixou de ser um apêndice da segurança da informação. Publicada em outubro de 2025, a nova edição transforma a gestão de privacidade em <strong>sistema de gestão independente</strong> — e, com isso, derruba a barreira que travava a certificação de muitas empresas: <strong>não é mais obrigatório ter a ISO 27001 certificada antes</strong>.</p>\n\n<p>Neste artigo, o consultor Carlos Eduardo Moura, que atua com ISO 9001, 27001, 27701, 37001 e 37301 na Templum, apresenta o panorama da atualização e o que precisa ser revisitado em quem já é certificado.</p>\n\n<h2>O ponto de virada: fim da dependência obrigatória da ISO 27001</h2>\n<p>Na versão de 2019, a 27701 nasceu como extensão das normas de segurança — para certificar o sistema de gestão de privacidade, era necessário ter o SGSI da ISO 27001 já certificado ou em processo. A versão 2025 remove essa exigência: o escopo foi revisado para que o sistema de gestão de privacidade seja <strong>autônomo</strong>.</p>\n<p>O impacto de mercado é grande, sobretudo para startups, clínicas de saúde e escritórios que lidam com dados sensíveis mas não tinham fôlego para implementar toda a robustez de um SGSI completo. Continua sendo muito recomendável ter a ISO 27001 — só não é mais pré-requisito.</p>\n<p>Na prática documental, as referências normativas obrigatórias à ISO 27001 e à ISO 27002 saíram do texto principal, e as definições que antes exigiam consulta a outros documentos <strong>foram consolidadas na cláusula 3</strong> da própria norma.</p>\n\n<h2>As cláusulas 4 a 10 agora são requisitos, não notas explicativas</h2>\n<p>Como a 27701 passou a ser um sistema de gestão completo, as cláusulas de 4 a 10 deixaram de funcionar como notas de extensão da 27001 e se tornaram <strong>requisitos mandatórios e integrais</strong>, seguindo a estrutura de alto nível (HLS) comum às normas ISO.</p>\n<p>Duas mudanças no planejamento merecem atenção especial:</p>\n\n<h3>Mudanças climáticas no contexto — sim, também aqui</h3>\n<p>Pode soar estranho em uma norma de privacidade, mas a ISO passou a exigir que a organização determine se as mudanças climáticas são questão relevante para o seu contexto. Na 27701:2025 isso ganhou direcionamento específico: a pergunta é se o tema afeta a <strong>resiliência do tratamento de dados</strong>.</p>\n<p>Para quem já tratou o assunto de forma genérica em outro sistema de gestão, é hora de revisitar o escopo e as perguntas que definem contexto interno e externo, agora com a lente da privacidade.</p>\n\n<h3>Avaliação de risco de privacidade dedicada (cláusula 6.1)</h3>\n<p>Não se aceita mais avaliação de risco genérica. A norma exige uma avaliação dedicada à privacidade, que considere as consequências não apenas para o negócio, mas <strong>para os direitos e liberdades dos titulares</strong>.</p>\n<p>É uma mudança de eixo: sai a proteção do ativo de informação, entra a proteção do indivíduo titular. Consequência prática: o mapeamento de dados e o relatório de impacto à proteção de dados pessoais (RIPD/DPIA) precisam ser revisitados sob essa nova ótica — de um sistema mais introspectivo para um sistema voltado para fora.</p>\n\n<h2 id=\"anexo-a\">O Anexo A foi reorganizado em três tabelas</h2>\n<p>Quem trabalha com auditoria e consultoria na 27701 conhece a antiga lista longa, com controles de 27001 e 27701 misturados. A nova estrutura separa em três blocos bem definidos:</p>\n<ul>\n<li><strong>Tabela A1 — controladores: 30 controles.</strong> Para quem decide sobre o uso dos dados e atende diretamente aos direitos dos titulares: acesso, retificação, revogação, exclusão. Mantidos, mas reformulados.</li>\n<li><strong>Tabela A2 — operadores: 18 controles.</strong> Específicos para quem trata dados em nome de terceiros, garantindo que as instruções sejam seguidas à risca.</li>\n<li><strong>Tabela A3 — 29 controles extraídos da ISO 27002.</strong> É a grande novidade prática: o mínimo viável de segurança para sustentar a privacidade.</li>\n</ul>\n<p>A tabela A3 é o reconhecimento explícito de que <strong>não existe privacidade sem segurança</strong>. Mesmo em um sistema independente, é preciso aplicar controles técnicos — <a href=\"/controle-criptografico-iso-27001-politica-tamanho-de-chave-gestao/\">criptografia</a>, <a href=\"/backup-e-copia-de-seguranca-iso-27001-controle-8-13/\">backup</a>, gestão de logs e desenvolvimento seguro de software. A diferença é a ótica: proteger o dado pessoal, não apenas o servidor da empresa.</p>\n\n<h2>Governança e accountability saíram do papel</h2>\n<p>A prestação de contas permeia todo o documento, e o recado é direto: não basta ter política arquivada. A alta direção precisa estar envolvida na análise crítica, na destinação de orçamento e na construção de uma cultura de privacidade.</p>\n<p>Some-se a isso uma ênfase mais vigorosa em <strong>gestão de terceiros</strong>: due diligence e monitoramento contínuo de operadores e suboperadores, para que a cadeia de suprimentos sustente o mesmo padrão de privacidade. Na prática, significa revisitar critérios de aprovação de fornecedores e cláusulas contratuais de subcontratação — deixando de tratar privacidade de forma genérica.</p>\n\n<h2>E a inteligência artificial?</h2>\n<p>Aqui há uma sutileza que evita mal-entendidos: <strong>a norma não usa o termo \"inteligência artificial\"</strong>. A preocupação é endereçada pelo controle de <strong>decisão automatizada e perfilamento</strong>.</p>\n<p>Empresas que usam algoritmos para perfilar clientes ou tomar decisões — de crédito, por exemplo — precisam garantir mecanismos claros de oposição e de revisão humana. É a ponte natural com a <a href=\"/iso-42001/\"><strong>ISO/IEC 42001</strong></a>, a norma de gestão de inteligência artificial, e com o que os reguladores já vêm exigindo em termos de ética algorítmica.</p>\n\n<h2>Prazo de transição: até 2028</h2>\n<p>Para quem já tem a certificação na versão 2019, o período de transição projetado é de cerca de <strong>três anos, ou seja, até 2028</strong>. Os organismos certificadores atualizaram seus critérios de competência técnica para auditar a nova versão, e a norma já foi traduzida para o português.</p>\n<p>Prazo generoso não é motivo para deixar para depois. A recomendação para quem já está certificado e já tratou as não conformidades da auditoria:</p>\n<ol>\n<li>Começar o mapeamento dos processos sob a nova estrutura</li>\n<li>Eliminar controles redundantes o quanto antes</li>\n<li>Rodar um gap analysis contra a versão 2025 para identificar lacunas</li>\n<li>Revisar os riscos de privacidade com o foco nos direitos dos titulares</li>\n<li>Revisar a documentação antes da próxima auditoria</li>\n</ol>\n<p>Quem já implementou a ISO 27001 tem trabalho bastante facilitado, justamente porque boa parte dos controles da nova tabela A3 vem da ISO 27002 e já está no ar.</p>\n\n<h2>Por que a atualização pode destravar sua certificação</h2>\n<p>Há um perfil de empresa que recuava diante da 27701 por não querer expandir toda a estrutura de segurança da informação primeiro. Com a independência, o caminho fica mais curto e mais barato: menos custo de compliance, mais clareza sobre o que é segurança e o que é privacidade, e mais transparência perante clientes e autoridades reguladoras.</p>\n<p>Isso ganha peso no cenário brasileiro, em que todo tratamento de dados precisa de base legal definida. A nova versão simplifica a implementação e separa com nitidez as duas disciplinas — pode ser exatamente a hora de retomar o projeto.</p>\n\n<h2>Assista ao treinamento técnico completo</h2>\n<p>Este artigo cobre o panorama geral apresentado na primeira parte do treinamento técnico gratuito conduzido por Carlos Eduardo Moura:</p>\n<p><iframe width=\"720\" height=\"405\" src=\"https://www.youtube.com/embed/TwqNcGnotWk\" title=\"Treinamento Técnico - Atualização da ISO 27701:2025\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"></iframe></p>\n\n<h2>Leia mais</h2>\n<ul>\n<li><a href=\"/qual-a-relacao-da-iso-27001-com-a-iso-27701/\">Qual a relação da ISO 27001 com a ISO 27701?</a></li>\n<li><a href=\"/iso-27001/\">ISO 27001: o que é e como implementar a norma</a></li>\n<li><a href=\"/mascaramento-de-dados-iso-27001-controle-8-11/\">Mascaramento de dados: o controle 8.11 e a LGPD</a></li>\n<li><a href=\"/controle-criptografico-iso-27001-politica-tamanho-de-chave-gestao/\">Controle criptográfico na ISO 27001</a></li>\n<li><a href=\"/backup-e-copia-de-seguranca-iso-27001-controle-8-13/\">Backup e cópia de segurança: o controle 8.13</a></li>\n<li><a href=\"/lgpd/\">Tudo sobre a LGPD</a></li>\n<li><a href=\"/o-que-e-a-iso-37001/\">ISO 37001: o que é, requisitos e como certificar o Sistema de Gestão Antissuborno</a></li>\n</ul>",
+  "excerpt": "ISO 27701:2025 virou sistema de gestão independente: fim da exigência da ISO 27001, Anexo A em três tabelas, risco de privacidade dedicado, decisão automatizada e transição até 2028.",
+  "tldr": "A ISO/IEC 27701:2025 deixou de ser extensão da ISO 27001 e passou a ser sistema de gestão independente. A certificação não exige mais o SGSI certificado antes, o que destrava startups, clínicas e escritórios. As cláusulas 4 a 10 tornaram-se requisitos mandatórios, as definições foram consolidadas na cláusula 3 e mudanças climáticas entraram no contexto. A cláusula 6.1 exige avaliação de risco de privacidade dedicada, com foco nos direitos e liberdades dos titulares, não só no ativo de informação. O Anexo A foi reorganizado em três tabelas: 30 controles para controladores, 18 para operadores e 29 extraídos da ISO 27002 como mínimo de segurança. Transição de cerca de três anos, até 2028.",
+  "faq": [
+    {
+      "pergunta": "Ainda é obrigatório ter a ISO 27001 para certificar a ISO 27701?",
+      "resposta": "Não. Na versão de 2019 era necessário ter o SGSI da ISO 27001 certificado ou em processo. A versão 2025 removeu essa dependência: o sistema de gestão de privacidade passou a ser autônomo. Ter a ISO 27001 continua sendo muito recomendável, mas deixou de ser pré-requisito — o que reduz custo e prazo para startups, clínicas de saúde e escritórios que tratam dados sensíveis."
+    },
+    {
+      "pergunta": "Qual é o prazo de transição para a ISO 27701:2025?",
+      "resposta": "Cerca de três anos a partir da publicação, ocorrida em outubro de 2025 — ou seja, até 2028. Quem já é certificado na versão 2019 tem tempo, mas a recomendação é antecipar: mapear os processos na nova estrutura, eliminar controles redundantes, rodar um gap analysis e revisar riscos e documentação antes da próxima auditoria."
+    },
+    {
+      "pergunta": "Como ficou o Anexo A da ISO 27701:2025?",
+      "resposta": "Foi reorganizado em três tabelas: A1, com 30 controles para controladores (quem decide sobre o uso dos dados e atende aos direitos dos titulares); A2, com 18 controles para operadores (quem trata dados em nome de terceiros); e A3, com 29 controles extraídos da ISO 27002, considerados o mínimo de segurança necessário para sustentar a privacidade, como criptografia, backup, gestão de logs e desenvolvimento seguro."
+    },
+    {
+      "pergunta": "O que mudou na avaliação de risco da nova versão?",
+      "resposta": "A cláusula 6.1 passou a exigir avaliação de risco de privacidade dedicada, não mais genérica, considerando as consequências para os direitos e liberdades dos titulares de dados. O eixo saiu da proteção do ativo de informação e passou para a proteção do indivíduo — o que obriga a revisitar o mapeamento de dados e o relatório de impacto à proteção de dados pessoais (RIPD)."
+    },
+    {
+      "pergunta": "A ISO 27701:2025 trata de inteligência artificial?",
+      "resposta": "A norma não usa o termo inteligência artificial. A preocupação é endereçada pelo controle de decisão automatizada e perfilamento: empresas que usam algoritmos para perfilar clientes ou tomar decisões, como análise de crédito, precisam garantir mecanismos claros de oposição e de revisão humana. É a ponte natural com a ISO/IEC 42001, norma de gestão de inteligência artificial."
+    },
+    {
+      "pergunta": "Mudanças climáticas entraram na norma de privacidade?",
+      "resposta": "Sim. A ISO passou a exigir que a organização determine se as mudanças climáticas são uma questão relevante para o seu contexto, e na 27701:2025 isso tem direcionamento específico: avaliar se o tema afeta a resiliência do tratamento de dados. Quem tratou o assunto de forma genérica em outro sistema de gestão precisa revisitar o escopo pela lente da privacidade."
+    },
+    {
+      "pergunta": "ISO 27701 - Privacidade de Dados: o que é?",
+      "resposta": "<p>Norma internacional para SGPI (PIMS): requisitos para tratar dados pessoais como controlador e/ou operador. Edição 2025 independente da 27001. <a href=\"/qual-a-relacao-da-iso-27001-com-a-iso-27701/\">Relação com 27001</a>.</p>"
+    },
+    {
+      "pergunta": "Quais são os passos práticos para implementar a ISO 27701 em uma empresa de médio porte?",
+      "resposta": "<p>Gap de privacidade, papéis controlador/operador, mapeamento de tratamentos, base legal, DPIA quando couber, controles do SGPI, integração com SGSI se houver. <a href=\"/como-implementar-a-iso-27701/\">Passo a passo ISO 27701</a>.</p>"
+    },
+    {
+      "pergunta": "Quais são os critérios e etapas para obter a certificação ISO 27701?",
+      "resposta": "<p>SGPI implementado, evidências, auditoria interna e auditoria de organismo no escopo 27701 (sozinho ou integrado). <a href=\"/certificacao-iso-27701-etapas-e-requisitos/\">Etapas de certificação ISO 27701</a>.</p>"
+    },
+    {
+      "pergunta": "Como a ISO 27701 ajuda na conformidade com LGPD/GPDR e outras regulamentações de privacidade?",
+      "resposta": "<p>Organiza SGPI com tratamentos, papéis controlador/operador, riscos e evidência auditável. Não substitui a lei. <a href=\"/iso-27701-lgpd-gdpr-conformidade/\">ISO 27701 e LGPD/GDPR</a>.</p>"
+    }
+  ],
+  "featured_image": null,
+  "author_name": "Carlos Eduardo Moura",
+  "category_id": "73d8e99d-517b-41c2-8c2e-8f9229355ceb",
+  "category_name": "Segurança e Compliance",
+  "tags": [
+    "ISO 27701",
+    "ISO 27701:2025",
+    "privacidade de dados",
+    "LGPD",
+    "ISO 27001",
+    "ISO 42001",
+    "governança de dados",
+    "RIPD",
+    "certificação",
+    "SGSI",
+    "segurança da informação"
+  ],
+  "status": "published",
+  "published_at": "2026-08-14T18:49:00+00:00",
+  "seo_title": "ISO 27701:2025, privacidade e certificação",
+  "seo_description": "ISO 27701:2025 SGPI independente da 27001: certificação, implementação, LGPD, Anexo A e relação com ISO 27001. Respostas diretas.",
+  "seo_keywords": [
+    "iso 27701 2025",
+    "atualização iso 27701",
+    "iso 27701 independente",
+    "iso 27701 o que mudou",
+    "anexo a iso 27701",
+    "transição iso 27701 2028",
+    "certificação privacidade de dados"
+  ],
+  "og_image": null,
+  "canonical_url": null,
+  "reading_time_min": 6,
+  "wp_id": null,
+  "created_at": "2026-08-14T15:49:35.575032+00:00",
+  "updated_at": "2026-10-08T13:50:17.401905+00:00",
+  "revised_at": "2026-10-08T13:50:09.264+00:00",
+  "audio_script": null,
+  "audio_url": null,
+  "audio_duration_s": null,
+  "audio_voice": null,
+  "audio_model": null,
+  "audio_generated_at": null,
+  "audio_script_hash": null
+}

@@ -1,0 +1,52 @@
+{
+  "id": "fa0e6843-c3cb-44fe-9d5b-f55ae289c483",
+  "title": "ISO 27701 e LGPD/GDPR: como a norma ajuda (e o que ela não substitui)",
+  "slug": "iso-27701-lgpd-gdpr-conformidade",
+  "content": "<p><strong>Resposta direta:</strong> A <strong>ISO/IEC 27701</strong> ajuda na conformidade com <strong>LGPD</strong>, <strong>GDPR</strong> e leis de privacidade sem substituí-las. Ela organiza um <strong>Sistema de Gestão de Privacidade da Informação (SGPI)</strong> com inventário de tratamentos, papéis de controlador/operador, riscos de privacidade e controles auditáveis. A lei continua definindo bases legais, direitos do titular e sanções; a norma dá método e evidência.</p>\r\n<p>Norma 2025: <a href=\"/iso-27701-2025-o-que-muda-independencia-da-iso-27001/\">ISO 27701:2025</a> · Implementação: <a href=\"/como-implementar-a-iso-27701/\">como implementar a ISO 27701</a> · Certificação: <a href=\"/certificacao-iso-27701-etapas-e-requisitos/\">certificação ISO 27701</a> · Segurança da informação: <a href=\"/relacao-do-lgpd-com-a-iso-27001/\">LGPD e ISO 27001</a>.</p>\r\n\r\n<h2 id=\"pergunta-lgpd\">Como a ISO 27701 ajuda na conformidade com LGPD/GDPR e outras regulamentações de privacidade?</h2>\r\n<p>A contribuição da 27701 é <strong>estrutural</strong>:</p>\r\n<ul>\r\n<li><strong>Inventário e registro de tratamentos</strong> alinhados à operação (cruza com o que a LGPD exige de transparência e documentação).</li>\r\n<li><strong>Papéis controlador e operador</strong> claros, com contratos e instruções (art. 39 LGPD e cláusulas tipo GDPR).</li>\r\n<li><strong>Avaliação de risco de privacidade</strong> e RIPD/DPIA quando o tratamento exige (27701:2025 reforça foco no titular).</li>\r\n<li><strong>Direitos do titular</strong> com processo, prazo e registro de resposta.</li>\r\n<li><strong>Incidentes de privacidade</strong> com contenção, comunicação e melhoria (complementa segurança da informação da ISO 27001).</li>\r\n<li><strong>Melhoria contínua</strong> via auditoria interna e análise crítica, o que sustenta programas de conformidade no tempo.</li>\r\n</ul>\r\n<p>O que a norma <strong>não faz</strong>: escolher base legal por você, cumprir prazos da ANPD no lugar do encarregado ou garantir “conformidade LGPD” como selo legal. Não existe certificação LGPD oficial reconhecida pela ANPD da mesma forma que ISO.</p>\r\n\r\n<h2 id=\"27701-vs-27001-lgpd\">27701, 27001 e LGPD: quem cobre o quê</h2>\r\n<table>\r\n<thead><tr><th>Dimensão</th><th>LGPD (lei)</th><th>ISO 27001 (SGSI)</th><th>ISO 27701 (SGPI)</th></tr></thead>\r\n<tbody>\r\n<tr><td>Base legal e finalidade</td><td>Exige</td><td>Não cobre</td><td>Apoia documentação e governança, não substitui jurídico</td></tr>\r\n<tr><td>Segurança técnica e organizacional</td><td>Art. 46 e seguintes</td><td>Cobre amplamente</td><td>Reforça via A3 e controles de privacidade</td></tr>\r\n<tr><td>Direitos do titular</td><td>Exige processo</td><td>Parcial (acesso a sistemas)</td><td>Controles de controlador (A1)</td></tr>\r\n<tr><td>Operadores e subprocessadores</td><td>Exige contrato e controle</td><td>Fornecedores (segurança)</td><td>Controles de operador (A2)</td></tr>\r\n<tr><td>Certificação voluntária</td><td>Não há selo LGPD ISO-like</td><td>Certificável</td><td>Certificável (desde 2025 também isolada)</td></tr>\r\n</tbody>\r\n</table>\r\n<p>Programa maduro no Brasil costuma combinar <strong>adequação LGPD</strong> (jurídico + operação) com <strong>27001</strong> (segurança) e/ou <strong>27701</strong> (privacidade em sistema de gestão). Detalhe da sobreposição 27001/LGPD: <a href=\"/relacao-do-lgpd-com-a-iso-27001/\">LGPD e ISO 27001</a>.</p>\r\n\r\n<h2 id=\"gdpr\">GDPR e outras leis</h2>\r\n<p>A 27701 foi desenhada para ser neutra em jurisdição. Para GDPR, os mesmos blocos (registro de tratamentos, DPA, DPIA, titulares, transferência internacional) ganham evidência auditável. A empresa ainda precisa mapear artigos específicos do regulamento europeu e cláusulas contratuais quando houver transferência.</p>\r\n\r\n<h2 id=\"quando-certificar\">Quando faz sentido certificar na 27701 por causa da LGPD</h2>\r\n<ul>\r\n<li>Clientes B2B pedem garantias além de política de privacidade (questionários, due diligence).</li>\r\n<li>Setor regulado ou dados sensíveis em escala (saúde, financeiro, RH).</li>\r\n<li>Empresa operadora (SaaS, BPO) que precisa demonstrar governança a controladores.</li>\r\n</ul>\r\n<p>Certificar é voluntário; adequar à LGPD não é. A certificação 27701 é <strong>prova auditada de sistema</strong>, não isenção de multa.</p>\r\n\r\n<h2 id=\"proximo-passo\">Próximo passo</h2>\r\n<p>Gap de privacidade, implementação e certificação: <a href=\"/como-implementar-a-iso-27701/\">implementar ISO 27701</a> · <a href=\"/certificacao-iso-27701-etapas-e-requisitos/\">certificar ISO 27701</a>.</p>\r\n<p><a href=\"https://templum.com.br/consultoria/iso-27001/\">Consultoria Templum</a> · <a href=\"/form/?utm_source=blog&amp;utm_medium=cta&amp;utm_campaign=iso-27701-lgpd&amp;norma=ISO%2027001\">Falar com especialista</a></p>\r\n",
+  "excerpt": "Como a ISO 27701 ajuda na conformidade com LGPD, GDPR e leis de privacidade: SGPI, controlador, operador, evidências. A norma não substitui a lei.",
+  "tldr": "A ISO 27701 estrutura o SGPI com inventário de tratamentos, papéis controlador/operador, riscos de privacidade e controles auditáveis. Isso apoia LGPD e GDPR, mas não substitui base legal, encarregado ou exigências da ANPD. ISO 27001 cobre segurança da informação; 27701 cobre privacidade em sistema de gestão. Certificação 27701 é evidência voluntária, não selo de conformidade legal.",
+  "faq": [
+    {
+      "pergunta": "Como a ISO 27701 ajuda na conformidade com LGPD/GPDR e outras regulamentações de privacidade?",
+      "resposta": "<p>Organiza SGPI com tratamentos, papéis, riscos, direitos do titular e incidentes com evidência auditável. Não substitui a lei. Detalhe: <a href=\"/iso-27701-lgpd-gdpr-conformidade/#pergunta-lgpd\">resposta neste artigo</a>.</p>"
+    },
+    {
+      "pergunta": "A ISO 27701 resolve a LGPD?",
+      "resposta": "<p>Não sozinha. Aproxima a gestão da privacidade; jurídico e operação da lei continuam obrigatórios. <a href=\"/qual-a-relacao-da-iso-27001-com-a-iso-27701/\">27701 vs 27001</a>.</p>"
+    },
+    {
+      "pergunta": "Preciso de ISO 27001 e 27701 para LGPD?",
+      "resposta": "<p>A LGPD não exige ISO. 27001 ajuda na segurança (art. 46); 27701 ajuda na gestão de privacidade. <a href=\"/relacao-do-lgpd-com-a-iso-27001/\">LGPD e ISO 27001</a>.</p>"
+    }
+  ],
+  "featured_image": null,
+  "author_name": "Daniela Albuquerque",
+  "category_id": "73d8e99d-517b-41c2-8c2e-8f9229355ceb",
+  "category_name": "Segurança e Compliance",
+  "tags": [
+    "ISO 27701",
+    "LGPD",
+    "GDPR",
+    "privacidade",
+    "SGPI"
+  ],
+  "status": "published",
+  "published_at": "2026-10-05T13:49:21.989+00:00",
+  "seo_title": "ISO 27701 e LGPD: conformidade e SGPI",
+  "seo_description": "Como a ISO 27701 ajuda na conformidade com LGPD, GDPR e leis de privacidade: SGPI, controlador, operador, evidências. A norma não substitui a lei.",
+  "seo_keywords": [],
+  "og_image": null,
+  "canonical_url": "https://certificacaoiso.com.br/iso-27701-lgpd-gdpr-conformidade/",
+  "reading_time_min": 2,
+  "wp_id": null,
+  "created_at": "2026-10-05T13:49:27.023569+00:00",
+  "updated_at": "2026-10-05T13:49:27.023569+00:00",
+  "revised_at": "2026-10-05T13:49:21.989+00:00",
+  "audio_script": null,
+  "audio_url": null,
+  "audio_duration_s": null,
+  "audio_voice": null,
+  "audio_model": null,
+  "audio_generated_at": null,
+  "audio_script_hash": null
+}
