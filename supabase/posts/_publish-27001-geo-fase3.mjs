@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 /** node supabase/posts/_publish-27001-geo-fase3.mjs */
+import { spawnSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -36,7 +37,13 @@ const SLUGS = {
   "iso-27001-anexo-a-mapeamento-politicas": CAT_SEC,
   "treinamento-iso-27001": CAT_SEC,
   "iso-27001": CAT_SEC,
+  "certificacao-iso-27001-etapas-prazo-custo": CAT_SEC,
 };
+
+for (const script of ["_build-iso-27001-hub-geo-full.mjs", "_build-certificacao-27001-geo.mjs"]) {
+  const r = spawnSync(process.execPath, [path.join(AQUI, script)], { stdio: "inherit", cwd: AQUI });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
 
 const H = { apikey: KEY, Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" };
 

@@ -1,4 +1,12 @@
-<p><strong>A ISO 27001</strong> (ISO/IEC 27001:2022) define requisitos do <strong>SGSI</strong> (sistema de gestão da segurança da informação): riscos, controles proporcionais e evidência auditável. A <strong>certificação ISO 27001</strong> é emitida por organismo acreditado (Inmetro/IAF), não pela consultoria.</p>
+/** Hub iso-27001: respostas diretas, corpo enxuto, cluster certificação. */
+import { readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const dir = path.dirname(fileURLToPath(import.meta.url));
+const meta = JSON.parse(readFileSync(path.join(dir, "iso-27001.meta.json"), "utf8"));
+
+const html = `<p><strong>A ISO 27001</strong> (ISO/IEC 27001:2022) define requisitos do <strong>SGSI</strong> (sistema de gestão da segurança da informação): riscos, controles proporcionais e evidência auditável. A <strong>certificação ISO 27001</strong> é emitida por organismo acreditado (Inmetro/IAF), não pela consultoria.</p>
 <p>Guia <strong>Certificação ISO</strong> (Templum). <a href="/requisitos-da-iso-27001/">Requisitos 4 a 10</a> · <a href="/certificacao-iso-27001-etapas-prazo-custo/">certificação: passos, prazo e custo</a> · <a href="/como-implementar-a-iso-27001/">como implementar</a> · <a href="/consultoria-iso-27001/">consultoria</a> · <a href="/iso-27001-para-pequenas-empresas/">PME</a> · <a href="/qual-a-relacao-da-iso-27001-com-a-iso-27701/">27001 e 27701</a>.</p>
 
 <div class="post-portas">
@@ -82,3 +90,15 @@
 <li><a href="/como-escolher-consultoria-iso/">Como escolher consultoria</a></li>
 </ul>
 <p><a href="https://templum.com.br/consultoria/iso-27001/">Consultoria Templum ISO 27001</a> · <a href="/form/?utm_source=blog&amp;utm_medium=cta&amp;utm_campaign=iso-27001&amp;norma=ISO%2027001">Diagnóstico gratuito</a></p>
+`;
+
+const extraFaq = {
+  pergunta: "A ISO 27001 exige protocolo para vazamento de dados?",
+  resposta:
+    "<p>Exige <strong>gestão de incidentes</strong> com papéis, registro, contenção e revisão. Não é checklist de produto: é procedimento operacional com evidência. <a href=\"/iso-27001/#incidentes\">Incidentes no SGSI</a> · <a href=\"/certificacao-iso-27001-etapas-prazo-custo/\">certificação</a>.</p>",
+};
+if (!meta.faq.some((f) => f.pergunta.includes("vazamento"))) meta.faq.push(extraFaq);
+
+writeFileSync(path.join(dir, "iso-27001.html"), html, "utf8");
+writeFileSync(path.join(dir, "iso-27001.meta.json"), JSON.stringify(meta, null, 2) + "\n", "utf8");
+console.log("iso-27001 hub GEO full");
