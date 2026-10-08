@@ -7,7 +7,7 @@
     "build": "node scripts/verify-webinar-assets.mjs && astro build && node scripts/sitemap.mjs",
     "preview": "astro preview",
     "migrate": "node scripts/migrate.mjs",
-    "webinars:assets": "node scripts/webinars-publish-assets.mjs scripts/criativos-webinars/out-2026-10"
+    "webinars:assets": "node scripts/webinars-publish-assets.mjs scripts/criativos-webinars/out-2026-10-rev"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.7",
