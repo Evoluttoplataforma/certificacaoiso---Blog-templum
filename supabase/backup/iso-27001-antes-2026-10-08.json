@@ -1,0 +1,116 @@
+{
+  "id": "36a774e7-edae-4bd1-a34e-733e35354125",
+  "title": "ISO 27001: o que é, requisitos e como certificar (2022)",
+  "slug": "iso-27001",
+  "content": "<p><strong>A ISO 27001</strong> (ISO/IEC 27001:2022) define requisitos do <strong>SGSI</strong> (sistema de gestão da segurança da informação): riscos, controles proporcionais e evidência auditável. A <strong>certificação ISO 27001</strong> é emitida por organismo acreditado (Inmetro/IAF), não pela consultoria.</p>\n<p>Guia <strong>Certificação ISO</strong> (Templum). <a href=\"/requisitos-da-iso-27001/\">Requisitos 4 a 10</a> · <a href=\"/certificacao-iso-27001-etapas-prazo-custo/\">certificação: passos, prazo e custo</a> · <a href=\"/como-implementar-a-iso-27001/\">como implementar</a> · <a href=\"/consultoria-iso-27001/\">consultoria</a> · <a href=\"/iso-27001-para-pequenas-empresas/\">PME</a> · <a href=\"/qual-a-relacao-da-iso-27001-com-a-iso-27701/\">27001 e 27701</a>.</p>\n\n<div class=\"post-portas\">\n  <a href=\"#respostas-diretas\"><strong>Respostas diretas</strong><span>Certificação, 2022, prazo</span></a>\n  <a href=\"/certificacao-iso-27001-etapas-prazo-custo/\"><strong>Certificar</strong><span>Estágios 1 e 2</span></a>\n  <a href=\"#anexo-a\"><strong>Anexo A</strong><span>93 controles, SoA</span></a>\n  <a href=\"#incidentes\"><strong>Incidentes</strong><span>Vazamento e protocolo</span></a>\n  <a href=\"/auditoria-iso-27001/\"><strong>Auditoria</strong><span>Interna e externa</span></a>\n</div>\n\n<h2 id=\"respostas-diretas\">Respostas diretas: ISO 27001 e certificação</h2>\n<ul>\n<li><strong>O que é:</strong> norma de <strong>SGSI</strong> (ISMS). Cláusulas 4 a 10 + Anexo A via riscos e SoA.</li>\n<li><strong>Versão:</strong> <strong>ISO/IEC 27001:2022</strong> (Emenda 1:2024, clima no contexto). Edição 2013 não certifica mais.</li>\n<li><strong>Quem emite certificado:</strong> organismo acreditado. Consultoria prepara; não emite. <a href=\"/consultoria-iso-27001/\">Consultoria ISO 27001</a>.</li>\n<li><strong>Passos:</strong> escopo, riscos, SoA, operação com evidência, auditoria interna, análise crítica, estágios 1 e 2. <a href=\"/certificacao-iso-27001-etapas-prazo-custo/\">Etapas, prazo e custo</a>.</li>\n<li><strong>Prazo típico:</strong> cerca de <strong>6 a 12 meses</strong> na primeira certificação (PME), conforme maturidade e disponibilidade da equipe.</li>\n<li><strong>Custo:</strong> dias de auditoria (ISO/IEC 27006-1) + horas internas + consultoria opcional. Sem tabela única. <a href=\"/certificacao-iso-27001-etapas-prazo-custo/#custo\">O que define o preço</a>.</li>\n<li><strong>LGPD:</strong> SGSI ajuda na dimensão segurança; não substitui LGPD. <a href=\"/relacao-do-lgpd-com-a-iso-27001/\">LGPD e ISO 27001</a>.</li>\n<li><strong>27701:</strong> privacidade (PIMS), norma independente desde 2025. <a href=\"/iso-27701-2025-o-que-muda-independencia-da-iso-27001/\">ISO 27701:2025</a>.</li>\n</ul>\n\n<h2 id=\"o-que-e\">O que é a ISO 27001</h2>\n<p>A norma exige saber quais informações proteger, quais riscos existem e quais controles são proporcionais, com evidência. Não prescreve firewall ou produto: prescreve gestão de risco e melhoria contínua.</p>\n<p>Protege confidencialidade, integridade e disponibilidade (CID). Inclui papel, contrato físico e processo, não só dado digital.</p>\n\n<h2 id=\"versao-2022\">ISO 27001:2022 e transição</h2>\n<p>Anexo A: <strong>93 controles</strong> em quatro temas (organizacionais, pessoas, físicos, tecnológicos). Cláusulas 4 a 10 alinham ao Anexo SL (integração com ISO 9001/14001).</p>\n<p>Certificados na edição 2013 perderam validade após <strong>31 de outubro de 2025</strong>. Implementação nova já nasce na 2022.</p>\n\n<h2 id=\"quem-precisa\">Quem precisa e por que exigem</h2>\n<p>Não é lei universal, mas virou exigência de contrato, RFP, due diligence e cadeia de fornecedores. <a href=\"/empresas-que-precisam-da-iso-27001/\">Quais empresas precisam da ISO 27001</a>.</p>\n\n<h2 id=\"requisitos\">Requisitos (cláusulas 4 a 10)</h2>\n<p>Contexto, liderança, planejamento (riscos e SoA), apoio, operação, avaliação (auditoria interna) e melhoria. Detalhe: <a href=\"/requisitos-da-iso-27001/\">requisitos da ISO 27001</a>.</p>\n\n<h2 id=\"anexo-a\">Anexo A e Declaração de Aplicabilidade (SoA)</h2>\n<p>93 controles; nenhum é obrigatório por lista fixa. A empresa justifica inclusão e exclusão na SoA. Guia de implementação: ISO/IEC 27002. Mapeamento: <a href=\"/iso-27001-anexo-a-mapeamento-politicas/\">Anexo A para políticas</a>.</p>\n<p>Achado frequente: controle marcado como implementado sem registro amostrável (SoA de fachada).</p>\n\n<h2 id=\"incidentes\">Vazamento, incidente e protocolo</h2>\n<p>Certificação não impede incidente; exige <strong>gestão de incidentes de segurança da informação</strong>: papéis, registro, contenção, comunicação e lições aprendidas (Anexo A, tema organizacional).</p>\n<p>Se dados confidenciais vazaram e ninguém sabe escopo ou quem acessou, falta procedimento operacional, não só ferramenta. Antes da auditoria externa, o auditor espera evidência de tratamento de incidentes e testes (ex.: restauração de backup). <a href=\"/backup-e-copia-de-seguranca-iso-27001-controle-8-13/\">Backup 8.13</a> · <a href=\"/auditoria-iso-27001/\">Auditoria ISO 27001</a>.</p>\n\n<h2 id=\"certificacao\">Como funciona a certificação</h2>\n<p>Estágio 1 (documentação e prontidão) e estágio 2 (implementação e evidência). Certificado vale <strong>3 anos</strong>, com manutenções anuais. Passo a passo: <a href=\"/certificacao-iso-27001-etapas-prazo-custo/\">certificação ISO 27001: etapas, prazo e custo</a> · <a href=\"/como-implementar-a-iso-27001/\">como implementar</a>.</p>\n\n<h2 id=\"preco\">Quanto custa</h2>\n<p>Organismo cobra por dias de auditoria (27006-1). Escopo estreito reduz custo e risco de certificado inútil para o cliente. Ciclo completo de 3 anos no orçamento. <a href=\"/certificacao-iso-27001-etapas-prazo-custo/#custo\">Detalhe de custo</a>.</p>\n\n<h2 id=\"iso-27001-vs-mercado\">ISO 27001 vs SOC 2, NIST e 27701</h2>\n<p>27001: SGSI certificável. SOC 2: relatório AICPA. NIST CSF: framework. 27701: privacidade. <a href=\"/iso-27000-vs-iso-27001/\">27000 vs 27001</a> · <a href=\"/qual-a-relacao-da-iso-27001-com-a-iso-27701/\">27001 e 27701</a>.</p>\n\n<h2 id=\"comecar\">Por onde começar</h2>\n<ol>\n<li>Definir por que certificar (cliente, edital, risco).</li>\n<li>Recortar escopo pelo serviço exigido.</li>\n<li>Avaliar riscos antes de documentar controles à toa.</li>\n<li>Operar tempo suficiente para gerar evidência.</li>\n<li>Auditoria interna e análise crítica antes do organismo.</li>\n</ol>\n\n<h2 id=\"nao-faz\">O que a certificação não faz</h2>\n<ul>\n<li>Não garante zero incidentes.</li>\n<li>Não substitui LGPD sozinha.</li>\n<li>Não cobre o que ficou fora do escopo.</li>\n<li>Não é permanente sem manutenção anual.</li>\n</ul>\n\n<h2 id=\"aprofunde\">Aprofunde no cluster ISO 27001</h2>\n<ul>\n<li><a href=\"/certificacao-iso-27001-etapas-prazo-custo/\">Certificação: etapas, prazo e custo</a></li>\n<li><a href=\"/requisitos-da-iso-27001/\">Requisitos cláusulas 4 a 10</a></li>\n<li><a href=\"/como-implementar-a-iso-27001/\">Como implementar</a></li>\n<li><a href=\"/consultoria-iso-27001/\">Consultoria ISO 27001</a></li>\n<li><a href=\"/auditoria-iso-27001/\">Auditoria ISO 27001</a></li>\n<li><a href=\"/iso-27001-para-pequenas-empresas/\">ISO 27001 para PME</a></li>\n<li><a href=\"/relacao-do-lgpd-com-a-iso-27001/\">LGPD e ISO 27001</a></li>\n<li><a href=\"/treinamento-iso-27001/\">Treinamento ISO 27001</a></li>\n<li><a href=\"/como-escolher-consultoria-iso/\">Como escolher consultoria</a></li>\n</ul>\n<p><a href=\"https://templum.com.br/consultoria/iso-27001/\">Consultoria Templum ISO 27001</a> · <a href=\"/form/?utm_source=blog&amp;utm_medium=cta&amp;utm_campaign=iso-27001&amp;norma=ISO%2027001\">Diagnóstico gratuito</a></p>\n",
+  "excerpt": "Existem 05 grandes etapas na implementação da ISO 27001, que são: Contexto da Organização, Avaliação de Riscos, Controles Operacionais, Análise de Eficácia, e, Melhoria.",
+  "tldr": "Certificação ISO 27001 comprova o SGSI (ISMS) conforme ISO/IEC 27001:2022. Requisitos nas cláusulas 4 a 10; controles via riscos e SoA. PME usa escopo enxuto. Passos e prazo: artigo dedicado. 27701 cobre privacidade; SOC 2 e NIST são outros referenciais.",
+  "faq": [
+    {
+      "pergunta": "O que é a ISO 27001?",
+      "resposta": "<p>A <strong>ISO/IEC 27001</strong> é a norma internacional que define os requisitos de um <strong>Sistema de Gestão da Segurança da Informação (SGSI)</strong>. Ela exige identificar os riscos das informações e aplicar controles proporcionais, protegendo confidencialidade, integridade e disponibilidade. Não manda comprar tecnologia específica: manda provar decisão e evidência.</p>"
+    },
+    {
+      "pergunta": "Qual é a versão atual da ISO 27001?",
+      "resposta": "<p>A <strong>ISO/IEC 27001:2022</strong>, com a Emenda 1 de 2024. A edição 2013 saiu de circulação: a transição terminou em 31 de outubro de 2025. Certificados na versão antiga não valem mais. <a href=\"#versao-2022\">Veja o que mudou</a>.</p>"
+    },
+    {
+      "pergunta": "Quais são os requisitos e as cláusulas da ISO 27001?",
+      "resposta": "<p>Os requisitos auditáveis estão nas <strong>cláusulas 4 a 10</strong> (contexto, liderança, planejamento, apoio, operação, avaliação e melhoria). O Anexo A lista 93 controles, mas não substitui essas cláusulas. Detalhe cláusula a cláusula em <a href=\"/requisitos-da-iso-27001/\">requisitos da ISO 27001</a>.</p>"
+    },
+    {
+      "pergunta": "A ISO 27001 é obrigatória?",
+      "resposta": "<p>Não por lei. Na prática virou exigência contratual: licitações, compra de grandes empresas e contratos com dados de terceiros. Veja <a href=\"/empresas-que-precisam-da-iso-27001/\">quais empresas precisam da ISO 27001</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto custa a certificação ISO 27001?",
+      "resposta": "<p>Não existe tabela única. O preço combina dias de auditoria (função do escopo e da complexidade, segundo a ISO/IEC 27006-1), esforço interno e, se houver, consultoria. Faixas e o que faz o valor variar em <a href=\"/certificacao-iso-27001-etapas-prazo-custo/#custo\">etapas, prazo e custo</a> e no resumo <a href=\"#preco\">neste guia</a>.</p>"
+    },
+    {
+      "pergunta": "Como tirar a certificação ISO 27001?",
+      "resposta": "<p>Implante o SGSI (escopo, riscos, controles, evidência), rode auditoria interna e análise crítica, depois contrate um <strong>organismo acreditado</strong> para os estágios 1 e 2. A consultoria prepara; quem emite o certificado é o organismo. Passo a passo em <a href=\"/certificacao-iso-27001-etapas-prazo-custo/\">certificação ISO 27001</a>.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre ISO 27001 e ISO 27701?",
+      "resposta": "<p>A <strong>27001</strong> cobre segurança da informação (qualquer informação relevante). A <strong>27701</strong> cobre privacidade e dados pessoais (PIMS). Em 2025 a 27701 ficou independente da 27001. Comparativo em <a href=\"/qual-a-relacao-da-iso-27001-com-a-iso-27701/\">ISO 27001 e ISO 27701</a>.</p>"
+    },
+    {
+      "pergunta": "Certificação ISO 27001 para pessoas e para empresas é a mesma coisa?",
+      "resposta": "<p>Não. A norma certifica <strong>organizações</strong> (o SGSI). Credencial de auditor/implementador é certificação de <strong>pessoas</strong>, outro mercado. Veja <a href=\"#empresa-vs-pessoas\">empresa vs pessoas</a> e o artigo <a href=\"/certificacao-iso-27001-para-pessoas/\">certificação ISO 27001 para pessoas</a>.</p>"
+    },
+    {
+      "pergunta": "O que faz uma consultoria de ISO 27001?",
+      "resposta": "<p>Entrega método (diagnóstico, escopo, riscos, SoA, documentação, preparação para auditoria). Não emite o certificado. Como escolher e o que é trabalho da equipe em <a href=\"/consultoria-iso-27001/\">consultoria ISO 27001</a>.</p>"
+    },
+    {
+      "pergunta": "Quantos controles tem o Anexo A da ISO 27001?",
+      "resposta": "<p>São <strong>93 controles</strong> na versão 2022 (37 organizacionais, 8 de pessoas, 14 físicos, 34 tecnológicos). Nenhum é obrigatório em si: a empresa justifica o que aplica e o que exclui na Declaração de Aplicabilidade.</p>"
+    },
+    {
+      "pergunta": "ISO 27001 e LGPD são a mesma coisa?",
+      "resposta": "<p>Não. A LGPD é lei sobre <strong>dados pessoais</strong>; a ISO 27001 é norma voluntária sobre <strong>informação do negócio</strong>. O SGSI ajuda a sustentar a dimensão de segurança da LGPD. Detalhe em <a href=\"/relacao-do-lgpd-com-a-iso-27001/\">LGPD e ISO 27001</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto tempo demora para certificar na ISO 27001?",
+      "resposta": "<p>Empresa de porte médio costuma levar cerca de <strong>12 meses</strong> (implementação + auditoria). Depende de quem participa, do tempo disponível e do método. <a href=\"#tempo\">Detalhamento neste guia</a>.</p>"
+    },
+    {
+      "pergunta": "ISO 27001 certificação e normas de segurança da informação: o que é?",
+      "resposta": "<p>É o par norma + certificado: a <strong>ISO/IEC 27001:2022</strong> define o SGSI (ISMS); a <strong>certificação</strong> é a auditoria de organismo acreditado que confirma o atendimento. Controles do Anexo A entram via riscos e SoA. <a href=\"#certificacao-normas-sgsi\">Resumo neste guia</a>.</p>"
+    },
+    {
+      "pergunta": "Quais são os requisitos-chave da ISO 27001 e como eles se aplicam a pequenas empresas?",
+      "resposta": "<p>Requisitos-chave: contexto e escopo (4), liderança (5), riscos e SoA (6), competência e conscientização (7), operação incluindo controles (8), auditoria interna e análise crítica (9), melhoria (10). Em PME, escopo focado e SoA proporcional. <a href=\"/iso-27001-para-pequenas-empresas/\">ISO 27001 para pequenas empresas</a>.</p>"
+    },
+    {
+      "pergunta": "Qual é a diferença entre ISO 27001 e outras normas de segurança da informação no mercado?",
+      "resposta": "<p>27001 é SGSI certificável (cláusulas 4 a 10). 27002 orienta controles; SOC 2 é relatório AICPA; NIST CSF é framework. 27701 cobre privacidade. <a href=\"#iso-27001-vs-mercado\">Comparativo neste artigo</a>.</p>"
+    },
+    {
+      "pergunta": "Quais são os passos para obter a certificação ISO 27001 e quanto tempo costuma levar?",
+      "resposta": "<p>Diagnóstico, escopo, riscos, SoA, operação com evidência, auditoria interna, análise crítica, estágios 1 e 2 do organismo. Prazo típico: meses a ~1 ano conforme maturidade. <a href=\"/certificacao-iso-27001-etapas-prazo-custo/\">Etapas, prazo e custo</a>.</p>"
+    },
+    {
+      "pergunta": "Pode recomendar recursos ou treinamentos para entender ISO 27001 e ISMS?",
+      "resposta": "<p>Comece pela norma (requisitos 4 a 10), depois guia de controles 27002 e prática de risco/SoA. Treinamento de equipe e auditor interno acelera. <a href=\"/treinamento-iso-27001/\">Recursos e treinamento ISO 27001</a>.</p>"
+    },
+    {
+      "pergunta": "A ISO 27001 exige protocolo para vazamento de dados?",
+      "resposta": "<p>Exige <strong>gestão de incidentes</strong> com papéis, registro, contenção e revisão. Não é checklist de produto: é procedimento operacional com evidência. <a href=\"/iso-27001/#incidentes\">Incidentes no SGSI</a> · <a href=\"/certificacao-iso-27001-etapas-prazo-custo/\">certificação</a>.</p>"
+    }
+  ],
+  "featured_image": null,
+  "author_name": "Daniela Albuquerque",
+  "category_id": "73d8e99d-517b-41c2-8c2e-8f9229355ceb",
+  "category_name": "Segurança e Compliance",
+  "tags": [
+    "ISO 27001",
+    "segurança da informação",
+    "SGSI",
+    "Anexo A",
+    "ISO 27001:2022",
+    "requisitos ISO 27001",
+    "certificação ISO 27001",
+    "implementação ISO 27001",
+    "LGPD"
+  ],
+  "status": "published",
+  "published_at": "2019-11-11T15:23:12+00:00",
+  "seo_title": "ISO 27001: o que é, requisitos, SGSI e como certificar",
+  "seo_description": "ISO 27001 certificação e normas de segurança da informação: SGSI (ISMS), requisitos 2022, passos, prazo, PME, diferença para 27701 e frameworks do mercado.",
+  "seo_keywords": [],
+  "og_image": null,
+  "canonical_url": null,
+  "reading_time_min": 13,
+  "wp_id": 27265,
+  "created_at": "2026-06-22T20:44:19.563609+00:00",
+  "updated_at": "2026-10-08T13:27:11.701493+00:00",
+  "revised_at": "2026-10-08T13:27:03.576+00:00",
+  "audio_script": "ISO vinte e sete mil e um, em resumo.\n\nÉ a norma internacional de gestão da segurança da informação. Em vez de prescrever tecnologia, ela exige que a empresa identifique os riscos das suas informações e aplique controles proporcionais a esses riscos, protegendo confidencialidade, integridade e disponibilidade. A versão em vigor é a de dois mil e vinte e dois, com a emenda de dois mil e vinte e quatro que trouxe as mudanças climáticas para a análise de contexto.\n\nUm alerta antes de tudo: a edição de dois mil e treze saiu de circulação. O período de transição terminou em trinta e um de outubro de dois mil e vinte e cinco, e os certificados emitidos nela não valem mais. O jeito de reconhecer conteúdo velho é olhar o Anexo A: se um checklist, uma planilha ou uma proposta de consultoria apresentar cento e quatorze controles em quatorze seções, está descrevendo uma norma que não é mais certificável.\n\nNa versão vigente são noventa e três controles em quatro temas: trinta e sete organizacionais, oito de pessoas, quatorze físicos e trinta e quatro tecnológicos. Onze são novos, ligados sobretudo a nuvem, monitoramento e desenvolvimento seguro.\n\nE tem uma coisa sobre o Anexo A que muda como você planeja o projeto: ele não é uma lista obrigatória. Cada empresa escolhe os controles pertinentes ao seu contexto e justifica as exclusões em um documento chamado Declaração de Aplicabilidade. É exatamente isso que o auditor confere — não se você implementou os noventa e três, mas se as suas escolhas e as suas exclusões se sustentam diante dos riscos que você mesmo levantou.\n\nAgora o mito que mais atrapalha: esta não é uma norma da área de tecnologia. O apoio dela é necessário, mas o assunto é governança. Quem conduz é um comitê multidisciplinar, com direção, tecnologia, jurídico e os líderes dos principais processos. Projeto entregue só para o pessoal de tecnologia é a forma mais comum de travar a certificação depois de já contratada.\n\nDuas confusões rápidas. A ISO vinte e sete mil e dois não é certificável: é o guia que detalha como implementar cada controle. Você audita contra a vinte e sete mil e um e consulta a vinte e sete mil e dois para saber como fazer. E a Lei Geral de Proteção de Dados não é a mesma coisa que a norma: a lei é obrigatória e trata de dados pessoais, a norma é voluntária e trata de toda informação relevante para o negócio. Elas se apoiam — o sistema de gestão da vinte e sete mil e um é a estrutura que sustenta boa parte das obrigações da lei.\n\nA norma não é obrigatória por lei no Brasil, mas virou exigência de contrato: aparece como critério de habilitação em licitações, em compras de grandes empresas e em qualquer negócio que trate dados de terceiros.\n\nSobre prazo: uma organização de porte médio costuma levar cerca de doze meses entre implementação e certificação. A auditoria acontece em dois estágios e o certificado vale três anos, com auditorias de manutenção anuais.\n\nNo artigo estão as cinco etapas da implementação, os requisitos cláusula por cláusula e o que a empresa precisa investir.",
+  "audio_url": "https://yfpdrckyuxltvznqfqgh.supabase.co/storage/v1/object/public/blog-audio/iso-27001.mp3?v=80d9c4a1",
+  "audio_duration_s": 167,
+  "audio_voice": "9ot6RbCReBjaKntxe93J",
+  "audio_model": "eleven_multilingual_v2",
+  "audio_generated_at": "2026-08-25T14:07:15.899+00:00",
+  "audio_script_hash": "80d9c4a1af27082c577717bb90cab83b6546e78d20cb3336a8ae433cf193c79f"
+}
