@@ -1,0 +1,139 @@
+<p>Governança de IA é o conjunto de decisões, papéis, regras e controles que define <strong>quem pode usar inteligência artificial, para quê, com quais dados e com que supervisão</strong> — e como a organização prova isso. Não é um documento de ética na intranet: é saber quais sistemas de IA existem na empresa, quem responde por cada um, que risco e que impacto eles criam, e o que acontece quando algo dá errado. A forma auditável e certificável dessa disciplina é a <a href="/iso-42001/">ISO 42001</a>.</p>
+
+<p>Este guia mostra como montar governança de IA na prática: as decisões que cabem à alta direção, o comitê e os papéis, o inventário, a política de uso aceitável (com o que colocar nela), como lidar com o <em>shadow AI</em> sem proibir tudo e como medir se a coisa está funcionando. Serve tanto para quem desenvolve IA quanto para a empresa que “só usa” ferramentas de terceiros — que hoje é a maioria.</p>
+
+<h2 id="o-que-e">O que é governança de IA, na prática</h2>
+
+<p>Em uma frase: governança de IA é a gestão do uso de inteligência artificial com o mesmo rigor que a empresa já aplica a finanças, segurança da informação ou qualidade. Ela responde a cinco perguntas, com evidência:</p>
+<ol>
+<li><strong>Onde</strong> a IA está sendo usada — inclusive a que ninguém autorizou?</li>
+<li><strong>Quem</strong> decide se um uso novo é aceitável e quem responde por cada sistema?</li>
+<li><strong>Que risco</strong> cada uso cria para a organização e <strong>que impacto</strong> pode causar em pessoas?</li>
+<li><strong>Que regras</strong> valem para dados, fornecedores, supervisão humana e transparência?</li>
+<li><strong>Como</strong> a organização percebe e corrige quando algo sai do esperado?</li>
+</ol>
+
+<p>IA responsável e ética na IA são os princípios — justiça, transparência, segurança, privacidade, responsabilização. Governança é o mecanismo que faz esses princípios virarem decisão, registro e controle. Princípio sem governança vira cartaz; governança sem princípio vira burocracia.</p>
+
+<h2 id="por-que-agora">Por que isso virou urgente</h2>
+
+<p>Três movimentos tiraram o tema do laboratório e puseram na pauta da diretoria:</p>
+<ul>
+<li><strong>IA generativa chegou a todo mundo ao mesmo tempo.</strong> Qualquer colaborador com navegador tem um modelo de linguagem à disposição. O uso cresceu antes de qualquer regra.</li>
+<li><strong>A IA entrou nos softwares que a empresa já compra.</strong> CRM, ERP, plataforma de RH, atendimento e antifraude vêm com recursos de IA ligados por padrão. Muitas vezes, ninguém decidiu usar — só atualizou a versão.</li>
+<li><strong>Regulação e clientes começaram a cobrar.</strong> O <a href="/pl-2338-ai-act/">PL 2338 e o AI Act europeu</a> adotam abordagem baseada em risco, e questionários de due diligence de grandes clientes já perguntam como o fornecedor governa a IA que usa.</li>
+</ul>
+
+<h2 id="alta-direcao">O que cabe à alta direção</h2>
+
+<p>Governança de IA começa no topo porque as decisões centrais são de apetite a risco, não de tecnologia. A ISO/IEC 38507 trata exatamente disso — as implicações do uso de IA para o órgão de governança da organização — e a <a href="/requisitos-iso-42001/">cláusula 5 da ISO 42001</a> cobra liderança e comprometimento demonstráveis. Na prática, a direção precisa:</p>
+<ul>
+<li>definir para que a empresa <strong>quer</strong> usar IA e onde <strong>não</strong> quer (decisões sobre pessoas, dados sensíveis, comunicação com cliente sem revisão);</li>
+<li>aprovar a política de IA e o apetite a risco;</li>
+<li>nomear responsáveis e dar autoridade real ao comitê;</li>
+<li>garantir recursos — gente, ferramenta homologada, treinamento;</li>
+<li>receber, com periodicidade, um relato de uso, incidentes e indicadores.</li>
+</ul>
+
+<h2 id="papeis">Comitê e papéis</h2>
+
+<p>Um modelo enxuto que funciona em empresa de médio porte:</p>
+<table>
+<thead>
+<tr><th>Papel</th><th>Responsabilidade</th></tr>
+</thead>
+<tbody>
+<tr><td>Patrocinador executivo</td><td>Leva o tema à diretoria, arbitra conflito entre áreas, responde pela política.</td></tr>
+<tr><td>Comitê de IA</td><td>Aprova ou recusa usos novos, revisa avaliações de risco e impacto, acompanha incidentes. Reúne segurança, privacidade/DPO, jurídico, tecnologia e as áreas de negócio que mais usam IA.</td></tr>
+<tr><td>Dono do sistema de IA</td><td>Uma pessoa por sistema: responde por finalidade, dados, desempenho, fornecedor e reavaliação.</td></tr>
+<tr><td>Segurança da informação</td><td>Controles técnicos, acesso, logs, avaliação de fornecedores — idealmente já operando um SGSI (<a href="/iso-27001/">ISO 27001</a>).</td></tr>
+<tr><td>Privacidade / DPO</td><td>Base legal, finalidade, direitos do titular e decisões automatizadas (<a href="/lgpd/">LGPD</a>, art. 20).</td></tr>
+<tr><td>Usuários</td><td>Seguem a política, usam só ferramenta homologada, reportam erro e uso indevido.</td></tr>
+</tbody>
+</table>
+
+<p>Em empresa pequena, o comitê pode ser três pessoas e uma reunião mensal. O que não pode é não existir ninguém com autoridade para dizer “esse uso não”.</p>
+
+<h2 id="inventario">Inventário de sistemas de IA: o ponto de partida</h2>
+
+<p>Não se governa o que não se enxerga. O inventário é a primeira entrega de qualquer programa de governança e a base que a <a href="/iso-42001/">ISO 42001</a> pressupõe para escopo, riscos e controles. Para cada sistema, registre:</p>
+<ul>
+<li>nome, área e <strong>dono</strong>;</li>
+<li><strong>finalidade</strong> e uso pretendido — e usos que estão fora dele;</li>
+<li>o papel da empresa: desenvolve, fornece ou usa;</li>
+<li>fornecedor e modelo (quando é de terceiro);</li>
+<li><strong>dados</strong> que entram (pessoais? sensíveis? confidenciais de cliente?) e para onde vão;</li>
+<li>quem é afetado pela saída — colaborador, cliente, candidato, público;</li>
+<li>grau de autonomia: sugere, decide com revisão humana ou decide sozinho;</li>
+<li>criticidade e data da última avaliação de risco e de impacto.</li>
+</ul>
+
+<p>Para levantar, combine três fontes: questionário às áreas, revisão de contratos e licenças de software (procure IA embutida) e dados técnicos de rede e de navegação, que mostram as ferramentas realmente acessadas.</p>
+
+<h2 id="politica">Política de uso de inteligência artificial: o que pôr nela</h2>
+
+<p>A política de uso aceitável é o documento que todo colaborador precisa entender. Curta, concreta e com exemplos. O que não pode faltar:</p>
+<ol>
+<li><strong>Objetivo e alcance</strong> — a quem se aplica (incluindo terceiros e estagiários) e que tipos de IA cobre.</li>
+<li><strong>Ferramentas homologadas</strong> — lista atual e onde consultá-la; como pedir uma nova.</li>
+<li><strong>Dados proibidos</strong> em ferramenta não homologada — dado pessoal, dado sensível, segredo comercial, informação de cliente sob contrato, código-fonte proprietário, credenciais.</li>
+<li><strong>Usos proibidos ou restritos</strong> — decisão automática sobre contratação, crédito, desligamento ou saúde sem revisão humana; geração de conteúdo enganoso; uso de imagem ou voz de pessoas sem autorização.</li>
+<li><strong>Revisão humana obrigatória</strong> — tudo que sai para cliente, autoridade ou público passa por uma pessoa responsável.</li>
+<li><strong>Transparência</strong> — quando informar que um conteúdo ou atendimento foi produzido com IA.</li>
+<li><strong>Propriedade intelectual</strong> — cuidado com saída que reproduz material de terceiros; quem é dono do que foi gerado.</li>
+<li><strong>Como reportar</strong> erro, viés, vazamento ou uso indevido — canal e prazo.</li>
+<li><strong>Consequências</strong> do descumprimento, alinhadas ao código de conduta.</li>
+<li><strong>Revisão</strong> — quem mantém a política e com que frequência (no mínimo anual; a tecnologia muda mais rápido que isso).</li>
+</ol>
+
+<p>Política de IA da 42001 (cláusula 5.2 e grupo A.2 do <a href="/anexo-a-iso-42001/">Anexo A</a>) é um pouco mais ampla: inclui compromisso com requisitos aplicáveis e com melhoria contínua e o alinhamento com outras políticas da organização. A política de uso aceitável costuma ser o desdobramento operacional dela.</p>
+
+<h2 id="shadow-ai">Shadow AI: como detectar e tratar sem proibir tudo</h2>
+
+<p><em>Shadow AI</em> é o uso de ferramentas de IA que a organização não homologou — o colaborador que cola um contrato num chatbot público para resumir, o analista que sobe uma planilha de clientes para “limpar os dados”, a área que assina por conta própria um serviço de transcrição de reuniões. O problema não é a intenção, quase sempre boa. É o dado que sai sem controle, a resposta errada que entra num documento oficial e a decisão tomada sem que ninguém saiba que veio de um modelo.</p>
+
+<p><strong>Como detectar:</strong></p>
+<ul>
+<li>logs de proxy, DNS e CASB mostrando acesso a domínios de ferramentas de IA;</li>
+<li>extensões de navegador e aplicativos instalados;</li>
+<li>despesas em cartão corporativo e reembolsos com assinaturas de IA;</li>
+<li>pesquisa anônima com as áreas — costuma revelar mais do que a ferramenta técnica.</li>
+</ul>
+
+<p><strong>Como tratar:</strong> proibir tudo não funciona — o uso só vai para o celular pessoal, onde a empresa enxerga ainda menos. O que funciona é oferecer uma <strong>alternativa homologada</strong> (versão corporativa, com contrato que impede o uso dos dados para treinamento e com controle de acesso), deixar claro <strong>que dado nunca pode sair</strong>, criar um <strong>caminho rápido para pedir ferramenta nova</strong> e bloquear tecnicamente só o que for de alto risco. Se o pedido de homologação leva três meses, o shadow AI vence.</p>
+
+<h2 id="letramento">Letramento em IA: treinar quem usa</h2>
+
+<p>Governança depende de gente que entende o que está usando. O AI Act europeu exige, desde fevereiro de 2025, que provedores e usuários de sistemas de IA adotem medidas para promover o letramento em IA de quem opera esses sistemas (depois do Digital Omnibus, de julho de 2026, a obrigação é de meio, não de garantir um nível mínimo por pessoa), e a 42001 cobra competência e conscientização (cláusula 7). Um programa mínimo cobre: o que a IA generativa faz e não faz, alucinação e como checar, que dados nunca inserir, viés e por que a revisão humana existe, e como reportar problemas. Para quem é dono de sistema ou membro do comitê, a trilha inclui avaliação de risco e de impacto.</p>
+
+<h2 id="risco-impacto">Risco e impacto: o filtro para cada uso</h2>
+
+<p>Nem todo uso de IA merece o mesmo esforço. Classifique por criticidade — resumir texto interno não é o mesmo que triar currículo — e concentre a análise onde a IA toca decisão sobre pessoas, dado sensível, segurança física ou reputação. Para os usos críticos, faça duas análises separadas: o risco para a empresa e o impacto sobre indivíduos, grupos e sociedade. O passo a passo está em <a href="/avaliacao-de-impacto-ia/">avaliação de impacto de IA</a>.</p>
+
+<h2 id="medir">Como medir se a governança funciona</h2>
+<ul>
+<li>percentual de sistemas de IA inventariados com dono e avaliação em dia;</li>
+<li>tempo médio para aprovar ou recusar um pedido de ferramenta nova;</li>
+<li>acessos a ferramentas não homologadas (tendência, não número absoluto);</li>
+<li>colaboradores treinados na política de uso;</li>
+<li>incidentes de IA reportados e tempo de tratamento — reportar mais no início é sinal de saúde, não de problema;</li>
+<li>reclamações ou contestações de pessoas afetadas por decisões apoiadas em IA.</li>
+</ul>
+
+<h2 id="iso-42001">De governança a sistema certificável: a ISO 42001</h2>
+
+<p>Tudo o que está acima — política, papéis, inventário, risco, impacto, controles, treinamento, indicadores, correção — é o conteúdo de um Sistema de Gestão de Inteligência Artificial. A <a href="/iso-42001/">ISO 42001</a> organiza isso em requisitos auditáveis e permite que um organismo independente ateste que a governança existe e funciona. Quem já tem <a href="/iso-27001/">ISO 27001</a> aproveita a estrutura de gestão, como mostra <a href="/iso-42001-e-iso-27001/">ISO 42001 e ISO 27001</a>.</p>
+
+<p>Certificar não é obrigatório para ter governança. Mas a norma é um bom roteiro mesmo para quem não pretende certificar agora: ela evita que o programa fique só na política e esqueça a parte difícil, que é operar, medir e corrigir.</p>
+
+<h2 id="comecar">Por onde começar</h2>
+<ol>
+<li>Nomeie um patrocinador e monte o comitê, mesmo que pequeno.</li>
+<li>Levante o inventário — oficial e shadow — em 30 dias.</li>
+<li>Publique uma política de uso aceitável de uma ou duas páginas e uma lista de ferramentas homologadas.</li>
+<li>Escolha os dois ou três usos mais críticos e faça avaliação de risco e de impacto.</li>
+<li>Treine todos na política e os donos de sistema na avaliação.</li>
+<li>Defina indicadores e leve o primeiro relato à diretoria em 90 dias.</li>
+</ol>
+
+<p>Feito isso, a decisão sobre certificar deixa de ser abstrata: você já sabe quanto do sistema existe e quanto falta.</p>

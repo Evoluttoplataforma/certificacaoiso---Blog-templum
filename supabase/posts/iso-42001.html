@@ -1,0 +1,188 @@
+<p>A <strong>ISO/IEC 42001</strong> é a norma internacional de requisitos para um <strong>Sistema de Gestão de Inteligência Artificial (SGIA)</strong>. Ela define o que uma organização precisa governar para desenvolver, fornecer ou usar IA de forma responsável: política, papéis, avaliação de risco, avaliação de impacto sobre pessoas, controles do ciclo de vida e dos dados, além de melhoria contínua. Não trata do algoritmo em si. A certificação é voluntária e é feita por organismo independente, num ciclo de três anos.</p>
+
+<p>Empresas de todo porte já dizem que “usam inteligência artificial”. Poucas conseguem mostrar, com evidência, quem autorizou o uso, quais dados entram no modelo, que risco isso cria para o negócio e que impacto pode causar em quem nem é cliente. A 42001 transforma essa conversa em sistema de gestão, com a mesma disciplina que o mercado conhece da <a href="/iso-9001/">ISO 9001</a> e da <a href="/iso-27001/">ISO 27001</a>. Este guia é a porta de entrada da vertical. Cada tema tem um artigo próprio, linkado ao longo do texto.</p>
+
+<h2 id="o-que-e">O que é a ISO/IEC 42001</h2>
+
+<p>Publicada em dezembro de 2023, a ISO/IEC 42001 foi a primeira norma ISO de sistema de gestão dedicada à inteligência artificial. No Brasil, a versão em português saiu em abril de 2024 como <strong>ABNT NBR ISO/IEC 42001</strong>. O que ela exige é governança: a organização precisa saber onde a IA está, decidir quem responde por ela, avaliar o que pode dar errado para a empresa e para as pessoas afetadas, aplicar controles e provar que tudo isso funciona.</p>
+
+<p>Três ideias evitam as leituras distorcidas mais comuns:</p>
+<ul>
+<li>ela diz <strong>o quê</strong> precisa ser governado. O “como” técnico de cada modelo continua com a sua equipe;</li>
+<li>é <strong>voluntária</strong>. Nenhuma lei brasileira exige o certificado hoje, embora a regulação caminhe na mesma direção;</li>
+<li>ela <strong>não substitui</strong> segurança da informação, privacidade nem qualidade, e na prática costuma andar junto com elas.</li>
+</ul>
+
+<p>Na sigla em inglês o sistema se chama AIMS (<em>AI management system</em>). Em português, SGIA. É o mesmo objeto.</p>
+
+<h2 id="para-quem-serve">Para quem serve: os três papéis</h2>
+
+<p>A pergunta certa é <strong>qual é o seu papel em relação à IA</strong> e o quanto esse uso é crítico. Perguntar só “usamos alguma ferramenta de IA?” não basta. A norma pede que a organização determine o próprio papel já na análise de contexto (cláusula 4.1). Ela usa a terminologia da ISO/IEC 22989, com provedor, desenvolvedor, usuário, cliente, parceiro e sujeito afetado. Para decidir escopo, três frentes resolvem a maior parte dos casos:</p>
+<ul>
+<li><strong>Produtor</strong>: desenvolve o modelo ou o sistema de IA.</li>
+<li><strong>Fornecedor</strong>: entrega produto ou serviço que incorpora IA, muitas vezes construído sobre modelos de terceiros.</li>
+<li><strong>Usuário</strong>: emprega IA em processos próprios, como atendimento, crédito, triagem de currículos, inspeção de qualidade ou produtividade interna.</li>
+</ul>
+
+<p>O escopo pode <strong>combinar</strong> papéis. Uma software house que vende um produto com IA e ainda usa IA generativa no backoffice é fornecedora e usuária no mesmo SGIA. A alternativa é deixar uma das frentes fora do escopo, com justificativa registrada.</p>
+
+<p>Alguns exemplos ajudam a calibrar o risco:</p>
+<ul>
+<li><strong>apoio a diagnóstico por imagem</strong>: viés de base de treino, explicabilidade e dado sensível de saúde;</li>
+<li><strong>visão computacional na linha de montagem</strong>: falso negativo que deixa defeito passar, falso positivo que gera descarte;</li>
+<li><strong>modelo de crédito ou de seleção de pessoas</strong>: discriminação e direito de revisão de decisão automatizada (art. 20 da <a href="/lgpd/">LGPD</a>);</li>
+<li><strong>recomendação no varejo</strong>: perfilamento, base legal e transparência;</li>
+<li><strong>escritório que cola contrato de cliente em chatbot público</strong>: o clássico <em>shadow AI</em>, uso que ninguém homologou e que vaza dado. O tema tem artigo próprio em <a href="/governanca-de-ia/">governança de IA</a>.</li>
+</ul>
+
+<h2 id="quando-faz-sentido">Quando a 42001 faz sentido (e quando ainda não)</h2>
+
+<p>A norma vira prioridade quando aparece pelo menos um destes sinais:</p>
+<ul>
+<li>a IA já está em <strong>processo crítico</strong> ou em decisão sobre pessoas, como crédito, contratação, saúde, segurança ou preço;</li>
+<li>clientes, editais ou matrizes estrangeiras começaram a pedir <strong>due diligence de IA</strong> nos questionários de fornecedor;</li>
+<li>a empresa <strong>vende</strong> produto com IA e precisa demonstrar uso responsável para fechar contrato;</li>
+<li>há exposição ao mercado europeu, onde o AI Act já está em vigor, ou vontade de se antecipar ao marco legal brasileiro.</li>
+</ul>
+
+<p>Se a IA é periférica, não toca dado sensível e não decide nada sobre pessoas, certificar pode esperar. Mesmo assim vale ter o básico de governança, com inventário de uso e política de uso aceitável, porque o risco de <em>shadow AI</em> existe com ou sem certificado.</p>
+
+<h2 id="clausulas">As cláusulas 4 a 10, em resumo</h2>
+
+<p>A 42001 segue a estrutura harmonizada das normas ISO de gestão (Anexo SL), a mesma da 9001, da 14001 e da 27001. Quem já mantém um desses sistemas reconhece o esqueleto. A diferença está no conteúdo de IA dentro de cada cláusula:</p>
+
+<table>
+<thead><tr><th>Cláusula</th><th>O que pede</th><th>O que é específico de IA</th></tr></thead>
+<tbody>
+<tr><td>4 Contexto</td><td>questões internas e externas, partes interessadas, escopo</td><td>determinar o papel da organização em relação à IA</td></tr>
+<tr><td>5 Liderança</td><td>comprometimento da direção, política, papéis</td><td>política de IA e responsabilidades sobre sistemas de IA</td></tr>
+<tr><td>6 Planejamento</td><td>riscos, oportunidades, objetivos</td><td>avaliação de risco de IA (6.1.2), tratamento com declaração de aplicabilidade (6.1.3) e <strong>avaliação de impacto</strong> do sistema de IA (6.1.4)</td></tr>
+<tr><td>7 Apoio</td><td>recursos, competência, comunicação, documentos</td><td>recursos de dados, ferramentas, computação e pessoas para a IA</td></tr>
+<tr><td>8 Operação</td><td>planejamento e controle operacional</td><td>executar as avaliações de risco e de impacto em intervalos planejados e a cada mudança significativa</td></tr>
+<tr><td>9 Desempenho</td><td>monitoramento, auditoria interna, análise crítica</td><td>medir se os sistemas de IA cumprem os objetivos de uso responsável</td></tr>
+<tr><td>10 Melhoria</td><td>não conformidade, ação corretiva, melhoria contínua</td><td>a mesma lógica, aplicada a incidentes e desvios de IA</td></tr>
+</tbody>
+</table>
+
+<p>O detalhamento cláusula a cláusula, com a evidência que o auditor costuma pedir em cada uma, está em <a href="/requisitos-iso-42001/">requisitos da ISO 42001</a>.</p>
+
+<h2 id="risco-e-impacto">Risco versus impacto: a distinção que mais pesa</h2>
+
+<p>Confundir as duas análises é o erro mais caro da implantação. A 42001 as separa de propósito.</p>
+
+<p><strong>A avaliação de risco de IA</strong> (6.1.2) olha para a organização: o que pode prejudicar objetivos, operação, reputação e conformidade se o sistema falhar, vazar, produzir saída enviesada ou for mal usado.</p>
+
+<p><strong>A avaliação de impacto do sistema de IA</strong> (6.1.4) olha para fora: indivíduos, grupos de indivíduos e a sociedade. Entram aqui viés e discriminação, exclusão, dano à autonomia, risco à integridade física e efeitos em escala. Também entram os colaboradores, quando são eles os afetados.</p>
+
+<ul>
+<li>risco sem impacto: a empresa se protege e ainda pode prejudicar quem a IA atinge;</li>
+<li>impacto sem risco: discurso ético sem plano de negócio nem controle operacional;</li>
+<li>as duas análises juntas: é o que a norma cobra.</li>
+</ul>
+
+<p>A família ISO tem guias para cada lado: a <strong>ISO/IEC 23894</strong> para gestão de risco de IA e a <strong>ISO/IEC 42005</strong>, publicada em 2025, para avaliação de impacto. O passo a passo, com modelo de matriz, está em <a href="/avaliacao-de-impacto-ia/">avaliação de impacto e de risco de IA</a>.</p>
+
+<h2 id="anexo-a">Anexo A: os 38 controles e a declaração de aplicabilidade</h2>
+
+<p>Além das cláusulas, a norma traz o <strong>Anexo A (normativo)</strong>, com 38 controles organizados em nove grupos:</p>
+<ul>
+<li><strong>A.2</strong> Políticas relacionadas à IA</li>
+<li><strong>A.3</strong> Organização interna (papéis, canal para reportar preocupações)</li>
+<li><strong>A.4</strong> Recursos para sistemas de IA (dados, ferramentas, computação, pessoas)</li>
+<li><strong>A.5</strong> Avaliação de impactos dos sistemas de IA</li>
+<li><strong>A.6</strong> Ciclo de vida do sistema de IA (do requisito à operação, com logs)</li>
+<li><strong>A.7</strong> Dados para sistemas de IA (qualidade, proveniência, preparação)</li>
+<li><strong>A.8</strong> Informação às partes interessadas (transparência, incidentes)</li>
+<li><strong>A.9</strong> Uso de sistemas de IA (uso responsável e uso pretendido)</li>
+<li><strong>A.10</strong> Relacionamento com terceiros e clientes</li>
+</ul>
+
+<p>O funcionamento é o mesmo do anexo de controles da 27001. A organização avalia cada controle frente ao seu escopo e aos seus papéis e registra a decisão numa <strong>declaração de aplicabilidade</strong>: o que se aplica, o que não se aplica e por quê. O <strong>Anexo B</strong>, também normativo, orienta a implementação de cada controle. Os anexos C (objetivos e fontes de risco) e D (uso por setor) são informativos.</p>
+
+<p>Um princípio sustenta metade do anexo: <strong>dado ruim gera IA ruim</strong>. Qualidade, proveniência e viés dos dados de treino e de operação são requisito de gestão, e não ficam só a cargo da ciência de dados. O grupo a grupo, com checklist, está em <a href="/anexo-a-iso-42001/">Anexo A da ISO 42001</a>.</p>
+
+<h2 id="pdca">O PDCA por trás da norma</h2>
+
+<p>Como toda norma de sistema de gestão, a 42001 roda em ciclo:</p>
+<ul>
+<li><strong>Planejar</strong>: contexto, papel, escopo, política, risco, impacto e declaração de aplicabilidade.</li>
+<li><strong>Fazer</strong>: operar os sistemas de IA com os controles escolhidos, ao longo de todo o ciclo de vida.</li>
+<li><strong>Checar</strong>: monitorar desempenho e deriva, fazer auditoria interna e análise crítica pela direção.</li>
+<li><strong>Agir</strong>: tratar incidentes e não conformidades e melhorar.</li>
+</ul>
+
+<p>Em IA o ciclo gira mais rápido que em qualidade. Modelo é retreinado, fornecedor troca a versão do modelo de base, aparece um caso de uso novo toda semana. Por isso a norma exige refazer risco e impacto <strong>a cada mudança significativa</strong>, além do calendário planejado.</p>
+
+<h2 id="certificacao">Como funciona a certificação</h2>
+
+<p>O ciclo é o mesmo das outras normas de gestão:</p>
+<ol>
+<li><strong>Implantação</strong>: o SGIA precisa estar operando, com registros, uma auditoria interna completa e uma análise crítica pela direção já realizadas.</li>
+<li><strong>Contrato com organismo certificador</strong>, com o escopo e os papéis definidos.</li>
+<li><strong>Auditoria inicial em dois estágios</strong>: o estágio 1 avalia a prontidão documental e o estágio 2 verifica implementação e eficácia no dia a dia.</li>
+<li><strong>Tratamento de não conformidades</strong>, se houver, e emissão do certificado.</li>
+<li><strong>Manutenções anuais</strong> e <strong>recertificação</strong> ao fim dos três anos.</li>
+</ol>
+
+<p>Os organismos que certificam a 42001 são avaliados pelos acreditadores segundo a <strong>ISO/IEC 42006</strong>, publicada em 2025. Antes de contratar, confira se a acreditação do organismo cobre a 42001. O tempo de auditoria, e portanto o custo, depende do número de pessoas no escopo, da quantidade e criticidade dos sistemas de IA, dos papéis e dos sites. Também pesa a possibilidade de combinar a auditoria com a da 27001. Etapas, prazos e o que encarece estão em <a href="/certificacao-iso-42001/">certificação ISO 42001</a>.</p>
+
+<h2 id="prazo-e-custo">Quanto tempo leva e quanto custa</h2>
+
+<p>Não existe prazo nem preço de tabela que se sustente sem olhar o escopo. Quem promete os dois antes de saber quantos sistemas de IA você tem está chutando. O que move o prazo é conhecido:</p>
+<ul>
+<li><strong>maturidade de partida</strong>: quem já tem 27001 ou 9001 reaproveita a espinha de gestão e começa pelo recorte de IA;</li>
+<li><strong>quantidade e criticidade dos sistemas de IA</strong> no escopo, porque cada sistema crítico pede avaliação de risco, de impacto e controles próprios;</li>
+<li><strong>papéis</strong>: o produtor de modelo tem bem mais controles de ciclo de vida e dados aplicáveis que o usuário;</li>
+<li><strong>tempo de operação</strong>: o auditor quer ver o sistema rodando, com monitoramento, auditoria interna e análise crítica feitos, e isso não se comprime.</li>
+</ul>
+
+<p>O custo também tem duas partes que convém separar: a <strong>implantação</strong> (consultoria, horas internas, ferramentas e treinamento) e a <strong>certificação</strong> (tempo de auditoria do organismo ao longo dos três anos). Peça orçamento do ciclo inteiro, não só da auditoria inicial.</p>
+
+<h2 id="integracao">Integração com 27001, 27701, LGPD e 9001</h2>
+
+<p>Todo sistema de IA também é sistema de informação. A 42001 não exige um SGSI, mas quem já tem <a href="/iso-27001/">ISO 27001</a> aproveita boa parte da estrutura: política, análise de contexto, metodologia de risco, controle de documentos, auditoria interna, análise crítica e ação corretiva podem formar um só sistema integrado. Os controles de segurança da 27001 também cobrem boa parte da proteção do próprio sistema de IA. O que entra de novo é o recorte de IA: papel, avaliação de impacto, ciclo de vida, dados para IA, uso responsável e transparência às partes interessadas.</p>
+
+<p>Privacidade fica no meio do caminho. A <a href="/iso-27701-2025-o-que-muda-independencia-da-iso-27001/">ISO 27701:2025</a> e a LGPD tratam do dado pessoal. A 42001 trata do que o sistema faz com ele e do efeito que isso tem sobre as pessoas. O passo a passo da integração, com a ordem recomendada para quem já tem e para quem não tem a 27001, está em <a href="/iso-42001-e-iso-27001/">ISO 42001 e ISO 27001</a>.</p>
+
+<h2 id="familia">A família de normas em volta da 42001</h2>
+
+<p>A 42001 é a única norma certificável da família. As outras apoiam a implantação:</p>
+<ul>
+<li><strong>ISO/IEC 22989</strong>: conceitos e terminologia de IA, de onde vêm os papéis;</li>
+<li><strong>ISO/IEC 23053</strong>: framework para sistemas de IA com aprendizado de máquina;</li>
+<li><strong>ISO/IEC 23894</strong>: orientação de gestão de risco de IA, construída sobre a ISO 31000;</li>
+<li><strong>ISO/IEC 42005</strong>: orientação para avaliação de impacto de sistemas de IA (2025);</li>
+<li><strong>ISO/IEC 42006</strong>: requisitos para quem audita e certifica a 42001 (2025);</li>
+<li><strong>ISO/IEC 38507</strong>: governança de IA vista pelo conselho e pela alta direção.</li>
+</ul>
+
+<p>Fora da ISO, três referências públicas ajudam e conversam bem com a norma: o <strong>AI Risk Management Framework do NIST</strong>, o <strong>OWASP Top 10 para aplicações com LLM</strong> e os <strong>Princípios de IA da OCDE</strong>. Servem de apoio, mas na auditoria o que vale são os requisitos da 42001 e as evidências do seu SGIA.</p>
+
+<h2 id="regulacao">ISO 42001, AI Act e PL 2338</h2>
+
+<p><strong>Na União Europeia</strong>, o AI Act (Regulamento (UE) 2024/1689) está em vigor desde agosto de 2024. As práticas proibidas valem desde fevereiro de 2025 e as regras de IA de propósito geral desde agosto de 2025. Com o Digital Omnibus, em vigor desde julho de 2026, as obrigações dos sistemas de alto risco do Anexo III passaram para 2 de dezembro de 2027. A lei alcança empresa brasileira que coloca sistema de IA no mercado europeu ou cujo resultado é usado na UE.</p>
+
+<p><strong>No Brasil</strong>, o PL 2338/2023, o Marco Legal da IA, foi aprovado no Senado em dezembro de 2024 e está na Câmara, em comissão especial. A votação foi indicada para depois das eleições de outubro de 2026. <strong>Ainda não é lei</strong>, e o texto pode mudar.</p>
+
+<p>A 42001 não é atalho para cumprir nenhuma das duas, porque certificado não substitui obrigação legal. Mas ela organiza exatamente o que as duas cobram: inventário, classificação por risco, avaliação de impacto, transparência e supervisão humana. Quem implanta agora chega à lei com metade do caminho andado. Datas, o que cada uma exige e uma tabela comparativa estão em <a href="/pl-2338-ai-act/">PL 2338 e AI Act</a>.</p>
+
+<h2 id="erros-comuns">Erros comuns na primeira onda</h2>
+<ul>
+<li><strong>Tratar a 42001 como projeto de TI.</strong> Ela é sistema de gestão, e quem decide uso de IA em crédito, RH ou atendimento é o negócio. Sem a direção e as áreas usuárias, o SGIA vira documento de gaveta.</li>
+<li><strong>Inventário incompleto.</strong> Ficam de fora a IA embutida em software de terceiros (CRM, ERP, ferramenta de RH) e o <em>shadow AI</em>. Um escopo que ignora o que de fato roda não passa no estágio 2.</li>
+<li><strong>Só avaliar risco.</strong> A avaliação de impacto sobre pessoas é requisito, não anexo opcional.</li>
+<li><strong>Declaração de aplicabilidade copiada.</strong> Excluir controle sem justificativa ligada ao papel e ao escopo é não conformidade previsível.</li>
+<li><strong>Esquecer fornecedor.</strong> Quem usa modelo de terceiro continua responsável pelo uso. O grupo A.10 existe para isso.</li>
+<li><strong>Política que proíbe tudo.</strong> Proibir IA generativa sem oferecer alternativa homologada empurra o uso para a sombra.</li>
+</ul>
+
+<h2 id="por-onde-comecar">Por onde começar na segunda-feira</h2>
+<ol>
+<li><strong>Faça o inventário.</strong> Liste onde a IA aparece, a oficial e a de sombra, e marque o papel em cada caso: produtor, fornecedor ou usuário.</li>
+<li><strong>Escolha um sistema crítico</strong> e rascunhe as duas análises: risco para a empresa e impacto para as pessoas.</li>
+<li><strong>Escreva a política de uso aceitável</strong>, com o que pode, o que não pode e quais ferramentas estão homologadas.</li>
+<li><strong>Alinhe com segurança e privacidade.</strong> A 42001 se apoia na <a href="/iso-27001/">27001</a> e na <a href="/lgpd/">LGPD</a> e não as substitui.</li>
+<li><strong>Faça um diagnóstico</strong> contra as cláusulas e o Anexo A para estimar o esforço até a certificação.</li>
+</ol>
+
+<p>Com isso o escopo deixa de ser slogan e vira uma fronteira que dá para auditar. O resto é o PDCA de sempre, agora com a inteligência artificial dentro do perímetro da gestão.</p>

@@ -1,0 +1,54 @@
+{
+ "title": "Governança de IA: como controlar o uso de inteligência artificial na empresa",
+ "seo_title": "Governança de IA: política de uso, shadow AI e papéis",
+ "seo_description": "Governança de IA na prática: direção, comitê, inventário, política de uso de inteligência artificial, shadow AI e o caminho para a ISO 42001.",
+ "excerpt": "Como montar governança de IA na empresa: comitê, inventário, política de uso aceitável, combate ao shadow AI, letramento e indicadores.",
+ "tldr": "Governança de IA é o conjunto de decisões, papéis, regras e controles que define quem pode usar inteligência artificial, para quê, com quais dados e com que supervisão — e como a empresa prova isso. Na prática: a direção define apetite a risco e nomeia responsáveis; um comitê aprova usos novos; cada sistema de IA tem dono e entra num inventário; uma política de uso aceitável diz que ferramentas são homologadas e que dados nunca podem sair; o shadow AI é tratado com alternativa homologada, não com proibição total; usos críticos passam por avaliação de risco e de impacto. A ISO 42001 é a forma auditável e certificável dessa governança.",
+ "faq": [
+  {
+   "pergunta": "O que é governança de IA?",
+   "resposta": "É a gestão do uso de inteligência artificial na organização: quem decide que usos são aceitáveis, quem responde por cada sistema, que regras valem para dados, fornecedores e supervisão humana, e como problemas são detectados e corrigidos. Ela transforma princípios de IA responsável em decisão, registro e controle."
+  },
+  {
+   "pergunta": "O que é shadow AI?",
+   "resposta": "É o uso de ferramentas de IA não homologadas pela organização, como colar um contrato ou uma planilha de clientes num chatbot público. O risco é o vazamento de dados, a entrada de respostas erradas em documentos oficiais e decisões tomadas sem que ninguém saiba que vieram de um modelo."
+  },
+  {
+   "pergunta": "Proibir ferramentas de IA resolve o shadow AI?",
+   "resposta": "Raramente. A proibição total empurra o uso para o celular pessoal, onde a empresa enxerga ainda menos. O que funciona é oferecer alternativa homologada com contrato adequado, deixar claro que dados nunca podem sair, criar um caminho rápido para pedir ferramenta nova e bloquear tecnicamente só o que for de alto risco."
+  },
+  {
+   "pergunta": "O que deve ter uma política de uso de inteligência artificial?",
+   "resposta": "Alcance, lista de ferramentas homologadas, dados proibidos em ferramenta não homologada, usos proibidos ou restritos, exigência de revisão humana para o que sai da empresa, regras de transparência e propriedade intelectual, canal para reportar problemas, consequências do descumprimento e periodicidade de revisão."
+  },
+  {
+   "pergunta": "Empresa que só usa IA de terceiros precisa de governança de IA?",
+   "resposta": "Sim. A maior parte do risco hoje vem do uso, não do desenvolvimento: dado de cliente em ferramenta pública, IA embutida em software de RH ou crédito, resposta gerada enviada sem revisão. O esforço é proporcional à criticidade do uso, mas inventário, política e dono por sistema valem para todos."
+  },
+  {
+   "pergunta": "Qual a relação entre governança de IA e ISO 42001?",
+   "resposta": "A ISO 42001 é a norma de sistema de gestão de inteligência artificial: organiza política, papéis, riscos, avaliação de impacto, controles, treinamento, monitoramento e melhoria em requisitos auditáveis. Certificar é voluntário, mas a norma serve de roteiro mesmo para quem ainda não pretende certificar."
+  }
+ ],
+ "tags": [
+  "governança de IA",
+  "ISO 42001",
+  "inteligência artificial",
+  "shadow AI",
+  "política de uso de IA",
+  "IA responsável",
+  "SGIA",
+  "LGPD",
+  "ISO 27001"
+ ],
+ "seo_keywords": [
+  "governança de IA",
+  "governança de inteligência artificial",
+  "shadow AI",
+  "política de uso de inteligência artificial",
+  "IA responsável",
+  "comitê de IA",
+  "inventário de sistemas de IA",
+  "ISO 42001"
+ ]
+}

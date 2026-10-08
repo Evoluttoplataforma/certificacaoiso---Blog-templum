@@ -1,0 +1,35 @@
+{
+ "title": "Anexo A da ISO 42001: os 38 controles e a declaração de aplicabilidade",
+ "seo_title": "Anexo A da ISO 42001: os 38 controles explicados",
+ "seo_description": "Os 38 controles do Anexo A da ISO 42001 em 9 grupos (A.2 a A.10): o que cada um pede, a evidência da auditoria e como montar a declaração de aplicabilidade.",
+ "excerpt": "Os 9 grupos de controles do Anexo A da ISO/IEC 42001, a evidência que o auditor pede em cada um e como montar a declaração de aplicabilidade.",
+ "tldr": "O Anexo A da ISO/IEC 42001 é normativo e traz 38 controles de referência para sistemas de inteligência artificial, organizados em 9 grupos: políticas de IA (A.2), organização interna (A.3), recursos (A.4), avaliação de impactos (A.5), ciclo de vida do sistema (A.6), dados (A.7), informação às partes interessadas (A.8), uso dos sistemas (A.9) e terceiros e clientes (A.10). A organização compara o seu tratamento de risco com essa lista e registra, numa declaração de aplicabilidade, o que se aplica, o que foi excluído e por quê. O peso de cada grupo depende do papel: quem desenvolve IA concentra esforço em ciclo de vida e dados; quem só usa concentra em política, impacto, uso e fornecedores.",
+ "faq": [
+  {
+   "pergunta": "Quantos controles tem o Anexo A da ISO 42001?",
+   "resposta": "São 38 controles, distribuídos em 9 grupos numerados de A.2 a A.10. O maior é o de ciclo de vida do sistema de IA (A.6), com 9 controles; os menores são organização interna (A.3), com 2, e políticas, uso e terceiros (A.2, A.9 e A.10), com 3 cada."
+  },
+  {
+   "pergunta": "Sou obrigado a implementar todos os controles do Anexo A?",
+   "resposta": "Não. A norma exige que você compare o seu tratamento de risco com o Anexo A e decida o que se aplica ao seu escopo. Cada exclusão precisa de justificativa registrada na declaração de aplicabilidade, normalmente ligada ao papel da organização ou ao resultado da avaliação de risco e de impacto."
+  },
+  {
+   "pergunta": "O que é a declaração de aplicabilidade da ISO 42001?",
+   "resposta": "É o documento que lista os controles necessários para tratar os riscos de IA, a justificativa de inclusão, a justificativa de exclusão dos controles do Anexo A que não se aplicam e o status de implementação de cada um. É exigida pela cláusula 6.1.3 e é um dos primeiros documentos que o auditor examina."
+  },
+  {
+   "pergunta": "Qual a diferença entre o Anexo A e o Anexo B da ISO 42001?",
+   "resposta": "O Anexo A lista os controles; o Anexo B dá a orientação de implementação de cada um. Os dois são normativos. Os Anexos C e D são informativos: o C traz objetivos e fontes de risco de IA, e o D trata do uso do sistema de gestão entre setores e da integração com outras normas."
+  },
+  {
+   "pergunta": "Posso reaproveitar o Anexo A da ISO 27001?",
+   "resposta": "Em parte. Controles de segurança, fornecedores, incidentes e logs do SGSI dão suporte a vários controles da 42001. Mas os grupos de avaliação de impacto, ciclo de vida, dados para IA e uso responsável não têm equivalente na 27001 e precisam ser construídos. A declaração de aplicabilidade também é separada."
+  },
+  {
+   "pergunta": "Uma empresa que só usa IA de terceiros pode excluir controles?",
+   "resposta": "Pode excluir controles de projeto e desenvolvimento, desde que justifique e deixe a responsabilidade do fornecedor definida em contrato (A.10). Já monitoramento do uso, dados de entrada, avaliação de impacto, uso pretendido e transparência continuam sendo responsabilidade de quem usa o sistema."
+  }
+ ],
+ "tags": ["ISO 42001", "ISO/IEC 42001", "Anexo A", "controles de IA", "declaração de aplicabilidade", "SGIA", "governança de IA", "inteligência artificial"],
+ "seo_keywords": ["anexo a iso 42001", "controles iso 42001", "iso 42001 checklist", "declaração de aplicabilidade iso 42001", "iso 42001 anexo b", "38 controles iso 42001"]
+}

@@ -1,0 +1,52 @@
+{
+ "title": "Certificação ISO 42001: etapas, auditoria, prazo e custo",
+ "seo_title": "Certificação ISO 42001: etapas, prazo e custo",
+ "seo_description": "Como funciona a certificação ISO 42001: o que ter pronto antes do auditor, estágios 1 e 2, ciclo de três anos, custo, prazo e escolha do organismo.",
+ "excerpt": "O caminho da certificação ISO/IEC 42001: pré-requisitos, etapas, estágios 1 e 2 da auditoria, ciclo de três anos, custo, prazo e escolha do organismo certificador.",
+ "tldr": "A certificação ISO/IEC 42001 é voluntária e feita por um organismo acreditado, em auditoria de dois estágios: o estágio 1 verifica a prontidão (escopo, papéis, política, avaliação de risco e de impacto, declaração de aplicabilidade, auditoria interna e análise crítica) e o estágio 2 verifica em campo se os controles funcionam. O certificado vale três anos, com manutenções anuais e recertificação. O custo da certificação vem dos dias de auditoria, que dependem de pessoas no escopo, número e criticidade dos sistemas de IA, papel da organização e unidades; auditoria combinada com a ISO 27001 reduz esforço. O prazo depende da maturidade de partida e do tempo de operação necessário para gerar registro.",
+ "faq": [
+  {
+   "pergunta": "Quanto tempo leva para certificar na ISO 42001?",
+   "resposta": "Depende da maturidade de partida, do tamanho do escopo, do papel da organização em relação à IA e do tempo de operação necessário para gerar registros. Quem já tem ISO 27001 ou outra norma na estrutura harmonizada encurta bastante o caminho. O que não se acelera é o histórico de monitoramento, indicadores e auditoria interna que o estágio 2 vai pedir."
+  },
+  {
+   "pergunta": "Quanto custa a certificação ISO 42001?",
+   "resposta": "São dois custos. O da certificação é cobrado pelo organismo e vem dos dias de auditoria, calculados a partir do número de pessoas no escopo, da quantidade e criticidade dos sistemas de IA, do papel da organização e do número de unidades. O da implantação inclui consultoria, horas da equipe, ferramentas, treinamento e ajustes técnicos. Peça orçamento do ciclo de três anos."
+  },
+  {
+   "pergunta": "Quanto tempo vale o certificado ISO 42001?",
+   "resposta": "Três anos. Nos dois primeiros anos após a certificação há auditorias de manutenção com escopo reduzido; no terceiro, a recertificação reavalia o sistema inteiro. Mudanças relevantes de escopo ou de papel precisam ser comunicadas ao organismo."
+  },
+  {
+   "pergunta": "Como saber se o organismo certificador pode emitir ISO 42001?",
+   "resposta": "Verifique se ele é acreditado especificamente para ISO/IEC 42001 por um acreditador reconhecido. A ISO/IEC 42006:2025 define os requisitos que os acreditadores usam para avaliar organismos que certificam sistemas de gestão de IA. Confirme também a competência técnica dos auditores e que o organismo não prestou consultoria de implantação para você."
+  },
+  {
+   "pergunta": "Dá para fazer a auditoria da ISO 42001 junto com a da ISO 27001?",
+   "resposta": "Sim, quando as duas normas fazem parte de um sistema integrado. A parte comum da estrutura (contexto, liderança, risco, auditoria interna, análise crítica, ação corretiva) é auditada uma vez, e os controles específicos de cada norma são verificados separadamente. Isso costuma reduzir dias de auditoria e simplificar a agenda."
+  },
+  {
+   "pergunta": "A certificação ISO 42001 é obrigatória?",
+   "resposta": "Não. É uma decisão voluntária, motivada por exigência de clientes, due diligence em cadeia de fornecimento, editais ou preparação para regulações como o AI Act europeu e o PL 2338 no Brasil. O certificado não substitui o cumprimento da lei, mas organiza as evidências de que a IA está sob controle."
+  }
+ ],
+ "tags": [
+  "ISO 42001",
+  "ISO/IEC 42001",
+  "certificação ISO 42001",
+  "auditoria",
+  "SGIA",
+  "governança de IA",
+  "inteligência artificial",
+  "ISO 27001"
+ ],
+ "seo_keywords": [
+  "certificação iso 42001",
+  "como certificar iso 42001",
+  "quanto custa iso 42001",
+  "auditoria iso 42001",
+  "iso 42001 certificação prazo",
+  "organismo certificador iso 42001",
+  "iso 42006"
+ ]
+}

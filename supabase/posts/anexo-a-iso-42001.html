@@ -1,0 +1,183 @@
+<p>O <strong>Anexo A da ISO/IEC 42001</strong> é a lista de referência de controles para sistemas de inteligência artificial: são 38 controles distribuídos em 9 grupos (A.2 a A.10), que vão de política de IA a relacionamento com fornecedores e clientes. Ele é normativo — a organização precisa comparar o seu tratamento de risco com essa lista, decidir o que se aplica ao seu escopo e registrar a decisão numa <strong>declaração de aplicabilidade</strong>. Não é um checklist para marcar tudo, e sim o inventário mínimo do que precisa ser considerado.</p>
+
+<p>Este artigo percorre os 9 grupos, um a um, com o que cada um pede e a evidência que costuma aparecer na auditoria. Para o quadro geral da norma, veja o guia <a href="/iso-42001/">ISO 42001: o que é e para quem serve</a>; para as cláusulas 4 a 10, o artigo de <a href="/requisitos-iso-42001/">requisitos da ISO 42001</a>.</p>
+
+<h2 id="o-que-e-o-anexo-a">O que é o Anexo A e como ele se encaixa na norma</h2>
+
+<p>A ISO 42001 tem duas camadas. As cláusulas 4 a 10 definem o sistema de gestão: contexto, liderança, planejamento, apoio, operação, avaliação e melhoria. O Anexo A define <strong>controles</strong> — as medidas concretas que reduzem risco e impacto dos sistemas de IA.</p>
+
+<p>A ligação entre as duas camadas está na cláusula 6.1.3, de tratamento de risco de IA. Depois de avaliar os riscos (6.1.2) e o impacto dos sistemas (6.1.4), a organização escolhe controles para tratá-los e compara essa escolha com o Anexo A, para não deixar passar nenhum controle necessário. O resultado vai para a declaração de aplicabilidade.</p>
+
+<p>Quem conhece a <a href="/iso-27001/">ISO 27001</a> reconhece a lógica: é o mesmo mecanismo do Anexo A de segurança da informação, só que com controles próprios de IA. A diferença de peso está no conteúdo — avaliação de impacto, ciclo de vida, dados para treinamento e uso responsável não existem no anexo da 27001.</p>
+
+<p>Três regras práticas antes de entrar nos grupos:</p>
+<ul>
+<li>o Anexo A é <strong>referência</strong>, não teto: a organização pode adotar controles adicionais que não estão nele;</li>
+<li>controle excluído precisa de <strong>justificativa</strong> ligada ao escopo, ao papel ou ao resultado da avaliação de risco — "não deu tempo" não é justificativa;</li>
+<li>o Anexo B, também normativo, traz a orientação de implementação de cada controle. Ele é o primeiro lugar para resolver dúvida de interpretação.</li>
+</ul>
+
+<h2 id="os-9-grupos">Os 9 grupos de controles, em visão geral</h2>
+
+<p>A numeração começa em A.2 porque o A.1 é a introdução do anexo. A tabela resume o objetivo de cada grupo e quantos controles ele tem:</p>
+
+<table>
+<thead>
+<tr><th>Grupo</th><th>Tema</th><th>Controles</th><th>Pergunta que responde</th></tr>
+</thead>
+<tbody>
+<tr><td>A.2</td><td>Políticas relacionadas à IA</td><td>3</td><td>A direção definiu como a organização usa e desenvolve IA?</td></tr>
+<tr><td>A.3</td><td>Organização interna</td><td>2</td><td>Quem responde por quê, e como alguém levanta uma preocupação?</td></tr>
+<tr><td>A.4</td><td>Recursos para sistemas de IA</td><td>5</td><td>Dados, ferramentas, computação e pessoas estão identificados?</td></tr>
+<tr><td>A.5</td><td>Avaliação de impactos</td><td>4</td><td>Sabemos o efeito do sistema em pessoas, grupos e sociedade?</td></tr>
+<tr><td>A.6</td><td>Ciclo de vida do sistema de IA</td><td>9</td><td>O sistema é especificado, testado, implantado e monitorado com controle?</td></tr>
+<tr><td>A.7</td><td>Dados para sistemas de IA</td><td>5</td><td>Os dados têm origem, qualidade e preparo conhecidos?</td></tr>
+<tr><td>A.8</td><td>Informação às partes interessadas</td><td>4</td><td>Usuários e afetados recebem informação e conseguem reportar problemas?</td></tr>
+<tr><td>A.9</td><td>Uso de sistemas de IA</td><td>3</td><td>O uso fica dentro do que foi pretendido e aprovado?</td></tr>
+<tr><td>A.10</td><td>Terceiros e clientes</td><td>3</td><td>Responsabilidades com fornecedores e clientes estão definidas?</td></tr>
+</tbody>
+</table>
+
+<p>Os 38 controles não pesam igual para todo mundo. Uma empresa que só <em>usa</em> IA de terceiros vai concentrar esforço em A.2, A.3, A.5, A.9 e A.10. Quem <em>desenvolve</em> modelos tem o centro de gravidade em A.6 e A.7. O papel declarado no escopo, exigido pela cláusula 4, decide onde está o trabalho.</p>
+
+<h2 id="a2-politicas">A.2 — Políticas relacionadas à IA</h2>
+
+<p>São 3 controles. O grupo pede uma <strong>política de IA</strong> documentada e aprovada pela direção, o alinhamento dela com as outras políticas da organização (segurança da informação, privacidade, qualidade, ética, compras) e a revisão em intervalos planejados.</p>
+
+<p>Evidência típica: política de IA assinada, com data de aprovação e de revisão; registro de que ela foi comparada com as políticas existentes; ata ou registro da última revisão. A política da cláusula 5.2 e a do A.2 costumam ser o mesmo documento — basta que ele cubra os dois lados.</p>
+
+<p>O erro comum é a política genérica, que serviria para qualquer empresa ("usamos IA de forma ética e responsável"). O auditor procura compromisso verificável: quais usos são permitidos, quais exigem aprovação, quem aprova e o que é proibido. A política de uso aceitável detalhada no artigo de <a href="/governanca-de-ia/">governança de IA</a> é um bom ponto de partida.</p>
+
+<h2 id="a3-organizacao-interna">A.3 — Organização interna</h2>
+
+<p>São 2 controles: definir <strong>papéis e responsabilidades</strong> para a IA ao longo da organização, e criar um processo para que pessoas <strong>reportem preocupações</strong> sobre os sistemas de IA.</p>
+
+<p>O primeiro é a matriz de responsabilidades: quem aprova um novo uso de IA, quem responde por cada sistema, quem faz avaliação de impacto, quem decide desligar um modelo que saiu do controle. O segundo é um canal — pode ser o canal de ética ou de incidentes já existente — que aceite relatos sobre IA, com tratamento, confidencialidade e proteção a quem reporta.</p>
+
+<p>Evidência típica: matriz RACI ou descrição de cargos com atribuições de IA; procedimento do canal de reporte; registros de relatos recebidos e tratados (ou evidência de que o canal foi divulgado, se ainda não houve relato).</p>
+
+<h2 id="a4-recursos">A.4 — Recursos para sistemas de IA</h2>
+
+<p>São 5 controles, todos de inventário: documentar os recursos que cada sistema de IA usa — <strong>recursos de dados</strong>, <strong>ferramentas</strong>, <strong>recursos de sistema e computação</strong> e <strong>recursos humanos</strong> — além de um controle geral que pede a documentação desses recursos para entender e gerir o risco.</p>
+
+<p>Na prática, é uma ficha por sistema de IA: que bases de dados alimentam o modelo, que bibliotecas, plataformas ou APIs ele usa, onde roda (nuvem própria, provedor, local), e que competências as pessoas que o mantêm precisam ter.</p>
+
+<p>Evidência típica: inventário de sistemas de IA com os recursos de cada um; registro de competências da equipe técnica; contratos ou termos das plataformas usadas. Esse inventário é a base de quase todo o resto do anexo — sem ele, a avaliação de impacto e o controle de fornecedores ficam no ar.</p>
+
+<h2 id="a5-avaliacao-de-impacto">A.5 — Avaliação de impactos dos sistemas de IA</h2>
+
+<p>São 4 controles: ter um <strong>processo</strong> de avaliação de impacto, <strong>documentar</strong> as avaliações, avaliar o impacto em <strong>indivíduos ou grupos de indivíduos</strong> e avaliar o <strong>impacto social</strong> dos sistemas.</p>
+
+<p>É o grupo que mais diferencia a 42001 de outras normas de gestão. Risco olha a organização; impacto olha quem a IA atinge — clientes, candidatos a emprego, pacientes, cidadãos, mesmo que não sejam clientes. Viés, discriminação, perda de autonomia, dano à segurança física e efeitos em escala entram aqui.</p>
+
+<p>Evidência típica: procedimento de avaliação de impacto com critérios e gatilhos de revisão; avaliação registrada por sistema, com partes afetadas identificadas e medidas adotadas. A ISO/IEC 42005:2025 dá orientação detalhada de como fazer — veja o passo a passo em <a href="/avaliacao-de-impacto-ia/">avaliação de impacto e de risco de IA</a>.</p>
+
+<h2 id="a6-ciclo-de-vida">A.6 — Ciclo de vida do sistema de IA</h2>
+
+<p>É o maior grupo, com 9 controles, e o mais técnico. Ele cobre o sistema de IA da concepção à operação:</p>
+<ul>
+<li><strong>objetivos de desenvolvimento responsável</strong> — o que a organização se compromete a garantir quando desenvolve IA;</li>
+<li><strong>processos de projeto e desenvolvimento</strong> definidos e seguidos;</li>
+<li><strong>requisitos e especificação</strong> de cada sistema, incluindo requisitos de desempenho e de uso responsável;</li>
+<li><strong>documentação de projeto e desenvolvimento</strong>;</li>
+<li><strong>verificação e validação</strong> — testes com critério de aceite definido antes;</li>
+<li><strong>implantação</strong> — plano e aprovação antes de colocar em produção;</li>
+<li><strong>operação e monitoramento</strong> — desempenho, deriva (drift), falhas, uso indevido;</li>
+<li><strong>documentação técnica</strong> disponível para quem precisa dela;</li>
+<li><strong>registros de eventos</strong> (logs) que permitam rastrear o que o sistema fez.</li>
+</ul>
+
+<p>Para quem só consome IA de terceiros, boa parte desse grupo pode ser excluída ou reduzida — mas operação, monitoramento e registros de eventos continuam valendo para o uso que a organização faz. Excluir A.6 inteiro com a frase "não desenvolvemos IA" raramente se sustenta numa auditoria.</p>
+
+<p>Evidência típica: especificação e critério de aceite por sistema; relatórios de teste e validação; registro de aprovação de implantação; painel ou relatório de monitoramento; política de retenção de logs.</p>
+
+<h2 id="a7-dados">A.7 — Dados para sistemas de IA</h2>
+
+<p>São 5 controles: dados para <strong>desenvolvimento e melhoria</strong> do sistema, <strong>aquisição</strong> de dados, <strong>qualidade</strong> dos dados, <strong>proveniência</strong> e <strong>preparação</strong> dos dados.</p>
+
+<p>A regra que segura o grupo é simples: dado ruim gera IA ruim. O auditor vai perguntar de onde veio a base de treinamento, com que direito ela foi usada, como a qualidade foi verificada, que vieses foram procurados e como os dados foram limpos, rotulados ou transformados.</p>
+
+<p>Aqui o Anexo A encosta na <a href="/lgpd/">LGPD</a>: dado pessoal usado para treinar ou operar modelo precisa de base legal, finalidade e minimização. O controle de proveniência também ajuda a responder questionamento de direito autoral e de licença de bases de terceiros.</p>
+
+<p>Evidência típica: ficha de dados por conjunto (origem, licença, base legal, data, responsável); critérios e resultados de qualidade; registro das etapas de preparação.</p>
+
+<h2 id="a8-partes-interessadas">A.8 — Informação às partes interessadas</h2>
+
+<p>São 4 controles: <strong>documentação e informação para usuários</strong> do sistema de IA, <strong>meios externos de reporte</strong> para que terceiros relatem efeitos adversos, <strong>comunicação de incidentes</strong> e <strong>informação às partes interessadas</strong> sobre o sistema.</p>
+
+<p>É o grupo da transparência. Quem usa ou é afetado pelo sistema precisa saber que está interagindo com IA, para que ela serve, quais as limitações e como reclamar. Esse ponto conversa diretamente com o AI Act europeu e com o PL 2338 no Brasil — veja <a href="/pl-2338-ai-act/">o que muda com o PL 2338 e o AI Act</a>.</p>
+
+<p>Evidência típica: aviso de uso de IA nas interfaces; manual ou ficha do sistema para usuários; canal externo de reporte publicado; procedimento de comunicação de incidentes com critérios de quem avisar e em que prazo.</p>
+
+<h2 id="a9-uso">A.9 — Uso de sistemas de IA</h2>
+
+<p>São 3 controles: <strong>processos para uso responsável</strong>, <strong>objetivos de uso responsável</strong> e garantia de que o sistema é usado <strong>conforme o uso pretendido</strong>.</p>
+
+<p>É o grupo mais relevante para quem é usuário de IA. Ele cobre a ferramenta generativa que a equipe usa, o modelo de crédito comprado de um fornecedor, o filtro automático de currículos. A pergunta central é: o sistema está sendo usado para o que foi aprovado, ou alguém o estendeu a decisões para as quais ele não foi avaliado?</p>
+
+<p>É também onde se trata o <em>shadow AI</em> — o uso de ferramentas não homologadas. Evidência típica: lista de usos aprovados por sistema; regras de supervisão humana; registro de revisão de uso; ações tomadas quando um uso fora do pretendido foi detectado.</p>
+
+<h2 id="a10-terceiros">A.10 — Relacionamento com terceiros e clientes</h2>
+
+<p>São 3 controles: <strong>alocação de responsabilidades</strong> entre a organização, parceiros, fornecedores e clientes; gestão de <strong>fornecedores</strong> de IA; e atenção às necessidades e expectativas dos <strong>clientes</strong>.</p>
+
+<p>Quase nenhuma empresa constrói tudo sozinha: modelo de fundação de um provedor, plataforma de outro, integração feita por um terceiro. O grupo pede que fique escrito quem responde por quê — quem garante a qualidade dos dados, quem monitora, quem comunica incidente — e que fornecedores de IA passem por avaliação antes de serem contratados.</p>
+
+<p>Evidência típica: cláusulas contratuais de IA (uso de dados, responsabilidade, notificação de incidente, direito de auditoria); questionário ou avaliação de fornecedores de IA; registro de requisitos de clientes sobre IA.</p>
+
+<h2 id="declaracao-de-aplicabilidade">Como montar a declaração de aplicabilidade</h2>
+
+<p>A declaração de aplicabilidade (DA) é o documento que liga o tratamento de risco ao Anexo A. Ela precisa conter, para cada um dos 38 controles:</p>
+<ol>
+<li>se o controle é <strong>aplicável ou não</strong>;</li>
+<li>a <strong>justificativa</strong> da inclusão (qual risco ou impacto ele trata, ou que requisito o exige);</li>
+<li>a <strong>justificativa da exclusão</strong>, quando excluído;</li>
+<li>se o controle está <strong>implementado</strong>, em implantação ou planejado;</li>
+<li>controles adicionais adotados que não estão no Anexo A.</li>
+</ol>
+
+<p>Uma DA boa é rastreável: o auditor escolhe um controle, segue a justificativa até o risco ou impacto avaliado e depois até a evidência em campo. Se a corrente quebra em algum ponto — controle "aplicável" sem risco associado, risco alto sem controle —, aparece a não conformidade.</p>
+
+<p>Justificativas de exclusão que costumam se sustentar estão ligadas ao papel: uma organização que só usa IA de terceiros pode excluir controles de projeto e desenvolvimento do A.6, explicando que esse processo é do fornecedor e que a responsabilidade está alocada em contrato (A.10). O que não se sustenta é excluir por conveniência um controle que trata um risco já avaliado como relevante.</p>
+
+<h2 id="anexos-b-c-d">Anexos B, C e D: para que servem</h2>
+
+<ul>
+<li><strong>Anexo B (normativo)</strong> — orientação de implementação de cada controle do Anexo A. Por ser normativo, é o texto que resolve divergência de interpretação com o auditor.</li>
+<li><strong>Anexo C (informativo)</strong> — objetivos organizacionais e fontes de risco de IA. É útil na fase de avaliação de risco como lista de partida: justiça, segurança, privacidade, robustez, transparência, nível de automação, falta de explicabilidade, entre outros.</li>
+<li><strong>Anexo D (informativo)</strong> — uso do sistema de gestão de IA entre domínios e setores, e integração com outras normas de sistema de gestão.</li>
+</ul>
+
+<h2 id="checklist">Checklist prático do Anexo A</h2>
+
+<p>Uma forma rápida de medir a distância até a auditoria é responder, por grupo, se existe evidência — não intenção:</p>
+
+<table>
+<thead>
+<tr><th>Grupo</th><th>Evidência mínima para mostrar</th><th>Tem?</th></tr>
+</thead>
+<tbody>
+<tr><td>A.2</td><td>Política de IA aprovada, alinhada às demais políticas e com data de revisão</td><td>☐</td></tr>
+<tr><td>A.3</td><td>Matriz de responsabilidades de IA e canal de reporte divulgado</td><td>☐</td></tr>
+<tr><td>A.4</td><td>Inventário de sistemas de IA com dados, ferramentas, computação e pessoas</td><td>☐</td></tr>
+<tr><td>A.5</td><td>Procedimento e avaliações de impacto registradas por sistema</td><td>☐</td></tr>
+<tr><td>A.6</td><td>Especificação, testes, aprovação de implantação, monitoramento e logs</td><td>☐</td></tr>
+<tr><td>A.7</td><td>Origem, base legal, qualidade e preparo de cada conjunto de dados</td><td>☐</td></tr>
+<tr><td>A.8</td><td>Aviso de uso de IA, informação ao usuário, canal externo e procedimento de incidente</td><td>☐</td></tr>
+<tr><td>A.9</td><td>Usos aprovados, supervisão humana e tratamento de uso fora do pretendido</td><td>☐</td></tr>
+<tr><td>A.10</td><td>Contratos com cláusulas de IA e avaliação de fornecedores de IA</td><td>☐</td></tr>
+<tr><td>DA</td><td>Declaração de aplicabilidade com justificativa para os 38 controles</td><td>☐</td></tr>
+</tbody>
+</table>
+
+<h2 id="erros-comuns">Erros comuns na implantação do Anexo A</h2>
+
+<ul>
+<li><strong>Começar pelo anexo, não pelo risco.</strong> Controle escolhido antes da avaliação de risco e de impacto vira lista de compras sem justificativa.</li>
+<li><strong>Copiar a DA da 27001.</strong> A estrutura é parecida; o conteúdo, não. Os controles de impacto, ciclo de vida e dados não têm equivalente no anexo de segurança.</li>
+<li><strong>Inventário incompleto.</strong> Esquecer a IA embutida em software comprado (CRM, RH, atendimento) e as ferramentas que a equipe usa por conta própria.</li>
+<li><strong>Excluir A.6 e A.7 por ser "usuário".</strong> Operação, monitoramento e dados de entrada continuam sendo responsabilidade de quem usa.</li>
+<li><strong>Documento sem operação.</strong> Política e procedimento existem, mas não há registro de avaliação, teste ou relato tratado. O estágio 2 da <a href="/certificacao-iso-42001/">certificação</a> procura exatamente isso.</li>
+</ul>
+
+<p>Quem já tem SGSI aproveita boa parte da infraestrutura — controle de fornecedores, gestão de incidentes, logs, controle de documentos. O que reaproveitar e o que é novo está em <a href="/iso-42001-e-iso-27001/">ISO 42001 e ISO 27001: como integrar</a>. Para começar, o caminho mais curto é montar o inventário do A.4 e fazer a primeira avaliação de impacto do sistema mais crítico: o resto do anexo se organiza a partir daí.</p>

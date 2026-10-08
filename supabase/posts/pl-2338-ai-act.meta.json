@@ -1,0 +1,52 @@
+{
+ "title": "PL 2338 e AI Act: o que muda para as empresas com a regulação da IA",
+ "seo_title": "PL 2338 e AI Act: status e o que muda para empresas",
+ "seo_description": "Onde está o PL 2338/2023 (Marco Legal da IA), o novo calendário do AI Act após o Digital Omnibus, quando a empresa brasileira é alcançada e o que fazer já.",
+ "excerpt": "Status do PL 2338/2023 e do AI Act europeu, o que cada um exige, quando a empresa brasileira é alcançada e o que fazer agora, antes da lei.",
+ "tldr": "O PL 2338/2023, Marco Legal da IA, foi aprovado pelo Senado em 10/12/2024 e não é lei: está em Comissão Especial na Câmara desde março de 2025, com votação indicada para depois das eleições de outubro de 2026. Ele segue o modelo europeu de risco, com usos proibidos, alto risco, avaliação de impacto algorítmico, direitos de explicação e revisão humana, coordenação da ANPD e multas de até R$ 50 milhões. O AI Act está em vigor desde 2024; com o Digital Omnibus (julho de 2026), o alto risco do Anexo III passou para 02/12/2027, mas proibições, letramento, regras de modelos de propósito geral e transparência continuam valendo. Inventário de IA, classificação de risco, avaliação de impacto e governança servem às duas regras e são a base da ISO 42001.",
+ "faq": [
+  {
+   "pergunta": "O PL 2338/2023 já é lei?",
+   "resposta": "Não. O projeto foi aprovado pelo Senado em 10 de dezembro de 2024 e está na Câmara dos Deputados desde março de 2025, em Comissão Especial. Em agosto de 2026 o relator indicou que a votação ocorreria depois das eleições de outubro. Se a Câmara alterar o texto, ele volta ao Senado. Confira a tramitação atualizada antes de tomar decisão."
+  },
+  {
+   "pergunta": "O que é o Marco Legal da Inteligência Artificial?",
+   "resposta": "É o nome dado ao PL 2338/2023, que propõe regras para desenvolvimento, fornecimento e uso de IA no Brasil. Ele classifica sistemas por risco, proíbe usos de risco excessivo, impõe obrigações reforçadas para alto risco (incluindo avaliação de impacto algorítmico), garante direitos às pessoas afetadas e cria o SIA, coordenado pela ANPD."
+  },
+  {
+   "pergunta": "O AI Act foi adiado?",
+   "resposta": "Em parte. O Digital Omnibus on AI, em vigor desde 27 de julho de 2026, adiou as obrigações de alto risco do Anexo III de 2 de agosto de 2026 para 2 de dezembro de 2027, e as de IA embarcada em produtos regulados para 2 de agosto de 2028. As práticas proibidas, o letramento em IA e as regras de modelos de propósito geral já estão em vigor, e a transparência do artigo 50 segue para 2 de dezembro de 2026."
+  },
+  {
+   "pergunta": "Empresa brasileira precisa cumprir o AI Act?",
+   "resposta": "Se colocar sistema de IA no mercado europeu, ou se o resultado do sistema for usado na União Europeia, sim, porque o regulamento tem alcance extraterritorial. Na prática, a exigência costuma chegar antes pelo cliente europeu, em contrato e questionário de fornecedor."
+  },
+  {
+   "pergunta": "A ISO 42001 garante conformidade com o PL 2338 ou com o AI Act?",
+   "resposta": "Não automaticamente. A ISO 42001 é norma voluntária de sistema de gestão e não substitui a lei; as normas harmonizadas europeias que darão presunção de conformidade ainda estão em elaboração. Mas ela organiza exatamente o que as duas regulações pressupõem, como inventário, risco, impacto, controles, transparência e registro, e torna a adequação ao texto final muito mais rápida."
+  },
+  {
+   "pergunta": "O que minha empresa deve fazer antes de a lei ser aprovada?",
+   "resposta": "Fazer o inventário dos sistemas de IA (incluindo os não autorizados), classificar o risco de cada um, conduzir avaliação de impacto nos que afetam decisões sobre pessoas, garantir transparência e canal de revisão humana e aprovar política e papéis de governança. Esse trabalho é necessário em qualquer versão provável da lei."
+  }
+ ],
+ "tags": [
+  "ISO 42001",
+  "inteligência artificial",
+  "governança de IA",
+  "PL 2338",
+  "AI Act",
+  "regulação de IA",
+  "LGPD",
+  "avaliação de impacto"
+ ],
+ "seo_keywords": [
+  "PL 2338",
+  "PL 2338/2023",
+  "marco legal da inteligência artificial",
+  "AI Act",
+  "regulamentação da inteligência artificial no Brasil",
+  "AI Act digital omnibus",
+  "AI Act empresas brasileiras"
+ ]
+}

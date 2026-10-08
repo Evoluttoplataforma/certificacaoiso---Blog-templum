@@ -1,0 +1,116 @@
+<p>A <a href="/iso-42001/">ISO 42001</a> e a <a href="/iso-27001/">ISO 27001</a> não competem: uma governa o uso responsável de inteligência artificial, a outra protege a informação. As duas seguem a mesma estrutura de sistema de gestão, então quem já tem um SGSI aproveita boa parte do esqueleto (política, riscos, auditoria interna, análise crítica, ação corretiva) e acrescenta o que é exclusivo da IA: papel da organização, avaliação de impacto, ciclo de vida do sistema, dados para IA e transparência às partes afetadas.</p>
+
+<p>Este artigo mostra, lado a lado, o que se reaproveita, o que é novo de verdade e em que ordem implantar — para quem já é certificado na 27001 e para quem ainda não tem nenhuma das duas. Também explica onde entram a <a href="/lgpd/">LGPD</a> e a ISO 27701, porque é aí que a maioria dos projetos de IA tropeça primeiro.</p>
+
+<h2 id="diferenca">Qual a diferença entre ISO 42001 e ISO 27001</h2>
+
+<p>A pergunta que cada norma responde é diferente:</p>
+<ul>
+<li><strong>ISO 27001</strong> — “a informação da organização está protegida em confidencialidade, integridade e disponibilidade?”. O objeto é a informação, em qualquer suporte, e o risco é o de segurança.</li>
+<li><strong>ISO 42001</strong> — “a organização desenvolve, fornece ou usa IA de forma responsável?”. O objeto é o sistema de IA e o seu efeito, e o risco inclui o que a IA pode causar a pessoas e à sociedade, não só à empresa.</li>
+</ul>
+
+<p>Um sistema de IA pode estar impecável do ponto de vista de segurança — acesso controlado, criptografia, backup, logs — e ainda assim discriminar candidatos numa triagem de currículos, decidir crédito sem explicação ou operar fora do uso para o qual foi projetado. A 27001 não foi escrita para pegar esse tipo de falha. A 42001 foi.</p>
+
+<p>O inverso também vale: a 42001 não pede um SGSI. Ela exige que a organização trate riscos de IA, e segurança é um deles, mas não traz o catálogo de controles de segurança da 27001. Na prática, quem implanta só a 42001 acaba reinventando parte desse catálogo — o que é um bom argumento para integrar.</p>
+
+<h2 id="comparativo">Comparativo lado a lado</h2>
+
+<table>
+<thead>
+<tr><th>Aspecto</th><th>ISO/IEC 27001:2022</th><th>ISO/IEC 42001:2023</th></tr>
+</thead>
+<tbody>
+<tr><td>Sistema de gestão</td><td>SGSI — segurança da informação</td><td>SGIA — inteligência artificial</td></tr>
+<tr><td>Estrutura</td><td>Harmonizada (Anexo SL), cláusulas 4 a 10</td><td>Harmonizada (Anexo SL), cláusulas 4 a 10</td></tr>
+<tr><td>Pergunta central</td><td>A informação está protegida?</td><td>A IA é desenvolvida, fornecida ou usada de forma responsável?</td></tr>
+<tr><td>Quem é afetado</td><td>Principalmente a organização e os donos da informação</td><td>A organização <strong>e</strong> indivíduos, grupos e sociedade afetados pela IA</td></tr>
+<tr><td>Contexto (cláusula 4)</td><td>Partes interessadas e escopo do SGSI</td><td>Igual, mais o <strong>papel</strong> da organização em relação à IA</td></tr>
+<tr><td>Planejamento (cláusula 6)</td><td>Avaliação e tratamento de riscos de segurança</td><td>Avaliação e tratamento de riscos de IA <strong>e</strong> avaliação de impacto do sistema de IA (6.1.4)</td></tr>
+<tr><td>Anexo de controles</td><td>Anexo A com 93 controles em 4 temas</td><td>Anexo A com 38 controles em 9 grupos (A.2 a A.10)</td></tr>
+<tr><td>Declaração de aplicabilidade</td><td>Obrigatória</td><td>Obrigatória</td></tr>
+<tr><td>Orientação dos controles</td><td>ISO/IEC 27002</td><td>Anexo B da própria norma (normativo)</td></tr>
+<tr><td>Certificação</td><td>Voluntária, 2 estágios, ciclo de 3 anos</td><td>Voluntária, 2 estágios, ciclo de 3 anos</td></tr>
+</tbody>
+</table>
+
+<p>A linha mais importante da tabela é a do planejamento. A avaliação de impacto não tem equivalente direto na 27001 e é o ponto em que equipes vindas de segurança costumam subestimar o trabalho. O detalhamento está em <a href="/avaliacao-de-impacto-ia/">avaliação de impacto de IA</a>.</p>
+
+<h2 id="o-que-reaproveita">O que você reaproveita do SGSI</h2>
+
+<p>Como as duas normas usam a mesma estrutura harmonizada, quase todo o “motor” de gestão é compartilhável. Em um sistema integrado bem montado, estes elementos viram um só:</p>
+<ul>
+<li><strong>Análise de contexto e partes interessadas</strong> — a mesma reunião, o mesmo registro, com um bloco a mais sobre IA.</li>
+<li><strong>Política</strong> — pode ser uma política integrada ou duas políticas curtas que se referenciam. O que não pode é a política de IA ser um parágrafo genérico enfiado na de segurança.</li>
+<li><strong>Metodologia de risco</strong> — critérios de probabilidade, consequência e aceitação já calibrados no SGSI servem de base. A 42001 pede que os critérios contemplem os riscos de IA; a escala pode ser a mesma.</li>
+<li><strong>Controle de informação documentada</strong> — mesmo procedimento, mesmo repositório, mesmo fluxo de aprovação.</li>
+<li><strong>Competência e conscientização</strong> — o plano de treinamento ganha trilha de IA, mas o processo de registro de competência é o mesmo.</li>
+<li><strong>Auditoria interna</strong> — um programa só, com auditores qualificados nas duas normas, e um relatório por norma ou integrado.</li>
+<li><strong>Análise crítica pela direção</strong> — uma reunião com pauta das duas normas cobre as entradas exigidas por ambas.</li>
+<li><strong>Não conformidade e ação corretiva</strong> — mesmo processo e mesma ferramenta.</li>
+<li><strong>Gestão de fornecedores</strong> — a avaliação de terceiros do SGSI ganha perguntas de IA (o grupo A.10 da 42001).</li>
+</ul>
+
+<p>Do lado dos controles, vários itens do Anexo A da 27001 sustentam diretamente a operação segura de um sistema de IA: controle de acesso, gestão de logs, desenvolvimento seguro, gestão de mudanças, gestão de incidentes, segurança em fornecedores e em nuvem, mascaramento e vazamento de dados. Um modelo que roda em ambiente sem esses controles é um risco de IA tratado pela metade.</p>
+
+<h2 id="o-que-e-novo">O que é novo de verdade na 42001</h2>
+
+<p>Aqui está o trabalho que a 27001 não adianta. É onde vai a maior parte do esforço de quem já tem SGSI:</p>
+<ul>
+<li><strong>Papel em relação à IA</strong> — a organização declara se produz, fornece ou usa IA (ou combina papéis). Isso define que controles se aplicam e que obrigações recaem sobre ela. Não existe análogo na 27001.</li>
+<li><strong>Inventário de sistemas de IA</strong> — não o inventário de ativos de informação, mas a lista de sistemas de IA, com finalidade, uso pretendido, dados, fornecedor, dono e criticidade. Inclui a IA que chegou embutida em software comprado.</li>
+<li><strong>Avaliação de impacto</strong> (cláusula 6.1.4 e grupo A.5) — efeito sobre indivíduos, grupos e sociedade: viés, exclusão, dano à autonomia, segurança física.</li>
+<li><strong>Ciclo de vida do sistema</strong> (grupo A.6) — objetivos de desenvolvimento responsável, requisitos, verificação e validação, implantação, monitoramento em operação, documentação técnica e registros de eventos. Para quem só usa IA, a ênfase cai em validação antes do uso e monitoramento depois.</li>
+<li><strong>Dados para IA</strong> (grupo A.7) — qualidade, proveniência, aquisição e preparação dos dados de treinamento e de operação. Segurança protege o dado; a 42001 pergunta se o dado é <em>adequado</em> para aquela finalidade.</li>
+<li><strong>Informação às partes interessadas</strong> (grupo A.8) — transparência para usuários e afetados, canal externo para reportar problemas, comunicação de incidentes de IA.</li>
+<li><strong>Uso responsável</strong> (grupo A.9) — processos e objetivos de uso responsável e respeito ao uso pretendido do sistema. É aqui que entra o combate ao <em>shadow AI</em>, tratado em <a href="/governanca-de-ia/">governança de IA</a>.</li>
+</ul>
+
+<p>O detalhe de cada grupo de controles, com a evidência que o auditor procura, está em <a href="/anexo-a-iso-42001/">Anexo A da ISO 42001</a>. A leitura cláusula por cláusula está em <a href="/requisitos-iso-42001/">requisitos da ISO 42001</a>.</p>
+
+<h2 id="sistema-integrado">Como montar o sistema integrado</h2>
+
+<p>Integrar não é colar dois manuais. É ter um processo só onde as normas pedem a mesma coisa e processos específicos onde elas divergem. Um roteiro que funciona:</p>
+<ol>
+<li><strong>Estenda o escopo, não o duplique.</strong> Defina o escopo do SGIA olhando o do SGSI: mesmas unidades, mesmos processos, com a lista de sistemas de IA dentro dele. Escopos desencontrados geram auditoria confusa e controles órfãos.</li>
+<li><strong>Unifique a metodologia de risco</strong> e acrescente uma seção de risco de IA e um método separado para avaliação de impacto. Risco e impacto podem morar na mesma planilha, mas são análises diferentes, com perguntas diferentes.</li>
+<li><strong>Faça duas declarações de aplicabilidade</strong> — uma por norma — e cruze os controles. Muitos controles da 42001 se apoiam em controles da 27001; registrar essa ligação evita implementar duas vezes.</li>
+<li><strong>Dê dono para IA.</strong> O responsável pelo SGSI raramente é a pessoa certa para decidir uso responsável de IA sozinho. Um comitê com segurança, privacidade, jurídico, negócio e tecnologia costuma funcionar melhor.</li>
+<li><strong>Integre o ciclo de desenvolvimento.</strong> Se a empresa desenvolve software, o fluxo de desenvolvimento seguro ganha etapas de validação de modelo, teste de viés e documentação técnica.</li>
+<li><strong>Feche o ciclo PDCA uma vez.</strong> Uma auditoria interna integrada e uma análise crítica com pauta das duas normas, todo ano.</li>
+</ol>
+
+<h2 id="ordem">Em que ordem implantar</h2>
+
+<p>A resposta depende do ponto de partida.</p>
+
+<p><strong>Quem já é certificado na 27001.</strong> Comece pela 42001 como extensão do SGSI. O ganho de tempo é real: a espinha de gestão está pronta e o time já sabe operar auditoria, ação corretiva e análise crítica. O esforço concentra-se em papel, inventário, impacto, ciclo de vida e dados. A certificação pode ser feita em <strong>auditoria combinada</strong> com o mesmo organismo, o que costuma reduzir dias de auditoria e simplificar o calendário. Veja as etapas em <a href="/certificacao-iso-42001/">certificação ISO 42001</a>.</p>
+
+<p><strong>Quem não tem nenhuma das duas.</strong> Se o negócio vende ou depende de IA — software com IA embarcada, serviço baseado em modelo, decisão automatizada sobre clientes — dá para implantar as duas juntas, desenhando o sistema integrado desde o início. Se o cliente que pressiona pede segurança da informação primeiro (o mais comum em contrato B2B e licitação), a 27001 vem antes e a 42001 entra como segunda onda, já sobre a estrutura pronta.</p>
+
+<p><strong>Quem só usa IA de terceiros em processo interno.</strong> Nem sempre a certificação faz sentido de imediato. Uma governança de IA bem feita — inventário, política de uso, avaliação dos usos críticos — resolve o risco principal e deixa o terreno pronto para certificar quando o mercado pedir.</p>
+
+<h2 id="privacidade">Onde entram a LGPD e a ISO 27701</h2>
+
+<p>A maioria dos sistemas de IA trata dado pessoal em algum momento — no treinamento, na entrada ou na saída. Isso põe a <a href="/lgpd/">LGPD</a> no centro do projeto, e dois pontos merecem atenção:</p>
+<ul>
+<li><strong>Base legal e finalidade</strong> para os dados usados em treinamento e operação. Reaproveitar uma base de clientes para treinar modelo é nova finalidade e precisa de análise.</li>
+<li><strong>Art. 20 da LGPD</strong> — o titular tem direito de pedir revisão de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses. Isso conversa diretamente com os controles de transparência e de informação às partes da 42001.</li>
+</ul>
+
+<p>A ISO 27701 estende o SGSI para gestão de privacidade, e na versão 2025 passou a poder ser certificada de forma independente da 27001 — o que muda o desenho de quem quer as três normas. O contexto está em <a href="/iso-27701-2025-o-que-muda-independencia-da-iso-27001/">ISO 27701:2025: o que muda</a> e em <a href="/iso-27701-lgpd-gdpr-conformidade/">27701, LGPD e GDPR</a>. Para quem combina as três, o trio funciona assim: 27001 protege, 27701 garante o tratamento correto do dado pessoal, 42001 garante o uso responsável da IA que consome esse dado.</p>
+
+<h2 id="erros">Erros comuns na integração</h2>
+<ul>
+<li><strong>Tratar a 42001 como “mais controles de segurança”.</strong> O resultado é um SGIA que passa em segurança e falha em impacto, transparência e uso responsável — exatamente o que a norma cobra de novo.</li>
+<li><strong>Copiar o inventário de ativos como inventário de IA.</strong> Um servidor de GPU é ativo; o sistema de IA é a finalidade, o modelo, os dados e o uso. Auditor pergunta “para que serve e quem é afetado?”, não só “onde roda?”.</li>
+<li><strong>Fazer avaliação de impacto só uma vez.</strong> A 42001 pede reavaliação em intervalos planejados e quando há mudança significativa — modelo novo, base nova, uso novo.</li>
+<li><strong>Esquecer a IA embutida.</strong> CRM, ERP, ferramenta de RH e de atendimento já vêm com IA. Se ela entra em decisão sobre pessoas, entra no escopo.</li>
+<li><strong>Deixar o comitê só com TI.</strong> Sem jurídico, privacidade e negócio, as decisões de uso responsável viram decisões técnicas — e a análise crítica vira formalidade.</li>
+</ul>
+
+<h2 id="proximo-passo">Por onde começar</h2>
+
+<p>Se você já tem a 27001, o primeiro passo é um diagnóstico de lacunas da 42001 sobre o SGSI existente: quais processos já atendem, quais precisam de extensão e quais não existem. Em paralelo, levante o inventário de sistemas de IA — oficiais e não oficiais — e escolha um sistema crítico para fazer a primeira avaliação de risco e de impacto. Esse piloto mostra, com caso real, quanto do trabalho é novo e quanto é extensão.</p>
+
+<p>Se ainda não tem nenhuma das duas, comece pelo que o seu cliente cobra hoje e desenhe o sistema já pensando na integração. Retrabalho de estrutura é o custo mais evitável de toda implantação de norma.</p>

@@ -1,0 +1,51 @@
+{
+ "title": "Requisitos da ISO 42001: cláusulas 4 a 10 e o que o auditor pede",
+ "seo_title": "Requisitos da ISO 42001: cláusulas 4 a 10",
+ "seo_description": "Requisitos da ISO/IEC 42001 cláusula a cláusula: papel na IA, política, risco, impacto, declaração de aplicabilidade e as evidências que o auditor pede.",
+ "excerpt": "As cláusulas 4 a 10 da ISO/IEC 42001 explicadas uma a uma, com a evidência que o auditor procura e a lista de informação documentada obrigatória.",
+ "tldr": "Os requisitos da ISO/IEC 42001 estão nas cláusulas 4 a 10: contexto, liderança, planejamento, apoio, operação, avaliação de desempenho e melhoria. A estrutura é a mesma da 9001 e da 27001. O que é próprio da norma: determinar o papel da organização em relação à IA (4.1), ter política de IA (5.2), fazer avaliação de risco (6.1.2) e avaliação de impacto sobre pessoas e sociedade (6.1.4), escolher controles do Anexo A numa declaração de aplicabilidade (6.1.3) e refazer essas avaliações em intervalos planejados e a cada mudança significativa (8.2 a 8.4). Para certificar, tudo precisa ter registro, auditoria interna e análise crítica pela direção.",
+ "faq": [
+  {
+   "pergunta": "Quais são os requisitos da ISO 42001?",
+   "resposta": "São as cláusulas 4 a 10: contexto da organização, liderança, planejamento, apoio, operação, avaliação de desempenho e melhoria. Os pontos específicos de IA são o papel da organização, a política de IA, a avaliação de risco e de impacto dos sistemas de IA e a declaração de aplicabilidade dos controles do Anexo A."
+  },
+  {
+   "pergunta": "O Anexo A da ISO 42001 é obrigatório?",
+   "resposta": "O Anexo A é normativo. A organização precisa comparar seus controles com ele e registrar na declaração de aplicabilidade quais se aplicam e por que os demais foram excluídos. Não é obrigatório implementar todos os 38, mas toda exclusão precisa de justificativa coerente com o escopo e o papel."
+  },
+  {
+   "pergunta": "Quais documentos são obrigatórios na ISO 42001?",
+   "resposta": "Entre outros: escopo, política de IA, processo e resultados das avaliações de risco e de impacto, declaração de aplicabilidade e plano de tratamento, objetivos de IA, evidência de competência, resultados de monitoramento, programa e resultados de auditoria interna, resultados da análise crítica e registros de não conformidade e ação corretiva. Os controles escolhidos do Anexo A acrescentam documentos próprios."
+  },
+  {
+   "pergunta": "Com que frequência refazer a avaliação de impacto?",
+   "resposta": "Em intervalos planejados, definidos pela própria organização, e sempre que houver mudança significativa: retreinar o modelo, trocar o fornecedor ou a versão do modelo de base, mudar a finalidade ou a população afetada. A cláusula 8.4 exige guardar os resultados de cada rodada."
+  },
+  {
+   "pergunta": "Quem já tem ISO 27001 cumpre parte dos requisitos da 42001?",
+   "resposta": "Sim. As cláusulas seguem a mesma estrutura, então controle de documentos, auditoria interna, análise crítica, ação corretiva e boa parte da gestão de risco podem ser reaproveitados. O que precisa ser criado é o papel em relação à IA, a política de IA, a avaliação de impacto sobre pessoas e os controles específicos de ciclo de vida e de dados."
+  },
+  {
+   "pergunta": "O que é a declaração de aplicabilidade na ISO 42001?",
+   "resposta": "É o documento exigido pela cláusula 6.1.3 que lista os controles necessários para tratar os riscos de IA, a justificativa de inclusão de cada um, se já estão implementados e a justificativa de cada exclusão em relação ao Anexo A. É um dos primeiros documentos que o auditor pede."
+  }
+ ],
+ "tags": [
+  "ISO 42001",
+  "requisitos ISO 42001",
+  "SGIA",
+  "inteligência artificial",
+  "avaliação de impacto",
+  "declaração de aplicabilidade",
+  "auditoria",
+  "governança de IA"
+ ],
+ "seo_keywords": [
+  "requisitos ISO 42001",
+  "ISO 42001 requisitos",
+  "cláusulas ISO 42001",
+  "ISO/IEC 42001 cláusulas",
+  "documentos obrigatórios ISO 42001",
+  "declaração de aplicabilidade ISO 42001"
+ ]
+}

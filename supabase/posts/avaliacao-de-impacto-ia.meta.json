@@ -1,0 +1,57 @@
+{
+ "title": "Avaliação de impacto de IA: risco x impacto na ISO 42001, ISO 42005 e ISO 23894",
+ "seo_title": "Avaliação de impacto de IA: passo a passo e matriz",
+ "seo_description": "Diferença entre risco e impacto de IA na ISO 42001, passo a passo pela ISO 42005, gestão de risco com ISO 23894 e NIST AI RMF, e modelo de matriz.",
+ "excerpt": "Como separar avaliação de risco e de impacto de IA, fazer a avaliação de impacto pela ISO 42005 e montar a matriz que o auditor da ISO 42001 espera ver.",
+ "tldr": "A avaliação de risco de IA analisa o que o sistema pode causar à organização; a avaliação de impacto analisa o efeito sobre indivíduos, grupos e a sociedade, como viés, exclusão e dano. A ISO 42001 exige as duas: risco em 6.1.2, 6.1.3 e 8.2 a 8.3; impacto em 6.1.4 e 8.4, com os controles do grupo A.5 do Anexo A. A ISO/IEC 42005:2025 dá o método da avaliação de impacto: descrever o sistema, mapear afetados, identificar impactos, avaliar gravidade, definir medidas, documentar e monitorar. A ISO/IEC 23894 e o NIST AI RMF organizam a gestão de risco. O PL 2338 prevê avaliação de impacto algorítmico para alto risco com conteúdo muito parecido. As avaliações devem ser refeitas em intervalos planejados e a cada mudança significativa.",
+ "faq": [
+  {
+   "pergunta": "Qual a diferença entre avaliação de risco e avaliação de impacto de IA?",
+   "resposta": "A avaliação de risco olha o dano potencial para a organização: objetivos, operação, reputação, conformidade. A avaliação de impacto olha o efeito sobre indivíduos, grupos e a sociedade: discriminação, exclusão, perda de autonomia, dano físico ou financeiro. A ISO 42001 exige as duas separadamente, e o resultado da avaliação de impacto alimenta a de risco."
+  },
+  {
+   "pergunta": "A avaliação de impacto é obrigatória na ISO 42001?",
+   "resposta": "Sim. A cláusula 6.1.4 exige um processo definido de avaliação de impacto dos sistemas de IA, e a 8.4 exige que ela seja executada em intervalos planejados e quando houver mudança significativa, com resultado documentado. Os controles do grupo A.5 do Anexo A detalham o processo e a documentação."
+  },
+  {
+   "pergunta": "O que é a ISO/IEC 42005?",
+   "resposta": "É a norma de orientação para avaliação de impacto de sistemas de IA, publicada em maio de 2025. Ela explica quando e como avaliar o impacto ao longo do ciclo de vida, o que documentar e como integrar o resultado à gestão de risco e ao sistema de gestão de IA. Não é certificável: serve de método para cumprir a ISO 42001."
+  },
+  {
+   "pergunta": "Para que serve a ISO/IEC 23894?",
+   "resposta": "É a orientação de gestão de risco específica para inteligência artificial, publicada em 2023 e baseada na ISO 31000. Ela mantém o ciclo clássico de gestão de risco e acrescenta fontes de risco típicas de IA, como qualidade dos dados, falta de explicabilidade, aprendizado contínuo, dependência de terceiros e ataques ao modelo."
+  },
+  {
+   "pergunta": "Posso usar o NIST AI RMF em vez da ISO 42001?",
+   "resposta": "O NIST AI RMF é um framework voluntário e não certificável, organizado em Govern, Map, Measure e Manage. Ele é complementar à ISO 42001, não substituto. Com uma tabela de correspondência, a mesma evidência atende cliente que pede alinhamento ao NIST e auditor de certificação 42001."
+  },
+  {
+   "pergunta": "Quando a avaliação de impacto de IA deve ser refeita?",
+   "resposta": "Em intervalos planejados e sempre que houver mudança significativa: nova versão ou retreinamento do modelo, troca de fornecedor, novo uso ou nova população, mudança nos dados, incidente ou reclamação recorrente, indicador fora do limite em produção e mudança regulatória."
+  },
+  {
+   "pergunta": "A avaliação de impacto algorítmico do PL 2338 é a mesma da ISO 42001?",
+   "resposta": "Não é idêntica, mas o conteúdo é muito próximo: riscos e benefícios, partes afetadas, probabilidade e gravidade, medidas de mitigação, transparência e atualização periódica. No texto aprovado pelo Senado ela é obrigatória para sistemas de alto risco. O projeto ainda tramita na Câmara e pode mudar."
+  }
+ ],
+ "tags": [
+  "ISO 42001",
+  "inteligência artificial",
+  "avaliação de impacto",
+  "gestão de riscos",
+  "ISO 42005",
+  "ISO 23894",
+  "NIST AI RMF",
+  "governança de IA",
+  "PL 2338"
+ ],
+ "seo_keywords": [
+  "avaliação de impacto de IA",
+  "avaliação de risco de IA",
+  "ISO 42005",
+  "ISO 23894",
+  "NIST AI RMF",
+  "avaliação de impacto algorítmico",
+  "ISO 42001 avaliação de impacto"
+ ]
+}

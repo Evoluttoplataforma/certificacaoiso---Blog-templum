@@ -122,6 +122,14 @@ export const LEAD_FORM_PAGES = {
   // pesquisar conceito; e o `crm` é ISO 45001 porque a NR-1 não é certificável — o que a
   // Templum implanta é o sistema de gestão de SST (mesmo mapeamento de data/normas.js).
   "nr-1-riscos-psicossociais": { display: "NR-1", crm: "ISO 45001" },
+
+  // --- fundo de funil da vertical de ISO 42001 (08/10/2026) ---
+  // Quem lê certificação, requisitos ou a integração com a 27001 já está desenhando o
+  // projeto. `crm` vazio pelo mesmo motivo do hub: o cf_produto do Orbit ainda não tem
+  // opção para 42001, e valor fora da lista apagaria os custom fields do lead.
+  "certificacao-iso-42001": { display: "ISO 42001", crm: "" },
+  "requisitos-iso-42001": { display: "ISO 42001", crm: "" },
+  "iso-42001-e-iso-27001": { display: "ISO 42001", crm: "" },
 };
 
 export function normaDoForm(slug) {

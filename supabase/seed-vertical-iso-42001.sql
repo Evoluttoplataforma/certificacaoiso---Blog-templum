@@ -1,0 +1,56 @@
+-- Vertical ISO 42001 / governança de IA — leva de 08/10/2026
+--
+-- O QUE FOI FEITO (via REST com service_role, por supabase/posts/_publish-vertical-42001.mjs):
+--   1. Hub /iso-42001/ REESCRITO (era o guia de 05/09/2026, ~18 mil car.; agora linka os 7).
+--   2. 7 posts novos, categoria 'IA', autor 'Equipe Templum', status 'published'.
+--   3. TAGS nos 14 posts antigos da categoria IA, que estavam todos sem tag
+--      (mesmo achado da 27001 e da FSSC; ver seed-vertical-fssc-22000.sql).
+--
+-- Texto em supabase/posts/<slug>.html (+ .meta.json).
+--
+-- ---------------------------------------------------------------------------
+-- DIAGNÓSTICO (Semrush, base BR, 08/10/2026)
+-- ---------------------------------------------------------------------------
+--   "iso 42001" 590/mês, KD 22 — top 10: iso.org, qmsbrasil, tiexames, BSI, Bureau
+--   Veritas, YouTube, Microsoft, SoftExpert, Vanzolini, ABES. O blog fora do top 10.
+--   Vizinhos: pl 2338 (1.000), shadow ai (390), ai act (320), governança de ia (260),
+--   ia responsável (140), nist ai rmf (140), iso 23894 (50).
+--
+-- ---------------------------------------------------------------------------
+-- POSTS
+-- ---------------------------------------------------------------------------
+--   iso-42001                hub (reescrita)
+--   requisitos-iso-42001     cláusulas 4 a 10 + evidência + informação documentada
+--   anexo-a-iso-42001        38 controles em A.2–A.10, declaração de aplicabilidade, checklist
+--   certificacao-iso-42001   pré-requisitos, estágios 1 e 2, ciclo, o que forma o custo, ISO 42006
+--   iso-42001-e-iso-27001    comparativo, reaproveitamento, sistema integrado, 27701/LGPD
+--   governanca-de-ia         comitê, inventário, política de uso, shadow AI, letramento
+--   pl-2338-ai-act           status do PL na Câmara; AI Act depois do Digital Omnibus
+--                            (Anexo III → 02/12/2027; Anexo I → 02/08/2028)
+--   avaliacao-de-impacto-ia  risco × impacto, ISO 42005, ISO 23894, NIST AI RMF, matriz
+--
+--   ⚠️ pl-2338-ai-act tem DATA DE VALIDADE: o relator indicou votação após as eleições
+--   de out/2026. Quando a Câmara votar, o post precisa ser revisto no mesmo dia.
+--
+-- REPO: src/data/lead-form-pages.js  +certificacao-iso-42001, +requisitos-iso-42001,
+--       +iso-42001-e-iso-27001 (crm "" — Orbit ainda sem cf_produto para 42001)
+--
+-- ---------------------------------------------------------------------------
+-- ROLLBACK
+-- ---------------------------------------------------------------------------
+-- 1) tirar os 7 novos do ar sem apagar:
+-- update blog_templum_posts set status='draft'
+--  where slug in ('requisitos-iso-42001','anexo-a-iso-42001','certificacao-iso-42001',
+--   'iso-42001-e-iso-27001','governanca-de-ia','pl-2338-ai-act','avaliacao-de-impacto-ia');
+-- 2) hub: supabase/backup/iso-42001-antes-2026-10-08.json (linha inteira anterior).
+-- 3) tags: supabase/backup/tags-categoria-ia-antes-2026-10-08.json (13 vazias; o
+--    redefinindo-a-consultoria-de-gestao-e-o-futuro-com-ia tinha 1).
+--
+-- ---------------------------------------------------------------------------
+-- PENDÊNCIAS
+-- ---------------------------------------------------------------------------
+--  a) Links contextuais PARA a vertical a partir de posts fortes existentes
+--     (iso-27001, lgpd, inteligencia-artificial, iso-27701-*, relacao-do-lgpd-com-a-iso-27001)
+--     — não aplicados nesta leva.
+--  b) Resumo em áudio do hub ainda é o roteiro de 05/09 (texto antigo).
+--  c) Nenhum dos 8 tem imagem destacada / og:image.

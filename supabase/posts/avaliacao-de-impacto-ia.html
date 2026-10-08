@@ -1,0 +1,132 @@
+<p>A <strong>avaliação de impacto de IA</strong> analisa o efeito que um sistema de inteligência artificial pode ter sobre <strong>indivíduos, grupos de indivíduos e a sociedade</strong>: viés, discriminação, exclusão, perda de autonomia, dano físico ou financeiro. A <strong>avaliação de risco de IA</strong> olha para o outro lado, o que o sistema pode causar à própria organização. A <a href="/iso-42001/">ISO 42001</a> exige as duas, separadas, e é nessa separação que a maioria das implantações tropeça.</p>
+
+<p>Este artigo mostra onde cada avaliação aparece na norma, como fazer a avaliação de impacto passo a passo segundo a ISO/IEC 42005:2025, como a ISO/IEC 23894 e o NIST AI RMF organizam a gestão de risco, como isso conversa com a avaliação de impacto algorítmico prevista no PL 2338, e quando cada avaliação precisa ser refeita. No final há um modelo de matriz para começar.</p>
+
+<h2 id="risco-x-impacto">Risco de IA e impacto de IA: qual a diferença</h2>
+
+<p>As duas análises partem do mesmo sistema e fazem perguntas diferentes.</p>
+
+<table>
+<thead>
+<tr><th></th><th>Avaliação de risco de IA</th><th>Avaliação de impacto de IA</th></tr>
+</thead>
+<tbody>
+<tr><td>Pergunta central</td><td>O que pode dar errado para a organização?</td><td>O que pode acontecer com as pessoas afetadas pelo sistema?</td></tr>
+<tr><td>Quem sofre a consequência</td><td>A empresa: objetivos, operação, reputação, conformidade, finanças</td><td>Indivíduos, grupos e a sociedade, incluindo quem nem é cliente</td></tr>
+<tr><td>Onde está na ISO 42001</td><td>6.1.2 (avaliação), 6.1.3 (tratamento), 8.2 e 8.3 (execução)</td><td>6.1.4 (processo) e 8.4 (execução); controles do grupo A.5 do Anexo A</td></tr>
+<tr><td>Norma de apoio</td><td>ISO/IEC 23894:2023</td><td>ISO/IEC 42005:2025</td></tr>
+<tr><td>Exemplo</td><td>Modelo de crédito com erro gera inadimplência e multa regulatória</td><td>O mesmo modelo nega crédito sistematicamente a um bairro ou perfil</td></tr>
+</tbody>
+</table>
+
+<p>Um sistema pode ser de baixo risco para a empresa e de alto impacto para pessoas. Um filtro automático de currículos barato, que funciona e reduz custo, pode excluir candidatas mais velhas sem que nenhum indicador interno acenda. Por isso a norma não deixa que uma análise substitua a outra. O resultado da avaliação de impacto, porém, <strong>alimenta</strong> a avaliação de risco: dano a pessoas vira risco jurídico, reputacional e de negócio.</p>
+
+<h2 id="onde-esta-na-iso-42001">Onde as avaliações aparecem na ISO 42001</h2>
+
+<ul>
+<li><strong>6.1.2, avaliação de risco de IA:</strong> processo definido para identificar, analisar e avaliar riscos de IA, com critérios estabelecidos e resultados comparáveis entre uma rodada e outra.</li>
+<li><strong>6.1.3, tratamento de risco de IA:</strong> escolha das opções de tratamento, determinação dos controles necessários (comparando com o Anexo A) e a <strong>declaração de aplicabilidade</strong>. O detalhe dos controles está em <a href="/anexo-a-iso-42001/">Anexo A da ISO 42001</a>.</li>
+<li><strong>6.1.4, avaliação de impacto do sistema de IA:</strong> processo para avaliar as consequências potenciais para indivíduos, grupos e sociedade ao longo do desenvolvimento, fornecimento e uso do sistema. O resultado deve ser documentado e considerado na avaliação de risco.</li>
+<li><strong>8.2, 8.3 e 8.4:</strong> executar as avaliações e o tratamento em intervalos planejados e quando houver mudança significativa, guardando evidência.</li>
+<li><strong>Anexo A, grupo A.5:</strong> controles para o processo de avaliação de impacto, sua documentação e a análise específica do impacto em indivíduos ou grupos e do impacto social.</li>
+</ul>
+
+<p>O conjunto completo de cláusulas, com a evidência que o auditor pede em cada uma, está em <a href="/requisitos-iso-42001/">requisitos da ISO 42001</a>.</p>
+
+<h2 id="passo-a-passo-impacto">Como fazer a avaliação de impacto, passo a passo</h2>
+
+<p>A <strong>ISO/IEC 42005:2025</strong>, publicada em maio de 2025, é a orientação da família ISO para avaliação de impacto de sistemas de IA. Ela não é certificável; serve para dar método ao que a 42001 exige. Em linguagem de implantação, o roteiro fica assim:</p>
+
+<ol>
+<li><strong>Defina o gatilho e o momento.</strong> Em que pontos do ciclo de vida a avaliação acontece: na concepção, antes da implantação, a cada mudança significativa e em revisão periódica. Defina também quem é o responsável e quem aprova.</li>
+<li><strong>Descreva o sistema.</strong> Finalidade, uso pretendido e usos previsíveis fora do pretendido, papel da organização (produtor, fornecedor, usuário), dados de entrada, tipo de saída, grau de automação e onde há supervisão humana.</li>
+<li><strong>Mapeie as partes afetadas.</strong> Não só usuários e clientes: candidatos, pacientes, trabalhadores, moradores, grupos vulneráveis, pessoas sobre quem o sistema decide sem que elas interajam com ele.</li>
+<li><strong>Identifique impactos potenciais.</strong> Positivos e negativos, por categoria: direitos e liberdades (privacidade, não discriminação, autonomia), segurança física e saúde, situação econômica, acesso a serviço, ambiente, efeitos sociais em escala. Inclua impactos de falha, de uso indevido e de funcionamento "correto" com dado enviesado.</li>
+<li><strong>Avalie gravidade e probabilidade.</strong> Gravidade considera escala (quantas pessoas), reversibilidade (o dano se desfaz?) e vulnerabilidade de quem é afetado. Use critérios escritos, não opinião de reunião.</li>
+<li><strong>Defina medidas.</strong> Mitigação técnica (teste de viés, limiar de confiança, explicabilidade), organizacional (revisão humana, canal de contestação, treinamento) e de transparência (informar que há IA na decisão).</li>
+<li><strong>Documente e decida.</strong> Registre o raciocínio, as medidas e o impacto residual, com aprovação de quem tem autoridade para aceitar o resultado ou barrar o sistema.</li>
+<li><strong>Integre e monitore.</strong> Leve o resultado para a avaliação de risco (6.1.2) e defina indicadores para acompanhar em produção. Desvio de indicador é gatilho de reavaliação.</li>
+</ol>
+
+<p>Uma regra prática: se a avaliação de impacto nunca barrou nem mudou nenhum sistema, ela provavelmente está sendo feita depois da decisão, para cumprir tabela.</p>
+
+<h2 id="gestao-de-risco-iso-23894">Gestão de risco de IA com a ISO/IEC 23894</h2>
+
+<p>A <strong>ISO/IEC 23894:2023</strong> dá orientação de gestão de risco específica para IA e é construída sobre a ISO 31000. Ela não cria um processo novo: usa o ciclo conhecido (estabelecer contexto, identificar, analisar, avaliar, tratar, monitorar, comunicar) e acrescenta fontes de risco típicas de IA. Entre elas:</p>
+<ul>
+<li>qualidade, representatividade e proveniência dos dados;</li>
+<li>falta de transparência e de explicabilidade do modelo;</li>
+<li>nível de automação e ausência de supervisão humana;</li>
+<li>aprendizado contínuo que muda o comportamento depois da implantação;</li>
+<li>complexidade do ambiente e mudança no contexto de uso (<em>drift</em>);</li>
+<li>dependência de terceiros (modelo, API, plataforma);</li>
+<li>segurança: envenenamento de dados, ataques adversariais, injeção de prompt, vazamento por saída do modelo.</li>
+</ul>
+
+<p>O Anexo C da ISO 42001, informativo, traz uma lista parecida de objetivos organizacionais e fontes de risco. É bom ponto de partida para não esquecer categoria. Para riscos de segurança de sistemas com modelos de linguagem, o OWASP Top 10 para LLM complementa bem, e conversa com a análise que quem tem <a href="/iso-27001/">ISO 27001</a> já faz.</p>
+
+<h2 id="nist-ai-rmf">E o NIST AI RMF?</h2>
+
+<p>O <strong>NIST AI Risk Management Framework 1.0</strong>, publicado em janeiro de 2023 pelo instituto americano de padrões, é voluntário e muito usado em empresas com operação nos Estados Unidos. Ele se organiza em quatro funções:</p>
+<ul>
+<li><strong>Govern (governar):</strong> cultura, políticas, papéis e responsabilidades sobre risco de IA;</li>
+<li><strong>Map (mapear):</strong> contexto, finalidade, partes afetadas e riscos de cada sistema;</li>
+<li><strong>Measure (medir):</strong> métodos e métricas para avaliar e acompanhar os riscos;</li>
+<li><strong>Manage (gerenciar):</strong> priorizar, tratar e responder aos riscos ao longo do tempo.</li>
+</ul>
+
+<p>Ele não é certificável e não substitui a 42001; os dois se encaixam. O "Govern" corresponde às cláusulas 5 e 7 e ao que descrevemos em <a href="/governanca-de-ia/">governança de IA</a>. "Map" e "Measure" correspondem às avaliações de 6.1.2 e 6.1.4, e "Manage" ao tratamento e à operação (6.1.3 e cláusula 8). Quem precisa responder a cliente americano e a auditor de 42001 pode usar a mesma evidência para os dois, com uma tabela de correspondência.</p>
+
+<h2 id="impacto-algoritmico-pl-2338">Avaliação de impacto algorítmico no PL 2338</h2>
+
+<p>O texto do PL 2338/2023 aprovado no Senado prevê <strong>avaliação preliminar</strong> para classificar o risco de todo sistema e <strong>avaliação de impacto algorítmico</strong> obrigatória para sistemas de alto risco. O conteúdo previsto é muito próximo do roteiro acima: riscos conhecidos e previsíveis, benefícios, probabilidade e gravidade de consequências adversas, partes afetadas, medidas de mitigação, transparência e atualização periódica. O projeto ainda está na Câmara e pode mudar; o status e a comparação com o AI Act estão em <a href="/pl-2338-ai-act/">PL 2338 e AI Act</a>.</p>
+
+<p>A consequência prática: quem faz avaliação de impacto com método hoje, no formato da 42001 e da 42005, terá pouco a adaptar quando a lei sair. Quem esperar terá de produzir de uma vez avaliações para todos os sistemas de alto risco, com prazo regulatório correndo.</p>
+
+<h2 id="modelo-de-matriz">Modelo de matriz para começar</h2>
+
+<p>Uma linha por impacto identificado, por sistema. A mesma estrutura serve para risco, trocando "parte afetada" por "objetivo da organização afetado".</p>
+
+<table>
+<thead>
+<tr><th>Campo</th><th>O que registrar</th><th>Exemplo (triagem de currículos)</th></tr>
+</thead>
+<tbody>
+<tr><td>Sistema e versão</td><td>Identificação no inventário</td><td>Triagem automática v2.1, fornecedor X</td></tr>
+<tr><td>Papel da organização</td><td>Produtor, fornecedor ou usuário</td><td>Usuário</td></tr>
+<tr><td>Parte afetada</td><td>Quem sofre o efeito</td><td>Candidatos acima de 50 anos</td></tr>
+<tr><td>Impacto potencial</td><td>O que pode acontecer</td><td>Exclusão sistemática por padrão histórico de contratação</td></tr>
+<tr><td>Gravidade</td><td>Escala, reversibilidade, vulnerabilidade</td><td>Alta: afeta acesso a emprego, difícil de detectar pelo candidato</td></tr>
+<tr><td>Probabilidade</td><td>Pelos critérios definidos</td><td>Média: base de treino com viés conhecido</td></tr>
+<tr><td>Medidas</td><td>Técnicas, organizacionais, de transparência</td><td>Teste de viés por faixa etária, revisão humana dos rejeitados, aviso ao candidato</td></tr>
+<tr><td>Impacto residual e aprovação</td><td>Resultado após medidas e quem aceitou</td><td>Baixo, aprovado pela diretoria de pessoas</td></tr>
+<tr><td>Gatilho de reavaliação</td><td>Quando refazer</td><td>Nova versão do modelo ou taxa de aprovação por faixa fora do limite</td></tr>
+</tbody>
+</table>
+
+<h2 id="quando-refazer">Quando refazer as avaliações</h2>
+
+<p>A ISO 42001 pede as avaliações em <strong>intervalos planejados</strong> e quando houver <strong>mudança significativa</strong>. Na prática, os gatilhos que um auditor espera ver definidos são:</p>
+<ul>
+<li>nova versão do modelo, novo retreinamento ou troca de fornecedor;</li>
+<li>novo uso ou nova população atendida pelo mesmo sistema;</li>
+<li>mudança relevante nos dados de entrada;</li>
+<li>incidente, reclamação ou contestação recorrente;</li>
+<li>indicador de desempenho ou de equidade fora do limite em produção;</li>
+<li>mudança legal ou regulatória aplicável;</li>
+<li>revisão periódica do calendário, mesmo sem nenhum dos itens acima.</li>
+</ul>
+
+<h2 id="erros-comuns">Erros comuns</h2>
+
+<ul>
+<li><strong>Uma planilha só para risco e impacto.</strong> Mistura as perguntas e, na prática, o impacto em pessoas some atrás do risco de negócio.</li>
+<li><strong>Avaliar só o que a empresa desenvolve.</strong> A norma cobre também sistemas fornecidos e usados. A ferramenta de mercado que decide sobre pessoas entra.</li>
+<li><strong>Avaliar depois de implantar.</strong> A avaliação feita após a decisão vira justificativa. O gatilho precisa estar na concepção e antes do uso.</li>
+<li><strong>Critério de gravidade subjetivo.</strong> Sem escala escrita, cada rodada dá um resultado diferente, e o auditor percebe.</li>
+<li><strong>Nenhum vínculo com o monitoramento.</strong> Avaliação sem indicador em produção não detecta <em>drift</em> nem viés que surge com o tempo.</li>
+</ul>
+
+<h2 id="proximo-passo">Próximo passo</h2>
+
+<p>Escolha o sistema de IA do inventário que mais decide sobre pessoas e preencha a matriz acima com a equipe que o opera, o dono do processo e alguém de jurídico ou privacidade. Uma sessão de duas horas costuma revelar pelo menos um impacto que ninguém tinha registrado, e isso já é a primeira evidência para a <a href="/certificacao-iso-42001/">certificação ISO 42001</a>.</p>
