@@ -25,8 +25,10 @@ const head = `<p><strong>Certificação ISO 27001</strong> é a auditoria do seu
 <li><strong>Antes do auditor:</strong> escopo documentado, riscos, SoA, controles com registro, auditoria interna e análise crítica feitas.</li>
 <li><strong>Prazo:</strong> meses a ~12 meses; gargalo é <strong>operar</strong> tempo suficiente para evidência, não só escrever políticas.</li>
 <li><strong>Custo certificação:</strong> dias de auditoria (ISO/IEC 27006-1), escopo, sites, complexidade, ciclo de 3 anos.</li>
+<li><strong>Preço certificação iso 27001:</strong> sem tabela única; organismo cobra por dias (27006-1) e implantação soma horas internas e consultoria. Faixas citadas em mercado variam muito com escopo. <a href="#custo">Detalhe</a>.</li>
 <li><strong>Consultoria x certificadora:</strong> contratos separados; organismo não pode consultar quem audita.</li>
 <li><strong>Validade:</strong> 3 anos, manutenções anuais, recertificação no fim.</li>
+<li><strong>27701 (privacidade):</strong> SGPI certificável <strong>sem</strong> 27001 desde 2025; integrar reduz retrabalho. <a href="/iso-27701-2025-o-que-muda-independencia-da-iso-27001/">Hub ISO 27701</a> · <a href="/certificacao-iso-27701-etapas-e-requisitos/">certificação 27701</a> · <a href="/quanto-custa-iso-27701/">custo 27701</a>.</li>
 <li><strong>Incidentes:</strong> auditoria cobra gestão de incidentes com registro; vazamento sem protocolo gera NC no estágio 2.</li>
 </ul>
 
@@ -43,11 +45,10 @@ const head = `<p><strong>Certificação ISO 27001</strong> é a auditoria do seu
 
 `;
 
-const backupPath = path.join(dir, "../backup/certificacao-iso-27001-etapas-prazo-custo-antes-2026-10-03.json");
-const backup = JSON.parse(readFileSync(backupPath, "utf8"));
-let body = semTravessao(backup.content);
+const livePath = path.join(dir, "certificacao-iso-27001-etapas-prazo-custo.html");
+let body = semTravessao(readFileSync(livePath, "utf8"));
 const cut = body.indexOf('<h2 id="antes">');
-if (cut < 0) throw new Error("backup sem #antes");
+if (cut < 0) throw new Error("certificacao-27001 sem #antes");
 body = head + body.slice(cut);
 
 writeFileSync(path.join(dir, "certificacao-iso-27001-etapas-prazo-custo.html"), body, "utf8");

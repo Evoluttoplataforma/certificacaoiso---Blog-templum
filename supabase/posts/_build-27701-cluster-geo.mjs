@@ -172,6 +172,7 @@ function patchHubLeiaMais() {
 <li><a href="/iso-27701-lgpd-gdpr-conformidade/">ISO 27701 e LGPD/GDPR</a></li>
 <li><a href="/qual-a-relacao-da-iso-27001-com-a-iso-27701/">Qual a relação da ISO 27001 com a ISO 27701?</a></li>
 <li><a href="/consultoria-iso-27701/">Consultoria ISO 27701</a></li>
+<li><a href="/quanto-custa-iso-27701/">Quanto custa a ISO 27701</a></li>
 <li><a href="/iso-27001/">ISO 27001: o que é e como implementar</a></li>
 <li><a href="/relacao-do-lgpd-com-a-iso-27001/">LGPD e ISO 27001</a></li>
 </ul>
@@ -186,8 +187,50 @@ function patchHubLeiaMais() {
   console.log("hub 27701 cluster links ok");
 }
 
+function patchCtaNorma27701() {
+  for (const slug of ["como-implementar-a-iso-27701", "iso-27701-lgpd-gdpr-conformidade", "consultoria-iso-27701"]) {
+    const p = path.join(dir, `${slug}.html`);
+    let body = readFileSync(p, "utf8");
+    const next = body.replace(/norma=ISO%2027001/g, "norma=ISO%2027701");
+    if (next !== body) {
+      writeFileSync(p, next, "utf8");
+      console.log(`${slug} CTA norma 27701 ok`);
+    }
+  }
+}
+
+function patchCertificacao27701CustoLink() {
+  const slug = "certificacao-iso-27701-etapas-e-requisitos";
+  let body = readFileSync(path.join(dir, `${slug}.html`), "utf8");
+  if (body.includes("/quanto-custa-iso-27701/")) return;
+  const re = /(<li><strong>Custo:<\/strong> dias de auditoria \(escopo, sites, controlador\/operador, tratamentos\) \+ implantação interna\/consultoria\. Sem tabela única\.)(<\/li>)/;
+  if (re.test(body)) {
+    body = body.replace(re, '$1 <a href="/quanto-custa-iso-27701/">Quanto custa ISO 27701</a>.$2');
+    writeFileSync(path.join(dir, `${slug}.html`), body, "utf8");
+    console.log(`${slug} link custo ok`);
+  }
+}
+
+function patchLgpdFaq27701() {
+  const slug = "iso-27701-lgpd-gdpr-conformidade";
+  const metaPath = path.join(dir, `${slug}.meta.json`);
+  const meta = JSON.parse(readFileSync(metaPath, "utf8"));
+  if (!meta.faq.some((f) => /27701.*lgpd|lgpd.*27701/i.test(f.pergunta))) {
+    meta.faq.unshift({
+      pergunta: "ISO 27701 substitui a LGPD?",
+      resposta:
+        "<p><strong>Não.</strong> A 27701 estrutura SGPI com inventário, papéis, riscos e evidência. Bases legais, direitos do titular e obrigações perante a ANPD continuam na lei. <a href=\"/iso-27701-lgpd-gdpr-conformidade/#27701-vs-27001-lgpd\">27701 vs LGPD neste artigo</a>.</p>",
+    });
+    writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n", "utf8");
+    console.log(`${slug} FAQ LGPD ok`);
+  }
+}
+
 patchImplementar();
 patchLgpd();
 patchConsultoria();
 patchRelacao();
 patchHubLeiaMais();
+patchCtaNorma27701();
+patchCertificacao27701CustoLink();
+patchLgpdFaq27701();

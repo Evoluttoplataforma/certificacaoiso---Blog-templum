@@ -1,0 +1,34 @@
+{
+  "title": "Quanto custa a ISO 27701: consultoria, certificação e SGPI",
+  "seo_title": "Quanto custa a ISO 27701 em 2026: consultoria e certificação",
+  "seo_description": "Quanto custa ISO 27701: implantação do SGPI, consultoria, auditoria do organismo à parte e manutenção em 3 anos. 27001 não é obrigatória desde 2025. O que encarece tratamentos e papéis.",
+  "tldr": "O custo da ISO 27701 soma implantação do SGPI (consultoria e/ou equipe interna), auditoria do organismo certificador e manutenções no ciclo de três anos. Consultoria e certificadora são contratos separados. Tratamentos, controlador/operador, sites e maturidade do inventário mudam o total; prazo típico 6 a 12 meses até certificar.",
+  "tags": ["ISO 27701", "custo", "consultoria", "certificação", "SGPI", "LGPD", "privacidade"],
+  "published_at": "2026-10-09T18:00:00.000Z",
+  "faq": [
+    {
+      "pergunta": "Quanto custa implementar a ISO 27701?",
+      "resposta": "<p>Não há tabela única. A conta inclui <strong>implantação do SGPI</strong> (consultoria e/ou horas internas), <strong>auditoria do organismo</strong> (por dias de auditoria) e <strong>manutenção</strong> anual e recertificação. Volume de tratamentos e papéis controlador/operador aumentam consultoria e dias de auditoria.</p><p><a href=\"#duas-contas\">Duas contas separadas</a> · <a href=\"/certificacao-iso-27701-etapas-e-requisitos/\">Etapas de certificação</a>.</p>"
+    },
+    {
+      "pergunta": "Quanto custa a consultoria ISO 27701?",
+      "resposta": "<p>Depende do método (remoto, presencial, híbrido), escopo (tratamentos, unidades), maturidade do inventário e se integra com ISO 27001. Compare propostas com as mesmas entregáveis: inventário, risco de privacidade, controles A1/A2/A3, auditoria interna e preparação para estágios 1 e 2.</p><p><a href=\"/consultoria-iso-27701/\">Consultoria ISO 27701</a> · <a href=\"/como-escolher-consultoria-iso/\">Como escolher consultoria</a>.</p>"
+    },
+    {
+      "pergunta": "Preciso da ISO 27001 para orçar a ISO 27701?",
+      "resposta": "<p><strong>Não</strong> para certificar desde a ISO/IEC 27701:2025. Pode orçar SGPI sozinho ou integrado ao SGSI; integração pode reduzir retrabalho, mas são linhas de projeto distintas.</p><p><a href=\"/qual-a-relacao-da-iso-27001-com-a-iso-27701/\">Relação 27001 e 27701</a>.</p>"
+    },
+    {
+      "pergunta": "Consultoria e certificação ISO 27701 são cobradas juntas?",
+      "resposta": "<p>Não, e não podem ser pelo mesmo fornecedor no mesmo ciclo. Quem consulta não pode certificar a mesma empresa. Orçamento completo tem linha de consultoria e linha do organismo acreditado.</p>"
+    },
+    {
+      "pergunta": "A ISO 27701 resolve o custo de adequação à LGPD?",
+      "resposta": "<p><strong>Não.</strong> Adequação legal (bases, titulares, ANPD, DPO) é projeto à parte. A 27701 organiza <strong>gestão</strong> e evidência de privacidade (SGPI), não substitui assessoria jurídica ou operação da lei.</p><p><a href=\"/iso-27701-lgpd-gdpr-conformidade/\">27701 e LGPD</a>.</p>"
+    },
+    {
+      "pergunta": "O que compõe o custo da certificação ISO 27701?",
+      "resposta": "<p>Três blocos: implantação do SGPI; auditoria inicial (estágios 1 e 2) paga ao organismo; manutenção no ciclo de três anos (surveillance e recertificação). <a href=\"#o-que-encarece\">Fatores que encarecem</a>.</p>"
+    }
+  ]
+}
