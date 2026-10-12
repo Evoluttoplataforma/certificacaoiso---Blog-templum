@@ -79,6 +79,7 @@ export default {
       "/certificacao-iso-27001": "/certificacao-iso-27001-etapas-prazo-custo/",
       "/certificacao-iso-9001": "/passo-a-passo-certificacao-iso-9001/",
       "/certificacao-iso-45001": "/passo-a-passo-certificacao-iso-45001/",
+      "/analise-de-causa-raiz": "/analise-de-causa-raiz-o-que-e-e-como-fazer/",
     }[serpPath];
     if (serpTo) {
       const dest = new URL(url.toString());

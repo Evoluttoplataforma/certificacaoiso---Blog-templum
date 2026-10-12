@@ -36,6 +36,8 @@ Planilhas e referências:
 
 **Status 12/out (cluster 27001/27701):** **14 URLs** com FAQ distribuído, tabela consultoria × organismo (27701 pillars), triângulo hub → certificar/custo/requisitos, interlinks satélites. Scripts: `_build-lote-27001-27701-2026-10-12.mjs`, `_publish-lote-27001-27701.mjs`.
 
+**Status 12/out (45001 + operacional F2):** **12 URLs** no Supabase: cluster ISO 45001 (custo, hub, consultoria, perigos, NR-1, requisitos, passo a passo) + operacional Semrush (5W2H riscos/oportunidades, mapeamento+6.1, fluxograma+BPM, arquivamento 7.5, checklist auditoria interna). Marcador `deo-lote-45001-operacional-2026-10-12`. **301** `/analise-de-causa-raiz/` → slug longo no Worker. Scripts: `_build-lote-45001-operacional-2026-10-12.mjs`, `_publish-lote-45001-operacional.mjs`. `npm run build` OK.
+
 ---
 
 ## Trilha C · DEO / engenharia de conteúdo (contínuo, alinha ao vídeo GEO)
