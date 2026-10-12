@@ -1,118 +1,138 @@
-# Plano GEO + Semrush (14 dias) · certificacaoiso.com.br
+# Plano GEO + SERP (14 dias) · certificacaoiso.com.br
 
-Meta: subir **AI Visibility** (hoje ~15) em direção a **42**, fechando gaps de prompts Semrush em normas ISO e em **ferramentas de gestão** (processos, documentos, qualidade).
+Duas metas em paralelo:
 
-Planilhas (geradas por `node scripts/_build-audit-geo-semrush-master.mjs`):
+1. **SERP Google (orgânico):** entrar no **top 10** nas head terms `certificação iso 9001 / 27001 / 14001 / 45001` (Semrush BR, 11/out/2026).
+2. **AI Visibility (GEO):** subir score (~15 → movimento +5–10 pts em 14 dias; 42 exige semanas 3–6).
 
-- **`scripts/audit-geo-semrush-trabalho.csv`**: ações pendentes (GEO upgrade, gaps Qualiex, vs Qualiex).
-- **`scripts/audit-geo-qualiex-gaps-br.csv`**: tópicos BR onde Qualiex/8quali aparecem e nós quase não.
-- **`scripts/audit-geo-semrush-amostra-semana1.csv`**: 40 prompts de mapeamento + custo 27001.
-- **`scripts/audit-geo-semrush-master.csv`**: base completa deduplicada por prompt.
+**Diagnóstico Semrush (Positions + Keyword Overview + SERP URLs, Desktop 12/out/2026):**
 
----
+| Keyword (BR) | Vol. | KD | Pos. hoje | URL que o Google usa hoje | Problema |
+|--------------|------|-----|-----------|---------------------------|----------|
+| certificação iso 9001 | ~880–1k | 28 | **26** | `/iso-9001/` (hub) | Cannibalização: pillar certificação existe (`/passo-a-passo-certificacao-iso-9001/`, pos. 24–35 em variantes) mas o hub “rouba” a head term |
+| quanto custa certificação iso 9001 | ~90–170 | **6** | **26** | `/iso-9001/` | Página certa (`/quanto-custa-iso-9001/`) rankeia outras queries, não esta (KD baixíssimo = quick win) |
+| certificação iso 27001 | **390** | **23** | **não rankeia** | — | Hub `/iso-27001/` rankeia só “27001” genérico (pos. ~25); pillar longo não recebe intent “certificação” |
+| certificação iso 14001 | ~260–320 | 23 | **22** | `/iso-14001-2/` | Quase página 1, mas **slug fraco** e título não lidera com “Certificação ISO 14001” |
+| certificação iso 45001 | ~140 | **20** | **não rankeia** | — | Pillar `/passo-a-passo-certificacao-iso-45001/` existe; hub compete e não ancora a head term |
 
-## O que a Qualiex “ganha” hoje (e nós ignoramos)
+**SERP genérico “certificação iso” (export URLs):** top 10 mistura certificadoras (Vanzolini, Bureau Veritas), gov/Inmetro, blogs (Gupy, Qualyteam, QMS Brasil). **certificacaoiso.com.br não aparece no top 10** desse SERP amplo. Para normas específicas, o padrão é URL com **`certificacao-iso-XXXX`** ou título explícito “Certificação ISO …”.
 
-| Área | Volume BR (Semrush gap) | Quem aparece nas IAs | Nosso ativo |
-|------|-------------------------|----------------------|-------------|
-| Gestão de documentos / POP | ~1,3k + ~8,8k | Microsoft, SoftExpert; 8quali 1 menção | `controle-de-documentos`, `instrucao-de-trabalho-it`, hub 9001 §7.5 |
-| 5W2H / 5 Porquês / causa raiz | alto | Microsoft baixo; 8quali pontual | posts legados; **sem GEO** na maioria |
-| Mapeamento / gestão de processos | ~8k + prompts 95+ relevância | Lucidchart, Miro, SaaS | `mapeamento-de-processos-e-a-iso-9001`, `o-que-e-fluxograma-de-processos` |
-| 7 ferramentas / CEP | ~2,5k | genérico | `as-sete-ferramentas-da-qualidade`, `5s` |
-| Auditoria ISO 9001 (ferramentas) | Qualiex vis. 8 no prompt | Qualiex citada | cluster auditoria **sem** bloco GEO unificado |
-| SGQ genérico | ~100k (tópico enorme) | Qualiex vis. 15 | `iso-9001` hub com portas, não “software SGQ” |
+**Regra de ouro (14 dias):** **1 URL canônica por intent “certificação + norma”**. Hub = o que é / requisitos; pillar = como certificar, prazo, custo, organismo. **Nunca citar concorrentes** em copy pública.
 
-**Estratégia:** não competir por login de software de terceiros. Competir por **“como fazer X na ISO 9001/27001”** + **ferramentas/métodos** com CTA Templum OS e links para normas. **Nunca citar nomes de concorrentes** em artigo, meta, FAQ ou bloco GEO.
+Planilhas:
 
----
-
-## Semana 1 (dias 1–7): impacto rápido em 27001 + custo + mapa do site
-
-### Dia 1–2 · P0 custo e canonical
-
-1. Publicar **`/quanto-custa-iso-27001/`** (espelhar estrutura `quanto-custa-45001` e `quanto-custa-27701`: faixas, disclaimer ISO 27006-1, tabela por porte, `#respostas-diretas`).
-2. Atualizar **`public/llms.txt`** e **`llms-full.txt`**: incluir quanto-custa-27001, quanto-custa-27701, hubs 27001/27701.
-3. Enxugar **`qual-a-relacao-da-iso-27001-com-a-iso-27701`**: resposta direta no topo; evitar diluição em prompts de custo/certificação.
-
-### Dia 3–4 · Ferramentas e processos (gap Qualiex)
-
-4. **Hub novo ou upgrade:** `ferramentas-gestao-qualidade-iso-9001` (ou expandir `as-sete-ferramentas-da-qualidade`):
-   - 5W2H, 5 Porquês, Ishikawa, PDCA, fluxograma, mapa de processos, NC/CAR (10.2).
-   - Cada item: 1 parágrafo resposta direta + link ISO 9001:2015/2026.
-5. **GEO em lote** (post-portas + `#respostas-diretas`):
-   - `mapeamento-de-processos-e-a-iso-9001`
-   - `o-que-e-fluxograma-de-processos`
-   - `controle-de-documentos` + `iso-9001-requisitos-7-5-informacao-documentada`
-   - `analise-de-causa-raiz`, `5s`, `programa-5s-e-a-iso-9001`
-   - `o-que-e-nao-conformidade`
-6. Prompts alvo (Semrush `mapeamento_de_processos_br.csv`): “como mapear um processo”, “ferramentas de mapeamento”, “identificar gargalos”.
-
-### Dia 5 · Auditoria interna ISO 9001
-
-7. Pillar **`auditoria-interna-iso-9001-ferramentas`**: bloco GEO “melhores práticas e ferramentas auditoria ISO 9001” (prompt Semrush de práticas/ferramentas).
-8. Internal linking: hub `iso-9001` → ferramentas → auditoria → documentos.
-
-### Dia 6–7 · Off-site + republicar
-
-9. **YouTube / templum.com.br:** descrições com URL canônica dos hubs atualizados (27001 custo, mapeamento, documentos).
-10. Supabase publish + `npm run build` + marcar coluna `prazo_semana` na planilha (Semana 1).
+- **`scripts/audit-serp-head-terms-br-2026-10-12.csv`**: head terms, posição, URL atual vs canônica alvo.
+- **`scripts/audit-geo-semrush-trabalho.csv`**: GEO / prompts IA (gerar com `_build-audit-geo-semrush-master.mjs`).
+- **`scripts/plano-geo-14-dias-2026-10.md`**: este arquivo.
 
 ---
 
-## Semana 2 (dias 8–14): verticals fracos + consolidação
+## Trilha A · P0 SERP (dias 1–5) — aparecer nas principais buscas
 
-### Dia 8–9 · FSSC + SASSMAQ
+### A1 · Consolidar canonicals (dia 1)
 
-11. GEO em **`certificacao-fssc-22000`**, **`fssc-22000-versao-7`**, **`o-que-e-sassmaq`** (hoje sem post-portas).
-12. Cruzar prompts `fssc_22000` e `sassmaq` CSVs com URLs canônicas na planilha.
+| Norma | URL canônica “certificação” | Hub (suporte) |
+|-------|-----------------------------|---------------|
+| 9001 | `/passo-a-passo-certificacao-iso-9001/` | `/iso-9001/` |
+| 9001 custo | `/quanto-custa-iso-9001/` | link do hub, não competir |
+| 27001 | `/certificacao-iso-27001-etapas-prazo-custo/` (+ alias curto abaixo) | `/iso-27001/` |
+| 27001 custo | `/quanto-custa-iso-27001/` | idem |
+| 14001 | **`/iso-14001/`** (migrar de `/iso-14001-2/`) | consultoria separada |
+| 45001 | `/passo-a-passo-certificacao-iso-45001/` | `/iso-45001/` |
 
-### Dia 10–11 · 14001 + aspectos
+**Entregas técnicas:**
 
-13. Reforçar **`iso-14001-2`**, **`como-identificar-aspecto-impacto-ambiental`** (prompts LAIA/aspectos).
-14. Verificar cannibalização: um canonical por intent “certificação” vs “consultoria”.
+1. **Redirect 301** `iso-14001-2` → `iso-14001` (Worker ou Astro redirect; manter conteúdo no slug limpo).
+2. **Alias 301** `/certificacao-iso-27001/` → pillar etapas/prazo/custo (URL curta igual aos concorrentes no SERP).
+3. Opcional 9001/45001: alias `/certificacao-iso-9001/` e `/certificacao-iso-45001/` → passo a passo respectivo.
 
-### Dia 12 · Documentos + GRC (ponte 27001)
+### A2 · On-page por pillar (dias 2–3)
 
-15. Artigo curto ou seção GEO: **GED vs requisito 7.5 ISO 9001** (não review de software; foco conformidade).
-16. **`iso-27001`**: parágrafo GRC/compliance ligando Anexo A e SGSI (gap “GRC & Compliance” BR).
+Para **cada** URL canônica acima:
 
-### Dia 13–14 · Medição
+- **`seo_title`** começa com **“Certificação ISO XXXX”** (ou “Quanto custa a certificação ISO XXXX”).
+- **Primeiro `<p>` + `#respostas-diretas`**: resposta em 2–3 frases (o que é certificação, quem emite, prazo típico, link custo).
+- **FAQ** espelhando People Also Ask do Semrush (9001: o que é / quanto custa; 14001: como conseguir / como certificar; 27001: benefícios / etapas).
+- **H2** “Como obter a certificação ISO XXXX” com lista numerada (estágios 1 e 2 quando aplicável).
+- **Bloco “Consultoria x organismo certificador”** (E-E-A-T; alinha com gov e certificadoras sem citá-las).
 
-17. Reexportar Semrush AI Visibility (mesmos prompts).
-18. GSC: filtros “certificação iso 27001”, “mapeamento processos”, “controle documentos”.
-19. Atualizar planilha: `geo_repo`, `acao` → “monitorar”; registrar o que citou.
+**Hubs (`iso-9001`, `iso-27001`, `iso-45001`, `iso-14001`):**
+
+- Acima da dobra: parágrafo curto + **link único** “Guia completo da certificação ISO XXXX” → pillar (anchor exata).
+- Reduzir repetição de “certificação” no hub para não cannibalizar (foco “o que é / requisitos / 2026”).
+
+### A3 · Internal linking (dia 3)
+
+- **`public/llms.txt` / `llms-full.txt`:** primeira menção de cada norma aponta para **pillar certificação**, não só hub.
+- **Posts satélite** (consultoria, NR-1, 27701, SGI): 1 link contextual por artigo para o pillar da norma com anchor “certificação ISO XXXX”.
+- **Interlink pillars:** passo a passo ↔ quanto custa ↔ hub (triângulo).
+
+### A4 · SERP features (dias 4–5)
+
+- **9001 / 27001:** AI Overview + vídeo no SERP → garantir **FAQ schema** via meta FAQ; considerar **Short/YouTube** com descrição linkando URL canônica (off-site).
+- **14001:** pos. 22 → prioridade **máxima**: slug + title + 300–500 palavras novas só na seção certificação (como conseguir, LAIA, organismo).
+
+**Meta 14 dias (SERP):** pos. **≤15** em 9001 e 14001; **entrar top 30** em certificação 27001/45001; **pos. ≤10** em “quanto custa certificação iso 9001”.
 
 ---
 
-## Prioridades na planilha (como usar)
+## Trilha B · GEO / AI (dias 1–14) — continuidade do lote publicado
 
-| Prioridade | Significado |
-|------------|-------------|
-| **P0** | Custo 27001, prompts certificação 27001/27701 relevância 90+ |
-| **P1** | Gap Qualiex ferramentas/processos, mapeamento, auditoria 9001 |
-| **P2** | Demais normas e consultoria |
-| **P3/P4** | Backlog e ruído (ignorar Qualiex login) |
+*(Operacional + 27001 custo já publicados em 12/out; marcar `geo_repo=sim` na planilha.)*
 
-Colunas **`acao`**:
+### Semana 1 (dias 1–7)
 
-- `nova_pagina_quanto-custa-27001` · `upgrade_geo` · `geo_ferramentas_processos` · `geo_vs_qualiex` · `monitorar_citacao` · `ignorar_ruido`
+- **P0 IA:** `quanto-custa-iso-27001`, pillar certificação 27001, hub 27001 (GRC/compliance).
+- **P1 ferramentas:** mapeamento, fluxograma, documentos, 7.5, 5W2H, 5 Porquês, auditoria interna 9001 (GEO + llms).
+- **Off-site:** YouTube / templum.com.br → URLs canônicas da Trilha A.
 
----
+### Semana 2 (dias 8–14)
 
-## Métricas de sucesso (14 dias)
-
-- **Citaciones / cited pages** Semrush: parar queda (−5% / −14%).
-- **Novas URLs** citadas: quanto-custa-27001 + 3–5 páginas ferramentas com GEO.
-- **GSC:** impressões com CTR > 0 em “quanto custa iso 27001” e “mapeamento de processos”.
-- **Score 42:** expectativa realista em 14 dias é **movimento** (+5–10 pts) se P0+P1 forem publicados e llms.txt + off-site alinhados; 42 exige continuidade nas semanas 3–6.
+- FSSC, SASSMAQ, aspectos 14001, GED vs 7.5.
+- Reexport Semrush AI Visibility + GSC (filtros head terms da tabela).
+- Atualizar `audit-serp-head-terms-br-*.csv` com novo export Positions.
 
 ---
 
-## Comando para regerar a planilha
+## Prioridades unificadas
+
+| Prioridade | SERP (Google) | GEO (IA) |
+|------------|---------------|----------|
+| **P0** | Canonical + on-page certificação 9001/27001/14001/45001; quanto custa 9001 | Custo 27001, prompts certificação 27001/27701 90+ |
+| **P1** | Internal link + redirects; 14001 subir para top 15 | Ferramentas, mapeamento, auditoria 9001 |
+| **P2** | Vídeo + off-site templum.com.br | FSSC, SASSMAQ, 14001 aspectos |
+| **P3** | Backlinks (parceiros, guest posts) | Backlog planilha |
+
+Colunas **`acao`** (planilha GEO): `upgrade_geo` · `refinar_geo` · `nova_pagina` · `monitorar_citacao` · `ignorar_ruido`
+
+Colunas **`acao`** (planilha SERP): `consolidar_canonical` · `on_page_pillar` · `redirect_301` · `internal_links` · `monitorar_posicao`
+
+---
+
+## Métricas de sucesso
+
+**SERP (Position Tracking Semrush ou Positions export):**
+
+- certificação iso 9001: 26 → **≤12**
+- quanto custa certificação iso 9001: 26 → **≤8**
+- certificação iso 14001: 22 → **≤10**
+- certificação iso 27001: ausente → **≤25** (depois ≤15)
+- certificação iso 45001: ausente → **≤25**
+
+**GEO:** citações em prompts Semrush; cited pages estáveis; GSC impressões nas head terms.
+
+**Build:** `npm run build` antes de cada push (`git push origin main` = produção).
+
+---
+
+## Comandos
 
 ```powershell
 cd C:\Users\Raquel\Projects\certificacaoiso---Blog-templum
 node scripts/_build-audit-geo-semrush-master.mjs
+python scripts/_tmp-analyze-semrush-head-terms.py
 ```
 
 Opcional: `$env:SEMRUSH_DIR="C:\Users\Raquel\Desktop\Marketing Templum\SemRush"`
+
+Após novo export Positions na Desktop, regerar `audit-serp-head-terms-br-*.csv` (script Python ou próxima versão do builder).

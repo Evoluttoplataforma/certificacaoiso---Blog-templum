@@ -72,6 +72,20 @@ export default {
       return Response.redirect(new URL("/", url).toString(), 301);
     }
 
+    // Head terms SERP: URL curta ou slug legado → pillar de certificação (301).
+    const serpPath = url.pathname.replace(/\/+$/, "") || "/";
+    const serpTo = {
+      "/iso-14001-2": "/iso-14001/",
+      "/certificacao-iso-27001": "/certificacao-iso-27001-etapas-prazo-custo/",
+      "/certificacao-iso-9001": "/passo-a-passo-certificacao-iso-9001/",
+      "/certificacao-iso-45001": "/passo-a-passo-certificacao-iso-45001/",
+    }[serpPath];
+    if (serpTo) {
+      const dest = new URL(url.toString());
+      dest.pathname = serpTo;
+      return Response.redirect(dest.toString(), 301);
+    }
+
     // --- (futuro) imagens dos artigos via R2 ---
     // if (url.pathname.startsWith("/wp-content/") && env.IMAGES) {
     //   const obj = await env.IMAGES.get(url.pathname.replace(/^\//, ""));

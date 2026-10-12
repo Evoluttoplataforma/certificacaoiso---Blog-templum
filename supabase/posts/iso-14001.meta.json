@@ -1,0 +1,48 @@
+{
+ "title": "Certificação ISO 14001: etapas, LAIA e SGA",
+ "seo_title": "Certificação ISO 14001: como obter, etapas e requisitos",
+ "seo_description": "ISO 14001 (SGA): o que é, passos para certificar, LAIA, requisitos legais e diferença entre consultoria e certificadora. Versão 2015 e revisão 2026.",
+ "tldr": "A ISO 14001 é a norma internacional de sistemas de gestão ambiental: ela estrutura como a empresa identifica, controla e melhora seus impactos no meio ambiente. A implantação leva de 10 a 18 meses — mais que a ISO 9001, porque o levantamento de aspectos e impactos (LAIA) e o de requisitos legais são trabalho de campo. E um ponto que gera confusão: o certificado não substitui licença ambiental. A norma cobra a conformidade legal, não dispensa dela.",
+ "faq": [
+  {
+   "pergunta": "Como conseguir a certificação ISO 14001?",
+   "resposta": "<p>Implante o SGA (escopo, LAIA, requisitos legais, controles operacionais), rode auditoria interna e análise crítica, contrate organismo acreditado para estágios 1 e 2. Resumo: <a href=\"/iso-14001/#o-processo-de-implementacao-da-iso-14001\">etapas neste guia</a> · <a href=\"/consultoria-iso-14001/\">consultoria ISO 14001</a>.</p>"
+  },
+  {
+   "pergunta": "Como certificar na ISO 14001?",
+   "resposta": "<p>O certificado é emitido após auditoria de certificação em duas fases por organismo acreditado. Antes disso, o SGA precisa operar com evidências (LAIA, legal, registros). <a href=\"/iso-14001/#o-processo-de-implementacao-da-iso-14001\">Processo de implementação</a>.</p>"
+  },
+  {
+   "pergunta": "Qual é a versão atual da ISO 14001?",
+   "resposta": "<p>A <strong>ISO 14001:2015</strong> (ABNT NBR ISO 14001:2015), com a <strong>Emenda 1 de 2024</strong>, que incluiu as mudanças climáticas entre as questões a considerar na análise de contexto. Uma nova revisão está em andamento, em paralelo à da ISO 9001, mas ainda não foi publicada.</p>"
+  },
+  {
+   "pergunta": "A ISO 14001 é obrigatória?",
+   "resposta": "<p>Não. A certificação é voluntária. O que é obrigatório é cumprir a legislação ambiental aplicável — e é justamente aí que a norma ajuda, porque obriga a identificar, monitorar e comprovar esse cumprimento. Na prática, ela vira exigência contratual em licitações, exportação e cadeias de fornecimento de grandes empresas.</p>"
+  },
+  {
+   "pergunta": "Quanto tempo leva para certificar na ISO 14001?",
+   "resposta": "<p>Em média, de <strong>10 a 18 meses</strong>, contando implementação e auditoria. O prazo depende do porte da empresa, da complexidade dos aspectos ambientais, das pessoas disponíveis para o projeto e do envolvimento da direção.</p>"
+  },
+  {
+   "pergunta": "Qual a diferença entre ISO 14001 e licenciamento ambiental?",
+   "resposta": "<p>São coisas distintas. O <strong>licenciamento</strong> é uma exigência legal, emitida por órgão ambiental, para operar determinada atividade. A <strong>ISO 14001</strong> é uma norma voluntária de gestão: ela não substitui licença nenhuma, mas cria o sistema que garante que as licenças estejam válidas, as condicionantes sejam cumpridas e os prazos não passem em branco.</p>"
+  },
+  {
+   "pergunta": "O que são aspectos e impactos ambientais?",
+   "resposta": "<p>O <strong>aspecto</strong> é o elemento da atividade da empresa que interage com o meio ambiente — consumo de água, geração de resíduo, emissão atmosférica. O <strong>impacto</strong> é a consequência desse aspecto: esgotamento do recurso, contaminação do solo, poluição do ar. Identificar os dois e avaliar quais são significativos é o requisito que sustenta todo o resto da norma. Veja <a href=\"/como-identificar-aspecto-impacto-ambiental/\">como identificar aspecto e impacto ambiental</a>.</p>"
+  },
+  {
+   "pergunta": "Quem emite o certificado ISO 14001?",
+   "resposta": "<p>Um <strong>organismo de certificação acreditado</strong> — no Brasil, pelo Inmetro. A consultoria prepara a empresa; o organismo audita e emite o certificado, que vale três anos com auditorias de manutenção anuais. Por regra de acreditação, quem consulta não pode certificar.</p>"
+  },
+  {
+   "pergunta": "Já existe ISO 14001:2026 publicada?",
+   "resposta": "<p>Ainda não. A versão certificável hoje é a <strong>ISO 14001:2015</strong> com a Emenda 1 de 2024 (mudanças climáticas no contexto). A nova revisão está em elaboração junto com a ISO 9001; quando houver FDIS publicada, a transição terá prazo definido pelo comitê. Até lá, projetos seguem a 2015.</p>"
+  },
+  {
+   "pergunta": "Quais os passos para obter a certificação ISO 14001?",
+   "resposta": "<p>Em linha geral: diagnóstico, escopo e contexto, <strong>LAIA</strong> e requisitos legais, controles operacionais, auditoria interna e análise crítica, depois auditoria de certificação em duas fases. <a href=\"/iso-14001/#o-processo-de-implementacao-da-iso-14001\">Prazo e etapas neste guia</a>; LAIA: <a href=\"/como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa/\">levantamento de aspectos e impactos</a>.</p>"
+  }
+ ]
+}

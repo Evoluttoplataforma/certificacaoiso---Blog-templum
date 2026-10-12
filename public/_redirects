@@ -118,17 +118,10 @@
 # Diferente do bloco acima: aqui os dois posts têm conteúdo DIFERENTE (não é dupe idêntico) —
 # escolhido o mais aprofundado de cada par (diagnóstico da queda de tráfego, ago/2026).
 #
-# 21/08/2026, sobre o par do 14001: o 301 estava certo, mas ainda havia 30 posts com link
-# EDITORIAL para /iso-14001/, todos gastando um salto de redirecionamento. Os links foram
-# reapontados no banco para /iso-14001-2/. Números que sustentam a escolha do destino:
-# /iso-14001/ tinha 750 palavras, posição média 13,1 e 84 cliques em 15.783 impressões;
-# /iso-14001-2/ tem 3.431 palavras, posição 4,7 e 1.478 cliques em 170.106.
-# A URL feia (o "-2" é resíduo de duplicata do WordPress) fica como destino de propósito:
-# mover a página forte custaria risco em 170 mil impressões para ganhar um endereço bonito.
-# Lição para o próximo par: antes de escrever regra nova, `grep` neste arquivo — o do
-# 14001 já existia e eu escrevi uma duplicata.
-/iso-14001/    /iso-14001-2/   301
-/iso-14001     /iso-14001-2/   301
+# 12/10/2026 SERP head term "certificação iso 14001": canonical limpo /iso-14001/
+# (conteúdo forte que estava em /iso-14001-2/). Worker + regras abaixo mantêm 301 do legado.
+/iso-14001-2/    /iso-14001/   301
+/iso-14001-2     /iso-14001/   301
 /pbqp-h-2/     /pbqp-h/        301
 /pbqp-h-2      /pbqp-h/        301
 
@@ -182,8 +175,8 @@
 /wp-content/uploads/2016/12/Procedimento-Execucao-de-Servico-Colocacao-de-janela.pdf                /pbqp-h-o-que-sao-servicos-controlados/           301
 /wp-content/uploads/2016/12/Inspecao-de-Servico-Janela-Sem-Contramarco.pdf                         /pbqp-h-o-que-sao-servicos-controlados/           301
 /wp-content/uploads/2016/11/Levantamento-de-perigos-e-riscos-a-seguranca-e-saude-ocupacional.pdf    /perigos-e-riscos-na-ohsas-18001/                 301
-/wp-content/uploads/2018/11/e-book-ISO-14001.pdf                                                   /iso-14001-2/                                     301
-/wp-content/uploads/2021/07/ISO-14001.pdf                                                          /iso-14001-2/                                     301
+/wp-content/uploads/2018/11/e-book-ISO-14001.pdf                                                   /iso-14001/                                     301
+/wp-content/uploads/2021/07/ISO-14001.pdf                                                          /iso-14001/                                     301
 /wp-content/uploads/2023/10/Ebook-Programa-Brasileiro-da-Qualidade-e-Produtividade-do-Habitat-PBQP-H.pdf  /form/?utm_source=blog&utm_medium=isca-301&origem=isca-301&utm_campaign=e-book-guia-pbqp-h&norma=PBQP-H             301
 /wp-content/uploads/2021/07/ISO-para-empresarios.pdf                          /form/?utm_source=blog&utm_medium=isca-301&origem=isca-301&utm_campaign=iso-para-empresarios  301
 /wp-content/uploads/2021/04/Webinar-Beneficios-do-uso-do-Asana.pdf            /form/?utm_source=blog&utm_medium=isca-301&origem=isca-301&utm_campaign=webinar-beneficios-do-uso-do-asana  301

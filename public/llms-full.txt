@@ -45,7 +45,7 @@
 ## Guias das normas
 
 - [ISO 9001](https://certificacaoiso.com.br/iso-9001/): sistema de gestão da qualidade, requisitos, custo, prazo e como certificar.
-- [ISO 14001](https://certificacaoiso.com.br/iso-14001-2/): SGA, certificação, LAIA, requisitos legais, consultoria x certificadora.
+- [Certificação ISO 14001](https://certificacaoiso.com.br/iso-14001/): SGA, certificação, LAIA, requisitos legais, consultoria x certificadora.
 - [LAIA: aspectos e impactos](https://certificacaoiso.com.br/como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa/): passo a passo e significância ISO 14001.
 - [Aspecto x impacto ambiental](https://certificacaoiso.com.br/como-identificar-aspecto-impacto-ambiental/): diferença e matriz causa/efeito.
 - [ISO 45001](https://certificacaoiso.com.br/iso-45001/): hub SGSSO reescrito, cluster certificação, NR-1/PGR e NBR 2024.
