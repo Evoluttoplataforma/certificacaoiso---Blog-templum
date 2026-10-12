@@ -12,18 +12,46 @@ Duas metas em paralelo:
 | certificação iso 9001 | ~880–1k | 28 | **26** | `/iso-9001/` (hub) | Cannibalização: pillar certificação existe (`/passo-a-passo-certificacao-iso-9001/`, pos. 24–35 em variantes) mas o hub “rouba” a head term |
 | quanto custa certificação iso 9001 | ~90–170 | **6** | **26** | `/iso-9001/` | Página certa (`/quanto-custa-iso-9001/`) rankeia outras queries, não esta (KD baixíssimo = quick win) |
 | certificação iso 27001 | **390** | **23** | **não rankeia** | — | Hub `/iso-27001/` rankeia só “27001” genérico (pos. ~25); pillar longo não recebe intent “certificação” |
-| certificação iso 14001 | ~260–320 | 23 | **22** | `/iso-14001-2/` | Quase página 1, mas **slug fraco** e título não lidera com “Certificação ISO 14001” |
+| certificação iso 14001 | ~260–320 | 23 | **22** (export 11/out) | **`/iso-14001/`** (Trilha A 12/out) | Monitorar posição após 301; reforçar FAQ distribuído + H2 tipo prompt |
 | certificação iso 45001 | ~140 | **20** | **não rankeia** | — | Pillar `/passo-a-passo-certificacao-iso-45001/` existe; hub compete e não ancora a head term |
 
 **SERP genérico “certificação iso” (export URLs):** top 10 mistura certificadoras (Vanzolini, Bureau Veritas), gov/Inmetro, blogs (Gupy, Qualyteam, QMS Brasil). **certificacaoiso.com.br não aparece no top 10** desse SERP amplo. Para normas específicas, o padrão é URL com **`certificacao-iso-XXXX`** ou título explícito “Certificação ISO …”.
 
 **Regra de ouro (14 dias):** **1 URL canônica por intent “certificação + norma”**. Hub = o que é / requisitos; pillar = como certificar, prazo, custo, organismo. **Nunca citar concorrentes** em copy pública.
 
-Planilhas:
+Planilhas e referências:
 
 - **`scripts/audit-serp-head-terms-br-2026-10-12.csv`**: head terms, posição, URL atual vs canônica alvo.
 - **`scripts/audit-geo-semrush-trabalho.csv`**: GEO / prompts IA (gerar com `_build-audit-geo-semrush-master.mjs`).
+- **`scripts/referencia-deo-geo-conteudo.md`**: checklist DEO (Answer First, FAQ híbrido, chunks RAG).
 - **`scripts/plano-geo-14-dias-2026-10.md`**: este arquivo.
+
+**Materiais Desktop (Semrush, 12/out):** `completeLinks.csv` (mapa de clusters Blog da Qualidade, uso interno), `blogdaqualidade_com_br__SCHEMA.json` (benchmark schema home), `bureauveritas.com Positions` (benchmark SERP certificação 9001).
+
+**Status 12/out:** Trilha A SERP **publicada** (redirects, slug `/iso-14001/`, pillars certificação). Positions export ainda reflete URLs antigas até reindexar.
+
+**Status 12/out (lote DEO):** **19 URLs** no Supabase com FAQ distribuído (`h3` + resposta curta) e tabela **consultoria × organismo × equipe interna** (sem citar marcas). Pillars 9001/27001/45001/14001 + custos + cluster operacional (mapeamento, 7.5, 5W2H, 5 Porquês, causa raiz, auditoria interna, 5S, aspectos ambientais). Scripts: `_build-lote-deo-2026-10-12.mjs`, `_publish-lote-deo.mjs`. `npm run build` OK.
+
+---
+
+## Trilha C · DEO / engenharia de conteúdo (contínuo, alinha ao vídeo GEO)
+
+Objetivo: cada URL P0/P1 vira **vários chunks citáveis** (RAG), não uma keyword repetida 20 vezes.
+
+| Prática DEO | Já no blog? | Próximo passo |
+|-------------|-------------|---------------|
+| Answer First (1ª frase = resposta) | Sim em pillars novos (`#respostas-diretas`, 1º `<p>`) | Revisar **top 50 URLs** da planilha GEO: 1º parágrafo após cada H2 |
+| H2/H3 = pergunta natural | Parcial (hubs GEO sim; legado não) | Renomear H2 em lote: prompt Semrush → título de seção |
+| FAQ híbrido (corpo + rodapé) | Rodapé via CMS + schema; **pouco FAQ no meio** | A cada 2–3 H2, inserir `h3` pergunta + 2 frases (objeção/dor) |
+| Listas e tabelas HTML | Sim em hubs/pillars | Tabela consultoria x organismo nos 4 pillars certificação |
+| FAQPage JSON-LD | Automático se `faq` no CMS | Alinhar pergunta/resposta ao corpo; respostas **curtas** no schema |
+| llms.txt | Sim | Atualizar após cada pillar |
+
+**Benchmark Bureau Veritas (Positions BR):** mesma URL comercial rankeia **pos. 5–15** para `certificação iso 9001`, `quanto custa certificação iso 9001`, `certificado iso 9001`, etc. Não competir como certificadora: competir com **guia imparcial** (passo a passo + custo + organismo Inmetro) e chunks por pergunta.
+
+**Benchmark Blog da Qualidade (`completeLinks.csv`):** navegação por **ferramentas de gestão** (documentos, NC, auditorias, processos, indicadores). Reforça nosso **cluster operacional** (mapeamento, 7.5, 5W2H, auditoria interna) como resposta informacional, sem citar marcas na copy.
+
+**Lighthouse (home, mobile):** SEO **100**; Performance ~**67** inflada por **extensões Chrome** (Treemap 12 MiB de extensions). Repetir audit em **janela anônima**. Melhorias reais do site (P2 técnico): reduzir cadeia **Google Fonts**, `srcset`/resize thumbs **categoria** (~80 KiB). Não trava GEO; melhora crawl e UX.
 
 ---
 
@@ -46,15 +74,16 @@ Planilhas:
 2. **Alias 301** `/certificacao-iso-27001/` → pillar etapas/prazo/custo (URL curta igual aos concorrentes no SERP).
 3. Opcional 9001/45001: alias `/certificacao-iso-9001/` e `/certificacao-iso-45001/` → passo a passo respectivo.
 
-### A2 · On-page por pillar (dias 2–3)
+### A2 · On-page por pillar (dias 2–3) · checklist DEO
 
-Para **cada** URL canônica acima:
+Para **cada** URL canônica acima (detalhe em `referencia-deo-geo-conteudo.md`):
 
 - **`seo_title`** começa com **“Certificação ISO XXXX”** (ou “Quanto custa a certificação ISO XXXX”).
-- **Primeiro `<p>` + `#respostas-diretas`**: resposta em 2–3 frases (o que é certificação, quem emite, prazo típico, link custo).
-- **FAQ** espelhando People Also Ask do Semrush (9001: o que é / quanto custa; 14001: como conseguir / como certificar; 27001: benefícios / etapas).
-- **H2** “Como obter a certificação ISO XXXX” com lista numerada (estágios 1 e 2 quando aplicável).
-- **Bloco “Consultoria x organismo certificador”** (E-E-A-T; alinha com gov e certificadoras sem citá-las).
+- **Answer First:** primeiro `<p>` + `#respostas-diretas` (bullets = chunks RAG).
+- **FAQ CMS** = mesmas perguntas críticas do corpo (FAQPage no JSON-LD).
+- **FAQ distribuído:** 2–4 `h3` pergunta no meio do texto (objeções PAA Semrush).
+- **H2 em formato prompt:** ex. “Como obter a certificação ISO 27001 no Brasil?”
+- **Tabela** consultoria x organismo x certificado (HTML simples).
 
 **Hubs (`iso-9001`, `iso-27001`, `iso-45001`, `iso-14001`):**
 
@@ -100,8 +129,8 @@ Para **cada** URL canônica acima:
 |------------|---------------|----------|
 | **P0** | Canonical + on-page certificação 9001/27001/14001/45001; quanto custa 9001 | Custo 27001, prompts certificação 27001/27701 90+ |
 | **P1** | Internal link + redirects; 14001 subir para top 15 | Ferramentas, mapeamento, auditoria 9001 |
-| **P2** | Vídeo + off-site templum.com.br | FSSC, SASSMAQ, 14001 aspectos |
-| **P3** | Backlinks (parceiros, guest posts) | Backlog planilha |
+| **P2** | Vídeo + off-site templum.com.br | FSSC, SASSMAQ, 14001 aspectos; **FAQ distribuído** em top planilha GEO |
+| **P3** | Backlinks (parceiros, guest posts) | Backlog planilha; perf: fonts + imagens categoria |
 
 Colunas **`acao`** (planilha GEO): `upgrade_geo` · `refinar_geo` · `nova_pagina` · `monitorar_citacao` · `ignorar_ruido`
 
