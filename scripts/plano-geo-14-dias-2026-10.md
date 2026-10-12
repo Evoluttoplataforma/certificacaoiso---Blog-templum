@@ -34,6 +34,8 @@ Planilhas e referências:
 
 **Status 12/out (Trilha A3):** `llms.txt` / `llms-full.txt` com pillar certificação antes do hub (9001/27001/45001); DEO em fluxograma + checklist; **ISO 14001** reforço certificação (~4 h3); links satélite `iso-14001-2` → `/iso-14001/`. Scripts: `_build-trilha-a3-2026-10-12.mjs`, `_publish-trilha-a3.mjs`.
 
+**Status 12/out (cluster 27001/27701):** **14 URLs** com FAQ distribuído, tabela consultoria × organismo (27701 pillars), triângulo hub → certificar/custo/requisitos, interlinks satélites. Scripts: `_build-lote-27001-27701-2026-10-12.mjs`, `_publish-lote-27001-27701.mjs`.
+
 ---
 
 ## Trilha C · DEO / engenharia de conteúdo (contínuo, alinha ao vídeo GEO)
