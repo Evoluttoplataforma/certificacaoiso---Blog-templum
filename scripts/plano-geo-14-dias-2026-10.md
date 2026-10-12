@@ -32,6 +32,8 @@ Planilhas e referências:
 
 **Status 12/out (lote DEO):** **19 URLs** no Supabase com FAQ distribuído (`h3` + resposta curta) e tabela **consultoria × organismo × equipe interna** (sem citar marcas). Pillars 9001/27001/45001/14001 + custos + cluster operacional (mapeamento, 7.5, 5W2H, 5 Porquês, causa raiz, auditoria interna, 5S, aspectos ambientais). Scripts: `_build-lote-deo-2026-10-12.mjs`, `_publish-lote-deo.mjs`. `npm run build` OK.
 
+**Status 12/out (Trilha A3):** `llms.txt` / `llms-full.txt` com pillar certificação antes do hub (9001/27001/45001); DEO em fluxograma + checklist; **ISO 14001** reforço certificação (~4 h3); links satélite `iso-14001-2` → `/iso-14001/`. Scripts: `_build-trilha-a3-2026-10-12.mjs`, `_publish-trilha-a3.mjs`.
+
 ---
 
 ## Trilha C · DEO / engenharia de conteúdo (contínuo, alinha ao vídeo GEO)

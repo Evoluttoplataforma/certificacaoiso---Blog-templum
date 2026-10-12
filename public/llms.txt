@@ -47,13 +47,16 @@
 
 ## Guias das normas
 
-- [ISO 9001](https://certificacaoiso.com.br/iso-9001/): sistema de gestão da qualidade, requisitos, custo, prazo e como certificar.
+- [Certificação ISO 9001: passo a passo](https://certificacaoiso.com.br/passo-a-passo-certificacao-iso-9001/): do diagnóstico ao certificado; URL curta /certificacao-iso-9001/.
+- [ISO 9001 (hub)](https://certificacaoiso.com.br/iso-9001/): o que é a norma, requisitos e 2026 (certificação no passo a passo).
 - [Certificação ISO 14001](https://certificacaoiso.com.br/iso-14001/): SGA, como obter certificado, LAIA, requisitos legais, consultoria x certificadora, revisão 2026.
 - [LAIA: levantamento de aspectos e impactos](https://certificacaoiso.com.br/como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa/): passo a passo ISO 14001, significância e controles.
 - [Aspecto x impacto ambiental](https://certificacaoiso.com.br/como-identificar-aspecto-impacto-ambiental/): diferença, matriz causa/efeito e critérios de significância.
-- [ISO 45001](https://certificacaoiso.com.br/iso-45001/): SGSSO, requisitos, NBR 2024, NR-1/PGR, certificação, custo e consultoria.
+- [Certificação ISO 45001: passo a passo](https://certificacaoiso.com.br/passo-a-passo-certificacao-iso-45001/): 7 etapas, PGR, prazo e organismo acreditado.
+- [ISO 45001 (hub)](https://certificacaoiso.com.br/iso-45001/): SGSSO, requisitos, NBR 2024, NR-1/PGR e consultoria.
 - [ISO 45001 perigos e riscos](https://certificacaoiso.com.br/iso-45001-perigos/): 6.1, hierarquia, PGR/NR-1, psicossocial e cluster certificação.
-- [ISO 27001](https://certificacaoiso.com.br/iso-27001/): hub SGSI (2022), respostas diretas, Anexo A/SoA, gestão de incidentes, certificação, prazo e 27701.
+- [Certificação ISO 27001: etapas, prazo e custo](https://certificacaoiso.com.br/certificacao-iso-27001-etapas-prazo-custo/): estágios 1 e 2; URL curta /certificacao-iso-27001/.
+- [ISO 27001 (hub)](https://certificacaoiso.com.br/iso-27001/): SGSI 2022, Anexo A/SoA, incidentes e 27701.
 - [ISO 27701](https://certificacaoiso.com.br/iso-27701-2025-o-que-muda-independencia-da-iso-27001/): hub SGPI 2025, respostas diretas, certificação sem 27001 obrigatória, LGPD e Anexo A.
 - [ISO 37001](https://certificacaoiso.com.br/o-que-e-a-iso-37001/): sistema de gestão antissuborno, edição 2025 e prazo de transição.
 - [ISO 42001](https://certificacaoiso.com.br/iso-42001/): gestão de inteligência artificial.
