@@ -86,12 +86,21 @@
 - [Não conformidade](https://certificacaoiso.com.br/o-que-e-nao-conformidade/): definição (ISO 9000), passos de tratamento e ligação com requisito 10.2.
 - [As 7 ferramentas da qualidade](https://certificacaoiso.com.br/as-sete-ferramentas-da-qualidade/): Ishikawa, Pareto, histograma, fluxograma, carta de controle e uso na melhoria ISO 9001.
 - [Mapeamento de processos e ISO 9001](https://certificacaoiso.com.br/mapeamento-de-processos-e-a-iso-9001/): requisito 4.4, Tartaruga turbinada e relação com fluxograma.
+- [Exemplos de mapeamento de processos (ISO 9001)](https://certificacaoiso.com.br/exemplos-mapeamento-de-processos-iso-9001/): passo a passo, contas a pagar, padaria, RH, ferramentas e BPM.
+- [Gestão de processos ISO 9001:2026 (4.4)](https://certificacaoiso.com.br/gestao-processos-iso-9001-2026-requisito-4-4/): operação x estratégia, tartaruga, cadeia de valor e checklist.
+- [Controle de documentos (prática 7.5)](https://certificacaoiso.com.br/controle-de-documentos/): lista mestra, versão, retenção e teste de 10 minutos.
+- [Requisito 7.5 ISO 9001](https://certificacaoiso.com.br/iso-9001-requisitos-7-5-informacao-documentada/): gestão de documentos digitais/físicos, GED x SGQ, respostas diretas.
+- [5W2H e plano de ação ISO 9001](https://certificacaoiso.com.br/5w2h-plano-de-acao-iso-9001/): método, planilha e 10.2/10.3.
+- [5 Porquês e causa raiz](https://certificacaoiso.com.br/cinco-porques-analise-de-causa-raiz/): investigação antes da ação corretiva.
+- [Auditoria interna ISO 9001: ferramentas](https://certificacaoiso.com.br/auditoria-interna-iso-9001-ferramentas/): melhores práticas e checklist por processo.
 - [Qualificação de fornecedores (8.4)](https://certificacaoiso.com.br/a-qualificacao-de-fornecedores-segundo-a-iso-90012015/): critérios e etapas; complemento de homologação de fornecedores.
 - [Fluxograma de processo](https://certificacaoiso.com.br/o-que-e-fluxograma-de-processos/): o que é, símbolos, tipos linear e funcional, passo a passo, ferramentas e ligação com ISO 9001 (4.4) e mapeamento.
 - [Requisitos da ISO 27001](https://certificacaoiso.com.br/requisitos-da-iso-27001/): cláusulas 4 a 10 com a evidência esperada em cada uma.
 - [Consultoria ISO 27001](https://certificacaoiso.com.br/consultoria-iso-27001/): o que a consultoria entrega, o que fica com a equipe e como escolher.
 - [Como implementar a ISO 27001](https://certificacaoiso.com.br/como-implementar-a-iso-27001/): as 11 etapas na ordem que funciona.
 - [Certificação ISO 27001: etapas, prazo e custo](https://certificacaoiso.com.br/certificacao-iso-27001-etapas-prazo-custo/): respostas diretas, estágios 1 e 2, prazo, custo (27006-1) e incidentes no estágio 2.
+- [Quanto custa a ISO 27001](https://certificacaoiso.com.br/quanto-custa-iso-27001/): consultoria, organismo, 27006-1 e ciclo de 3 anos.
+- [Quanto custa a ISO 27701](https://certificacaoiso.com.br/quanto-custa-iso-27701/): SGPI, consultoria e certificação separadas.
 - [ISO 27001 e ISO 27701](https://certificacaoiso.com.br/qual-a-relacao-da-iso-27001-com-a-iso-27701/): diferença entre segurança da informação e privacidade.
 - [ISO 27001 para pequenas empresas](https://certificacaoiso.com.br/iso-27001-para-pequenas-empresas/): requisitos-chave, escopo e SoA enxutos para PME.
 - [Treinamento ISO 27001](https://certificacaoiso.com.br/treinamento-iso-27001/): trilha no blog, vídeos do canal Templum no YouTube e ordem de estudo para SGSI/ISMS.

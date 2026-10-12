@@ -1,0 +1,38 @@
+{
+  "title": "Gestão de processos na ISO 9001:2026: requisito 4.4 e o processo que serve a operação",
+  "seo_title": "Gestão de processos ISO 9001:2026: requisito 4.4",
+  "seo_description": "O requisito 4.4 da ISO 9001:2026 pede processo que serve a operação. Mapear não é anotar o passo a passo de quem executa.",
+  "tldr": "Na ISO 9001:2026, gestão de processos começa antes do fluxograma. Sentar do lado de alguém e escrever o passo a passo gera instrução de trabalho, não mapa. O processo existe para servir a operação, e a operação existe para servir a estratégia. Sem os seis recursos (instalação, tecnologia, força de trabalho, capacidade, organização e fornecedores) e sem os cinco critérios (custo, confiabilidade, flexibilidade, qualidade e rapidez), o desenho não tem para quem servir. O requisito 4.4 pede processos necessários à operação, entradas, saídas, sequência, critérios, recursos, responsabilidades, riscos e melhoria. Processo principal entrega valor ao cliente. Processo de apoio continua mesmo se o ramo mudar. A tartaruga organiza o todo. O diagrama vem depois. A saída de um processo precisa ser a entrada do seguinte.",
+  "tags": [
+    "ISO 9001:2026",
+    "gestão de processos",
+    "requisito 4.4",
+    "mapeamento de processos",
+    "cadeia de valor",
+    "abordagem de processo",
+    "gestão da qualidade"
+  ],
+  "faq": [
+    {
+      "pergunta": "A estratégia se adapta à operação ou a operação se adapta à estratégia?",
+      "resposta": "A operação serve a estratégia. Sempre. Missão, visão, valores e direcionamento dizem aonde a empresa quer chegar. A operação organiza os recursos para isso acontecer. Se a estratégia muda (crescer, ampliar a base, aumentar o portfólio ou manter), a operação precisa mudar junto. O contrário, operação fixa e estratégia que se encaixa depois, explica mapa bonito que não move resultado."
+    },
+    {
+      "pergunta": "Mapear processo é sentar com a pessoa e anotar como ela faz?",
+      "resposta": "Não. Isso vira instrução de trabalho do que já acontece, e ainda corre o risco de a pessoa omitir ou inventar o que faz, por medo. Mapeamento começa quando a empresa entende como opera (ou como deveria operar) e dispõe os processos para essa operação acontecer. O passo a passo de execução vem depois, vinculado ao processo, para quem executa não ficar em dúvida."
+    },
+    {
+      "pergunta": "Se a direção não quiser mudar, o mapa fica parado em que estágio?",
+      "resposta": "No primeiro estágio, ou antes dele. Maturidade de processo só sobe quando a operação evolui junto. Sem abertura para conectar estratégia, recursos e processos, a empresa não sai da neutralidade interna: no máximo, os erros graves diminuem. Começar pelo processo mais simples ajuda a mostrar resultado antes de pedir uma mudança grande."
+    },
+    {
+      "pergunta": "Entrada que está dentro de um sistema ou de uma automação precisa aparecer no mapa?",
+      "resposta": "Sim. Entrada lógica não deixa de ser entrada porque ninguém vê o papel. Dado de cliente, rota, status em software ou gatilho de automação entra no processo do mesmo jeito que o móvel embalado ou a mala de ferramentas. Se a automação some do mapa, a sequência quebra na hora em que o auditor, ou o próprio time, pergunta de onde veio aquele dado."
+    },
+    {
+      "pergunta": "O que vem primeiro: tartaruga, fluxograma ou BPMN?",
+      "resposta": "A tartaruga. Ela deixa visíveis objetivo, entradas, saídas, recursos, responsabilidades, indicadores e riscos, que são os elementos da operação. Fluxograma ou BPMN vêm depois, quando esses elementos já estão definidos. Começar pelo diagrama parece mais fácil e fica mais difícil de enxergar o todo."
+    }
+  ],
+  "published_at": "2026-10-12T16:00:00.000Z"
+}

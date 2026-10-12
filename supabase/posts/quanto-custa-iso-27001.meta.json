@@ -1,0 +1,29 @@
+{
+  "title": "Quanto custa a ISO 27001: consultoria, certificação e SGSI",
+  "seo_title": "Quanto custa a ISO 27001: consultoria e certificação (27006-1)",
+  "seo_description": "Quanto custa ISO 27001: implantação do SGSI, consultoria, auditoria do organismo à parte e manutenção em 3 anos. O que encarece escopo, sites e SoA.",
+  "tldr": "O custo da ISO 27001 soma implantação (consultoria e/ou equipe interna), auditoria do organismo (dias conforme 27006-1) e manutenções no ciclo de três anos. Consultoria e certificadora são contratos separados.",
+  "tags": [
+    "ISO 27001",
+    "custo",
+    "consultoria",
+    "certificação",
+    "SGSI",
+    "27006-1"
+  ],
+  "published_at": "2026-10-12T16:00:00.000Z",
+  "faq": [
+    {
+      "pergunta": "Quanto custa implementar a ISO 27001?",
+      "resposta": "<p>Não há tabela única. Inclui implantação do SGSI e auditoria do organismo por dias de auditoria, mais manutenção anual e recertificação.</p><p><a href=\"#duas-contas\">Duas contas</a>.</p>"
+    },
+    {
+      "pergunta": "Qual o preço da certificação ISO 27001?",
+      "resposta": "<p>O organismo cobra por dias (ISO/IEC 27006-1), conforme pessoas no escopo, sites e complexidade. Peça orçamento do ciclo de 3 anos.</p>"
+    },
+    {
+      "pergunta": "Consultoria e certificação ISO 27001 são cobradas juntas?",
+      "resposta": "<p>Não. Quem consulta não pode certificar a mesma empresa no mesmo ciclo.</p>"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Exemplos de mapeamento de processos na ISO 9001: banco por área",
+  "seo_title": "Exemplos de mapeamento de processos: passo a passo e modelos ISO 9001",
+  "seo_description": "Exemplos de mapeamento de processos passo a passo: contas a pagar, padaria, vendas, RH, produção. Ferramentas, planilha e requisito 4.4 da ISO 9001.",
+  "tldr": "Banco de exemplos de mapeamento de processos com início, etapas e fim por área (financeiro, padaria, comercial, RH, produção, TI, logística). Inclui passo a passo em 7 etapas, ferramentas de diagramação e ligação com o requisito 4.4 da ISO 9001.",
+  "tags": ["mapeamento de processos", "ISO 9001", "fluxograma", "gestão de processos", "exemplos", "requisito 4.4"],
+  "published_at": "2026-10-12T15:00:00.000Z",
+  "faq": [
+    {
+      "pergunta": "Como fazer mapeamento de processos passo a passo?",
+      "resposta": "<p>Escolha um processo, defina início e fim, observe a operação, liste etapas e responsáveis, desenhe o fluxograma, valide com executores e publique versão controlada na lista mestra.</p><p><a href=\"#passo-a-passo\">7 passos neste artigo</a>.</p>"
+    },
+    {
+      "pergunta": "Mapeamento de processos para que serve?",
+      "resposta": "<p>Serve para alinhar equipe, encontrar gargalos, padronizar entrega e evidenciar o requisito 4.4 da ISO 9001 (processos do SGQ definidos e atualizados).</p>"
+    },
+    {
+      "pergunta": "Existe exemplo de mapeamento de processos contas a pagar?",
+      "resposta": "<p>Sim: do recebimento da NF à aprovação, programação, pagamento e arquivamento. Veja o fluxo completo em <a href=\"#exemplo-contas-a-pagar\">contas a pagar</a>.</p>"
+    },
+    {
+      "pergunta": "Quais ferramentas usar para mapeamento de processos?",
+      "resposta": "<p>Planilha, fluxograma em Lucidchart, Miro, Draw.io ou BPM do ERP. A ISO 9001 exige controle de documento (7.5), não uma ferramenta específica.</p><p><a href=\"#ferramentas\">Comparativo resumido</a>.</p>"
+    }
+  ]
+}

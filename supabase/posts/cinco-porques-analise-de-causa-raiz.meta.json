@@ -1,0 +1,18 @@
+{
+  "title": "5 Porquês: análise de causa raiz na ISO 9001",
+  "seo_title": "5 Porquês: técnica de causa raiz e ISO 9001 (10.2)",
+  "seo_description": "Como fazer 5 Porquês, exemplo passo a passo, análise de causa raiz e ligação com ação corretiva na ISO 9001.",
+  "tldr": "5 Porquês investiga causa raiz antes da ação corretiva. Passo a passo, exemplo de atraso na entrega e uso no requisito 10.2 da ISO 9001.",
+  "tags": ["5 Porquês", "causa raiz", "ISO 9001", "ação corretiva", "ferramentas da qualidade"],
+  "published_at": "2026-10-12T15:00:00.000Z",
+  "faq": [
+    {
+      "pergunta": "O que é a técnica dos 5 Porquês?",
+      "resposta": "<p>Método de perguntar “por quê?” em sequência até identificar a causa raiz de um problema, antes de definir ação corretiva.</p>"
+    },
+    {
+      "pergunta": "5 Porquês e ISO 9001: onde entra?",
+      "resposta": "<p>No tratamento de não conformidade (10.2): investigar causa, agir e verificar eficácia. Registre a cadeia de por quês no registro de NC.</p>"
+    }
+  ]
+}
