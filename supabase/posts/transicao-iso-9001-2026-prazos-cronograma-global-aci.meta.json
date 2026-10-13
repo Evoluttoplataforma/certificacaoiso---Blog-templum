@@ -1,0 +1,29 @@
+{
+  "title": "Transição ISO 9001:2026: prazos e cronograma Global ACI",
+  "seo_title": "Transição ISO 9001:2026: prazos Global ACI até 2029",
+  "seo_description": "Cronograma oficial da transição ISO 9001:2026 (Global ACI-TECH-3-TR): marcos 2027, 2028 e 30/09/2029. O que fazer no Brasil e como preparar o SGQ.",
+  "tldr": "A ISO 9001:2026 foi publicada em 16/09/2026. Prazos globais de acreditação estão no Global ACI-TECH-3-TR 2029-09-30 (M): ABs prontas até 31/03/2027, CABs declaram até 30/06/2027, novas certificações iniciais só 2026 após 31/03/2028, fim da transição 30/09/2029. Faça gap analysis e alinhe com a certificadora.",
+  "published_at": "2026-10-13T14:00:00+00:00",
+  "faq": [
+    {
+      "pergunta": "Qual é o prazo final da transição ISO 9001:2026?",
+      "resposta": "<p>O arranjo Global ACI fixa o fim do período de transição em <strong>30 de setembro de 2029</strong> (36 meses após o mês de publicação). Até lá, a organização certificada deve concluir a auditoria de transição para a ISO 9001:2026 com o organismo certificador.</p>"
+    },
+    {
+      "pergunta": "Ainda posso obter certificação ISO 9001:2015?",
+      "resposta": "<p>Novas certificações <strong>iniciais</strong> na ISO 9001:2015 não podem ser emitidas após <strong>31 de março de 2028</strong>. Quem já é certificado permanece no ciclo até migrar dentro do prazo global.</p>"
+    },
+    {
+      "pergunta": "O que é o documento Global ACI-TECH-3-TR 2029-09-30 (M)?",
+      "resposta": "<p>É o requisito técnico Global ACI que define prazos de transição acreditada para a ISO 9001:2026 (sucessor do arranjo antes associado ao IAF). PDF oficial linkado neste artigo.</p>"
+    },
+    {
+      "pergunta": "Preciso reescrever todo o manual na transição?",
+      "resposta": "<p>Não necessariamente. A Global ACI descreve mudanças como evolutivas; priorize cláusulas com requisito alterado (cultura, 6.1, 6.3, etc.) e evidência operacional. Veja <a href=\"/guia-definitivo-das-mudancas-iso-2026/\">mudanças da 2026</a>.</p>"
+    },
+    {
+      "pergunta": "Como a auditoria interna ajuda na transição?",
+      "resposta": "<p>O programa 9.2 deve amostrar as cláusulas novas antes da auditoria de transição externa. Use <a href=\"/checklist-preparacao-auditoria-interna-iso/\">checklist de auditoria interna</a> atualizada para 2026.</p>"
+    }
+  ]
+}
