@@ -103,7 +103,7 @@ const SLUGS = [
   "quanto-custa-iso-27001",
   "as-sete-ferramentas-da-qualidade",
   "o-que-e-nao-conformidade",
-  "a-qualificacao-de-fornecedores-segundo-a-iso-90012015",
+  "qualificacao-de-fornecedores-iso-9001-2026-requisito-8-4",
   "como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa",
   "como-identificar-aspecto-impacto-ambiental",
 ];

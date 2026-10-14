@@ -1,0 +1,8 @@
+data_foto,dia_plano,periodo_gsc_inicio,periodo_gsc_fim,cliques_7d,impressoes_7d,ctr_7d,pos_media_7d,cliques_7d_periodo_anterior,delta_cliques_pct,acao_publicada_desde_foto_anterior,responsavel,observacoes
+2026-10-13,0,2026-07-12,2026-10-11,,,,,,,"Baseline 90d site: 11773 cliques 1378621 imp. Ultimos 14d: 2371 vs 2466 cliques (-4%). Pilar transicao Global ACI 13/out.",,
+2026-10-16,3,,,,,,,,,"Indexacao transicao 2026; redirects 14001",,
+2026-10-18,5,,,,,,,,,"Patch cannibalizacao hub iso-9001",,
+2026-10-20,7,,,,,,,,,"DEO/CTR 5s fluxograma 7 ferramentas",,
+2026-10-23,10,,,,,,,,,"Queries certificacao iso 9001",,
+2026-10-28,15,,,,,,,,,"Fornecedores + mapeamento DEO",,
+2026-11-02,20,,,,,,,,,"Decisao lote 2",,

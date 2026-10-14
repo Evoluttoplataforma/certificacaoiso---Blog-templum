@@ -80,6 +80,8 @@ export default {
       "/certificacao-iso-9001": "/passo-a-passo-certificacao-iso-9001/",
       "/certificacao-iso-45001": "/passo-a-passo-certificacao-iso-45001/",
       "/analise-de-causa-raiz": "/analise-de-causa-raiz-o-que-e-e-como-fazer/",
+      "/a-qualificacao-de-fornecedores-segundo-a-iso-90012015":
+        "/qualificacao-de-fornecedores-iso-9001-2026-requisito-8-4/",
     }[serpPath];
     if (serpTo) {
       const dest = new URL(url.toString());

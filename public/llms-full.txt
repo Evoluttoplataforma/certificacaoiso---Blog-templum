@@ -98,7 +98,7 @@
 - [5 Porquês e causa raiz](https://certificacaoiso.com.br/cinco-porques-analise-de-causa-raiz/)
 - [Auditoria interna ISO 9001: ferramentas](https://certificacaoiso.com.br/auditoria-interna-iso-9001-ferramentas/)
 - [Fluxograma de processo](https://certificacaoiso.com.br/o-que-e-fluxograma-de-processos/): símbolos, tipos e ISO 9001
-- [Qualificação de fornecedores 8.4](https://certificacaoiso.com.br/a-qualificacao-de-fornecedores-segundo-a-iso-90012015/)
+- [Qualificação de fornecedores ISO 9001:2026 (8.4)](https://certificacaoiso.com.br/qualificacao-de-fornecedores-iso-9001-2026-requisito-8-4/)
 - [Programa 5S](https://certificacaoiso.com.br/5s/)
 - [Checklist de preparação para auditoria interna](https://certificacaoiso.com.br/checklist-preparacao-auditoria-interna-iso/)
 - [Gestão de indicadores ISO 9001:2026 (6.2 e 9.1)](https://certificacaoiso.com.br/gestao-indicadores-iso-9001-2026-requisitos-6-2-e-9-1/)

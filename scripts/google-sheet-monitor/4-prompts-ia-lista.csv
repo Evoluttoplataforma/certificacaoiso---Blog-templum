@@ -1,0 +1,31 @@
+id,categoria,prompt,url_alvo_canonica,meta_citacao_ate_dia_20
+1,certificacao,Quais são os passos para obter a certificação ISO 9001 e quanto tempo costuma levar?,/passo-a-passo-certificacao-iso-9001/,sim
+2,certificacao,Quanto custa a certificação ISO 9001 no Brasil?,/quanto-custa-iso-9001/,sim
+3,certificacao,Qual o prazo de transição da ISO 9001:2026?,/transicao-iso-9001-2026-prazos-cronograma-global-aci/,sim
+4,certificacao,O que é Global ACI-TECH-3-TR transição ISO 9001 2026?,/transicao-iso-9001-2026-prazos-cronograma-global-aci/,sim
+5,certificacao,Como escolher organismo certificador ISO 9001 no Brasil?,/iso-9001/,opcional
+6,certificacao,Como fazer gap analysis ISO 9001?,/passo-a-passo-certificacao-iso-9001/,opcional
+7,certificacao,Quais etapas da certificação ISO 27001?,/certificacao-iso-27001-etapas-prazo-custo/,sim
+8,certificacao,Certificação ISO 45001 passo a passo,/passo-a-passo-certificacao-iso-45001/,sim
+9,certificacao,O que é certificação ISO?,/iso-9001/,opcional
+10,certificacao,Como preparar auditoria interna ISO 9001?,/auditoria-interna-iso-9001-ferramentas/,sim
+11,ferramentas,O que é ciclo PDCA e para que serve?,/as-sete-ferramentas-da-qualidade/ ou /o-que-e-o-ciclo-pdca/,opcional
+12,ferramentas,Como fazer diagrama de Ishikawa?,/as-sete-ferramentas-da-qualidade/,opcional
+13,ferramentas,Quando usar diagrama de Pareto?,/as-sete-ferramentas-da-qualidade/,opcional
+14,ferramentas,Sete ferramentas da qualidade quais são?,/as-sete-ferramentas-da-qualidade/,sim
+15,ferramentas,O que é fluxograma de processo?,/o-que-e-fluxograma-de-processos/,sim
+16,ferramentas,5 porquês análise de causa raiz,/cinco-porques-analise-de-causa-raiz/,opcional
+17,ferramentas,5W2H plano de ação,/5w2h-plano-de-acao-iso-9001/,opcional
+18,ferramentas,5S na empresa o que é,/5s/,opcional
+19,ferramentas,FMEA o que é passo a passo,,nao
+20,ferramentas,Melhoria contínua PDCA na ISO 9001,/as-sete-ferramentas-da-qualidade/,opcional
+21,operacao_iso,Gestão de fornecedores ISO 9001,/qualificacao-de-fornecedores-iso-9001-2026-requisito-8-4/,sim
+22,operacao_iso,Qualificação de fornecedores requisito 8.4,/controle-de-fornecedores-como-atender-ao-requisito-8-4-da-iso-9001-com-seguranca-clareza-e-eficiencia/,opcional
+23,operacao_iso,Política da qualidade exemplo ISO 9001,/iso-9001-requisitos-5-2-politica/,opcional
+24,operacao_iso,Lista mestra de documentos ISO 9001,/controle-de-documentos/,opcional
+25,operacao_iso,Mapeamento de processos ISO 9001,/mapeamento-de-processos-e-a-iso-9001/,sim
+26,operacao_iso,Não conformidade e ação corretiva ISO 9001,/o-que-e-nao-conformidade/,sim
+27,operacao_iso,Controle de documentos ISO 9001 7.5,/controle-de-documentos/,opcional
+28,operacao_iso,Revisão pela direção ISO 9001 9.3,/analise-critica-pela-direcao-requisito-9-3-iso-9001-2026/,opcional
+29,operacao_iso,Riscos e oportunidades cláusula 6.1 ISO 9001 2026,/riscos-e-oportunidades-iso-9001-2026-separacao-clausula-6-1/,opcional
+30,operacao_iso,Matriz de riscos ISO 9001,/mapeamento-de-processos-e-a-iso-9001/,opcional

@@ -10,7 +10,7 @@ const SLUGS = [
   "mapeamento-de-processos-e-a-iso-9001",
   "as-sete-ferramentas-da-qualidade",
   "o-que-e-nao-conformidade",
-  "a-qualificacao-de-fornecedores-segundo-a-iso-90012015",
+  "qualificacao-de-fornecedores-iso-9001-2026-requisito-8-4",
 ];
 
 for (const slug of SLUGS) {

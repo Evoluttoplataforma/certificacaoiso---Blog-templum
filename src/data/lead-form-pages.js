@@ -74,7 +74,7 @@ export const LEAD_FORM_PAGES = {
   "mapeamento-de-processos-e-a-iso-9001": { display: "ISO 9001", crm: "ISO 9001" },
   "as-sete-ferramentas-da-qualidade": { display: "ISO 9001", crm: "ISO 9001" },
   "o-que-e-nao-conformidade": { display: "ISO 9001", crm: "ISO 9001" },
-  "a-qualificacao-de-fornecedores-segundo-a-iso-90012015": { display: "ISO 9001", crm: "ISO 9001" },
+  "qualificacao-de-fornecedores-iso-9001-2026-requisito-8-4": { display: "ISO 9001", crm: "ISO 9001" },
 
   // --- fundo de funil da vertical de ISO 27001 (10/09/2026) ---
   // As três páginas em que o leitor já não está perguntando "o que é": está decidindo
