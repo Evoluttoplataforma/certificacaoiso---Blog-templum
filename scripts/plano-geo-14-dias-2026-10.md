@@ -38,7 +38,11 @@ Planilhas e referências:
 
 **Status 14/out (lote P1 PDCA):** `/o-que-e-o-ciclo-pdca/` versionado no repo, DEO (`deo-lote-plano-2026-10-14`), FAQ schema, links 5W2H/ISO 9001; HTML legado corrigido; `llms.txt` / `llms-full.txt`; Supabase patch via `_publish-lote-plano-p1-pdca-2026-10-14.mjs`. `npm run build` OK (1087 páginas).
 
-**Status 14/out (lote A2 hubs 45001/27001):** aviso “Quer certificar?” nos hubs (pillar + custo + alias curto); `seo_title`/`tldr` sem competir com head term; A3 em OHSAS→45001 e LGPD→27001. Script `_publish-lote-plano-a2-hubs-45001-27001-2026-10-14.mjs`.
+**Status 14/out (lote A2 hubs 45001/27001):** aviso “Quer certificar?” nos hubs (pillar + custo + alias curto); `seo_title`/`tldr` sem competir com head term; A3 em OHSAS→45001 e LGPD→27001. Script `_publish-lote-plano-a2-hubs-45001-27001-2026-10-14.mjs`. Git: `d701337`.
+
+**Status 14/out (lote A3 links):** 10 URLs: SGSI, Anexo A 27001, implementação (desafios), 27701/LGPD, SGI consultoria, SASSMAQ cluster; `iso-14001-2` → `/iso-14001/`; anchors certificação → pillars 9001/14001/45001/27001. Script `_publish-lote-plano-a3-links-2026-10-14.mjs`. Supabase + git `main`.
+
+**Status 14/out (A3 legado 14001-2 + NR-1):** guia ISO 2026, requisitos 9001 legado, aviso canônico em `iso-14001-2`; FAQ consultoria 14001 + SGI 9001/14001; levantamento aspectos/impactos (meta); cluster NR-1 (5 URLs) com anchor **certificação ISO 45001** → passo a passo antes do hub. **11 URLs** no Supabase. Script `_publish-lote-plano-a3-legado-nr1-2026-10-14.mjs`. Supabase + git `main`.
 
 **Status 12/out (45001 + operacional F2):** **12 URLs** no Supabase: cluster ISO 45001 (custo, hub, consultoria, perigos, NR-1, requisitos, passo a passo) + operacional Semrush (5W2H riscos/oportunidades, mapeamento+6.1, fluxograma+BPM, arquivamento 7.5, checklist auditoria interna). Marcador `deo-lote-45001-operacional-2026-10-12`. **301** `/analise-de-causa-raiz/` → slug longo no Worker. Scripts: `_build-lote-45001-operacional-2026-10-12.mjs`, `_publish-lote-45001-operacional.mjs`. `npm run build` OK.
 
