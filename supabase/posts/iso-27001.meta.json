@@ -1,8 +1,8 @@
 {
-  "title": "ISO 27001: o que é, requisitos e como certificar (2022)",
-  "seo_title": "ISO 27001: o que é, requisitos, SGSI e como certificar",
-  "seo_description": "ISO 27001 certificação e normas de segurança da informação: SGSI (ISMS), requisitos 2022, passos, prazo, PME, diferença para 27701 e frameworks do mercado.",
-  "tldr": "Certificação ISO 27001 comprova o SGSI (ISMS) conforme ISO/IEC 27001:2022. Requisitos nas cláusulas 4 a 10; controles via riscos e SoA. PME usa escopo enxuto. Passos e prazo: artigo dedicado. 27701 cobre privacidade; SOC 2 e NIST são outros referenciais.",
+  "title": "ISO 27001: o que é, requisitos e SGSI (2022)",
+  "seo_title": "ISO 27001: o que é, requisitos e SGSI (2022)",
+  "seo_description": "ISO 27001 explicada: SGSI, requisitos 2022, Anexo A, SoA e PME. Para certificar: etapas, prazo, custo e implementação (links no artigo).",
+  "tldr": "ISO/IEC 27001:2022 define requisitos do SGSI: contexto, riscos, SoA e evidência nas cláusulas 4 a 10. Este hub foca norma e controles. Certificação comprova conformidade via organismo acreditado (artigo dedicado). 27701 cobre privacidade; SOC 2 e NIST são outros referenciais.",
   "faq": [
     {
       "pergunta": "O que é a ISO 27001?",
