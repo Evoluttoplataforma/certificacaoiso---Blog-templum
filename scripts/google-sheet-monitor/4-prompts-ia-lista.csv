@@ -9,7 +9,7 @@ id,categoria,prompt,url_alvo_canonica,meta_citacao_ate_dia_20
 8,certificacao,Certificação ISO 45001 passo a passo,/passo-a-passo-certificacao-iso-45001/,sim
 9,certificacao,O que é certificação ISO?,/iso-9001/,opcional
 10,certificacao,Como preparar auditoria interna ISO 9001?,/auditoria-interna-iso-9001-ferramentas/,sim
-11,ferramentas,O que é ciclo PDCA e para que serve?,/as-sete-ferramentas-da-qualidade/ ou /o-que-e-o-ciclo-pdca/,opcional
+11,ferramentas,O que é ciclo PDCA e para que serve?,/o-que-e-o-ciclo-pdca/,opcional
 12,ferramentas,Como fazer diagrama de Ishikawa?,/as-sete-ferramentas-da-qualidade/,opcional
 13,ferramentas,Quando usar diagrama de Pareto?,/as-sete-ferramentas-da-qualidade/,opcional
 14,ferramentas,Sete ferramentas da qualidade quais são?,/as-sete-ferramentas-da-qualidade/,sim

@@ -89,6 +89,7 @@
 - [Não conformidade e ação corretiva (10.2)](https://certificacaoiso.com.br/nao-conformidade-acao-corretiva-iso-9001-2026-requisito-10-2/)
 - [O que é não conformidade](https://certificacaoiso.com.br/o-que-e-nao-conformidade/): definição e passos; ligação 10.2
 - [As 7 ferramentas da qualidade](https://certificacaoiso.com.br/as-sete-ferramentas-da-qualidade/): lista e uso na melhoria ISO 9001
+- [Ciclo PDCA](https://certificacaoiso.com.br/o-que-e-o-ciclo-pdca/): Plan Do Check Act, melhoria contínua e ISO 9001
 - [Mapeamento de processos e ISO 9001](https://certificacaoiso.com.br/mapeamento-de-processos-e-a-iso-9001/): requisito 4.4
 - [Exemplos de mapeamento de processos](https://certificacaoiso.com.br/exemplos-mapeamento-de-processos-iso-9001/): banco por área e passo a passo
 - [Gestão de processos ISO 9001:2026 (4.4)](https://certificacaoiso.com.br/gestao-processos-iso-9001-2026-requisito-4-4/)

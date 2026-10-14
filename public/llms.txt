@@ -89,6 +89,7 @@
 - [Programa 5S](https://certificacaoiso.com.br/5s/): os cinco sensos e como implementar.
 - [Não conformidade](https://certificacaoiso.com.br/o-que-e-nao-conformidade/): definição (ISO 9000), passos de tratamento e ligação com requisito 10.2.
 - [As 7 ferramentas da qualidade](https://certificacaoiso.com.br/as-sete-ferramentas-da-qualidade/): Ishikawa, Pareto, histograma, fluxograma, carta de controle e uso na melhoria ISO 9001.
+- [Ciclo PDCA](https://certificacaoiso.com.br/o-que-e-o-ciclo-pdca/): Plan, Do, Check, Act, melhoria contínua, 5W2H na fase Plan e lógica do SGQ na ISO 9001.
 - [Mapeamento de processos e ISO 9001](https://certificacaoiso.com.br/mapeamento-de-processos-e-a-iso-9001/): requisito 4.4, Tartaruga turbinada e relação com fluxograma.
 - [Exemplos de mapeamento de processos (ISO 9001)](https://certificacaoiso.com.br/exemplos-mapeamento-de-processos-iso-9001/): passo a passo, contas a pagar, padaria, RH, ferramentas e BPM.
 - [Gestão de processos ISO 9001:2026 (4.4)](https://certificacaoiso.com.br/gestao-processos-iso-9001-2026-requisito-4-4/): operação x estratégia, tartaruga, cadeia de valor e checklist.

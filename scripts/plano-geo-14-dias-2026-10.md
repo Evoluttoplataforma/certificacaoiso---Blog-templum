@@ -36,6 +36,8 @@ Planilhas e referências:
 
 **Status 12/out (cluster 27001/27701):** **14 URLs** com FAQ distribuído, tabela consultoria × organismo (27701 pillars), triângulo hub → certificar/custo/requisitos, interlinks satélites. Scripts: `_build-lote-27001-27701-2026-10-12.mjs`, `_publish-lote-27001-27701.mjs`.
 
+**Status 14/out (lote P1 PDCA):** `/o-que-e-o-ciclo-pdca/` versionado no repo, DEO (`deo-lote-plano-2026-10-14`), FAQ schema, links 5W2H/ISO 9001; HTML legado corrigido; `llms.txt` / `llms-full.txt`; Supabase patch via `_publish-lote-plano-p1-pdca-2026-10-14.mjs`. `npm run build` OK (1087 páginas). *Git: pendente push.*
+
 **Status 12/out (45001 + operacional F2):** **12 URLs** no Supabase: cluster ISO 45001 (custo, hub, consultoria, perigos, NR-1, requisitos, passo a passo) + operacional Semrush (5W2H riscos/oportunidades, mapeamento+6.1, fluxograma+BPM, arquivamento 7.5, checklist auditoria interna). Marcador `deo-lote-45001-operacional-2026-10-12`. **301** `/analise-de-causa-raiz/` → slug longo no Worker. Scripts: `_build-lote-45001-operacional-2026-10-12.mjs`, `_publish-lote-45001-operacional.mjs`. `npm run build` OK.
 
 ---

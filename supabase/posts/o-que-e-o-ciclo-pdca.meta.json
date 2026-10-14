@@ -1,0 +1,24 @@
+{
+  "title": "Ciclo PDCA: o que é e como utilizar?",
+  "seo_title": "PDCA: o que é, fases Plan Do Check Act e ISO 9001",
+  "seo_description": "PDCA significa Plan, Do, Check, Act: planejar, executar, checar indicadores e agir. Veja fases, exemplo prático, ligação com melhoria contínua e ISO 9001.",
+  "tldr": "PDCA (Plan, Do, Check, Act) é o ciclo de melhoria contínua: planejar com meta e indicadores, executar, checar resultados e corrigir na fase Act. Repete enquanto houver ajuste; combina com 5W2H na fase Plan e estrutura a lógica do SGQ na ISO 9001.",
+  "faq": [
+    {
+      "pergunta": "O que significa PDCA em português?",
+      "resposta": "<p>Plan (planejar), Do (fazer), Check (checar) e Act (agir). São as quatro etapas do ciclo de Deming para melhorar processos com indicadores e correções.</p>"
+    },
+    {
+      "pergunta": "Quais são as 4 fases do PDCA?",
+      "resposta": "<p>Plan: definir problema, meta, indicadores e plano. Do: executar. Check: analisar resultados no prazo. Act: corrigir e padronizar melhorias antes de repetir o ciclo.</p>"
+    },
+    {
+      "pergunta": "O PDCA é obrigatório na ISO 9001?",
+      "resposta": "<p>A norma organiza o SGQ na lógica Plan-Do-Check-Act (cláusulas 4 a 10). Use o ciclo em melhoria contínua, NC e projetos com evidência registrada.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre PDCA e 5W2H?",
+      "resposta": "<p>PDCA define as etapas da melhoria; 5W2H detalha cada ação do plano (o quê, por quê, quem, prazo, como, quanto) na fase Plan.</p>"
+    }
+  ]
+}
