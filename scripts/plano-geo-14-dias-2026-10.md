@@ -40,6 +40,8 @@ Planilhas e referências:
 
 **Status 14/out (lote A2 hubs 45001/27001):** aviso “Quer certificar?” nos hubs (pillar + custo + alias curto); `seo_title`/`tldr` sem competir com head term; A3 em OHSAS→45001 e LGPD→27001. Script `_publish-lote-plano-a2-hubs-45001-27001-2026-10-14.mjs`. Git: `d701337`.
 
+**Status 15/out (A2 hub 9001 anti-canibal):** portas → passo a passo + quanto custa; alias `/certificacao-iso-9001/` no aviso; FAQ schema; 7 satélites com anchor certificação → pillar (não hub). Script `_publish-lote-plano-a2-hub-9001-2026-10-15.mjs`. Supabase + git `main`.
+
 **Status 14/out (lote A3 links):** 10 URLs: SGSI, Anexo A 27001, implementação (desafios), 27701/LGPD, SGI consultoria, SASSMAQ cluster; `iso-14001-2` → `/iso-14001/`; anchors certificação → pillars 9001/14001/45001/27001. Script `_publish-lote-plano-a3-links-2026-10-14.mjs`. Supabase + git `main`.
 
 **Status 14/out (A3 legado 14001-2 + NR-1):** guia ISO 2026, requisitos 9001 legado, aviso canônico em `iso-14001-2`; FAQ consultoria 14001 + SGI 9001/14001; levantamento aspectos/impactos (meta); cluster NR-1 (5 URLs) com anchor **certificação ISO 45001** → passo a passo antes do hub. **11 URLs** no Supabase. Script `_publish-lote-plano-a3-legado-nr1-2026-10-14.mjs`. Supabase + git `main`.
