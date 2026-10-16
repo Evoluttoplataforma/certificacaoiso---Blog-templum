@@ -79,6 +79,7 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
 // /presentes/<slug>, que JÁ são a conversão. Perguntar "em que pé você está?" a quem
 // está com o formulário aberto é atrapalhar o que se quer que aconteça.
 const temPulso = clarityTags?.page_type === "artigo";
+const blogTrackPath = temPulso ? Astro.url.pathname : "";
 ---
 
 <!doctype html>
@@ -319,6 +320,13 @@ const temPulso = clarityTags?.page_type === "artigo";
             coisa fixa ali, entra UMA, e medida. */}
       </>
     )}
+    <script is:inline define:vars={{ blogTrackPath }}>
+      (function () {
+        if (blogTrackPath) {
+          try { sessionStorage.setItem("blog_last_content_path", blogTrackPath); } catch (_) {}
+        }
+      })();
+    </script>
     <script is:inline>
       (function () {
         const els = document.querySelectorAll(".reveal");

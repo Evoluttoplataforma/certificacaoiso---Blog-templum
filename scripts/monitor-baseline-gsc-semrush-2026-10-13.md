@@ -19,6 +19,10 @@
 
 ---
 
+**Priorização comercial (16/out/2026):** cruzamento CRM INBOUND orgânico + este baseline está em `scripts/plano-geo-14-dias-2026-10.md` (seção *Priorização inbound orgânico*). P0 lead: 9001, 14001 (volume CRM, 0 ganhos), 27001 (melhor taxa ganho), 45001 (GSC hub).
+
+---
+
 ## Baseline · 15 URLs P0 (cliques 90d · impressões · pos.)
 
 | URL | Cliques | Impressões | Pos. |

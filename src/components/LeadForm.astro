@@ -254,7 +254,26 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
       tokenPromise.then(function (token) {
 
       var O = ov();
-      var pagina = O.page || "/" + slug + "/";
+      function blogContentPath() {
+        if (O.page && O.page !== "/form/" && O.page !== "/form") return O.page;
+        try {
+          var last = sessionStorage.getItem("blog_last_content_path");
+          if (last && last.indexOf("/form") !== 0) return last;
+        } catch (_) {}
+        try {
+          var camp = new URLSearchParams(location.search).get("utm_campaign");
+          if (camp && camp !== "form-blog" && camp !== "form-consultoria-artigo") {
+            return "/" + camp.replace(/^\/+|\/+$/g, "") + "/";
+          }
+        } catch (_) {}
+        return O.page || "/" + slug + "/";
+      }
+      var contentPath = blogContentPath();
+      var pagina = contentPath;
+      var submitPath = (location.pathname || "/form/").split("?")[0];
+      if (submitPath.charAt(submitPath.length - 1) !== "/") submitPath += "/";
+      var submitUrl = location.origin + submitPath;
+      var contentUrl = "https://certificacaoiso.com.br" + (contentPath.charAt(0) === "/" ? contentPath : "/" + contentPath);
       // `origem` = qual CTA do blog trouxe a pessoa. Não é UTM de propósito: o
       // tracking-kit reescreve utm_source/utm_medium no CLIQUE de link interno
       // (attachClickInterceptor usa searchParams.set sem checar se o parâmetro já
@@ -302,7 +321,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
             urgency: d.urgencia || "",
             norma: normaFinal || "",
             source: sourceFinal,
-            page: pagina,
+            page: contentPath,
             // Liga este lead à gravação da sessão no Clarity (ver Base.astro).
             // localStorage bloqueado (aba privada) → vazio, e o lead entra igual.
             visitor_id: window.__ciUid || "",
@@ -326,7 +345,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
 
         // `norma` vai com o valor do CRM (cf_produto é select). Quando a página não
         // tem produto equivalente lá, vai vazio e o interesse real fica na mensagem.
-        var msg = "Lead do blog (" + sourceFinal + "): " + pagina +
+        var msg = "Lead do blog (" + sourceFinal + "): " + contentUrl +
                   "\nCTA de origem: " + (origem || "não identificado") +
                   "\nInteresse declarado: " + normaFinal +
                   "\nUrgência: " + (d.urgencia || "não informado");
@@ -347,7 +366,11 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
             urgencia: d.urgencia || "",
             mensagem: msg,
             evento: "blog-consultoria",
-            pagina: "https://certificacaoiso.com.br" + pagina,
+            pagina: contentUrl,
+            content_page: contentUrl,
+            pagina_submit: submitUrl,
+            landing: contentPath,
+            referrer: document.referrer || "",
             turnstile_token: token,
           }, utm)),
         }).then(function () {

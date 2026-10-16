@@ -139,14 +139,67 @@ Para **cada** URL canônica acima (detalhe em `referencia-deo-geo-conteudo.md`):
 
 ---
 
+## Priorização inbound orgânico → leads qualificados (CRM)
+
+**Fonte:** espelho Orbit `templum_inbound_leads` (funil INBOUND comercial). **Janela:** 01/out/2024 a 16/out/2026. **Filtro orgânico:** `utm_medium` organic/referral/menu/link do blog, ou `utm_source` google/bing/blog **sem** cpc/paid_social; **exclui** etiqueta `ISCA` (nutrição MQL, não proposta comercial).
+
+**Limitação (importante):** em **298 de 383** leads orgânicos comerciais a **`pagina_conversao` veio vazia**; a norma veio mostly por **etiqueta** (`ISO9001`, `PBQP-H`, etc.). Priorize URLs abaixo cruzando **tag CRM + GSC (baseline 13/out)** + páginas do site que de fato aparecem no campo.
+
+### Volume por norma (orgânico → INBOUND, etiqueta)
+
+| Etiqueta (norma) | Leads | Ganhos | Taxa ganho |
+|------------------|------:|-------:|-----------:|
+| ISO9001 | 143 | 10 | 7,0% |
+| PBQP-H | 46 | 1 | 2,2% |
+| ISO 14001 | 21 | 0 | 0,0% |
+| ISO27001 | 14 | 3 | 21,4% |
+| ISO45001 | 11 | 0 | 0,0% |
+| SGI | 8 | 1 | 12,5% |
+
+### Onde a URL foi capturada (orgânico → INBOUND)
+
+| Canal | Leads | Ganhos |
+|-------|------:|-------:|
+| Sem URL (só tag/UTM) | 298 | 14 |
+| **templum.com.br** (consultoria, `/form/`, hubs site) | 74 | 3 |
+| **certificacaoiso.com.br** (URL completa no CRM) | 11 | 1 |
+
+**Páginas do site com lead orgânico (path):** `/form/` (45), `/consultoria/iso-9001/` (16), `/consultoria/pbqp-h/` (8), `/consultoria/iso-45001/` (6), `/consultoria/iso-27001/` (5), **`/iso-9001/` no site** (5 leads, **4 ganhos**). Blog com URL explícita: `/iso-9001/`, `/quanto-custa-iso-9001/`, `/pbqp-h/`, `/iso-45001/`, SGI integrado, GERIC.
+
+**Alinhamento planilha “conteúdos em 1º lugar” (templum.pt, histórico):** mesma lógica de produto (27001, 14001, 45001, SGI, PBQP-H). No Brasil, o equivalente comercial fica no **blog certificacaoiso.com.br** + **LP consultoria templum.com.br**, não nos posts `.pt`.
+
+### Páginas que devemos emplacar (P0 comercial)
+
+Ordem = **intenção de compra** (certificação/consultoria) + **prova CRM/GSC**. CTA padrão: formulário `/form/` ou LP consultoria da norma.
+
+| Prioridade | URL alvo (canônica BR) | Por quê |
+|------------|------------------------|---------|
+| **P0** | `/passo-a-passo-certificacao-iso-9001/` + `/quanto-custa-iso-9001/` | Maior tag CRM (9001); head terms SERP; satélites já mandam tráfego |
+| **P0** | `/iso-9001/` (hub) | GSC **1.610 cliques/90d**; CRM site `/iso-9001/` converte forte quando a URL vem preenchida |
+| **P0** | `/iso-14001/` + `/consultoria-iso-14001/` | GSC **~992 cliques** (ex `-2`); **21 leads** orgânicos 14001 e **0 ganhos** = SERP + página + LAIA |
+| **P0** | LAIA `/como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa/` | Cluster aspectos (Semrush P1); destrava consultoria 14001 |
+| **P0** | `/certificacao-iso-27001-etapas-prazo-custo/` + `/quanto-custa-iso-27001/` + `/iso-27001/` | Melhor **taxa ganho** orgânica entre normas; SERP “certificação 27001” ainda fraca |
+| **P0** | `/passo-a-passo-certificacao-iso-45001/` + `/iso-45001/` | GSC **905 cliques** hub; CRM 45001 com volume moderado |
+| **P1** | `/pbqp-h/` + `/consultoria-pbqp-h/` (blog) · `/consultoria/pbqp-h/` (site) | 46 leads org PBQP-H; impressões altas construção |
+| **P1** | `/consultoria-iso-sistema-integrado-9001-14001/` (+ 45001) | Etiqueta SGI; lead integrado qualificado |
+| **P1** | `certificacaoiso.com.br/form/` + banners para norma | **45 leads** org com path `/form/`; corrigir tracking `pagina_conversao` no submit |
+| **P2** | Ferramentas (fluxograma, 5S, PDCA, fornecedores) | Tráfego GSC alto, conversão INBOUND menor: funil **diagnóstico → norma** |
+| **P2** | GERIC, 37001, FSSC, 42001 | CRM menor; manter GEO, não disputar P0 |
+
+**Ação de dados (marketing ops):** ~~garantir URL no CRM~~ **feito 16/out/2026** (site-templum `worker.js` + forms site/blog): campo `cf_p_gina_de_convers_o` prioriza **página de conteúdo** (`content_page` / último artigo / `utm_campaign`); submit em notas (`pagina_submit`). Blog grava `blog_last_content_path` na sessão.
+
+**Status 16/out/2026:** seção CRM adicionada; tracking publicado no repo site (deploy pendente até push). Próximo passo editorial = **14001/LAIA** (P0) + **27001 certificação** (P0 CRM).
+
+---
+
 ## Prioridades unificadas
 
-| Prioridade | SERP (Google) | GEO (IA) |
-|------------|---------------|----------|
-| **P0** | Canonical + on-page certificação 9001/27001/14001/45001; quanto custa 9001 | Custo 27001, prompts certificação 27001/27701 90+ |
-| **P1** | Internal link + redirects; 14001 subir para top 15 | Ferramentas, mapeamento, auditoria 9001 |
-| **P2** | Vídeo + off-site templum.com.br | FSSC, SASSMAQ, 14001 aspectos; **FAQ distribuído** em top planilha GEO |
-| **P3** | Backlinks (parceiros, guest posts) | Backlog planilha; perf: fonts + imagens categoria |
+| Prioridade | SERP (Google) | GEO (IA) | INBOUND orgânico (CRM) |
+|------------|---------------|----------|-------------------------|
+| **P0** | Canonical + on-page certificação 9001/27001/14001/45001; quanto custa 9001 | Custo 27001, prompts certificação 27001/27701 90+ | 9001, **14001 (0 ganhos)**, 27001 (melhor taxa), 45001 |
+| **P1** | Internal link + redirects; 14001 subir para top 15 | Ferramentas, mapeamento, auditoria 9001 | PBQP-H, SGI, `/form/` + LPs consultoria site |
+| **P2** | Vídeo + off-site templum.com.br | FSSC, SASSMAQ, 14001 aspectos; **FAQ distribuído** em top planilha GEO | Ferramentas → CTA norma |
+| **P3** | Backlinks (parceiros, guest posts) | Backlog planilha; perf: fonts + imagens categoria | GERIC, nichos |
 
 Colunas **`acao`** (planilha GEO): `upgrade_geo` · `refinar_geo` · `nova_pagina` · `monitorar_citacao` · `ignorar_ruido`
 
