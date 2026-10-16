@@ -98,6 +98,10 @@
     if (isContentPath(path)) {
       a.last_content_path = path;
       a.last_content_url = ORIGIN.replace(/\/$/, "") + path;
+      a.last_content_slug = path.replace(/^\/+|\/+$/g, "");
+      var u = utmFromSearch();
+      if (u.utm_campaign) a.last_content_utm_campaign = u.utm_campaign;
+      else if (a.last_content_slug) a.last_content_utm_campaign = a.last_content_slug;
     }
 
     a.last_path = path;

@@ -255,7 +255,8 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
 
       var O = ov();
       function blogContentPath() {
-        if (O.page && O.page !== "/form/" && O.page !== "/form") return O.page;
+        // Último conteúdo lido na sessão vence utm_campaign velho na URL da /form/
+        // (ex.: abriu form do GERIC, leu ISO 27001, converteu: página = 27001, não GERIC).
         try {
           if (window.tplBlogLeadAttrib && window.tplBlogLeadAttrib.getPayload) {
             var ap = window.tplBlogLeadAttrib.getPayload();
@@ -266,6 +267,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
           var last = sessionStorage.getItem("blog_last_content_path");
           if (last && last.indexOf("/form") !== 0) return last;
         } catch (_) {}
+        if (O.page && O.page !== "/form/" && O.page !== "/form") return O.page;
         try {
           var camp = new URLSearchParams(location.search).get("utm_campaign");
           if (camp && camp !== "form-blog" && camp !== "form-consultoria-artigo") {
@@ -378,10 +380,13 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
         }
 
         var slugCamp = contentPath.replace(/^\/+|\/+$/g, "");
-        if (!utm.utm_campaign) {
-          utm.utm_campaign = slugCamp && slugCamp !== "form"
-            ? slugCamp
-            : (sourceFinal === "form-blog" ? "form-blog" : "form-consultoria-artigo");
+        // Fonte de verdade do post/hub convertido: sempre o slug da página de conteúdo,
+        // não lt_utm_campaign nem query antiga (GERIC preso na URL da /form/).
+        if (slugCamp && slugCamp !== "form") {
+          utm.utm_campaign = slugCamp;
+          utm.utm_term = slug && slug !== "form" ? slug : slugCamp;
+        } else if (!utm.utm_campaign) {
+          utm.utm_campaign = sourceFinal === "form-blog" ? "form-blog" : "form-consultoria-artigo";
         }
         if (!utm.utm_term || utm.utm_term === "form") {
           utm.utm_term = (slug && slug !== "form" ? slug : slugCamp) || origem || utm.utm_campaign;
