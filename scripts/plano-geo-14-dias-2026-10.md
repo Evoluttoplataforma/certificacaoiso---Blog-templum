@@ -188,7 +188,11 @@ Ordem = **intenção de compra** (certificação/consultoria) + **prova CRM/GSC*
 
 **Ação de dados (marketing ops):** ~~garantir URL no CRM~~ **feito 16/out/2026** (site-templum `worker.js` + forms site/blog): campo `cf_p_gina_de_convers_o` prioriza **página de conteúdo** (`content_page` / último artigo / `utm_campaign`); submit em notas (`pagina_submit`). Blog grava `blog_last_content_path` na sessão.
 
-**Status 16/out/2026:** seção CRM adicionada; tracking publicado no repo site (deploy pendente até push). Próximo passo editorial = **14001/LAIA** (P0) + **27001 certificação** (P0 CRM).
+**Status 16/out/2026:** seção CRM adicionada; **tracking blog → Orbit** publicado (site + blog): `pagina_conversao` + `utm_campaign` alinhados à página de conteúdo da sessão.
+
+**Status 16/out/2026 (lote P0 14001/LAIA):** LAIA + consultoria 14001 com `#respostas-diretas`, FAQ distribuído (marker `deo-lote-plano-14001-laia-2026-10-16`), tabela consultoria × organismo, H2 em formato prompt na seção LAIA. Scripts: `_build-lote-plano-p0-14001-laia-2026-10-16.mjs`, `_publish-lote-plano-p0-14001-laia-2026-10-16.mjs`. Republicar blog após patch Supabase.
+
+Próximo passo editorial = **27001 certificação** (P0 CRM) + monitorar posição **certificação iso 14001** pós-redirect `/iso-14001/`.
 
 ---
 
