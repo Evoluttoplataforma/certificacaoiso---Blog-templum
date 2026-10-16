@@ -192,7 +192,9 @@ Ordem = **intenção de compra** (certificação/consultoria) + **prova CRM/GSC*
 
 **Status 16/out/2026 (lote P0 14001/LAIA):** LAIA + consultoria 14001 com `#respostas-diretas`, FAQ distribuído (marker `deo-lote-plano-14001-laia-2026-10-16`), tabela consultoria × organismo, H2 em formato prompt na seção LAIA. Scripts: `_build-lote-plano-p0-14001-laia-2026-10-16.mjs`, `_publish-lote-plano-p0-14001-laia-2026-10-16.mjs`. Republicar blog após patch Supabase.
 
-Próximo passo editorial = **27001 certificação** (P0 CRM) + monitorar posição **certificação iso 14001** pós-redirect `/iso-14001/`.
+**Status 16/out/2026 (lote P0 27001 certificação / CRM):** **4 URLs** no Supabase: pillar certificação, quanto custa, consultoria, implementar. H2 **Como obter a certificação ISO 27001 no Brasil?**, FAQ distribuído (`deo-lote-plano-p0-27001-cert-2026-10-16`), CTAs `/form/` + consultoria, `seo_title` quanto custa com “certificação”. Scripts: `_build-lote-plano-p0-27001-cert-2026-10-16.mjs`, `_publish-lote-plano-p0-27001-cert-2026-10-16.mjs`. `npm run build` OK.
+
+Próximo passo editorial = monitorar **certificação iso 14001** e **certificação iso 27001** (Semrush/GSC) + **P0 9001/45001** cannibalização hub vs pillar.
 
 ---
 

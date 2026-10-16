@@ -35,6 +35,10 @@
     {
       "pergunta": "Quais são os passos para obter a certificação ISO 27001 e quanto tempo costuma levar?",
       "resposta": "<p>Escopo, riscos, SoA, operação, auditoria interna, estágios 1 e 2. Prazo usual de meses a um ano. Detalhe: <a href=\"#passos-e-prazo-certificacao\">passos e prazo neste artigo</a>.</p>"
+    },
+    {
+      "pergunta": "Como obter a certificação ISO 27001 no Brasil?",
+      "resposta": "<p>Implante o SGSI com escopo, riscos, SoA e controles com registro; faça auditoria interna e análise crítica; contrate organismo <strong>acreditado pelo Inmetro/Cgcre</strong> para ISO/IEC 27001; passe estágios 1 e 2 e trate não conformidades. Consultoria e certificação são contratos separados. <a href=\"#como-obter-certificacao-brasil\">Detalhe neste guia</a>.</p>"
     }
   ]
 }
