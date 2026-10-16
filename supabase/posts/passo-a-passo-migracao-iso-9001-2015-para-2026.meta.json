@@ -1,0 +1,42 @@
+{
+  "title": "Passo a passo: migrar da ISO 9001:2015 para a ISO 9001:2026",
+  "seo_title": "Migração ISO 9001:2015 para 2026: passo a passo",
+  "seo_description": "Certificado na 2015? Ordem do gap, cláusulas prioritárias, auditoria interna e OCP até 30/09/2029. Diagnóstico gratuito no passo 2.",
+  "tldr": "Quem já tem certificado ISO 9001:2015 precisa adequar o SGQ à ISO 9001:2026 e passar na auditoria de transição com o organismo certificador até 30/09/2029 (Global ACI). Migrar não é reescrever o manual inteiro: confirme calendário com o OCP, faça gap analysis, priorize cláusulas alteradas (cultura, 6.1, 6.3, 7.1.6), rode auditoria interna e análise crítica com evidência nova e só então vá à transição externa. Este guia ordena oito passos e aponta artigos por requisito, incluindo a trilha das lives Templum.",
+  "published_at": "2026-10-15T20:00:00-03:00",
+  "tags": ["ISO 9001", "ISO 9001:2026", "migração", "transição", "gap analysis"],
+  "faq": [
+    {
+      "pergunta": "Qual o prazo final para migrar para a ISO 9001:2026?",
+      "resposta": "<p>O arranjo Global ACI fixa o fim do período de transição em <strong>30 de setembro de 2029</strong>. Até lá, a organização certificada deve concluir a auditoria de transição para a ISO 9001:2026 com o organismo certificador. Tabela completa: <a href=\"/transicao-iso-9001-2026-prazos-cronograma-global-aci/\">prazos Global ACI</a>.</p>"
+    },
+    {
+      "pergunta": "Preciso da ABNT NBR ISO 9001:2026 em português para começar o gap?",
+      "resposta": "<p>O texto internacional (ISO) já é referência para gap analysis. A tradução ABNT segue a edição internacional e não deve alterar a direção dos requisitos. Consulte sempre a fonte oficial (ISO e, quando publicada, ABNT). Panorama das mudanças: <a href=\"/guia-definitivo-das-mudancas-iso-2026/\">guia ISO 9001:2026</a>.</p>"
+    },
+    {
+      "pergunta": "Treinamento de upgrade para ISO 9001:2026 é obrigatório?",
+      "resposta": "<p>A norma exige <strong>competência</strong> (7.2), não certificado de curso com nome “upgrade 2026”. Treinamento ajuda na conscientização, mas a evidência é aplicação no dia a dia. Detalhe: <a href=\"/treinamento-competencia-iso-9001-2026-requisito-7-2/\">treinamento e competência na 2026</a>.</p>"
+    },
+    {
+      "pergunta": "A ISO 9001:2026 exige uso de inteligência artificial?",
+      "resposta": "<p><strong>Não</strong> há requisito explícito de IA na ISO 9001:2026. A norma trata contexto, novas tecnologias e formas de trabalho onde fizer sentido. Sistema de gestão de IA tem norma própria (ISO/IEC 42001), distinta do SGQ.</p>"
+    },
+    {
+      "pergunta": "A revisão mudou muito em relação à ISO 9001:2015?",
+      "resposta": "<p>A Global ACI descreve mudanças como <strong>evolutivas</strong>: a estrutura harmonizada (Anexo SL) se mantém. O que pesa na migração são requisitos que ficaram mais explícitos (cultura e ética, 6.1, 6.3, conhecimento 7.1.6). Lista: <a href=\"/iso-9001-2026-as-6-principais-mudancas-da-fdis/\">seis mudanças da 2026</a>.</p>"
+    },
+    {
+      "pergunta": "Como evidenciar cultura da qualidade sem questionário fake?",
+      "resposta": "<p>Cultura aparece na operação: origem das não conformidades (reativo demais), indicadores que geram decisão, liderança usando fatos do SGQ na 9.3, medo de reportar erro (sistema “cego”). Leitura: <a href=\"/cultura-da-qualidade-na-iso-9001-2026-a-mudanca-mais-importante-da-nova-revisao/\">cultura da qualidade na 2026</a> e <a href=\"/nao-conformidade-acao-corretiva-iso-9001-2026-requisito-10-2/\">requisito 10.2</a>.</p>"
+    },
+    {
+      "pergunta": "O que mudou no 8.4 (fornecedores) na migração?",
+      "resposta": "<p>Ajustes de clareza na gestão de processos, produtos e serviços providos externamente. Se você já homologava e reavaliava fornecedores críticos na 2015, a lógica continua. Aprofunde: <a href=\"/qualificacao-de-fornecedores-iso-9001-2026-requisito-8-4/\">qualificação de fornecedores 8.4</a>.</p>"
+    },
+    {
+      "pergunta": "Primeira certificação: uso este passo a passo?",
+      "resposta": "<p>Não. Este roteiro é para <strong>certificado na 2015</strong>. Quem implanta do zero segue o <a href=\"/passo-a-passo-certificacao-iso-9001/\">passo a passo da certificação ISO 9001</a> já na lógica da edição 2026.</p>"
+    }
+  ]
+}
