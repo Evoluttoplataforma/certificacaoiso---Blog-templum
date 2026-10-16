@@ -257,6 +257,12 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
       function blogContentPath() {
         if (O.page && O.page !== "/form/" && O.page !== "/form") return O.page;
         try {
+          if (window.tplBlogLeadAttrib && window.tplBlogLeadAttrib.getPayload) {
+            var ap = window.tplBlogLeadAttrib.getPayload();
+            if (ap.content_path) return ap.content_path;
+          }
+        } catch (_) {}
+        try {
           var last = sessionStorage.getItem("blog_last_content_path");
           if (last && last.indexOf("/form") !== 0) return last;
         } catch (_) {}
@@ -266,8 +272,15 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
             return "/" + camp.replace(/^\/+|\/+$/g, "") + "/";
           }
         } catch (_) {}
-        return O.page || "/" + slug + "/";
+        if (slug && slug !== "form") return "/" + slug + "/";
+        return O.page || "/form/";
       }
+      var attrib = {};
+      try {
+        if (window.tplBlogLeadAttrib && window.tplBlogLeadAttrib.getPayload) {
+          attrib = window.tplBlogLeadAttrib.getPayload();
+        }
+      } catch (_) {}
       var contentPath = blogContentPath();
       var pagina = contentPath;
       var submitPath = (location.pathname || "/form/").split("?")[0];
@@ -338,14 +351,50 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
         ["utm_source","utm_medium","utm_campaign","utm_term","utm_content",
          "gclid","fbclid","gad_source","gad_campaignid","msclkid","ttclid","gbraid","wbraid"
         ].forEach(function (k) { if (p.get(k)) utm[k] = p.get(k); });
-        if (!utm.utm_source) utm.utm_source = "blog";
-        if (!utm.utm_medium) utm.utm_medium = "organico";
-        if (!utm.utm_campaign) utm.utm_campaign = sourceFinal === "form-blog" ? "form-blog" : "form-consultoria-artigo";
-        if (!utm.utm_term) utm.utm_term = slug;
+
+        function utmGeneric(src, med) {
+          src = (src || "").toLowerCase();
+          med = (med || "").toLowerCase();
+          return !src || src === "direct" || med === "none";
+        }
+
+        if (utmGeneric(utm.utm_source, utm.utm_medium)) {
+          if (p.get("utm_medium") === "cta-artigo" || origem) {
+            utm.utm_source = "blog";
+            utm.utm_medium = p.get("utm_medium") === "cta-artigo" ? "cta-artigo" : "cta-artigo";
+          } else if (attrib.last_utm_source && attrib.last_utm_source !== "direct") {
+            utm.utm_source = attrib.last_utm_source;
+            utm.utm_medium = attrib.last_utm_medium || "referral";
+          } else if (attrib.lt_utm_source && attrib.lt_utm_source !== "direct") {
+            utm.utm_source = attrib.lt_utm_source;
+            utm.utm_medium = attrib.lt_utm_medium || "referral";
+          } else if (attrib.ft_utm_source && attrib.ft_utm_source !== "direct") {
+            utm.utm_source = attrib.ft_utm_source;
+            utm.utm_medium = attrib.ft_utm_medium || "referral";
+          } else {
+            utm.utm_source = "blog";
+            utm.utm_medium = "organico";
+          }
+        }
+
+        var slugCamp = contentPath.replace(/^\/+|\/+$/g, "");
+        if (!utm.utm_campaign) {
+          utm.utm_campaign = slugCamp && slugCamp !== "form"
+            ? slugCamp
+            : (sourceFinal === "form-blog" ? "form-blog" : "form-consultoria-artigo");
+        }
+        if (!utm.utm_term || utm.utm_term === "form") {
+          utm.utm_term = (slug && slug !== "form" ? slug : slugCamp) || origem || utm.utm_campaign;
+        }
+
+        var entradaUrl = attrib.pagina_entrada_url || attrib.kit_landing_page || "";
+        var refExterno = attrib.blog_first_referrer || document.referrer || "";
 
         // `norma` vai com o valor do CRM (cf_produto é select). Quando a página não
         // tem produto equivalente lá, vai vazio e o interesse real fica na mensagem.
         var msg = "Lead do blog (" + sourceFinal + "): " + contentUrl +
+                  "\nEntrada no blog: " + (entradaUrl || "não registrada") +
+                  "\nReferrer inicial: " + (refExterno || "não registrado") +
                   "\nCTA de origem: " + (origem || "não identificado") +
                   "\nInteresse declarado: " + normaFinal +
                   "\nUrgência: " + (d.urgencia || "não informado");
@@ -366,11 +415,20 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
             urgencia: d.urgencia || "",
             mensagem: msg,
             evento: "blog-consultoria",
+            origem: origem,
             pagina: contentUrl,
             content_page: contentUrl,
+            pagina_conteudo: contentPath,
             pagina_submit: submitUrl,
+            pagina_entrada: attrib.pagina_entrada || "",
+            pagina_entrada_url: entradaUrl,
             landing: contentPath,
-            referrer: document.referrer || "",
+            landing_page: entradaUrl || contentUrl,
+            blog_first_referrer: refExterno,
+            referrer: document.referrer || refExterno,
+            utm_source_ft: attrib.ft_utm_source || "",
+            utm_medium_ft: attrib.ft_utm_medium || "",
+            utm_campaign_ft: attrib.ft_utm_campaign || "",
             turnstile_token: token,
           }, utm)),
         }).then(function () {

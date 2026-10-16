@@ -79,7 +79,16 @@ const allSchemas = [orgSchema, websiteSchema, ...schemas];
 // /presentes/<slug>, que JÁ são a conversão. Perguntar "em que pé você está?" a quem
 // está com o formulário aberto é atrapalhar o que se quer que aconteça.
 const temPulso = clarityTags?.page_type === "artigo";
-const blogTrackPath = temPulso ? Astro.url.pathname : "";
+// Última página de conteúdo na sessão (artigo, hub, consultoria). Não grava /form nem home.
+const _trackPathRaw = Astro.url.pathname || "/";
+const blogTrackPath =
+  _trackPathRaw === "/" ||
+  _trackPathRaw.startsWith("/buscar") ||
+  /^\/form\/?$/i.test(_trackPathRaw)
+    ? ""
+    : _trackPathRaw.endsWith("/")
+      ? _trackPathRaw
+      : _trackPathRaw + "/";
 ---
 
 <!doctype html>
@@ -288,6 +297,7 @@ const blogTrackPath = temPulso ? Astro.url.pathname : "";
     <script src="/assets/icons/icones.js" defer is:inline></script>
     <script src="/assets/icons/iconify-icon.min.js" defer is:inline></script>
     <TrackingKit />
+    <script is:inline src="/js/blog-lead-attrib.js?v=1"></script>
   </head>
   <body>
     {!noChrome && <Header />}
