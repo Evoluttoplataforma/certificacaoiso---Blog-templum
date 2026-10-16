@@ -1,0 +1,26 @@
+{
+  "title": "Conhecimento organizacional na ISO 9001:2026: requisito 7.1.6 na migração",
+  "seo_title": "Conhecimento organizacional ISO 9001:2026 (7.1.6)",
+  "seo_description": "O 7.1.6 pede manter e disponibilizar o conhecimento crítico do SGQ. Gap na migração 2015 para 2026, evidência de auditoria e checklist prático.",
+  "tldr": "O requisito 7.1.6 da ISO 9001:2026 exige determinar, manter e disponibilizar o conhecimento necessário para operar processos e entregar conforme. Na migração da 2015, o gap não é “falta de pasta de treinamento”: é conhecimento tácito preso a uma pessoa, documento obsoleto na linha e lição de NC que não volta para o processo. Competência (7.2) trata da pessoa no cargo; 7.1.6 trata do patrimônio de saber da empresa. Evidência: matriz de conhecimento crítico por processo, transferência registrada (shadowing, dupla), lições no 10.2 e 6.3, onboarding que explica o porquê. Este artigo fecha o buraco da onda D do passo a passo de migração.",
+  "published_at": "2026-10-16T09:00:00-03:00",
+  "tags": ["ISO 9001", "ISO 9001:2026", "7.1.6", "conhecimento organizacional", "migração"],
+  "faq": [
+    {
+      "pergunta": "Qual a diferença entre competência (7.2) e conhecimento organizacional (7.1.6)?",
+      "resposta": "<p><strong>7.2</strong> assegura que a pessoa no cargo está apta. <strong>7.1.6</strong> assegura que a <em>organização</em> retém e compartilha o saber necessário, mesmo quando pessoas saem. Os dois se complementam na migração. Detalhe: <a href=\"/treinamento-competencia-iso-9001-2026-requisito-7-2/\">competência na 2026</a>.</p>"
+    },
+    {
+      "pergunta": "Preciso de base de conhecimento ou wiki para cumprir o 7.1.6?",
+      "resposta": "<p>Não há ferramenta obrigatória. O auditor busca evidência de que o conhecimento crítico está identificado, atualizado e acessível onde a operação precisa. IT controlada (7.5), treino e registro de transferência bastam se forem usados de verdade.</p>"
+    },
+    {
+      "pergunta": "Como ligar 7.1.6 ao 10.2 na auditoria de transição?",
+      "resposta": "<p>Mostre NC ou reclamação cuja causa gerou revisão de procedimento, treino ou critério de processo. Lição aprendida que não altera o SGQ é gap de conhecimento organizacional. Leitura: <a href=\"/nao-conformidade-acao-corretiva-iso-9001-2026-requisito-10-2/\">requisito 10.2</a>.</p>"
+    },
+    {
+      "pergunta": "Onde entra o 7.1.6 no passo a passo de migração?",
+      "resposta": "<p>Na <strong>onda D</strong> (apoio), junto com 7.2 e 7.5, após processos e indicadores. Roteiro completo: <a href=\"/passo-a-passo-migracao-iso-9001-2015-para-2026/\">migração 2015 para 2026</a>.</p>"
+    }
+  ]
+}

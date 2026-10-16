@@ -124,6 +124,7 @@
 - [Análise de causa raiz](https://certificacaoiso.com.br/analise-de-causa-raiz-o-que-e-e-como-fazer/): métodos e como chegar à causa de verdade.
 - [Guia das mudanças da ISO 9001:2026](https://certificacaoiso.com.br/guia-definitivo-das-mudancas-iso-2026/): o que muda na revisão da norma.
 - [Passo a passo migração ISO 9001:2015 para 2026](https://certificacaoiso.com.br/passo-a-passo-migracao-iso-9001-2015-para-2026/): oito etapas, gap, cláusulas prioritárias, trilha das lives e diagnóstico.
+- [Conhecimento organizacional ISO 9001:2026 (7.1.6)](https://certificacaoiso.com.br/conhecimento-organizacional-iso-9001-2026-requisito-7-1-6/): gap na migração, evidência de auditoria e checklist prático.
 - [Transição ISO 9001:2026 (prazos Global ACI)](https://certificacaoiso.com.br/transicao-iso-9001-2026-prazos-cronograma-global-aci/): marcos até 30/09/2029 e regras para certificadora.
 - [Gestão de indicadores ISO 9001:2026 (6.2 e 9.1)](https://certificacaoiso.com.br/gestao-indicadores-iso-9001-2026-requisitos-6-2-e-9-1/): KPI, micrometas e análise para decisão (pós-certificação).
 - [Consultoria ISO 9001 imobiliária](https://certificacaoiso.com.br/consultoria-iso-9001-imobiliaria/): incorporação, comercial e pós-venda.
