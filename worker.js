@@ -82,6 +82,8 @@ export default {
       "/analise-de-causa-raiz": "/analise-de-causa-raiz-o-que-e-e-como-fazer/",
       "/a-qualificacao-de-fornecedores-segundo-a-iso-90012015":
         "/qualificacao-de-fornecedores-iso-9001-2026-requisito-8-4/",
+      "/migracao-iso-9001-2015-para-2026":
+        "/passo-a-passo-migracao-iso-9001-2015-para-2026/",
     }[serpPath];
     if (serpTo) {
       const dest = new URL(url.toString());
