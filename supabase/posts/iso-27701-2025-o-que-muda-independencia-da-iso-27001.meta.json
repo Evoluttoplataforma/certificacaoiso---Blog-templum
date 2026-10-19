@@ -1,7 +1,7 @@
 {
   "title": "ISO 27701:2025: a norma de privacidade ficou independente da ISO 27001",
-  "seo_title": "ISO 27701:2025, privacidade e certificação",
-  "seo_description": "ISO 27701:2025 SGPI independente da 27001: certificação, implementação, LGPD, Anexo A e relação com ISO 27001. Respostas diretas.",
+  "seo_title": "ISO 27701:2025, certificação, consultoria e SGPI",
+  "seo_description": "ISO 27701:2025 explicada: SGPI, certificação no Brasil, consultoria, etapas, custo e relação com ISO 27001 e LGPD.",
   "tldr": "A ISO/IEC 27701:2025 deixou de ser extensão da ISO 27001 e passou a ser sistema de gestão independente. A certificação não exige mais o SGSI certificado antes, o que destrava startups, clínicas e escritórios. As cláusulas 4 a 10 tornaram-se requisitos mandatórios, as definições foram consolidadas na cláusula 3 e mudanças climáticas entraram no contexto. A cláusula 6.1 exige avaliação de risco de privacidade dedicada, com foco nos direitos e liberdades dos titulares, não só no ativo de informação. O Anexo A foi reorganizado em três tabelas: 30 controles para controladores, 18 para operadores e 29 extraídos da ISO 27002 como mínimo de segurança. Transição de cerca de três anos, até 2028.",
   "faq": [
     {

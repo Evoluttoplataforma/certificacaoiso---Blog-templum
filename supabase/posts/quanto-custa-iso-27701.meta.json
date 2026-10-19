@@ -1,9 +1,17 @@
 {
   "title": "Quanto custa a ISO 27701: consultoria, certificação e SGPI",
-  "seo_title": "Quanto custa a ISO 27701 em 2026: consultoria e certificação",
-  "seo_description": "Quanto custa ISO 27701: implantação do SGPI, consultoria, auditoria do organismo à parte e manutenção em 3 anos. 27001 não é obrigatória desde 2025. O que encarece tratamentos e papéis.",
+  "seo_title": "Quanto custa a certificação ISO 27701? Consultoria e organismo",
+  "seo_description": "Quanto custa certificar ISO 27701: implantação SGPI, consultoria, dias de auditoria do organismo e ciclo de 3 anos. Sem tabela única.",
   "tldr": "O custo da ISO 27701 soma implantação do SGPI (consultoria e/ou equipe interna), auditoria do organismo certificador e manutenções no ciclo de três anos. Consultoria e certificadora são contratos separados. Tratamentos, controlador/operador, sites e maturidade do inventário mudam o total; prazo típico 6 a 12 meses até certificar.",
-  "tags": ["ISO 27701", "custo", "consultoria", "certificação", "SGPI", "LGPD", "privacidade"],
+  "tags": [
+    "ISO 27701",
+    "custo",
+    "consultoria",
+    "certificação",
+    "SGPI",
+    "LGPD",
+    "privacidade"
+  ],
   "published_at": "2026-10-09T18:00:00.000Z",
   "faq": [
     {

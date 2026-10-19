@@ -122,6 +122,8 @@
 # (conteúdo forte que estava em /iso-14001-2/). Worker + regras abaixo mantêm 301 do legado.
 /iso-14001-2/    /iso-14001/   301
 /iso-14001-2     /iso-14001/   301
+/certificacao-iso-27701/    /certificacao-iso-27701-etapas-e-requisitos/   301
+/certificacao-iso-27701     /certificacao-iso-27701-etapas-e-requisitos/   301
 /pbqp-h-2/     /pbqp-h/        301
 /pbqp-h-2      /pbqp-h/        301
 
