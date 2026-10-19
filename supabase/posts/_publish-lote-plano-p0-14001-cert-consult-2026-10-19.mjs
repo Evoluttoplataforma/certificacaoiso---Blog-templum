@@ -32,7 +32,7 @@ if (!KEY) {
 
 const H = { apikey: KEY, Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" };
 
-const SLUGS = ["iso-14001", "consultoria-iso-14001", "iso-14001-2"];
+const SLUGS = ["iso-14001", "consultoria-iso-14001"];
 
 async function publishSlug(slug) {
   const htmlPath = path.join(AQUI, `${slug}.html`);

@@ -9,7 +9,7 @@
 // Clarity. Quem quer falar tem o botão Contato no header.
 //
 // TODA url foi conferida no Supabase (status=published). Cinco não eram o óbvio:
-//   · ISO 14001 → /iso-14001-2/           (o /iso-14001/ é RASCUNHO e daria 404)
+//   · ISO 14001 → /iso-14001/             (legado /iso-14001-2/ redireciona 301)
 //   · ISO 37001 → /o-que-e-a-iso-37001/   (não existe /iso-37001/)
 //   · FSSC 22000 → /fssc-22000/           (hub do esquema, criado em 10/09/2026)
 //   · GERIC → /principais-duvidas-sobre-o-geric/
@@ -25,7 +25,7 @@
 export const produtos = [
   { nome: "ISO 9001", desc: "Gestão da Qualidade", url: "/iso-9001/",
     icon: "solar:medal-ribbon-star-bold", cor: "#1167E4" },
-  { nome: "ISO 14001", desc: "Gestão Ambiental", url: "/iso-14001-2/",
+  { nome: "ISO 14001", desc: "Gestão Ambiental", url: "/iso-14001/",
     icon: "solar:leaf-bold", cor: "#00A844" },
   { nome: "ISO 27001", desc: "Segurança da Informação", url: "/iso-27001/",
     icon: "solar:shield-keyhole-bold", cor: "#14A7AF" },

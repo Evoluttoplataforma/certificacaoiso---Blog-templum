@@ -28,6 +28,7 @@
 export const LEAD_FORM_PAGES = {
   // --- pilares de norma (maior volume de impressão) ---
   "iso-9001": { display: "ISO 9001", crm: "ISO 9001" },
+  "iso-14001": { display: "ISO 14001", crm: "ISO 14001" },
   "iso-14001-2": { display: "ISO 14001", crm: "ISO 14001" },
   "como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa": {
     display: "ISO 14001",
