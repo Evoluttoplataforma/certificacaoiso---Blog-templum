@@ -1,10 +1,20 @@
 {
   "title": "Consultoria ISO 45001: PGR, SST e como escolher no Brasil",
-  "seo_title": "Consultoria ISO 45001 no Brasil: o que faz e como escolher",
-  "seo_description": "Consultoria ISO 45001 no Brasil: o que faz, passos até certificar, PGR, NR-1, perigos e riscos, psicossocial e diferença entre consultoria e certificadora.",
+  "seo_title": "Consultoria ISO 45001: certificação, custo e como escolher",
+  "seo_description": "Consultoria ISO 45001 para certificação: PGR, NR-1, diagnóstico, custos típicos, prazos e preparação para o organismo. Não emite certificado.",
   "tldr": "Consultoria ISO 45001 implanta SGSSO: perigos, riscos, legal, controles, participação dos trabalhadores e evidências. Vale para PGR, certificação voluntária, integração com NR-1 e SGI. Certificado só organismo acreditado emite.",
-  "tags": ["ISO 45001", "consultoria", "SST", "PGR", "NR-1"],
+  "tags": [
+    "ISO 45001",
+    "consultoria",
+    "SST",
+    "PGR",
+    "NR-1"
+  ],
   "faq": [
+    {
+      "pergunta": "Consultoria ISO 45001 ajuda na certificação?",
+      "resposta": "<p>Sim: acelera perigos e riscos, legal, participação dos trabalhadores e auditoria interna antes dos estágios 1 e 2. O certificado só o organismo acreditado emite. <a href=\"/passo-a-passo-certificacao-iso-45001/\">Passo a passo da certificação ISO 45001</a>.</p>"
+    },
     {
       "pergunta": "Consultoria ISO 45001 ajuda com PGR e NR-1?",
       "resposta": "<p>Sim. O núcleo do PGR (inventário e plano) coincide com o planejamento da ISO 45001. A consultoria estrutura o sistema; as NRs continuam obrigatórias. Veja <a href=\"/consultoria-iso-45001/#pgr-nr1\">PGR e NR-1</a> e <a href=\"/nr-1-e-iso-45001/\">NR-1 e ISO 45001</a>.</p>"
