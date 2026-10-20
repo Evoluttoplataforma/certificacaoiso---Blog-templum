@@ -1,20 +1,24 @@
 {
-  "title": "Consultoria PBQP-H: o que faz, o que é seu e como escolher",
-  "seo_title": "Consultoria PBQP-H: certificação, custo e como escolher",
-  "seo_description": "Consultoria PBQP-H para certificação SiAC: diagnóstico, PQO, obra, auditoria interna e preparação para o OAC. Não emite certificado.",
-  "tldr": "Consultoria PBQP-H implanta o SiAC na construtora: PQO, serviços controlados, fornecedores, indicadores e auditoria interna antes do OAC. Não emite certificado nem substitui obra amostrável. Caixa e GERIC costumam exigir Nível A. Consultoria e certificação são contratos separados.",
+  "title": "Consultoria PBQP-H: o que faz, o que fica com a construtora e como escolher",
+  "seo_title": "Consultoria PBQP-H: o que faz e diferença do OAC",
+  "seo_description": "Consultoria PBQP-H explicada: entregáveis SiAC, PQO, obra, auditoria interna e por que não emite certificado. Como escolher e separar proposta do OAC.",
+  "tldr": "Consultoria PBQP-H ajuda a construtora a implantar o SiAC (PQO, serviços controlados, fornecedores, indicadores, auditoria interna) e a chegar preparada ao OAC. Ela não emite certificado: quem registra no portal do programa é o organismo certificador, em contrato apartado. Obra amostrável no dia da auditoria é obrigatória. Na escolha, evite quem consulta e certifica a mesma empresa, exija SiAC 2021 no escopo e proposta com duas linhas (consultoria + OAC).",
   "faq": [
     {
       "pergunta": "Consultoria PBQP-H emite certificado?",
-      "resposta": "<p>Não. O certificado é emitido por um <strong>OAC</strong> acreditado no SiAC. Consultoria prepara; organismo audita e registra no portal oficial.</p>"
+      "resposta": "<p>Não. O certificado PBQP-H é emitido e registrado no SiAC por um <strong>OAC</strong> (organismo de avaliação da conformidade) após auditoria de certificação. A consultoria prepara gestão e obra; o OAC audita com independência.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre consultoria PBQP-H e OAC?",
+      "resposta": "<p>A consultoria implanta e acompanha o SiAC na construtora. O OAC realiza a auditoria de certificação (e manutenções no ciclo de 3 anos) e registra o certificado se houver conformidade. São contratos e orçamentos separados.</p>"
     },
     {
       "pergunta": "Consultoria PBQP-H ajuda na certificação?",
-      "resposta": "<p>Sim: acelera diagnóstico, PQO, evidência em canteiro e auditoria interna. Passo a passo: <a href=\"/como-conseguiur-a-certificacao-do-pbqp-h/\">como conseguir a certificação PBQP-H</a>.</p>"
+      "resposta": "<p>Sim: diagnóstico, PQO, evidência em canteiro, auditoria interna assistida e preparação para entrevista com o OAC. Passo a passo: <a href=\"/como-conseguiur-a-certificacao-do-pbqp-h/\">como conseguir a certificação PBQP-H</a>.</p>"
     },
     {
-      "pergunta": "Preciso de obra em andamento?",
-      "resposta": "<p>Sim. Sem serviços controlados executados e em execução no dia da auditoria o OAC não fecha evidência. <a href=\"/pbqp-h/#requisitos-preparacao\">Pré-requisitos</a>.</p>"
+      "pergunta": "Preciso de obra em andamento para certificar?",
+      "resposta": "<p>Sim. O OAC precisa amostrar serviços controlados em execução e executados, com registros. Detalhe: <a href=\"/pbqp-h/#requisitos-preparacao\">pré-requisitos PBQP-H</a>.</p>"
     }
   ],
   "tags": ["PBQP-H", "Construção Civil", "SiAC", "Consultoria"]
