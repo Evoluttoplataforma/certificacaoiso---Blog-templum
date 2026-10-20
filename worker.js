@@ -78,6 +78,8 @@ export default {
       "/iso-14001-2": "/iso-14001/",
       "/certificacao-iso-27001": "/certificacao-iso-27001-etapas-prazo-custo/",
       "/certificacao-iso-27701": "/certificacao-iso-27701-etapas-e-requisitos/",
+      "/certificacao-pbqp-h": "/como-conseguiur-a-certificacao-do-pbqp-h/",
+      "/pesquisa-de-satisfacao-cliente": "/pesquisa-de-satisfacao-do-cliente/",
       "/certificacao-iso-9001": "/passo-a-passo-certificacao-iso-9001/",
       "/certificacao-iso-45001": "/passo-a-passo-certificacao-iso-45001/",
       "/analise-de-causa-raiz": "/analise-de-causa-raiz-o-que-e-e-como-fazer/",
