@@ -34,7 +34,7 @@ function patchImplementar() {
 <ul>
 <li><strong>Passos:</strong> escopo, inventário de tratamentos, papéis, políticas, risco de privacidade (6.1), controles A1/A2/A3, operação com registro, auditoria interna, organismo. <a href="#passos-27701">Lista completa</a>.</li>
 <li><strong>Prazo típico:</strong> cerca de <strong>6 a 12 meses</strong> até certificação, se segurança e inventário já tiverem base.</li>
-<li><strong>ISO 27001 antes?</strong> <strong>Não</strong> é obrigatório desde a 27701:2025. Integrar SGSI e SGPI reduz retrabalho. <a href="/qual-a-relacao-da-iso-27001-com-a-iso-27701/">27001 e 27701</a>.</li>
+<li><strong>É obrigatório ter ISO 27001 certificada antes da 27701?</strong> Não é obrigatória desde a ISO/IEC 27701:2025. Integrar SGSI e SGPI reduz retrabalho. <a href="/qual-a-relacao-da-iso-27001-com-a-iso-27701/">27001 e 27701</a>.</li>
 <li><strong>LGPD:</strong> SGPI apoia conformidade; <strong>não substitui</strong> a lei. <a href="/iso-27701-lgpd-gdpr-conformidade/">27701 e LGPD/GDPR</a>.</li>
 <li><strong>Consultoria:</strong> método e evidência; certificado vem do organismo. <a href="/consultoria-iso-27701/">Consultoria ISO 27701</a>.</li>
 </ul>
@@ -63,7 +63,7 @@ function patchLgpd() {
 
 <h2 id="respostas-diretas">Respostas diretas: ISO 27701, LGPD e GDPR</h2>
 <ul>
-<li><strong>Substitui a LGPD?</strong> <strong>Não.</strong> A norma organiza SGPI com tratamentos, papéis, riscos e evidência. Bases legais, titulares e ANPD continuam na lei.</li>
+<li><strong>A ISO 27701 substitui a LGPD?</strong> Não. A norma organiza SGPI com tratamentos, papéis, riscos e evidência. Bases legais, titulares e ANPD continuam na lei.</li>
 <li><strong>Como ajuda:</strong> inventário, controlador/operador, RIPD/DPIA quando couber, direitos do titular, incidentes, auditoria interna. <a href="#pergunta-lgpd">Detalhe</a>.</li>
 <li><strong>27001:</strong> segurança da informação (art. 46 LGPD). <strong>27701:</strong> privacidade em sistema de gestão. <a href="#27701-vs-27001-lgpd">Tabela comparativa</a>.</li>
 <li><strong>Certificação:</strong> prova auditada de SGPI, não selo de conformidade legal. <a href="/certificacao-iso-27701-etapas-e-requisitos/">Certificação ISO 27701</a>.</li>
@@ -139,7 +139,7 @@ function patchRelacao() {
 <h2 id="respostas-diretas">Respostas diretas: ISO 27001 e ISO 27701</h2>
 <ul>
 <li><strong>Diferença:</strong> 27001 = segurança de toda informação; 27701 = privacidade (controlador, operador, risco ao titular).</li>
-<li><strong>Certificar 27701 sem 27001?</strong> <strong>Sim</strong> desde 2025. Antes, só junto com SGSI certificado.</li>
+<li><strong>Dá para certificar só na 27701?</strong> Sim. Desde a edição 2025, não exige SGSI 27001 certificado antes. Antes, o caminho costumava ser em conjunto com a 27001.</li>
 <li><strong>Privacidade:</strong> 27001 protege dados como informação; 27701 exige requisitos e Anexo A de privacidade (A1, A2, A3).</li>
 <li><strong>LGPD:</strong> 27701 aproxima gestão; não substitui lei. <a href="/iso-27701-lgpd-gdpr-conformidade/">27701 e LGPD</a> · <a href="/relacao-do-lgpd-com-a-iso-27001/">LGPD e 27001</a>.</li>
 <li><strong>Transição 2019→2025:</strong> prazo até cerca de <strong>2028</strong> para certificados na versão anterior. <a href="/iso-27701-2025-o-que-muda-independencia-da-iso-27001/">O que mudou</a>.</li>
