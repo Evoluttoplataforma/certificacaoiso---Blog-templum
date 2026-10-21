@@ -7,6 +7,10 @@ const SLUGS = [
   "certificacao-iso-27701-etapas-e-requisitos",
   "como-implementar-a-iso-27701",
   "quanto-custa-iso-27701",
+  "qual-a-relacao-da-iso-27001-com-a-iso-27701",
+  "iso-27701-lgpd-gdpr-conformidade",
+  "iso-27701-2025-o-que-muda-independencia-da-iso-27001",
+  "consultoria-iso-27701",
 ];
 const AQUI = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(AQUI, "..", "..");

@@ -6,7 +6,7 @@
   "faq": [
     {
       "pergunta": "Como a ISO 27701 ajuda na conformidade com LGPD/GPDR e outras regulamentações de privacidade?",
-      "resposta": "<p>Organiza SGPI com tratamentos, papéis, riscos, direitos do titular e incidentes com evidência auditável. Não substitui a lei. Detalhe: <a href=\"/iso-27701-lgpd-gdpr-conformidade/#pergunta-lgpd\">resposta neste artigo</a>.</p>"
+      "resposta": "<p>A ISO 27701 não substitui LGPD nem GDPR: bases legais, titular e sanções continuam na lei. O que a norma entrega é método e evidência de gestão (inventário, papéis, riscos, direitos, incidentes) que facilita demonstrar conformidade.</p><p>Blocos comentados neste artigo: <a href=\"/iso-27701-lgpd-gdpr-conformidade/#pergunta-lgpd\">como a ISO 27701 ajuda na conformidade</a>.</p>"
     },
     {
       "pergunta": "A ISO 27701 resolve a LGPD?",

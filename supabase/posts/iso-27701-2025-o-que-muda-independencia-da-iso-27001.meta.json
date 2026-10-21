@@ -34,11 +34,11 @@
     },
     {
       "pergunta": "Quais são os passos práticos para implementar a ISO 27701 em uma empresa de médio porte?",
-      "resposta": "<p>Gap de privacidade, papéis controlador/operador, mapeamento de tratamentos, base legal, DPIA quando couber, controles do SGPI, integração com SGSI se houver. <a href=\"/como-implementar-a-iso-27701/\">Passo a passo ISO 27701</a>.</p>"
+      "resposta": "<p>Implementar em médio porte é montar o SGPI na ordem certa: escopo e inventário antes de controles, operação com registro antes do organismo. São nove passos da direção ao certificado.</p><p>Lista numerada com comentário: <a href=\"/como-implementar-a-iso-27701/#passos-27701\">passos neste guia</a>.</p>"
     },
     {
       "pergunta": "Quais são os critérios e etapas para obter a certificação ISO 27701?",
-      "resposta": "<p>SGPI implementado, evidências, auditoria interna e auditoria de organismo no escopo 27701 (sozinho ou integrado). <a href=\"/certificacao-iso-27701-etapas-e-requisitos/\">Etapas de certificação ISO 27701</a>.</p>"
+      "resposta": "<p>Certificar na ISO 27701 exige SGPI operando com evidência antes do organismo acreditado auditar: implantar e operar o sistema, concluir auditoria interna e análise crítica, depois estágios 1 e 2.</p><p>Sequência completa com critérios: <a href=\"/certificacao-iso-27701-etapas-e-requisitos/#criterios-etapas-pergunta\">critérios e etapas</a>.</p>"
     },
     {
       "pergunta": "Como a ISO 27701 ajuda na conformidade com LGPD/GPDR e outras regulamentações de privacidade?",

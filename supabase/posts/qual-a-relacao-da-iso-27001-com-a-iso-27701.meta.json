@@ -18,7 +18,7 @@
   },
   {
    "pergunta": "Qual é a relação entre ISO 27701 e ISO 27001 no âmbito de gestão de privacidade?",
-   "resposta": "<p>27001 estrutura o SGSI; 27701 acrescenta requisitos de privacidade (SGPI). Desde 2025 a 27701 pode ser certificada de forma independente. Muitas empresas mantêm os dois sistemas integrados.</p>"
+   "resposta": "<p>Na gestão de privacidade, a ISO 27001 cobre segurança da informação (SGSI); a ISO 27701 acrescenta requisitos e controles de privacidade (SGPI), com papéis de controlador e operador. Desde 2025 a 27701 certifica de forma independente, embora integrar os dois sistemas ainda reduza retrabalho.</p><p>Contexto completo: <a href=\"/qual-a-relacao-da-iso-27001-com-a-iso-27701/#relacao-27001-27701\">relação 27001 e 27701 neste artigo</a>.</p>"
   }
  ]
 }
