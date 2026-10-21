@@ -7,7 +7,7 @@ import PostDock from "../components/PostDock.astro";
 import AudioResumo from "../components/AudioResumo.astro";
 import { catMeta } from "../data/categorias.js";
 import { ctaParaNorma } from "../data/cta-norma.js";
-import { ancorarSecoes, injetarCtaMeio, removerSumarioEscrito, temSumarioEscrito, envolverTabelas, envolverYoutube, extrairYoutube } from "../lib/artigo.js";
+import { ancorarSecoes, injetarCtaMeio, removerSumarioEscrito, temSumarioEscrito, envolverTabelas, envolverYoutube, extrairYoutube, textoDe } from "../lib/artigo.js";
 import { normaDoForm } from "../data/lead-form-pages.js";
 import { normaDaPagina } from "../data/normas.js";
 import { getAllPosts, tldrOf } from "../lib/posts.js";
@@ -285,7 +285,7 @@ if (faq.length) {
     mainEntity: faq.map((f) => ({
       "@type": "Question",
       name: f.pergunta,
-      acceptedAnswer: { "@type": "Answer", text: f.resposta },
+      acceptedAnswer: { "@type": "Answer", text: textoDe(f.resposta || "") },
     })),
   });
 }

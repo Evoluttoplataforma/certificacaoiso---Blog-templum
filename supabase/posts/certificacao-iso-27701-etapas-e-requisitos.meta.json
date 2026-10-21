@@ -6,7 +6,7 @@
   "faq": [
     {
       "pergunta": "Quais são os critérios e etapas para obter a certificação ISO 27701?",
-      "resposta": "<p>Certificar na ISO 27701 exige SGPI operando com evidência antes do organismo acreditado auditar. A ordem abaixo é a que a maioria dos OCPs espera ver documentada.</p><ol><li><strong>Implantar o SGPI:</strong> escopo, papéis de controlador/operador, inventário, risco de privacidade e controles Anexo A.</li><li><strong>Operar com registros:</strong> direitos do titular, incidentes, contratos com operadores e revisões periódicas.</li><li><strong>Auditoria interna e análise crítica</strong> pela direção.</li><li><strong>Contratar organismo acreditado</strong> (estágios 1 e 2).</li><li><strong>Tratar NCs, receber certificado</strong> e manter o ciclo de três anos.</li></ol><p>Detalhe de cada bloco: <a href=\"/certificacao-iso-27701-etapas-e-requisitos/#criterios-etapas-pergunta\">critérios e etapas neste artigo</a>.</p>"
+      "resposta": "<p>Em resumo: montar e operar o sistema de gestão de privacidade (SGPI) com registros reais, concluir auditoria interna e análise pela direção, contratar organismo acreditado (estágios 1 e 2) e tratar pendências antes do certificado. A lista numerada com cada etapa está em <a href=\"/certificacao-iso-27701-etapas-e-requisitos/#criterios-etapas-pergunta\">critérios e etapas neste artigo</a>.</p>"
     },
     {
       "pergunta": "Quem emite o certificado ISO 27701?",

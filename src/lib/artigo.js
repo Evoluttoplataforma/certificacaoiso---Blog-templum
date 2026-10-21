@@ -26,7 +26,7 @@ function slugificar(txt) {
 
 // Texto visível de dentro de um cabeçalho: tira tags (h2 costuma abrir com <strong> ou
 // <span> nos posts antigos), resolve as entidades que de fato aparecem e junta espaços.
-function textoDe(html) {
+export function textoDe(html) {
   return html
     .replace(/<[^>]+>/g, " ")
     .replace(/&nbsp;/gi, " ")

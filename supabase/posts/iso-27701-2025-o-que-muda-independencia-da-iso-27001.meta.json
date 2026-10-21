@@ -1,48 +1,48 @@
 {
   "title": "ISO 27701:2025: a norma de privacidade ficou independente da ISO 27001",
   "seo_title": "ISO 27701:2025, certificação, consultoria e SGPI",
-  "seo_description": "ISO 27701:2025 explicada: SGPI, certificação no Brasil, consultoria, etapas, custo e relação com ISO 27001 e LGPD.",
-  "tldr": "A ISO/IEC 27701:2025 deixou de ser extensão da ISO 27001 e passou a ser sistema de gestão independente. A certificação não exige mais o SGSI certificado antes, o que destrava startups, clínicas e escritórios. As cláusulas 4 a 10 tornaram-se requisitos mandatórios, as definições foram consolidadas na cláusula 3 e mudanças climáticas entraram no contexto. A cláusula 6.1 exige avaliação de risco de privacidade dedicada, com foco nos direitos e liberdades dos titulares, não só no ativo de informação. O Anexo A foi reorganizado em três tabelas: 30 controles para controladores, 18 para operadores e 29 extraídos da ISO 27002 como mínimo de segurança. Transição de cerca de três anos, até 2028.",
+  "seo_description": "ISO 27701:2025 explicada em linguagem simples: o que mudou, certificação no Brasil, custo, relação com ISO 27001 e LGPD.",
+  "tldr": "A ISO 27701:2025 organiza como a empresa trata e protege dados pessoais. Desde 2025 ela pode ser certificada sem exigir a ISO 27001 antes, o que facilita clínicas, startups e PMEs. Quem já tinha certificado na versão antiga tem até cerca de 2028 para migrar. A norma reforça risco focado na pessoa titular dos dados e reorganiza os controles em três blocos (quem decide o uso, quem opera por terceiros e segurança mínima).",
   "faq": [
     {
       "pergunta": "Ainda é obrigatório ter a ISO 27001 para certificar a ISO 27701?",
-      "resposta": "Não. Na versão de 2019 era necessário ter o SGSI da ISO 27001 certificado ou em processo. A versão 2025 removeu essa dependência: o sistema de gestão de privacidade passou a ser autônomo. Ter a ISO 27001 continua sendo muito recomendável, mas deixou de ser pré-requisito — o que reduz custo e prazo para startups, clínicas de saúde e escritórios que tratam dados sensíveis."
+      "resposta": "<p>Não. Desde a edição de 2025 você pode certificar só a gestão de privacidade (ISO 27701) sem ter a ISO 27001 de segurança da informação certificada antes. Ter as duas ainda ajuda, mas deixou de ser pré-requisito.</p>"
     },
     {
       "pergunta": "Qual é o prazo de transição para a ISO 27701:2025?",
-      "resposta": "Cerca de três anos a partir da publicação, ocorrida em outubro de 2025 — ou seja, até 2028. Quem já é certificado na versão 2019 tem tempo, mas a recomendação é antecipar: mapear os processos na nova estrutura, eliminar controles redundantes, rodar um gap analysis e revisar riscos e documentação antes da próxima auditoria."
+      "resposta": "<p>Em geral até 2028 para quem já possui certificado na versão de 2019. Vale comparar o que falta na nova norma e ajustar documentos e riscos antes da próxima auditoria.</p>"
     },
     {
       "pergunta": "Como ficou o Anexo A da ISO 27701:2025?",
-      "resposta": "Foi reorganizado em três tabelas: A1, com 30 controles para controladores (quem decide sobre o uso dos dados e atende aos direitos dos titulares); A2, com 18 controles para operadores (quem trata dados em nome de terceiros); e A3, com 29 controles extraídos da ISO 27002, considerados o mínimo de segurança necessário para sustentar a privacidade, como criptografia, backup, gestão de logs e desenvolvimento seguro."
+      "resposta": "<p>Os controles foram divididos em três grupos: regras para quem decide o uso dos dados (controlador), para quem trata dados por conta de outra empresa (operador) e um bloco mínimo de segurança (criptografia, backup, logs). Detalhe em <a href=\"/iso-27701-2025-o-que-muda-independencia-da-iso-27001/#anexo-a\">Anexo A neste artigo</a>.</p>"
     },
     {
       "pergunta": "O que mudou na avaliação de risco da nova versão?",
-      "resposta": "A cláusula 6.1 passou a exigir avaliação de risco de privacidade dedicada, não mais genérica, considerando as consequências para os direitos e liberdades dos titulares de dados. O eixo saiu da proteção do ativo de informação e passou para a proteção do indivíduo — o que obriga a revisitar o mapeamento de dados e o relatório de impacto à proteção de dados pessoais (RIPD)."
+      "resposta": "<p>A norma exige analisar risco pensando na pessoa titular dos dados, não só no sistema de TI. Isso impacta o mapeamento de dados e o relatório de impacto (RIPD) quando a lei exigir.</p>"
     },
     {
       "pergunta": "A ISO 27701:2025 trata de inteligência artificial?",
-      "resposta": "A norma não usa o termo inteligência artificial. A preocupação é endereçada pelo controle de decisão automatizada e perfilamento: empresas que usam algoritmos para perfilar clientes ou tomar decisões, como análise de crédito, precisam garantir mecanismos claros de oposição e de revisão humana. É a ponte natural com a ISO/IEC 42001, norma de gestão de inteligência artificial."
+      "resposta": "<p>A norma não fala em IA pelo nome, mas cobre decisões automáticas e perfilamento. Quem usa algoritmo para crédito ou marketing precisa permitir oposição e revisão humana quando couber.</p>"
     },
     {
       "pergunta": "Mudanças climáticas entraram na norma de privacidade?",
-      "resposta": "Sim. A ISO passou a exigir que a organização determine se as mudanças climáticas são uma questão relevante para o seu contexto, e na 27701:2025 isso tem direcionamento específico: avaliar se o tema afeta a resiliência do tratamento de dados. Quem tratou o assunto de forma genérica em outro sistema de gestão precisa revisitar o escopo pela lente da privacidade."
+      "resposta": "<p>Sim. A empresa deve avaliar se clima e desastres afetam a continuidade do tratamento de dados pessoais, além dos riscos já mapeados em outros sistemas de gestão.</p>"
     },
     {
       "pergunta": "ISO 27701 - Privacidade de Dados: o que é?",
-      "resposta": "<p>Norma internacional para SGPI (PIMS): requisitos para tratar dados pessoais como controlador e/ou operador. Edição 2025 independente da 27001. <a href=\"/qual-a-relacao-da-iso-27001-com-a-iso-27701/\">Relação com 27001</a>.</p>"
+      "resposta": "<p>É a norma internacional que define um sistema de gestão de privacidade: inventário de tratamentos, papéis, riscos, direitos das pessoas e evidências para auditoria. A edição 2025 pode ser certificada sozinha ou junto com a ISO 27001.</p>"
     },
     {
       "pergunta": "Quais são os passos práticos para implementar a ISO 27701 em uma empresa de médio porte?",
-      "resposta": "<p>Implementar em médio porte é montar o SGPI na ordem certa: escopo e inventário antes de controles, operação com registro antes do organismo. São nove passos da direção ao certificado.</p><p>Lista numerada com comentário: <a href=\"/como-implementar-a-iso-27701/#passos-27701\">passos neste guia</a>.</p>"
+      "resposta": "<p>Ordem usual: definir escopo, mapear tratamentos, avaliar riscos, aplicar controles, operar com registros e só então chamar o organismo certificador. São nove passos comentados em <a href=\"/como-implementar-a-iso-27701/#passos-27701\">como implementar a ISO 27701</a>.</p>"
     },
     {
       "pergunta": "Quais são os critérios e etapas para obter a certificação ISO 27701?",
-      "resposta": "<p>Certificar na ISO 27701 exige SGPI operando com evidência antes do organismo acreditado auditar: implantar e operar o sistema, concluir auditoria interna e análise crítica, depois estágios 1 e 2.</p><p>Sequência completa com critérios: <a href=\"/certificacao-iso-27701-etapas-e-requisitos/#criterios-etapas-pergunta\">critérios e etapas</a>.</p>"
+      "resposta": "<p>Resumo: sistema de privacidade funcionando com provas, auditoria interna, contratação de certificadora acreditada (estágios 1 e 2) e correção de pendências. Passo a passo completo em <a href=\"/certificacao-iso-27701-etapas-e-requisitos/#criterios-etapas-pergunta\">certificação ISO 27701</a>.</p>"
     },
     {
       "pergunta": "Como a ISO 27701 ajuda na conformidade com LGPD/GPDR e outras regulamentações de privacidade?",
-      "resposta": "<p>Organiza SGPI com tratamentos, papéis controlador/operador, riscos e evidência auditável. Não substitui a lei. <a href=\"/iso-27701-lgpd-gdpr-conformidade/\">ISO 27701 e LGPD/GDPR</a>.</p>"
+      "resposta": "<p>Ela organiza processos e registros que a lei pede (tratamentos, titulares, fornecedores), mas não substitui advogado, DPO nem bases legais. Veja <a href=\"/iso-27701-lgpd-gdpr-conformidade/\">ISO 27701 e LGPD</a>.</p>"
     }
   ]
 }

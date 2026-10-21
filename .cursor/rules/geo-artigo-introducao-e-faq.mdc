@@ -37,6 +37,14 @@ Checklist rápido:
 3. Algum `?` + `Não`/`Sim` sem ponto depois da resposta curta?
 4. FAQ e HTML dizem a mesma coisa (sem "Não desde" num e "Não é obrigatória" no outro)?
 
+## Leitura fluida (leigos + GEO)
+
+- **Answer First** no 1º `<p>` do artigo ou no 1º `<li>` de `#respostas-diretas` (resposta completa em linguagem direta).
+- Parágrafo antes da lista: **1–2 frases** (o quê + por quê), sem bloquear a resposta nos itens.
+- Na **primeira menção**: explicar siglas (SGPI = sistema de gestão de privacidade; titular = pessoa dona dos dados; controlador/operador em uma linha).
+- Preferir frases curtas; evitar jargão de auditoria sem tradução (`gap analysis` → “comparar o que falta na norma nova”).
+- **FAQ CMS (`meta.json`)**: 1–3 frases por resposta + link para âncora no corpo; **listas longas só no HTML**, não no campo `faq` (JSON-LD e IA leem texto limpo).
+
 ## Copy
 
 Travessão e traço médio: ver `sem-travessao-em-copy.mdc`.
