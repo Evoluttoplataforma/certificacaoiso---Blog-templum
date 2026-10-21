@@ -1,0 +1,42 @@
+---
+description: Artigos GEO/lote no blog — introdução antes de listas, FAQ alinhado ao corpo, pergunta x resposta
+alwaysApply: true
+---
+
+# GEO no blog: introdução, listas e FAQ
+
+Vale para artigos novos, revisão de lote SEO/GEO e edits em `supabase/posts/*.html` + `*.meta.json`.
+
+## Antes de toda lista (ul/ol)
+
+Nunca coloque `<ul>` ou `<ol>` logo após `<h2>` / `<h3>` sem **pelo menos um parágrafo `<p>`** que:
+
+1. Diga **o que** a seção entrega (ex.: ordem dos passos até o certificado).
+2. Diga **por que** importa (ex.: organismo só agenda estágio 1 com SGPI operando).
+
+Referência de tom: `consultoria-pbqp-h.html` (intro + H3 com parágrafo).
+
+## Bloco "Respostas diretas"
+
+- Sempre **1 parágrafo introdutório** antes da `<ul>` (ex.: "Resumo para quem precisa decidir rápido; detalhe nas seções abaixo.").
+- Cada `<li>`: rótulo = pergunta ou tema **completo**; corpo = **frase(s) inteira(s)**, não telegrama.
+- Pergunta sim/não: resposta começa com **Sim.** ou **Não.** / **Não é obrigatória…** / **Sim,** (com ponto). Nunca `Não desde` colado (parece que "não" vale "desde").
+
+## FAQ (`*.meta.json`)
+
+- Cada `resposta` segue as mesmas regras do corpo: **intro em `<p>`** antes de lista ou sequência de verbos soltos.
+- Se a pergunta do FAQ repete um H2 do artigo, a resposta deve **espelhar** o parágrafo introdutório do H2, não só a lista.
+- FAQ não substitui o corpo: não deixe FAQ mais telegráfico que o HTML.
+
+## Revisão antes de publish
+
+Checklist rápido:
+
+1. Todo H2 com lista tem `<p>` antes?
+2. Respostas diretas têm intro?
+3. Algum `?` + `Não`/`Sim` sem ponto depois da resposta curta?
+4. FAQ e HTML dizem a mesma coisa (sem "Não desde" num e "Não é obrigatória" no outro)?
+
+## Copy
+
+Travessão e traço médio: ver `sem-travessao-em-copy.mdc`.

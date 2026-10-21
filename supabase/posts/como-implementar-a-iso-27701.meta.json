@@ -6,7 +6,7 @@
   "faq": [
     {
       "pergunta": "Quais são os passos práticos para implementar a ISO 27701 em uma empresa de médio porte?",
-      "resposta": "<p>Nove passos: escopo, diagnóstico, papéis, políticas, risco de privacidade, controles, operação, auditoria interna, certificação. Lista completa: <a href=\"/como-implementar-a-iso-27701/#passos-27701\">passos neste artigo</a>.</p>"
+      "resposta": "<p>Implementar a ISO 27701 em médio porte é montar o SGPI na ordem certa: escopo e inventário antes de controles, operação com registro antes do organismo. São nove passos, da direção ao certificado.</p><p>Lista numerada com comentário em cada etapa: <a href=\"/como-implementar-a-iso-27701/#passos-27701\">passos neste artigo</a>.</p>"
     },
     {
       "pergunta": "Preciso ter ISO 27001 antes da 27701?",
