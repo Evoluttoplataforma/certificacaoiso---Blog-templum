@@ -23,6 +23,18 @@
     {
       "pergunta": "O que mudou na ISO 9001:2026 para processos?",
       "resposta": "<p>A estrutura 4.4 permanece; a leitura reforça processo a serviço da operação e da estratégia. Detalhe em <a href=\"/gestao-processos-iso-9001-2026-requisito-4-4/\">gestão de processos na 2026</a>.</p>"
+    },
+    {
+      "pergunta": "Como mapear um processo?",
+      "resposta": "<p>Defina início e fim, observe a operação, liste etapas, entradas, saídas e responsáveis, desenhe fluxograma, valide com executores e publique versão controlada. <a href=\"/mapeamento-de-processos-e-a-iso-9001/#respostas-diretas\">Respostas diretas</a> · <a href=\"/exemplos-mapeamento-de-processos-iso-9001/#passo-a-passo\">7 passos</a>.</p>"
+    },
+    {
+      "pergunta": "Quais são os passos essenciais para começar um mapeamento de processos na minha empresa?",
+      "resposta": "<p>Escolha um processo crítico, patrocínio da direção, workshop com quem opera, rascunho validado e expansão gradual. <a href=\"/exemplos-mapeamento-de-processos-iso-9001/#passo-a-passo\">Passo a passo</a>.</p>"
+    },
+    {
+      "pergunta": "Como identificar gargalos durante o mapeamento de processos?",
+      "resposta": "<p>Compare filas entre etapas, tempo de ciclo e retrabalho com executores. Gargalo aparece onde a fila cresce ou a mesma correção se repete. <a href=\"/mapeamento-de-processos-e-a-iso-9001/#deo-qa-map-gargalo\">Detalhe no guia</a>.</p>"
     }
   ]
 }

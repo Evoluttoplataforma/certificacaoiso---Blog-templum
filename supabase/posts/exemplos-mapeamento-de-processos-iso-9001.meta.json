@@ -21,6 +21,14 @@
     {
       "pergunta": "Quais ferramentas usar para mapeamento de processos?",
       "resposta": "<p>Planilha, fluxograma em Lucidchart, Miro, Draw.io ou BPM do ERP. A ISO 9001 exige controle de documento (7.5), não uma ferramenta específica.</p><p><a href=\"#ferramentas\">Comparativo resumido</a>.</p>"
+    },
+    {
+      "pergunta": "Quais são os passos essenciais para começar um mapeamento de processos na minha empresa?",
+      "resposta": "<p>Escolher processo, definir início/fim, observar operação, registrar etapas e responsáveis, desenhar fluxo, validar e publicar na lista mestra. <a href=\"#passo-a-passo\">7 etapas neste artigo</a>.</p>"
+    },
+    {
+      "pergunta": "Pode dar exemplos de mapeamento em qualidade, operações e TI?",
+      "resposta": "<p>Sim: produção/expedição, contas a pagar, suporte TI e logística. <a href=\"#banco-exemplos\">Banco de exemplos</a>.</p>"
     }
   ]
 }

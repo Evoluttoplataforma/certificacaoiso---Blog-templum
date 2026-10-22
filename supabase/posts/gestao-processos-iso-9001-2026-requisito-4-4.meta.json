@@ -32,6 +32,14 @@
     {
       "pergunta": "O que vem primeiro: tartaruga, fluxograma ou BPMN?",
       "resposta": "A tartaruga. Ela deixa visíveis objetivo, entradas, saídas, recursos, responsabilidades, indicadores e riscos, que são os elementos da operação. Fluxograma ou BPMN vêm depois, quando esses elementos já estão definidos. Começar pelo diagrama parece mais fácil e fica mais difícil de enxergar o todo."
+    },
+    {
+      "pergunta": "O que é gestão de processos?",
+      "resposta": "É mapear, operar, medir e melhorar fluxos de trabalho de ponta a ponta. Na ISO 9001:2026, materializa-se no requisito 4.4. Não confunda com anotar o passo a passo de uma pessoa (instrução de trabalho)."
+    },
+    {
+      "pergunta": "Como criar um fluxo de processos eficiente para a minha empresa?",
+      "resposta": "Alinhe o fluxo à estratégia, defina entradas, saídas e critérios, valide gargalos com quem executa e só então desenhe o diagrama. Ver mapeamento em /mapeamento-de-processos-e-a-iso-9001/."
     }
   ],
   "published_at": "2026-10-12T16:00:00.000Z"

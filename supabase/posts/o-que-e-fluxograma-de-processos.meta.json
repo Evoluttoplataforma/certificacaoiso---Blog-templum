@@ -27,6 +27,14 @@
     {
       "pergunta": "Fluxograma substitui instrução de trabalho?",
       "resposta": "<p>Não. Fluxograma mostra o fluxo; instrução de trabalho detalha como executar uma tarefa. Veja <a href=\"/instrucao-de-trabalho-it/\">instrução de trabalho (IT)</a>.</p>"
+    },
+    {
+      "pergunta": "Como fazer um fluxograma de processo?",
+      "resposta": "<p>Defina escopo, liste etapas na ordem real, use símbolos consistentes, valide com executores e controle revisão. <a href=\"/o-que-e-fluxograma-de-processos/#passo-a-passo\">Passo a passo</a> · <a href=\"/mapeamento-de-processos-e-a-iso-9001/\">mapeamento ISO 9001</a>.</p>"
+    },
+    {
+      "pergunta": "Quais são as etapas para criar um fluxograma de um processo empresarial do zero?",
+      "resposta": "<p>Início/fim, entrevista com operação, ordenação, decisões, desenho, validação gemba e publicação versionada. Mesma sequência em <a href=\"#passo-a-passo\">como fazer fluxograma passo a passo</a>.</p>"
     }
   ]
 }
