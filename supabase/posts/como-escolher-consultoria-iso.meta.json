@@ -1,7 +1,7 @@
 {
   "title": "Como escolher consultoria ISO no Brasil",
   "seo_title": "Como escolher consultoria ISO no Brasil",
-  "seo_description": "Como escolher consultoria ISO: certificadora x consultoria, PME remota, ISO 14001, recertificação, evidências, licitações, ISO 37001, FAQ por cenário e sinais de alerta.",
+  "seo_description": "Como escolher consultoria ISO e certificadora confiável: acreditação Inmetro, checklist de OCP, PME remota, evidências, licitações e FAQ por cenário.",
   "tldr": "Escolher consultoria ISO começa por separar papéis: consultoria implanta e gera evidência; organismo acreditado audita e emite certificado. PME remota: guia com case Miranda Feliciano (2 meses e 13 dias: processos, indicadores, auditorias) e Dimarzio (6 meses). Urgência comercial: o que responder sem certificado e prazos realistas. Compare método, horas internas e auditoria interna antes de assinar.",
   "faq": [
     {
@@ -47,6 +47,14 @@
     {
       "pergunta": "Consultoria ISO 14001 no Brasil?",
       "resposta": "<p>Hub dedicado: <a href=\"/consultoria-iso-14001/\">consultoria ISO 14001</a> (resíduos, energia, obras, órgãos ambientais). Integração com 9001: <a href=\"/consultoria-iso-sistema-integrado-9001-14001/\">SGI 9001 + 14001</a>.</p>"
+    },
+    {
+      "pergunta": "Como escolher uma certificadora ISO confiável?",
+      "resposta": "<p>Peça proposta a dois ou três <strong>organismos de certificação acreditados</strong> (Inmetro/Cgcre) com o mesmo escopo. Compare dias de auditoria, calendário entre estágios, manutenção anual, experiência no setor e clareza de exclusões. Não contrate pacote único consultoria + certificação na mesma empresa. Checklist: <a href=\"/como-escolher-consultoria-iso/#certificadora\">como escolher certificadora</a> · <a href=\"/acreditacao-para-certificacao-de-sistemas-de-gestao/\">acreditação</a>.</p>"
+    },
+    {
+      "pergunta": "Certificadora ISO precisa ser acreditada?",
+      "resposta": "<p><strong>Sim</strong>, se você precisa de certificado reconhecido em cadastro de cliente, edital ou matriz internacional. Acreditação comprova que o OCP segue regras do esquema (IAF/instrumentos nacionais). Sem acreditação válida para a norma, o documento pode não valer para quem exige ISO oficial.</p>"
     }
   ]
 }

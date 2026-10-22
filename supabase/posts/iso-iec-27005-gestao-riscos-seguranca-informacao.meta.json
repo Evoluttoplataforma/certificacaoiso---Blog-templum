@@ -1,0 +1,38 @@
+{
+  "title": "ISO/IEC 27005: gestão de riscos de segurança da informação",
+  "seo_title": "ISO/IEC 27005: gestão de riscos e ligação com ISO 27001",
+  "seo_description": "ISO/IEC 27005 explica gestão de riscos de segurança da informação, passos, documentação e ligação com ISO 27001 e SoA. Norma de apoio, não certificável.",
+  "tldr": "A ISO/IEC 27005 orienta identificar, analisar, tratar e revisar riscos de segurança da informação. Não é certificável: o certificado vem da ISO 27001. Use a 27005 para estruturar avaliação de riscos, plano de tratamento e SoA com critérios definidos antes da matriz.",
+  "published_at": "2026-10-22T21:00:00.000Z",
+  "tags": ["ISO 27001", "ISO 27005", "Gestão de riscos", "SGSI", "SoA"],
+  "faq": [
+    {
+      "pergunta": "O que é a ISO/IEC 27005?",
+      "resposta": "<p>A <strong>ISO/IEC 27005</strong> é norma de apoio que descreve <strong>gestão de riscos de segurança da informação</strong>: contexto, critérios, identificação, análise, tratamento e revisão. Ela complementa o SGSI da <a href=\"/iso-27001/\">ISO 27001</a> e não substitui seus requisitos certificáveis.</p>"
+    },
+    {
+      "pergunta": "A ISO 27005 gera certificado?",
+      "resposta": "<p><strong>Não.</strong> Certificação de sistema de gestão da segurança da informação é feita contra a <strong>ISO/IEC 27001</strong>, por organismo de certificação acreditado. A 27005 é guia metodológico.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre ISO 27001 e ISO 27005?",
+      "resposta": "<p>A <strong>27001</strong> define requisitos auditáveis do SGSI (cláusulas 4 a 10 e SoA). A <strong>27005</strong> detalha <strong>como conduzir gestão de riscos</strong> que alimenta o planejamento e o tratamento exigidos pela 27001. Só a 27001 é certificável.</p>"
+    },
+    {
+      "pergunta": "Quais passos a ISO 27005 sugere para gestão de riscos?",
+      "resposta": "<p>Em linha geral: definir contexto e critérios, identificar riscos sobre confidencialidade, integridade e disponibilidade, analisar e priorizar, tratar (reduzir, transferir, evitar ou aceitar), registrar aceites residuais e revisar após mudanças ou incidentes. Passo a passo no SGSI: <a href=\"/como-implementar-a-iso-27001/#passos\">implementar ISO 27001</a>.</p>"
+    },
+    {
+      "pergunta": "Que documentos de risco a ISO 27001 costuma exigir na auditoria?",
+      "resposta": "<p>Metodologia de avaliação de riscos, critérios de aceitação, resultado da avaliação (8.2), plano de tratamento, aceites formais de risco residual e <strong>Declaração de Aplicabilidade</strong> ligada aos riscos. A 27005 orienta o desenho; a evidência é auditada na 27001.</p>"
+    },
+    {
+      "pergunta": "PME precisa seguir a ISO 27005 completa?",
+      "resposta": "<p>Precisa de <strong>processo proporcional</strong>: inventário enxuto, critérios simples, foco em ativos críticos e fornecedores relevantes. A lógica da 27005 vale; o volume de registro adapta-se ao porte. <a href=\"/iso-27001-para-pequenas-empresas/\">ISO 27001 para pequenas empresas</a>.</p>"
+    },
+    {
+      "pergunta": "Matriz de riscos substitui a ISO 27005?",
+      "resposta": "<p><strong>Não.</strong> Matriz é ferramenta de priorização. O auditor verifica se há critérios, donos, tratamento e revisão. Veja <a href=\"/matriz-de-riscos-o-que-e-e-como-aplicar/\">matriz de riscos</a> e o guia <a href=\"/iso-iec-27005-gestao-riscos-seguranca-informacao/\">ISO/IEC 27005</a>.</p>"
+    }
+  ]
+}

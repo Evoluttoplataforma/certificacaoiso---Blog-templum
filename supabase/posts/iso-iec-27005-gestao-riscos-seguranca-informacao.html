@@ -1,0 +1,68 @@
+<p><strong>Resposta direta:</strong> a <strong>ISO/IEC 27005</strong> é a norma de apoio que orienta <strong>como identificar, analisar, avaliar e tratar riscos de segurança da informação</strong>. Ela <strong>não é certificável</strong>: quem gera certificado é a <a href="/iso-27001/">ISO 27001</a> (SGSI). Na prática, a 27005 alimenta a avaliação de riscos exigida pela 27001, o plano de tratamento e a <strong>Declaração de Aplicabilidade (SoA)</strong>.</p>
+<p>Guia <strong>Certificação ISO</strong> (Templum). <a href="/iso-27001/">Hub ISO 27001</a> · <a href="/requisitos-da-iso-27001/">requisitos</a> · <a href="/como-implementar-a-iso-27001/">implementar</a> · <a href="/certificacao-iso-27001-etapas-prazo-custo/">certificação</a> · <a href="/consultoria-iso-27001/">consultoria</a>.</p>
+
+<div class="post-portas">
+  <a href="#respostas-diretas"><strong>Respostas diretas</strong><span>O que é, passos, documentos</span></a>
+  <a href="#27001-27005"><strong>27001 x 27005</strong><span>Certificável x guia</span></a>
+  <a href="#passos-risco"><strong>Passos de risco</strong><span>Do contexto à SoA</span></a>
+  <a href="#documentacao"><strong>Documentação</strong><span>O que registrar</span></a>
+  <a href="#pme"><strong>PME</strong><span>Escopo proporcional</span></a>
+</div>
+
+<h2 id="respostas-diretas">Respostas diretas: ISO/IEC 27005 e gestão de riscos</h2>
+<p>Resumo para quem precisa decidir rápido ou citar o método; o passo a passo comentado está nas seções abaixo.</p>
+<ul>
+<li><strong>O que é a ISO/IEC 27005:</strong> guia internacional de <strong>gestão de riscos de segurança da informação</strong>, alinhado ao SGSI da 27001. Não substitui a norma certificável.</li>
+<li><strong>ISO 27005 é certificável?</strong> <strong>Não.</strong> Certificado de SGSI sai de auditoria da <strong>ISO/IEC 27001</strong> por organismo acreditado.</li>
+<li><strong>Para que serve na ISO 27001:</strong> estruturar <strong>avaliação e tratamento de riscos</strong> (cláusulas 6.1 e 8.2), escolher controles do Anexo A com justificativa na SoA.</li>
+<li><strong>Passos essenciais:</strong> definir contexto e critérios, identificar riscos sobre confidencialidade, integridade e disponibilidade, analisar, avaliar, tratar, aceitar residual e revisar periodicamente.</li>
+<li><strong>Documentos típicos:</strong> metodologia de risco, registro de critérios, resultado da avaliação, plano de tratamento, aceites formais, SoA ligada aos riscos.</li>
+<li><strong>Matriz de riscos:</strong> ferramenta comum, não obrigatória; o auditor exige <strong>processo repetível</strong>, não planilha vazia. <a href="/matriz-de-riscos-o-que-e-e-como-aplicar/">Matriz de riscos: o que é</a>.</li>
+<li><strong>PME:</strong> mesmo fluxo, menos ativos e critérios simples; foco no que guarda dado de cliente e no que para a operação. <a href="/iso-27001-para-pequenas-empresas/">ISO 27001 para pequenas empresas</a>.</li>
+</ul>
+
+<h2 id="o-que-e">O que é a ISO/IEC 27005</h2>
+<p>A <strong>ISO/IEC 27005</strong> descreve atividades e conceitos de gestão de riscos aplicados à <strong>segurança da informação</strong>: ativos de informação, ameaças, vulnerabilidades, impacto e tratamento. Ela conversa com a estrutura de alto nível da família ISO/IEC 27000 e detalha o que a <a href="/requisitos-da-iso-27001/">ISO 27001</a> exige de forma genérica em planejamento e operação.</p>
+<p>Empresas em projeto de SGSI usam a 27005 para não inventar método na hora da auditoria: critérios de probabilidade e impacto definidos antes da análise, dono de risco nomeado, revisão após incidente ou mudança relevante. Consultoria costuma adaptar o guia ao porte; certificadora audita se o que está no papel aparece na operação.</p>
+
+<h2 id="27001-27005">ISO 27001, ISO 27002 e ISO 27005: quem faz o quê</h2>
+<p>As três normas se complementam, mas só uma gera certificado. Entender o papel de cada uma evita comprar “certificação 27005” ou confundir lista de controles com sistema de gestão.</p>
+<ul>
+<li><strong>ISO/IEC 27001:</strong> requisitos do <strong>SGSI</strong> (cláusulas 4 a 10) e referência ao Anexo A. É a norma <strong>certificável</strong>.</li>
+<li><strong>ISO/IEC 27002:</strong> guia de <strong>implementação</strong> dos controles do Anexo A. Não gera certificado.</li>
+<li><strong>ISO/IEC 27005:</strong> guia de <strong>gestão de riscos</strong> que sustenta a escolha e a profundidade dos controles. Não gera certificado.</li>
+</ul>
+<p>Na auditoria de certificação, o foco está na 27001: escopo, riscos, SoA, evidência de controles e ciclo PDCA. A 27005 entra como referência de boa prática para o requisito de avaliação de riscos, não como norma auditada separada.</p>
+
+<h2 id="passos-risco">Passos da gestão de riscos (visão ISO/IEC 27005 no SGSI)</h2>
+<p>A ordem abaixo é a que funciona na maioria dos projetos de <a href="/como-implementar-a-iso-27001/">implementação ISO 27001</a>: pular etapas (principalmente critérios e inventário) produz SoA desconectada da operação.</p>
+<ol>
+<li><strong>Estabelecer contexto.</strong> Escopo do SGSI, partes interessadas e ativos de informação relevantes (incluindo SaaS e terceiros).</li>
+<li><strong>Definir critérios de risco.</strong> Escalas de impacto e probabilidade, limiar de aceitação e quem pode aceitar risco residual. Escrever <strong>antes</strong> de preencher a matriz.</li>
+<li><strong>Identificar riscos.</strong> Cenários que afetam confidencialidade, integridade ou disponibilidade, em linguagem de negócio.</li>
+<li><strong>Analisar e avaliar.</strong> Priorizar riscos com os critérios acordados; registrar dono de cada risco.</li>
+<li><strong>Tratar.</strong> Reduzir, transferir, evitar ou aceitar; escolher controles (Anexo A) proporcionais ao tratamento.</li>
+<li><strong>Comunicar e monitorar.</strong> Revisão periódica, após incidente grave ou mudança de escopo/tecnologia.</li>
+<li><strong>Atualizar a SoA.</strong> Cada controle incluído ou excluído com justificativa ligada a risco ou requisito legal/contratual.</li>
+</ol>
+<p>Detalhe do projeto completo: <a href="/como-implementar-a-iso-27001/#passos">11 etapas de implementação</a>. Mapeamento Anexo A: <a href="/iso-27001-anexo-a-mapeamento-politicas/">Anexo A para políticas</a>.</p>
+
+<h2 id="documentacao">Que documentação a gestão de riscos costuma gerar</h2>
+<p>A 27001 não impõe modelo único; impõe que o processo exista, seja coerente e deixe registro. Estes artefatos aparecem na maioria dos SGSI auditáveis e espelham a lógica da 27005.</p>
+<ul>
+<li>Procedimento ou metodologia de avaliação de riscos (critérios, frequência de revisão, papéis).</li>
+<li>Resultado da avaliação de riscos (requisito 8.2 da 27001).</li>
+<li>Plano de tratamento com responsável, prazo e status.</li>
+<li>Registros de aceitação de risco residual por autoridade adequada.</li>
+<li><strong>SoA</strong> completa, com status de implementação e ligação risco-controle.</li>
+</ul>
+<p>Auditoria interna deve amostrar se tratamentos foram executados, não só aprovados no papel. <a href="/auditoria-iso-27001/">Auditoria ISO 27001</a> · <a href="/checklist-preparacao-auditoria-interna-iso/">checklist de auditoria interna</a>.</p>
+
+<h2 id="pme">ISO 27005 e PME: simplificar sem enfraquecer</h2>
+<p>Pequena empresa não precisa de GRC enterprise no dia 1. Precisa de inventário honesto (onde estão contratos, financeiro, backups, acessos), critérios de risco em uma página e tratamento dos cenários que derrubam cliente ou operação.</p>
+<p>Boas práticas para PME: revisar riscos quando entra novo sistema ou fornecedor crítico; manter SoA enxuta com exclusões justificadas; usar a mesma cadência de indicadores e auditoria interna já prevista na 27001. <a href="/iso-27001-para-pequenas-empresas/">Guia ISO 27001 para pequenas empresas</a> · <a href="/relacao-do-lgpd-com-a-iso-27001/">LGPD e ISO 27001</a>.</p>
+
+<h2 id="certificacao">Da gestão de riscos ao certificado</h2>
+<p>Risco bem conduzido reduz achados no estágio 2, mas não substitui operação com registro nem auditoria interna. Depois do SGSI rodando, a empresa contrata organismo <strong>acreditado</strong> (Inmetro/Cgcre) em contrato separado da consultoria. <a href="/certificacao-iso-27001-etapas-prazo-custo/">Certificação ISO 27001: etapas, prazo e custo</a> · <a href="/como-escolher-consultoria-iso/#certificadora">Como escolher certificadora ISO confiável</a> · <a href="/acreditacao-para-certificacao-de-sistemas-de-gestao/">Acreditação de certificadoras</a>.</p>
+
+<p class="post-cta"><strong>Quer SGSI com risco bem amarrado?</strong> <a href="https://templum.com.br/consultoria/iso-27001/">Consultoria Templum ISO 27001</a> · <a href="/form/?utm_source=blog&amp;utm_medium=cta&amp;utm_campaign=iso-27005&amp;norma=ISO%2027001">Diagnóstico gratuito</a> · <a href="/iso-27001/">Hub ISO 27001</a></p>
