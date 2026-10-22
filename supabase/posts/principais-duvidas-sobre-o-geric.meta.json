@@ -1,0 +1,44 @@
+{
+  "title": "GERIC da Caixa: principais dúvidas de quem vai financiar obra",
+  "seo_title": "GERIC da Caixa: o que é, quanto libera e como aprovar",
+  "seo_description": "GERIC não é dinheiro: é a capacidade de contratação da sua construtora na Caixa. Veja pré-requisitos, prazos, quanto costuma sair e os erros que travam.",
+  "tldr": "O GERIC é a análise de risco de crédito da Caixa Econômica Federal que define a capacidade de contratação da construtora — não é dinheiro em conta, e incide sobre o custo de obra mais BDI, nunca sobre o VGV. Para entrar no processo, o CNPJ precisa de pelo menos um ano de faturamento declarado, mais de R$ 500 mil no último exercício, CNAE de construção e registro no CREA. Aprovado o limite, entra a segunda conta: quanto dinheiro de fato chega à obra, definido pela matriz de conjugação (evolução de obra, vendas financiadas e linha PJ). Além do GERIC, a contratação depende de PBQP-H, análise de engenharia e comprovação de demanda mínima.",
+  "faq": [
+    {
+      "pergunta": "O GERIC é dinheiro liberado pela Caixa?",
+      "resposta": "\n<p>Não. O GERIC é uma capacidade de contratação: a declaração de até quanto de custo de obra a Caixa aceita contratar com aquele CNPJ. O valor fica registrado no sistema do banco — a Caixa não emite certificado de GERIC — e só se converte em recurso quando um empreendimento específico é contratado.</p>\n"
+    },
+    {
+      "pergunta": "Qual o faturamento mínimo para conseguir o GERIC?",
+      "resposta": "\n<p>Na prática, construtoras com faturamento acima de R$ 500 mil no último ano fiscal e pelo menos um ano de CNPJ ativo com movimentação já conseguem entrar no processo. A análise considera os três últimos exercícios com peso decrescente: o ano mais recente pesa mais.</p>\n"
+    },
+    {
+      "pergunta": "O GERIC incide sobre o VGV ou sobre o custo da obra?",
+      "resposta": "\n<p>Sobre o custo de obra mais BDI, nunca sobre o VGV. Considerando um custo em torno de 65% do valor geral de vendas, um GERIC de R$ 20 milhões sustenta um empreendimento de aproximadamente R$ 30 milhões de VGV. Fazer a conta pelo VGV cheio é a origem da maior parte das expectativas furadas na primeira conversa com o banco.</p>\n"
+    },
+    {
+      "pergunta": "Quanto tempo leva para aprovar o GERIC?",
+      "resposta": "\n<p>De 90 a 120 dias quando a documentação contábil e fiscal já está organizada. O prazo crítico do cronograma não é o GERIC, e sim o PBQP-H: a implementação leva de 6 a 8 meses em média, com casos de 90 dias quando a construtora nomeia um interlocutor dedicado. Por isso a certificação deve começar antes, não depois de o banco exigir.</p>\n"
+    },
+    {
+      "pergunta": "Preciso do PBQP-H para conseguir o GERIC?",
+      "resposta": "\n<p>Na linha de apoio à produção — o Minha Casa, Minha Vida, hoje com imóveis de até R$ 600 mil — o PBQP-H é exigência da Caixa: sem certificado vigente, a contratação não avança. No SBPE, para produtos de médio e alto padrão, ele deixa de ser exigência formal e passa a ser diferencial competitivo, pesando na avaliação de capacidade de gestão e servindo como argumento de venda ao comprador final.</p>\n"
+    },
+    {
+      "pergunta": "Qual a validade do GERIC?",
+      "resposta": "\n<p>A avaliação tem validade anual e é reavaliada com base no faturamento atualizado. Dependendo da classificação da empresa, a Caixa pode pedir conferências mais frequentes da documentação. Já a certificação PBQP-H tem validade de três anos, com auditorias de manutenção anuais.</p>\n"
+    },
+    {
+      "pergunta": "Posso somar o GERIC de outra empresa do meu grupo?",
+      "resposta": "\n<p>Sim, desde que a segunda empresa atue dentro de engenharia, arquitetura, construção ou incorporação. Trocar o CNAE de uma empresa de outro ramo para aproveitar o faturamento não funciona: a Caixa trava o processo até que se feche um novo ano fiscal dentro da atividade correta.</p>\n"
+    },
+    {
+      "pergunta": "O que é locação de GERIC e por que evitar?",
+      "resposta": "\n<p>É a prática de alugar a capacidade de crédito de outra empresa para fechar um empreendimento que a construtora não sustentaria sozinha. Pelo que chega até nós, custa entre 6% e 10% do valor da obra, coloca em xeque a integridade do pleito junto ao banco e compromete a credibilidade da construtora no longo prazo. A via segura é a qualificação real da própria empresa.</p>\n"
+    },
+    {
+      "pergunta": "Existe valor mínimo de obra para financiar com a Caixa?",
+      "resposta": "\n<p>Sim. A Caixa não financia empreendimento na linha de apoio à produção com custo de obra abaixo de R$ 15 milhões. É um dado de planejamento: precisa ser considerado antes da compra do terreno e da definição do produto.</p>\n"
+    }
+  ]
+}
