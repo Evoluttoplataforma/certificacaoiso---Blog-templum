@@ -1,7 +1,7 @@
 {
   "title": "Homologação de fornecedores na ISO 9001 (requisito 8.4)",
   "seo_title": "Homologação de fornecedores ISO 9001: compras e 8.4",
-  "seo_description": "Como homologar fornecedores na ISO 9001: critérios, avaliação, lista aprovada, reavaliação e procedimento de compras. Consultoria ajuda a desenhar sem burocracia.",
+  "seo_description": "Gestão e homologação de fornecedores ISO 9001 (8.4): seleção, métricas, contratos, certificações na avaliação e evidência para auditoria.",
   "tldr": "Homologação de fornecedores na ISO 9001 decorre do requisito 8.4: definir critérios, avaliar, aprovar, monitorar e reavaliar fornecedores externos conforme o impacto no produto ou serviço. Procedimento claro de compras evita compra por urgência sem critério. Consultoria ajuda a desenhar matriz de criticidade, formulário de avaliação e evidência para auditoria, sem lista infinita de homologados inativos.",
   "published_at": "2026-10-04T17:00:00-03:00",
   "faq": [
@@ -24,6 +24,14 @@
     {
       "pergunta": "Onde aprofundar a leitura da norma?",
       "resposta": "<p>Artigo complementar: <a href=\"/qualificacao-de-fornecedores-iso-9001-2026-requisito-8-4/\">qualificação de fornecedores ISO 9001:2026</a>.</p>"
+    },
+    {
+      "pergunta": "Quais métricas usar para avaliar desempenho de fornecedores?",
+      "resposta": "<p>Prazo de entrega, conformidade do material ou serviço, número de não conformidades, reclamações de cliente ligadas ao insumo e cumprimento de requisitos contratuais. Reavaliar após falha grave ou no ciclo planejado. Resumo: <a href=\"/homologacao-fornecedores-iso-9001/#respostas-diretas\">gestão de fornecedores</a>.</p>"
+    },
+    {
+      "pergunta": "Quais documentos e certificações pedir na homologação?",
+      "resposta": "<p>Depende do risco: questionário, licenças, laudos, amostra ou visita para críticos; certificado ISO do fornecedor é critério útil se o escopo cobrir o que você compra, mas não substitui monitoramento de entregas.</p>"
     }
   ]
 }

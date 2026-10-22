@@ -27,6 +27,10 @@
     {
       "pergunta": "Consultoria integrada emite certificado?",
       "resposta": "<p>Não. Dois certificados (9001 e 14001) saem do organismo acreditado. Consultoria prepara evidências para auditoria integrada ou separada.</p>"
+    },
+    {
+      "pergunta": "Como escolher certificadora para SGI 9001 e 14001?",
+      "resposta": "<p>Confirme acreditação para ambas as normas no escopo, compare dias de auditoria integrada e contratos separados da consultoria. <a href=\"/como-escolher-consultoria-iso/#certificadora\">Checklist certificadora</a>.</p>"
     }
   ]
 }
