@@ -2,7 +2,7 @@
  "title": "Certificação ISO 14001: etapas, LAIA e SGA",
  "seo_title": "Certificação ISO 14001: consultoria, etapas e como obter",
  "seo_description": "Certificação ISO 14001 no Brasil: LAIA, requisitos legais, consultoria, organismo acreditado e seis etapas até o certificado. Licença x certificado.",
- "tldr": "A ISO 14001 é a norma internacional de sistemas de gestão ambiental: ela estrutura como a empresa identifica, controla e melhora seus impactos no meio ambiente. A implantação leva de 10 a 18 meses — mais que a ISO 9001, porque o levantamento de aspectos e impactos (LAIA) e o de requisitos legais são trabalho de campo. E um ponto que gera confusão: o certificado não substitui licença ambiental. A norma cobra a conformidade legal, não dispensa dela.",
+ "tldr": "A ISO 14001 (ABNT NBR ISO 14001) define requisitos de sistema de gestão ambiental; a certificação ISO 14001 é a auditoria de organismo acreditado que emite o certificado. Prazo típico: 10 a 18 meses, com LAIA e legal como gargalo. Certificado não substitui licença ambiental.",
  "faq": [
   {
    "pergunta": "Como conseguir a certificação ISO 14001?",
@@ -38,11 +38,23 @@
   },
   {
    "pergunta": "Já existe ISO 14001:2026 publicada?",
-   "resposta": "<p>Ainda não. A versão certificável hoje é a <strong>ISO 14001:2015</strong> com a Emenda 1 de 2024 (mudanças climáticas no contexto). A nova revisão está em elaboração junto com a ISO 9001; quando houver FDIS publicada, a transição terá prazo definido pelo comitê. Até lá, projetos seguem a 2015.</p>"
+   "resposta": "<p>Projetos certificáveis hoje seguem a <strong>ISO 14001:2015</strong> com Emenda 1 (2024). A revisão completa está em andamento; confirme edição e transição na ABNT/ISO e no <a href=\"/guia-definitivo-das-mudancas-iso-2026/\">guia ISO 2026</a>.</p>"
   },
   {
    "pergunta": "Quais os passos para obter a certificação ISO 14001?",
    "resposta": "<p>Em linha geral: diagnóstico, escopo e contexto, <strong>LAIA</strong> e requisitos legais, controles operacionais, auditoria interna e análise crítica, depois auditoria de certificação em duas fases. <a href=\"/iso-14001/#o-processo-de-implementacao-da-iso-14001\">Prazo e etapas neste guia</a>; LAIA: <a href=\"/como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa/\">levantamento de aspectos e impactos</a>.</p>"
+  },
+  {
+   "pergunta": "O que é a ABNT NBR ISO 14001?",
+   "resposta": "<p>É a adoção brasileira da norma internacional ISO 14001: requisitos para implantar, operar e melhorar um sistema de gestão ambiental (SGA). <a href=\"/iso-14001/#respostas-diretas\">Respostas diretas no guia</a>.</p>"
+  },
+  {
+   "pergunta": "Como escolher uma certificadora ISO confiável?",
+   "resposta": "<p>Compare organismos acreditados (Inmetro/Cgcre), escopo, dias de auditoria, calendário e manutenção anual. Consultoria e certificadora são contratos separados. <a href=\"/iso-14001/#como-escolher-certificadora-14001\">Como escolher certificadora ISO 14001</a>.</p>"
+  },
+  {
+   "pergunta": "Quais os passos práticos para iniciar a implementação da ISO 14001?",
+   "resposta": "<p>Revise licenças, liste aspectos da operação, defina escopo do certificado, formalize LAIA e matriz legal, depois controles e evidências. <a href=\"/como-fazer-o-levantamento-de-aspectos-e-impactos-ambientais-da-minha-empresa/\">LAIA passo a passo</a> · <a href=\"/iso-14001/#o-processo-de-implementacao-da-iso-14001\">seis etapas até certificar</a>.</p>"
   }
  ]
 }
