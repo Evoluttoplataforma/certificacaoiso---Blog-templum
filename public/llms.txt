@@ -24,6 +24,8 @@
 - [PBQP-H: guia construção civil](https://certificacaoiso.com.br/pbqp-h/): SiAC, níveis A e B, Caixa/GERIC; consultoria prepara, OAC certifica.
 - [O que é a ISO 37001](https://certificacaoiso.com.br/o-que-e-a-iso-37001/): antissuborno, integridade, canal de denúncias e contratos públicos.
 - [Consultoria ISO 37001](https://certificacaoiso.com.br/consultoria-iso-37001/): SGAS, due diligence, brindes, denúncias e preparação para certificação.
+- [Certificação ISO 37001](https://certificacaoiso.com.br/certificacao-iso-37001-etapas-prazo-custo/): etapas, prazo, custo e transição 2025.
+- [Requisitos ISO 37001 cláusulas 4–10](https://certificacaoiso.com.br/requisitos-da-iso-37001-clausulas-4-a-10/): evidências por cláusula (versão 2025).
 - [Gestão de indicadores ISO 9001:2026 (6.2 e 9.1)](https://certificacaoiso.com.br/gestao-indicadores-iso-9001-2026-requisitos-6-2-e-9-1/): objetivos, KPI, micrometas, tendência e análise que gera decisão (consultoria e pós-certificação).
 - [Consultoria ISO 9001 para imobiliárias e incorporadoras](https://certificacaoiso.com.br/consultoria-iso-9001-imobiliaria/): vendas, contratos, obra, pós-venda e PBQP-H quando aplicável.
 - [Manter certificação ISO após certificar](https://certificacaoiso.com.br/manter-certificacao-iso-apos-certificar/): ciclo de 3 anos, surveillance, auditoria interna e suporte pós-certificação.

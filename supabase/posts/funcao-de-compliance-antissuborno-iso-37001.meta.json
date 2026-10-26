@@ -1,0 +1,47 @@
+{
+ "title": "Função de compliance antissuborno: independência, autoridade e acesso ao corpo diretivo",
+ "tldr": "A ISO 37001 trabalha com três níveis de liderança: corpo diretivo (governança), alta direção (operação) e função de compliance antissuborno. A cláusula 5.3.2 exige que essa função tenha competência, status, autoridade, independência, recursos e acesso direto ao corpo diretivo. Pode ser acumulada por outro cargo e pode ser terceirizada — o que não pode é conflitar: quem executa o processo controlado não pode fiscalizar o próprio controle. Onde não existe corpo diretivo, as responsabilidades dele recaem sobre a alta direção. E a cláusula 5.3.3 acrescenta que decisões sujeitas a mais do que risco baixo de suborno precisam ser tomadas em nível de autoridade apropriado e livre de conflito de interesses.",
+ "seo_title": "Função de compliance antissuborno na ISO 37001 (5.3.2): o que exige",
+ "seo_description": "O que a ISO 37001 exige da função de compliance antissuborno: competência, autoridade, recursos e independência com acesso direto ao corpo diretivo. Quem pode acumular, quando terceirizar, o que é decisão delegada (5.3.3) e como a auditoria testa.",
+ "faq": [
+  {
+   "pergunta": "O que a ISO 37001 exige da função de compliance antissuborno?",
+   "resposta": "Que ela supervisione a concepção e a implementação do sistema, oriente e aconselhe o pessoal, assegure a conformidade com a norma e reporte o desempenho ao corpo diretivo e à alta direção. E que seja provida de recursos adequados e atribuída a pessoas com competência, status, autoridade e independência apropriados, incluindo acesso direto ao corpo diretivo."
+  },
+  {
+   "pergunta": "A função de compliance antissuborno pode ser acumulada com outro cargo?",
+   "resposta": "Pode, e em empresas menores quase sempre é. O limite não é o acúmulo, é o conflito de interesses: quem executa o processo controlado não pode fiscalizar o próprio controle. Acúmulo com jurídico ou com a área de sistemas de gestão costuma funcionar; acúmulo com financeiro, compras ou comercial cria conflito direto, porque são justamente as áreas de maior risco de suborno."
+  },
+  {
+   "pergunta": "É possível terceirizar a função de compliance antissuborno?",
+   "resposta": "Sim, e é solução legítima para empresas sem massa crítica para um cargo dedicado — o terceiro agrega independência estrutural e conhecimento da norma. Em contrapartida, a empresa precisa garantir acesso real à informação e ter alguém interno responsável pela execução diária. Terceirizar a função não transfere a responsabilidade da alta direção pelo sistema."
+  },
+  {
+   "pergunta": "O que significa independência da função de compliance?",
+   "resposta": "Ausência de interferência ou pressão sobre a operação da função. Materializa-se em três coisas: acesso direto ao corpo diretivo, com linha de reporte, relatórios periódicos e participação em reuniões do conselho ou comitê; não subordinação a quem a função precisa fiscalizar; e estabilidade e recursos que não dependam de quem foi contrariado por ela."
+  },
+  {
+   "pergunta": "E se a empresa não tiver conselho de administração?",
+   "resposta": "Quando a organização não possui corpo diretivo, todas as responsabilidades atribuídas a ele pela norma recaem sobre a alta direção — elas não desaparecem. Isso inclui aprovar a política, receber e analisar informação sobre o sistema em intervalos planejados, requerer recursos adequados e exercer supervisão razoável."
+  },
+  {
+   "pergunta": "O que é decisão delegada na ISO 37001?",
+   "resposta": "É o que a cláusula 5.3.3 trata: quando a alta direção delega autoridade para decidir em situações que envolvem mais do que risco baixo de suborno, é preciso um processo que assegure nível de autoridade apropriado ao risco e ausência de conflito de interesses reais ou potenciais, com análise crítica periódica desses processos. Exemplos típicos são alçadas de pagamento, contratação sem concorrência, concessão de descontos, aprovação de doações e decisão de abrir ou arquivar investigação. A delegação transfere poder, não responsabilidade."
+  },
+  {
+   "pergunta": "Qual a diferença entre a análise pela direção e a análise pela função de compliance?",
+   "resposta": "A análise pela direção (9.3) é periódica e feita pela alta direção e pelo corpo diretivo, com as entradas exigidas pela norma. A análise pela função de compliance antissuborno (9.4) é contínua: avalia permanentemente se o sistema está adequado para gerenciar os riscos e se está sendo eficazmente implementado, reportando em intervalos planejados ou quando necessário. São documentos e momentos distintos — fundir tudo numa ata só costuma gerar achado."
+  }
+ ],
+ "published_at": "2026-08-17T20:57:51.244642+00:00",
+ "tags": [
+  "ISO 37001",
+  "função de compliance",
+  "compliance officer",
+  "governança",
+  "antissuborno",
+  "liderança",
+  "ISO 37301",
+  "anticorrupção"
+ ]
+}

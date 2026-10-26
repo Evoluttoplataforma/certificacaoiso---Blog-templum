@@ -1,0 +1,47 @@
+{
+ "title": "Avaliação de risco de suborno: critérios, matriz e periodicidade",
+ "tldr": "A cláusula 4.5 da ISO 37001 exige quatro coisas: identificar os riscos de suborno que a organização pode razoavelmente antecipar, analisá-los e priorizá-los, avaliar a adequação e a eficácia dos controles que já existem, e estabelecer critérios para avaliar o nível de risco. É esse último item que a maioria esquece — sem critério definido (o que faz um risco ser alto e não médio), a matriz é opinião. A avaliação usa como insumo o contexto (4.1), as partes interessadas (4.2) e o escopo (4.3), e alimenta as ações da cláusula 6.1. Precisa ser refeita periodicamente e sempre que houver mudança relevante. Matriz genérica, copiada de modelo, é o achado mais comum em auditoria — e invalida o desenho do sistema inteiro.",
+ "seo_title": "Avaliação de risco de suborno ISO 37001: como fazer (4.5)",
+ "seo_description": "Como fazer a avaliação de risco de suborno que a cláusula 4.5 da ISO 37001 exige: os fatores que precisam entrar, como definir critérios de nível de risco, como avaliar a eficácia dos controles existentes, periodicidade e o que reprova em auditoria.",
+ "faq": [
+  {
+   "pergunta": "O que a cláusula 4.5 da ISO 37001 exige?",
+   "resposta": "Um processo regular que identifique os riscos de suborno que a organização possa razoavelmente antecipar considerando os fatores do contexto, analise e priorize esses riscos, avalie a adequação e a eficácia dos controles que já existem para mitigá-los e estabeleça critérios para avaliar o nível de risco de suborno. Os dois últimos itens são os que mais faltam nas avaliações reprovadas."
+  },
+  {
+   "pergunta": "Como definir os critérios de nível de risco de suborno?",
+   "resposta": "Escrevendo, antes de avaliar, três coisas: a escala adotada (1 a 3, 1 a 5, 1 a 10), o significado concreto de cada nível de probabilidade e impacto, e a régua de decisão — a partir de que nível o risco exige due diligence aprofundada, aprovação superior, controle adicional ou recusa da operação. Critério bom cita consequência legal e de negócio; adjetivo como impacto significativo não é critério."
+  },
+  {
+   "pergunta": "Qual metodologia usar na avaliação de risco de suborno?",
+   "resposta": "A norma não determina nenhuma. As referências mais usadas são a ISO 31000 e a ISO 31010, de gestão e técnicas de avaliação de riscos, e o COSO ERM para controles internos; FMEA funciona bem em empresas que já o usam na qualidade. Metodologia própria é permitida. O que a auditoria cobra é coerência entre o critério declarado e a classificação atribuída, além de proporcionalidade em relação ao porte e ao risco."
+  },
+  {
+   "pergunta": "De quanto em quanto tempo refazer a avaliação de risco de suborno?",
+   "resposta": "A norma exige que seja regular, sem fixar prazo. O padrão de mercado é reavaliação completa anual, alimentada por insumos coletados ao longo do ano, mais reavaliação fora do calendário quando houver mudança relevante: novo país ou segmento, fusão ou aquisição, início de relacionamento com o poder público ou com novo intermediário, caso ou denúncia relevante e mudança de legislação."
+  },
+  {
+   "pergunta": "Quem deve participar da avaliação de risco de suborno?",
+   "resposta": "Uma equipe multidisciplinar, conduzida pelo compliance, com compras, comercial, financeiro, jurídico, operações e representação da liderança — e gente da ponta quando o risco está na ponta. Avaliação feita só pelo time de compliance erra justamente onde importa, porque quem conhece a brecha do processo é quem opera o processo."
+  },
+  {
+   "pergunta": "O que é avaliar a eficácia dos controles existentes?",
+   "resposta": "É responder, com evidência, se o controle existe formalmente ou é prática informal, se é aplicado sempre ou tem exceção não registrada, se pode ser contornado por quem conhece o processo e se deixa registro verificável. A forma mais direta de responder é testar o controle: tentar aprovar um pagamento fora da alçada, submeter cadastro incompleto de fornecedor, oferecer brinde acima do limite — e verificar se o sistema barra."
+  },
+  {
+   "pergunta": "Por que a avaliação de risco está na cláusula 4 e não na 6?",
+   "resposta": "Porque a ISO 37001 e a ISO 37301 separaram as duas etapas. A cláusula 4.5 trata da metodologia, dos critérios e da avaliação em si — quais são os riscos e quanto valem. A cláusula 6.1 trata das ações para endereçá-los: os controles que serão implantados, o que se aceita e o que se mitiga. Nas normas como ISO 9001, ISO 14001 e ISO 45001, risco aparece apenas na cláusula 6."
+  }
+ ],
+ "published_at": "2026-08-17T20:49:31.933564+00:00",
+ "tags": [
+  "ISO 37001",
+  "avaliação de risco",
+  "antissuborno",
+  "compliance",
+  "gestão de riscos",
+  "matriz de risco",
+  "due diligence",
+  "ISO 31000"
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "title": "ISO 37001 ou ISO 37301: as diferenças requisito por requisito",
+ "tldr": "A ISO 37001 é um sistema de gestão antissuborno: escopo estreito, um risco só, controles tipificados (due diligence, controles financeiros e não financeiros, presentes e hospitalidade, canal e investigação). A ISO 37301 é um sistema de gestão de compliance: escopo amplo, cobre todas as obrigações de conformidade da empresa e por isso não tipifica controle nenhum — em troca, exige identificar sistematicamente as obrigações de compliance (4.5), algo que a 37001 não pede, e exige testar os controles. A numeração não coincide: risco é 4.5 na 37001 e 4.6 na 37301; canal e investigação são 8.9 e 8.10 na 37001 e 8.3 e 8.4 na 37301. As duas são certificáveis, compartilham quase toda a estrutura e a implantação conjunta economiza mais da metade do trabalho documental.",
+ "seo_title": "ISO 37001 ou ISO 37301: diferenças, cláusulas e qual escolher",
+ "seo_description": "A comparação cláusula por cláusula entre a ISO 37001 (antissuborno) e a ISO 37301 (compliance): o que só existe em cada uma, onde a numeração muda, como implementar as duas juntas e qual faz sentido para a sua empresa.",
+ "faq": [
+  {
+   "pergunta": "Qual a diferença entre ISO 37001 e ISO 37301?",
+   "resposta": "A ISO 37001 é um sistema de gestão antissuborno: trata de um risco só e tipifica os controles — due diligence, controles financeiros e não financeiros, presentes e hospitalidade, canal para levantar preocupações e investigação. A ISO 37301 é um sistema de gestão de compliance: cobre qualquer obrigação de conformidade da empresa e, por ser genérica, não tipifica controle nenhum, mas exige identificar sistematicamente as obrigações de compliance e testar os controles implementados."
+  },
+  {
+   "pergunta": "A numeração das cláusulas é a mesma nas duas normas?",
+   "resposta": "Não, e essa é uma armadilha comum. A avaliação de risco é 4.5 na ISO 37001 e 4.6 na ISO 37301, porque a 37301 usa o 4.5 para obrigações de compliance. Levantamento de preocupações e investigação são 8.9 e 8.10 na ISO 37001, mas 8.3 e 8.4 na ISO 37301. Cultura é 5.1.2 na 37301 e 5.1.3 na ISO 37001:2025."
+  },
+  {
+   "pergunta": "É possível certificar nas duas normas ao mesmo tempo?",
+   "resposta": "Sim, e é o caminho mais econômico quando as duas fazem sentido. Elas compartilham contexto, partes interessadas, política, papéis, objetivos, competência, comunicação, informação documentada, auditoria interna, análise pela direção e melhoria. Dá para ter uma política integrada de compliance e antissuborno, um único controle de documentos e uma reunião de análise pela direção com pauta ampliada."
+  },
+  {
+   "pergunta": "O que são obrigações de compliance na ISO 37301?",
+   "resposta": "São todas as exigências que a organização precisa cumprir em razão das suas atividades, produtos e serviços: legais, regulatórias, contratuais e compromissos voluntários. A cláusula 4.5 exige identificá-las sistematicamente, avaliar o impacto delas na operação e manter um processo para captar obrigações novas e modificadas, ajustando o sistema de gestão quando a mudança for relevante. É requisito exclusivo da ISO 37301."
+  },
+  {
+   "pergunta": "A ISO 37301 substitui a ISO 19600?",
+   "resposta": "Sim. A ISO 19600:2014 era uma norma de diretrizes, não certificável. A ISO 37301, publicada em 2021, transformou aquele conteúdo em requisitos auditáveis, tornando a certificação de sistemas de gestão de compliance possível."
+  },
+  {
+   "pergunta": "A ISO 37301 serve para ESG?",
+   "resposta": "Serve bem para a governança. Empresas têm usado a norma para estruturar e certificar a letra G do ESG, porque um sistema de compliance auditado por organismo independente, com obrigações mapeadas e controles testados, é evidência mais forte que autodeclaração em relatório. Quem tem risco de suborno relevante, no entanto, costuma obter mais valor começando pela ISO 37001."
+  },
+  {
+   "pergunta": "Preciso ampliar o escopo da ISO 37001 para além do suborno?",
+   "resposta": "É opcional. A cláusula 4.3 permite manter o escopo restrito ao suborno ou estendê-lo a fraude, cartel e outras práticas anticoncorrenciais, lavagem de dinheiro e demais condutas relacionadas à corrupção. Ampliar aumenta o esforço de implantação e o tempo de auditoria, mas entrega um certificado que cobre mais riscos — e costuma valer a pena quando a exposição da empresa não se limita a suborno."
+  }
+ ],
+ "published_at": "2026-08-17T20:47:32.204149+00:00",
+ "tags": [
+  "ISO 37001",
+  "ISO 37301",
+  "compliance",
+  "antissuborno",
+  "anticorrupção",
+  "programa de integridade",
+  "ESG",
+  "obrigações de compliance"
+ ]
+}

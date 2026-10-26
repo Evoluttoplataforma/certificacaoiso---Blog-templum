@@ -1,0 +1,47 @@
+{
+ "title": "Canal de denúncia e investigação na ISO 37001: as cláusulas 8.9 e 8.10",
+ "tldr": "A cláusula 8.9 da ISO 37001 exige um canal que incentive e permita relatar suspeita de suborno ou fragilidade do sistema de gestão: acessível, confidencial, com possibilidade de relato anônimo, com proibição expressa de retaliação e proteção efetiva a quem relata, e com alguém disponível para orientar quem está diante de uma situação duvidosa. A 8.10 exige o outro lado, que quase sempre falta: processo de investigação com independência (quem investiga não pode pertencer à função investigada), confidencialidade, reporte à função de compliance e uso dos resultados para melhorar o sistema. Na auditoria, política de canal não basta — o auditor pede para ver denúncias reais e investigações reais, e aceita que estejam anonimizadas.",
+ "seo_title": "Canal de denúncia ISO 37001: requisitos, anonimato e investigação",
+ "seo_description": "O que as cláusulas 8.9 e 8.10 da ISO 37001 exigem do canal de denúncia e do processo de investigação: acessibilidade, anonimato, proteção contra retaliação, quem investiga, o que registrar e o que a auditoria pede para ver.",
+ "faq": [
+  {
+   "pergunta": "A ISO 37001 exige canal de denúncia anônimo?",
+   "resposta": "A cláusula 8.9 exige que o canal permita o relato anônimo — ou seja, o anonimato precisa ser uma opção real, não apenas tolerada. Também exige acessibilidade, tratamento confidencial, proibição de retaliação com proteção efetiva a quem relata e disponibilidade de alguém para orientar quem está diante de uma situação duvidosa."
+  },
+  {
+   "pergunta": "Posso usar o mesmo canal para denúncias de assédio e de suborno?",
+   "resposta": "Sim. A norma não exige canal exclusivo para suborno, e usar um canal único costuma ser mais eficiente: ele é mais conhecido internamente e por isso recebe mais relatos. O que precisa existir é triagem, com fluxo, prazo e responsável definidos para cada categoria de relato."
+  },
+  {
+   "pergunta": "Quem pode conduzir a investigação de uma denúncia de suborno?",
+   "resposta": "Qualquer pessoa competente que não participe do papel ou da função que está sendo investigada — a independência é requisito da cláusula 8.10. Em estruturas enxutas, isso costuma significar designar alguém de outra área ou terceirizar a investigação, o que a norma permite expressamente e é prática comum quando o caso envolve a própria liderança."
+  },
+  {
+   "pergunta": "O auditor vai querer ler as denúncias recebidas?",
+   "resposta": "Vai querer verificar que existem relatos e que eles foram tratados, mas aceita que os registros estejam anonimizados: sem nome de pessoas e sem identificação de setor. O que ele precisa evidenciar é o funcionamento do processo — recebimento, triagem, apuração, conclusão e medidas. Quando um caso está sob segredo de justiça, a empresa demonstra essa condição e o auditor trabalha com o que é verificável."
+  },
+  {
+   "pergunta": "O que fazer se a empresa não recebeu nenhuma denúncia no período?",
+   "resposta": "Investigar o porquê antes que o auditor pergunte. Zero relato raramente significa ausência de problemas; em geral significa que o canal não é conhecido, que o anonimato não é percebido como real ou que algum caso anterior não teve retorno e a notícia circulou internamente. Evidência de divulgação, treinamento e testes do canal ajudam a demonstrar que ele está disponível e operante."
+  },
+  {
+   "pergunta": "Como proteger quem denuncia de retaliação?",
+   "resposta": "Com mecanismo, não com promessa: restrição e registro de acesso à identidade de quem relatou, vedação a que o denunciado ou seus subordinados participem da apuração, processo específico para apurar a própria retaliação com responsável nomeado, e acompanhamento da situação do denunciante por um período após o encerramento do caso. A cláusula 7.2.2 protege também quem se recusa a participar de atividade que julgou ter mais do que risco baixo de suborno."
+  },
+  {
+   "pergunta": "O que são a ISO 37002 e a ISO 37008?",
+   "resposta": "São normas de diretrizes, não certificáveis, que aprofundam os dois requisitos: a ISO 37002 trata da gestão de denúncias, com foco em recebimento, avaliação, encaminhamento, conclusão e proteção do denunciante; a ISO 37008 trata de investigações internas, com planejamento, coleta e preservação de evidência, entrevistas e garantias de imparcialidade. Nenhuma é exigida pela ISO 37001, mas ambas são boas referências de prática."
+  }
+ ],
+ "published_at": "2026-08-17T20:54:36.067565+00:00",
+ "tags": [
+  "ISO 37001",
+  "canal de denúncia",
+  "investigação",
+  "antissuborno",
+  "compliance",
+  "ISO 37002",
+  "retaliação",
+  "anticorrupção"
+ ]
+}

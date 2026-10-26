@@ -1,0 +1,42 @@
+{
+ "title": "Política antissuborno: o que precisa constar e o que a auditoria cobra",
+ "tldr": "A política antissuborno é requisito da cláusula 5.2 da ISO 37001 e precisa, no mínimo: proibir o suborno, exigir o cumprimento das leis antissuborno aplicáveis, ser adequada ao risco real da organização, estabelecer objetivos, encorajar o levantamento de preocupações de boa-fé, garantir proteção contra retaliação, definir consequências pelo descumprimento e ser comunicada a pessoal e a parceiros de negócio. O que reprova em auditoria quase nunca é o texto: é a falta de evidência de que a política foi comunicada, entendida e aplicada em caso concreto.",
+ "seo_title": "Política antissuborno ISO 37001: o que precisa constar (e a estrutura)",
+ "seo_description": "O que a cláusula 5.2 da ISO 37001 exige da política antissuborno, a estrutura que funciona na auditoria, as regras de presentes e hospitalidade, a proteção contra retaliação e os erros que geram não conformidade.",
+ "faq": [
+  {
+   "pergunta": "O que a política antissuborno precisa conter para atender à ISO 37001?",
+   "resposta": "A cláusula 5.2 exige que ela proíba o suborno, exija o cumprimento das leis antissuborno aplicáveis, seja adequada ao risco da organização, dê estrutura aos objetivos antissuborno, comprometa-se com a melhoria contínua, encoraje o levantamento de preocupações de boa-fé, garanta proteção contra retaliação, explicite as consequências do descumprimento, indique a autoridade e a independência da função de compliance antissuborno e esteja documentada, disponível e comunicada a pessoal e parceiros de negócio."
+  },
+  {
+   "pergunta": "Posso usar um modelo de política antissuborno pronto?",
+   "resposta": "Como ponto de partida, sim; como documento final, não. A norma exige que a política seja adequada ao propósito e ao risco da organização, e é justamente essa adequação que um modelo não entrega. O auditor cruza a política com a avaliação de risco de suborno: se o risco aponta intermediários e a política não trata de intermediários, o documento não atende ao requisito."
+  },
+  {
+   "pergunta": "A ISO 37001 proíbe dar e receber presentes?",
+   "resposta": "Não. A cláusula 8.7 exige que exista regra clara sobre presentes, hospitalidade, doações e benefícios similares — com limite de valor, o que depende de aprovação prévia e onde se registra — e que essa regra seja cumprida. Proibição total só se aplica ao que a empresa decidir vedar, e é comum vedar dinheiro, cartão-presente e qualquer cortesia durante licitação, negociação ou fiscalização em andamento."
+  },
+  {
+   "pergunta": "Quem deve aprovar a política antissuborno?",
+   "resposta": "O nível mais alto de governança. A ISO 37001 distribui responsabilidade entre corpo diretivo (conselho ou sócios) e alta direção, e a política é justamente o instrumento em que esse comprometimento se materializa. Política aprovada apenas por gestão intermediária não demonstra o comprometimento que a cláusula 5.1 exige."
+  },
+  {
+   "pergunta": "De quanto em quanto tempo revisar a política antissuborno?",
+   "resposta": "A norma não fixa periodicidade. A empresa define, e a prática comum é revisão anual, somada a revisão sempre que houver mudança relevante: novo mercado, mudança societária, fusão ou aquisição, mudança na legislação aplicável, ou achado de auditoria e caso concreto que revele lacuna na regra."
+  },
+  {
+   "pergunta": "A política antissuborno precisa ser comunicada a fornecedores?",
+   "resposta": "Sim, é requisito expresso da cláusula 5.2: a política deve estar disponível e ser comunicada aos parceiros de negócio, não apenas ao pessoal interno. Na prática isso se materializa em cláusula contratual, termo de compromisso antissuborno assinado (cláusula 8.6) e comunicação registrada — e a falta dessa evidência é um dos achados mais frequentes em auditoria."
+  }
+ ],
+ "published_at": "2026-08-17T19:45:18.217126+00:00",
+ "tags": [
+  "ISO 37001",
+  "antissuborno",
+  "política antissuborno",
+  "compliance",
+  "anticorrupção",
+  "programa de integridade",
+  "presentes e hospitalidade"
+ ]
+}

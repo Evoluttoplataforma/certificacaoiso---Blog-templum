@@ -1,0 +1,43 @@
+{
+ "title": "Requisitos da ISO 37001: as cláusulas 4 a 10 explicadas",
+ "tldr": "A ISO 37001 organiza os requisitos em sete cláusulas: 4 (contexto, escopo e avaliação de risco de suborno), 5 (liderança, cultura, política antissuborno e função de compliance), 6 (planejamento, objetivos e mudanças), 7 (recursos, processo de emprego, treinamento, comunicação e informação documentada), 8 (os controles: due diligence, controles financeiros e não financeiros, terceiros, presentes e hospitalidade, canal e investigação), 9 (monitoramento, auditoria interna e as três análises) e 10 (melhoria, não conformidade e ação corretiva). A cláusula 4.5 é a fundação: se a avaliação de risco de suborno for genérica, todo o resto desaba.",
+ "seo_title": "Requisitos da ISO 37001: as cláusulas 4 a 10 (versão 2025)",
+ "seo_description": "O que cada cláusula da ISO 37001 exige e qual evidência a auditoria pede: contexto e avaliação de risco de suborno, política e função de compliance, planejamento, treinamento, os controles da cláusula 8, auditoria interna e ação corretiva.",
+ "faq": [
+  {
+   "pergunta": "Quantas cláusulas tem a ISO 37001?",
+   "resposta": "Dez. As três primeiras (escopo, referências normativas e termos e definições) não contêm requisitos auditáveis; os requisitos estão nas cláusulas 4 a 10, seguindo a estrutura harmonizada comum a todas as normas de sistema de gestão da ISO."
+  },
+  {
+   "pergunta": "Qual é o requisito mais importante da ISO 37001?",
+   "resposta": "A avaliação de risco de suborno, cláusula 4.5. É ela que determina quais controles da cláusula 8 a empresa precisa e em que profundidade. Uma avaliação genérica, copiada de modelo, invalida o desenho do sistema inteiro — e é o achado mais comum em auditoria."
+  },
+  {
+   "pergunta": "A função de compliance antissuborno pode ser acumulada por outro cargo?",
+   "resposta": "Pode, e em empresas menores costuma ser. O que a norma não admite é conflito: quem executa o processo controlado não pode ser quem fiscaliza o controle. A função precisa de competência, autoridade, recursos, independência e acesso direto ao corpo diretivo. Também é permitido terceirizar a função."
+  },
+  {
+   "pergunta": "O que mudou nos requisitos da versão 2025 em relação à de 2016?",
+   "resposta": "As mudanças mais visíveis: consideração de mudanças climáticas em 4.1 e 4.2; requisito próprio de cultura antissuborno em 5.1.3; nova cláusula 6.3 de planejamento de mudanças; conflito de interesses no processo de emprego (7.2.2); reorganização do treinamento com item para parceiros de negócio (7.3.3); fusões e aquisições nos controles não financeiros (8.4); exigências mais firmes de qualificação para auditoria interna; e inversão da ordem em 10.1 e 10.2."
+  },
+  {
+   "pergunta": "A ISO 37001 exige canal de denúncia anônimo?",
+   "resposta": "A cláusula 8.9 exige um canal que permita levantar preocupações, e que o anonimato seja possível. Exige também confidencialidade e proteção efetiva contra retaliação. Ter o canal, porém, não basta: a cláusula 8.10 exige o processo de investigação e tratamento, e é o registro do que foi feito com cada preocupação recebida que a auditoria verifica."
+  },
+  {
+   "pergunta": "Por que a ISO 37001 pede três análises diferentes?",
+   "resposta": "Porque separa governança de operação. A alta direção analisa o desempenho do sistema (9.3.1), o corpo diretivo analisa no nível de governança com base no que recebe (9.3.2) e a função de compliance antissuborno avalia continuamente a adequação e a eficácia do sistema, reportando a ambos (9.4). Essa separação é o que dá independência à função — e a auditoria confere as três."
+  }
+ ],
+ "published_at": "2026-08-17T19:43:46.6308+00:00",
+ "tags": [
+  "ISO 37001",
+  "antissuborno",
+  "compliance",
+  "requisitos",
+  "ISO 37001:2025",
+  "due diligence",
+  "avaliação de risco",
+  "anticorrupção"
+ ]
+}

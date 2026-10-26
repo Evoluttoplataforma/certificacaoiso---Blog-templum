@@ -1,0 +1,43 @@
+{
+ "title": "Presentes, hospitalidade e doações: o que a ISO 37001 permite",
+ "tldr": "A cláusula 8.7 da ISO 37001 exige procedimentos que impeçam oferta, fornecimento e aceitação de presentes, hospitalidade, doações e benefícios similares quando isso for, ou puder razoavelmente ser percebido como, suborno. Não é proibição: é regra com limite de valor, aprovação prévia acima de determinado patamar e registro do que foi dado e recebido — com régua sempre mais restritiva para agente público e vedação total durante licitação, negociação ou fiscalização em andamento. O teste que resolve a maioria dos casos é o da percepção: se a cortesia aparecesse amanhã no jornal ao lado da decisão que ela antecedeu, ela ainda pareceria legítima?",
+ "seo_title": "Presentes e hospitalidade na ISO 37001: regras, limites e registro (8.7)",
+ "seo_description": "A ISO 37001 não proíbe presente, brinde, refeição, viagem ou patrocínio: exige regra clara, limite, aprovação e registro. Como escrever a política de presentes e hospitalidade, o que vedar sempre, a regra para agente público e o que a auditoria verifica.",
+ "faq": [
+  {
+   "pergunta": "A ISO 37001 proíbe dar e receber presentes?",
+   "resposta": "Não. A cláusula 8.7 exige procedimentos que impeçam a oferta, o fornecimento ou a aceitação de presentes, hospitalidade, doações e benefícios similares quando isso for, ou puder razoavelmente ser percebido como, suborno. Na prática, isso significa regra clara com limite de valor, aprovação prévia acima de determinado patamar e registro do que foi dado e recebido — não proibição geral."
+  },
+  {
+   "pergunta": "Qual limite de valor adotar para presentes e brindes?",
+   "resposta": "A norma não fixa valor: quem define é a organização, de forma proporcional ao seu contexto e risco. O critério prático é adotar um limite realista, que as pessoas consigam cumprir, com regra acumulada por ano e por pessoa, aprovação prévia acima do limite e uma régua mais restritiva para agente público. Limite tão baixo que ninguém cumpre gera burla e desmoraliza a política inteira."
+  },
+  {
+   "pergunta": "Posso aceitar uma viagem paga por um fornecedor?",
+   "resposta": "Depende de propósito e proporção. Hospitalidade é legítima quando há agenda de negócio real e documentada, o padrão de hospedagem e transporte segue a política de viagens da empresa, não há acompanhantes em lazer custeado e a proporção entre agenda técnica e entretenimento faz sentido. Um bom teste: a empresa pagaria essa mesma viagem se não houvesse fornecedor pagando?"
+  },
+  {
+   "pergunta": "E se recusar o presente for inviável?",
+   "resposta": "A saída padrão é aceitar em nome da empresa, declarar imediatamente, registrar no controle de presentes e dar destinação institucional — sorteio interno, doação a entidade ou incorporação ao patrimônio. O que não se admite é a hipótese de aceitar pessoalmente sem registro, exatamente o cenário que a auditoria procura."
+  },
+  {
+   "pergunta": "Doação e patrocínio entram nesse requisito?",
+   "resposta": "Entram, e são a categoria de risco mais silenciosa, porque doar é uma forma socialmente aceitável de transferir valor. Exigem atenção especial as doações solicitadas por agente público ou destinadas a entidade ligada a ele, o apoio a iniciativas em município onde a empresa depende de licença ou contrato, o patrocínio a entidade recém-criada e a doação política. O controle mínimo é due diligence do beneficiário, propósito documentado, aprovação superior, pagamento rastreável e comprovação da aplicação."
+  },
+  {
+   "pergunta": "O que registrar no controle de presentes e hospitalidade?",
+   "resposta": "Data e ocasião, quem ofereceu e quem recebeu, parceiro ou órgão envolvido, descrição e valor estimado, quem aprovou e quando, e a destinação quando aplicável. Uma planilha controlada com acesso restrito e revisão periódica por compliance atende ao requisito — desde que seja alimentada continuamente, e não na semana anterior à auditoria."
+  }
+ ],
+ "published_at": "2026-08-17T20:56:08.213812+00:00",
+ "tags": [
+  "ISO 37001",
+  "presentes e hospitalidade",
+  "brindes",
+  "doações",
+  "patrocínio",
+  "antissuborno",
+  "compliance",
+  "agente público"
+ ]
+}

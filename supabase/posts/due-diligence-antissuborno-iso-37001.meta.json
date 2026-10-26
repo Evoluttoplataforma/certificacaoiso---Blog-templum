@@ -1,0 +1,47 @@
+{
+ "title": "Due diligence antissuborno: os três níveis e como classificar risco",
+ "tldr": "Due diligence, na ISO 37001, é o aprofundamento de uma análise de risco antes de decidir. A cláusula 8.2 exige aplicá-la em três níveis: transações, projetos e atividades específicas; parceiros de negócio; e pessoal em posições de risco (este último também cobrado no processo de emprego, 7.2.2). A norma não diz como fazer — diz que precisa ser feita onde a avaliação de risco apontou mais do que risco baixo, e admite justificar por escrito quando for desnecessária, desarrazoada ou desproporcional. O que reprova em auditoria não é a ficha incompleta: é a due diligence feita só na entrada, sem atualização, e a que termina sem decisão registrada.",
+ "seo_title": "Due diligence antissuborno (8.2): os 3 níveis e como fazer",
+ "seo_description": "O que a cláusula 8.2 da ISO 37001 exige de due diligence: os três níveis (transações e projetos, parceiros de negócio e pessoas), as fontes de consulta, os sinais de alerta, como classificar risco e decidir, e quando a norma aceita não fazer.",
+ "faq": [
+  {
+   "pergunta": "O que é due diligence na ISO 37001?",
+   "resposta": "É o aprofundamento de uma análise de risco antes de decidir. A cláusula 8.2 exige aplicá-la quando a avaliação de risco de suborno identificar mais do que risco baixo em relação a transações, projetos e atividades, a parceiros de negócio e a categorias de pessoal em funções sensíveis. Serve para responder, antes do compromisso, quem é a outra parte, como ela atua e que risco ela traz."
+  },
+  {
+   "pergunta": "Quais são os três níveis de due diligence da ISO 37001?",
+   "resposta": "Transações, projetos e atividades específicas — como entrar em um país novo ou disputar um contrato público relevante; parceiros de negócio — fornecedores, representantes comerciais, despachantes, consultores e intermediários; e pessoas — pessoal em funções de risco, como quem decide compras, negocia com o poder público ou aprova pagamentos."
+  },
+  {
+   "pergunta": "A ISO 37001 permite não fazer due diligence?",
+   "resposta": "Sim, em situações específicas. A norma admite que a organização conclua que a due diligence é desnecessária, desarrazoada ou desproporcional para determinada categoria — desde que essa justificativa esteja registrada. É o que impede o requisito de virar burocracia sobre compras de baixo risco, e é justamente essa justificativa que a auditoria pede quando encontra uma categoria dispensada."
+  },
+  {
+   "pergunta": "O que consultar em uma due diligence de fornecedor?",
+   "resposta": "Situação cadastral e quadro societário, alterações societárias recentes, capacidade real frente ao contrato, processos judiciais e administrativos da empresa e dos sócios, mídia negativa, listas restritivas e de sanções (empresas inidôneas e suspensas, empresas punidas, sanções internacionais, trabalho análogo ao escravo), certidões aplicáveis, questionário de integridade assinado e a existência de sócio, dirigente ou familiar que seja agente público ou pessoa exposta politicamente."
+  },
+  {
+   "pergunta": "Due diligence de pessoas fere a LGPD?",
+   "resposta": "Não, se for feita com base legal, finalidade declarada, proporcionalidade e retenção limitada, restrita ao que é pertinente à função avaliada. O que cria risco novo em vez de controle é investigar vida privada sem relação com o cargo. Uma alternativa eficiente e de baixo impacto em dados pessoais é a entrevista de integridade, com dilemas reais da função."
+  },
+  {
+   "pergunta": "O que fazer quando a due diligence aponta risco alto?",
+   "resposta": "Registrar uma decisão, em uma de quatro direções: aprovar; aprovar com condições (cláusula anticorrupção reforçada, direito de auditoria, pagamento contra entrega verificada, monitoramento mais frequente); escalar para instância superior livre de conflito de interesses; ou recusar e encerrar. Este último caso é tratado na cláusula 8.8, o único ponto em que a norma manda interromper: quando o risco de suborno não pode ser gerenciado, a operação deve ser suspensa, cancelada ou recusada."
+  },
+  {
+   "pergunta": "De quanto em quanto tempo atualizar a due diligence?",
+   "resposta": "A edição 2025 da norma reforçou a exigência de atualização periódica. O desenho usual é escalonado por risco: parceiro de risco alto com reavaliação anual e monitoramento de mídia e listas em intervalo curto, risco médio a cada dois anos, risco baixo na renovação contratual — com reavaliação imediata, em qualquer faixa, diante de fato novo como notícia negativa, mudança societária ou aumento súbito de volume contratado."
+  }
+ ],
+ "published_at": "2026-08-17T20:51:14.634457+00:00",
+ "tags": [
+  "ISO 37001",
+  "due diligence",
+  "antissuborno",
+  "compliance",
+  "terceiros",
+  "parceiros de negócio",
+  "anticorrupção",
+  "LGPD"
+ ]
+}

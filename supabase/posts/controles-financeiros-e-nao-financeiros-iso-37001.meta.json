@@ -1,0 +1,43 @@
+{
+ "title": "Controles financeiros e não financeiros da ISO 37001: os exemplos do Anexo A",
+ "tldr": "A ISO 37001 exige controles financeiros (8.3) e não financeiros (8.4) que gerenciem o risco de suborno, mas não diz quais — quem define é a organização, de forma razoável e proporcional ao seu risco. O Anexo A da norma, que é informativo e não requisito, traz a lista de exemplos: do lado financeiro, segregação entre quem inicia e quem aprova pagamento, alçadas escalonadas, dupla assinatura, verificação de que o serviço foi efetivamente prestado, restrição ao uso de dinheiro em espécie, revisão periódica de transações e auditoria financeira independente; do lado não financeiro, pré-qualificação de fornecedores, concorrência com mais de uma proposta, duas pessoas avaliando e aprovando, gestão reforçada em transações de alto risco e proteção da informação de preço. Uma mesma transação pode estar sujeita aos dois tipos de controle ao mesmo tempo.",
+ "seo_title": "Controles financeiros e não financeiros ISO 37001 (8.3 e 8.4)",
+ "seo_description": "O que as cláusulas 8.3 e 8.4 da ISO 37001 exigem e a lista de controles do Anexo A: segregação de funções, alçadas, dupla assinatura, restrição a dinheiro em espécie, pré-qualificação de fornecedores, proteção de informação de preço e mais.",
+ "faq": [
+  {
+   "pergunta": "Quais controles financeiros a ISO 37001 exige?",
+   "resposta": "A norma não especifica nenhum. A cláusula 8.3 exige que a organização implemente controles financeiros que gerenciem os riscos de suborno, e é a própria organização que define quais, de forma razoável e proporcional ao seu porte e risco. O Anexo A, que é informativo, lista exemplos: segregação entre quem inicia e quem aprova pagamento, alçadas escalonadas, dupla assinatura, verificação de que o serviço foi prestado, restrição ao uso de dinheiro em espécie, revisão periódica de transações e auditoria financeira independente."
+  },
+  {
+   "pergunta": "Qual a diferença entre controles financeiros e não financeiros?",
+   "resposta": "Os financeiros cuidam do dinheiro saindo: segregação de funções, alçadas, dupla assinatura, verificação de entrega antes do pagamento, restrição a espécie. Os não financeiros cuidam da decisão que gerou aquele pagamento: pré-qualificação de fornecedores, concorrência entre propostas, duas pessoas avaliando e aprovando, proteção da informação de preço, gestão reforçada em transações de alto risco. Uma mesma transação pode estar sujeita aos dois tipos ao mesmo tempo."
+  },
+  {
+   "pergunta": "O Anexo A da ISO 37001 é obrigatório?",
+   "resposta": "Não. O Anexo A é informativo: traz orientações e exemplos de controles para ajudar na implementação, não requisitos auditáveis. Nenhum controle listado nele é obrigatório. O que é obrigatório é existir controle financeiro e não financeiro adequado ao risco identificado — e a lista do anexo é a melhor fonte de ideias para montar esse conjunto."
+  },
+  {
+   "pergunta": "A ISO 37001 proíbe pagamento em dinheiro em espécie?",
+   "resposta": "A norma não proíbe; o Anexo A sugere restringir. Muitas empresas optam por vedar completamente, porque espécie elimina a rastreabilidade que é a base de todo controle financeiro. Quando a operação exige adiantamento, o desenho usual é limite baixo, prestação de contas com comprovante e vedação expressa a qualquer pagamento a agente público."
+  },
+  {
+   "pergunta": "Como proteger um processo de compras do risco de suborno?",
+   "resposta": "Com camadas: pré-qualificação e due diligence do fornecedor, exigência de mais de uma proposta com critério registrado, duas pessoas avaliando e aprovando, entrega da proposta técnica à área requisitante sem a parte comercial (para que quem tem preferência não consiga ajudar o fornecedor), acompanhamento de reuniões com fornecedores por compliance ou controles internos, e aprovação em nível superior para transações de alto risco."
+  },
+  {
+   "pergunta": "Empresa pequena precisa de todos esses controles?",
+   "resposta": "Não. A norma pede controles razoáveis e proporcionais ao porte e ao risco. Em uma empresa pequena, o conjunto essencial costuma ser segregação entre quem lança e quem aprova pagamento, alçadas definidas, dupla assinatura, vedação a espécie, exigência de mais de uma proposta em compras relevantes e verificação de entrega antes do pagamento — tudo escrito e cumprido, com registro que permita verificação posterior."
+  }
+ ],
+ "published_at": "2026-08-17T20:52:56.523545+00:00",
+ "tags": [
+  "ISO 37001",
+  "controles internos",
+  "antissuborno",
+  "compliance",
+  "controles financeiros",
+  "compras",
+  "segregação de funções",
+  "anticorrupção"
+ ]
+}
