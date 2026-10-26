@@ -1,0 +1,46 @@
+{
+ "title": "Certificação ISO 37001: etapas, prazo e custo",
+ "tldr": "A certificação ISO 37001 acontece em duas fases de auditoria por um organismo de certificação acreditado (fase 1 de prontidão e análise documental, fase 2 de verificação da implementação), depois de a empresa ter feito a avaliação de risco de suborno, implantado os controles, treinado o pessoal e rodado ao menos uma auditoria interna e uma análise pela direção. O certificado vale três anos, com auditorias de manutenção anuais. O custo varia por porte, número de unidades e complexidade do escopo, que definem os dias de auditoria; consultoria e certificação são contratações separadas, porque o organismo certificador não pode consultar quem ele audita. Quem já é certificado na versão 2016 precisa migrar para a 2025 até 28 de fevereiro de 2027.",
+ "seo_title": "Certificação ISO 37001: etapas, prazo, custo e transição para a 2025",
+ "seo_description": "Como funciona a certificação ISO 37001: as etapas da implantação, a auditoria em duas fases, o ciclo de três anos, o que faz o custo variar, a importância da acreditação e o calendário de transição para a versão 2025.",
+ "faq": [
+  {
+   "pergunta": "Quanto tempo leva para certificar na ISO 37001?",
+   "resposta": "Depende da maturidade de partida, do porte e da disponibilidade da equipe. Empresas que já têm outro sistema de gestão certificado reaproveitam boa parte da estrutura e avançam mais rápido. A etapa que mais alonga o cronograma não é escrever documentos: é operar o sistema tempo suficiente para gerar evidência que o auditor possa amostrar, somada ao intervalo entre a fase 1 e a fase 2 da auditoria."
+  },
+  {
+   "pergunta": "Quanto custa a certificação ISO 37001?",
+   "resposta": "São dois custos separados. O da certificação é cobrado pelo organismo e calculado por dias de auditoria, que variam com número de colaboradores no escopo, quantidade de unidades, complexidade e nível de risco da atividade, além de deslocamento — e deve ser orçado para o ciclo completo de três anos, incluindo manutenções e recertificação. O da implantação envolve consultoria, quando houver, e as horas internas da equipe."
+  },
+  {
+   "pergunta": "A consultoria pode emitir o certificado ISO 37001?",
+   "resposta": "Não. Quem emite o certificado é o organismo de certificação acreditado, e ele não pode prestar consultoria a quem audita, porque isso comprometeria a imparcialidade. Consultoria e certificação são contratações necessariamente separadas."
+  },
+  {
+   "pergunta": "O que acontece na fase 1 e na fase 2 da auditoria?",
+   "resposta": "Na fase 1 o organismo avalia a documentação, o escopo, o entendimento do contexto e a prontidão do sistema, apontando o que precisa ser resolvido antes de prosseguir. Na fase 2 verifica-se a implementação: entrevistas com quem executa os processos, amostragem de registros e teste dos controles. É na fase 2 que a diferença entre sistema real e pasta de documentos aparece."
+  },
+  {
+   "pergunta": "Por quanto tempo vale o certificado ISO 37001?",
+   "resposta": "Três anos, com auditorias de manutenção normalmente anuais e recertificação ao fim do ciclo. Não conformidade grave sem tratamento ou sistema que deixou de operar podem levar à suspensão e ao cancelamento do certificado."
+  },
+  {
+   "pergunta": "Já sou certificado na ISO 37001:2016. Até quando preciso migrar?",
+   "resposta": "Até 28 de fevereiro de 2027, quando os certificados na versão 2016 expiram ou são cancelados. As auditorias de transição precisam estar concluídas até 30 de janeiro de 2027 e, desde 31 de agosto de 2026, novas decisões de certificação e recertificação são emitidas apenas na versão 2025."
+  },
+  {
+   "pergunta": "Por que a acreditação do organismo certificador importa?",
+   "resposta": "Porque é ela que dá reconhecimento internacional ao certificado, pelo acordo multilateral do IAF. Certificado emitido por organismo não acreditado, ou cujo escopo de acreditação não cobre a ISO 37001, tende a não ser aceito por clientes e órgãos públicos que exigem a certificação — e é justamente isso que eles verificam nos diretórios públicos dos organismos de acreditação."
+  }
+ ],
+ "published_at": "2026-08-17T19:48:55.369109+00:00",
+ "tags": [
+  "ISO 37001",
+  "certificação",
+  "antissuborno",
+  "compliance",
+  "auditoria",
+  "ISO 37001:2025",
+  "acreditação"
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "title": "ISO 37001 e a Lei Anticorrupção: onde a norma atende ao programa de integridade",
+ "tldr": "Programa de integridade é a exigência legal; a ISO 37001 é uma forma organizada de construí-lo e comprová-lo. Os parâmetros de avaliação do art. 57 do Decreto 11.129/2022, que regulamenta a Lei 12.846/2013, se sobrepõem quase item a item aos requisitos da norma. Na Lei 14.133/2021, o programa é obrigatório em contratações de grande vulto (art. 25, §4º), vale como critério de desempate (art. 60, IV) e é condição de reabilitação de empresa sancionada (art. 163) — com metodologia de avaliação definida pelo Decreto 12.304/2024 e pela Portaria Normativa SE/CGU nº 226/2025. A certificação não substitui essas avaliações, mas entrega a estrutura e a evidência que elas cobram.",
+ "seo_title": "ISO 37001 e programa de integridade: Lei 12.846, licitações e CGU",
+ "seo_description": "Como a ISO 37001 se encaixa no programa de integridade exigido pela Lei 12.846/2013 e pelo Decreto 11.129/2022, e o que a Lei 14.133/2021 cobra em contratações de grande vulto, desempate e reabilitação.",
+ "faq": [
+  {
+   "pergunta": "Programa de integridade e ISO 37001 são a mesma coisa?",
+   "resposta": "Não. Programa de integridade é a exigência da legislação brasileira, com parâmetros de avaliação definidos no art. 57 do Decreto 11.129/2022. A ISO 37001 é uma norma internacional certificável que organiza e comprova um sistema de gestão antissuborno. Os requisitos da norma cobrem quase todos os parâmetros do decreto, mas a norma é focada em suborno, enquanto o decreto avalia o programa contra atos lesivos à administração pública em sentido mais amplo."
+  },
+  {
+   "pergunta": "A certificação ISO 37001 garante redução de multa na Lei Anticorrupção?",
+   "resposta": "Não automaticamente. O programa de integridade é atenuante na dosimetria da multa, mas quem avalia se ele existe e é aplicado é a autoridade competente, no caso concreto, seguindo os parâmetros do Decreto 11.129/2022 e considerando porte e especificidades da empresa. Ter a certificação significa chegar nessa avaliação com estrutura, histórico e evidência auditada por terceiro independente."
+  },
+  {
+   "pergunta": "Quando o programa de integridade é obrigatório em licitação?",
+   "resposta": "A Lei 14.133/2021 exige a implantação de programa de integridade pelo licitante vencedor em contratações de obras, serviços e fornecimentos de grande vulto, no prazo de seis meses após a celebração do contrato (art. 25, §4º). Além disso, o programa funciona como critério de desempate (art. 60, IV) e como condição para reabilitação de empresa sancionada (art. 163)."
+  },
+  {
+   "pergunta": "ISO 37001 serve como comprovação de programa de integridade em licitação?",
+   "resposta": "Serve como evidência robusta, não como substituto da avaliação oficial. O Decreto 12.304/2024 e a Portaria Normativa SE/CGU nº 226/2025 definiram os parâmetros e a metodologia para verificar o grau de implementação do programa nos casos de grande vulto, desempate e reabilitação. Um sistema de gestão certificado gera exatamente o tipo de registro que essa verificação pede, mas a análise é feita pelo órgão conforme a sua metodologia."
+  },
+  {
+   "pergunta": "Qual a diferença entre a ISO 37001 e a ISO 37301 para atender à Lei Anticorrupção?",
+   "resposta": "A ISO 37001 cobre suborno com controles específicos — due diligence de terceiros, controles financeiros, presentes e hospitalidade. A ISO 37301 organiza o compliance de todas as obrigações da empresa, sem controle específico para nenhuma. Como o Decreto 11.129/2022 avalia o programa contra atos lesivos mais amplos que o suborno, empresas com exposição maior costumam ampliar o escopo do sistema da 37001 ou combinar as duas normas."
+  },
+  {
+   "pergunta": "Empresa pequena precisa de programa de integridade?",
+   "resposta": "A obrigatoriedade legal direta atinge situações específicas, como contratações de grande vulto. Mas a avaliação do programa considera expressamente porte e especificidades da pessoa jurídica — número de colaboradores, faturamento, estrutura de governança e complexidade —, o que significa que se espera de uma empresa pequena um programa proporcional, não a estrutura de uma multinacional. A ISO 37001 segue a mesma lógica de proporcionalidade."
+  }
+ ],
+ "published_at": "2026-08-17T19:47:19.070402+00:00",
+ "tags": [
+  "ISO 37001",
+  "programa de integridade",
+  "Lei Anticorrupção",
+  "compliance",
+  "licitações",
+  "anticorrupção",
+  "antissuborno",
+  "Lei 14.133"
+ ]
+}

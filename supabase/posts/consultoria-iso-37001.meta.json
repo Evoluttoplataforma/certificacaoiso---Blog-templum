@@ -36,6 +36,10 @@
     {
       "pergunta": "Consultoria ISO 37001 para contratos com governo e licitações?",
       "resposta": "<p>Cenário frequente: due diligence, canal de denúncias operante e evidência para auditoria. Veja <a href=\"/consultoria-iso-37001/#licitacoes\">licitações e contratos públicos</a>.</p>"
+    },
+    {
+      "pergunta": "Preciso implantar direto na ISO 37001:2025?",
+      "resposta": "<p>Sim, para projetos novos. Quem já tem certificado na versão 2016 deve concluir a transição até 28 de fevereiro de 2027. Calendário IAF em <a href=\"/o-que-e-a-iso-37001/#versao-2025\">ISO 37001:2025 e transição</a>.</p>"
     }
   ]
 }

@@ -1,0 +1,52 @@
+{
+ "title": "ISO 37001: o que é, requisitos e como certificar o Sistema de Gestão Antissuborno",
+ "tldr": "A ISO 37001 é a norma internacional certificável do Sistema de Gestão Antissuborno: exige avaliação de risco de suborno, política antissuborno, uma função de compliance com autonomia, due diligence de terceiros, controles financeiros e não financeiros, canal para levantar preocupações e investigação. A edição em vigor é a ISO 37001:2025 (ABNT NBR ISO 37001:2025); quem tem certificado na versão 2016 precisa migrar até 28 de fevereiro de 2027. Vale para empresa de qualquer porte e setor, público ou privado, e é o caminho mais direto para comprovar o programa de integridade que a Lei Anticorrupção e a Lei de Licitações cobram. Uma ressalva que a própria norma faz: a certificação não atesta que suborno nenhum ocorreu ou vai ocorrer.",
+ "seo_title": "ISO 37001: o que é, requisitos e como certificar (versão 2025)",
+ "seo_description": "Guia completo da ISO 37001, o Sistema de Gestão Antissuborno: o que a norma exige nas cláusulas 4 a 10, o que mudou na versão 2025, o prazo de transição até fevereiro de 2027, como ela atende à Lei Anticorrupção e como funciona a certificação.",
+ "faq": [
+  {
+   "pergunta": "Qual é a versão atual da ISO 37001?",
+   "resposta": "A ISO 37001:2025, publicada em fevereiro de 2025, que cancelou e substituiu a ISO 37001:2016. No Brasil, a norma equivalente é a ABNT NBR ISO 37001:2025, que substituiu a ABNT NBR ISO 37001:2017."
+  },
+  {
+   "pergunta": "Até quando é preciso migrar do certificado ISO 37001:2016 para o da versão 2025?",
+   "resposta": "Até 28 de fevereiro de 2027, quando todos os certificados na versão 2016 expiram ou são cancelados, conforme as regras de transição do IAF (IAF MD 30:2025). As auditorias de transição precisam estar concluídas até 30 de janeiro de 2027 e, desde 31 de agosto de 2026, novas decisões de certificação e recertificação saem apenas na versão 2025."
+  },
+  {
+   "pergunta": "A ISO 37001 serve para pequenas empresas?",
+   "resposta": "Sim. A norma se aplica a organizações de qualquer porte e setor, público ou privado. Os requisitos são os mesmos, mas o que a norma pede é que os controles sejam razoáveis e proporcionais ao porte, ao setor e ao risco de suborno da organização — uma empresa de 15 pessoas não precisa da mesma estrutura de uma multinacional."
+  },
+  {
+   "pergunta": "Qual a diferença entre ISO 37001 e ISO 37301?",
+   "resposta": "A ISO 37001 é o sistema de gestão antissuborno: escopo estreito, um risco só, com controles específicos como due diligence de terceiros, controles financeiros e regras de presentes e hospitalidade. A ISO 37301 é o sistema de gestão de compliance: escopo amplo, cobrindo todas as obrigações de conformidade da empresa, sem controle específico para nenhuma. As duas são certificáveis e podem coexistir, com a 37001 funcionando como o módulo antissuborno do sistema de compliance."
+  },
+  {
+   "pergunta": "A certificação ISO 37001 garante que não houve suborno na empresa?",
+   "resposta": "Não, e a própria norma diz isso. A conformidade não é garantia de que nenhum suborno ocorreu ou vá ocorrer, porque nenhum sistema de gestão elimina o risco de conduta individual desonesta. O que a certificação demonstra é a capacidade da organização de prevenir, detectar e responder ao suborno — e a existência de evidência de que ela agiu."
+  },
+  {
+   "pergunta": "A ISO 37001 atende ao programa de integridade da Lei Anticorrupção?",
+   "resposta": "Os requisitos da norma cobrem, na prática, quase todos os parâmetros de avaliação de programa de integridade previstos no Decreto 11.129/2022, que regulamenta a Lei 12.846/2013. A certificação não substitui a avaliação feita pela CGU nem gera enquadramento automático, mas quem opera o sistema de gestão tem a estrutura e a evidência que essas avaliações pedem — incluindo as exigências de programa de integridade da Lei 14.133/2021 em contratações de grande vulto, desempate e reabilitação."
+  },
+  {
+   "pergunta": "É possível implementar a ISO 37001 junto com a ISO 9001?",
+   "resposta": "Sim, e é o caminho mais econômico. As duas seguem a estrutura harmonizada da ISO, então análise de contexto, partes interessadas, informação documentada, competência, auditoria interna, análise pela direção e ação corretiva são compartilhadas. O que a ISO 37001 acrescenta é o conteúdo antissuborno: avaliação de risco de suborno, os controles da cláusula 8 e a função de compliance antissuborno."
+  },
+  {
+   "pergunta": "Quanto tempo leva para certificar na ISO 37001?",
+   "resposta": "Depende da maturidade de partida e do porte. Empresas que já têm outro sistema de gestão certificado e governança organizada avançam mais rápido, porque reaproveitam boa parte da estrutura; quem começa do zero precisa primeiro fazer a avaliação de risco de suborno, escrever a política, designar a função de compliance e implantar os controles, além de rodar uma auditoria interna e uma análise pela direção antes de chamar o organismo certificador."
+  }
+ ],
+ "published_at": "2018-09-18T14:03:54+00:00",
+ "tags": [
+  "ISO 37001",
+  "antissuborno",
+  "compliance",
+  "anticorrupção",
+  "programa de integridade",
+  "ISO 37301",
+  "Lei Anticorrupção",
+  "due diligence",
+  "ISO 37001:2025"
+ ]
+}
