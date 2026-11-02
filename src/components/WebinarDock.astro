@@ -80,7 +80,8 @@ const urgencia = w ? urgenciaDoWebinar(w) : "";
     };
     var hora = new Date(w.inicio).toLocaleTimeString("pt-BR", { timeZone: "America/Sao_Paulo", hour: "2-digit" });
     var alvo = emBrasilia(w.inicio);
-    var urg = alvo === emBrasilia(agora) ? "Hoje às " + hora + "h"
+    var urg = w.linha ? w.linha
+      : alvo === emBrasilia(agora) ? "Hoje às " + hora + "h"
       : alvo === emBrasilia(agora + 86400000) ? "Amanhã às " + hora + "h"
       : "Quarta, " + alvo.slice(0, 5) + " às " + hora + "h";
 

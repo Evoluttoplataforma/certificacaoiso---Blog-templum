@@ -105,14 +105,19 @@ export const WEBINARS = [
     requisito: "Requisitos 8.1, 8.5.1, 8.5.5, 8.6, 8.7, 7.1.5 e 9.1",
     url: "https://templum.com.br/webinar-controle-qualidade-iso9001/",
   },
+  // Série de quartas encerrou em 28/10/2026. Novembro é o Mês da Qualidade.
+  // Não recolocar Compras em 04/11: esse horário foi ocupado pela imersão.
   {
-    slug: "compras",
-    inicio: "2026-11-04T19:00:00Z",
-    fim: "2026-11-04T20:30:00Z",
-    data: "04/11",
-    titulo: "Compras",
-    requisito: "Requisito 8.4",
-    url: "https://templum.com.br/webinar-compras-iso9001/",
+    slug: "mes-da-qualidade",
+    inicio: "2026-11-03T19:00:00Z",
+    fim: "2026-11-30T20:30:00Z",
+    data: "03/11",
+    titulo: "Mês da Qualidade 2026",
+    requisito: "Imersão prática",
+    url: "https://templum.com.br/mes-da-qualidade-2026-v2/",
+    linha: "3, 4 e 5/11, e às segundas até 30/11, às 16h",
+    etiqueta: "Imersão gratuita · online",
+    cta: "Quero participar",
   },
 ];
 
@@ -124,8 +129,8 @@ export function webinarAtual(agora = Date.now()) {
 
 // O que o script inline precisa saber, e nada além disso — o HTML de 1.015 páginas carrega
 // isto embutido, então vai só o essencial (sem `requisito`, que não muda no swap).
-export const WEBINARS_CLIENTE = WEBINARS.map(({ slug, inicio, fim, data, titulo, url }) => ({
-  slug, inicio, fim, data, titulo, url,
+export const WEBINARS_CLIENTE = WEBINARS.map(({ slug, inicio, fim, data, titulo, url, linha, etiqueta, cta }) => ({
+  slug, inicio, fim, data, titulo, url, linha, etiqueta, cta,
 }));
 
 // Rótulo de urgência do dock: "HOJE ÀS 16H" vale mais que "19/08" para quem decide

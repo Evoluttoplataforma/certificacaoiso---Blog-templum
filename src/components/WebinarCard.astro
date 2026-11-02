@@ -13,6 +13,12 @@ import { WEBINARS_CLIENTE, webinarAtual } from "../data/webinars.js";
 
 const { variante } = Astro.props;
 const w = webinarAtual();
+const etiqueta = w?.etiqueta || "Webinar gratuito · ao vivo";
+const quando = w?.linha || (w ? `Quarta, ${w.data}, às 16h (Brasília)` : "");
+const cta = w?.cta || "Quero minha vaga";
+const alt = w?.linha
+  ? `${w.titulo}. ${w.linha}`
+  : (w ? `Webinar gratuito: ${w.titulo}, quarta ${w.data}, às 16h` : "");
 ---
 
 {w && (
@@ -26,18 +32,18 @@ const w = webinarAtual();
     <img
       data-wb-img
       src={`/assets/webinars/${w.slug}.webp`}
-      alt={`Webinar gratuito: ${w.titulo}, quarta ${w.data}, às 16h`}
-      width="640"
-      height="800"
+      alt={alt}
+      width="776"
+      height="1024"
       loading="eager"
       fetchpriority="high"
       decoding="async"
     />
     <span class="wb-body">
-      <span class="wb-tag"><iconify-icon icon="solar:videocamera-record-bold"></iconify-icon> Webinar gratuito · ao vivo</span>
+      <span class="wb-tag" data-wb-etiqueta><iconify-icon icon="solar:videocamera-record-bold"></iconify-icon> {etiqueta}</span>
       <strong data-wb-titulo>{w.titulo}</strong>
-      <span class="wb-quando">Quarta, <b data-wb-data>{w.data}</b>, às 16h (Brasília)</span>
-      <span class="btn btn--primary btn--block">Quero minha vaga <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></span>
+      <span class="wb-quando" data-wb-quando>{quando}</span>
+      <span class="btn btn--primary btn--block" data-wb-cta>{cta} <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></span>
     </span>
   </a>
 )}
@@ -69,12 +75,16 @@ const w = webinarAtual();
         var img = c.querySelector("[data-wb-img]");
         if (img) {
           img.setAttribute("src", "/assets/webinars/" + w.slug + ".webp");
-          img.setAttribute("alt", "Webinar gratuito: " + w.titulo + ", quarta " + w.data + ", às 16h");
+          img.setAttribute("alt", w.linha ? (w.titulo + ". " + w.linha) : ("Webinar gratuito: " + w.titulo + ", quarta " + w.data + ", às 16h"));
         }
         var t = c.querySelector("[data-wb-titulo]");
         if (t) t.textContent = w.titulo;
-        var d = c.querySelector("[data-wb-data]");
-        if (d) d.textContent = w.data;
+        var quando = c.querySelector("[data-wb-quando]");
+        if (quando) quando.textContent = w.linha || ("Quarta, " + w.data + ", às 16h (Brasília)");
+        var etiqueta = c.querySelector("[data-wb-etiqueta]");
+        if (etiqueta) etiqueta.lastChild.textContent = " " + (w.etiqueta || "Webinar gratuito · ao vivo");
+        var cta = c.querySelector("[data-wb-cta]");
+        if (cta) cta.firstChild.textContent = (w.cta || "Quero minha vaga") + " ";
       }
     };
     if (document.readyState === "loading") {
