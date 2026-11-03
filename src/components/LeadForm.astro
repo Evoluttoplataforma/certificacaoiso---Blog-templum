@@ -177,7 +177,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
   @media (max-width: 620px) { .lead-form .form-row { grid-template-columns: 1fr; } }
 </style>
 
-<script is:inline src="/js/tpl-turnstile.js?v=1"></script>
+<script is:inline src="/js/tpl-turnstile.js?v=20261103b"></script>
 <script is:inline define:vars={{ SB_URL: sbUrl, SB_ANON: sbAnon, slug, norma, crmNorma, source }}>
   (function () {
     var form = document.getElementById("leadForm");
@@ -242,16 +242,17 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
       var d = {};
       new FormData(form).forEach(function (v, k) { d[k] = typeof v === "string" ? v.trim() : v; });
 
-      // bot preencheu o honeypot, ou despachou o form em menos de 2,5s — são 7 campos,
-      // dois deles select; nem quem cola tudo da área de transferência faz nisso. Mostra
+      // bot preencheu o honeypot, ou despachou o form em menos de 3 s: são 7 campos,
+      // dois deles select. Nem quem cola tudo da área de transferência faz nisso. Mostra
       // sucesso e não grava nada (nem aqui, nem no pipeline da Templum).
-      if (d.site || Date.now() - formAberto < 2500) {
+      if (d.site || Date.now() - formAberto < 3000) {
         if (window.clarityTag) window.clarityTag("bot", "sim");
         form.hidden = true; if (success) success.hidden = false; return;
       }
 
-      var tokenPromise = window.tplTurnstileToken ? window.tplTurnstileToken() : Promise.reject();
+      var tokenPromise = window.tplTurnstileToken ? window.tplTurnstileToken() : Promise.resolve("");
       tokenPromise.then(function (token) {
+      var verificado = !!token;
 
       var O = ov();
       function blogContentPath() {
@@ -311,7 +312,7 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
       }
       cStage("lead", true);
 
-      if (window.trk && typeof window.trk.lead === "function") {
+      if (verificado && window.trk && typeof window.trk.lead === "function") {
         try { window.trk.lead({ email: d.email, phone: d.telefone, name: d.nome }); } catch (_) {}
       }
 
@@ -434,7 +435,10 @@ const urgencias = ["Preciso certificar rápido", "Estou sem pressa para certific
             utm_source_ft: attrib.ft_utm_source || "",
             utm_medium_ft: attrib.ft_utm_medium || "",
             utm_campaign_ft: attrib.ft_utm_campaign || "",
-            turnstile_token: token,
+            turnstile_token: token || "",
+            turnstile_status: token ? (window.tplTurnstileStatus || "ok") : (window.tplTurnstileStatus || "script"),
+            form_age_ms: Date.now() - formAberto,
+            website: d.site || "",
           }, utm)),
         }).then(function () {
           if (window.tplTurnstileReset) window.tplTurnstileReset();
