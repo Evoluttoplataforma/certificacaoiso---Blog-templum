@@ -1,0 +1,44 @@
+fonte;database;coletado_em;prompt_familia;keyword;volume;kd;cpc;intent_semrush;posicao_blog;url_blog;trafego_est;posicao_site;url_site;prioridade;acao;norma;notas
+MCP phrase_these;br;2026-11-18;nicho_head;iso 9001;22200;37;0.38;1;2;https://certificacaoiso.com.br/iso-9001/;976;33;https://templum.com.br/consultoria/iso-9001/;P2_manter;manter_hub_interlink_comercial;9001;hub informativo forte
+MCP phrase_these;br;2026-11-18;nicho_head;iso 14001;9900;35;0.50;1;1;https://certificacaoiso.com.br/iso-14001/;811;;;P2_manter;manter_hub;14001;
+MCP phrase_these;br;2026-11-18;nicho_head;iso 27001;8100;49;0.72;1;;;;P1;empurrar_comercial_via_pillar;27001;head informativa dificil
+MCP phrase_these;br;2026-11-18;nicho_head;iso 45001;6600;22;0.36;1;1;https://certificacaoiso.com.br/iso-45001/;541;;;P2_manter;manter_hub;45001;
+MCP phrase_these;br;2026-11-18;nicho_head;fssc 22000;1900;27;0.31;1;;;;P1;reforco_comercial;FSSC;
+MCP phrase_these;br;2026-11-18;nicho_head;pbqp-h;1600;25;0;1;4;https://certificacaoiso.com.br/pbqp-h-2018/;84;;;P1;consolidar_canibal;PBQP-H;URL legada
+MCP phrase_these;br;2026-11-18;nicho_head;sassmaq;1300;21;0.41;2;;;;P1;reforco;SASSMAQ;
+MCP phrase_these;br;2026-11-18;nicho_head;iso 37001;1300;18;0.59;1;1;https://certificacaoiso.com.br/o-que-e-a-iso-37001/;171;;;P2_manter;manter_hub;37001;
+MCP phrase_these;br;2026-11-18;nicho_head;sgsi;1000;14;0;1;3;https://certificacaoiso.com.br/sgsi/;44;;;P0;reforco_CTA_contrato;27001;ja top3
+MCP phrase_these;br;2026-11-18;nicho_head;iso 27701;720;23;0.97;1;;;;P1;ponte_LGPD;27701;
+MCP phrase_these;br;2026-11-18;comercial_P0;certificação iso 9001;880;28;0.70;1;4;https://certificacaoiso.com.br/iso-9001/;21;;;P0;descanibal_pillar_passo_a_passo;9001;hub rouba intent pillar ~26
+MCP resource_organic;br;2026-11-18;comercial_P0;certificacao iso 9001;590;27;0.70;1;26;https://certificacaoiso.com.br/passo-a-passo-certificacao-iso-9001/;0;;;P0;reforco_onpage_canonico;9001;variante sem acento
+MCP phrase_these+resource;br;2026-11-18;comercial_P0;certificado iso 9001;590;29;0.69;1;1;https://certificacaoiso.com.br/iso-9001/;25;;;P0;descanibal_para_pillar;9001;hub #1 em certificado
+MCP phrase_related;br;2026-11-18;comercial_P0;iso 9001 certificação;590;26;0.69;1;5;https://certificacaoiso.com.br/passo-a-passo-certificacao-iso-9001/;11;;;P0;reforco_pillar;9001;pillar ja #5 nesta variante
+MCP phrase_these;br;2026-11-18;comercial_P0;consultoria iso 9001;390;12;2.46;0;34;https://certificacaoiso.com.br/consultoria-iso-9001/;0;5;https://templum.com.br/consultoria/iso-9001/;P0;blog_interlink_LP_site;9001;CPC alto site ja top5
+MCP phrase_these;br;2026-11-18;comercial_P0;consultoria para iso 9001;140;10;2.09;1;6;https://certificacaoiso.com.br/consultoria-iso-9001/;3;;;P0;reforco;9001;
+MCP phrase_these+resource;br;2026-11-18;comercial_P0;quanto custa certificação iso 9001;110;8;0.69;1;1;https://certificacaoiso.com.br/quanto-custa-iso-9001/;11;;;P0;manter_reforco_GEO_CTA;9001;JA POS1 KD6-8
+MCP resource_organic;br;2026-11-18;comercial_P0;certificação iso 9001 quanto custa;170;7;1.13;1;1;https://certificacaoiso.com.br/quanto-custa-iso-9001/;22;;;P0;manter;9001;JA POS1
+MCP phrase_these+resource;br;2026-11-18;comercial_P0;certificação iso 27001;480;25;0.85;1;18;https://certificacaoiso.com.br/iso-27001/;0;;;P0;empurrar_pillar_etapas;27001;pillar fraco ~92 em variante
+MCP phrase_these;br;2026-11-18;comercial_P0;consultoria iso 27001;40;0;3.10;;;;;;P0;LP_site_CTA;27001;CPC altissimo
+MCP phrase_these;br;2026-11-18;comercial_P0;certificação iso 14001;320;26;0.66;1;4;https://certificacaoiso.com.br/iso-14001-2/;7;;;P0;canonico_iso-14001;14001;URL legada no SERP
+MCP phrase_these+resource;br;2026-11-18;comercial_P0;certificação iso 45001;140;19;0.70;1;16;https://certificacaoiso.com.br/iso-45001/;0;;;P0;pillar_passo_a_passo;45001;hub #16 rouba
+MCP phrase_these;br;2026-11-18;comercial_P0;certificação pbqp-h;110;15;1.94;1;;;;P0;consolidar_URLs;PBQP-H;site certificado pbqp-h #7
+MCP resource_organic;br;2026-11-18;comercial_P0;certificado pbqp-h;210;21;1.94;1;76;https://certificacaoiso.com.br/como-conseguiur-a-certificacao-do-pbqp-h/;0;7;https://templum.com.br/consultoria/pbqp-h/;P0;descanibal_massivo;PBQP-H;dezenas URLs 74-99
+MCP phrase_these;br;2026-11-18;comercial_P1;certificação fssc 22000;110;11;0.62;1;;;;P1;reforco_criar;FSSC;
+MCP phrase_these;br;2026-11-18;comercial_P1;o que é sassmaq;210;9;0.08;1;;;;P1;reforco;SASSMAQ;
+MCP phrase_these;br;2026-11-18;comercial_P1;certificação iso 37001;40;0;0.85;;;;P1;reforco_cluster;37001;
+MCP phrase_these;br;2026-11-18;comercial_P1;certificação iso 42001;30;0;0.52;;;;P1;satelite;42001;
+MCP phrase_these;br;2026-11-18;bridge_cyber;ransomware;12100;67;2.68;1;;;;P0_novo;bridge_nao_rank_head;27001;nao perseguir KD67 linkar comercial
+MCP phrase_these;br;2026-11-18;bridge_cyber;segurança da informação;9900;43;0.77;1;;;;P2;so_se_gap;27001;saturado
+MCP phrase_these;br;2026-11-18;bridge_cyber;ataque hacker;3600;41;0;1;;;;P0_novo;evergreen_bridge;27001;
+MCP phrase_these;br;2026-11-18;bridge_cyber;vazamento de dados;3600;43;0.28;1;;;;P0_novo;bridge_LGPD;27001;
+MCP phrase_questions;br;2026-11-18;long_tail_9001;o que é certificação iso 9001;70;0;;;;;P2;hub_FAQ;9001;
+MCP phrase_questions;br;2026-11-18;long_tail_9001;como obter certificação iso 9001;20;0;;;;;P0;H2_pillar;9001;
+MCP phrase_questions;br;2026-11-18;long_tail_9001;como funciona a certificação iso 9001;20;0;;;;;P0;H2_pillar;9001;
+MCP domain_domains;br;2026-11-18;gap_concorrentes;matriz gut;9900;22;0.35;1;0;;0;;;EVITAR_P0;nao_prioridade_contrato;OPS;BQ#29 QMS#8 CPC baixo
+MCP domain_domains;br;2026-11-18;gap_concorrentes;diagrama de pareto;8100;33;2.70;1;0;;0;;;EVITAR_P0;so_se_CTA_ISO;OPS;intent ferramenta
+MCP domain_domains;br;2026-11-18;gap_concorrentes;5 porques;3600;26;0.17;1;0;;0;;;EVITAR_P0;nao_prioridade_contrato;OPS;
+MCP domain_domains;br;2026-11-18;gap_concorrentes;certificação da iso 9001;590;8;0.83;1;0;;0;;;P0;pillar_absorve;9001;gap vs BQ+QMS KD8
+MCP domain_organic_organic;br;2026-11-18;concorrentes;qmsbrasil.com.br;;;;;;;REF;benchmark_SERP;ALL;relevancia 0.24
+MCP domain_organic_organic;br;2026-11-18;concorrentes;blogdaqualidade.com.br;;;;;;;REF;benchmark_gap;ALL;relevancia 0.20 trafego 23k
+MCP domain_organic_organic;br;2026-11-18;concorrentes;qualyteam.com;;;;;;;REF;benchmark;ALL;relevancia 0.16
+MCP domain_rank;br;2026-11-18;overview;certificacaoiso.com.br;11025;2642;4415;;;;133;402;44;40;META;subir_comercial;ALL;top3=133 pos4-10=402 comercial_pos=44 comercial_traf=40
