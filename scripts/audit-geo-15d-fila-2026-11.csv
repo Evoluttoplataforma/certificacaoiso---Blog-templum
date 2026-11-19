@@ -2,8 +2,8 @@ dia;pista;tipo;tema;prompt_geo_alvo;volume_google_ref;url_alvo;acao;kpi_geo;stat
 1;GEO_comercial;reforco;9001 certificacao;Como obter / o que e certificacao ISO 9001?;880;passo-a-passo-certificacao-iso-9001;Answer First FAQ=prompt FRO + links 2026;citacao AI Overview/ChatGPT no prompt;done
 1;GEO_comercial;novo;27001 bridge;ISO 27001 protege contra ransomware?;12100;ransomware-e-iso-27001;criar bridge citavel + CTA form;menção Templum/blog na resposta IA;done
 2;GEO_comercial;reforco;9001 consultoria;Quando contratar consultoria ISO 9001?;390;consultoria-iso-9001 + LP;Answer First FRO FAQ banner form;citacao no prompt consultoria;done
-3;GEO_comercial;reforco;9001 custo;Quanto custa certificacao ISO 9001 no Brasil?;110-170;quanto-custa-iso-9001;Answer First FRO FAQ banner form;manter/ganhar citacao no prompt custo;done_local
-4;GEO_comercial;reforco;27001 certificacao;Etapas prazo e custo da certificacao ISO 27001?;480;certificacao-iso-27001-etapas-prazo-custo;pillar canonico citavel;citacao no prompt certificacao 27001;pending
+3;GEO_comercial;reforco;9001 custo;Quanto custa certificacao ISO 9001 no Brasil?;110-170;quanto-custa-iso-9001;Answer First FRO FAQ banner form;manter/ganhar citacao no prompt custo;done
+4;GEO_comercial;reforco;27001 certificacao;Etapas prazo e custo da certificacao ISO 27001?;480;certificacao-iso-27001-etapas-prazo-custo;Answer First FRO FAQ banner form + bridge hackers;citacao no prompt certificacao 27001;done_local
 5;GEO_comercial;novo;27001 bridge;Vazamento de dados: LGPD e ISO 27001 o que fazer?;3600;vazamento-de-dados-iso-27001-lgpd;bridge citavel;menção na resposta IA;pending
 6;GEO_comercial;novo;27001 bridge;Como responder a incidente / ataque com ISO 27001?;3600;resposta-a-incidentes-iso-27001;evergreen citavel;menção na resposta IA;pending
 7;GEO_comercial;reforco;14001/45001;Como obter certificacao ISO 14001 / 45001?;320/140;pillars/hubs;FAQ=prompt + CTA;citacao prompts certificacao;pending
