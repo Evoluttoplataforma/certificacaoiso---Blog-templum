@@ -1,0 +1,32 @@
+{
+  "title": "ISO 27001 protege contra ransomware?",
+  "seo_title": "ISO 27001 protege contra ransomware? Controles e certificação",
+  "seo_description": "ISO 27001 e ransomware: o que a norma cobre (backup, incidentes, continuidade), o que o certificado prova e como começar o SGSI no Brasil.",
+  "tldr": "A ISO 27001 não é antivírus e não garante zero ransomware. Ela organiza o SGSI: riscos, controles, backup que se restaura, resposta a incidente e continuidade. O certificado prova auditoria independente desse sistema; o que limita o prejuízo é evidência operacional, não só documento.",
+  "faq": [
+    {
+      "pergunta": "A ISO 27001 protege contra ransomware?",
+      "resposta": "<p>Não como escudo absoluto. A norma organiza prevenção, detecção, resposta, backup testado e continuidade. Isso reduz probabilidade e impacto; não elimina o ataque. <a href=\"#iso-27001-protege\">Veja como a norma entra</a>.</p>"
+    },
+    {
+      "pergunta": "O certificado ISO 27001 impede ransomware?",
+      "resposta": "<p>Não. O certificado prova que um organismo acreditado auditou o SGSI. Continuidade e backup com teste de restauração são o que limitam o prejuízo depois da invasão. <a href=\"#certificacao\">O que o auditor quer ver</a>.</p>"
+    },
+    {
+      "pergunta": "Quais controles da ISO 27001 importam contra ransomware?",
+      "resposta": "<p>Backup e restauração (8.13), gestão de incidentes (5.24 a 5.28), continuidade (5.29 e 5.30), além de acessos, malware, mudanças e fornecedores. <a href=\"#iso-27001-protege\">Detalhe dos controles</a>.</p>"
+    },
+    {
+      "pergunta": "Backup sem teste de restauração serve na auditoria?",
+      "resposta": "<p>Não. Existe arquivo e restaura com sucesso são coisas diferentes. O controle 8.13 pede evidência de teste. Guia: <a href=\"/backup-e-copia-de-seguranca-iso-27001-controle-8-13/\">backup ISO 27001</a>.</p>"
+    },
+    {
+      "pergunta": "Como obter a certificação ISO 27001 no Brasil?",
+      "resposta": "<p>Monte o SGSI (escopo, riscos, SoA, controles com registro), faça auditoria interna e análise crítica, contrate organismo acreditado e conclua estágios 1 e 2. <a href=\"/certificacao-iso-27001-etapas-prazo-custo/\">Etapas, prazo e custo</a>.</p>"
+    },
+    {
+      "pergunta": "O que a empresa faz agora, antes de certificar?",
+      "resposta": "<p>Liste sistemas críticos, teste restauração do backup, defina dono da primeira hora do incidente e revise acessos privilegiados. <a href=\"#o-que-fazer\">Passos práticos</a>.</p>"
+    }
+  ]
+}

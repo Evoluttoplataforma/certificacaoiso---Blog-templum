@@ -1,6 +1,6 @@
 dia;pista;tipo;tema;prompt_geo_alvo;volume_google_ref;url_alvo;acao;kpi_geo;status
-1;GEO_comercial;reforco;9001 certificacao;Como obter / o que e certificacao ISO 9001?;880;passo-a-passo-certificacao-iso-9001;Answer First FAQ=prompt FRO (local ok; publish);citacao AI Overview/ChatGPT no prompt;done_local
-1;GEO_comercial;novo;27001 bridge;ISO 27001 protege contra ransomware?;12100;ransomware-e-iso-27001;criar bridge citavel + CTA consultoria;menção Templum/blog na resposta IA;pending
+1;GEO_comercial;reforco;9001 certificacao;Como obter / o que e certificacao ISO 9001?;880;passo-a-passo-certificacao-iso-9001;Answer First FAQ=prompt FRO + links 2026;citacao AI Overview/ChatGPT no prompt;done
+1;GEO_comercial;novo;27001 bridge;ISO 27001 protege contra ransomware?;12100;ransomware-e-iso-27001;criar bridge citavel + CTA form;menção Templum/blog na resposta IA;done_local
 2;GEO_comercial;reforco;9001 consultoria;Quando contratar consultoria ISO 9001?;390;consultoria-iso-9001 + LP;interlink + FAQ prompt comercial;citacao no prompt consultoria;pending
 3;GEO_comercial;reforco;9001 custo;Quanto custa certificacao ISO 9001 no Brasil?;110-170;quanto-custa-iso-9001;reforco Answer First + CTA;manter/ganhar citacao no prompt custo;pending
 4;GEO_comercial;reforco;27001 certificacao;Etapas prazo e custo da certificacao ISO 27001?;480;certificacao-iso-27001-etapas-prazo-custo;pillar canonico citavel;citacao no prompt certificacao 27001;pending
