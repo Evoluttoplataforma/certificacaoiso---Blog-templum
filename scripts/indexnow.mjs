@@ -8,7 +8,8 @@ import { dirname, join } from "node:path";
 const HOST = "certificacaoiso.com.br";
 const KEY = "c0942ba66b2a40c496681d94bea9e90d";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
-const ENDPOINT = "https://api.indexnow.org/indexnow";
+// Bing WMT costuma refletir melhor envios diretos em www.bing.com/indexnow.
+const ENDPOINT = "https://www.bing.com/indexnow";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const keyOnDisk = readFileSync(join(root, "public", `${KEY}.txt`), "utf8").trim();
