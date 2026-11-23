@@ -80,7 +80,7 @@ const hrefForm =
 
   <!-- Passo 1: a pergunta -->
   <div class="pulso-passo" data-pulso-passo="pergunta">
-    <span class="pulso-olho">Rapidinho — 1 clique</span>
+    <span class="pulso-olho">Rapidinho: 1 clique</span>
     <h2 class="pulso-titulo" id="pulso-titulo">Em que pé você está com {alvo}?</h2>
     <div class="pulso-ops">
       <button type="button" class="pulso-op" data-pulso-r="pesquisando">Só pesquisando o assunto</button>
@@ -107,7 +107,7 @@ const hrefForm =
   <div class="pulso-passo" data-pulso-passo="vou-implantar" hidden>
     <span class="pulso-olho pulso-olho--ok"><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Anotado</span>
     <h2 class="pulso-titulo">Quer o caminho com prazo e investimento?</h2>
-    <p class="pulso-p">Um especialista monta o cenário {norma ? `de ${norma}` : ""} da sua empresa — sem custo e sem compromisso.</p>
+    <p class="pulso-p">Um especialista monta o cenário {norma ? `de ${norma}` : ""} da sua empresa, sem custo e sem compromisso.</p>
     <a class="pulso-cta" href={hrefForm} data-pulso-ir="form">
       Receber o plano <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
     </a>
@@ -118,7 +118,7 @@ const hrefForm =
     <span class="pulso-olho pulso-olho--ok"><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Anotado</span>
     <h2 class="pulso-titulo">Onde travou? Manda pra gente</h2>
     <p class="pulso-p">Fala direto com quem implanta {norma || "sistema de gestão"} todo dia. Resposta no WhatsApp.</p>
-    <a class="pulso-cta" href={`https://wa.me/${whats}?text=${encodeURIComponent(msgWhats)}`} target="_blank" rel="noopener" data-pulso-ir="whatsapp">
+    <a class="pulso-cta" href={`https://api.whatsapp.com/send?phone=${whats}&text=${encodeURIComponent(msgWhats)}`} target="_blank" rel="noopener" data-pulso-ir="whatsapp">
       <iconify-icon icon="ic:baseline-whatsapp"></iconify-icon> Falar agora
     </a>
     <a class="pulso-secundario pulso-secundario--link" href={hrefForm} data-pulso-ir="form">Prefiro receber por e-mail</a>
@@ -128,7 +128,7 @@ const hrefForm =
       acontece antes. Estudante e carreira não veem oferta nenhuma, de propósito. */}
   <div class="pulso-passo" data-pulso-passo="carreira" hidden>
     <span class="pulso-olho pulso-olho--ok"><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Anotado</span>
-    <h2 class="pulso-titulo">Boa — esse material é seu</h2>
+    <h2 class="pulso-titulo">Boa: esse material é seu</h2>
     <p class="pulso-p">Continua por aqui: o blog tem mais de mil artigos sobre norma, auditoria e implantação.</p>
     <div class="pulso-links" data-pulso-links></div>
   </div>

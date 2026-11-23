@@ -40,9 +40,30 @@ const atualizadoEm = d.revisedDate && +new Date(d.revisedDate) > +new Date(d.pub
 
 // SEO/AIEO/GEO por artigo
 // título: usa seo_title; senão anexa a marca. NUNCA deixa igual ao <h1> (evita "h1 = title").
-// Sufixo com keyword quando cabe (~60); senão sufixo curto " — Templum" (mais leve, mas ≠ h1).
-const _full = `${d.title} | Certificação ISO`;
-const seoTitle = d.seoTitle || (_full.length <= 60 ? _full : `${d.title} — Templum`);
+// Limite ~60 (Semrush/SERP). Título longo: truncar + " | Templum" (sem travessão).
+const TITLE_MAX = 60;
+function buildSeoTitle(rawTitle, custom) {
+  const pick = (custom && String(custom).trim()) || "";
+  const brandLong = " | Certificação ISO";
+  const brandShort = " | Templum";
+  const truncate = (text, brand) => {
+    const budget = TITLE_MAX - brand.length;
+    let cut = text.slice(0, Math.max(12, budget));
+    const sp = cut.lastIndexOf(" ");
+    if (sp > budget * 0.55) cut = cut.slice(0, sp);
+    return `${cut.trim()}${brand}`;
+  };
+  // seo_title custom só vale se for diferente do H1 (evita aviso h1 = title)
+  if (pick && pick !== rawTitle) {
+    return pick.length <= TITLE_MAX ? pick : truncate(pick, "");
+  }
+  const withLong = `${rawTitle}${brandLong}`;
+  if (withLong.length <= TITLE_MAX) return withLong;
+  const withShort = `${rawTitle}${brandShort}`;
+  if (withShort.length <= TITLE_MAX) return withShort;
+  return truncate(rawTitle, brandShort);
+}
+const seoTitle = buildSeoTitle(d.title, d.seoTitle);
 const tldr = (d.tldr || tldrOf(post)).trim();
 const seoDesc = (d.seoDescription || d.description || tldr).slice(0, 160);
 const keywords = (d.keywords && d.keywords.length ? d.keywords : d.categories) || [];
