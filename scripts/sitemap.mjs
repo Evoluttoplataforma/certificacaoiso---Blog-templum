@@ -72,13 +72,36 @@ function walk(dir, base = "") {
 }
 walk(DIST);
 
+// Slugs com 301 no worker (serpTo): não podem ficar no sitemap mesmo se o HTML
+// legado ainda existir no dist. Ex.: /pesquisa-de-satisfacao-cliente/ → pillar.
+const REDIRECT_ONLY = new Set([
+  "/iso-14001-2/",
+  "/certificacao-iso-27001/",
+  "/certificacao-iso-27701/",
+  "/certificacao-pbqp-h/",
+  "/pesquisa-de-satisfacao-cliente/",
+  "/certificacao-iso-9001/",
+  "/certificacao-iso-45001/",
+  "/analise-de-causa-raiz/",
+  "/a-qualificacao-de-fornecedores-segundo-a-iso-90012015/",
+  "/migracao-iso-9001-2015-para-2026/",
+]);
+const urlsFiltradas = urls.filter((u) => !REDIRECT_ONLY.has(u));
+if (urlsFiltradas.length !== urls.length) {
+  console.log(
+    "sitemap: fora por redirect 301 →",
+    urls.filter((u) => REDIRECT_ONLY.has(u)).sort().join(" "),
+  );
+}
+
+const urlsFinais = [...new Set(urlsFiltradas)].sort();
 const xml =
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  [...new Set(urls)].sort().map((u) => {
+  urlsFinais.map((u) => {
     const lm = lastmod[u];
     return `  <url><loc>${SITE}${u}</loc>${lm ? `<lastmod>${lm}</lastmod>` : ""}</url>`;
   }).join("\n") +
   `\n</urlset>\n`;
 fs.writeFileSync(path.join(DIST, "sitemap.xml"), xml);
-console.log("sitemap.xml:", new Set(urls).size, "URLs ·", Object.keys(lastmod).length, "com lastmod");
+console.log("sitemap.xml:", urlsFinais.length, "URLs ·", Object.keys(lastmod).length, "com lastmod");
 if (excluidas.length) console.log("sitemap: fora por noindex →", excluidas.sort().join(" "));

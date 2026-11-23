@@ -108,6 +108,9 @@ function processContent(html) {
 
   // 0) remove <img> com extensão dupla quebrada (ex.: .webp.gif) → imagem interna 404
   out = out.replace(/<img\b[^>]*src="[^"]*\.(?:webp|jpe?g|png)\.gif"[^>]*>/gi, "");
+  // 0a) screenshot legado 404 (Semrush: broken internal image)
+  out = out.replace(/<p>\s*<img\b[^>]*Captura-de-Tela-2017-10-03[^>]*>\s*<\/p>/gi, "");
+  out = out.replace(/<img\b[^>]*Captura-de-Tela-2017-10-03[^>]*>/gi, "");
 
   // 0b) remove os BANNERS DE ISCA/e-book do meio do artigo (decisão: tirar dos artigos).
   //     Detecta SÓ pelo filename da imagem (não pega o banner de consultoria → /form, que fica).
