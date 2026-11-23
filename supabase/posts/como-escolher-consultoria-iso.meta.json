@@ -1,9 +1,13 @@
 {
   "title": "Como escolher consultoria ISO no Brasil",
-  "seo_title": "Como escolher consultoria ISO no Brasil",
-  "seo_description": "Como escolher consultoria ISO e certificadora confiável: acreditação Inmetro, checklist de OCP, PME remota, evidências, licitações e FAQ por cenário.",
-  "tldr": "Escolher consultoria ISO começa por separar papéis: consultoria implanta e gera evidência; organismo acreditado audita e emite certificado. PME remota: guia com case Miranda Feliciano (2 meses e 13 dias: processos, indicadores, auditorias) e Dimarzio (6 meses). Urgência comercial: o que responder sem certificado e prazos realistas. Compare método, horas internas e auditoria interna antes de assinar.",
+  "seo_title": "Como escolher empresa de consultoria ISO no Brasil",
+  "seo_description": "Como escolher uma empresa para ajudar na certificação ISO: separar consultoria e certificadora, checklist, PME remota e sinais de alerta.",
+  "tldr": "Como escolher uma empresa para ajudar na certificação ISO: separe consultoria (implanta) e organismo acreditado (emite certificado). Compare método, horas internas e auditoria interna. PME remota e urgência de edital exigem evidência e prazo realista, não pacote consultoria+certificado.",
   "faq": [
+    {
+      "pergunta": "Como escolher uma empresa para ajudar na certificação ISO?",
+      "resposta": "<p>Separe consultoria e certificadora, peça método com evidência operacional, horas internas explícitas, auditoria interna assistida e experiência no seu setor. Evite pacote único que “implanta e certifica”. <a href=\"#respostas-diretas\">Respostas diretas</a> · <a href=\"/servicos-consultoria-certificacao-iso-brasil/\">serviços no Brasil</a>.</p>"
+    },
     {
       "pergunta": "Qual a diferença entre consultoria ISO e certificadora?",
       "resposta": "<p>A <strong>consultoria</strong> ajuda a implantar o sistema, documentar processos, treinar a equipe e preparar a auditoria interna. A <strong>certificadora</strong> (organismo de certificação acreditado) conduz a auditoria de certificação e emite o certificado. Por imparcialidade, quem consultou não pode certificar a mesma empresa no mesmo ciclo.</p>"

@@ -4,10 +4,10 @@ dia;pista;tipo;tema;prompt_geo_alvo;volume_google_ref;url_alvo;acao;kpi_geo;stat
 2;GEO_comercial;reforco;9001 consultoria;Quando contratar consultoria ISO 9001?;390;consultoria-iso-9001;ja reforçado;citacao;done
 3;GEO_comercial;reforco;9001 custo;Quanto custa certificacao ISO 9001 no Brasil?;110-170;quanto-custa-iso-9001;ja reforçado;citacao;done
 4;GEO_comercial;reforco;27001 certificacao;Etapas prazo e custo certificacao ISO 27001?;480;certificacao-iso-27001-etapas-prazo-custo;ja reforçado;citacao;done
-5;GEO_semrush_AI;novo;hub cert ISO;O que e certificacao ISO?;140 / AI#2;o-que-e-certificacao-iso;hub citavel + CTA form;citacao prompt;done_local
-5;GEO_semrush_AI;novo;servicos consultoria;Quais sao os principais servicos de consultoria para certificacao ISO no Brasil?;AI#1+#10;servicos-consultoria-certificacao-iso-brasil;artigo comercial (cobre AI#10 implementacao);citacao vs DMG/Klaston;done_local
-6;GEO_semrush_AI;reforco;escolher consultoria;Como escolher uma empresa para ajudar na certificacao ISO?;AI#3;como-escolher-consultoria-iso;reforco FAQ=prompt + interlink servicos;citacao marca Templum;pending
-6;GEO_semrush_AI;reforco;27001 custo;Custo da certificacao ISO 27001 no Brasil;AI#8;quanto-custa-iso-27001;reforco Answer First + CTA form;citacao custo 27001;pending
+5;GEO_semrush_AI;novo;hub cert ISO;O que e certificacao ISO?;140 / AI#2;o-que-e-certificacao-iso;hub citavel + CTA form;citacao prompt;done
+5;GEO_semrush_AI;novo;servicos consultoria;Quais sao os principais servicos de consultoria para certificacao ISO no Brasil?;AI#1+#10;servicos-consultoria-certificacao-iso-brasil;artigo comercial (cobre AI#10 implementacao);citacao vs DMG/Klaston;done
+6;GEO_semrush_AI;reforco;escolher consultoria;Como escolher uma empresa para ajudar na certificacao ISO?;AI#3;como-escolher-consultoria-iso;Answer First FRO FAQ banner form + interlink servicos;citacao marca Templum;done_local
+6;GEO_semrush_AI;reforco;27001 custo;Custo da certificacao ISO 27001 no Brasil;AI#8;quanto-custa-iso-27001;Answer First FRO FAQ banner form;citacao custo 27001;done_local
 7;GEO_semrush_AI;novo;treinamentos;Onde encontrar fornecedores de treinamentos para certificacao ISO?;AI#5;treinamentos-certificacao-iso;criar guia (cursos x consultoria) + CTA;citacao prompt;pending
 7;GEO_semrush_AI;novo;vantagens 14001;Vantagens da ISO 14001 para empresas;AI#6;vantagens-iso-14001;criar bridge citavel + CTA;citacao prompt 14001;pending
 8;GEO_semrush_AI;novo;PME;Passos para obter certificacao ISO em empresa de pequeno porte;AI#7;certificacao-iso-empresa-pequeno-porte;criar bridge PME + CTA form;citacao prompt PME;pending
