@@ -1,12 +1,20 @@
 dia;pista;tipo;tema;prompt_geo_alvo;volume_google_ref;url_alvo;acao;kpi_geo;status
-1;GEO_comercial;reforco;9001 certificacao;Como obter / o que e certificacao ISO 9001?;880;passo-a-passo-certificacao-iso-9001;Answer First FAQ=prompt FRO + links 2026;citacao AI Overview/ChatGPT no prompt;done
-1;GEO_comercial;novo;27001 bridge;ISO 27001 protege contra ransomware?;12100;ransomware-e-iso-27001;criar bridge citavel + CTA form;menção Templum/blog na resposta IA;done
-2;GEO_comercial;reforco;9001 consultoria;Quando contratar consultoria ISO 9001?;390;consultoria-iso-9001 + LP;Answer First FRO FAQ banner form;citacao no prompt consultoria;done
-3;GEO_comercial;reforco;9001 custo;Quanto custa certificacao ISO 9001 no Brasil?;110-170;quanto-custa-iso-9001;Answer First FRO FAQ banner form;manter/ganhar citacao no prompt custo;done
-4;GEO_comercial;reforco;27001 certificacao;Etapas prazo e custo da certificacao ISO 27001?;480;certificacao-iso-27001-etapas-prazo-custo;Answer First FRO FAQ banner form + bridge hackers;citacao no prompt certificacao 27001;done_local
-5;GEO_comercial;novo;27001 bridge;Vazamento de dados: LGPD e ISO 27001 o que fazer?;3600;vazamento-de-dados-iso-27001-lgpd;bridge citavel;menção na resposta IA;pending
-6;GEO_comercial;novo;27001 bridge;Como responder a incidente / ataque com ISO 27001?;3600;resposta-a-incidentes-iso-27001;evergreen citavel;menção na resposta IA;pending
-7;GEO_comercial;reforco;14001/45001;Como obter certificacao ISO 14001 / 45001?;320/140;pillars/hubs;FAQ=prompt + CTA;citacao prompts certificacao;pending
-8;GEO_recheck;recheck;AI Visibility;prompts monitoradas 9001+27001;;;checar menção/fonte (UI Prompt Research);% prompts com marca/fonte;pending
-9-14;GEO_comercial;misto;portfolio;prompts FSSC SASSMAQ PBQP-H 37001;;;reforco citavel intercalado;menção nas prompts do portfolio;pending
-15;GEO_relatorio;relatorio;ALL;AI Visibility + prompts + CRM blog;;;3 acoes GEO;board: citacoes vs baseline;pending
+1;GEO_comercial;reforco;9001 certificacao;Como obter a certificacao ISO 9001?;880 / AI#4;passo-a-passo-certificacao-iso-9001;ja reforçado;citacao prompt;done
+1;GEO_comercial;novo;27001 bridge;ataques hackers / ransomware x ISO 27001;12100;ransomware-e-iso-27001;publicado;menção IA;done
+2;GEO_comercial;reforco;9001 consultoria;Quando contratar consultoria ISO 9001?;390;consultoria-iso-9001;ja reforçado;citacao;done
+3;GEO_comercial;reforco;9001 custo;Quanto custa certificacao ISO 9001 no Brasil?;110-170;quanto-custa-iso-9001;ja reforçado;citacao;done
+4;GEO_comercial;reforco;27001 certificacao;Etapas prazo e custo certificacao ISO 27001?;480;certificacao-iso-27001-etapas-prazo-custo;ja reforçado;citacao;done
+5;GEO_semrush_AI;novo;hub cert ISO;O que e certificacao ISO?;140 / AI#2;o-que-e-certificacao-iso;hub citavel + CTA form;citacao prompt;done_local
+5;GEO_semrush_AI;novo;servicos consultoria;Quais sao os principais servicos de consultoria para certificacao ISO no Brasil?;AI#1+#10;servicos-consultoria-certificacao-iso-brasil;artigo comercial (cobre AI#10 implementacao);citacao vs DMG/Klaston;done_local
+6;GEO_semrush_AI;reforco;escolher consultoria;Como escolher uma empresa para ajudar na certificacao ISO?;AI#3;como-escolher-consultoria-iso;reforco FAQ=prompt + interlink servicos;citacao marca Templum;pending
+6;GEO_semrush_AI;reforco;27001 custo;Custo da certificacao ISO 27001 no Brasil;AI#8;quanto-custa-iso-27001;reforco Answer First + CTA form;citacao custo 27001;pending
+7;GEO_semrush_AI;novo;treinamentos;Onde encontrar fornecedores de treinamentos para certificacao ISO?;AI#5;treinamentos-certificacao-iso;criar guia (cursos x consultoria) + CTA;citacao prompt;pending
+7;GEO_semrush_AI;novo;vantagens 14001;Vantagens da ISO 14001 para empresas;AI#6;vantagens-iso-14001;criar bridge citavel + CTA;citacao prompt 14001;pending
+8;GEO_semrush_AI;novo;PME;Passos para obter certificacao ISO em empresa de pequeno porte;AI#7;certificacao-iso-empresa-pequeno-porte;criar bridge PME + CTA form;citacao prompt PME;pending
+8;GEO_semrush_AI;novo;auditoria;Como funciona o processo de auditoria para certificacao ISO?;AI#9;auditoria-certificacao-iso;criar hub transversal estagios 1-2 + CTA;citacao prompt auditoria;pending
+9;GEO_comercial;novo;27001 bridge;Vazamento de dados LGPD e ISO 27001;3600;vazamento-de-dados-iso-27001-lgpd;bridge citavel;menção IA;pending
+9;GEO_comercial;novo;27001 bridge;Resposta a incidentes / ataque com ISO 27001;3600;resposta-a-incidentes-iso-27001;evergreen citavel;menção IA;pending
+10;GEO_comercial;reforco;45001;Como obter certificacao ISO 45001?;140;passo-a-passo-certificacao-iso-45001;FAQ=prompt + CTA;citacao;pending
+11;GEO_recheck;recheck;AI Visibility;prompts monitoradas;;;checar menção/fonte;% prompts com marca;pending
+12-14;GEO_comercial;misto;portfolio;FSSC SASSMAQ PBQP-H 37001;;;reforco intercalado;menção;pending
+15;GEO_relatorio;relatorio;ALL;AI Visibility + CRM;;;3 acoes GEO;board;pending

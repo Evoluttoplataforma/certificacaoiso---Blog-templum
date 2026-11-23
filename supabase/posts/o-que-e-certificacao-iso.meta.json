@@ -1,0 +1,28 @@
+{
+  "title": "O que é certificação ISO?",
+  "seo_title": "O que é certificação ISO? Como funciona e o que não é",
+  "seo_description": "O que é certificação ISO: auditoria de organismo acreditado, o que a ISO não emite, diferença de consultoria e normas mais pedidas no Brasil.",
+  "tldr": "Certificação ISO é a auditoria de um organismo acreditado que confirma o sistema de gestão conforme uma norma ISO e emite certificado (em geral 3 anos, com manutenção). A ISO publica a norma; não emite o certificado. Consultoria prepara; organismo certifica.",
+  "faq": [
+    {
+      "pergunta": "O que é certificação ISO?",
+      "resposta": "<p>É a confirmação, por auditoria de organismo acreditado, de que a empresa opera um sistema de gestão conforme uma norma ISO no escopo declarado. O resultado é um certificado com validade e ciclo de manutenção. <a href=\"#o-que-e\">Detalhe neste guia</a>.</p>"
+    },
+    {
+      "pergunta": "A ISO emite o certificado?",
+      "resposta": "<p>Não. A ISO publica a norma. Quem audita e emite o certificado de sistema de gestão é o organismo de certificação acreditado.</p>"
+    },
+    {
+      "pergunta": "Qual a diferença entre consultoria e certificação ISO?",
+      "resposta": "<p>A consultoria ajuda a implantar o sistema. O organismo acreditado audita e emite o certificado. São contratos separados: quem consulta não certifica a mesma empresa no mesmo ciclo. <a href=\"/servicos-consultoria-certificacao-iso-brasil/\">Serviços de consultoria</a>.</p>"
+    },
+    {
+      "pergunta": "Quais são as normas ISO mais pedidas no Brasil?",
+      "resposta": "<p>ISO 9001 (qualidade), ISO 14001 (meio ambiente), ISO 45001 (SST) e ISO 27001 (segurança da informação) estão entre as mais exigidas em edital e cadeia B2B. <a href=\"#normas\">Normas neste guia</a>.</p>"
+    },
+    {
+      "pergunta": "Como obter a certificação ISO 9001?",
+      "resposta": "<p>Implante o SGQ com evidência, faça auditoria interna e análise crítica, contrate organismo acreditado e conclua estágios 1 e 2. <a href=\"/passo-a-passo-certificacao-iso-9001/\">Passo a passo</a>.</p>"
+    }
+  ]
+}
