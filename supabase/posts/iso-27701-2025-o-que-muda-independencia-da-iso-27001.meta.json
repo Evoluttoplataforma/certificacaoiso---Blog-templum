@@ -1,7 +1,7 @@
 {
   "title": "ISO 27701:2025: a norma de privacidade ficou independente da ISO 27001",
-  "seo_title": "ISO 27701:2025, certificação, consultoria e SGPI",
-  "seo_description": "ISO 27701:2025 explicada em linguagem simples: o que mudou, certificação no Brasil, custo, relação com ISO 27001 e LGPD.",
+  "seo_title": "ISO 27701: o que é, SGPI e a versão 2025",
+  "seo_description": "A ISO 27701 organiza a privacidade (SGPI). Desde 2025 pode ser certificada sem a ISO 27001. O que mudou, LGPD e como certificar.",
   "tldr": "A ISO 27701:2025 organiza como a empresa trata e protege dados pessoais. Desde 2025 ela pode ser certificada sem exigir a ISO 27001 antes, o que facilita clínicas, startups e PMEs. Quem já tinha certificado na versão antiga tem até cerca de 2028 para migrar. A norma reforça risco focado na pessoa titular dos dados e reorganiza os controles em três blocos (quem decide o uso, quem opera por terceiros e segurança mínima).",
   "faq": [
     {
